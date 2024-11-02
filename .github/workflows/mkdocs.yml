@@ -2,7 +2,7 @@ name: Deploy Mkdocs (mainDoc Branch)
 on:
   push:
     branches:
-      - DOCS-git_pages
+      - mainDoc
 permissions:
   contents: write
 jobs:
