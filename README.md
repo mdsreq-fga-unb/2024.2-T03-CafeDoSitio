@@ -2,13 +2,13 @@
 
 ![Banner](./docs/assets/CafeSitioBanner.png)
 
-<center>
+<div align="center">
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/mdsreq-fga-unb/2024.2-T03-CafeDoSitio?style=for-the-badge)
 ![GitHub issues](https://img.shields.io/github/issues/mdsreq-fga-unb/2024.2-T03-CafeDoSitio?style=for-the-badge)
 ![GitHub views](https://komarev.com/ghpvc/?username=req-fga-unb&repo=2024.2-T03-CafeDoSitio&color=blueviolet&style=for-the-badge&label=Views)
 
-</center>
+</div>
 
 <br>
 <br>
