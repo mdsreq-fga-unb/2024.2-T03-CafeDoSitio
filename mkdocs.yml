@@ -1,6 +1,12 @@
 site_name: Café do Sítio
+
+repo_name: "2024.2-T03-CafeDoSitio"
+repo_url: https://github.com/mdsreq-fga-unb/2024.2-T03-CafeDoSitio
+
 theme:
   name: material
+  language: pt-BR
+
   features:
     - content.code.annotate
     - content.tabs.link
@@ -8,6 +14,7 @@ theme:
     - navigation.instant
     - navigation.top
     - navigation.tracking
+
   palette:
     - scheme: default
       primary: 'green'
