@@ -29,7 +29,3 @@ theme:
 
 extra_css:
   - stylesheets/styles.css
-
-plugins:
-  - search
-  - include_dir_to_nav
