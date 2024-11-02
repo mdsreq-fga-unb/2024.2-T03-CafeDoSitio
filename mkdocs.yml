@@ -1,0 +1,35 @@
+site_name: Café do Sítio
+theme:
+  name: material
+  features:
+    - content.code.annotate
+    - content.tabs.link
+    - header.autohide
+    - navigation.instant
+    - navigation.top
+    - navigation.tracking
+  palette:
+    - scheme: default
+      primary: 'green'
+      accent: 'lime'
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+        
+    - scheme: slate
+      primary: 'green'
+      accent: 'lime'
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  
+  logo: assets/CafeSitioLogo.png
+  favicon: assets/CafeSitioLogo.png
+  highlightjs: true
+
+extra_css:
+  - stylesheets/styles.css
+
+plugins:
+  - search
+  - include_dir_to_nav
