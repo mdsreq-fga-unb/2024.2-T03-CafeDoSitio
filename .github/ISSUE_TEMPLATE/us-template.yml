@@ -1,0 +1,31 @@
+name: Nova História de Usuário
+description: Registre uma nova história de usuário no projeto do Café do Sítio.
+title: "[US <Código da US>]: <Título da US no verbo Infinitivo>"
+labels: ["user story"]
+body:
+  - type: textarea
+    id: text-zone1
+    attributes:
+      label: Descreva a História de Usuário
+      description: siga o modelo - Quem deve operar o sistema? O que deve sistema deve fazer? Para qual objetivo o ator deve fazer isso?
+      value: O || Eu como <Ator da Ação>, deve ser capaz de <o que deve fazer>, para que <Objetivo>.
+    validations:
+      required: true
+  - type: textarea
+    id: text-zone2
+    attributes:
+      label: Quais são as Definition's of Done (DoD) da atividade?
+      description: O que deve ser testado e estar funcionando para que a User Story esteja concluída?
+      value: |
+        - [ ] Critério 1;
+        - [ ] Critério 2;
+        - [ ] Critério 3.
+    validations:
+      required: true
+  - type: textarea
+    id: text-zone3
+    attributes:
+      label: Detalhes adicionais?
+      description: Acrescente informações que possam ser pertinentes para o time.
+      placeholder: |
+        Escreva ou deixe em branco.
