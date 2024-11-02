@@ -12,7 +12,6 @@
 
 <br>
 <br>
-<br>
 
 <center>
 <h1> Seja bem-vindo à Documentação do Projeto! 👋</h1>
@@ -67,6 +66,25 @@ mkdocs serve
 Isso iniciará um servidor local em http://localhost:8000, onde você poderá visualizar a documentação. Qualquer alteração nos arquivos Markdown será automaticamente refletida na visualização do navegador.
 
 <br>
-<br>
 
 Agora que você configurou seu ambiente de desenvolvimento local, você está pronto para explorar nossa documentação e contribuir para o projeto. Se tiver alguma dúvida ou encontrar algum problema, não hesite em entrar em contato conosco. Agradecemos sua contribuição e interesse em nosso projeto!
+
+<br>
+
+## 📝 Acesse a Documentação do Projeto:
+
+Para conferir todos os detalhes sobre o projeto, acesse a documentação completa clicando [aqui](https://mdsreq-fga-unb.github.io/2024.2-T03-CafeDoSitio/).
+
+<br><br>
+
+# 👩‍💻 Contribuidores do Projeto:
+
+<!-- Foto dos participantes do grupo -->
+<div align="center">
+  <img src="https://github.com/anawcarol.png" width="100" />
+  <img src="https://github.com/arthur-suares.png" width="100"/>
+  <img src="https://github.com/DanielRogs.png" width="100"/>
+  <img src="https://github.com/JoaoODragonborn.png" width="100"/>
+  <img src="https://github.com/manuvaladares.png" width="100"/>
+  <img src="https://github.com/marcellaanderle.png" width="100"/>
+</div>
