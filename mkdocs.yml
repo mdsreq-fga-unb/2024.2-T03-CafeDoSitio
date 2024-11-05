@@ -3,6 +3,16 @@ site_name: Café do Sítio
 repo_name: "2024.2-T03-CafeDoSitio"
 repo_url: https://github.com/mdsreq-fga-unb/2024.2-T03-CafeDoSitio
 
+nav:
+  - Início: sections/1-homePage/home.md
+  - Visão do Produto e Projeto:
+    - Cenário Atual do Cliente e Negócio: sections/2-docPage/1-cenarioAtual.md
+    - Solução Proposta: sections/2-docPage/2-solucaoProposta.md
+    - Estratégias de Engenharia de Software: sections/2-docPage/3-estrategiasEngSoftware.md
+    - Cronograma e Entregas: sections/2-docPage/4-cronogramaEntregas.md
+    - Interação entre Equipe e Cliente: sections/2-docPage/5-interacaoEquipeCliente.md
+
+
 theme:
   name: material
   language: pt-BR
