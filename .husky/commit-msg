@@ -1,0 +1,7 @@
+#!/bin/sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo 'Checando se a sua mensagem de commit segue o protocolo Conventional Commits... \n'
+
+npx --no -- commitlint --edit ${1} ||
+(echo "Opps! \n Você não está seguindo o protocolo Conventional Commits. Utilize um destes prefixos \n build: \n chore: \n ci: \n docs: \n feat: \n fix: \n perf: \n refactor: \n revert: \n style: \n test:" && exit 1)

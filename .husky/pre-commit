@@ -2,5 +2,3 @@ echo 'Tentando fazer build da sua Documentação! 🏗️🏗️\n\n Aguarde...\
 
 mkdocs build ||
 (echo 'Falha no processo de Build! ❌ \nCorrija os erros primeiro.' && exit 1)
-
-echo '\n\n Completo! ✅'
