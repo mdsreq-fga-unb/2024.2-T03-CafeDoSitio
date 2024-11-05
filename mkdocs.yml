@@ -4,7 +4,7 @@ repo_name: "2024.2-T03-CafeDoSitio"
 repo_url: https://github.com/mdsreq-fga-unb/2024.2-T03-CafeDoSitio
 
 nav:
-  - Início: sections/1-homePage/home.md
+  - Início: index.md
   - Visão do Produto e Projeto:
     - Cenário Atual do Cliente e Negócio: sections/2-docPage/1-cenarioAtual.md
     - Solução Proposta: sections/2-docPage/2-solucaoProposta.md
