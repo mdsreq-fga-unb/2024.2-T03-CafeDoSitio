@@ -11,7 +11,8 @@ nav:
     - Estratégias de Engenharia de Software: sections/2-docPage/3-estrategiasEngSoftware.md
     - Cronograma e Entregas: sections/2-docPage/4-cronogramaEntregas.md
     - Interação entre Equipe e Cliente: sections/2-docPage/5-interacaoEquipeCliente.md
-
+  - Políticas:
+    - GCS: sections/3-politicas/gcs.md
 
 theme:
   name: material
