@@ -1,6 +1,4 @@
 #!/bin/sh
-. "$(dirname -- "$0")/_/husky.sh"
-
 echo 'Checando se a sua mensagem de commit segue o protocolo Conventional Commits... \n'
 
 npx --no -- commitlint --edit ${1} ||
