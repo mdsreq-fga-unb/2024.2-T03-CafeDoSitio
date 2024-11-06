@@ -5,7 +5,7 @@
  **Falta de Integração de Sistemas:**
 <div style="text-align: justify;">
     <p style="text-indent: 30px;">
-        Atualmente, o Café do Sítio utiliza o sistema de recrutamento, por onde recebem currículos e realizam processos seletivos. Utiliza emails, telefonemas e redes sociais para receber feedbacks de seus clientes. E carece de uma gestor de visitas presencias à fábrica, sendo essas organizadas por telefone e contatos. Assim, os sistemas elencados geram uma falta de centralização e integração entre as plataformas, tal como foi detalhado no Tópico 1.2. Isso complica o gerenciamento das informações e a eficiência do atendimento, também especificados no Tópico 1.2.
+        Atualmente, o Café do Sítio utiliza o sistema de recrutamento, empregare, por onde recebem currículos e realizam processos seletivos. Utiliza emails, telefonemas e redes sociais para receber feedbacks de seus clientes. E carece de um gestor de visitas presencias à fábrica, sendo essas organizadas por telefone e contatos. Assim, os sistema do empregare, da ouvidoria e de visitas não estão integrados, tal como foi detalhado no Tópico 1.2. 
     </p>
 </div>
 
