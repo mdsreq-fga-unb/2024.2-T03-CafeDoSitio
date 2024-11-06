@@ -84,4 +84,4 @@ A equipe de desenvolvedores do Projeto Café do Sítio é composta por 6 membros
 ### Histórico de Versão
 Data     | Versão | Descrição | Autor | Revisores 
 -------- | ------ | --------- | ----- | ---------
-06/11/2024 | 1.0 | Criação do Documento | Daniel Rodrigues | 
+06/11/2024 | 1.0 | Criação do Documento | Daniel Rodrigues | Manuella Magalhães
