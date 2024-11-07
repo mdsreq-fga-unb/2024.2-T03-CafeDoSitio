@@ -87,4 +87,5 @@ A nossa solução proposta para a Família do Sítio se diferencia por oferecer 
 | -------- | ------ | ----------------------- | ---------------------- | --------- |
 | 05/11/24 | 0.1    | Adição do tópico 2.3    | Marcella Sousa Anderle | João      |
 | 05/11/24 | 0.2    | Adição dos tópicos 2.1 e 2.2 | João Pedro | Arthur |
+| 07/11/24 | 0.3    | Adição do tópico 2.4 | Manuella | Daniel |
 
