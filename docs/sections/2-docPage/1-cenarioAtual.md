@@ -50,4 +50,4 @@
 ## Historico de Versão
 Data     | Versão | Descrição | Autor | Revisores 
 -------- | ------ | --------- | ----- | ---------
-05/11/2024 | 1 | Tópicos 1.3 e 1.4 | Arthur Suares | João Pedro
+06/11/2024 | 0.2 | Tópicos 1.3 e 1.4 | Arthur Suares | João Pedro
