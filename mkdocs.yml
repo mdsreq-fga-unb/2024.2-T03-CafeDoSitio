@@ -11,6 +11,15 @@ nav:
     - Estratégias de Engenharia de Software: sections/2-docPage/3-estrategiasEngSoftware.md
     - Cronograma e Entregas: sections/2-docPage/4-cronogramaEntregas.md
     - Interação entre Equipe e Cliente: sections/2-docPage/5-interacaoEquipeCliente.md
+  - Ciclos e Backlog:
+    - Estado Atual do Backlog: sections/4-sprints/VisaoGeralBacklog.md
+    - Sprint 1:
+      - Historico do Backlog: sections/4-sprints/sprint1/HistoricoBacklog.md
+      - Reuniões:
+        - Kick Off com Stakeholders: sections/4-sprints/sprint1/reuniões/[Stakeholders]04Nov2024.md
+        - Planning: sections/4-sprints/sprint1/reuniões/[Equipe]04Nov2024.md
+        - Lean Inception pt.1: sections/4-sprints/sprint1/reuniões/[Stakeholders]06Nov2024.md
+        - Lean Inception pt.2: sections/4-sprints/sprint1/reuniões/[Stakeholders]07Nov2024.md
   - Políticas:
     - GCS: sections/3-politicas/gcs.md
 
