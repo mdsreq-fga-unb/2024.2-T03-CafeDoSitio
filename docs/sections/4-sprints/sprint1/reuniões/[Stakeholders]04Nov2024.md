@@ -37,7 +37,7 @@ Durante a reunião, todos os stakeholders compreenderam todos os pontos essencia
 
 Na fase de combinados, foi estabelecido clareza quanto à importancia da comunicação para o desenvolvimento do software e os stakeholders, acentuando que o projeto é uma colaboração entre o time e a Família do Sítio. Nessa conversa e em devido acordo entre as partes envolvidas, foi estabelecido que qualquer dúvida ou pedidos de validações sem resposta seriam prejudiciais ao projeto após 2 dias úteis e que, portanto, se esforçarão para atender as demandas dentro do prazo mencionado. Foi criada um grupo de Whatsapp para unificar todas as conversas, seja dos membros de desenvolvimento, seja da Família do Sítio, para que não haja intermédio de somente 1 membro em ambas as partes.
 
-Os prazos da disciplina foram exclarecidas e já infoermando sobre a entrega da visão do produto para Terça-Feira (12/11/2024) e que, portanto, necessita de urgência para entender o produto e realizar a fase de elicitação de requisitos.
+Os prazos da disciplina foram exclarecidas e já informando sobre a entrega da visão do produto para Terça-Feira (12/11/2024) e que, portanto, necessita de urgência para entender o produto e realizar a fase de elicitação de requisitos.
 
 Foi solicitado pela equipe de desenvolvimento documentos referente à referências de Marca da Família do Sítio para que a equipe não distocesse a identidade da empresa dentro do software. Em contrapartida, a Família do Sítio solicitou à equipe de desenvolvimento uma plataforma que organizasse tais demandas e prazos para que ficasse formalizado todas as solicitações.
 
