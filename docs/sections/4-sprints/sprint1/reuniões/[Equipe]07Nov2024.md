@@ -60,4 +60,4 @@ _Reunião não Gravada_
 ## Histórico de Versão: 
 | Data | Versão | Descrição | Autor | Revisores |
 |---- | ------ | --------- | ----- | --------- |
-| 08/11/24 | 1.0 | Criação do documento | Daniel Rodrigues | 
+| 08/11/24 | 1.0 | Criação do documento | Daniel Rodrigues | João Pedro
