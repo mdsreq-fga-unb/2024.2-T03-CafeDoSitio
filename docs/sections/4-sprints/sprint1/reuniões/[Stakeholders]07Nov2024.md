@@ -54,4 +54,4 @@ Os detalhes de cada fase pode ser visto no board abaixo:
 | Data | Versão | Descrição | Autor | Revisores |
 |---- | ------ | --------- | ----- | --------- |
 | 07/11/24 | 1.0 | Criação do documento | Daniel Rodrigues | Arthur Miranda |
-| 08/11/2024 | 1.0 | Correção das Pautas da Reunião | Daniel Rodrigues | João Pedro |
+| 08/11/24 | 1.1 | Correção das Pautas da Reunião | Daniel Rodrigues | João Pedro |
