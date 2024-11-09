@@ -2,7 +2,7 @@
 ![Banner Desenvolvedores](../../../../assets/BannerDesenvolvedores.png)
 
 <div align="center">
-<h1>🤝 Reunião de Planning </h1>
+<h1>🤝 Reunião de Lean Inception pt.4</h1>
 </div>
 
 ## Detalhes da Reunião:
