@@ -22,10 +22,13 @@ O objetivo desta reunião é conhecer todos os stakeholders ativos na definiçã
 
 | Número | Pauta |
 | --- | ------ |
-| 1 | Atividade 1: Definição das Personas |
-| 2 | Atividade 2: Definição da Jornada dos Usuários |
-| 3 | Resolver os assuntos pertinentes em _Parking Lot_ |
-| 4 | Considerações Finais |
+| 1 |	Apresentação dos membros do Projeto e dos stakeholders do Café do Sítio |
+| 2 |	Contextualização sobre a Disciplina |
+| 3	| Contextualização sobre o MVP |
+| 4	| Combinados para o sucesso do Projeto |
+| 5	| Visão Geral do que foi entendido do Projeto |
+| 6	| Definição do dia de reunião com stakeholders quinzenalmente |
+| 7	| Verificação da Viabilidade do Workshop Lean Inception Enxuto |
 
 ## Decisões Importantes:
 
@@ -51,3 +54,4 @@ _Reunião não Gravada_
 | Data | Versão | Descrição | Autor | Revisores |
 |---- | ------ | --------- | ----- | --------- |
 | 07/11/24 | 1.0 | Criação do documento | Daniel Rodrigues | Arthur Miranda |
+| 08/11/24 | 1.1 | Correção das pautas da reunião | Daniel Rodrigues | João Pedro |
