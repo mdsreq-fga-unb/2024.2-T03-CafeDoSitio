@@ -22,6 +22,25 @@ Controle de Qualidade | Testes automatizados, TDD (Test-Driven Development), atr
 Suporte à equipes de Desenvolvimento | Equipes mais autônomas e colaborativas. Foco na comunicação e nas interações diretas para resolver problemas | Define papéis mais estruturados e tarefas específicas para os membros da equipe, com maior controle e supervisão sobre o processo
 
 ##3.3 - Justificativa
+<div style="text-align: justify;">
+    <p style="text-indent: 30px;">
+        Tendo em mente os desafios enfrentados pela Família do Sítio e considerando as caracterísiticas do projeto, o ScrumXP foi escolhido como mais adequado porque:
+    </p>
+</div>
+
+####1. Entregas rápidas e flexibilidade
+<div style="text-align: justify;">
+    <p style="text-indent: 30px;">        
+    Ao considerar o prazo apertado de 3 meses em geral, as estregas incrementais do processo ScrumXP permitirão que a equipe entregue novas funcionalidades enquanto recebe feedbacks constantes. Norteando o desenvolvimento do produto de acordo com as necessidades do cliente.
+    </p>
+</div>
+
+####2. Nível de conhecimento da equipe
+<div style="text-align: justify;">
+    <p style="text-indent: 30px;">        
+    Considerando a pouca experiência da equipe em tecnologias como NodeJs, ExpressJs, entre outras, o ScrumXP na sua abordagem iterativa proporciona um aprendizado contínuo durante o processo de desenvolvimento. 
+    </p>
+</div>
 
 ---
 ## Historico de Versão
