@@ -2,7 +2,17 @@
 
 ## 5.2 Comunicação
 
+### > Ferramentas de Comunicação:
 
+- **WhatsApp:** 
+- **Google Meet:** 
+- **Discord:** 
+- **GitHub Projects:** 
+- **Trello:** 
+
+### > Métodos de Frequência de Reuniões:
+
+### > Frequência de Reunioes com o Cliente:
 
 ---
 ## Historico de Versão
