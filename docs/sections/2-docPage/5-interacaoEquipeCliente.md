@@ -26,4 +26,4 @@
 ## Historico de Versão
 Data     | Versão | Descrição | Autor | Revisores 
 -------- | ------ | --------- | ----- | ---------
-10/11/24 | 1.0 | Adição do Tópico 5.2 | Daniel Rodrigues | Manuella Magalhães
+10/11/24 | 1.0 | Adição do Tópico 5.2 | Daniel Rodrigues | João Pedro
