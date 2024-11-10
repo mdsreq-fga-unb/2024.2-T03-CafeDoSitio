@@ -24,4 +24,4 @@ O cronograma acima poderá sofrer alterações ao longo do desenvolvimento do pr
 Data     | Versão | Descrição | Autor | Revisores 
 -------- | ------ | --------- | ----- | ---------
 06/11/2024 | 1.0 | Criação do Documento e Adição do Tópico 4 | Daniel Rodrigues | João Pedro
-10/11/2024 | 1.1 | Desenvolvimento detalhado do cronograma   | Daniel Rodrigues | João Pedro 
+10/11/2024 | 1.1 | Desenvolvimento detalhado do cronograma   | Daniel Rodrigues | Arthur Miranda

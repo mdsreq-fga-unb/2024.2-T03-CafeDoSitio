@@ -126,5 +126,5 @@ US30   | Conversar com Chatbot                 | Nível 2                    | N
 ## Histórico de Versão: 
 | Data | Versão | Descrição | Autor | Revisores |
 |---- | ------ | --------- | ----- | --------- |
-| 08/11/24 | 1.0 | Criação do documento | Daniel Rodrigues | João Pedro |
-| 10/11/24 | 1.1 | Correções dos Códigos da US's | Daniel Rodrigues | João Pedro |
+| 08/11/24 | 1.0 | Criação do documento | Daniel Rodrigues | Arthur Miranda |
+| 10/11/24 | 1.1 | Correções dos Códigos da US's | Daniel Rodrigues | Arthur Miranda |
