@@ -5,7 +5,7 @@
  **Falta de Integração de Sistemas:**
 <div style="text-align: justify;">
     <p style="text-indent: 30px;">
-        Atualmente, o Café do Sítio utiliza o sistema de recrutamento, empregare, por onde recebem currículos e realizam processos seletivos. Utiliza emails, telefonemas e redes sociais para receber feedbacks de seus clientes. E carece de um gestor de visitas presencias à fábrica, sendo essas organizadas por telefone e contatos. Assim, os sistema do empregare, da ouvidoria e de visitas não estão integrados, tal como foi detalhado no Tópico 1.2. 
+        Atualmente, a Família do Sítio utiliza o sistema de recrutamento Empregare, por onde recebem currículos e realizam processos seletivos. Utiliza emails, telefonemas e redes sociais para receber feedbacks de seus clientes. E carece de um gestor de visitas presencias à fábrica, sendo essas organizadas por telefone e contatos. Sendo assim, os sistemas da Empregare, da ouvidoria e da gestão de visitas não estão integrados e há uma dificuldade na gestão desses contatos com o cliente que vem de diversas fontes, o que acaba por sobrecarregar o setor de Marketing, que acaba por ter que gerenciar essas solicitações. Por conta disso, acontece de solicitações vindas dos clientes não chegarem no setor responsável para lidar com tal solicitação. Além disso, os processos não possuem um registro da fase em que estão. Portanto, clientes podem ter experiências em que um cliente obteve suporte a sua solicitação, enquanto outro cliente não a obteve por causa de como o gerenciamento dessas solicitações está sendo feito.
     </p>
 </div>
 
@@ -50,4 +50,4 @@
 ## Historico de Versão
 Data     | Versão | Descrição | Autor | Revisores 
 -------- | ------ | --------- | ----- | ---------
-05/11/2024 | 1 | Tópicos 1.3 e 1.4 | Arthur Suares | João Pedro
+06/11/2024 | 0.2 | Tópicos 1.3 e 1.4 | Arthur Suares | João Pedro

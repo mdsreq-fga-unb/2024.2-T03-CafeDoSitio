@@ -22,10 +22,13 @@ O objetivo desta reunião é conhecer todos os stakeholders ativos na definiçã
 
 | Número | Pauta |
 | --- | ------ |
-| 1 | Atividade 1: Definição das Personas |
-| 2 | Atividade 2: Definição da Jornada dos Usuários |
-| 3 | Resolver os assuntos pertinentes em _Parking Lot_ |
-| 4 | Considerações Finais |
+| 1 |	Apresentação dos membros do Projeto e dos stakeholders do Café do Sítio |
+| 2 |	Contextualização sobre a Disciplina |
+| 3	| Contextualização sobre o MVP |
+| 4	| Combinados para o sucesso do Projeto |
+| 5	| Visão Geral do que foi entendido do Projeto |
+| 6	| Definição do dia de reunião com stakeholders quinzenalmente |
+| 7	| Verificação da Viabilidade do Workshop Lean Inception Enxuto |
 
 ## Decisões Importantes:
 
@@ -37,7 +40,7 @@ Durante a reunião, todos os stakeholders compreenderam todos os pontos essencia
 
 Na fase de combinados, foi estabelecido clareza quanto à importancia da comunicação para o desenvolvimento do software e os stakeholders, acentuando que o projeto é uma colaboração entre o time e a Família do Sítio. Nessa conversa e em devido acordo entre as partes envolvidas, foi estabelecido que qualquer dúvida ou pedidos de validações sem resposta seriam prejudiciais ao projeto após 2 dias úteis e que, portanto, se esforçarão para atender as demandas dentro do prazo mencionado. Foi criada um grupo de Whatsapp para unificar todas as conversas, seja dos membros de desenvolvimento, seja da Família do Sítio, para que não haja intermédio de somente 1 membro em ambas as partes.
 
-Os prazos da disciplina foram exclarecidas e já infoermando sobre a entrega da visão do produto para Terça-Feira (12/11/2024) e que, portanto, necessita de urgência para entender o produto e realizar a fase de elicitação de requisitos.
+Os prazos da disciplina foram exclarecidas e já informando sobre a entrega da visão do produto para Terça-Feira (12/11/2024) e que, portanto, necessita de urgência para entender o produto e realizar a fase de elicitação de requisitos.
 
 Foi solicitado pela equipe de desenvolvimento documentos referente à referências de Marca da Família do Sítio para que a equipe não distocesse a identidade da empresa dentro do software. Em contrapartida, a Família do Sítio solicitou à equipe de desenvolvimento uma plataforma que organizasse tais demandas e prazos para que ficasse formalizado todas as solicitações.
 
@@ -51,3 +54,4 @@ _Reunião não Gravada_
 | Data | Versão | Descrição | Autor | Revisores |
 |---- | ------ | --------- | ----- | --------- |
 | 07/11/24 | 1.0 | Criação do documento | Daniel Rodrigues | Arthur Miranda |
+| 08/11/24 | 1.1 | Correção das pautas da reunião | Daniel Rodrigues | João Pedro |

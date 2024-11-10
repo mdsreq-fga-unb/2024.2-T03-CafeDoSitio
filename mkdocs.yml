@@ -1,4 +1,4 @@
-site_name: Café do Sítio
+site_name: Família do Sítio
 
 repo_name: "2024.2-T03-CafeDoSitio"
 repo_url: https://github.com/mdsreq-fga-unb/2024.2-T03-CafeDoSitio
@@ -20,6 +20,7 @@ nav:
         - Planning: sections/4-sprints/sprint1/reuniões/[Equipe]04Nov2024.md
         - Lean Inception pt.1: sections/4-sprints/sprint1/reuniões/[Stakeholders]06Nov2024.md
         - Lean Inception pt.2: sections/4-sprints/sprint1/reuniões/[Stakeholders]07Nov2024.md
+        - Lean Inception pt.3: sections/4-sprints/sprint1/reuniões/[Equipe]07Nov2024.md
   - Políticas:
     - GCS: sections/3-politicas/gcs.md
 
