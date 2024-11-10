@@ -1,30 +1,25 @@
 # 3. Estratégias de Engenharia de Software
 
 ##3.1 - Estratégia priorizada
-**Abordagem de Desenvolvimento de Software:**
-<div style="text-align: justify;">
-    <p style="text-indent: 30px;">
-    </p>
-</div>
+**Abordagem de Desenvolvimento de Software:** Ágil
 
-**Ciclo de vida:**
-<div style="text-align: justify;">
-    <p style="text-indent: 30px;">
-    </p>
-</div>
+**Ciclo de vida:** Iterativo e Incremental 
 
-**Processo de Engenharia de Software:**
-<div style="text-align: justify;">
-    <p style="text-indent: 30px;">
-    </p>
-</div>
+**Processo de Engenharia de Software:** Scrum/XP
 
 ##3.2 - Quadro comparativo
 
-X     | Processo 1 | Processo 2 |  
+Características     | Scrum/XP | Processo Unificado |  
 -------- | ------ | --------- | 
-Ponto 1 | Melhor | Não tanto |
-Ponto 2 | Ruim | Bem melhor nesse ponto | 
+Abordagem Geral | Iterativo e incremental. Possui um foco maior na agilidade, não priorizando documentação | Iterativo e incremental. Estrutura mais formalizada em termos de documentação |
+Foco em arquitetura | A arquitetura é desenvolvida de forma incremental e evolutiva, com o foco em atender às necessidades imediatas do produto. Não há um design extenso ou detalhado no início do projeto | A arquitetura é desenvolvida de forma incremental e evolutiva, com o foco em atender às necessidades imediatas do produto. Não há um design extenso ou detalhado no início do projeto | 
+Estrutura de Processos | Ciclos curtos(Sprints) de desenvolvimento. Processo ágil e flexível, se preocupando com a entrega contínua | Fases formais (Iniciação, Elaboração, Construção, Transição). Processo mais estruturado e documentado.
+Flexibilidade de Requisitos | Alta flexibilidade movida por feedback do cliente a cada Sprint| Flexibilidade moderada. Requisitos são definidos inicialmente para maior controle e formalidade. Mas podem ser ajustados
+Colaboração com o cliente | Alto envolvimento do cliente. Seja durante as Sprints revisando incrementos ou fornecendo feedbacks | Participação do cliente mais concentrado nas etapas iniciais e finais, de planejamento e transição. Revisões feitas depois de entregas significativas
+Complexidade do processo | Processo mais simplificado. Com foco menor em documentação, e maior na autonomia da equipe | Maior complexidade, envolvendo múltiplas fases. Foco maior em planejamento e documentação
+Práticas de Desenvolvimento |  Programação em par, integração contínua, testes automatizados, refatoração, design simples, e foco em qualidade contínua durante o desenvolvimento |Definição de arquitetura, modelagem detalhada e desenvolvimento iterativo
+Controle de Qualidade | Testes automatizados, TDD (Test-Driven Development), através de integração contínua garantindo qualidade durante o desenvolvimento | O controle de qualidade é feito de forma mais estruturada, com foco em testes em várias fases
+Suporte à equipes de Desenvolvimento | Equipes mais autônomas e colaborativas. Foco na comunicação e nas interações diretas para resolver problemas | Define papéis mais estruturados e tarefas específicas para os membros da equipe, com maior controle e supervisão sobre o processo
 
 ##3.3 - Justificativa
 
