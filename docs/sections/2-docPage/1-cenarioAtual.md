@@ -21,7 +21,7 @@
         clientes. O público-alvo da empresa inclui consumidores de café premium,
         distribuidores, lojistas e parceiros comerciais. No entanto, com o crescimento das
         operações, surgiram desafios relacionados à gestão do atendimento ao cliente, que se
-        tornou descentralizado e ineficiente. 
+        tornou descentralizado e ineficiente, características que serão detalhadas no próximo tópico.
     </p>
 </div>
 
