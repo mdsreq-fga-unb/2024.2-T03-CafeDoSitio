@@ -22,6 +22,23 @@ Controle de Qualidade | Testes automatizados, TDD (Test-Driven Development), atr
 Suporte à equipes de Desenvolvimento | Equipes mais autônomas e colaborativas. Foco na comunicação e nas interações diretas para resolver problemas | Define papéis mais estruturados e tarefas específicas para os membros da equipe, com maior controle e supervisão sobre o processo
 
 ##3.3 - Justificativa
+
+A escolha do processo foi baseada em uma adaptação do framework proposto por Gupta. Em tal framework, são feitas perguntas cujas respostas são "Sim" ou "Não" relacionadas aos requisitos, a equipe de desenvolvimento, aos stakeholders e ao tipo de projeto e seus riscos. A resposta da equipe à cada uma das questões propostas por Gupta indica o processo de desenvolvimento de software ideal para o projeto. As perguntas propostas estão elencadas na figura 1, bem como as respostas fornecidas pelo time de desenvolvimento.
+
+<p style="text-align: center;">
+Figura 1 - Escolha de processo através do framework Gupta adaptado
+</p>
+
+![Quadro de Seleção de processos](/assets/processo_requisitados_cafe-do-sito.png)
+
+<p style="text-align: center;">
+Fonte: Elaborado pelos autores (2024)
+</p>
+
+Conforme explicitado na figura 1, o processo de desenvolvimento de software mais indicado para o projeto é o Scrum/XP, uma combinação do Extreme Programming (XP) com o framework de gestão de projetos Scrum. Tanto Scrum, quanto XP foram desenvolvidos no contexto de abordagem ágil de desenvolvimento de software e ciclo de vida do produto iterativo e incretemental.
+
+
+
 <div style="text-align: justify;">
     <p style="text-indent: 30px;">
         Tendo em mente os desafios enfrentados pela Família do Sítio e considerando as caracterísiticas do projeto, o ScrumXP foi escolhido como mais adequado porque:
