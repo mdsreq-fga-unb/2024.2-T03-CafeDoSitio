@@ -4,18 +4,18 @@ Baseando-se na estratégia de desenvolvimento de software selecionado, mencinado
 
 Sprint | Início | Fim | Objetivo do Ciclo | Entregas Previstas | Validação com os Stakeholders
 ----- | ------ | --- | ----------------- | ------------------ | -----------------------------
-Sprint 1 | 04/11/2024 | 11/11/2024 | Elicitação de Requisitos e Defnição do MVP | **1.** Definição do Backlog Inicial priorizado; <br> **2.** Configuração do ambiente de documentação em mkdocs; <br> **3.** Definição do MVP.    | Revisão do Backlog, da Definição do MVP e da Priorização.
-Sprint 2 | 11/11/2024 | 18/11/2024 | Produzir 10% do Software | US | --
-Sprint 3 | 18/11/2024 | 25/11/2024 | Produzir 20% do Software | **Entrega Parcial 1** | -- 
-Sprint 4 | 25/11/2024 | 02/12/2024 | Produzir 30% do Software | -- | -- 
-Sprint 5 | 02/12/2024 | 09/12/2024 | Produzir 40% do Software | **Entrega Parcial 2** | --
-Sprint 6 | 09/12/2024 | 16/12/2024 | Produzir 50% do Software | -- | --
+Sprint 1 | 04/11/2024 | 11/11/2024 | Elicitação de Requisitos e Definição do Backlog | **1.** Definição do Backlog Inicial priorizado; <br> **2.** Configuração do ambiente de documentação em mkdocs; <br> **3.** Definição do MVP.    | Revisão do Backlog e da Priorização.
+Sprint 2 | 11/11/2024 | 18/11/2024 | Revisão e Ajustes do MVP | **1.** Definição do MVP; <br> **2.** Definição dos Incrementos | Revisão da definição do MVP e Incrementos
+Sprint 3 | 18/11/2024 | 25/11/2024 | Execução da _Primeira Onda_ definida no Lean Inception e primeira entrega Parcial | **Entrega Parcial 1** <br><br> **1.** US11; <br> **2.** US15; <br> **3.** US18. | Validação de Protótipos e Checagem dos critérios de Aceitação, de cada US, em Deploy com os stakeholders.
+Sprint 4 | 25/11/2024 | 02/12/2024 | Execução da _Segunda Onda_ definida no Lean Inception  | **1.** US16; <br> **2.** US20; <br> **3.** US01 | Validação de Protótipos e Montagem de Critérios de Aceitação.
+Sprint 5 | 02/12/2024 | 09/12/2024 | Execução da _Terceira Onda_ definda no Lean Inception e segunda entrega parcial | **Entrega Parcial 2** <br><br> **1.** US14; <br> **2.** US06; <br> **3.** US17. | Validação de Protótipos e Checagem dos critérios de Aceitação, de cada US, em Deploy com os stakeholders.
+Sprint 6 | 09/12/2024 | 16/12/2024 | Execução da _Quarta Onda_ definida no Lean Inception | **1.** US19; <br> **2.** US02; <br> **3.** US08 | Validação de Protótipos e Montagem de Critérios de Aceitação.
 <span style="background-color: black; color: white;">**FÉRIAS DE FIM DE ANO**</span> 
-Sprint 7 | 06/01/2025 | 13/01/2025 | Produzir 60% do Software | **Entrega Parcial 3** | -- 
-Sprint 8 | 13/01/2025 | 20/01/2025 | Produzir 70% do Software | -- | --
-Sprint 9 | 20/01/2025 | 27/01/2025 | Produzir 80% do Software | **Entrega Parcial 4** | --
-Sprint 10| 27/01/2025 | 03/02/2025 | Produzir 90% do Software | -- | --
-Sprint 11| 03/02/2025 | 10/02/2025 | Produzir 100% do Software | **Entrega Final** | -- 
+Sprint 7 | 06/01/2025 | 13/01/2025 | Execução da _Quinta Onda_ definida no Lean Inception e terceira entrega parcial | **Entrega Parcial 3** <br><br> **1.** US23; <br> **2.** US21. | Validação de Protótipos e Checagem dos critérios de Aceitação, de cada US, em Deploy com os stakeholders.
+Sprint 8 | 13/01/2025 | 20/01/2025 | Execução da _Sexta Onda_ definida no Lean Inception | **1.** US04; <br> **2.** US22 <br> **3.** US05 | Validação de Protótipos e Montagem de Critérios de Aceitação.
+Sprint 9 | 20/01/2025 | 27/01/2025 | Execução da _Sétima Onda_ definida no Lean Inception e quarta entrega parcial | **Entrega Parcial 4** <br><br> **1.** US13. | Validação de Protótipos e Checagem dos critérios de Aceitação, de cada US, em Deploy com os stakeholders.
+Sprint 10| 27/01/2025 | 03/02/2025 | Análise de Cobertura e Testes de Software | **1.** Métricas de Cobertua do código acima de 90%; <br> **2.** Correções nos Testes de Software | Homologação do Cliente e aprovação de qualidade para a segunrança do software.
+Sprint 11| 03/02/2025 | 10/02/2025 | Deploy do Software, Revisão | **Entrega Final** <br><br> **1.** Lançamento oficial da plataforma em domínio público; <br> **2.** Ajustes finais no Software | Homologação do Cliente e Aprovação da Conclusão do Desenvolvimento. 
 
 O cronograma acima poderá sofrer alterações ao longo do desenvolvimento do projeto da Família do Sítio.
 
@@ -23,4 +23,5 @@ O cronograma acima poderá sofrer alterações ao longo do desenvolvimento do pr
 ## Historico de Versão
 Data     | Versão | Descrição | Autor | Revisores 
 -------- | ------ | --------- | ----- | ---------
-06/11/2024 | 1.0 | Criação do Documento e Adição do Tópico 4 | Daniel Rodrigues | 
+06/11/2024 | 1.0 | Criação do Documento e Adição do Tópico 4 | Daniel Rodrigues | João Pedro
+10/11/2024 | 1.1 | Desenvolvimento detalhado do cronograma   | Daniel Rodrigues | João Pedro 

@@ -96,19 +96,19 @@ US19   | Consultar vagas de empresa da Empresa | Nível 1                    | N
 US20   | Realizar SAC                          | Nível 2                    | Nível 3                           | Nível 3
 US21   | Consultar detalhes do E-Commerce      | Nível 1                    | Nível 3                           | Nível 3
 US22   | Notificar setores Ideais              | Nível 2                    | Nível 3                           | Nível 2
-US22   | Localizar Produtos                    | Nível 3                    | Nível 3                           | Nível 3
+US23   | Localizar Produtos                    | Nível 3                    | Nível 3                           | Nível 3
 
 Em contrapartida, as funcionalidades que foram **consideradas Incremento** são:
 
 Código | Título                                | Nível de Esforço           | Nível de Valor Agregado           | Nível de UX
 ------ | ------------------------------------- | -------------------------  | --------------------------------- | -----------
-US03   | Comentar no Blog                      | Nível 2                    | Nível 1                           | Nível 1
-US07   | Baixar Blog                           | Nível 2                    | Nível 1                           | Nível 2
-US09   | Conectar Blog com Produtos da Empresa | Nível 1                    | Nível 2                           | Nível 2
-US10   | Compartilhar Blog                     | Nível 1                    | Nível 2                           | Nível 2
-US12   | Realizar Tour Virtual                 | Nível 3                    | Nível 2                           | Nível 3
-US22   | Lembrar usuários de Visita            | Nível 2                    | Nível 1                           | Nível 2
-US22   | Conversar com Chatbot                 | Nível 2                    | Nível 1                           | Nível 2
+US24   | Comentar no Blog                      | Nível 2                    | Nível 1                           | Nível 1
+US25   | Baixar Blog                           | Nível 2                    | Nível 1                           | Nível 2
+US26   | Conectar Blog com Produtos da Empresa | Nível 1                    | Nível 2                           | Nível 2
+US27   | Compartilhar Blog                     | Nível 1                    | Nível 2                           | Nível 2
+US28   | Realizar Tour Virtual                 | Nível 3                    | Nível 2                           | Nível 3
+US29   | Lembrar usuários de Visita            | Nível 2                    | Nível 1                           | Nível 2
+US30   | Conversar com Chatbot                 | Nível 2                    | Nível 1                           | Nível 2
 
 # Referências Bibliográficas
 
@@ -126,4 +126,5 @@ US22   | Conversar com Chatbot                 | Nível 2                    | N
 ## Histórico de Versão: 
 | Data | Versão | Descrição | Autor | Revisores |
 |---- | ------ | --------- | ----- | --------- |
-| 08/11/24 | 1.0 | Criação do documento | Daniel Rodrigues | SORTEAR |
+| 08/11/24 | 1.0 | Criação do documento | Daniel Rodrigues | João Pedro |
+| 10/11/24 | 1.1 | Correções dos Códigos da US's | Daniel Rodrigues | João Pedro |
