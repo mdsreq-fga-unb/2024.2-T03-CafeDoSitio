@@ -35,32 +35,12 @@ Figura 1 - Escolha de processo através do framework Gupta adaptado
 Fonte: Elaborado pelos autores (2024)
 </p>
 
-Conforme explicitado na figura 1, o processo de desenvolvimento de software mais indicado para o projeto é o Scrum/XP, uma combinação do Extreme Programming (XP) com o framework de gestão de projetos Scrum. Tanto Scrum, quanto XP foram desenvolvidos no contexto de abordagem ágil de desenvolvimento de software e ciclo de vida do produto iterativo e incretemental.
+Conforme explicitado na figura 1, o processo de desenvolvimento de software mais indicado para o projeto é o Scrum/XP, uma combinação do Extreme Programming (XP) com o framework de gestão de projetos Scrum. Tanto Scrum, quanto XP foram desenvolvidos no contexto de abordagem ágil de desenvolvimento de software e ciclo de vida do produto iterativo e incremental.
 
-
-
-<div style="text-align: justify;">
-    <p style="text-indent: 30px;">
-        Tendo em mente os desafios enfrentados pela Família do Sítio e considerando as caracterísiticas do projeto, o ScrumXP foi escolhido como mais adequado porque:
-    </p>
-</div>
-
-####1. Entregas rápidas e flexibilidade
-<div style="text-align: justify;">
-    <p style="text-indent: 30px;">        
-    Ao considerar o prazo apertado de 3 meses em geral, as estregas incrementais do processo ScrumXP permitirão que a equipe entregue novas funcionalidades enquanto recebe feedbacks constantes. Norteando o desenvolvimento do produto de acordo com as necessidades do cliente.
-    </p>
-</div>
-
-####2. Nível de conhecimento da equipe
-<div style="text-align: justify;">
-    <p style="text-indent: 30px;">        
-    Considerando a pouca experiência da equipe em tecnologias como NodeJs, ExpressJs, entre outras, o ScrumXP na sua abordagem iterativa proporciona um aprendizado contínuo durante o processo de desenvolvimento. 
-    </p>
-</div>
+O diferencial do Scrum/XP para o Unified Process na escolha através do framework já mencionado, foi a não existência de requisitos de alta confiabilidade. Por outro lado, a escolha do Scrum/XP já era desejada pelo time de desenvolvimento devido a experiências anteriores bem sucedidas com o processo.
 
 ---
-## Historico de Versão
+## Histórico de Versão
 Data     | Versão | Descrição | Autor | Revisores 
 -------- | ------ | --------- | ----- | ---------
-10/11/2024 | 0.1 | Tópico 3 | Arthur Miranda, João Pedro, Manuella Valadares | ---------
+10/11/2024 | 0.1 | Tópico 3 | Arthur Miranda, João Pedro, Manuella Valadares | Daniel, Carol, Marcella
