@@ -4,24 +4,13 @@
 
 <div style="text-align: justify;">
     <p style="text-indent: 30px;">
-            A Família do Sítio é uma empresa tradicional no setor de alimentos e bebidas,
-        especializada na produção e comercialização de café de alta qualidade. Com décadas
-        de história no mercado, a marca se consolidou como referência no segmento,
-        atendendo desde consumidores finais até grandes redes de varejo. Além do foco na
-        produção sustentável e de excelência, a empresa se preocupa em oferecer um
-        relacionamento mais próximo com seus clientes e parceiros de negócios, refletindo
-        seus valores de tradição e confiança.
+        A Família do Sítio é uma empresa tradicional no setor de alimentos e bebidas, especializada na produção e comercialização de café de alta qualidade. Com décadas de história no mercado, a marca se consolidou como referência no segmento, atendendo desde consumidores finais até grandes redes de varejo. Além do foco na produção sustentável e de excelência, a empresa se preocupa em oferecer um relacionamento mais próximo com seus clientes e parceiros de negócios, refletindo seus valores de tradição e confiança.
     </p>
 </div>
 
 <div style="text-align: justify;">
     <p style="text-indent: 30px;">
-            Há algum tempo, a Família do Sítio tem ampliado sua presença digital, buscando
-        otimizar seus processos de atendimento e fortalecer o relacionamento com seus
-        clientes. O público-alvo da empresa inclui consumidores de café premium,
-        distribuidores, lojistas e parceiros comerciais. No entanto, com o crescimento das
-        operações, surgiram desafios relacionados à gestão do atendimento ao cliente, que se
-        tornou descentralizado e ineficiente, características que serão detalhadas no próximo tópico.
+        Há algum tempo, a Família do Sítio tem ampliado sua presença digital, buscando otimizar seus processos de atendimento e fortalecer o relacionamento com seus clientes. O público-alvo da empresa inclui consumidores de café premium, distribuidores, lojistas e parceiros comerciais. No entanto, com o crescimento das operações, surgiram desafios relacionados à gestão do atendimento ao cliente, que se tornou descentralizado e ineficiente, características que serão detalhadas no próximo tópico.
     </p>
 </div>
 
@@ -29,40 +18,12 @@
 
 <div style="text-align: justify;">
     <p style="text-indent: 30px;">
-                A principal dor identificada na Família do Sítio está relacionada à falta de
-    agilidade de atendimento ao cliente, isto é, por conta de cada serviços de atendimento
-    ao cliente utiliza de um meio diferente a depender de sua categoria: Para
-    recrutamento, a Família do Sítio utiliza o software "empregare" para coletar os currículos
-    e organizar o processo recrutador. Além disso, para reclamações a empresa utiliza o
-    email, telefone e as redes sociais para capturar esse dados. Para o rastreamento de
-    produtos, a empresa também compartilha do meio telefônico. Por fim, para
-    agendamento de visitas técnicas é utilizado o Whatsapp, Redes Sociais, Email e
-    Telefone. O ponto é que, por utilizarem de diversas plataformas, a Família do Sítio sente
-    dificuldade na gestão dessas informações e no acompanhamento de solicitações, tal
-    como foi informado pela própria empresa cliente: Muitas solicitações acabam se
-    perdendo no caminho e não chegam nos setores responsáveis, em vista disso, muitos
-    clientes acabam ligando novamente à Família do Sítio buscando por transparência, mas
-    os processos não possuem o registro das fases em que estão.
+        A principal dor identificada na Família do Sítio está relacionada à dificuldade de acesso às informações da empresa, isto é, por conta de cada serviços de atendimento ao cliente utiliza de um meio diferente a depender de sua categoria: Para recrutamento, a Família do Sítio utiliza o software "empregare" para coletar os currículos e organizar o processo recrutador. Além disso, para reclamações a empresa utiliza o email, telefone e as redes sociais para capturar esse dados. Para o rastreamento de produtos, a empresa também compartilha do meio telefônico. Por fim, para agendamento de visitas técnicas é utilizado o Whatsapp, Redes Sociais, Email e Telefone. O ponto é que, por utilizarem de diversas plataformas, é gerado um problema para os 2 lados: Para o lado da Família do Sítio, os funcionários sentem dificuldades na gestão dessas informações e no acompanhamento de solicitações, tal como foi informado pela própria empresa cliente: Muitas solicitações acabam se perdendo no caminho e não chegam nos setores responsáveis, em vista disso, muitos clientes acabam ligando novamente à Família do Sítio buscando por transparência, mas os processos não possuem o registro das fases em que estão. Já para o lado dos clientes da Família do Sítio, é extremamente confuso e trabalhoso alcançar os locais que mais se adequem ao seu tipo de atendimento, forçando muitas vezes a memorização do caminho até alcaçar o seu objetivo do software do que a intuitividade no que tange a organização das páginas e design de interface pensado à um público mais leigo tecnologicamente. Estes pontos foram coletados através da Ferramenta do Diagrama de Ishikawa, na Figura 1.
 </div>
 
 <div style="text-align: justify;">
     <p style="text-indent: 30px;">
-        Atualmente, os diferentes canais de atendimento da empresa não estão
-    integrados, elucidados pela Família do Sítio quando informou que todos os serviços
-    envolvendo o cliente é cuidado apenas pelo setor de marketing, que deve enviar as
-    demandas aos setores mais adequados para resolverem os problemas com essas
-    pessoas quando, na realidade, o sistema poderia ser integrado à todos os setores da
-    empresa para que o departamento adequado seja notificado em tempo real, além das
-    diversas plataformas a serem analisados pelo Marketing para serem organizados e
-    transferidos aos departamentos, que se torna desgastante. Em resumo, os processos
-    atuais da Família do Sítio resultam em problemas como demora na resposta, perda de
-    informações importantes e uma experiência distinta para cada cliente, isto é, mesmo
-    que 2 clientes tenham a mesma solicitação, o processo não possui a mesma agilidade e
-    qualidade na resposta. Esses fatores afetam negativamente tanto a satisfação do
-    consumidor quanto a eficiência interna dos setores envolvidos (Setor de Marketing,
-    Setor de Tecnologia da Informação e Setor de Recursos Humanos) ou seja, na forma
-    como as demandas são passadas de um setor ao outro e como elas possuem
-    transparência com relação ao status do processo, cujo são escassas no atual momento.
+        Atualmente, os diferentes canais de atendimento da empresa não estão integrados, elucidados pela Família do Sítio quando informou que todos os serviços envolvendo o cliente é cuidado apenas pelo setor de marketing, que deve enviar as demandas aos setores mais adequados para resolverem os problemas com essas pessoas quando, na realidade, o sistema poderia ser integrado à todos os setores da empresa para que o departamento adequado seja notificado em tempo real, além das diversas plataformas a serem analisados pelo Marketing para serem organizados e transferidos aos departamentos, que se torna desgastante. Em resumo, os processos atuais da Família do Sítio resultam em problemas como demora na resposta, perda de informações importantes e uma experiência distinta para cada cliente, isto é, mesmo que 2 clientes tenham a mesma solicitação, o processo não possui a mesma agilidade e qualidade na resposta. Esses fatores afetam negativamente tanto a satisfação do consumidor quanto a eficiência interna dos setores envolvidos (Setor de Marketing, Setor de Tecnologia da Informação e Setor de Recursos Humanos) ou seja, na forma como as demandas são passadas de um setor ao outro e como elas possuem transparência com relação ao status do processo, cujo são escassas no atual momento.
     </p>
     
 </div>
@@ -73,9 +34,6 @@
 <p>Figura 1: Diagrama espinha de peixe apresentando causas e problemas identificados pela
 equipe frente ao depoimento do cliente</p>
 </div>
-
-
-
 
 ##1.3 - Desafios do Projeto
 
@@ -98,14 +56,6 @@ equipe frente ao depoimento do cliente</p>
 <div style="text-align: justify;">
     <p style="text-indent: 30px;">
     O sistema atual de   atendimento às reclamações, agendamentos de visitas técnicas, e rastreamento de produtos da empresa é feito por telefone e email, e portanto, dificultando a coleta destes dados pela equipe de Marketing, o único setor encarregado para estas questões.
-    </p>
-</div>
-
-
-**Risco à Imagem da Empresa:*
-<div style="text-align: justify;">
-    <p style="text-indent: 30px;">
-    Os problemas relacionados ao sistema de recrutamento, o recebimento de feedback e reclamações pelos clientes via email, telefonemas e redes sociais e à forma como é feito o agendamento de visitas físicas causa uma descentralização no atendimento podem prejudicar a imagem da Família do Sítio perante seus clientes e parceiros, criando uma percepção de ineficiência e falta de inovação, evidenciada pela dificuldade de seleção no recrutamento de pessoal e do recebimento de mensagens de clientes em setores opostos ao assunto abordado na mensagem.
     </p>
 </div>
 
