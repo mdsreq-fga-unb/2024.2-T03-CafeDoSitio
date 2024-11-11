@@ -82,9 +82,9 @@ equipe frente ao depoimento do cliente</p>
 </div>
 
 ---
-
 ## Historico de Versão
 Data     | Versão | Descrição | Autor | Revisores 
 -------- | ------ | --------- | ----- | ---------
-06/11/2024 | 0.2 | Tópicos 1.3 e 1.4 | Arthur Suares | João Pedro
-09/11/2024 | 0.3 | Tópicos 1.1 e 1.2 | Ana Carolina | Daniel
+06/11/24 | 1.0 | Tópicos 1.3 e 1.4 | Arthur Suares | João Pedro
+09/11/24 | 1.2 | Tópicos 1.1 e 1.2 | Ana Carolina | Daniel
+11/11/24 | 2.0 | Correção e remoção de trechos desconectados com os Resultados do Lean Inception | Daniel Rodrigues | Manuella Magalhães

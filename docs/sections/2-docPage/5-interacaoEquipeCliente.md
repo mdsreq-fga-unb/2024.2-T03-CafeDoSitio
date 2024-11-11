@@ -17,10 +17,9 @@
 2. As funcionalidades, no final de cada Sprint, passarão pela checagem de Definition of Done (DoD), para verificar se os protótipos foram validados pelo cliente, houve aprovação dos revisores à nível de código e se os stakeholders conseguiram executar todos os critérios de aceitação em Deploy do software.
 
 ---
-
 ## Histórico de Versão
 Data     | Versão | Descrição           | Autor    | Revisores 
 -------- | ------ | ------------------- | -------- | ---------
-10/11/2024 | 1    | Inclusão tópico 5.3 | Marcella | João
-10/11/2024 | 2 | Tópico 5.1 | Ana Carolina | Arthur
+10/11/2024 | 1.0 | Inclusão tópico 5.3 | Marcella | João
+10/11/2024 | 1.1 | Tópico 5.1 | Ana Carolina | Arthur
 
