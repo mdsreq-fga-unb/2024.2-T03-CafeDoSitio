@@ -29,7 +29,7 @@ A escolha do processo foi baseada em uma adaptação do framework proposto por G
 Figura 1 - Escolha de processo através do framework Gupta adaptado
 </p>
 
-![Quadro de Seleção de processos](/assets/processo_requisitados_cafe-do-sito.png)
+![Quadro de Seleção de processos](../../assets/gupta.png)
 
 <p style="text-align: center;">
 Fonte: Elaborado pelos autores (2024)
