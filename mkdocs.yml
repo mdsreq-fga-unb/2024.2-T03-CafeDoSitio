@@ -12,7 +12,7 @@ nav:
     - Cronograma e Entregas: sections/2-docPage/4-cronogramaEntregas.md
     - Interação entre Equipe e Cliente: sections/2-docPage/5-interacaoEquipeCliente.md
   - Ciclos e Backlog:
-    - Estado Atual do Backlog: sections/4-sprints/VisaoGeralBacklog.md
+    - Visão do Backlog: sections/4-sprints/VisaoGeralBacklog.md
     - Sprint 1:
       - Historico do Backlog: sections/4-sprints/sprint1/HistoricoBacklog.md
       - Reuniões:
