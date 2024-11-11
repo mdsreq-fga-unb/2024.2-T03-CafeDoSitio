@@ -12,15 +12,15 @@
 
 ### > Métodos de Frequência de Reuniões:
 
-- **Daily's Assícronas:** Realizadas via WhatsApp no grupo entre desenvolvedores, os membros deverão enviar, no início do seu dia, as 3 perguntas principais: O que você fez ontem, O que você irá fazer hoje e O que te impede de fazer essa atividade?. Este processo irá auxiliar na identificação de riscos e permitir remanejamento nas atribuiões para evitar atrasos de entrega.
+- **Daily's Assíncronas:** Realizadas via WhatsApp no grupo entre desenvolvedores, os membros deverão enviar, no início do seu dia, a resposta de 3 perguntas principais: O que você fez ontem, O que você irá fazer hoje e O que te impede de fazer essa atividade?. Este processo irá auxiliar na identificação de riscos e permitir o remanejamento das atribuições para evitar atrasos de entrega.
 - **Reunião de Sprint Planning:** Realizadas a cada Início de Sprint, a reunião de Planning expõe ao time de desenvolvimento as demandas requisitadas para a semana, sendo representada no GitHub Project's com os devidos prazos.
 - **Reunião de Sprint Review:** Realizadas a cada Fim de Sprint, a reunião de Review irá repassar pelas atividades planejadas no início da Sprint, elucidados pela reunião de Planning. Este processo irá auxiliar na organização e atualização do status do Backlog do produto e mediar soluções em caso de débitos de atividades.
-- **Reunião de Restrospectiva:** As reuniões de Restrospectiva acontecerá todo final de Sprint para debater os principais erros e acertos da semana, promovendo um plano de ação no final, com a finalidade de evitar riscos à longo prazo ou desmotivação da equipe.
+- **Reunião de Retrospectiva:** As reuniões de Retrospectiva acontecerão todo final de Sprint para debater os principais erros e acertos da semana, promovendo um plano de ação no final, com a finalidade de evitar riscos à longo prazo ou desmotivação da equipe.
 
-### > Frequência de Reunioes com o Cliente:
+### > Frequência de Reuniões com o Cliente:
 
-- **Reunião de Validação (a cada 2 Sprints):** As reuniões com a presença dos Stakeholders validando as funcionalidades por meio do Deploy ocorreção a cada 15 dias, ou seja, 2 semanas com o time de desenvolvimento. Esse modelo foi adotado para se adapatar à agendas dos stakeholders, uma vez que não conseguem em um intervalo menor semanal. 
-- **Interações Adicinais por WhatsApp e Trello:**  Outras validações ocorrerão assincronamente via WhatsApp, para o aviso inicial de uma nova demanda, e via plataforma Trello, para documentar e estabelecer o prazo da demanda, com os stakeholders. Essa interação surgiu para compensar as sprints que não contarão com a presença dos Strakeholders para as validações.
+- **Reunião de Validação (a cada 2 Semanas):** As reuniões com a presença dos Stakeholders validando as funcionalidades por meio do Deploy ocorrerão a cada 15 dias, ou seja, 2 semanas com o time de desenvolvimento. Esse modelo foi adotado para se adaptar à agendas dos stakeholders, uma vez que não conseguem se encontrar com o time em um intervalo menor semanal por conta das demandas da empresa.
+- **Interações Adicionais por WhatsApp e Trello:**  Outras validações ocorrerão assincronamente via WhatsApp, para o aviso inicial de uma nova demanda, e via plataforma Trello, para documentar e estabelecer o prazo da demanda, com os stakeholders. Essa interação surgiu para compensar as sprints que não contarão com a presença dos Stakeholders para as validações.
 
 ---
 ## Historico de Versão
