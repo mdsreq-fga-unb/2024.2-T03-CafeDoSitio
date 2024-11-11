@@ -22,8 +22,15 @@
 - **Reunião de Validação (a cada 2 Semanas):** As reuniões com a presença dos Stakeholders validando as funcionalidades por meio do Deploy ocorrerão a cada 15 dias, ou seja, 2 semanas com o time de desenvolvimento. Esse modelo foi adotado para se adaptar à agendas dos stakeholders, uma vez que não conseguem se encontrar com o time em um intervalo menor semanal por conta das demandas da empresa.
 - **Interações Adicionais por WhatsApp e Trello:**  Outras validações ocorrerão assincronamente via WhatsApp, para o aviso inicial de uma nova demanda, e via plataforma Trello, para documentar e estabelecer o prazo da demanda, com os stakeholders. Essa interação surgiu para compensar as sprints que não contarão com a presença dos Stakeholders para as validações.
 
+## 5.3 Processo de Validação
+
+1. As funcionalidades da Sprint passarão pela checagem de Definition of Ready (DoR), que irá verificar a escrita correta da história de usuário, se há documentação e se foi declarado junto ao cliente os critérios de aceitação.
+
+2. As funcionalidades, no final de cada Sprint, passarão pela checagem de Definition of Done (DoD), para verificar se os protótipos foram validados pelo cliente, houve aprovação dos revisores à nível de código e se os stakeholders conseguiram executar todos os critérios de aceitação em Deploy do software.
+
 ---
-## Historico de Versão
-Data     | Versão | Descrição | Autor | Revisores 
--------- | ------ | --------- | ----- | ---------
+## Histórico de Versão
+Data     | Versão | Descrição           | Autor    | Revisores 
+-------- | ------ | ------------------- | -------- | ---------
 10/11/24 | 1.0 | Adição do Tópico 5.2 | Daniel Rodrigues | João Pedro
+10/11/24 | 1.1 | Inclusão tópico 5.3 | Marcella | João

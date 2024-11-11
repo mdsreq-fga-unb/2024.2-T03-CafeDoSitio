@@ -12,7 +12,7 @@ nav:
     - Cronograma e Entregas: sections/2-docPage/4-cronogramaEntregas.md
     - Interação entre Equipe e Cliente: sections/2-docPage/5-interacaoEquipeCliente.md
   - Ciclos e Backlog:
-    - Estado Atual do Backlog: sections/4-sprints/VisaoGeralBacklog.md
+    - Visão do Backlog: sections/4-sprints/VisaoGeralBacklog.md
     - Sprint 1:
       - Historico do Backlog: sections/4-sprints/sprint1/HistoricoBacklog.md
       - Reuniões:
@@ -21,6 +21,7 @@ nav:
         - Lean Inception pt.1: sections/4-sprints/sprint1/reuniões/[Stakeholders]06Nov2024.md
         - Lean Inception pt.2: sections/4-sprints/sprint1/reuniões/[Stakeholders]07Nov2024.md
         - Lean Inception pt.3: sections/4-sprints/sprint1/reuniões/[Equipe]07Nov2024.md
+        - Lean Inception pt.4: sections/4-sprints/sprint1/reuniões/[Equipe]08Nov2024.md
   - Políticas:
     - GCS: sections/3-politicas/gcs.md
 
