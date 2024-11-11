@@ -18,7 +18,7 @@
 
 <div style="text-align: justify;">
     <p style="text-indent: 30px;">
-        A principal dor identificada na Família do Sítio está relacionada à dificuldade de acesso às informações da empresa, isto é, por conta de cada serviços de atendimento ao cliente utiliza de um meio diferente a depender de sua categoria: Para recrutamento, a Família do Sítio utiliza o software "empregare" para coletar os currículos e organizar o processo recrutador. Além disso, para reclamações a empresa utiliza o email, telefone e as redes sociais para capturar esse dados. Para o rastreamento de produtos, a empresa também compartilha do meio telefônico. Por fim, para agendamento de visitas técnicas é utilizado o Whatsapp, Redes Sociais, Email e Telefone. O ponto é que, por utilizarem de diversas plataformas, é gerado um problema para os 2 lados: Para o lado da Família do Sítio, os funcionários sentem dificuldades na gestão dessas informações e no acompanhamento de solicitações, tal como foi informado pela própria empresa cliente: Muitas solicitações acabam se perdendo no caminho e não chegam nos setores responsáveis, em vista disso, muitos clientes acabam ligando novamente à Família do Sítio buscando por transparência, mas os processos não possuem o registro das fases em que estão. Já para o lado dos clientes da Família do Sítio, é extremamente confuso e trabalhoso alcançar os locais que mais se adequem ao seu tipo de atendimento, forçando muitas vezes a memorização do caminho até alcaçar o seu objetivo do software do que a intuitividade no que tange a organização das páginas e design de interface pensado à um público mais leigo tecnologicamente. Estes pontos foram coletados através da Ferramenta do Diagrama de Ishikawa, na Figura 1.
+        A principal dor identificada na Família do Sítio está relacionada à dificuldade de acesso aos serviços de atendimento da empresa, isto é, por conta de cada serviços de atendimento ao cliente utiliza de um meio diferente a depender de sua categoria: Para recrutamento, a Família do Sítio utiliza o software "empregare" para coletar os currículos e organizar o processo recrutador. Além disso, para reclamações a empresa utiliza o email, telefone e as redes sociais para capturar esse dados. Para o rastreamento de produtos, a empresa também compartilha do meio telefônico. Por fim, para agendamento de visitas técnicas é utilizado o Whatsapp, Redes Sociais, Email e Telefone. O ponto é que, por utilizarem de diversas plataformas, é gerado um problema para os 2 lados: Para o lado da Família do Sítio, os funcionários sentem dificuldades na gestão dessas informações e no acompanhamento de solicitações, tal como foi informado pela própria empresa cliente: Muitas solicitações acabam se perdendo no caminho e não chegam nos setores responsáveis, em vista disso, muitos clientes acabam ligando novamente à Família do Sítio buscando por transparência, mas os processos não possuem o registro das fases em que estão. Já para o lado dos clientes da Família do Sítio, é extremamente confuso e trabalhoso alcançar os locais que mais se adequem ao seu tipo de atendimento, forçando muitas vezes a memorização do caminho até alcaçar o seu objetivo do software do que a intuitividade no que tange a organização das páginas e design de interface pensado à um público mais leigo tecnologicamente. Estes pontos foram coletados através da Ferramenta do Diagrama de Ishikawa, na Figura 1.
 </div>
 
 <div style="text-align: justify;">
@@ -28,7 +28,7 @@
     
 </div>
    
- ![DiagramaIshikawa](../../assets/DiagramaIshikawa.jpg)
+ ![DiagramaIshikawa](../../assets/DiagramaIshikawa.png)
 
 <div align="center"> 
 <p>Figura 1: Diagrama espinha de peixe apresentando causas e problemas identificados pela
@@ -44,10 +44,10 @@ equipe frente ao depoimento do cliente</p>
     </p>
 </div>
 
-**Problemas com o Sistema de Recrutamento (Empregare):**
+**Problemas com o instruções no Recrutamento:**
 <div style="text-align: justify;">
     <p style="text-indent: 30px;">
-    O sistema terceirizado utilizado para o recrutamento já causou problemas, como falta de transparência nas informações passadas aos candidatos e dificuldades para os próprios recrutadores, como burocracia alta na configuração dos processos seletivos, demora na atualização das fases do processo recrutador. Além disso, os emails são enviados com certo atraso aos envolvidos neste processo, comprometendo a comunicação e impactando negativamente a imagem da empresa. Por fim, a Família do Sítio informou que a plataforma, para o caso deles, não se mostra totalmente acessível para um público mais leigo que não costuma utilizar aparelhos tecnológicos (Celular, computador, Tablets) frequentemente.
+       A Família do Sítio enfrenta desafios devido ao uso do sistema de recrutamento Empregare, que, embora funcional, gera dificuldades para candidatos com pouca familiaridade com tecnologia. Muitos enviam currículos para o e-mail da empresa em vez de utilizarem a plataforma correta, o que causa perda de informações e falta de centralização. Além disso, a falta de orientações claras sobre como operar o sistema leva alguns candidatos a desistirem do processo, prejudicando a transparência do recrutamento.
     </p>
 </div>
 
@@ -55,20 +55,27 @@ equipe frente ao depoimento do cliente</p>
 **Sobrecarga e Falta de Automação no Atendimento:**
 <div style="text-align: justify;">
     <p style="text-indent: 30px;">
-    O sistema atual de   atendimento às reclamações, agendamentos de visitas técnicas, e rastreamento de produtos da empresa é feito por telefone e email, e portanto, dificultando a coleta destes dados pela equipe de Marketing, o único setor encarregado para estas questões.
+        O sistema atual de atendimento às reclamações, agendamentos de visitas técnicas, e rastreamento de produtos da empresa é feito por telefone e email, e portanto, dificultando a coleta destes dados pela equipe de Marketing, o único setor encarregado para estas questões.
+    </p>
+</div>
+
+**Informações básicas da empresa desatualizada:**
+<div style="text-align: justify;">
+    <p style="text-indent: 30px;">
+        O sistema atual da Família do Sítio possui dados institucionais, como História de Empresa, Produtos produzidos e Ações Sociais desatualizados e, portanto, desinformam os usuário quanto ao que é a Empresa e o que ela faz. 
     </p>
 </div>
 
 ##1.4 - Segmentação de Clientes
 <div style="text-align: justify;">
     <p style="text-indent: 30px;">
-        A princípio, foram identificados 3 grupos. O primeiro grupo consiste nos consumidores finais, geralmente pessoas entre 25 e 50 anos, que buscam café de qualidade para consumo próprio. Esses clientes prezam pela praticidade no atendimento e pela disponibilização de informações sobre produtos, como rastreamento de em qual unidade Família do Sítio é possível encontrar determinados pedidos e suporte pós-compra.
+        A princípio, foram identificados 4 grupos. O primeiro grupo consiste nos **consumidores finais**, geralmente pessoas entre 35 à 44 anos, que buscam café de qualidade para consumo próprio. Esses clientes prezam pela praticidade no atendimento e pela disponibilização de informações sobre produtos, como rastreamento de em qual unidade Família do Sítio é possível encontrar determinados pedidos e suporte pós-compra. A classe socioeconômica dessa categoria é, usualmente, Baixa-Média e o seu nível de escolaridade em Ensino Médio Completo, sem Gradução.
     </p>
     <p style="text-indent: 30px;">
-        O Outro segmento é composto por parceiros comerciais e distribuidores, que variam entre 35 e 60 anos, adquirem os produtos da Família do Sítio para revenda ou distribuição em larga escala. Para esse público, a eficiência na logística e a clareza nas comunicações são essenciais, como um painel ou atualização regular via e-mail com informações sobre o estoque atual e datas previstas para novos lotes, enviar notificações automatizadas em cada etapa do pedido, desde a confirmação de compra até o envio e entrega ou um cronograma visual de campanhas promocionais, com informações sobre descontos futuros e lançamentos, facilita o planejamento para compras em volume e amplia as oportunidades de vendas, especialmente em relação ao rastreamento de produtos e suporte técnico. Eles exigem um atendimento mais estruturado e ágil, assim um software estruturado pode oferecer um portal para registro e acompanhamento de solicitações priorizadas, uma base de conhecimento para autoatendimento, e relatórios automáticos com métricas e feedback. Essas funcionalidades garantem suporte ágil e transparente para parceiros e distribuidores e assim, proporcionando essa melhora do atendimento.
+        O Outro segmento é composto por **parceiros comerciais e distribuidores**, que variam entre 35 e 60 anos, adquirem os produtos da Família do Sítio para revenda ou distribuição em larga escala. Para esse público, a eficiência na logística e a clareza nas comunicações são essenciais, como um rastreamento de produtos e exposição das informações sobre o estoque atual e datas previstas para novos lotes. Eles exigem um atendimento mais estruturado e ágil, assim um software estruturado pode oferecer um portal para registro e acompanhamento de solicitações priorizadas, uma base de conhecimento para autoatendimento, e relatórios automáticos com métricas e feedback. Essas funcionalidades garantem suporte ágil e transparente para parceiros e distribuidores e assim, proporcionando essa melhora do atendimento. A classe socieconômica dessa categoria são, usualmente, Média-Alta e o nível de escolaridade varia entre Ensino Médio Completo e Graduação, especificamente em administração e gestão.
     </p>
     <p style="text-indent: 30px;">
-        Por fim, outro grupo associado ao recrutamento, em sua maioria entre 14 e 40 anos, representa uma fatia menor dos clientes da Família do Sítio, com candidatos e profissionais em busca de oportunidades de trabalho na empresa. Este segmento representa apenas um público que também utiliza dos serviços de comunicação com a empresa.
+        Por fim, os próprios **colaboradores da Família do Sítio** também utilizarão deste sistema. A faixa etária deste público está entre 30 à 60 anos, que utilizarão o software para gerenciar os atendimentos, ser avisado das novidades da empresa e mostrarem a sua marca para outras pessoas. A classe socioeconômica dessa categoria é, usualmente, Baixa-Média, mora longe da Fábrica e possui nível de escolaridade que varia entre Ensino Médio completo e Graduação.
     </p>
 
 
