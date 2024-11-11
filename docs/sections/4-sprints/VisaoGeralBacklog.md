@@ -63,9 +63,9 @@ US19   | EP03 | Consultar vagas de empresa da Empresa   | -x-
 US20   | EP03 | Realizar SAC                            | -x- 
 US21   | EP03 | Consultar detalhes do E-Commerce        | -x-
 US22   | EP04 | Notificar setores Ideais                | -x-
-US22   | EP04 | Localizar Produtos                      | -x-
-US22   | EP04 | Lembrar usuários de Visita              | -x-
-US22   | EP04 | Conversar com Chatbot                   | -x-
+US23   | EP04 | Localizar Produtos                      | -x-
+US24   | EP04 | Lembrar usuários de Visita              | -x-
+US25   | EP04 | Conversar com Chatbot                   | -x-
 
 # Produto Mínimo Viável
 
@@ -102,13 +102,13 @@ Em contrapartida, as funcionalidades que foram **consideradas Incremento** são:
 
 Código | Título                                | Nível de Esforço           | Nível de Valor Agregado           | Nível de UX
 ------ | ------------------------------------- | -------------------------  | --------------------------------- | -----------
-US24   | Comentar no Blog                      | Nível 2                    | Nível 1                           | Nível 1
-US25   | Baixar Blog                           | Nível 2                    | Nível 1                           | Nível 2
-US26   | Conectar Blog com Produtos da Empresa | Nível 1                    | Nível 2                           | Nível 2
-US27   | Compartilhar Blog                     | Nível 1                    | Nível 2                           | Nível 2
-US28   | Realizar Tour Virtual                 | Nível 3                    | Nível 2                           | Nível 3
-US29   | Lembrar usuários de Visita            | Nível 2                    | Nível 1                           | Nível 2
-US30   | Conversar com Chatbot                 | Nível 2                    | Nível 1                           | Nível 2
+US03   | Comentar no Blog                      | Nível 2                    | Nível 1                           | Nível 1
+US07   | Baixar Blog                           | Nível 2                    | Nível 1                           | Nível 2
+US09   | Conectar Blog com Produtos da Empresa | Nível 1                    | Nível 2                           | Nível 2
+US10   | Compartilhar Blog                     | Nível 1                    | Nível 2                           | Nível 2
+US12   | Realizar Tour Virtual                 | Nível 3                    | Nível 2                           | Nível 3
+US24   | Lembrar usuários de Visita            | Nível 2                    | Nível 1                           | Nível 2
+US25   | Conversar com Chatbot                 | Nível 2                    | Nível 1                           | Nível 2
 
 # Referências Bibliográficas
 
@@ -128,3 +128,4 @@ US30   | Conversar com Chatbot                 | Nível 2                    | N
 |---- | ------ | --------- | ----- | --------- |
 | 08/11/24 | 1.0 | Criação do documento | Daniel Rodrigues | Arthur Miranda |
 | 10/11/24 | 1.1 | Correções dos Códigos da US's | Daniel Rodrigues | Arthur Miranda |
+| 11/11/24 | 1.2 | Correções nos códigos         | Daniel Rodrigues | Arthur Miranda |

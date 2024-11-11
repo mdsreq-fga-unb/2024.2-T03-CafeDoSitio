@@ -1,6 +1,6 @@
 # 4. Cronograma e Entregas
 
-Baseando-se na estratégia de desenvolvimento de software selecionado, mencinado no tópico 3 e consultando os códigos das User Stories da seção [Visão do Backlog](../4-sprints/VisaoGeralBacklog.md), o cronograma preliminar do projeto pode ser visualizada logo abaixo:
+Baseando-se na estratégia de desenvolvimento de software selecionado, mencionado no tópico 3 e consultando os códigos das User Stories da seção [Visão do Backlog](../4-sprints/VisaoGeralBacklog.md), o cronograma preliminar do projeto pode ser visualizada logo abaixo:
 
 Sprint | Início | Fim | Objetivo do Ciclo | Entregas Previstas | Validação com os Stakeholders
 ----- | ------ | --- | ----------------- | ------------------ | -----------------------------
@@ -25,3 +25,4 @@ Data     | Versão | Descrição | Autor | Revisores
 -------- | ------ | --------- | ----- | ---------
 06/11/2024 | 1.0 | Criação do Documento e Adição do Tópico 4 | Daniel Rodrigues | João Pedro
 10/11/2024 | 1.1 | Desenvolvimento detalhado do cronograma   | Daniel Rodrigues | Arthur Miranda
+11/11/24 | 1.2 | Correções ortográficas         | Daniel Rodrigues | Arthur Miranda
