@@ -75,7 +75,7 @@ Decidido durante a produção do Workshop Lean Inception, foi estabelecido o MVP
 - Valor Agregado;
 - Impacto na experiência do Usuário:
 
-Limitando-se os nível entre 1 até 3 para cada categoria, foi possível elencar as funcionalidades de maior valor agregado e impacto na experiência do usuário para as primeiras produções feita pelo time. Dessa forma, as funcionalidades **que estão MVP**, são:
+Limitando-se os nível entre 1 até 3 para cada categoria, foi possível elencar as funcionalidades de maior valor agregado e impacto na experiência do usuário para as primeiras produções feita pelo time. Dessa forma, as funcionalidades **que estão em MVP**, são:
 
 Código | Título                                | Nível de Esforço           | Nível de Valor Agregado           | Nível de UX
 ------ | ------------------------------------- | -------------------------  | --------------------------------- | -----------
@@ -98,7 +98,7 @@ US21   | Consultar detalhes do E-Commerce      | Nível 1                    | N
 US22   | Notificar setores Ideais              | Nível 2                    | Nível 3                           | Nível 2
 US23   | Localizar Produtos                    | Nível 3                    | Nível 3                           | Nível 3
 
-Em contrapartida, as funcionalidades que foram **consideradas Incremento** são:
+Em contrapartida, as funcionalidades que foram **consideradas Incrementos** são:
 
 Código | Título                                | Nível de Esforço           | Nível de Valor Agregado           | Nível de UX
 ------ | ------------------------------------- | -------------------------  | --------------------------------- | -----------

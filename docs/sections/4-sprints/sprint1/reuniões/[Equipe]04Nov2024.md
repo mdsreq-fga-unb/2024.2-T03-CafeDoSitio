@@ -9,7 +9,7 @@
 | Tipo | Descrição                              |
 |---- | --------------------------------------- |
 | Data da Reunião | 04/11/2024 |
-| Horário da Reunião | 17:00 |
+| Horário da Reunião | 20:00 |
 | Modalidade | Videoconferência (Online) |
 | Participantes | Desenvolvedores |
 | Membros Presentes - Devs | Ana Carolina, Arthur Miranda, Daniel Rodrigues, João Pedro, Manuella Magalhães, Marcella Sousa |
