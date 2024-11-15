@@ -71,9 +71,14 @@ O prazo estimado é de três meses, dividido a produção das features em ciclos
 
 <br>
 
-![Tabela de Conhecimento](../../assets/TabelaConhecimento.png)
+![Tabela de Conhecimento Pt1](../../assets/TabelaConhecimentoPt1.png)
 <div align="center">
-Tabela 1 - Conhecimentos quantificados da equipe em diversas ferramentas de desenvolvimento
+Tabela 1.1 - Conhecimentos quantificados da equipe em linguagens e front-end
+</div>
+
+![Tabela de Conhecimento Pt1](../../assets/TabelaConhecimentoPt2.png)
+<div align="center">
+Tabela 1.2 - Conhecimentos quantificados da equipe em back-end e outros
 </div>
 
 ## 2.6. Impacto da Solução:
@@ -105,3 +110,4 @@ Ao adotar uma solução tecnológica que atenda as demandas do cliente com trans
 | 05/11/24 | 1.2 | Adição dos tópicos 2.5 e 2.6                  | Daniel Rodrigues       | Ana Carolina |
 | 07/11/24 | 1.3 | Adição do tópico 2.4                          | Manuella Magalhães     | Daniel       |
 | 11/11/24 | 2.0 | Correção e remoção de trechos desconectados com os Resultados do Lean Inception | Daniel Rodrigues | Manuella Magalhães
+| 15/11/24 | 2.1 | Melhoria na legibilidade da tabela de competências da equipe| João Pedro |  Daniel Rodrigues
