@@ -2,9 +2,7 @@
 
 ## 2.1. Objetivos do Produto
 
-O principal objetivo deste software é unir em uma aplicação web os pontos desejados pelo cliente a fim de que os serviços não estejam separados em aplicações
-de terceiros. Além disso, proporcionar um ambiente onde o cliente final possa usar como ouvidoria, proporcionando feedbacks que serão encaminhados para as áreas
-responsáveis por determinada reclamação ou sugestão. Com uma unificação dos serviços requeridos e do direcionamento dos feedbacks, é esperado que haja um fluxo melhor de informações, certificando-se de que elas cheguem onde devem chegar.
+O principal objetivo deste software é ampliar as opções de interação dos clientes com os serviços oferecidos pelo Café do Sítio, contribuindo para a manutenção de uma boa reputação da empresa ao proporcionar um ambiente onde o cliente final possa usar como ouvidoria, proporcionando feedbacks que serão encaminhados para as áreas responsáveis por determinada reclamação ou sugestão. Com uma unificação dos serviços requeridos e do direcionamento dos feedbacks, é esperado que haja um fluxo melhor de informações, certificando-se de que elas cheguem onde devem chegar.
 
 O resultado esperado é que com essa aplicação e as mudanças solicitadas, os clientes e visitantes do site tenham maiores opções de interação com os serviços
 ofertados pelo Café do Sítio, e que funcionários da empresa possam ter uma ferramenta de trabalho que os ajude a receber feedbacks direcionados para as
