@@ -2,6 +2,7 @@ name: Reportar Bug
 description: Reporte um Bug identificado no projeto do Café do Sítio.
 title: "[BUG]: <Título BREVE do bug>"
 labels: ["bug"]
+projects: ["mdsreq-fga-unb/46"]
 body:
   - type: textarea
     id: text-zone1
