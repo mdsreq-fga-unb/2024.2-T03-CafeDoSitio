@@ -51,4 +51,5 @@ O diferencial do Scrum/XP para o Unified Process na escolha através do framewor
 ## Histórico de Versão1
 Data     | Versão | Descrição | Autor | Revisores 
 -------- | ------ | --------- | ----- | ---------
-10/11/2024 | 1.0 | Tópico 3 | Arthur Miranda, João Pedro, Manuella Valadares | Daniel, Carol, Marcella
+10/11/24 | 1.0 | Tópico 3 | Arthur Miranda, João Pedro, Manuella Valadares | Daniel, Carol, Marcella
+16/11/24 | 1.2 | Correção do quadro comparativo e adição de referências | Arthur Miranda | Ana Carolina
