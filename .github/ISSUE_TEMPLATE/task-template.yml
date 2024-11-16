@@ -2,6 +2,7 @@ name: Nova Task para Semana
 description: Registre uma nova Task para o projeto do Café do Sítio (Task's não relacionadas às Histórias de Usuário).
 title: "<Título da Task>"
 labels: ["requirements", "enhancement"]
+projects: ["mdsreq-fga-unb/46"]
 body:
   - type: textarea
     id: text-zone1
