@@ -21,11 +21,6 @@ Práticas de Desenvolvimento |  Programação em par, integração contínua, te
 Controle de Qualidade | Testes automatizados, TDD (Test-Driven Development), através de integração contínua garantindo qualidade durante o desenvolvimento | Usa testes ao final de cada iteração e inspeções dos incrementos implementados
 Suporte à equipes de Desenvolvimento | Equipes mais autônomas e colaborativas. Foco na comunicação e nas interações diretas para resolver problemas | Permite equipes maiores do que outras metodologias ágeis 
 
-####Referências:
-
-######BASTO FAGUNDES, P.; DETERS, J. I.; SILVA DOS SANTOS, S. D. Comparação entre os processos dos métodos ágeis: XP, Scrum, FDD e ASD em relação ao desenvolvimento incremental iterativo. E-Tech: Atualidades Tecnológicas para Competitividade Industrial, Florianópolis, v. 1, n. 1, p. 37-46, 2008, Disponível em: <https://etech.sc.senai.br/revista-cientifica/article/download/21/18/3123>. Acesso em: 16 nov. 2024.
-
-######FDD vs XP vs SCRUM. Disponível em: <https://pt.slideshare.net/fredcobain/fdd-vs-xp-vs-scrum>. Acesso em: 16 nov. 2024. 
 
 
 ##3.3 - Justificativa
@@ -47,7 +42,13 @@ Conforme explicitado na figura 1, o processo de desenvolvimento de software mais
 O diferencial do Scrum/XP para o Unified Process na escolha através do framework já mencionado, foi a não existência de requisitos de alta confiabilidade. Por outro lado, a escolha do Scrum/XP já era desejada pelo time de desenvolvimento devido a experiências anteriores bem sucedidas com o processo.
 
 ---
-## Histórico de Versão
+####Referências:
+
+<p><small>BASTO FAGUNDES, P.; DETERS, J. I.; SILVA DOS SANTOS, S. D. Comparação entre os processos dos métodos ágeis: XP, Scrum, FDD e ASD em relação ao desenvolvimento incremental iterativo. E-Tech: Atualidades Tecnológicas para Competitividade Industrial, Florianópolis, v. 1, n. 1, p. 37-46, 2008, Disponível em: <a href="https://etech.sc.senai.br/revista-cientifica/article/download/21/18/3123">https://etech.sc.senai.br/revista-cientifica/article/download/21/18/3123</a>. Acesso em: 16 nov. 2024.</small></p>
+<p><small>FDD vs XP vs SCRUM. Disponível em: <a href="https://pt.slideshare.net/fredcobain/fdd-vs-xp-vs-scrum">https://pt.slideshare.net/fredcobain/fdd-vs-xp-vs-scrum</a> Acesso em: 16 nov. 2024.</small></p>
+
+---
+## Histórico de Versão1
 Data     | Versão | Descrição | Autor | Revisores 
 -------- | ------ | --------- | ----- | ---------
 10/11/2024 | 1.0 | Tópico 3 | Arthur Miranda, João Pedro, Manuella Valadares | Daniel, Carol, Marcella
