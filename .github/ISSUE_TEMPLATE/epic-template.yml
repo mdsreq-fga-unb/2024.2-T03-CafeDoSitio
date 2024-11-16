@@ -28,3 +28,4 @@ body:
       label: Detalhes adicionais?
       description: Acrescente informações que possam ser pertinentes para o time.
       placeholder: |
+      Escreve ou deixe em branco...
