@@ -9,17 +9,24 @@
 
 ##3.2 - Quadro comparativo
 
-Características     | Scrum/XP | Processo Unificado |  
+Características     | Scrum/XP | FDD - Feature Drive Development|  
 -------- | ------ | --------- | 
-Abordagem Geral | Iterativo e incremental. Possui um foco maior na agilidade, não priorizando documentação | Iterativo e incremental. Estrutura mais formalizada em termos de documentação |
-Foco em arquitetura | A arquitetura é desenvolvida de forma incremental e evolutiva, com o foco em atender às necessidades imediatas do produto. Não há um design extenso ou detalhado no início do projeto | A arquitetura é desenvolvida de forma incremental e evolutiva, com o foco em atender às necessidades imediatas do produto. Não há um design extenso ou detalhado no início do projeto | 
-Estrutura de Processos | Ciclos curtos(Sprints) de desenvolvimento. Processo ágil e flexível, se preocupando com a entrega contínua | Fases formais (Iniciação, Elaboração, Construção, Transição). Processo mais estruturado e documentado.
-Flexibilidade de Requisitos | Alta flexibilidade movida por feedback do cliente a cada Sprint| Flexibilidade moderada. Requisitos são definidos inicialmente para maior controle e formalidade. Mas podem ser ajustados
-Colaboração com o cliente | Alto envolvimento do cliente. Seja durante as Sprints revisando incrementos ou fornecendo feedbacks | Participação do cliente mais concentrado nas etapas iniciais e finais, de planejamento e transição. Revisões feitas depois de entregas significativas
-Complexidade do processo | Processo mais simplificado. Com foco menor em documentação, e maior na autonomia da equipe | Maior complexidade, envolvendo múltiplas fases. Foco maior em planejamento e documentação
-Práticas de Desenvolvimento |  Programação em par, integração contínua, testes automatizados, refatoração, design simples, e foco em qualidade contínua durante o desenvolvimento |Definição de arquitetura, modelagem detalhada e desenvolvimento iterativo
-Controle de Qualidade | Testes automatizados, TDD (Test-Driven Development), através de integração contínua garantindo qualidade durante o desenvolvimento | O controle de qualidade é feito de forma mais estruturada, com foco em testes em várias fases
-Suporte à equipes de Desenvolvimento | Equipes mais autônomas e colaborativas. Foco na comunicação e nas interações diretas para resolver problemas | Define papéis mais estruturados e tarefas específicas para os membros da equipe, com maior controle e supervisão sobre o processo
+Abordagem Geral | Iterativo e incremental. Possui um foco maior na agilidade, não priorizando documentação | Focado em desenvolver funcionalidades especificas(features), divindo projetos grandes em incrementos menores e gerenciáveis |
+Foco em arquitetura | A arquitetura é desenvolvida de forma incremental e evolutiva, com o foco em atender às necessidades imediatas do produto. Não há um design extenso ou detalhado no início do projeto | Sugere a criação de diagramas UML para arquitetura do sistema e diagramas de sequência complementares | 
+Estrutura de Processos | Ciclos curtos(Sprints) de desenvolvimento. Processo ágil e flexível, se preocupando com a entrega contínua. Sprints podem duram 2-4 semanas | Divede um projeto grande em incrementos menores. Esses incrementos geralmente duram 2-10 dias, com iterações máximas de 2 semanas|
+Flexibilidade de Requisitos | Alta flexibilidade movida por feedback do cliente a cada Sprint | Permite mudanças em requisitos até certo ponto, mas tende a ser mais rígido devido ao foco em funcionalidades específicas
+Colaboração com o cliente | Alto envolvimento do cliente. Seja durante as Sprints revisando incrementos ou fornecendo feedbacks | Não necessariamente envolve o cliente numa comunicação direta na criação do produto. Mas sim utiliza um documentação extensa para que haja comunicação entre a equipe
+Complexidade do processo | Processo mais simplificado. Com foco menor em documentação, e maior na autonomia da equipe | Utiliza user stories e diagramas UML detalhados de arquitetura e de sequência para documentação de requisitos que são que são analisados antes das iterações
+Práticas de Desenvolvimento |  Programação em par, integração contínua, testes automatizados, refatoração, design simples, e foco em qualidade contínua durante o desenvolvimento | Análise da documentação existente, geração de diagramas de sequência UML e refinamento do modelo
+Controle de Qualidade | Testes automatizados, TDD (Test-Driven Development), através de integração contínua garantindo qualidade durante o desenvolvimento | Usa testes ao final de cada iteração e inspeções dos incrementos implementados
+Suporte à equipes de Desenvolvimento | Equipes mais autônomas e colaborativas. Foco na comunicação e nas interações diretas para resolver problemas | Permite equipes maiores do que outras metodologias ágeis 
+
+####Referências:
+
+######BASTO FAGUNDES, P.; DETERS, J. I.; SILVA DOS SANTOS, S. D. Comparação entre os processos dos métodos ágeis: XP, Scrum, FDD e ASD em relação ao desenvolvimento incremental iterativo. E-Tech: Atualidades Tecnológicas para Competitividade Industrial, Florianópolis, v. 1, n. 1, p. 37-46, 2008, Disponível em: <https://etech.sc.senai.br/revista-cientifica/article/download/21/18/3123>. Acesso em: 16 nov. 2024.
+
+######FDD vs XP vs SCRUM. Disponível em: <https://pt.slideshare.net/fredcobain/fdd-vs-xp-vs-scrum>. Acesso em: 16 nov. 2024. 
+
 
 ##3.3 - Justificativa
 
