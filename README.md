@@ -31,10 +31,15 @@ Para conferir todos os detalhes sobre o projeto, acesse a documentação complet
 
 <!-- Foto dos participantes do grupo -->
 <div align="center">
-  <img src="https://github.com/anawcarol.png" width="100" />
-  <img src="https://github.com/arthur-suares.png" width="100"/>
-  <img src="https://github.com/DanielRogs.png" width="100"/>
-  <img src="https://github.com/JoaoODragonborn.png" width="100"/>
-  <img src="https://github.com/manuvaladares.png" width="100"/>
-  <img src="https://github.com/marcellaanderle.png" width="100"/>
+  <table>
+    <tr>
+      <td align="center"><a href="https://github.com/anawcarol"><img style="border-radius: 50%;" src="https://github.com/anawcarol.png" width="100px;" alt=""/><br /><sub><b>Ana Carolina</b></sub></a><br /><a href="https://github.com/anawcarol" title="Rocketseat">Coordenadora de Análise de Requisitos e Desenvolvedora Frontend</a></td>
+      <td align="center"><a href="https://github.com/arthur-suares"><img style="border-radius: 50%;" src="https://github.com/arthur-suares.png" width="100px;" alt=""/><br /><sub><b>Arthur Miranda</b></sub></a><br /><a href="https://github.com/arthur-suares" title="Rocketseat">Desenvolvedor Backend</a></td>
+      <td align="center"><a href="https://github.com/DanielRogs"><img style="border-radius: 50%;" src="https://github.com/DanielRogs.png" width="100px;" alt=""/><br /><sub><b>Daniel Rodrigues</b></sub></a><br /><a href="https://github.com/DanielRogs" title="Rocketseat">Líder - Product Owner e Coordenador do setor de Backend</a></td>
+      </tr>
+      <tr>
+      <td align="center"><a href="https://github.com/JoaoODragonborn"><img style="border-radius: 50%;" src="https://github.com/JoaoODragonborn.png" width="100px;" alt=""/><br /><sub><b>João Pedro</b></sub></a><br /><a href="https://github.com/JoaoODragonborn" title="Rocketseat">Analista de Quality Assurance e Desenvolvedor Frontend</a></td>
+      <td align="center"><a href="https://github.com/manuvaladares"><img style="border-radius: 50%;" src="https://github.com/manuvaladares.png" width="100px;" alt=""/><br /><sub><b>Manuella Magalhães</b></sub></a><br /><a href="https://github.com/manuvaladares" title="Rocketseat">Coordenadora e Desenvolvedora do setor de Frontend</a></td>
+      <td align="center"><a href="https://github.com/marcellaanderle"><img style="border-radius: 50%;" src="https://github.com/marcellaanderle.png" width="100px;" alt=""/><br /><sub><b>Marcella Anderle</b></sub></a><br /><a href="https://github.com/marcellaanderle" title="Rocketseat">Desenvolvedora Backend</a></td>
+  </table>
 </div>
