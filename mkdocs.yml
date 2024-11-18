@@ -20,11 +20,16 @@ nav:
       - Historico do Backlog: sections/4-sprints/sprint1/HistoricoBacklog.md
       - Reuniões:
         - Kick Off com Stakeholders: sections/4-sprints/sprint1/reuniões/[Stakeholders]04Nov2024.md
-        - Planning: sections/4-sprints/sprint1/reuniões/[Equipe]04Nov2024.md
+        - Sprint Planning: sections/4-sprints/sprint1/reuniões/[Equipe]04Nov2024.md
         - Lean Inception pt.1: sections/4-sprints/sprint1/reuniões/[Stakeholders]06Nov2024.md
         - Lean Inception pt.2: sections/4-sprints/sprint1/reuniões/[Stakeholders]07Nov2024.md
         - Lean Inception pt.3: sections/4-sprints/sprint1/reuniões/[Equipe]07Nov2024.md
         - Lean Inception pt.4: sections/4-sprints/sprint1/reuniões/[Equipe]08Nov2024.md
+    - Sprint 2:
+      - Histórico do Backlog: sections/4-sprints/sprint2/HistoricoBacklog.md
+      - Reuniões:
+        - Sprint Review: sections/4-sprints/sprint2/reuniões/[Equipe]11Nov2024pt1.md
+        - Sprint Planning: sections/4-sprints/sprint2/reuniões/[Equipe]11Nov2024pt2.md
   - Políticas:
     - GCS: sections/3-politicas/gcs.md
 

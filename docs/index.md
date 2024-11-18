@@ -29,54 +29,19 @@ As funcionalidades serão integradas em um único software, permitindo um contro
 ## 3. Os Contribuidores
 A equipe de desenvolvedores do Projeto Café do Sítio é composta por 6 membros do curso de Engenharia de Software da Universidade de Brasília.
 
-<center>
-
-<div style="display: flex; flex-direction: row; gap: 80px; flex-wrap: wrap; justify-content: center;" >
-    <div>
-        <a href="https://github.com/danielRogs">
-                <img style="border-radius: 50%;"         src="https://github.com/danielrogs.png" width="100px;"/>
-                <h5 class="text-center">Daniel Rodrigues</h5>
-                <h6 class="text-center">Gerente do Projeto</h6>
-        </a>
-    </div>
-    <div>
-        <a href="https://github.com/anawcarol">
-                <img style="border-radius: 50%;"   src="https://github.com/anawcarol.png" width="100px;"/>
-                <h5 class="text-center">Ana Carolina</h5>
-                <h6 class="text-center">Desenvolvedora</h6>
-        </a>
-    </div>
-    <div>
-        <a href="https://github.com/arthur-suares">
-                <img style="border-radius: 50%;"         src="https://github.com/arthur-suares.png" width="100px;"/>
-                <h5 class="text-center">Arthur Miranda</h5>
-                <h6 class="text-center">Desenvolvedor</h6>
-        </a>
-    </div>
-    <div>
-        <a href="https://github.com/JoaoODragonborn">
-                <img style="border-radius: 50%;"         src="https://github.com/JoaoODragonborn.png" width="100px;"/>
-                <h5 class="text-center">João Pedro</h5>
-                <h6 class="text-center">Desenvolvedor</h6>
-        </a>
-    </div>
-    <div>
-        <a href="https://github.com/manuvaladares">
-                <img style="border-radius: 50%;"         src="https://github.com/manuvaladares.png" width="100px;"/>
-                <h5 class="text-center">Manuella Magalhães</h5>
-                <h6 class="text-center">Desenvolvedora</h6>
-        </a>
-    </div>
-    <div>
-        <a href="https://github.com/marcellaanderle">
-                <img style="border-radius: 50%;"         src="https://github.com/marcellaanderle.png" width="100px;"/>
-                <h5 class="text-center">Marcella Magalhães</h5>
-                <h6 class="text-center">Desenvolvedora</h6>
-        </a>
-    </div>
+<div align="center">
+  <table>
+    <tr>
+      <td align="center"><a href="https://github.com/anawcarol"><img style="border-radius: 50%;" src="https://github.com/anawcarol.png" width="100px;" alt=""/><br /><sub><b>Ana Carolina</b></sub></a><br /><a href="https://github.com/anawcarol" title="Rocketseat">Coordenadora de Análise de Requisitos e Desenvolvedora Frontend</a></td>
+      <td align="center"><a href="https://github.com/arthur-suares"><img style="border-radius: 50%;" src="https://github.com/arthur-suares.png" width="100px;" alt=""/><br /><sub><b>Arthur Miranda</b></sub></a><br /><a href="https://github.com/arthur-suares" title="Rocketseat">Desenvolvedor Backend</a></td>
+      <td align="center"><a href="https://github.com/DanielRogs"><img style="border-radius: 50%;" src="https://github.com/DanielRogs.png" width="100px;" alt=""/><br /><sub><b>Daniel Rodrigues</b></sub></a><br /><a href="https://github.com/DanielRogs" title="Rocketseat">Líder - Product Owner e Coordenador do setor de Backend</a></td>
+      </tr>
+      <tr>
+      <td align="center"><a href="https://github.com/JoaoODragonborn"><img style="border-radius: 50%;" src="https://github.com/JoaoODragonborn.png" width="100px;" alt=""/><br /><sub><b>João Pedro</b></sub></a><br /><a href="https://github.com/JoaoODragonborn" title="Rocketseat">Analista de Quality Assurance e Desenvolvedor Frontend</a></td>
+      <td align="center"><a href="https://github.com/manuvaladares"><img style="border-radius: 50%;" src="https://github.com/manuvaladares.png" width="100px;" alt=""/><br /><sub><b>Manuella Magalhães</b></sub></a><br /><a href="https://github.com/manuvaladares" title="Rocketseat">Coordenadora e Desenvolvedora do setor de Frontend</a></td>
+      <td align="center"><a href="https://github.com/marcellaanderle"><img style="border-radius: 50%;" src="https://github.com/marcellaanderle.png" width="100px;" alt=""/><br /><sub><b>Marcella Anderle</b></sub></a><br /><a href="https://github.com/marcellaanderle" title="Rocketseat">Desenvolvedora Backend</a></td>
+  </table>
 </div>
-    
-</center>
 
 <br>
 
@@ -85,3 +50,4 @@ A equipe de desenvolvedores do Projeto Café do Sítio é composta por 6 membros
 Data     | Versão | Descrição | Autor | Revisores 
 -------- | ------ | --------- | ----- | ---------
 06/11/2024 | 1.0 | Criação do Documento | Daniel Rodrigues | Manuella Magalhães
+17/11/2024 | 1.1 | Atualização do quadro de contribuidores | Daniel Rodrigues | Arthur Miranda
