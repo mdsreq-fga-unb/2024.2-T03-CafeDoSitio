@@ -2,8 +2,15 @@
 
 ## 2.1. Objetivos do Produto
 
-O principal objetivo deste software é unir em uma aplicação web os pontos desejados pelo cliente a fim de que os serviços não estejam separados em aplicações
-de terceiros para facilitar o acesso às informações da empresa para consumidores, parceiros e colaboradores da Família do Sítio. Além disso, proporcionar um ambiente onde o cliente final possa usar como ouvidoria, proporcionando feedbacks que serão encaminhados para as áreas responsáveis por determinada reclamação ou sugestão. Com uma unificação dos serviços requeridos e do direcionamento dos feedbacks, é esperado que haja um fluxo melhor de informações, certificando-se de que elas cheguem onde devem chegar.
+Primordialmente, o principal objetivo deste software é facilitar o acesso às informações institucionais e de Atendimento da Família do Sítio para os Usuários. Este objetivo será alcançado com a resolução das 5 Causas indicadas no Diagrama espinha de peixe, presente na Figura 1 da seção [Cenário Atual do Cliente e Negócio](./1-cenarioAtual.md):
+
+1. Blogs;
+2. Visitas Técnicas;
+3. Recrutamento;
+4. Institucional;
+5. Ouvidoria.
+
+As causas acima foram identificadas como solucionáveis dentro de um produto de software. Com uma unificação dos serviços requeridos e do direcionamento dos feedbacks, é esperado que haja um fluxo melhor de informações, certificando-se de que elas cheguem onde devem chegar.
 
 O resultado esperado é que com essa aplicação e as mudanças solicitadas, os clientes e visitantes do site tenham maiores opções de interação com os serviços ofertados pelo Café do Sítio, e que funcionários da empresa possam ter uma ferramenta de trabalho que os ajude a receber feedbacks direcionados para as áreas corretas, diminuindo a sobrecarga em apenas um dos setores. Tais resultados otimizam o tempo de resposta ao feedback, tarefa essencial para uma empresa interessada em manter uma boa reputação entre seus clientes e possíveis clientes.
 
@@ -119,3 +126,4 @@ Ao adotar uma solução tecnológica que atenda as demandas do cliente com trans
 | 07/11/24 | 1.3 | Adição do tópico 2.4                          | Manuella Magalhães     | Daniel       |
 | 11/11/24 | 2.0 | Correção e remoção de trechos desconectados com os Resultados do Lean Inception | Daniel Rodrigues | Manuella Magalhães
 | 15/11/24 | 2.1 | Melhoria na legibilidade da tabela de competências da equipe| João Pedro |  Daniel Rodrigues
+| 18/11/24 | 2.2 | Correção do tópico 2.1 para melhor entendimento do objetivo | Marcella Sousa Anderle | Manuella Magalhães |
