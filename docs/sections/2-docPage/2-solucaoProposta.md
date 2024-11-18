@@ -63,22 +63,30 @@ A nossa solução proposta para a Família do Sítio se diferencia por oferecer 
 
 ## 2.5. Análise de Viabilidade:
 
-A viabilidade do projeto é alta, considerando as tecnologias e o nível de complexidade. Baseando-se em uma planilha de conhecimento levantada, as tecnologias adotadas neste projeto: **ReactJs**, que usa **Javascript** como linguagem base estão entre os maiores conhecimentos dentro da equipe de desenvolvimento, tal como é ilustrado na Figura 1, nas parte de frameworks de Front-End.
+A viabilidade do projeto é alta, considerando as tecnologias e o nível de complexidade. Baseando-se em uma planilha de conhecimento levantada, a tecnologia adotada neste projeto: **ReactJs**, que usa **Javascript** como linguagem base estão entre os maiores conhecimentos dentro da equipe de desenvolvimento, tal como é ilustrado na Figura 1.1, na parte de frameworks Front-End.
 
-Já para a parte do Back-end, será utilizado as ferramentas consideradas fáceis para a curva de aprendizagem, visto que grande parte da equipe não possui experiências com essa área. Adotando **ExpressJs** com **NodeJs**, e **MongoDB**, a aplicação em paralelo à fase de aprendizagem será melhor para a equipe de desenvolvimento e mais rápida.
+Já para a parte do Back-end, será utilizado as ferramentas consideradas fáceis para a curva de aprendizagem, visto que grande parte da equipe não possui experiências com essa área, como visto na Figura 1.2. Adotando **ExpressJs** com **NodeJs**, e **MongoDB**, a aplicação em paralelo à fase de aprendizagem será melhor para a equipe de desenvolvimento e mais rápida.
 
 O prazo estimado é de três meses, dividido a produção das features em ciclos quinzenais, cujo estará reservado para as entregas na produção ao cliente. A cada quinze dias, as entregas serão validadas pelo cliente e haverá ajustes rápidos em caso de correções. O cronograma é viável, visto que o time já possui um conhecimento consolidado nas ferramentas de criação da interface e, o escopo compartilha de uma complexidade que permite o treinamento em tecnologias necessárias ao longo de seu desenvolvimento.
 
 <br>
 
+<div align="center">
+Figura 1.1 - Conhecimentos quantificados da equipe em linguagens e front-end
+</div>
 ![Tabela de Conhecimento Pt1](../../assets/TabelaConhecimentoPt1.png)
 <div align="center">
-Tabela 1.1 - Conhecimentos quantificados da equipe em linguagens e front-end
+Fonte: elaborado pelos autores (2024)
 </div>
 
+<br>
+
+<div align="center">
+Figura 1.2 - Conhecimentos quantificados da equipe em back-end e outros
+</div>
 ![Tabela de Conhecimento Pt1](../../assets/TabelaConhecimentoPt2.png)
 <div align="center">
-Tabela 1.2 - Conhecimentos quantificados da equipe em back-end e outros
+Fonte: elaborado pelos autores (2024)
 </div>
 
 ## 2.6. Impacto da Solução:
