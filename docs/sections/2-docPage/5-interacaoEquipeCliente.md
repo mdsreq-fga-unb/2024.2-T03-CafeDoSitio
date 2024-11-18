@@ -8,6 +8,7 @@
 | Analista de QA  | Deve testar o produto para averiguar se o software, e todas suas aplicações, estão funcionando da maneira que o cliente final espera.   | João Pedro    | --    |
 | Desenvolvedor Frontend  | Desenvolve a interface visual, design e garante a integração com o servidor.   | Manuella Magalhães    | Ana Carolina, João Pedro    |
 | Desenvolvedor Backend  | Desenvolve a lógica do servidor, gerencia banco de dados e integrações.   | Daniel Rodrigues    | Arthur, Marcella    |
+| Analista de Requisitos |  Identifica, documenta e gerencia as necessidades e expectativas do cliente. | Ana Carolina | Arthur, Daniel, João, Manuella, Marcella |
 
 ## 5.2 Comunicação
 
