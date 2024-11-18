@@ -1,6 +1,7 @@
 {
   "name": "2024.2-T03-CafeDoSitio",
   "private": true,
+  "author": "Requisitados - UnB",
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
