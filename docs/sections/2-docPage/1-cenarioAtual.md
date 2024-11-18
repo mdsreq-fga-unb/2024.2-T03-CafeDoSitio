@@ -28,7 +28,7 @@
     
 </div>
    
- ![DiagramaIshikawa](../../assets/DiagramaIshikawa.png)
+ ![DiagramaIshikawa](../../assets/DiagramaIshikawa.jpg)
 
 <div align="center"> 
 <p>Figura 1: Diagrama espinha de peixe apresentando causas e problemas identificados pela
@@ -88,3 +88,4 @@ Data     | Versão | Descrição | Autor | Revisores
 06/11/24 | 1.0 | Tópicos 1.3 e 1.4 | Arthur Suares | João Pedro
 09/11/24 | 1.2 | Tópicos 1.1 e 1.2 | Ana Carolina | Daniel
 11/11/24 | 2.0 | Correção e remoção de trechos desconectados com os Resultados do Lean Inception | Daniel Rodrigues | Manuella Magalhães
+15/11/24 | 2.1 | Melhoria na legibilidade da figura 1 | João Pedro | Daniel Rodrigues
