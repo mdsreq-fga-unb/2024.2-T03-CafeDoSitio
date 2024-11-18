@@ -2,7 +2,15 @@
 
 ## 2.1. Objetivos do Produto
 
-O principal objetivo deste software é ampliar as opções de interação dos clientes com os serviços oferecidos pelo Café do Sítio, contribuindo para a manutenção de uma boa reputação da empresa ao proporcionar um ambiente onde o cliente final possa usar como ouvidoria, proporcionando feedbacks que serão encaminhados para as áreas responsáveis por determinada reclamação ou sugestão. Com uma unificação dos serviços requeridos e do direcionamento dos feedbacks, é esperado que haja um fluxo melhor de informações, certificando-se de que elas cheguem onde devem chegar.
+Primordialmente, o principal objetivo deste software é facilitar o acesso às informações institucionais e de Atendimento da Família do Sítio para os Usuários. Este objetivo será alcançado com a resolução das 5 Causas indicadas no Diagrama espinha de peixe, presente na Figura 1 da seção [Cenário Atual do Cliente e Negócio](./1-cenarioAtual.md):
+
+1. Blogs;
+2. Visitas Técnicas;
+3. Recrutamento;
+4. Institucional;
+5. Ouvidoria.
+
+As causas acima foram identificadas como solucionáveis dentro de um produto de software. Com uma unificação dos serviços requeridos e do direcionamento dos feedbacks, é esperado que haja um fluxo melhor de informações, certificando-se de que elas cheguem onde devem chegar.
 
 O resultado esperado é que com essa aplicação e as mudanças solicitadas, os clientes e visitantes do site tenham maiores opções de interação com os serviços
 ofertados pelo Café do Sítio, e que funcionários da empresa possam ter uma ferramenta de trabalho que os ajude a receber feedbacks direcionados para as
