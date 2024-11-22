@@ -52,3 +52,4 @@ _Reunião não Gravada_
 | Data | Versão | Descrição | Autor | Revisores |
 |---- | ------ | --------- | ----- | --------- |
 | 11/11/24 | 1.0 | Criação do documento | Daniel Rodrigues | Arthur Miranda |
+| 22/11/24 | 1.1 | Correção de Código das Atividades | Daniel Rodrigues | Ana Carolina |

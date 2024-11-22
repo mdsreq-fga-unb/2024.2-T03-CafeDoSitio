@@ -15,7 +15,7 @@
 | Membros Presentes - Devs | Ana Carolina, Arthur Miranda, Daniel Rodrigues, João Pedro, Manuella Magalhães, Marcella Sousa |
 
 ## Objetivo da Reunião:
-A reunião de Review tinha como objetivo monitorar o andamento das atividades delegadas no início da Sprint anterior: Sprint 1, cujo estavam abertas em forma de Issue no GitHub.
+A reunião de Review tinha como objetivo monitorar o andamento das atividades delegadas no início da Sprint anterior: Sprint 2, cujo estavam abertas em forma de Issue no GitHub.
 
 ## Pautas da Reunião:
 
@@ -44,4 +44,4 @@ _Reunião não Gravada_
 ## Histórico de Versão: 
 Data     | Versão | Descrição            | Autor            | Revisores 
 -------- | ------ | -------------------- | ---------------- | ----------------
-11/11/24 | 1.0    | Criação do documento | Daniel Rodrigues |  
+22/11/24 | 1.0    | Criação do documento | Daniel Rodrigues | Ana Carolina

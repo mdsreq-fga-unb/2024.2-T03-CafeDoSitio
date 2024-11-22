@@ -41,4 +41,4 @@ _Reunião não Gravada_
 ## Histórico de Versão: 
 | Data | Versão | Descrição | Autor | Revisores |
 |---- | ------ | --------- | ----- | --------- |
-| 18/11/24 | 1.0 | Criação do documento | Daniel Rodrigues |  |
+| 22/11/24 | 1.0 | Criação do documento | Daniel Rodrigues | Ana Carolina |
