@@ -33,7 +33,7 @@ AT02S01 | [DOC]: Incluir Tópico 1.1 e 1.2 no Docs | [Issue #6](https://github.c
 AT03S01 | [DOC]: Incluir Tópico 1.3 e 1.4 no Docs | [Issue #7](https://github.com/mdsreq-fga-unb/2024.2-T03-CafeDoSitio/issues/7) | Arthur Miranda
 AT04S01 | [DOC]: Incluir Tópico 2.1 e 2.2 no Docs | [Issue #8](https://github.com/mdsreq-fga-unb/2024.2-T03-CafeDoSitio/issues/8) | João Pedro
 AT05S01 | [DOC]: Incluir Tópico 2.3 no Docs       | [Issue #9](https://github.com/mdsreq-fga-unb/2024.2-T03-CafeDoSitio/issues/9) | Marcella Anderle
-AT05S01 | [DOC]: Incluir Tópico 2.4 no Docs       | [Issue #10](https://github.com/mdsreq-fga-unb/2024.2-T03-CafeDoSitio/issues/10) | Manuela Valadares
+AT06S01 | [DOC]: Incluir Tópico 2.4 no Docs       | [Issue #10](https://github.com/mdsreq-fga-unb/2024.2-T03-CafeDoSitio/issues/10) | Manuela Valadares
 AT07S01 | [DOC]: Incluir Tópico 2.5 e 2.6 no Docs | [Issue #11](https://github.com/mdsreq-fga-unb/2024.2-T03-CafeDoSitio/issues/11) | Daniel Rodrigues
 AT08S01 | [DOC]: Inserir tópico 3 no GitPages     | [Issue #20](https://github.com/mdsreq-fga-unb/2024.2-T03-CafeDoSitio/issues/20) | Arthur Miranda, João Pedro, Manuela Valadares
 AT09S01 | [DOC]: Inserir tópico 4 no GitPages     | [Issue #21](https://github.com/mdsreq-fga-unb/2024.2-T03-CafeDoSitio/issues21) | Daniel Rodrigues

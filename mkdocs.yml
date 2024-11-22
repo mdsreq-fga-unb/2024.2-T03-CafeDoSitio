@@ -30,6 +30,11 @@ nav:
       - Reuniões:
         - Sprint Review: sections/4-sprints/sprint2/reuniões/[Equipe]11Nov2024pt1.md
         - Sprint Planning: sections/4-sprints/sprint2/reuniões/[Equipe]11Nov2024pt2.md
+    - Sprint 3:
+      - Histórico do Backlog: sections/4-sprints/sprint3/HistoricoBacklog.md
+      - Reuniões:
+        - Sprint Review: sections/4-sprints/sprint3/reuniões/[Equipe]18Nov2024pt1.md
+        - Sprint Planning: sections/4-sprints/sprint3/reuniões/[Equipe]18Nov2024pt2.md
   - Políticas:
     - GCS: sections/3-politicas/gcs.md
 
