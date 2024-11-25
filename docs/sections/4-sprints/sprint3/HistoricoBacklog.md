@@ -36,4 +36,4 @@ US23   | Localizar Produtos                    | ⚪
 ## Histórico de Versão
 Data     | Versão | Descrição            | Autor            | Revisores 
 -------- | ------ | -------------------- | ---------------- | ---------
-22/11/24 | 1.0    | Criação do Documento | Daniel Rodrigues | 
+22/11/24 | 1.0    | Criação do Documento | Daniel Rodrigues | Manuella Magalhães
