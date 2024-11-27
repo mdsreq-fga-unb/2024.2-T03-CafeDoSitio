@@ -1,0 +1,54 @@
+.contact-section {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .contact-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-section p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  .contact-cards {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .contact-card {
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-card h3 {
+    font-size: 1.2rem;
+    color: #004d25;
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-card p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: #555;
+  }
+  
+  .email-link {
+    font-size: 0.9rem;
+    color: #0078d7;
+    text-decoration: none;
+  }
+  
+  .email-link:hover {
+    text-decoration: underline;
+  }
+  
