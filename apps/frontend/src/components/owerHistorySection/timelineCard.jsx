@@ -1,127 +1,67 @@
-import React, { useState } from "react"; 
-import "./timelineCard.css";
+import React, { useState } from "react";
+import {
+  TimelineCardContainer,
+  Title,
+  Content,
+  YearDisplay,
+  TextBox,
+  Button,
+  Navigation,
+} from "./TimelineCard-styles";
 
 export function TimelineCard() {
-    const years = [1967, 1972, 1974, 1986, 1989];
-    const texts = ['texto 1', 'texto 2', 'texto 3' , 'texto 4', 'texto 5']
-    const [currentYearIndex, setCurrentYearIndex] = useState(0); 
+  const years = [1967, 1972, 1974, 1986, 1989];
+  const texts = [
+    "1 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "2 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", 
+    "3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", 
+    "4 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", 
+    "5 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+];
+  const [currentYearIndex, setCurrentYearIndex] = useState(0);
 
-    const handleNext = () => {
-        if (currentYearIndex < years.length - 1) {
-            setCurrentYearIndex(currentYearIndex + 1);
-        }
-    };
-
-    const handlePrevious = () => {
-        if (currentYearIndex <= years.length - 1) {
-            setCurrentYearIndex(currentYearIndex - 1);
-        }
-    };
-
-    const handleNavigatoin = (selectedYear) => {
-        setCurrentYearIndex(selectedYear);
+  const handleNext = () => {
+    if (currentYearIndex < years.length - 1) {
+      setCurrentYearIndex(currentYearIndex + 1);
     }
+  };
 
-    if(currentYearIndex == 0){
-        return (
-            <div className="timeline-card">
-                <h2 className="timeline-title">Linha do Tempo</h2>
-                <div className="timeline-content">
-                    <div className="year-display">
-                        <span className="year">{years[currentYearIndex]}</span>
-                    </div>
-                    <div className="text-box">
-                        <p>
-                            {texts[currentYearIndex]}
-                        </p>
-                    </div>
-                    <button className="next-button" onClick={handleNext}>
-                        {'>'}
-                    </button>
-                </div>
-                <div className="timeline-navigation">
-                    <div className="timeline">
-                        {years.map((year, index) => (
-                            <div
-                                key={year}
-                                className={`timeline-item ${index === currentYearIndex ? "active" : ""}`}
-                            >
-                                {year}
-                                
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
-        );
+  const handlePrevious = () => {
+    if (currentYearIndex > 0) {
+      setCurrentYearIndex(currentYearIndex - 1);
     }
+  };
 
-    else if(currentYearIndex == 4){
-        return (
-            <div className="timeline-card">
-                <h2 className="timeline-title">Linha do Tempo</h2>
-                <div className="timeline-content">
-                    <button className="next-button" onClick={handlePrevious}>
-                        {'<'}
-                    </button>
-                    <div className="year-display">
-                        <span className="year">{years[currentYearIndex]}</span>
-                    </div>
-                    <div className="text-box">
-                        <p>
-                            {texts[currentYearIndex]}
-                        </p>
-                    </div>
-                </div>
-                <div className="timeline-navigation">
-                    <div className="timeline">
-                        {years.map((year, index) => (
-                            <div
-                                key={year}
-                                className={`timeline-item ${index === currentYearIndex ? "active" : ""}`}
-                            >
-                                {year}
-                            </div>
-                        ))}
-                    </div>
-                </div>
+  return (
+    <TimelineCardContainer>
+      <Title>Linha do Tempo</Title>
+      <Content>
+        <Button onClick={handlePrevious} disabled={currentYearIndex === 0}>
+          {"<"}
+        </Button>
+        <YearDisplay>
+          <span className="year">{years[currentYearIndex]}</span>
+        </YearDisplay>
+        <TextBox>
+          <p>{texts[currentYearIndex]}</p>
+        </TextBox>
+        <Button onClick={handleNext} disabled={currentYearIndex === years.length - 1}>
+          {">"}
+        </Button>
+      </Content>
+      <Navigation>
+        <div className="timeline">
+          {years.map((year, index) => (
+            <div
+              key={year}
+              className={`timeline-item ${index === currentYearIndex ? "active" : ""}`}
+              onClick={() => setCurrentYearIndex(index)}
+            >
+              {year}
             </div>
-        );
-    }
-
-    else {
-        return(
-            <div className="timeline-card">
-                <h2 className="timeline-title">Linha do Tempo</h2>
-                <div className="timeline-content">
-                    <button className="next-button" onClick={handlePrevious}>
-                        {'<'}
-                    </button>
-                    <div className="year-display">
-                        <span className="year">{years[currentYearIndex]}</span>
-                    </div>
-                    <div className="text-box">
-                        <p>
-                            {texts[currentYearIndex]}
-                        </p>
-                    </div>
-                    <button className="next-button" onClick={handleNext}>
-                        {'>'}
-                    </button>
-                </div>
-                <div className="timeline-navigation">
-                    <div className="timeline">
-                        {years.map((year, index) => (
-                            <div
-                                key={year}
-                                className={`timeline-item ${index === currentYearIndex ? "active" : ""}`}
-                            >
-                                {year}
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
-        );
-    }  
+          ))}
+        </div>
+      </Navigation>
+    </TimelineCardContainer>
+  );
 }

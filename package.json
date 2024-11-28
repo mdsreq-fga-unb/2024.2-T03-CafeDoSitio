@@ -1,6 +1,6 @@
 {
   "name": "2024.2-T03-CafeDoSitio",
-  "type":"module",
+  "type": "module",
   "private": true,
   "author": "Requisitados - UnB",
   "scripts": {
@@ -25,5 +25,8 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "styled-components": "^6.1.13"
+  }
 }
