@@ -4,11 +4,6 @@ import ContactPage from './pages/ContactPage';
 
 const App = () => {
   useEffect(() => {
-    document.title = 'Família do Sítio';
-    const link = document.createElement('link');
-    link.rel = 'icon';
-    link.href = '/favicon.png';
-    document.head.appendChild(link);
   }, []);
 
   return (
