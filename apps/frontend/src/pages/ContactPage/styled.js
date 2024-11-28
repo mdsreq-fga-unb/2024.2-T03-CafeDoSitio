@@ -6,7 +6,7 @@ export const InfoSection = styled.section`
   }
 
   p {
-    font-weight: 600;
+    font-weight: 300;
     font-size: 1.0rem;
   }
 `;
