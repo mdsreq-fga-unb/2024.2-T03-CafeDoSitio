@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import ContactSection from './components/ContactSection/ContactSection'; 
+import ContactSection from './pages/ContactSection/ContactSection'; 
 
 const App = () => {
   useEffect(() => {
