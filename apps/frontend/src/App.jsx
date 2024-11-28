@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import ContactSection from './pages/ContactSection/ContactSection'; 
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import ContactPage from './pages/ContactPage'; 
 
 const App = () => {
   useEffect(() => {
@@ -11,9 +12,11 @@ const App = () => {
   }, []);
 
   return (
-    <div>
-      <ContactSection />
-    </div>
+    <Router>
+      <Routes>
+          <Route path='/' element={<ContactPage />} />
+      </Routes>
+    </Router>
   );
 };
 
