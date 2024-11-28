@@ -13,13 +13,15 @@ export const InfoSection = styled.section`
 
 export const ContactSection = styled.section`
   text-align: center;
-  padding: 2rem;
+  padding-block: 2rem;
 `;
 
 export const ContactCards = styled.div`
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  padding-inline: 90px;
+  column-gap: 5.0rem;
+  row-gap: 2.8rem;
   flex-wrap: wrap;
 `;
 

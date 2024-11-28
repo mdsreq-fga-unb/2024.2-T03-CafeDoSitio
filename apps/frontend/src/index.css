@@ -37,8 +37,9 @@ body {
 }
 
 .container {
-  max-width: 1200px; /* Define a largura máxima do conteúdo textual */
-  margin: 0;
-  padding: 0 10vw; /* Define a margem interna (margens laterais do grid no Figma) */
-  box-sizing: border-box; /* Inclui padding na largura total */
+  padding-inline: 90px;
+
+  @media (max-width: 850px) {
+    padding-inline: 20px;
+  }
 }

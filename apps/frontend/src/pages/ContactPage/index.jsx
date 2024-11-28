@@ -35,7 +35,7 @@ const ContactPage = () => {
 
   return (
     <>
-      <Header />
+      <Header pagina={"CONTATOS"}/>
       <Paginacao text={"FAMÍLIA DO SÍTIO > CONTATOS"}/>
 
       <InfoSection className='container'>
