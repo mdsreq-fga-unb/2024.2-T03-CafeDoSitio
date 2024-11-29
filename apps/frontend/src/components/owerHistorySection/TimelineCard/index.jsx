@@ -9,7 +9,8 @@ import {
   TextBox,
   Button,
   Navigation,
-} from "./TimelineCard-styles";
+  TimelineLine
+} from "./styled";
 
 export function TimelineCard() {
   const years = [1967, 1972, 1974, 1986, 1989];

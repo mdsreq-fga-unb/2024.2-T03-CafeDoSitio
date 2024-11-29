@@ -34,6 +34,16 @@ export const Content = styled.div`
   margin-top: 30px;
 `;
 
+export const TimelineLine = styled.hr`
+position: relative;
+
+
+width: 100%;
+height: 100%;
+background-color: #A53A44;
+z-index: 1; // Este ficará atrás
+`;
+
 export const YearDisplay = styled.div`
   display: flex;  
   flex: 2;
@@ -95,7 +105,7 @@ export const Navigation = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  
   .timeline {
     display: flex;
     justify-content: space-around;
@@ -111,7 +121,7 @@ export const Navigation = styled.div`
       justify-content: center;
       cursor: pointer;
       transition: all .3s ease-out;
-
+  
       .timeline-item-year{
         margin-top: 50px;
       }
