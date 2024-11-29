@@ -37,9 +37,5 @@ body {
 }
 
 .container {
-  padding-inline: 90px;
-
-  @media (max-width: 850px) {
-    padding-inline: 20px;
-  }
+  padding-inline: 8vw;
 }

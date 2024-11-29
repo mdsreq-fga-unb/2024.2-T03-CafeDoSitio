@@ -1,7 +1,7 @@
 import React from "react";
 import { NavArea, NavBar, LogoImg, InfoAreaDesktop, BarraPesquisa, InfoAreaMobile } from "./styled";
 import { FaInstagram, FaFacebook, FaYoutube, FaLinkedin, FaSearch, FaWhatsapp } from "react-icons/fa"; // Ícones do Font Awesome
-import { FaCartShopping } from "react-icons/fa6";
+import { FaCartShopping, FaXTwitter } from "react-icons/fa6";
 import { MdOutlineMenu } from "react-icons/md";
 import RedButton from "../RedButton";
 
@@ -16,10 +16,11 @@ function Header({pagina}) {
         <InfoAreaDesktop>
           <div className="area1">
           <ul className="social-medias">
-            <li><a href="#"><FaInstagram color="black" size={20}/></a></li>
-            <li><a href="#"><FaFacebook color="black" size={20}/></a></li>
-            <li><a href="#"><FaYoutube color="black" size={20}/></a></li>
-            <li><a href="#"><FaLinkedin color="black" size={20}/></a></li>
+            <li><a href="https://www.instagram.com/cafedositio/" target="_blank"><FaInstagram color="black" size={20}/></a></li>
+            <li><a href="https://www.facebook.com/cafedositio" target="_blank"><FaFacebook color="black" size={20}/></a></li>
+            <li><a href="https://www.youtube.com/@cafedositio7991" target="_blank"><FaYoutube color="black" size={20}/></a></li>
+            <li><a href="https://x.com/cafe_do_sitio" target="_blank"><FaXTwitter color="black" size={20}/></a></li>
+            <li><a href="https://www.facebook.com/cafedositio" target="_blank"><FaLinkedin color="black" size={20}/></a></li>
           </ul>
 
           <BarraPesquisa>

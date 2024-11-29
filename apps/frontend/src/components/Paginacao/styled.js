@@ -10,6 +10,6 @@ export const DivPagincacao = styled.div`
 `;
 
 export const Letreiro = styled.h1`
-  font-size: 16px;
+  font-size: 12px;
   color: white;
 `;
