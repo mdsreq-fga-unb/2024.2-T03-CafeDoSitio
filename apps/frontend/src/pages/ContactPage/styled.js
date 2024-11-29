@@ -2,9 +2,8 @@ import styled from 'styled-components';
 
 export const InfoSection = styled.section`
   h1 {
-    font-size: 3.0rem;
+    font-size: 2rem;
     margin-bottom: 0;
-    color: #006343;
   }
 
   p {
@@ -21,8 +20,8 @@ export const ContactSection = styled.section`
 export const ContactCards = styled.div`
   display: flex;
   justify-content: center;
-  padding-inline: 4vw;
-  column-gap: 5.0rem;
+  padding-inline: 4rem;
+  column-gap: 3rem;
   row-gap: 2.8rem;
   flex-wrap: wrap;
 `;
