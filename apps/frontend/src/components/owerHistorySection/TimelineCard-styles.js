@@ -12,55 +12,80 @@ export const TimelineCardContainer = styled.div`
 export const Title = styled.h2`
   text-align: left;
   font-size: 1.5rem;
+  justify-content: space-between;
   color: #333;
 `;
 
+export const Text = styled.p`
+
+`;
+
+export const Content2 = styled.div`
+  display: grid;
+  grid-template-columns: auto 1fr; // A primeira coluna com largura automática, a segunda ocupando o restante
+  gap: 20px; /* Adiciona 20px de espaço entre linhas e colunas */
+
+`;
+
 export const Content = styled.div`
-  display: flex;
+  display: flex;  
   align-items: center;
   justify-content: space-between;
   margin-top: 30px;
 `;
 
 export const YearDisplay = styled.div`
-  flex: 1;
+  display: flex;  
+  flex: 2;
+  background-color: #2B674B;
   text-align: center;
+  border-radius: 6px;
+  padding: 4px;
+  align-items: center; /* Centraliza o texto verticalmente */
+  transition: all .3s ease-out;
+
 
   .year {
-    font-size: 2rem;
+    writing-mode: vertical-lr; 
+    transform: rotate(180deg);
+    font-size: 3rem;
     font-weight: bold;
-    color: #4caf50;
+    font-family: 'Impact', sans-serif;
+    color: #fff;
   }
 `;
+
 
 export const TextBox = styled.div`
   flex: 2;
   background-color: #fff;
+  height: 90%;
+  width: 100%;
   border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 10px 20px;
+  border-radius: 0 8px 8px 0;
+  padding: 10px;
   margin: 0 20px;
 `;
 
 export const Button = styled.button`
-  background-color: #4caf50;
-  color: white;
+  background-color: transparent;
+  color: #CFCFCF;
   border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  border-radius: 20%;
+  width: 32px;
+  height: 32px;
   font-size: 1.2rem;
+  padding: 10px
   cursor: pointer;
-  display: flex;
   align-items: center;
   justify-content: center;
 
   &:hover {
-    background-color: #45a049;
+    background-color: ;
   }
 
   &:disabled {
-    background-color: #ccc;
+    background-color: transparent;
     cursor: not-allowed;
   }
 `;
@@ -85,10 +110,16 @@ export const Navigation = styled.div`
       align-items: center;
       justify-content: center;
       cursor: pointer;
+      transition: all .3s ease-out;
+
+      .timeline-item-year{
+        margin-top: 50px;
+      }
 
       &.active {
-        background-color: #4caf50;
-        color: white;
+        background-color: #A53A44;
+        color: #A53A44;
+
       }
     }
   }

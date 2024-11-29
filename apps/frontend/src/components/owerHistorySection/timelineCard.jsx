@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import {
   TimelineCardContainer,
   Title,
+  Text,
   Content,
+  Content2,
   YearDisplay,
   TextBox,
   Button,
@@ -34,34 +36,45 @@ export function TimelineCard() {
 
   return (
     <TimelineCardContainer>
-      <Title>Linha do Tempo</Title>
+
+      <Content2>
+        <Title>Linha do Tempo</Title>
+        <Text>Lorem Ipsum is simply dummy text of the printing and typesetting industry</Text>
+      </Content2>
+      
       <Content>
         <Button onClick={handlePrevious} disabled={currentYearIndex === 0}>
           {"<"}
         </Button>
+
         <YearDisplay>
           <span className="year">{years[currentYearIndex]}</span>
+          <TextBox>
+            <p>{texts[currentYearIndex]}</p>
+          </TextBox>
         </YearDisplay>
-        <TextBox>
-          <p>{texts[currentYearIndex]}</p>
-        </TextBox>
+
         <Button onClick={handleNext} disabled={currentYearIndex === years.length - 1}>
           {">"}
         </Button>
       </Content>
+
       <Navigation>
         <div className="timeline">
           {years.map((year, index) => (
             <div
-              key={year}
               className={`timeline-item ${index === currentYearIndex ? "active" : ""}`}
               onClick={() => setCurrentYearIndex(index)}
             >
-              {year}
-            </div>
+              
+            <div className="timeline-item-year">{year}</div>  
+            </div>  
+            
           ))}
+          
         </div>
       </Navigation>
+
     </TimelineCardContainer>
   );
 }
