@@ -4,23 +4,31 @@ import {
   Title,
   Text,
   Content,
-  Content2,
+  StyledDiv,
   YearDisplay,
   TextBox,
   Button,
   Navigation,
+  GrayBar,
+  ContentWrapper,
   TimelineLine
 } from "./styled";
+import celeirinho from "../../../assets/celeirinho.png"
 
 export function TimelineCard() {
-  const years = [1967, 1972, 1974, 1986, 1989];
+  const years = [1958, 1967, 1972, 1974, 1979, 1986, 2000, 2005, 2010, 2014];
   const texts = [
-    "1 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-    "2 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", 
-    "3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", 
-    "4 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", 
-    "5 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-];
+    "Vindos do Pernambuco, os recém-casados Antônia e Teones Barbosa de Souza chegam em Brasília. Se estabelecem no Núcleo Bandeirante, onde abrem um armazém de secos e molhados.",
+    "O casal compra o Café do Sítio — a marca, o maquinário de torrefação e três veículos de distribuição. A fábrica funciona no Núcleo Bandeirante, e Teones mantém os negócios no armazém.",
+    "O Café do Sítio muda para o Setor Industrial de Taguatinga, na QI 21. No local, a empresa cresce e amplia o número de funcionários.",
+    "O Café do Sítio patrocina a transmissão da Copa do Mundo na Alemanha pela Rádio Nacional. O 'melhor café do Brasil' começa a ganhar o consumidor do Distrito Federal. ",
+    "O Café segue conquistando os brasilienses. Em uma das ações de divulgação, promotores vão de porta em porta oferecer o produto, voltando dias depois para uma pesquisa de satisfação.",
+    "Abre a filial em Goiânia, um primeiro passo para levar o Café do Sítio a todo Centro-Oeste. Hoje, 35 funcionários trabalham no local, que funciona como um centro de distribuição.",
+    "Começa a produção do café a vácuo, em embalagens de 250g e 500g. Também tem início a venda do cappuccino, terceirizado para outra empresa, e distribuído com a marca Café do Sítio.",
+    "Mudança para atual sede, no final do Pistão Sul. O Café também renova o seu maquinário, substituindo os torradores semi-automáticos por novos, que permitem o controle das curvas de temperatura e pressão.",
+    "Em 10 de outubro, morre Teones Barbosa de Souza, em decorrência das complicações de uma cirurgia após um acidente de trânsito. A presidência do Café é assumida por sua mulher.",
+    "O Café do Sítio se consolida como líder de mercado. No Distrito Federal, tem 60% da preferência dos consumidores, segundo pesquisa da Associação Brasileira de Supermercados (Abras)."
+  ];
   const [currentYearIndex, setCurrentYearIndex] = useState(0);
 
   const handleNext = () => {
@@ -37,29 +45,28 @@ export function TimelineCard() {
 
   return (
     <TimelineCardContainer>
+      <ContentWrapper>  
+        <StyledDiv>
+          <Title>Linha do Tempo</Title>
+          <Text>Lorem Ipsum is simply dummy text of the printing and typesetting industry</Text>
+        </StyledDiv>
+      </ContentWrapper>
 
-      <Content2>
-        <Title>Linha do Tempo</Title>
-        <Text>Lorem Ipsum is simply dummy text of the printing and typesetting industry</Text>
-      </Content2>
-      
       <Content>
-        <Button onClick={handlePrevious} disabled={currentYearIndex === 0}>
-          {"<"}
-        </Button>
+        <div >
+          <Button onClick={handlePrevious} disabled={currentYearIndex === 0}>
+            {"<"}
+          </Button>
+        </div>
 
         <YearDisplay>
           <span className="year">{years[currentYearIndex]}</span>
-          <TextBox>
-            <p>{texts[currentYearIndex]}</p>
-            
-            {/* Tentativa de colocar a imagem do celeirinho ao lado do testo
-                Não deu muito certo
-            <div style={{maxWidth: "75px", maxHeight: "50px"}}>
-              <img src="https://images.squarespace-cdn.com/content/v1/5e135412c491ed60eb5caba2/1611587907737-SNWOZ7TR3415YDHVM9QN/Livestock+Feeds-01.jpg?format=500w" alt="testizinho" style={{ width: "100%", height: "100%", objectFit: "cover",}}/>
-            </div> 
-            */}
-          </TextBox>
+
+          <TextBox><p>{texts[currentYearIndex]}</p></TextBox>
+
+          {/* <div style={{maxWidth: "75px", maxHeight: "50px"}}>
+            <img src={celeirinho} alt="testizinho" style={{ width: "100%", height: "100%", objectFit: "cover",}}/>
+          </div>  */}
         </YearDisplay>
 
         <Button onClick={handleNext} disabled={currentYearIndex === years.length - 1}>
@@ -67,21 +74,26 @@ export function TimelineCard() {
         </Button>
       </Content>
 
-      <Navigation>
-        <div className="timeline">
-          {years.map((year, index) => (
-            <div
-              className={`timeline-item ${index === currentYearIndex ? "active" : ""}`}
-              onClick={() => setCurrentYearIndex(index)}
-            >
-              
-            <div className="timeline-item-year">{year}</div>  
-            </div>  
-            
-          ))}
-          
-        </div>
-      </Navigation>
+
+      <GrayBar>
+        <Navigation>
+          <div className="timeline">
+            <TimelineLine />
+            {years.map((year, index) => (
+              <div
+                className={`timeline-item ${index === currentYearIndex ? "active" : ""}`}
+                onClick={() => setCurrentYearIndex(index)}
+              >
+
+                <div className="timeline-item-year">{year}</div>
+              </div>
+
+            ))}
+
+          </div>
+        </Navigation>
+      </GrayBar>
+
 
     </TimelineCardContainer>
   );

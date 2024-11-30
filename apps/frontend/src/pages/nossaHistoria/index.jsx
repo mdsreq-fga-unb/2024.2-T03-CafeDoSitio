@@ -14,7 +14,8 @@ import {
     DiferencialSection,
     DiferencialCard,
     DivContainer,
-    Container
+    Container,
+    RedLine
 } from "./styled";
 
 
@@ -22,18 +23,18 @@ export default function NossaHistoria(){
     const diferenciais = [
         {
             image: "https://coopharma.com.br/wp-content/uploads/2022/05/ICONES-Home_PHARMA-224-262x300.png",
-            title: "Ispsum Lorem - 1",
-            text: "orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+            title: "MISSÃO",
+            text: "Oferecer alimentos com o cuidado e a qualidade do Sítio para a experiência e satisfação dos clientes."
         },
         {
             image: "https://www.gp.usp.br/wp-content/uploads/2024/02/Fotos-de-Perfil-Nexos-13-300x300.png",
-            title: "Ispsum Lorem - 2",
-            text: "orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+            title: "VISÃO",
+            text: "Que a Família do Sítio seja uma referência em alimentos no Centro-Oeste"
         },
         {
             image: "https://cdn2.iconfinder.com/data/icons/greenline/512/star-512.png",
-            title: "Ispsum Lorem - 3",
-            text: "orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+            title: "VALORES",
+            text: "Honestidade • Transparência • Respeito • União • Qualidade Sabor Brasileiro"
         },
     ]
 
@@ -97,15 +98,21 @@ export default function NossaHistoria(){
             <DiferencialSection>
                 {diferenciais.map((diferencial) => (                    
                     <DiferencialCard>
-                        <div style={{maxWidth: "75px", maxHeight: "50px"}}>
+                        <div style={{maxWidth: "75px", maxHeight: "50px", marginLeft: "3rem"}}>
                             <img src={diferencial.image} alt={diferencial.title} style={{ width: "100%", height: "100%", objectFit: "cover",}}/>
                         </div>
 
                         
                         
-                        <div>
+                        <div style={{marginLeft: "1rem"}}>
+                            <RedLine /> {/*Não sei porque isso não aparece*/}
+
                             <Title>{diferencial.title}</Title>
-                            <Text>{diferencial.text}</Text>
+
+
+                            <div style={{maxWidth: "300px", maxHeight: "50px"}}> 
+                                <Text>{diferencial.text}</Text>
+                            </div>
                         </div>
                     </DiferencialCard>
                 ))}

@@ -96,3 +96,10 @@ export const BackgroundLine = styled.div`
     margin: 0;
 `;
 
+export const RedLine = styled.div`
+  display : flex;
+  width: 5px;
+  height: 100%;
+  background-color: red;  
+`;
+
