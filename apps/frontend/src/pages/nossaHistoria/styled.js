@@ -8,8 +8,9 @@ export const Title = styled.h2`
   margin: 2;
 `;
 
-export const Text = styled.p`
-    text-align: justify;
+export const Text = styled.div`
+  align-items: left;
+  text-align: left;
 
 
 `;
@@ -20,6 +21,14 @@ export const TimelineSection = styled.div`
 
 export const FirstTextSection = styled.div`
 
+`;
+
+export const DivContainer = styled.div`
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 80%;
+  margin: 4rem;
 `;
 
 export const Container = styled.div`
@@ -33,11 +42,13 @@ export const Container = styled.div`
 export const SecondTextSection = styled.div`
     display: grid;
     align-items: center;
-    grid-template-columns: repeat(2, 0.5fr); // A primeira coluna com largura automática, a segunda ocupando o restante
-    gap: 40px; /* Adiciona 20px de espaço entre linhas e colunas */
+    margin: 3;
+    padding: 5;
+    grid-template-columns: repeat(2, 0.5fr); 
+    gap: 4px; 
 
     .image{
-        align-items: right;
+      align-items: left;
     }
 `;
 
@@ -62,13 +73,17 @@ export const DiferencialCard = styled.div`
   align-items: center;
   gap: 20px;
 
-//   &::before {
-//     content: '';
-//     width: 2px;
-//     height: 100%;
-//     background-color: red;
-//     order: 1; /* Posiciona a linha no meio */
-  }
+  // Isso é uma tentativa de colocar a linha vermelha entre a imagem e o texto
+  // Atualmente isso aqui sempre coloca antes da imagem, mesmo que altere 'order'
+  // pra 1
+  //
+  // &::before {
+  //   content: '';
+  //   width: 5px;
+  //   height: 100%;
+  //   background-color: red;
+  //   order: 0; 
+  // }
 `;
 
 export const BackgroundLine = styled.div`
