@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Title = styled.h2`
+export const Title = styled.h1`
   text-align: left;
   font-size: 1.5rem;
   justify-content: space-between;
@@ -37,19 +37,20 @@ export const Container = styled.div`
   padding: 20px;
   max-width: 600px;
   margin: auto;
+  .img {
+    align-items: left;
+    height: 38rem; /* Diminuído para metade */
+    width: auto; /* Mantém a proporção */
+  }
 `;
 
 export const SecondTextSection = styled.div`
-    display: grid;
+    display: flex;
     align-items: center;
-    margin: 3;
+    margin: 90px;
     padding: 5;
     grid-template-columns: repeat(2, 0.5fr); 
     gap: 4px; 
-
-    .image{
-      align-items: left;
-    }
 `;
 
 export const ThirdTextSection = styled.div`
@@ -66,6 +67,7 @@ export const DiferencialSection = styled.div`
     width: 100%;
     margin: auto;
 `;
+
 
 export const DiferencialCard = styled.div`
   display: flex;
@@ -93,7 +95,7 @@ export const BackgroundLine = styled.div`
     padding: 20px;
     height: 100;
     width: 100%;
-    margin: 0;
+    margin: 0 auto;
 `;
 
 export const RedLine = styled.div`
@@ -101,5 +103,8 @@ export const RedLine = styled.div`
   width: 5px;
   height: 100%;
   background-color: red;  
+
 `;
+
+
 
