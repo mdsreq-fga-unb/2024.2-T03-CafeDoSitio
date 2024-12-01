@@ -13,6 +13,7 @@ import {
   SocialIcons,
   Links,
   ContactInfo,
+  Horario_redes,
 } from './styled';
 import { FaEnvelope, FaPhoneAlt, FaInstagram, FaFacebook, FaYoutube, FaLinkedin, FaComments } from "react-icons/fa"; // Ícones do Font Awesome
 
@@ -80,20 +81,22 @@ const ContactPage = () => {
             <label>atendimento@familiadositio.com.br</label>
           </div>
         </ContactInfo>
-        <div className='horario_redes'>
-          <h3>Horário de atendimento:</h3>
-          <p>
-            Segunda a quinta das 08h às 18h e<br />
-            Sexta das 08h às 17h
-          </p>
-          <SocialIcons>
-            <FaInstagram />
-            <FaFacebook />
-            <FaYoutube />
-            <FaLinkedin />
+        <Horario_redes>
+          <div className='horario_redes'>
+            <h3>Horário de atendimento:</h3>
+            <p>
+              Segunda a quinta das 08h às 18h e<br />
+              Sexta das 08h às 17h
+            </p>
+            <SocialIcons>
+              <FaInstagram />
+              <FaFacebook />
+              <FaYoutube />
+              <FaLinkedin />
 
-          </SocialIcons>
-        </div>
+            </SocialIcons>
+          </div>
+        </Horario_redes>
         <Links>
           <a href="#faq">Perguntas Frequentes</a>
           <a href="#privacy">Política de Privacidade</a>

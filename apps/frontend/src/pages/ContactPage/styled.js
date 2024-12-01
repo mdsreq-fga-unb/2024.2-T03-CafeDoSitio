@@ -24,10 +24,14 @@ export const ContactSection = styled.section`
 export const ContactCards = styled.div`
   display: flex;
   justify-content: center;
-  padding-inline: 4rem;
+  padding-inline: 5%;
   column-gap: 3rem;
   row-gap: 2.8rem;
   flex-wrap: wrap;
+  @media (max-width: 1024px) {
+    flex-direction:column;
+    align-items: center;
+    }
 `;
 
 export const ContactCard =styled.div`
@@ -49,6 +53,11 @@ export const ContactCard =styled.div`
     font-size: 1rem;
     margin-bottom: 1rem;
     color: #555;
+  }
+
+  @media (max-width: 1024px) {
+    max-width: auto;
+    padding: 0;
   }
 `;
 
@@ -74,8 +83,6 @@ export const EmailLink = styled.a`
 
 
 export const CardInfo = styled.section`
-  
-  background-color: #ffffff;
   border: 3px solid #006343;
   border-radius: 30px;
   width: auto; 
@@ -103,22 +110,9 @@ export const CardInfo = styled.section`
     width: 15%;
   }
 
-  .horario_redes {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    color: #006343;
-    p {
-      margin:0;
-    }
-    h3 {
-      margin:0;
-    }
+  @media (max-width: 1420px) {
+    display: none;
   }
-
-
-
-  
 `;
 
 
@@ -130,7 +124,7 @@ export const SocialIcons = styled.div`
   svg {
     font-size: 1.5rem;
     color: #006343;
-    cursor: pointer;
+    cursor: pointer;}
 
     &:hover {
       color: #005a25;
@@ -148,14 +142,12 @@ export const Links = styled.div`
     text-decoration: none;
     font-size: 1rem;
     color: #006343;
-    font-weight: bold;
+    font-weight: bold;}
 
     &:hover {
       text-decoration: underline;
     }
   }
-  @media (max-width: 768px) {
-    display: none; 
 
 `;
 
@@ -163,8 +155,6 @@ export const ContactInfo = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  
-
   .phone{
     font-size: 2.4rem;
     color: #006343;
@@ -172,7 +162,7 @@ export const ContactInfo = styled.div`
     display: flex;
     gap: 15px;
     align-items: center;
-  }
+    }
 
   .email {
     font-size: 1rem;
@@ -180,7 +170,18 @@ export const ContactInfo = styled.div`
     display: flex;
     gap: 15px;
     align-items: center;
-
   }
 `;
 
+export const Horario_redes = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #006343;
+  p {
+    margin:0;
+  }
+  h3 {
+    margin:0;
+  }
+`;
