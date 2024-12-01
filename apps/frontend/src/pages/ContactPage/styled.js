@@ -56,7 +56,7 @@ export const ContactCard =styled.div`
   }
 
   @media (max-width: 1024px) {
-    max-width: auto;
+    width: auto;
     padding: 0;
   }
 `;
@@ -82,7 +82,7 @@ export const EmailLink = styled.a`
 `;
 
 
-export const CardInfo = styled.section`
+export const FaleCom = styled.section`
   border: 3px solid #006343;
   border-radius: 30px;
   width: auto; 

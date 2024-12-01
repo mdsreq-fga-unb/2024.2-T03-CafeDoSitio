@@ -9,7 +9,7 @@ import {
   EmailLink,
   InfoSection,
   EmailZone,
-  CardInfo,
+  FaleCom,
   SocialIcons,
   Links,
   ContactInfo,
@@ -66,7 +66,7 @@ const ContactPage = () => {
         </ContactCards>
       </ContactSection>
 
-      <CardInfo>
+      <FaleCom>
         <div className='marcador'>
           <FaComments size={60} color="white" />
           <h2>FALE COM < br/> A FAMÍLIA</h2>
@@ -101,7 +101,7 @@ const ContactPage = () => {
           <a href="#faq">Perguntas Frequentes</a>
           <a href="#privacy">Política de Privacidade</a>
         </Links>
-      </CardInfo>
+      </FaleCom>
       <Footer />
     </>
   );
