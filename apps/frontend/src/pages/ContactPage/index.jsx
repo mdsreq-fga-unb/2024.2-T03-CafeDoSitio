@@ -16,6 +16,7 @@ import {
   Horario_redes,
 } from './styled';
 import { FaEnvelope, FaPhoneAlt, FaInstagram, FaFacebook, FaYoutube, FaLinkedin, FaComments } from "react-icons/fa"; // Ícones do Font Awesome
+import { FaXTwitter } from "react-icons/fa6";
 
 const ContactPage = () => {
   const contacts = [
@@ -76,9 +77,9 @@ const ContactPage = () => {
             <FaPhoneAlt size={28} color="#006343"/>
             <label> (61) 2108-0101</label>
           </div>
-          <div className="email">
+          <div className='email_zone'>
             <FaEnvelope size={28} color="#006343"/>
-            <label>atendimento@familiadositio.com.br</label>
+            <a href="mailto:atendimento@familiadositio.com.br" class="email">atendimento@familiadositio.com.br</a>
           </div>
         </ContactInfo>
         <Horario_redes>
@@ -89,11 +90,21 @@ const ContactPage = () => {
               Sexta das 08h às 17h
             </p>
             <SocialIcons>
-              <FaInstagram />
-              <FaFacebook />
-              <FaYoutube />
-              <FaLinkedin />
-
+              <a href="https://www.instagram.com/cafedositio/" target="_blank" rel="noopener noreferrer">
+                <FaInstagram />
+              </a>
+              <a href="https://www.facebook.com/cafedositio" target="_blank" rel="noopener noreferrer">
+                <FaFacebook />
+              </a>
+              <a href="https://www.youtube.com/channel/UCVlH17pdWNMS6l5XzBqsOoA" target="_blank" rel="noopener noreferrer">
+                <FaYoutube />
+              </a>
+              <a href="https://www.linkedin.com/company/cafedositio/" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin />
+              </a>
+              <a href="https://x.com/cafe_do_sitio" target="_blank" rel="noopener noreferrer">
+                <FaXTwitter />
+              </a>
             </SocialIcons>
           </div>
         </Horario_redes>

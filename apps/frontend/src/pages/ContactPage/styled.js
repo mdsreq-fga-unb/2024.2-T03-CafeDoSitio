@@ -159,12 +159,20 @@ export const ContactInfo = styled.div`
     align-items: center;
     }
 
-  .email {
-    font-size: 1rem;
-    color: #006343;
+  .email_zone {
     display: flex;
     gap: 15px;
     align-items: center;
+  }
+
+  .email {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #006343;
+
+    &:hover{
+      text-decoration: underline;
+    }
   }
 `;
 
