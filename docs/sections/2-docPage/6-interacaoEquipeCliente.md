@@ -1,6 +1,6 @@
-# 5. Interação entre Equipe e Cliente
+# 6. Interação entre Equipe e Cliente
 
-## 5.1 - Composição da Equipe
+## 6.1 - Composição da Equipe
 
 | Papel     | Descrição      | Responsável       | Participantes       |
 |:--------------:|:--------------:|:--------------:|:--------------:|
@@ -10,7 +10,7 @@
 | Desenvolvedor Backend  | Desenvolve a lógica do servidor, gerencia banco de dados e integrações.   | Daniel Rodrigues    | Arthur, Marcella    |
 | Analista de Requisitos |  Identifica, documenta e gerencia as necessidades e expectativas do cliente. | Ana Carolina | Arthur, Daniel, João, Manuella, Marcella |
 
-## 5.2 Comunicação
+## 6.2 Comunicação
 
 ### > Ferramentas de Comunicação:
 
@@ -32,7 +32,7 @@
 - **Reunião de Validação (a cada 2 Semanas):** As reuniões com a presença dos Stakeholders validando as funcionalidades por meio do Deploy ocorrerão a cada 15 dias, ou seja, 2 semanas com o time de desenvolvimento. Esse modelo foi adotado para se adaptar à agendas dos stakeholders, uma vez que não conseguem se encontrar com o time em um intervalo menor semanal por conta das demandas da empresa.
 - **Interações Adicionais por WhatsApp e Trello:**  Outras validações ocorrerão assincronamente via WhatsApp, para o aviso inicial de uma nova demanda, e via plataforma Trello, para documentar e estabelecer o prazo da demanda, com os stakeholders. Essa interação surgiu para compensar as sprints que não contarão com a presença dos Stakeholders para as validações.
 
-## 5.3 Processo de Validação
+## 6.3 Processo de Validação
 
 1. As funcionalidades da Sprint passarão pela checagem de Definition of Ready (DoR), que irá verificar a escrita correta da história de usuário, se há documentação e se foi declarado junto ao cliente os critérios de aceitação.
 
