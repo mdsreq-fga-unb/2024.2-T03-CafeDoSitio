@@ -11,7 +11,9 @@ import {
   Navigation,
   GrayBar,
   ContentWrapper,
-  TimelineLine
+  TimelineLine,
+  ImageWrapper,
+  TextWrapper
 } from "./styled";
 import celeirinho from "../../../assets/celeirinho.png"
 
@@ -45,7 +47,7 @@ export function TimelineCard() {
 
   return (
     <TimelineCardContainer>
-      <ContentWrapper>  
+      <ContentWrapper>
         <StyledDiv>
           <Title>Linha do Tempo</Title>
           <Text>Lorem Ipsum is simply dummy text of the printing and typesetting industry</Text>
@@ -61,12 +63,20 @@ export function TimelineCard() {
 
         <YearDisplay>
           <span className="year">{years[currentYearIndex]}</span>
+          
 
-          <TextBox><p>{texts[currentYearIndex]}</p></TextBox>
+          <TextWrapper>
+            <TextBox><p>{texts[currentYearIndex]}</p></TextBox>
+                        
+            <ImageWrapper >
+              <img
+                src={celeirinho}
+                alt="testizinho"
+                style={{ marginTop: "1rem", width: "80%", height: "80%", objectFit: "cover" }}
+              />
+            </ImageWrapper>
+          </TextWrapper>
 
-          {/* <div style={{maxWidth: "75px", maxHeight: "50px"}}>
-            <img src={celeirinho} alt="testizinho" style={{ width: "100%", height: "100%", objectFit: "cover",}}/>
-          </div>  */}
         </YearDisplay>
 
         <Button onClick={handleNext} disabled={currentYearIndex === years.length - 1}>

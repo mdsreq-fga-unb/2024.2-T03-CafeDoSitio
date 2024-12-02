@@ -123,7 +123,7 @@ export default function NossaHistoria() {
                             </div>
 
                             {/* Linha vermelha visível */}
-                            <RedLine style={{ height: "50px", margin: "0 1rem" }} />
+                            <RedLine style={{ height: "80px", margin: "0 1rem" }} />
 
                             {/* Texto do diferencial */}
                             <div style={{ flex: 1, textAlign: "center" }}>

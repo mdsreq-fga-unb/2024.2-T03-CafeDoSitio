@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Title = styled.h1`
   text-align: left;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   justify-content: space-between;
   color: #2B674B;
   margin: 2;
@@ -11,6 +11,7 @@ export const Title = styled.h1`
 export const Text = styled.div`
   align-items: left;
   text-align: left;
+  font-size: 1.3rem;
 
 
 `;
@@ -37,6 +38,7 @@ export const Container = styled.div`
   padding: 20px;
   max-width: 600px;
   margin: auto;
+  
   .img {
     align-items: left;
     height: 38rem; /* Diminuído para metade */
@@ -75,17 +77,6 @@ export const DiferencialCard = styled.div`
   align-items: center;
   gap: 20px;
 
-  // Isso é uma tentativa de colocar a linha vermelha entre a imagem e o texto
-  // Atualmente isso aqui sempre coloca antes da imagem, mesmo que altere 'order'
-  // pra 1
-  //
-  // &::before {
-  //   content: '';
-  //   width: 5px;
-  //   height: 100%;
-  //   background-color: red;
-  //   order: 0; 
-  // }
 `;
 
 export const BackgroundLine = styled.div`
@@ -101,8 +92,9 @@ export const BackgroundLine = styled.div`
 export const RedLine = styled.div`
   display : flex;
   width: 5px;
+  border-radius: 3px;
   height: 100%;
-  background-color: red;  
+  background-color: #A53A44;  
 
 `;
 

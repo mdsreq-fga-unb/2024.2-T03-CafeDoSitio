@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const TimelineCardContainer = styled.div`
   background-color: #fff;
   border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 680px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Ajuste aqui */
+  width: 850px;
   margin: auto;
   overflow: hidden;
 `;
@@ -21,6 +21,7 @@ export const Title = styled.h2`
   font-size: 2rem;
   justify-content: space-between;
   color: #333;
+  margin: 0.5rem;  
 `;
 
 export const Text = styled.p`
@@ -36,6 +37,7 @@ export const StyledDiv = styled.div`
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 20px;
+  margin: 0;
 
 `;
 
@@ -49,7 +51,7 @@ export const Content = styled.div`
 export const TimelineLine = styled.hr`
   position: absolute;
   margin-top: 14px;
-  width: 479px;
+  width: 40%;
   height: 3px;
   background-color: #333333;
   border: none; 
@@ -58,38 +60,50 @@ export const TimelineLine = styled.hr`
 
 
 export const YearDisplay = styled.div`
-  display: flex;  
+  display: flex;
   flex: 1;
+  margin-top: 0;
+  align-items: center; 
+  justify-content: space-between;
   background-color: #2B674B;
   text-align: center;
-  border-radius: 6px;
+  border-radius: 15px;
+  padding: 5px;
+  gap: 10px; 
   width: 100%;
-  height: 100%;
-  padding: 4.5px;
-  align-items: center; 
-  transition: all .3s ease-out;
-
+  transition: all 0.3s ease-out;
 
   .year {
-    writing-mode: vertical-lr; 
+    writing-mode: vertical-lr;
     transform: rotate(180deg);
-    font-size: 3rem;
-    font-weight: bold;
+    font-size: 3.8rem;
     font-family: 'Impact', sans-serif;
     color: #fff;
   }
 `;
 
+export const ImageWrapper = styled.div`
+  flex: 1;
+  background-color: #fff;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius:  0 15px 15px 0 ;
+  overflow: hidden; 
+`;
+
+export const TextWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 0.4fr; 
+
+`;
 
 export const TextBox = styled.div`
-  flex: 2;
+  flex: 1;
   font-size: 1.2rem;
+  width: 96%;
   text-align: justify;
   background-color: #fff;
-  height: 100%;
-  width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 0 8px 8px 0;
+  border: none;
   padding: 10px;
   margin: 0 1px;
 `;
@@ -138,8 +152,8 @@ export const Navigation = styled.div`
   .timeline {
     display: grid;
     grid-template-columns: repeat(10, 1fr); 
-    margin-left: 100px;
-    gap: 20px;
+    margin-left: 33px;
+    gap: 54px;
     justify-content: space-around;
     width: 100%;
 
@@ -161,6 +175,8 @@ export const Navigation = styled.div`
       }
 
       &.active {
+        width: 30px;
+        height: 30px;
         background-color: #A53A44;
         color: #A53A44;
 
