@@ -10,7 +10,6 @@ import {
   Button,
   Navigation,
   GrayBar,
-  ContentWrapper,
   TimelineLine,
   ImageWrapper,
   TextWrapper
@@ -47,13 +46,12 @@ export function TimelineCard() {
 
   return (
     <TimelineCardContainer>
-      <ContentWrapper>
-        <StyledDiv>
-          <Title>Linha do Tempo</Title>
-          <Text>Lorem Ipsum is simply dummy text of the printing and typesetting industry</Text>
-        </StyledDiv>
-      </ContentWrapper>
-
+     
+      <StyledDiv>
+        <Title>Linha do Tempo</Title>
+        <Text>Lorem Ipsum is simply dummy text of the printing and typesetting industry</Text>
+      </StyledDiv>
+     
       <Content>
         <div >
           <Button onClick={handlePrevious} disabled={currentYearIndex === 0}>

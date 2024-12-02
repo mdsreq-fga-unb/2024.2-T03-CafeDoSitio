@@ -9,12 +9,6 @@ export const TimelineCardContainer = styled.div`
   overflow: hidden;
 `;
 
-export const ContentWrapper = styled.div`
-  padding: 20px;
-  margin-bottom: 1px;
-`;
-
-
 export const Title = styled.h2`
   text-align: left;
   font-weight: bold;
@@ -36,8 +30,10 @@ export const Text = styled.p`
 export const StyledDiv = styled.div`
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 20px;
-  margin: 0;
+  gap: 10px;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 
 `;
 
@@ -51,7 +47,7 @@ export const Content = styled.div`
 export const TimelineLine = styled.hr`
   position: absolute;
   margin-top: 14px;
-  width: 40%;
+  width: 786px;
   height: 3px;
   background-color: #333333;
   border: none; 
