@@ -4,14 +4,12 @@ export const InfoSection = styled.section`
   h1 {
     font-size: 2.5rem;
     margin-bottom: 0;
-    margin-left: 2rem;
     color: #555;
   }
 
   p {
     font-weight: 300;
     font-size: 1rem;
-    margin-left: 2rem;
     color: #555;
   }
 `;
@@ -24,7 +22,7 @@ export const ContactSection = styled.section`
 export const ContactCards = styled.div`
   display: flex;
   justify-content: center;
-  padding-inline: 5%;
+  padding-inline: 4%;
   column-gap: 3rem;
   row-gap: 2.8rem;
   flex-wrap: wrap;
@@ -129,7 +127,6 @@ export const SocialIcons = styled.div`
     &:hover {
       color: #005a25;
     }
-  }
 `;
 
 export const Links = styled.div`
@@ -147,8 +144,6 @@ export const Links = styled.div`
     &:hover {
       text-decoration: underline;
     }
-  }
-
 `;
 
 export const ContactInfo = styled.div`

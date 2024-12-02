@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 
 export const NavBar = styled.header`
-  padding-inline: 90px;
+  margin-inline: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   a {
     font-family: 'Myriad Pro', sans-serif;
@@ -16,7 +19,6 @@ export const NavBar = styled.header`
 export const NavArea = styled.nav`
   max-width: 1280px;
   height: 200px;
-  margin-inline: auto;
 
   display: flex;
   justify-content: center;
@@ -181,5 +183,9 @@ export const BarraPesquisa = styled.div`
     input {
       width: 80px;
     }
+  }
+
+  @media (max-width: 570px) {
+    display: none;
   }
 `;

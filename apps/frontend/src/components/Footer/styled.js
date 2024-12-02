@@ -4,108 +4,146 @@ export const DivFooter = styled.div`
   display: flex;
   flex-direction: column;
   padding-top: 60px;
-  width: 100vw;
+  width: 100%;
   background: #006343;
   margin-top: 50px;
 
-  .copyrights-section{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-inline: 4vw;
-    align-items: center;
-
-    p {
-      color: white;
-      font-size: 0.8rem;
-    }
-
-    img {
-      width: 12.0rem;
-      height: max-content;
-    }
-
-    @media (max-width: 850px) {
-      p {
-        font-size: 0.5rem;
-      }
-
-      img {
-        width: 8rem;
-      }
-    }
+  .logo-img{
+    margin-top: -20px;
+    width: 180px;
+    height: auto;
   }
 `;
 
-export const DivInfoSection = styled.div`
-  margin-inline: 4vw;
+export const Conteudo = styled.div`
+  padding-inline: 4.5rem;
+
+  @media (max-width: 850px) {
+    padding-inline: 2vw;
+  }
+`;
+
+export const ParteSuperior = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 100px;
-  justify-content: center;
-  border-bottom: 2px solid white;
-  padding-inline: 100px;
-  align-items: start;
-  padding-bottom: 32px;
+  row-gap: 2.0rem;
+  column-gap: 6rem;
+  flex-wrap: wrap;
+  padding-bottom: 2.5rem;
 
-  .list {
-    margin-top: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+  justify-content: center;
+  border-bottom: 1px solid white;
+`;
+
+export const Divisao1 = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 6rem;
+
+  ul {
+    margin: 0px;
+    padding: 0px;
+
+    .title {
+      color: white;
+      font-weight: bold;
+      font-size: 1.0rem;
+      margin-bottom: 15px;
+    }
+  }
+
+  li {
     list-style: none;
+    margin: 0px;
 
     a {
-      font-size: 12px;
       text-decoration: none;
       color: white;
+      font-size: 0.8rem;
 
       &:hover{
         text-decoration: underline;
       }
     }
   }
+`;
 
-  .title {
-    font-weight: bold;
+export const Divisao2 = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: white;
+
+  .title{
     color: white;
-    margin-bottom: 12px;
-    font-size: 14px;
+    font-weight: bold;
+    font-size: 1.0rem;
+    margin-bottom: 15px;
+    margin: 0px;
   }
 
-  .info3 {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  p {
+    margin: 0px;
+    font-size: 0.8rem;
+  }
 
-    .info {
-      color: white;
-      font-size: 14px;
-      margin-bottom: 10px;
-    }
-
-    .extra {
-      color: white;
-      font-size: 14px;
+  a {
+    &:hover{
+      text-decoration: underline;
+      cursor: pointer;
     }
   }
 `;
 
-export const LogoImg = styled.img`
-  width: 200px;
-  height: 200px;
-  margin-top: -30px;
-`;
-
-export const CallArea = styled.div`
+export const DivisaoTelefone = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 16px;
+  align-items: center;
+  gap: 1.0rem;
 
-  .number{
-    font-size: 24px;
-    color: white;
+  label {
     font-weight: bold;
+    font-size: 2.0rem;
+  }
+`;
+
+export const CopyRigthSection = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  p{
+    color: white;
+    font-size: 1.0rem;
+  }
+
+  img {
+    width: 12.0rem;
+    height: auto;
+  }
+
+  @media (max-width: 1420px) {
+    p {
+      font-size: 0.7rem;
+    }
+
+    img {
+      width: 11.0rem;
+      height: auto;
+    }
+  }
+
+  @media (max-width: 850px) {
+    padding-inline: 2vw;
+
+    p {
+      font-size: 0.5rem;
+    }
+
+    img {
+      width: 9.0rem;
+      height: auto;
+    }
   }
 `;
