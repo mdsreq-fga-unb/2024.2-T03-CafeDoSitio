@@ -29,7 +29,7 @@ A reunião de Planning tinha como objetivo estabelecer os responsáveis pelas no
 Código  | Titulo                                                 | Link da Issue | Responsável(is)
 ------- | ------------------------------------------------------ | ------------- | --------------- 
 AT01S04 | [DOC]: Realizar tópico 4.1 da Documentação no GitPages | [Issue #77](https://github.com/mdsreq-fga-unb/2024.2-T03-CafeDoSitio/issues/77) | Manuella, Arthur e Ana Carolina
-AT02S03 | [DOC]: Realizar tópico 4.2 da Documentação no GitPages | [Issue #78](https://github.com/mdsreq-fga-unb/2024.2-T03-CafeDoSitio/issues/78) | Marcella, João Pedro e Daniel Rodrigues
+AT02S04 | [DOC]: Realizar tópico 4.2 da Documentação no GitPages | [Issue #78](https://github.com/mdsreq-fga-unb/2024.2-T03-CafeDoSitio/issues/78) | Marcella, João Pedro e Daniel Rodrigues
 
 ## Atividades de Débito:
 
@@ -46,4 +46,4 @@ _Reunião não Gravada_
 ## Histórico de Versão: 
 | Data | Versão | Descrição | Autor | Revisores |
 |---- | ------ | --------- | ----- | --------- |
-| 01/12/24 | 1.0 | Criação do documento | Daniel Rodrigues |
+| 01/12/24 | 1.0 | Criação do documento | Daniel Rodrigues | Marcella Sousa |

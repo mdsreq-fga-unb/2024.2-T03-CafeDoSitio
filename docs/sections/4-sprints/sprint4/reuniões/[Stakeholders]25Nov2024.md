@@ -40,4 +40,4 @@ Acerca do cronograma, foi elucidado as consquências do atraso da entrega de uma
 ## Histórico de Versão: 
 | Data | Versão | Descrição | Autor | Revisores |
 |---- | ------ | --------- | ----- | --------- |
-| 01/12/24 | 1.0 | Criação do documento | Daniel Rodrigues | 
+| 01/12/24 | 1.0 | Criação do documento | Daniel Rodrigues | Marcella Sousa |

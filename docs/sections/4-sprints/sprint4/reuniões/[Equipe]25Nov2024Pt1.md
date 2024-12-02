@@ -25,7 +25,7 @@ A reunião de Review tinha como objetivo monitorar o andamento das atividades de
 
 ## Atividades Finalizadas:
 
-_Nenhuma atividade finalizada!_
+_Nenhuma atividade finalizada._
 
 ## Atividades Debitadas:
 
@@ -42,4 +42,4 @@ _Reunião não Gravada_
 ## Histórico de Versão: 
 | Data | Versão | Descrição | Autor | Revisores |
 |---- | ------ | --------- | ----- | --------- |
-| 01/12/24 | 1.0 | Criação do documento | Daniel Rodrigues | 
+| 01/12/24 | 1.0 | Criação do documento | Daniel Rodrigues | Marcella Sousa |
