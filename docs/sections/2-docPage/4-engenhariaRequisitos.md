@@ -25,5 +25,5 @@ Fases do Processo           | Atividades ER             | Prática              
 ## Histórico de Versão
 Data     | Versão | Descrição | Autor | Revisores 
 -------- | ------ | --------- | ----- | ---------
-02/12/24 | 1.0 | Criação do Documento e Adição do Tópico 4 | Daniel Rodrigues | Marcella Anderle
-03/12/24 | 1.1 | Finalização do Documento | João Pedro | Marcella Anderle
+02/12/24 | 1.0 | Criação do Documento e Adição do Tópico 4 | Daniel Rodrigues | Manuella Magalhães
+03/12/24 | 1.1 | Finalização do Documento | João Pedro | Manuella Magalhães
