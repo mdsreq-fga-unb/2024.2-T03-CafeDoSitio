@@ -37,9 +37,13 @@ body {
 }
 
 .container {
-  padding-inline: 4.5rem;
+  margin: 2vh 20vh;
+
+  @media (max-width: 1640px) {
+    margin: 2vh 8vh;
+  }
 
   @media (max-width: 850px) {
-    padding-inline: 4vw;
+    margin: 2vh 2vh;
   }
 }

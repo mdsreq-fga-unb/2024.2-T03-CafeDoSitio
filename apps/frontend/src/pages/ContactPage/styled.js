@@ -89,7 +89,7 @@ export const FaleCom = styled.section`
   flex-direction: row; 
   align-items: center; 
   justify-content: space-between;
-  margin: 2vh 20vh ;
+  margin: 2vh 20vh;
 
   h2 {
     margin: 0.5rem 2rem;
@@ -108,8 +108,12 @@ export const FaleCom = styled.section`
     width: 15%;
   }
 
-  @media (max-width: 1420px) {
-    display: none;
+  @media (max-width: 1640px) {
+    margin: 2vh 8vh;
+  }
+
+  @media (max-width: 1250px) {
+   display: none;
   }
 `;
 
@@ -139,17 +143,20 @@ export const Links = styled.div`
     text-decoration: none;
     font-size: 1rem;
     color: #006343;
-    font-weight: bold;}
-
+    font-weight: bold;
+  
     &:hover {
       text-decoration: underline;
     }
+
+  }
 `;
 
 export const ContactInfo = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
+
   .phone{
     font-size: 2.4rem;
     color: #006343;

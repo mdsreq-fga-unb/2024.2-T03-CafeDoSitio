@@ -20,7 +20,7 @@ function Header({pagina}) {
             <li><a href="https://www.facebook.com/cafedositio" target="_blank"><FaFacebook color="black" size={20}/></a></li>
             <li><a href="https://www.youtube.com/@cafedositio7991" target="_blank"><FaYoutube color="black" size={20}/></a></li>
             <li><a href="https://x.com/cafe_do_sitio" target="_blank"><FaXTwitter color="black" size={20}/></a></li>
-            <li><a href="https://www.facebook.com/cafedositio" target="_blank"><FaLinkedin color="black" size={20}/></a></li>
+            <li><a href="https://www.linkedin.com/company/cafedositio/" target="_blank"><FaLinkedin color="black" size={20}/></a></li>
           </ul>
 
           <BarraPesquisa>
