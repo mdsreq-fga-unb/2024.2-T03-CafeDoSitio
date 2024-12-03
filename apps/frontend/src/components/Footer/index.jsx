@@ -26,7 +26,7 @@ function Footer() {
                 <li><a href="https://www.facebook.com/cafedositio" target="_blank">• FACEBOOK</a></li>
                 <li><a href="https://www.youtube.com/@cafedositio7991" target="_blank">• YOUTUBE</a></li>
                 <li><a href="https://x.com/cafe_do_sitio" target="_blank">• X/TWITTER</a></li>
-                <li><a href="https://www.facebook.com/cafedositio" target="_blank">• LINKEDIN</a></li>
+                <li><a href="https://www.linkedin.com/company/cafedositio/" target="_blank">• LINKEDIN</a></li>
               </ul>
             </div>
           </Divisao1>
