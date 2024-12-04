@@ -1,7 +1,7 @@
-import { TimelineCard } from "../../components/owerHistorySection/TimelineCard";
-import Header from "../../components/owerHistorySection/Header";
-import Footer from "../../components/owerHistorySection/Footer";
-import Paginacao from "../../components/owerHistorySection/Paginacao";
+import { TimelineCard } from "../../components/TimelineCard";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+import Paginacao from "../../components/Paginacao";
 import imagem from "../../assets/colagem_de_fotos.png"
 import {
     Title,
@@ -44,16 +44,16 @@ export default function NossaHistoria() {
             <Header pagina={NossaHistoria} />
             <Paginacao text={"FAMÍLIA DO SÍTIO > NOSSA HISTÓRIA"} />
 
-            <FirstTextSection>
-                <DivContainer>
-                    <Title>Desde 1967, tanto tempo e ainda na moda</Title>
-                    <Text>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-                        dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-                        suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-                    </Text>
-                </DivContainer>
-            </FirstTextSection>
+           
+            <DivContainer>
+                <Title>Desde 1967, tanto tempo e ainda na moda</Title>
+                <Text>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+                    dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+                    suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                </Text>
+            </DivContainer>
+       
 
             <SecondTextSection>
                 <Container>
@@ -81,15 +81,13 @@ export default function NossaHistoria() {
                         molestie consequat.
                     </Text>
                 </div>
-
-
             </SecondTextSection>
 
-            <TimelineSection>
-                <BackgroundLine>
-                    <TimelineCard />
-                </BackgroundLine>
-            </TimelineSection>
+            
+            <BackgroundLine>
+                <TimelineCard />
+            </BackgroundLine>
+            
 
 
             <div style={{ margin: "3rem 6rem", textAlign: "center" }}>

@@ -25,34 +25,34 @@ export const FirstTextSection = styled.div`
 `;
 
 export const DivContainer = styled.div`
-  background-color: #fff;
-  border-radius: 20px;
   padding: 20px;
   max-width: 80%;
   margin: 4rem;
 `;
 
 export const Container = styled.div`
-  background-color: #fff;
-  border-radius: 20px;
-  padding: 20px;
+  //padding: 20px;
   max-width: 600px;
-  margin: auto;
+  margin: 5.5rem;
   
   .img {
     align-items: left;
-    height: 38rem; /* Diminuído para metade */
+    height: 50rem; /* Diminuído para metade */
     width: auto; /* Mantém a proporção */
   }
 `;
 
 export const SecondTextSection = styled.div`
     display: flex;
+    flex-direction: row;
     align-items: center;
-    margin: 90px;
-    padding: 5;
-    grid-template-columns: repeat(2, 0.5fr); 
-    gap: 4px; 
+    margin: 3rem;
+    justify-content: center; 
+
+
+    @media(max-width: 1327px){
+      flex-direction: column;
+    }
 `;
 
 export const ThirdTextSection = styled.div`
@@ -60,23 +60,28 @@ export const ThirdTextSection = styled.div`
 `;
 
 export const DiferencialSection = styled.div`
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    background-color: #red;
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    //box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 100%;
     margin: auto;
+    justify-content: center;
+
+    @media(max-width: 1485px){
+    flex-direction: column;
+    align-items: center;
+    }
 `;
 
 
 export const DiferencialCard = styled.div`
   display: flex;
-  flex-direction: row;
+  margin: 2rem;
   align-items: center;
-  gap: 20px;
-
+  max-width: 400px;
 `;
 
 export const BackgroundLine = styled.div`

@@ -1,16 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import NossaHistoria from './pages/nossaHistoria'
 
-function App() {
-
+const App = () => {
+  useEffect(() => {
+  }, []);
 
   return (
-    <NossaHistoria />
-  )
-}
+    <Router>
+      <Routes>
+          <Route path='/nossaHistoria' element={<NossaHistoria />} />
+      </Routes>
+    </Router>
+  );
+};
 
 export default App
