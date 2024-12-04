@@ -2,7 +2,7 @@
 
 ## 4.1 Atividades e Técnicas de ER
 
-### 4.1.1 ELicitação e Descoberta 
+### 4.1.1 Elicitação e Descoberta 
 
 **Workshop de Requisitos:**  Essa técnica aborda o escopo, os riscos e as características do produto final, além de acelerar o processo de elicitação e descoberta de requisitos. No projeto, foi implementada por meio de encontros entre a equipe e o cliente, com o objetivo de definir elementos como casos de uso, brainstorming, entre outros aspectos importantes. O workshop é realizado no início de cada nova sprint para garantir o alinhamento e a atualização dos requisitos.
 
@@ -45,3 +45,37 @@
 
 **Prototipagem de Alta Fidelidade:** Os protótipos das telas que o projeto irá ter serão feitos na plataforma do Figma. Esses protótipos serão então validados com os stakeholders para que a funcionalidade possa ser desenvolvida corretamente e assim evitar retrabalho.
 
+
+### 4.1.5 Verificação e Validação de Requisitos
+
+
+**Critérios de aceitação:**  
+Conjunto de condições que devem ser atendidas para que a funcionalidade seja considerada aceitável pelo cliente. Eles definem como será validado que a entrega atende às expectativas, ou seja, que foi feita da forma correta.  
+
+**Feedback do cliente:**  
+O cliente tem total abertura para avaliar e comentar sobre o que foi entregue. Esse feedback é essencial para ajustar ou corrigir funcionalidades antes de considerar a validação completa.  
+
+
+**DoR e DoD:**  
+Esses critérios servem como guias para a verificação:  
+- **DoR (Definition of Ready):** Garante que a funcionalidade esteja pronta para desenvolvimento.  
+- **DoD (Definition of Done):** Confirma que a funcionalidade foi finalizada, testada e está pronta para entrega.  
+
+**Reuniões de Verificação Interna:**  
+Antes da validação com o cliente, a equipe realiza reuniões internas para revisar os requisitos e as funcionalidades entregues, certificando-se de que todos os critérios de aceitação e o DoD foram cumpridos.  
+
+### 4.1.6 Organização e Atualização de Requisitos
+
+**Product Backlog Building (PBB):** Essa técnica organiza os requisitos em um formato hierárquico, desde os objetivos de negócio até as histórias de usuário, ajudando a manter o backlog atualizado, alinhado às necessidades dos stakeholders e adaptável ao longo do desenvolvimento.  As etapas incluem:  
+1. **Definir os objetivos de negócio**: Identificar as metas que o produto deve alcançar.  
+2. **Identificar funcionalidades**: Mapear as principais funcionalidades para atender aos objetivos.  
+3. **Criar histórias de usuário**: Detalhar as funcionalidades em partes menores, descritivas e acionáveis.  
+4. **Priorizar o backlog**: Organizar os itens para maximizar valor e minimizar riscos.  
+
+---
+## Historico de Versão
+Data     | Versão | Descrição | Autor | Revisores 
+-------- | ------ | --------- | ----- | ---------
+02/12/24 | 1.0 | Criação do Documento e adição de Elicitação e descoberta e Análise e Consenso| Ana Carolina | Arthur Miranda
+03/12/24 | 1.1 | Adição de Representação e Declaração  | Arthur Miranda | Manuella Valadares
+04/12/24 | 1.2 | Adição de Veriificação e Validação e Organização         | Manuella Valadares | Ana Carolina
