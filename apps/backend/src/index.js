@@ -1,4 +1,5 @@
 import express from 'express';
+import connectDatabase from './database/db.js';
 import cors from 'cors';
 import dotenv from 'dotenv';
 dotenv.config();
@@ -23,4 +24,5 @@ const corsOptionsDelegate = function(req, callback) {
 app.use(cors(corsOptionsDelegate));
 app.use(express.json());
 
+connectDatabase();
 app.listen(port, () => console.log(`Servidor rodando na porta ${port}`));
