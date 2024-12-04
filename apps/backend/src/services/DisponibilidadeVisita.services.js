@@ -6,14 +6,15 @@ const createService = () => Schema.create();
 const criarAgendamento = async (data, hora) => {
     const horaMinuto = hora.split(':');
 
-    data.setHours(horaMinuto[0], horaMinuto[1]);
-    const novaDisponibilidade = new DisponibilidadeVisita({ data });
-
-    const visitas = await DisponibilidadeVisita.find({dataHora: data});
+    const dataHora = new Date(data);
+    dataHora.setHours(horaMinuto[0], horaMinuto[1]);
+    
+    const visitas = await DisponibilidadeVisita.find({dataHora: dataHora});
     if(visitas.length != 0){
         throw new Error('A data e horário marcados já estão ocupados.');
     }
 
+    const novaDisponibilidade = new DisponibilidadeVisita({ dataHora: dataHora });
     await novaDisponibilidade.save();
 };
 //validar campos vaziosd
