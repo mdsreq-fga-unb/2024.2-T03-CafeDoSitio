@@ -1,7 +1,10 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import connectionDatabase from './database/db.js';
 dotenv.config();
+
+import router from './routes/index.js';
 
 const port = process.env.PORT || 3001;
 const app = express();
@@ -22,5 +25,7 @@ const corsOptionsDelegate = function(req, callback) {
 
 app.use(cors(corsOptionsDelegate));
 app.use(express.json());
+app.use(router);
+connectionDatabase();
 
 app.listen(port, () => console.log(`Servidor rodando na porta ${port}`));
