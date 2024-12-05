@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import NossaHistoria from './pages/nossaHistoria'
+import { HashRouter as Router, Route, Routes} from 'react-router-dom';
 import ContactPage from './pages/ContactPage'; 
+import NossaHistoria from './pages/nossaHistoria'
 
 
 const App = () => {
