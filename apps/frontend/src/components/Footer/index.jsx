@@ -8,7 +8,7 @@ function Footer() {
       <Conteudo>
 
         <ParteSuperior>
-          <img src="./favicon.png" className="logo-img"/>
+          <img src="./assets/FamiliaDoSitioBorda.png" className="logo-img"/>
           <Divisao1>
             <div className="info1">
               <ul className="institucional list">
