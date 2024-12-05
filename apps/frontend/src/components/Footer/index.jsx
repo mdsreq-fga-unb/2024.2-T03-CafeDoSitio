@@ -50,7 +50,7 @@ function Footer() {
 
         <CopyRigthSection>
           <p>Café do Sítio Indústria e Comércio Ltda - Todos os direitos reservados <br/> QS 09 RUA 100 LOTE 04 - Taguatinga - Distrito Federal - CNPJ: 00.452.102/0001-48</p>
-          <img src="../src/assets/UnBLogo.png"/>
+          <img src="./assets/UnBLogo.png"/>
         </CopyRigthSection>
 
       </Conteudo>
