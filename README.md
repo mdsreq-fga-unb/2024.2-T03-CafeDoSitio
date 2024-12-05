@@ -21,12 +21,63 @@ Este é o repositório do projeto da disciplina de REQ-T3 para o semestre 2024.2
 
 <br>
 
+---
+## 🛠️ Como Configurar o Ambiente Local:
+
+Siga os passos abaixo para preparar seu ambiente e executar o projeto corretamente:
+
+### Pré-requisitos
+Certifique-se de que você possui as seguintes ferramentas instaladas:
+
+- Node.js (versão 18 ou superior) e npm
+- Git
+
+### Passo a passo para inicialização
+
+1. Clone o repositório
+```shell
+git clone https://github.com/mdsreq-fga-unb/2024.2-T03-CafeDoSitio.git
+cd 2024.2-T03-CafeDoSitio
+```
+
+2. Instale as dependências
+O projeto utiliza Turborepo para gerenciar monorepos. Com isso, todas as dependências dos pacotes (frontend e backend) serão instaladas automaticamente:
+```shell
+npm install
+```
+
+3. Execute o projeto
+Para rodar o ambiente de desenvolvimento, utilize o comando abaixo:
+```shell
+npm run dev
+```
+Este comando inicializa simultaneamente o frontend e o backend.
+
+4. Verifique os serviços
+- **Frontend:** Acesse em [http://localhost:3000](http://localhost:3000)
+- **Backend:** Acesse em [http://localhost:3001](http://localhost:3001).
+
+### Estrutura do Projeto
+
+- `apps/frontend`: Código do frontend utilizando Vite e React.
+- `apps/backend`: Código do backend utilizando Express e Node.js.
+- `package.json`: Dependências e scripts do monorepo gerenciado pelo Turborepo.
+
+### Scripts Úteis
+
+- **Instalar dependências:** `npm install`
+- **Rodar o ambiente de desenvolvimento:** `npm run dev`
+
+<br>
+
+---
 ## 📝 Acesse a Documentação do Projeto:
 
 Para conferir todos os detalhes sobre o projeto, acesse a documentação completa clicando [aqui](https://mdsreq-fga-unb.github.io/2024.2-T03-CafeDoSitio/).
 
 <br><br>
 
+---
 # 👩‍💻 Contribuidores do Projeto:
 
 <!-- Foto dos participantes do grupo -->
