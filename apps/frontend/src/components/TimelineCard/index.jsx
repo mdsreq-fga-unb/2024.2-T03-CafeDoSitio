@@ -70,7 +70,7 @@ export function TimelineCard() {
               <img
                 src={celeirinho}
                 alt="testizinho"
-                style={{ marginTop: "1rem", width: "80%", height: "80%", objectFit: "cover" }}
+                style={{ marginTop: "1vw", width: "80%", height: "80%", objectFit: "cover" }}
               />
             </ImageWrapper>
           </TextWrapper>
@@ -97,7 +97,7 @@ export function TimelineCard() {
               </div>
 
             ))}
-
+          
           </div>
         </Navigation>
       </GrayBar>

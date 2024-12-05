@@ -5,7 +5,7 @@ export const TimelineCardContainer = styled.div`
   border-radius: 20px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Ajuste aqui */
   width: 850px;
-  margin: auto;
+  margin: 1vw;
   overflow: hidden;
 `;
 

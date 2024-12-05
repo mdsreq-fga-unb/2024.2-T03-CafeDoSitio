@@ -85,7 +85,7 @@ export default function NossaHistoria() {
 
             
             <BackgroundLine>
-                <TimelineCard />
+                <TimelineCard></TimelineCard>
             </BackgroundLine>
             
 
@@ -94,7 +94,7 @@ export default function NossaHistoria() {
                 <Title>Nosso Propósito</Title>
             </div>
 
-            <ThirdTextSection style={{ justifyContent: "center", padding: "0 6rem" }}>
+            <ThirdTextSection>
                 <DiferencialSection>
                     {diferenciais.map((diferencial, index) => (
                         <DiferencialCard key={index}>

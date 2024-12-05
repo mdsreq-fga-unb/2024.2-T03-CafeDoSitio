@@ -25,7 +25,7 @@ export const FirstTextSection = styled.div`
 `;
 
 export const DivContainer = styled.div`
-  padding: 20px;
+  //padding: 20px;
   max-width: 80%;
   margin: 4rem;
 `;
@@ -33,12 +33,12 @@ export const DivContainer = styled.div`
 export const Container = styled.div`
   //padding: 20px;
   max-width: 600px;
-  margin: 5.5rem;
+  margin: 4rem;
   
   .img {
     align-items: left;
-    height: 50rem; /* Diminuído para metade */
-    width: auto; /* Mantém a proporção */
+    height: 60vw; 
+    width: auto; 
   }
 `;
 
@@ -56,7 +56,9 @@ export const SecondTextSection = styled.div`
 `;
 
 export const ThirdTextSection = styled.div`
-  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3vw;
 `;
 
 export const DiferencialSection = styled.div`
@@ -65,14 +67,14 @@ export const DiferencialSection = styled.div`
     background-color: #red;
     border-radius: 20px;
     //box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
     width: 100%;
     margin: auto;
     justify-content: center;
 
-    @media(max-width: 1485px){
-    flex-direction: column;
-    align-items: center;
+    @media(max-width: 1320px){
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
     }
 `;
 
@@ -87,11 +89,15 @@ export const DiferencialCard = styled.div`
 export const BackgroundLine = styled.div`
     z-index: 1;    
     display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #F29947;  
-    padding: 20px;
-    height: 100;
+    //padding: 20px;
     width: 100%;
-    margin: 0 auto;
+
+    @media(max-width: 900px){
+      display: none;
+    }
 `;
 
 export const RedLine = styled.div`
