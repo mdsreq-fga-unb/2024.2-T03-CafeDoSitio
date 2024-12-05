@@ -37,8 +37,11 @@ export const Container = styled.div`
   
   .img {
     align-items: left;
-    height: 60vw; 
     width: auto; 
+
+    @media(max-width: 800px){
+      width: 70vw;
+    }
   }
 `;
 
