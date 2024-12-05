@@ -20,6 +20,30 @@ const createSac = async (req, res) => {
   }
 }
 
+const findAllSac = async (req, res) => {
+  const sacs = await sacService.findAllService();
+
+  if(sacs.length === 0){
+    return res.status(400).send({message: 'Não há nenhum sac no momento'});
+  }
+
+  res.send(sacs);
+}
+
+const findAssuntoSac = async (req, res) => {
+  const assunto = req.params.assunto;
+
+  const sacs = await sacService.findByAssunto(assunto);
+
+  if(sacs.length === 0){
+    return res.status(400).send({message: 'Não há nenhum sac deste tipo no momento'});
+  }
+
+  res.send(sacs);
+}
+
 export default {
   createSac,
+  findAllSac,
+  findAssuntoSac
 };
