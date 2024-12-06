@@ -2,9 +2,12 @@ import express from 'express';
 import connectDatabase from './database/db.js';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import connectionDatabase from './database/db.js';
 dotenv.config();
 
-const port = process.env.PORT || 3001;
+import router from './routes/index.js';
+
+const port = process.env.PORT || 3000;
 const app = express();
 
 const allowedOrigins = [
@@ -23,6 +26,8 @@ const corsOptionsDelegate = function(req, callback) {
 
 app.use(cors(corsOptionsDelegate));
 app.use(express.json());
+app.use(router);
+connectionDatabase();
 
 connectDatabase();
 app.listen(port, () => console.log(`Servidor rodando na porta ${port}`));
