@@ -7,11 +7,12 @@ dotenv.config();
 
 import router from './routes/index.js';
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3002;
 const app = express();
 
 const allowedOrigins = [
-  'http://localhost:3000'
+  'http://localhost:3000',
+  'http://localhost:3001'
 ];
 
 const corsOptionsDelegate = function(req, callback) {

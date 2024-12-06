@@ -1,9 +1,11 @@
 import { Router } from "express";
 import cors from 'cors';
-import sacRouter from "./sac.route.js";
+import disponibilidadeRouter from "./DisponibilidadeVisita.route.js";
+import userRouter from "./user.route.js";
 
 const router = Router();
 
-router.use('/sac', cors(), sacRouter);
+router.use('/api', cors(), disponibilidadeRouter);
+router.use('/user', cors(), userRouter);
 
 export default router;
