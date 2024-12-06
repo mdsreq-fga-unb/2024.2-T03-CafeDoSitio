@@ -3,10 +3,9 @@ import styled from "styled-components";
 export const SacSection = styled.section`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 2rem;
   margin: 2vh 20vh;
-  gap: 2rem;
+  gap: 3rem;
+  background-color: #F39729;
   border: 2px solid #ddd;
   border-radius: 30px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -18,10 +17,9 @@ export const SacSection = styled.section`
 `;
 
 
-export const Location = styled.div`
+export const Location = styled.section`
   flex: 1;
-  text-align: center;
-
+  
   h2 {
     font-size: 1.5rem;
     color: #006343;
@@ -32,8 +30,8 @@ export const Location = styled.div`
     width: 100%;
     height: 300px;
     border: none;
-    border-radius: 8px;
-    margin-bottom: 1rem;
+    border-radius: 30px;
+    margin: 1.5rem;
   }
 
   p {
@@ -109,4 +107,17 @@ export const Button = styled.button`
   &:hover {
     background-color: #004c2e;
   }
+`;
+
+export const Select = styled.select`
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+`;
+
+export const FileInput = styled(Input)`
+  padding: 0.5rem;
+  margin-bottom: 1rem;
 `;
