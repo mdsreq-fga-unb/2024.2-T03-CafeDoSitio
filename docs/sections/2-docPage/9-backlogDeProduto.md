@@ -6,6 +6,7 @@ O backlog de produto é uma lista dinâmica e priorizada que contém todos os re
 
 Essa configuração da logística de escrita das histórias de usuários se justifica pelo fato do processo de engenharia selecionada pela equipe: ScrumXP, conforme descrito na seção de [Estratégias de Engenharia de Software](./3-estrategiasEngSoftware.md). Em resumo, os Requisitos Funcionais são detalhados com mais profundidade durante a fase de Sprint Planning, momento em que as histórias de usuário são escritas no formato _"Eu como (agente), gostaria de (ação), para que (agregação de valor)"_.
 
+### 9.1.1 - Relacionado aos Requisitos Funcionais:
 Código | User Story
 ------ | ----------------------------------------------------
 US01   | Eu como usuário devo ser capaz desenvolver um conteúdo, com permissão à formatação de texto avançados e inserição imagens para que seja publicado como blog no site da Família do Sítio.
@@ -22,50 +23,109 @@ US11   | Eu como usuário gostaria de criar uma disponilibidade de visita técni
 US12   | _À DESENVOLVER_
 US13   | _À DESENVOLVER_
 US14   | _À DESENVOLVER_
-US15   | Eu como usuário gostaria de visualizar os valores, missão e visão, além de sua história em forma de timeline para que eu possa conhecer com mais detalhes acerca da empresa.
-US16   | Eu como usuário gostaria de visualizar toda a linha de produtos por categorias de tipos de produtos com sua descrição, para que eu consiga conhecer os produtos que a empresa distribui.
+US15   | Eu como usuário, devo ser capaz de fazer uma reclamação, um elogio, uma dúvida, sugestão ou parcerias para que os colaboradores da Família do Sítio esteja ciente e eu receba um retorno sobre minha solicitação.
+US16   | _À DESENVOLVER_
 US17   | _À DESENVOLVER_
-US18   | Eu como usuário gostaria de visualizar os princiais meios de contatos, como email, telefone e redes sociais da Família do Sítio, para que eu possa me comunicar com a empresa através destas plataformas.
-US19   | _À DESENVOLVER_
-US20   | Eu como usuário, devo ser capaz de fazer uma reclamação, um elogio, uma dúvida, sugestão ou parcerias para que os colaboradores da Família do Sítio esteja ciente e eu receba um retorno sobre minha solicitação.
-US21   | _À DESENVOLVER_
-US22   | _À DESENVOLVER_
-US23   | _À DESENVOLVER_
-US24   | _À DESENVOLVER_
-US25   | _À DESENVOLVER_
+US18   | _À DESENVOLVER_
+
+### 9.1.1 - Relacoinado aos Requisitos Não Funcionais (que exigem implementação de uma interface):
+Código | Título do Requisito de Usabilidade (Relacionada à implementação de uma interface)
+------ | ----------------------------------------------------
+RQNF01 | O sistema deve permitir que os usuários localizem facilmente a seção que apresenta a história da empresa, com navegação intuitiva e conteúdo disposto de forma clara e acessível.
+RQNF02 | A interface deve exibir os produtos da empresa de forma visualmente organizada e categorizada, facilitando a identificação e compreensão de cada item pelo usuário.
+RQNF03 | As informações sobre ações sociais da empresa devem estar disponíveis de maneira acessível e atrativa, garantindo clareza na comunicação e fácil navegação para o usuário.
+RQNF04 | Os contatos da empresa devem ser apresentados em um formato padronizado e de fácil compreensão, com suporte a links clicáveis para e-mail, telefone e redes sociais.
+RQNF05 | As vagas de emprego da empresa devem ser exibidas de forma clara, com uma organização que facilitem a busca por oportunidades compatíveis com o interesse do usuário, instruindo o usuário como prosseguir com o processo no site terceiro empregare.
+RQNF06 | As instruções do E-commerce devem ser descritas de maneira clara, com linguagem simples e objetiva, utilizando elementos visuais, como ícones e guias passo a passo, para melhorar a compreensão.
 
 ## 9.2 - Priorização do Backlog Geral
 
+Para a construção da priorização, a equipe utilizou uma das fases do workshop Lean Inception para auxiliar na atividade: **Revisão Técnica, de UX e de Negócio**. Nessa fase, todas as funcinalidades são classificadas em níveis de 1 à 3, onde:
+
+- **1:** Classifica a funcinalidade como _Baixo_ no tópico de revisão de referência;
+- **2:** Classifica a funcinalidade como _Médio_ no tópico de revisão de referência;
+- **3:** Classifica a funcinalidade como _Alta_ no tópico de revisão de referência;
+
+Em outras palavras, caso o nível de esforço seja nível 1, por exemplo, isto significa que aquela funcionalidade possui _Baixo nível de esforço_, se for nível 2, possui _Médio nível de esforço_. Em contrapartida, os 3 tópicos de revisões tangem:
+
+- **Nível de Esforço:** Indica a quantidade de trabalho e dedicação necessária para desenvolver e finalizar a funcionalidade, considerando o tempo e os recursos da equipe. Esse tópico avalia o esforço total, mas não necessariamente a dificuldade técnica. Cada nível indica:
+    - **1:** Exige baixo esforço, sendo uma funcionalidade simples de implementar, com impacto mínimo no tempo de desenvolvimento e sem grande consumo de recursos.
+    - **2:** Exige esforço moderado, demandando mais tempo e dedicação, mas ainda sendo possível dentro do escopo regular do time.
+    - **3:** Exige alto esforço, representando uma funcionalidade que pode consumir grande parte dos recursos e do tempo disponíveis, exigindo maior planejamento e execução detalhada.
+
+<br>
+
+- **Nível de Valor Agregado:** Indica o quanto a funcionalidade agrega valor ao produto ou serviço final, considerando os benefícios que trará para os usuários ou para o alcance dos objetivos estratégicos do negócio. Cada nível indica:
+    - **1:** Agrega baixo valor ao produto, sendo um requisito que não gera grande impacto para os usuários ou para os objetivos estratégicos.
+    - **2:** Agrega valor médio ao produto, contribuindo moderadamente para a satisfação dos usuários ou objetivos do negócio.
+    - **3:** Agrega alto valor, sendo essencial para o sucesso do produto e trazendo impacto significativo para os usuários ou para o negócio.
+
+<br>
+
+- **Nível de User Experience:** Indica o impacto da funcionalidade na experiência do usuário, considerando aspectos como facilidade de uso, acessibilidade, design intuitivo e satisfação ao interagir com o sistema. Cada nível indica:
+    - **1:** Oferece uma experiência básica ou pouco impactante, com uma interface funcional, mas sem refinamento ou diferenciação significativa para o usuário.
+    - **2:** Oferece uma experiência moderadamente impactante, com boa usabilidade e design que atende às expectativas gerais do usuário.
+    - **3:** Oferece uma experiência altamente impactante, proporcionando uma interação satisfatória, agregando grande valor ao produto.
+
+Os requisitos em sua devida priorização é:
+
+Código | Nível de Esforço           | Nível de Valor Agregado           | Nível de UX | Prioridade
+------ | -------------------------  | --------------------------------- | ----------- | ----------
+US01   | Nível 1                    | Nível 3                           | Nível 3     |
+US02   | Nível 1                    | Nível 2                           | Nível 1     |
+US03   | Nível 2                    | Nível 1                           | Nível 2     |
+US04   | Nível 2                    | Nível 3                           | Nível 3     |
+US05   | Nível 1                    | Nível 1                           | Nível 2     |
+US06   | Nível 2                    | Nível 2                           | Nível 3     |
+US07   | Nível 2                    | Nível 1                           | Nível 2     |
+US08   | Nível 1                    | Nível 3                           | Nível 2     |
+US09   | Nível 1                    | Nível 2                           | Nível 2     |
+US10   | Nível 1                    | Nível 2                           | Nível 2     |
+US11   | Nível 2                    | Nível 2                           | Nível 3     |
+US12   | Nível 3                    | Nível 2                           | Nível 3     |
+US13   | Nível 1                    | Nível 2                           | Nível 3     |
+US14   | Nível 2                    | Nível 3                           | Nível 3     |
+US15   | Nível 2                    | Nível 3                           | Nível 3     |
+US16   | Nível 2                    | Nível 3                           | Nível 2     |
+US17   | Nível 3                    | Nível 3                           | Nível 3     |
+US18   | Nível 2                    | Nível 1                           | Nível 2     |
+
 ## 9.3 - MVP
 
-Decidido durante a produção do Workshop Lean Inception, foi estabelecido o MVP do produto de software da Família do Sítio e a sua versão de incremento baseando-se na definição de 3 categorias:
+Decidido durante a produção do Workshop Lean Inception, foi estabelecido o MVP do produto de software da Família do Sítio e a sua versão de incremento baseando-se na definição de 3 categorias, como dito na seção anterior:
 
 - Esforço de Execução;
 - Valor Agregado;
 - Impacto na experiência do Usuário:
 
-Limitando-se os nível entre 1 até 3 para cada categoria, foi possível elencar as funcionalidades de maior valor agregado e impacto na experiência do usuário para as primeiras produções feita pelo time. Dessa forma, as funcionalidades **que estão em MVP**, são:
+Com esta técnica, foi possível elencar as funcionalidades de maior valor agregado e impacto na experiência do usuário para as primeiras produções feita pelo time. Dessa forma, as funcionalidades **que estão em MVP**, são:
 
-Código | Título                                | Nível de Esforço           | Nível de Valor Agregado           | Nível de UX
------- | ------------------------------------- | -------------------------  | --------------------------------- | -----------
-US01   | Criar Blog                            | Nível 1                    | Nível 3                           | Nível 3 
-US02   | Editar Blog                           | Nível 1                    | Nível 2                           | Nível 1
-US04   | Categorizar Blog                      | Nível 2                    | Nível 3                           | Nível 3
-US05   | Filtrar Blogs                         | Nível 1                    | Nível 1                           | Nível 2
-US06   | Pesquisar Blog                        | Nível 2                    | Nível 2                           | Nível 3
-US08   | Recomendar outros Blogs               | Nível 1                    | Nível 3                           | Nível 2
-US11   | Configurar disponibilidade de Visita  | Nível 2                    | Nível 2                           | Nível 3
-US13   | Emitir certificado de Visita          | Nível 1                    | Nível 2                           | Nível 3
-US14   | Agendar Visita Presencial             | Nível 2                    | Nível 3                           | Nível 3
-US15   | Conhecer história da Empresa          | Nível 1                    | Nível 3                           | Nível 2         
-US16   | Conhecer produtos da Empresa          | Nível 1                    | Nível 3                           | Nível 3
-US17   | Conhecer Ações Sociais da Empresa     | Nível 1                    | Nível 3                           | Nível 1
-US18   | Consultar contatos da Empresa         | Nível 1                    | Nível 3                           | Nível 3
-US19   | Consultar vagas de empresa da Empresa | Nível 1                    | Nível 3                           | Nível 2
-US20   | Realizar SAC                          | Nível 2                    | Nível 3                           | Nível 3
-US21   | Consultar detalhes do E-Commerce      | Nível 1                    | Nível 3                           | Nível 3
-US22   | Notificar setores Ideais              | Nível 2                    | Nível 3                           | Nível 2
-US23   | Localizar Produtos                    | Nível 3                    | Nível 3                           | Nível 3
+### 9.3.1 - Requisitos Funcionais
+Código | Nível de Esforço           | Nível de Valor Agregado           | Nível de UX
+------ | -------------------------  | --------------------------------- | -----------
+US01   | Nível 1                    | Nível 3                           | Nível 3 
+US02   | Nível 1                    | Nível 2                           | Nível 1
+US04   | Nível 2                    | Nível 3                           | Nível 3
+US05   | Nível 1                    | Nível 1                           | Nível 2
+US06   | Nível 2                    | Nível 2                           | Nível 3
+US08   | Nível 1                    | Nível 3                           | Nível 2
+US11   | Nível 2                    | Nível 2                           | Nível 3
+US13   | Nível 1                    | Nível 2                           | Nível 3
+US14   | Nível 2                    | Nível 3                           | Nível 3
+US15   | Nível 2                    | Nível 3                           | Nível 3
+US16   | Nível 2                    | Nível 3                           | Nível 2
+US17   | Nível 3                    | Nível 3                           | Nível 3
+
+### 9.3.2 - Requisitos não Funcionais de Usabilidade (Relacionadas à implementação de uma Interface)
+Código   | Nível de Esforço         | Nível de Valor Agregado           | Nível de UX
+-------- | -----------------------  | --------------------------------- | -----------
+RQNF01   | Nível 1                  | Nível 3                           | Nível 2         
+RQNF02   | Nível 1                  | Nível 3                           | Nível 3
+RQNF03   | Nível 1                  | Nível 3                           | Nível 1
+RQNF04   | Nível 1                  | Nível 3                           | Nível 3
+RQNF05   | Nível 1                  | Nível 3                           | Nível 2
+RQNF06   | Nível 1                  | Nível 3                           | Nível 3
+
 
 # Referências Bibliográficas:
 
@@ -77,3 +137,4 @@ US23   | Localizar Produtos                    | Nível 3                    | N
 | Data | Versão | Descrição | Autor | Revisores |
 |---- | ------ | --------- | ----- | --------- |
 | 03/12/24 | 1.0 | Criação do documento | Daniel Rodrigues | DEFINIR AQUI
+| 06/12/24 | 1.1 | Desenvolvimento de novos tópicos | Daniel Rodrigues | DEFINIR AQUI
