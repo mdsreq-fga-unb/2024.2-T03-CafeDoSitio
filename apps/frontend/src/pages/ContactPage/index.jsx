@@ -2,6 +2,7 @@ import React from 'react';
 import Paginacao from '../../components/Paginacao';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import Sac from '../../components/SacSection'
 import {
   ContactSection,
   ContactCards,
@@ -13,15 +14,7 @@ import {
   SocialIcons,
   Links,
   ContactInfo,
-  Horario_redes,
-  Sac,
-  Location,
-  Form,
-  Title,
-  Label,
-  Input,
-  TextArea,
-  Button
+  Horario_redes
 } from './styled';
 import { FaEnvelope, FaPhoneAlt, FaInstagram, FaFacebook, FaYoutube, FaLinkedin, FaComments } from "react-icons/fa"; // Ícones do Font Awesome
 import { FaXTwitter } from "react-icons/fa6";
@@ -121,44 +114,7 @@ const ContactPage = () => {
           <a href="#privacy">Política de Privacidade</a>
         </Links>
       </FaleCom>
-
-      <Sac>
-        <Location>
-          <h2>Localização</h2>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15350.606789028072!2d-48.0269256!3d-15.8748932!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a2d87432ac44d%3A0xff6ae8c97e66c8b8!2zQ2Fmw6kgZG8gU8OtdGlv!5e0!3m2!1spt-BR!2sbr!4v1733509279879!5m2!1spt-BR!2sbr"
-            width="600"
-            height="450"
-            style={{ border: 0 }} 
-            allowFullScreen 
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade" 
-          ></iframe>
-          <p>QS 09 RUA 101 LOTE 04 - Taguatinga</p>
-          <p>Distrito Federal - CNPJ: 00.452.002/0001-48</p>
-          <p>Café do Sítio Indústria e Comércio Ltda</p>
-        </Location>
-
-        <Form>
-          <Title>Fale Conosco</Title>
-          <Label htmlFor="name">Nome e Sobrenome:</Label>
-          <Input type="text" id="name" placeholder="Nome e Sobrenome" />
-
-          <Label htmlFor="email">Email:</Label>
-          <Input type="email" id="email" placeholder="Email" />
-
-          <Label htmlFor="phone">Telefone:</Label>
-          <Input type="tel" id="phone" placeholder="Telefone" />
-
-          <Label htmlFor="subject">Assunto:</Label>
-          <Input type="text" id="subject" placeholder="Assunto" />
-
-          <Label htmlFor="message">Mensagem:</Label>
-          <TextArea id="message" rows="5" placeholder="Mensagem"></TextArea>
-
-          <Button type="submit">Enviar</Button>
-        </Form>
-      </Sac>
+      <Sac />
       <Footer />
     </>
   );
