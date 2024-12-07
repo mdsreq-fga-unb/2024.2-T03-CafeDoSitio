@@ -1,8 +1,13 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { ConteudoGeral, LoginCard, Input, Button, ParteSuperior } from "./styled";
 import { loginUser } from "@familiadositio/core";
+import { ROUTES } from "../../../routes/RoutesConstants";
 
 const LoginPage = () => {
+
+  // INICIANDO O NAVIGATE:
+  const navigate = useNavigate();
 
   const [email, setEmail] = useState('');
   const [password, setPassord] = useState('');
@@ -16,10 +21,12 @@ const LoginPage = () => {
   }
   async function login(e){
     try {
-      await loginUser(email, password);
-      console.log("LOGADO!");
+      const response = await loginUser(email, password);
+      localStorage.setItem("authToken", response.data.token);
+      navigate(ROUTES.HOME);
     } catch (err) {
       console.log(err);
+      alert("Falha ao fazer login! Verifique suas credenciais.");
     }
   }
 
