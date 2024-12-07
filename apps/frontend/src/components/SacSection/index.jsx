@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ToastContainer } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'; // CSS do <ToastContainer />
 import sacService from "../../services/sac.service";
 
@@ -24,7 +24,6 @@ function Sac() {
     const [mensagem, setMensagem] = useState("");
     const [arquivo, setArquivo] = useState(null);
 
-    // Criando o objeto JSON com os dados do formulário
     const Formulario_JSON = {
         nomeSobrenome,
         email,
@@ -33,9 +32,28 @@ function Sac() {
         mensagem
     };
 
+    const handleArquivo = (e) => {
+        const file = e.target.files[0];
+        if (file && file.size > 15 * 1024 * 1024) { // 15MB em bytes
+            setArquivo(null); // Limpa o arquivo selecionado
+            toast.error("O arquivo é muito grande! O limite é de 15MB.");
+        } else {
+            setArquivo(file);
+        }
+    };
+
+    const formData = new FormData();
+
+    if (arquivo) {
+        formData.append("arquivo", arquivo); // Inclui o arquivo apenas se existir
+    }
+
+    formData.append("data", JSON.stringify(Formulario_JSON));
+
     const handleSubmit = (e) => {
         e.preventDefault();
         sacService.postSac(Formulario_JSON);
+        sacService.sendMailSac(formData);
     };
 
     return (
@@ -85,7 +103,7 @@ function Sac() {
                     <option value="Elogio">Elogio</option>
                     <option value="Duvida">Dúvida</option>
                     <option value="Reclamacao">Reclamação</option>
-                    <option value="Parceiria/Patrocinio">Parceiria/Patrocínio</option>
+                    <option value="Parceria/Patrocinio">Parceria/Patrocínio</option>
                 </Select>
 
 
@@ -100,7 +118,11 @@ function Sac() {
                 </TextArea>
 
                 <Label htmlFor="file">Anexar Arquivo:</Label>
-                <FileInput type="file" id="file" />
+                <FileInput 
+                    type="file" 
+                    id="file" 
+                    onChange={handleArquivo}
+                />
 
                 <Button type="submit" onClick={handleSubmit}>Enviar</Button>
             </Form>

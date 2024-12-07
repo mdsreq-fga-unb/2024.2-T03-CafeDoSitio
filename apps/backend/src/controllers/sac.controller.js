@@ -24,9 +24,51 @@ const createSac = async (req, res) => {
 }
 
 const sendMail = async (req, res) => {
-  const {to, subject, body} = req.body;
+  // Extrai o JSON do campo "data"
+  const data = JSON.parse(req.body.data);
 
-  nodemailerService.send(to, subject, body);
+  const { nomeSobrenome, email, telefone, assunto, mensagem } = data;
+
+  let emailSetor;
+
+  switch (assunto) {
+    case 'Sugestao':
+      emailSetor = 'arthur.lantr@gmail.com';
+      break;
+    case 'Elogio':
+      emailSetor = 'arthur.lantr@gmail.com';
+      break;
+    case 'Duvida':
+      emailSetor = 'Duvida@email.com';
+      break
+    case 'Reclamacao':
+      emailSetor = 'reclamacao@example.com';
+      break;
+    case 'Parceria/Patrocinio':
+      emailSetor = 'Parceria@email.com'
+    default:
+      return res.status(400).send({message: 'Houve algum erro no campo assunto'}) // Caso não se encaixe em nenhum dos casos
+      break;
+  }
+
+  const mensagemEmail = `
+    Olá,
+
+    Você recebeu uma nova mensagem através do formulário de contato:
+    
+    Nome: ${nomeSobrenome}
+    Email: ${email}
+    Telefone: ${telefone}
+    Assunto: ${assunto}
+    Mensagem:
+    ${mensagem}
+
+    Atenciosamente,
+    Sistema de Contato
+  `;
+
+  const attachments = req.file ? [{ filename: req.file.originalname, path: req.file.path }] : [];
+  nodemailerService.send(emailSetor, assunto, mensagemEmail, attachments);
 
   return res.send({message: 'Email enviado com sucess!'});
 }
