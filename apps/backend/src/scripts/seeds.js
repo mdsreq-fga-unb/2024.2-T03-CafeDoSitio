@@ -1,4 +1,12 @@
 import User from "../models/User.js";
+import bcrypt from 'bcrypt';
+import dotenv from 'dotenv';
+dotenv.config();
+
+// =====================================================
+// DEFINIÇÃO DE CRIPTOGRAFIA:
+var salt = process.env.SALT_BCRYPT;
+// ==================================================================
 
 export const UserSeed = async() => {
   try {
@@ -11,7 +19,7 @@ export const UserSeed = async() => {
     const newUser = new User({
       name: 'Sitio Admin',
       email: 'sitioAdmin@familiadositio.com.br',
-      password: '@admin&Sitio+UnB',
+      password: bcrypt.hashSync('@admin&Sitio+UnB', salt),
     });
   
     await newUser.save();
