@@ -19,11 +19,13 @@ export const SacSection = styled.section`
 
 export const Location = styled.section`
   flex: 1;
+  margin: 1vw;
   
   h2 {
-    font-size: 1.5rem;
-    color: #006343;
+    font-size: 2rem;
+    color: #fff;
     margin-bottom: 1rem;
+    font-family: 'Impact', sans-serif;
   }
 
   iframe {
