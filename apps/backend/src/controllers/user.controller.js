@@ -43,15 +43,20 @@ const loginUser = async (req, res) => {
       return res.status(400).send({ message: 'Preencha todos os campos para logar!'})
 
     const user = await userService.findService({ email });
-    if (!user)
+    console.log(user);
+    if ( user.length == 0)
       return res.status(404).send({ message: 'Usuário não encontrado!'});
 
-    if (user.password != bcrypt.hashSync(password, salt))
+    if (!user[0].password)
+      return res.status(200).send({ message: 'Usuário encontrado, mas sem senha!', case: 2, token });
+
+    if (user[0].password != bcrypt.hashSync(password, salt)) {
       return res.status(400).send({ message: 'Senha ou email inválido!'});
+    }
 
     const token = userService.generateToken(user.id);
 
-    return res.status(200).send({ message: 'Usuário encontrado!', token });
+    return res.status(200).send({ message: 'Usuário encontrado!', case: 1, token });
   } catch (err) {
     return res.status(500).send({ message: err.message });
   }

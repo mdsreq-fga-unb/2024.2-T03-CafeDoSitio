@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { ConteudoGeral, LoginCard, Input, Button, ParteSuperior } from "./styled";
-import loginUser from "@familiadositio/services";
+import { loginUser } from "@familiadositio/core";
 
 const LoginPage = () => {
 
   const [email, setEmail] = useState('');
-  const [password, setPassord] = useNavigate('');
+  const [password, setPassord] = useState('');
 
   // FUNÇÕES PARA FAZER REQUISIÇÃO À API DE LOGIN:
   const handleChangeEmail = (e) => {

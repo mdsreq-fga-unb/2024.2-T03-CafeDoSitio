@@ -1,4 +1,5 @@
 import User from "../models/User.js";
+import jwt from "jsonwebtoken"
 
 const createService = (body) => User.create(body);
 const loginService = (body) => User.findOne(body);
