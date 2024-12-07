@@ -1,5 +1,5 @@
-import DisponibilidadeVisita from "../models/DisponibilidadeVisita.js";
-import disponibilidadeVisitaService from"../services/DisponibilidadeVisita.services.js";
+import DisponibilidadeVisita from "../models/Visita.js";
+import VisitaService from"../services/visita.service.js";
 
 
 const criarDisponibilidade = async (req, res) => {
@@ -10,7 +10,7 @@ const criarDisponibilidade = async (req, res) => {
             return res.status(400).json({ message: "Os campos 'data' e 'hora' são obrigatórios."});
         }
 
-        await disponibilidadeVisitaService.criarAgendamento(data, hora);
+        await VisitaService.criarAgendamento(data, hora);
 
         res.status(201).json({ message: "Disponibilidade criada com sucesso!" })
     } catch (err) {
