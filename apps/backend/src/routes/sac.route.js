@@ -4,6 +4,7 @@ const sacRouter = express.Router();
 import sacController from '../controllers/sac.controller.js';
 
 sacRouter.post('/createSac', sacController.createSac);
+sacRouter.post('/sendMail', sacController.sendMail);
 sacRouter.get('/', sacController.findAllSac);
 sacRouter.get('/:assunto', sacController.findAssuntoSac);
 sacRouter.delete('/:id', sacController.deleteSacById);

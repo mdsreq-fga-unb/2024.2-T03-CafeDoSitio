@@ -1,4 +1,6 @@
 import sacService from "../services/sac.service.js";
+import nodemailerService from "../services/nodemailer.service.js";
+
 import mongoose from "mongoose";
 
 const createSac = async (req, res) => {
@@ -19,6 +21,14 @@ const createSac = async (req, res) => {
   } catch (err) {
     res.status(500).send({ message: err.message })
   }
+}
+
+const sendMail = async (req, res) => {
+  const {to, subject, body} = req.body;
+
+  nodemailerService.send(to, subject, body);
+
+  return res.send({message: 'Email enviado com sucess!'});
 }
 
 const findAllSac = async (req, res) => {
@@ -70,5 +80,6 @@ export default {
   createSac,
   findAllSac,
   findAssuntoSac,
-  deleteSacById
+  deleteSacById,
+  sendMail
 };
