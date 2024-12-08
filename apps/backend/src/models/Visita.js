@@ -1,12 +1,36 @@
 import mongoose from "mongoose";
 
-const DisponibilidadeVisitaSchema = new mongoose.Schema({
-    dataHora: {
+const VisitaSchema = new mongoose.Schema({
+    date: {
         type: Date,
         require: true,
+    },
+    startTime: {
+        type: Date,
+        require: true,
+    },
+    endTime: {
+        type: Date,
+        require: true,
+    },
+    nameVisitor: {
+        type: String,
+        require: false,
+    },
+    emailVisitor: {
+        type: String,
+        require: false,
+    },
+    phoneVisitor: {
+        type: String,
+        require: false,
+    },
+    Institution: {
+        type: String,
+        require: false,
     }
 });
 
-const DisponibilidadeVisita = mongoose.model("DisponibilidadeVisita", DisponibilidadeVisitaSchema);
+const Visita = mongoose.model("Visita", VisitaSchema);
 
-export default DisponibilidadeVisita;
+export default Visita;

@@ -1,5 +1,4 @@
 import axios from 'axios';
-// import Cookies from 'js-cookie';
 
 const baseURL = 'http://localhost:3002';
 
@@ -13,11 +12,11 @@ export function createUser(name, email, password){
   const response = axios.post(
     `${baseURL}/user/createUser`,
     body,
-    // {
-    //   headers: {
-    //     Authorization: `Bearer ${Cookies.get("token")}`,
-    //   }
-    // }
+    {
+      headers: {
+        Authorization: `Bearer ${localStorage.get("authToken")}`,
+      }
+    }
   );
 
   return response;

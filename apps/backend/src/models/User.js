@@ -13,6 +13,10 @@ const UserSchema = new mongoose.Schema({
   password: {
     type: String,
     require: false,
+  },
+  sector: {
+    type: String,
+    require: true,
   }
 });
 

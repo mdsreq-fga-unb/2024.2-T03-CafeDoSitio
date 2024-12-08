@@ -43,7 +43,6 @@ const loginUser = async (req, res) => {
       return res.status(400).send({ message: 'Preencha todos os campos para logar!'})
 
     const user = await userService.findService({ email });
-    console.log(user);
     if ( user.length == 0)
       return res.status(404).send({ message: 'Usuário não encontrado!'});
 
@@ -53,7 +52,7 @@ const loginUser = async (req, res) => {
     }
 
     if (user[0].password != bcrypt.hashSync(password, salt))
-      return res.status(400).send({ message: 'Senha ou email inválido!'});
+      return res.status(403).send({ message: 'Senha ou email inválido!'});
 
     const token = userService.generateToken(user);
     return res.status(200).send({ message: 'Usuário encontrado!', case: 1, token });

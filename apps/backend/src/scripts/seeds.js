@@ -20,6 +20,7 @@ export const UserSeed = async() => {
       name: 'Sitio Admin',
       email: 'sitioAdmin@familiadositio.com.br',
       password: bcrypt.hashSync('@admin&Sitio+UnB', salt),
+      sector: 'System-Administrator',
     });
   
     await newUser.save();

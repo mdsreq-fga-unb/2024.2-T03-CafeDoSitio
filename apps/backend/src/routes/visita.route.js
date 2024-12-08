@@ -1,11 +1,7 @@
 import express from 'express';
 import VisitaController from '../controllers/visita.controller.js';
+const visitaRouter = express.Router();
 
-const router = express.Router();
+visitaRouter.post('/createVisita', VisitaController.createVisita);
 
-router.post('/disponibilidades', VisitaController.criarDisponibilidade);
-router.get('/disponibilidades', VisitaController.listarDisponibilidades);
-router.delete('/disponibilidades/:id', VisitaController.deletarDisponibilidade);
-
-
-export default router;
+export default visitaRouter;
