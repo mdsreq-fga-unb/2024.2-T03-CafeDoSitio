@@ -24,54 +24,56 @@ const createSac = async (req, res) => {
 }
 
 const sendMail = async (req, res) => {
-  // Extrai o JSON do campo "data"
-  const data = JSON.parse(req.body.data);
+  try {
+    const data = JSON.parse(req.body.data);
+    const { nomeSobrenome, email, telefone, assunto, mensagem } = data;
 
-  const { nomeSobrenome, email, telefone, assunto, mensagem } = data;
+    let emailSetor;
 
-  let emailSetor;
+    switch (assunto) {
+      case 'Sugestao':
+        emailSetor = 'arthur.lantr@gmail.com';
+        break;
+      case 'Elogio':
+        emailSetor = 'arthur.lantr@gmail.com';
+        break;
+      case 'Duvida':
+        emailSetor = 'duvida@email.com';
+        break;
+      case 'Reclamacao':
+        emailSetor = 'reclamacao@example.com';
+        break;
+      case 'Parceria/Patrocinio':
+        emailSetor = 'parceria@email.com';
+        break;
+      default:
+        return res.status(400).send({ message: 'Houve algum erro no campo assunto' });
+    }
 
-  switch (assunto) {
-    case 'Sugestao':
-      emailSetor = 'arthur.lantr@gmail.com';
-      break;
-    case 'Elogio':
-      emailSetor = 'arthur.lantr@gmail.com';
-      break;
-    case 'Duvida':
-      emailSetor = 'Duvida@email.com';
-      break
-    case 'Reclamacao':
-      emailSetor = 'reclamacao@example.com';
-      break;
-    case 'Parceria/Patrocinio':
-      emailSetor = 'Parceria@email.com'
-    default:
-      return res.status(400).send({message: 'Houve algum erro no campo assunto'}) // Caso não se encaixe em nenhum dos casos
-      break;
+    // Configura o corpo do e-mail
+    const emailBody = `
+      Nome: ${nomeSobrenome}
+      Email: ${email}
+      Telefone: ${telefone}
+      Assunto: ${assunto}
+      Mensagem: ${mensagem}
+    `;
+
+    // Configura os anexos se houver
+    const attachments = req.file
+      ? [{ path: req.file.path }]
+      : [];
+
+    // Envia o e-mail
+    await nodemailerService.send(emailSetor, assunto, emailBody, attachments);
+
+    res.status(200).send({ message: 'E-mail enviado com sucesso!' });
+  } catch (err) {
+    console.error('Erro ao enviar e-mail:', err);
+    res.status(500).send({ message: 'Erro ao enviar e-mail.' });
   }
+};
 
-  const mensagemEmail = `
-    Olá,
-
-    Você recebeu uma nova mensagem através do formulário de contato:
-    
-    Nome: ${nomeSobrenome}
-    Email: ${email}
-    Telefone: ${telefone}
-    Assunto: ${assunto}
-    Mensagem:
-    ${mensagem}
-
-    Atenciosamente,
-    Sistema de Contato
-  `;
-
-  const attachments = req.file ? [{ filename: req.file.originalname, path: req.file.path }] : [];
-  nodemailerService.send(emailSetor, assunto, mensagemEmail, attachments);
-
-  return res.send({message: 'Email enviado com sucess!'});
-}
 
 const findAllSac = async (req, res) => {
   const sacs = await sacService.findAllService();
