@@ -16,7 +16,7 @@
 
 ### 4.1.2 Análise e Consenso 
 
-**Análise de risco:** É utilizada para identificar os requisitos que podem apresentar riscos ou iviabilizar o produto ou solução, e assim obter formas de reduzir o risco. Na proposta, a análise de risco é feita em cada sprint planning.
+**Análise de risco:** É utilizada para identificar os requisitos que podem apresentar riscos ou inviabilizar o produto ou solução, e assim obter formas de reduzir o risco. Na proposta, a análise de risco é feita em cada sprint planning.
 
 **Negociação:** O fundamental é analisar os objetivos de cada parte e alcançar um acordo mutuamente satisfatório. Em situações de conflito entre o cliente e a equipe sobre a solução de software, é realizada uma negociação amistosa para definir o que será efetivamente implementado, garantindo que ambas as partes estejam alinhadas.
 
@@ -28,7 +28,7 @@
 **Épicos e User Stories:** A declaração de requisitos é dividida em épicos, onde há uma coletânea de features que envolvem um objetivo amplo, e histórias de usuário que descrevem as funcionalidades presentes no projeto.
 
 
-**Critérios de aceitação:** São definidos critérios de aceitação, ou seja, é acordado junto com os stakeholders do projeto e o Project Owner o que uma User Story precisa ter para ser aceita. Sendo isso feito para que para que ambas as partes, equipe de desenvolvimento e stakeholders, tenham compreensão do que determinada funcionalidade ou item precisa ter para ser considerada concluída.
+**Critérios de aceitação:** São definidos critérios de aceitação, ou seja, é acordado junto com os stakeholders do projeto e o Project Owner o que uma User Story precisa ter para ser aceita. Sendo isso feito para que ambas as partes, equipe de desenvolvimento e stakeholders, tenham compreensão do que determinada funcionalidade ou item precisa ter para ser considerada concluída.
 
 
 **Definition of Ready (D.O.R.):** É usado um conjunto de critérios que visam qualificar quando uma User Story está pronta para ser trabalhada. Garantindo que a equipe de desenvolvimento tenha informações claras necessárias para começar a implementar a funcionalidade.
