@@ -18,6 +18,7 @@ export const InfoZone = styled.div`
   span{
     font-family: 'Myriad Pro', sans-serif;
     color: #555;
+    font-size: 16px;
   }
 `;
 

@@ -1,7 +1,8 @@
 import express from 'express';
-import VisitaController from '../controllers/visita.controller.js';
+import visitaController from '../controllers/visita.controller.js';
 const visitaRouter = express.Router();
 
-visitaRouter.post('/createVisita', VisitaController.createVisita);
+visitaRouter.post('/createVisita', visitaController.createVisita);
+visitaRouter.get('/findAllVisita', visitaController.findAllVisita);
 
 export default visitaRouter;

@@ -4,8 +4,7 @@ export const DivPaginacao = styled.div`
   display: flex;
   align-items: center;
   left: 0;
-  width: 100vw;
-  height: 26px;
+  width: 100%;
   background: #E6D5B3;
   position: absolute;
   z-index: 9;
@@ -29,7 +28,6 @@ export const Letreiro = styled.h1`
     color: black;
   }
 `;
-
 
 export const Layout = styled.div`
   display: flex;

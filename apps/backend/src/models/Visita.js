@@ -1,15 +1,11 @@
 import mongoose from "mongoose";
 
 const VisitaSchema = new mongoose.Schema({
-    date: {
+    startDateTime: {
         type: Date,
         require: true,
     },
-    startTime: {
-        type: Date,
-        require: true,
-    },
-    endTime: {
+    endDateTime: {
         type: Date,
         require: true,
     },
@@ -29,7 +25,7 @@ const VisitaSchema = new mongoose.Schema({
         type: String,
         require: false,
     }
-});
+}, {timestamps: true});
 
 const Visita = mongoose.model("Visita", VisitaSchema);
 

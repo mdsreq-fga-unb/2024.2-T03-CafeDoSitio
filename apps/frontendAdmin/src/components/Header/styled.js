@@ -18,19 +18,19 @@ export const NavButton = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: 800ms;
+  transition: 200ms;
 
   .icon{
     font-size: 16px;
     color: white;
-    transition: 800ms;
+    transition: 200ms;
   }
 
   span{
     color: white;
     font-family: 'Myriad Pro', sans-serif;
     font-size: 12px;
-    transition: 800ms;
+    transition: 200ms;
   }
 
   &:hover{

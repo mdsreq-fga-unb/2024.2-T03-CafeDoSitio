@@ -1,5 +1,18 @@
 import axios from "axios";
 
-export function createVisita() {
-  return 0;
+const baseURL = 'http://localhost:3002';
+
+export function createVisita(body) {
+
+  const response = axios.post(
+    `${baseURL}/visita/createVisita`,
+    body,
+    {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("authToken")}`,
+      }
+    }
+  );
+
+  return response;
 };
