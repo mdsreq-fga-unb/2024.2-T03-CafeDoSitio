@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'; // CSS do <ToastContainer />
 import sacService from "../../services/sac.service";
+import { IoIosPin } from "react-icons/io";
 
 import { 
     SacSection,
@@ -35,7 +36,7 @@ function Sac() {
     const handleArquivo = (e) => {
         const file = e.target.files[0];
         if (file && file.size > 15 * 1024 * 1024) { // 15MB em bytes
-            setArquivo(null); // Limpa o arquivo selecionado
+            setArquivo(null); 
             toast.error("O arquivo é muito grande! O limite é de 15MB.");
         } else {
             setArquivo(file);
@@ -69,31 +70,38 @@ function Sac() {
                     referrerPolicy="no-referrer-when-downgrade" 
                 ></iframe>
                 <h2>Localização</h2>
-                <p>QS 09 RUA 101 LOTE 04 - Taguatinga</p>
-                <p>Distrito Federal - CNPJ: 00.452.002/0001-48</p>
-                <p>Café do Sítio Indústria e Comércio Ltda</p>
-                {/* Esse componente é preciso colocar pra que apareça o pop up de que o fomrs foi enviado */}
+                <div className="caixinha">
+                    <IoIosPin color="white" size={30}/>
+                    <div className="infos">
+                        <p style={{marginTop: 0, marginBottom: 3}}>• QS 09 RUA 101 LOTE 04 - Taguatinga</p>
+                        <p style={{marginTop: 0, marginBottom: 3}}>• Distrito Federal - CNPJ: 00.452.002/0001-48</p>
+                        <p style={{marginTop: 0, marginBottom: 0}}>• Café do Sítio Indústria e Comércio Ltda</p>
+                    </div>
+                </div>
+                {/* Esse componente é preciso colocar pra que apareça o pop up de que o forms foi enviado */}
                 <ToastContainer /> 
             </Location>
 
             <Form>
                 <Title>Fale Conosco</Title>
-                <Label htmlFor="name">Nome e Sobrenome:</Label>
+                <h5 style={{color: "#006343", marginTop: 0}}>Para dúvidas e/ou sugestões, entre em contato conosco!</h5>
+                
+                <Label htmlFor="name" style={{color: "#006343"}}>Nome e Sobrenome:</Label>
                 <Input type="text" id="name" placeholder="Nome e Sobrenome" value={nomeSobrenome} 
                     onChange={(e) => {setNomeSobrenome(e.target.value);}}
                 />
 
-                <Label htmlFor="email">Email:</Label>
+                <Label htmlFor="email" style={{color: "#006343"}}>Email:</Label>
                 <Input type="email" id="email" placeholder="Email" value={email} 
                     onChange={(e) => {setEmail(e.target.value);}}
                 />
 
-                <Label htmlFor="phone">Telefone:</Label>
+                <Label htmlFor="phone" style={{color: "#006343"}}>Telefone:</Label>
                 <Input type="tel" id="phone" placeholder="Telefone" value={telefone} 
                     onChange={(e) => {setTelefone(e.target.value);}}
                 />
 
-                <Label htmlFor="subject">Assunto:</Label>
+                <Label htmlFor="subject" style={{color: "#006343"}}>Assunto:</Label>
                 <Select
                     id="subject"
                     value={assunto}
@@ -107,7 +115,7 @@ function Sac() {
                 </Select>
 
 
-                <Label htmlFor="message">Mensagem:</Label>
+                <Label htmlFor="message" style={{color: "#006343"}}>Mensagem:</Label>
                 <TextArea 
                     id="message" 
                     rows="5" 
@@ -117,7 +125,7 @@ function Sac() {
                 >
                 </TextArea>
 
-                <Label htmlFor="file">Anexar Arquivo:</Label>
+                <Label htmlFor="file" style={{color: "#006343"}}>Anexar Arquivo:</Label>
                 <FileInput 
                     type="file" 
                     id="file" 

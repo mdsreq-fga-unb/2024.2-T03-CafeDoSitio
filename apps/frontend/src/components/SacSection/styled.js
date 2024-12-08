@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SacSection = styled.section`
   display: flex;
   flex-direction: column;
-  margin: 2vh 20vh;
+  margin: 5vh 20vh;
   gap: 3rem;
   background-color: #F39729;
   border: 2px solid #ddd;
@@ -13,7 +13,7 @@ export const SacSection = styled.section`
   @media (min-width: 768px) {
     flex-direction: row;
     justify-content: space-between;
-  }
+  }    
 `;
 
 
@@ -25,7 +25,9 @@ export const Location = styled.section`
     font-size: 2rem;
     color: #fff;
     margin-bottom: 1rem;
+    font-weight: lighter;
     font-family: 'Impact', sans-serif;
+    margin-left: 1.5vw;
   }
 
   iframe {
@@ -35,11 +37,26 @@ export const Location = styled.section`
     border-radius: 30px;
     margin: 1.5rem;
   }
-
+  
+  .caixinha{
+    display: flex;
+    gap: 0.5vw;
+    margin-left: 1.5vw;
+  }
+  
+  .infos{
+    margin: 0;
+    
+  }
+  
   p {
     font-size: 1rem;
-    color: #333;
+    color: #fff;
     line-height: 1.5;
+  }
+
+  @media(max-width: 768px){
+    display: none;
   }
 `;
 
@@ -51,14 +68,15 @@ export const Form = styled.form`
   gap: 1rem;
   background-color: white;
   padding: 2rem;
-  
 `;
 
 
-export const Title = styled.h2`
-  font-size: 1.5rem;
+export const Title = styled.h1`
+  font-size: 2rem;
+  margin-bottom: 0;
+  font-weight: normal;
+  font-family: 'Impact', sans-serif;  
   color: #006343;
-  margin-bottom: 1rem;
 `;
 
 
