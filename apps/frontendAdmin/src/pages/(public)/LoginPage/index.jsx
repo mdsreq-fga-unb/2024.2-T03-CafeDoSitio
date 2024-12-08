@@ -19,7 +19,7 @@ const LoginPage = () => {
   const handleChangePassword = (e) => {
     setPassord(e.target.value);
   }
-  async function login(e){
+  async function login(){
     try {
       const response = await loginUser(email, password);
       localStorage.setItem("authToken", response.data.token);

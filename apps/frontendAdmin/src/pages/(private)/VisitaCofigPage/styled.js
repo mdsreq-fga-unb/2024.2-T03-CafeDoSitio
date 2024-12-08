@@ -20,20 +20,3 @@ export const InfoZone = styled.div`
     color: #555;
   }
 `;
-
-export const ConfigsZone = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-`;
-
-export const OptionGroup = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  h2{
-    color: #555;
-    margin: 0 0 30px 0;
-  }
-`;
-

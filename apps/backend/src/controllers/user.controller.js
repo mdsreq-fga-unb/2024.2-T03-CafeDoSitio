@@ -47,15 +47,15 @@ const loginUser = async (req, res) => {
     if ( user.length == 0)
       return res.status(404).send({ message: 'Usuário não encontrado!'});
 
-    if (!user[0].password)
+    if (!user[0].password) {
+      const token = userService.generateToken(user);
       return res.status(200).send({ message: 'Usuário encontrado, mas sem senha!', case: 2, token });
-
-    if (user[0].password != bcrypt.hashSync(password, salt)) {
-      return res.status(400).send({ message: 'Senha ou email inválido!'});
     }
 
-    const token = userService.generateToken(user.id);
+    if (user[0].password != bcrypt.hashSync(password, salt))
+      return res.status(400).send({ message: 'Senha ou email inválido!'});
 
+    const token = userService.generateToken(user);
     return res.status(200).send({ message: 'Usuário encontrado!', case: 1, token });
   } catch (err) {
     return res.status(500).send({ message: err.message });

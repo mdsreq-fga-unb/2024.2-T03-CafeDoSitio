@@ -1,13 +1,38 @@
 import React from "react";
-import { ConteudoGeral, LoginCard } from "./styled";
+import { ConfigsZone, InfoZone, OptionGroup, Space } from "./styled";
+import { useNavigate } from "react-router-dom";
+import { FaCalendar } from "react-icons/fa";
+import Paginacao from "../../../components/Paginacao";
+import Card from "../../../components/Card";
+import { ROUTES } from "../../../routes/RoutesConstants";
 
 const HomePage = () => {
+
+  const navigate = useNavigate();
+
+  const navigateToVisita = () => {
+    navigate(ROUTES.VISITA);
+  };
+
   return(
-    <ConteudoGeral>
-      <LoginCard>
-        <h1>Olá</h1>
-      </LoginCard>
-    </ConteudoGeral>
+    <>
+
+      <Paginacao>Central de Administração</Paginacao>
+      <Space />
+
+      <InfoZone>
+        <h1>Central de Administração</h1>
+        <span>Selecione o que configurar no site Institucional da Família do Sítio.</span>
+      </InfoZone>
+
+      <ConfigsZone>
+        <OptionGroup>
+          <h2>Visitas Técnicas</h2>
+          <Card onClick={navigateToVisita} title={"Visualizar Disponibilidades"} description={"Acesse o calendário e verifique as suas disponibilidades, status e informações de suas visitas técnicas."}><FaCalendar className="icon"/></Card>
+        </OptionGroup>
+      </ConfigsZone>
+  
+    </>
   );
 };
 

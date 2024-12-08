@@ -10,8 +10,6 @@ const AuthGuard = ({ children }) => {
     return <Navigate to={ROUTES.LOGIN} replace />;
   }
 
-  console.log(children);
-
   return children;
 };
 
