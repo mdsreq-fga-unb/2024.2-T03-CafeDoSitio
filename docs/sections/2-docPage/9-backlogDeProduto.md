@@ -22,11 +22,13 @@ US10   | _À DESENVOLVER_
 US11   | Eu como usuário gostaria de criar uma disponilibidade de visita técnica em um calendário no sistema, para que o público externo, como consumidores, possam selecionar este dia para agendar sua visita à empresa.
 US12   | _À DESENVOLVER_
 US13   | _À DESENVOLVER_
-US14   | _À DESENVOLVER_
+US14   | Eu como usuário gostaria de cadastrar meu agendamento em um dos dias disponíveis de visitação, para realizar a visita técnica de forma presencial.
 US15   | Eu como usuário, devo ser capaz de fazer uma reclamação, um elogio, uma dúvida, sugestão ou parcerias para que os colaboradores da Família do Sítio esteja ciente e eu receba um retorno sobre minha solicitação.
 US16   | _À DESENVOLVER_
 US17   | _À DESENVOLVER_
 US18   | _À DESENVOLVER_
+US19   | Eu como Funcionário da Família do Sítio, devo ser capaz de fazer login com meu email empresarial e senha, para que eu possa acessar as funções da Central de Administração.
+US20   | Eu como Funcionário da Família do Sítio, devo ser capaz de criar ou apagar o acesso de novas contas no sistema, para que eu possa controlar o acesso à central administrativa.
 
 ### 9.1.1 - Relacoinado aos Requisitos Não Funcionais (que exigem implementação de uma interface):
 Código | Título do Requisito de Usabilidade (Relacionada à implementação de uma interface)
@@ -89,6 +91,8 @@ US15   | Nível 2                    | Nível 3                           | Nív
 US16   | Nível 2                    | Nível 3                           | Nível 2     |
 US17   | Nível 3                    | Nível 3                           | Nível 3     |
 US18   | Nível 2                    | Nível 1                           | Nível 2     |
+US19   | Nível 2                    | Nível 3                           | Nível 1     |
+US20   | Nível 2                    | Nível 3                           | Nível 1     |
 
 ## 9.3 - MVP
 
@@ -101,30 +105,28 @@ Decidido durante a produção do Workshop Lean Inception, foi estabelecido o MVP
 Com esta técnica, foi possível elencar as funcionalidades de maior valor agregado e impacto na experiência do usuário para as primeiras produções feita pelo time. Dessa forma, as funcionalidades **que estão em MVP**, são:
 
 ### 9.3.1 - Requisitos Funcionais
-Código | Nível de Esforço           | Nível de Valor Agregado           | Nível de UX
------- | -------------------------  | --------------------------------- | -----------
-US01   | Nível 1                    | Nível 3                           | Nível 3 
-US02   | Nível 1                    | Nível 2                           | Nível 1
-US04   | Nível 2                    | Nível 3                           | Nível 3
-US05   | Nível 1                    | Nível 1                           | Nível 2
-US06   | Nível 2                    | Nível 2                           | Nível 3
-US08   | Nível 1                    | Nível 3                           | Nível 2
-US11   | Nível 2                    | Nível 2                           | Nível 3
-US13   | Nível 1                    | Nível 2                           | Nível 3
-US14   | Nível 2                    | Nível 3                           | Nível 3
-US15   | Nível 2                    | Nível 3                           | Nível 3
-US16   | Nível 2                    | Nível 3                           | Nível 2
-US17   | Nível 3                    | Nível 3                           | Nível 3
+
+- **US01:** Criar Blog;
+- **US02:** Editar Blog;
+- **US04:** Categorizar Blog;
+- **US05:** Fitrar Blog;
+- **US06:** Pesquisar Blog;
+- **US08:** Recomendar outros Blogs;
+- **US11:** Configurar disponibilidade de Visita;
+- **US14:** Agendar visita técnica;
+- **US15:** Realizar SAC;
+- **US16:** Localizar Produtos;
+- **US19:** Fazer login na Central Administrativa;
+- **US20:** Gerenciar acessos à Central Administrativa.
 
 ### 9.3.2 - Requisitos não Funcionais de Usabilidade (Relacionadas à implementação de uma Interface)
-Código   | Nível de Esforço         | Nível de Valor Agregado           | Nível de UX
--------- | -----------------------  | --------------------------------- | -----------
-RQNF01   | Nível 1                  | Nível 3                           | Nível 2         
-RQNF02   | Nível 1                  | Nível 3                           | Nível 3
-RQNF03   | Nível 1                  | Nível 3                           | Nível 1
-RQNF04   | Nível 1                  | Nível 3                           | Nível 3
-RQNF05   | Nível 1                  | Nível 3                           | Nível 2
-RQNF06   | Nível 1                  | Nível 3                           | Nível 3
+
+- **RQNF01:** Visualizar história da Empresa;
+- **RQNF02:** Visualizar produtos da Empresa;
+- **RQNF03:** Visualizar ações sociais da Empresa;
+- **RQNF04:** Visualizar contatos da empresa;
+- **RQNF05:** Visualizar vagas de emprego da Empresa;
+- **RQNF06:** Visualizar detalhes do E-Commerce.
 
 
 # Referências Bibliográficas:
@@ -138,3 +140,4 @@ RQNF06   | Nível 1                  | Nível 3                           | Nív
 |---- | ------ | --------- | ----- | --------- |
 | 03/12/24 | 1.0 | Criação do documento | Daniel Rodrigues | DEFINIR AQUI
 | 06/12/24 | 1.1 | Desenvolvimento de novos tópicos | Daniel Rodrigues | DEFINIR AQUI
+| 09/12/24 | 1.2 | Corrigindo tópicos e adicinando novos itens do backlog | Daniel Rodrigues | DEFINIR AQUI

@@ -57,6 +57,7 @@ theme:
     - navigation.instant
     - navigation.top
     - navigation.tracking
+    - toc.integrate
 
   palette:
     - scheme: default
