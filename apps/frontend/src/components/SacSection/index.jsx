@@ -73,9 +73,9 @@ function Sac() {
                 <div className="caixinha">
                     <IoIosPin color="white" size={30}/>
                     <div className="infos">
-                        <p style={{marginTop: 0, marginBottom: 3}}>• QS 09 RUA 101 LOTE 04 - Taguatinga</p>
-                        <p style={{marginTop: 0, marginBottom: 3}}>• Distrito Federal - CNPJ: 00.452.002/0001-48</p>
-                        <p style={{marginTop: 0, marginBottom: 0}}>• Café do Sítio Indústria e Comércio Ltda</p>
+                        <p style={{marginTop: 0, marginBottom: 3}}>QS 09 RUA 101 LOTE 04 - Taguatinga</p>
+                        <p style={{marginTop: 0, marginBottom: 3}}>Distrito Federal - CNPJ: 00.452.002/0001-48</p>
+                        <p style={{marginTop: 0, marginBottom: 0}}>Café do Sítio Indústria e Comércio Ltda</p>
                     </div>
                 </div>
                 {/* Esse componente é preciso colocar pra que apareça o pop up de que o forms foi enviado */}

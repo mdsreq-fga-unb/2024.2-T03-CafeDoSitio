@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const SacSection = styled.section`
   display: flex;
   flex-direction: column;
-  margin: 5vh 20vh;
+  margin: 10vh 8vh;
+  width: auto;
   gap: 3rem;
   background-color: #F39729;
   border: 2px solid #ddd;
@@ -22,7 +23,7 @@ export const Location = styled.section`
   margin: 1vw;
   
   h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #fff;
     margin-bottom: 1rem;
     font-weight: lighter;
@@ -68,12 +69,20 @@ export const Form = styled.form`
   gap: 1rem;
   background-color: white;
   padding: 2rem;
+  border-top-right-radius: 28px;
+  border-bottom-right-radius: 28px;
+
+
+  h5 {
+  font-weight: 300;
+  font-size: 1rem;
+  }
 `;
 
 
 export const Title = styled.h1`
-  font-size: 2rem;
-  margin-bottom: 0;
+  font-size: 2.5rem;
+  margin: 0;
   font-weight: normal;
   font-family: 'Impact', sans-serif;  
   color: #006343;
