@@ -49,6 +49,7 @@
 | RNF04  | Visualizar contatos da Empresa                    |
 | RNF05  | Visualizar vagas de emprego da Empresa            |
 | RNF06  | Visualizar instruções do E-commerce               |
+
 #### Usabilidade
 
 | Código | Título do Requisito não Funcional                                                                |
