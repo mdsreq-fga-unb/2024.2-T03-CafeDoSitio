@@ -2,6 +2,7 @@
 
 ## 6.1 - Composição da Equipe
 
+
 | Papel     | Descrição      | Responsável       | Participantes       |
 |:--------------:|:--------------:|:--------------:|:--------------:|
 | Product Owner  | Responsável por gerenciar o progresso do projeto, atuando como ponto de conexão entre o cliente e a equipe. Além disso, o Product Owner monitora os prazos e prioridades.   | Daniel Rodrigues  |  --   |
@@ -10,7 +11,9 @@
 | Desenvolvedor Backend  | Desenvolve a lógica do servidor, gerencia banco de dados e integrações.   | Daniel Rodrigues    | Arthur, Marcella    |
 | Analista de Requisitos |  Identifica, documenta e gerencia as necessidades e expectativas do cliente. | Ana Carolina | Arthur, Daniel, João, Manuella, Marcella |
 
+
 ## 6.2 Comunicação
+
 
 ### > Ferramentas de Comunicação:
 
