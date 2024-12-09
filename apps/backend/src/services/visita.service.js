@@ -7,5 +7,6 @@ const findService = (filters) => Visita.find(filters);
 export default {
     createService,
     findAllService,
+    findService,
 };
 

@@ -9,6 +9,10 @@ const VisitaSchema = new mongoose.Schema({
         type: Date,
         require: true,
     },
+    status: {
+        type: String,
+        require: true,
+    },
     nameVisitor: {
         type: String,
         require: false,

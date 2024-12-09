@@ -2,9 +2,11 @@ import VisitaService from"../services/visita.service.js";
 
 const createVisita = async (req, res) => {
     try {
-        const { startDateTime, endDateTime } = req.body;
+        const { startDateTime, endDateTime, status } = req.body;
 
-        if(!startDateTime || !endDateTime)
+        console.log(req.body);
+
+        if(!startDateTime || !endDateTime || !status)
             return res.status(400).json({ message: "Preencha todos os campos para criar a disponibilidade!"});
 
         const visita = await VisitaService.createService(req.body);

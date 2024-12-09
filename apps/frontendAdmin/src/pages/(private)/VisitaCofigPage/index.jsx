@@ -37,6 +37,7 @@ const VisitaConfigPage = () => {
       const payload = {
         startDateTime: formattedStart, 
         endDateTime: formattedEnd,
+        status: "disponivel",
       };
 
       await createVisita(payload);
