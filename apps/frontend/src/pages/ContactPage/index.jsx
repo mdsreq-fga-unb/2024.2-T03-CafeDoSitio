@@ -22,19 +22,19 @@ const ContactPage = () => {
   const contacts = [
     {
       title: "PARA FALAR SOBRE NOSSOS PRODUTOS",
-      description: "Utilize dúvidas, sugestões ou reclamações sobre nossos produtos, embalagens ou ponto de venda.",
+      description: "Para dúvidas, sugestões ou reclamações sobre nossos produtos, embalagens ou ponto de venda.",
       email: "qualidade@familiadositio.com.br",
       icon: <FaEnvelope />
     },
     {
       title: "CENTRAL DE ATENDIMENTO AO CONSUMIDOR",
-      description: "Utilize dúvidas, sugestões ou reclamações sobre nossos produtos, embalagens ou ponto de venda.",
+      description: "Para suporte geral, informações ou esclarecimento de dúvidas ao consumidor.",
       email: "atendimento@familiadositio.com.br",
       icon: <FaEnvelope />
     },
     {
       title: "CENTRAL DE RELACIONAMENTO COM O LOJISTA",
-      description: "Utilize dúvidas, sugestões ou reclamações sobre nossos produtos, embalagens ou ponto de venda.",
+      description: "Para pedidos, negociações, informações comerciais ou formação de parceria de novos lojistas.",
       email: "comercial@familiadositio.com.br",
       icon: <FaEnvelope />
     },
