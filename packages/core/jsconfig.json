@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@familiadositio/services/*": ["src/services/*"]
+    }
+  },
+  "include": ["src/**/*"]
+}
