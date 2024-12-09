@@ -18,7 +18,7 @@ const createVisita = async (req, res) => {
     }
 };
 
-const findAllVisita = async (req, body) => {
+const findAllVisita = async (req, res) => {
     try {
         const visita = await VisitaService.findAllService();
 
