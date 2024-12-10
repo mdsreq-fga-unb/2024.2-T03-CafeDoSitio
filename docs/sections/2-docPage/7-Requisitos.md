@@ -88,6 +88,7 @@ Os requisitos não funcionais foram organizados com base no modelo URPS+, que cl
 Data     | Versão | Descrição           | Autor    | Revisores 
 -------- | ------ | ------------------- | -------- | ---------
 09/12/24 | 1.0 | Adição das tabelas de requisitos | Manuella Valadares | Ana Carolina
+10/12/24 | 1.1 | Redesign da página dos requisitos | Daniel Rodrigues | Manuella Valadares
 
 
 
