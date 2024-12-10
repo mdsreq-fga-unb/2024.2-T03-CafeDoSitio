@@ -1,2 +1,2 @@
 export { loginUser, createUser } from "./userService.js"; 
-export { createVisita } from "./visitaService.js";
+export { createVisita, findAllVisita } from "./visitaService.js";

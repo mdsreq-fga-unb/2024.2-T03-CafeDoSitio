@@ -23,8 +23,9 @@ const createVisita = async (req, res) => {
 const findAllVisita = async (req, res) => {
     try {
         const visita = await VisitaService.findAllService();
-
-        return res.send(200).send({ message: "Visitas encontradas!", visita });
+        
+        return res.status(200).send({ message: "Visitas encontradas!", visita });
+        
     } catch (err) {
         return res.send(500).send({ message: err.message });
     }

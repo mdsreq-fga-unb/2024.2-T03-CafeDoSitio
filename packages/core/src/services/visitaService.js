@@ -16,3 +16,17 @@ export function createVisita(body) {
 
   return response;
 };
+
+export function findAllVisita()
+{
+  const visitas = axios.get(
+    `${baseURL}/visita/findAllVisita`,
+    {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("authToken")}`,
+      }
+    }
+  )
+  
+  return visitas; 
+};//
