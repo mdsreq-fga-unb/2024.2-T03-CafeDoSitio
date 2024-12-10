@@ -69,30 +69,43 @@ Em outras palavras, caso o nível de esforço seja nível 1, por exemplo, isto s
     - **2:** Oferece uma experiência moderadamente impactante, com boa usabilidade e design que atende às expectativas gerais do usuário.
     - **3:** Oferece uma experiência altamente impactante, proporcionando uma interação satisfatória, agregando grande valor ao produto.
 
+Para calcular a **prioridade** das funcionalidades com base nos três níveis de avaliação (Esforço, Valor Agregado e UX), iremos utilizar uma fórmula que combine os pesos de cada critério. O objetivo é priorizar funcionalidades que agreguem mais valor e ofereçam uma boa experiência ao usuário, mas com menor esforço.
+
+**Prioridade = (2 * Valor_Agregado) + (2 * UX) - Esforço**
+
+- **Valor Agregado e UX** têm peso **2**, pois são mais importantes para o impacto do produto.
+- **Esforço** é subtraído, pois funcionalidades com menor esforço são mais prioritárias.
+
 Os requisitos em sua devida priorização é:
 
-Código | Nível de Esforço           | Nível de Valor Agregado           | Nível de UX | Prioridade
------- | -------------------------  | --------------------------------- | ----------- | ----------
-US01   | Nível 1                    | Nível 3                           | Nível 3     |
-US02   | Nível 1                    | Nível 2                           | Nível 1     |
-US03   | Nível 2                    | Nível 1                           | Nível 2     |
-US04   | Nível 2                    | Nível 3                           | Nível 3     |
-US05   | Nível 1                    | Nível 1                           | Nível 2     |
-US06   | Nível 2                    | Nível 2                           | Nível 3     |
-US07   | Nível 2                    | Nível 1                           | Nível 2     |
-US08   | Nível 1                    | Nível 3                           | Nível 2     |
-US09   | Nível 1                    | Nível 2                           | Nível 2     |
-US10   | Nível 1                    | Nível 2                           | Nível 2     |
-US11   | Nível 2                    | Nível 2                           | Nível 3     |
-US12   | Nível 3                    | Nível 2                           | Nível 3     |
-US13   | Nível 1                    | Nível 2                           | Nível 3     |
-US14   | Nível 2                    | Nível 3                           | Nível 3     |
-US15   | Nível 2                    | Nível 3                           | Nível 3     |
-US16   | Nível 2                    | Nível 3                           | Nível 2     |
-US17   | Nível 3                    | Nível 3                           | Nível 3     |
-US18   | Nível 2                    | Nível 1                           | Nível 2     |
-US19   | Nível 2                    | Nível 3                           | Nível 1     |
-US20   | Nível 2                    | Nível 3                           | Nível 1     |
+
+Código   | Nível de Esforço             | Nível de Valor Agregado             | Nível de UX   | Prioridade
+:------: | :-------------------------:  | :---------------------------------: | :-----------: | :----------:
+US01     | Nível 1                      | Nível 3                             | Nível 3       |11
+US02     | Nível 1                      | Nível 2                             | Nível 1       |5
+US04     | Nível 2                      | Nível 3                             | Nível 3       |10
+US05     | Nível 1                      | Nível 1                             | Nível 2       |4
+US06     | Nível 2                      | Nível 2                             | Nível 3       |8
+US08     | Nível 1                      | Nível 3                             | Nível 2       |9
+US11     | Nível 2                      | Nível 2                             | Nível 3       |8
+US14     | Nível 2                      | Nível 3                             | Nível 3       |10
+US15     | Nível 2                      | Nível 3                             | Nível 3       |10
+US16     | Nível 3                      | Nível 3                             | Nível 3       |9  
+US19     | Nível 3                      | Nível 3                             | Nível 3       |9
+US20     | Nível 2                      | Nível 3                             | Nível 3       |10
+RQNF01   | Nível 1                      | Nível 3                             | Nível 2       |9
+RQNF02   | Nível 1                      | Nível 3                             | Nível 3       |11
+RQNF03   | Nível 1                      | Nível 3                             | Nível 1       |7
+RQNF04   | Nível 1                      | Nível 3                             | Nível 3       |11
+RQNF05   | Nível 1                      | Nível 3                             | Nível 2       |9
+RQNF06   | Nível 1                      | Nível 3                             | Nível 3       |11
+
+<!-- US03   | Nível 2                    | Nível 1                           | Nível 2     |3 -->
+<!-- US12   | Nível 3                    | Nível 2                           | Nível 3     |7 -->
+<!-- US13   | Nível 1                    | Nível 2                           | Nível 3     |9 -->
+<!-- US09   | Nível 1                    | Nível 2                           | Nível 2     |7 -->
+<!-- US10   | Nível 1                    | Nível 2                           | Nível 2     |7 -->
+
 
 ## 9.3 - MVP
 
@@ -141,3 +154,4 @@ Com esta técnica, foi possível elencar as funcionalidades de maior valor agreg
 | 03/12/24 | 1.0 | Criação do documento | Daniel Rodrigues | DEFINIR AQUI
 | 06/12/24 | 1.1 | Desenvolvimento de novos tópicos | Daniel Rodrigues | DEFINIR AQUI
 | 09/12/24 | 1.2 | Corrigindo tópicos e adicinando novos itens do backlog | Daniel Rodrigues | DEFINIR AQUI
+| 09/12/24 | 1.3 | Incluindo o calculo de priorização | Manuella, Arthur, João | Daniel
