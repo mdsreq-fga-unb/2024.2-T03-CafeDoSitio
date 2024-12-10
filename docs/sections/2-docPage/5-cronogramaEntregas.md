@@ -1,4 +1,5 @@
-# 4. Cronograma e Entregas
+# 5. Cronograma e Entregas
+
 
 Baseando-se na estratégia de desenvolvimento de software selecionado, mencionado no tópico 3 e consultando os códigos das User Stories da seção [Visão do Backlog](../4-sprints/VisaoGeralBacklog.md), o cronograma preliminar do projeto pode ser visualizada logo abaixo:
 
