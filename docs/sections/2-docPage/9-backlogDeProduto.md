@@ -11,26 +11,25 @@ Código | User Story
 ------ | ----------------------------------------------------
 US01   | Eu como usuário devo ser capaz desenvolver um conteúdo, com permissão à formatação de texto avançados e inserição imagens para que seja publicado como blog no site da Família do Sítio.
 US02   | _À DESENVOLVER_
-US03   | _À DESENVOLVER_
+US03   | **INCREMENTO (User Story não será escrito)**
 US04   | _À DESENVOLVER_
 US05   | _À DESENVOLVER_
 US06   | _À DESENVOLVER_
-US07   | _À DESENVOLVER_
+US07   | **INCREMENTO (User Story não será escrito)**
 US08   | _À DESENVOLVER_
-US09   | _À DESENVOLVER_
-US10   | _À DESENVOLVER_
+US09   | **INCREMENTO (User Story não será escrito)**
+US10   | **INCREMENTO (User Story não será escrito)**
 US11   | Eu como usuário gostaria de criar uma disponilibidade de visita técnica em um calendário no sistema, para que o público externo, como consumidores, possam selecionar este dia para agendar sua visita à empresa.
-US12   | _À DESENVOLVER_
-US13   | _À DESENVOLVER_
+US12   | **INCREMENTO (User Story não será escrito)**
+US13   | **INCREMENTO (User Story não será escrito)**
 US14   | Eu como usuário gostaria de cadastrar meu agendamento em um dos dias disponíveis de visitação, para realizar a visita técnica de forma presencial.
 US15   | Eu como usuário, devo ser capaz de fazer uma reclamação, um elogio, uma dúvida, sugestão ou parcerias para que os colaboradores da Família do Sítio esteja ciente e eu receba um retorno sobre minha solicitação.
 US16   | _À DESENVOLVER_
-US17   | _À DESENVOLVER_
-US18   | _À DESENVOLVER_
-US19   | Eu como Funcionário da Família do Sítio, devo ser capaz de fazer login com meu email empresarial e senha, para que eu possa acessar as funções da Central de Administração.
-US20   | Eu como Funcionário da Família do Sítio, devo ser capaz de criar ou apagar o acesso de novas contas no sistema, para que eu possa controlar o acesso à central administrativa.
+US17   | **INCREMENTO (User Story não será escrito)**
+US18   | Eu como Funcionário da Família do Sítio, devo ser capaz de fazer login com meu email empresarial e senha, para que eu possa acessar as funções da Central de Administração.
+US19   | Eu como Funcionário da Família do Sítio, devo ser capaz de criar ou apagar o acesso de novas contas no sistema, para que eu possa controlar o acesso à central administrativa.
 
-### 9.1.1 - Relacoinado aos Requisitos Não Funcionais (que exigem implementação de uma interface):
+### 9.1.1 - Relacionado aos Requisitos Não Funcionais (Somente de Usabibilidade):
 Código | Título do Requisito de Usabilidade (Relacionada à implementação de uma interface)
 ------ | ----------------------------------------------------
 RQNF01 | O sistema deve permitir que os usuários localizem facilmente a seção que apresenta a história da empresa, com navegação intuitiva e conteúdo disposto de forma clara e acessível.
@@ -91,8 +90,8 @@ US11     | Nível 2                      | Nível 2                             
 US14     | Nível 2                      | Nível 3                             | Nível 3       |10
 US15     | Nível 2                      | Nível 3                             | Nível 3       |10
 US16     | Nível 3                      | Nível 3                             | Nível 3       |9  
-US19     | Nível 3                      | Nível 3                             | Nível 3       |9
-US20     | Nível 2                      | Nível 3                             | Nível 3       |10
+US18     | Nível 3                      | Nível 3                             | Nível 3       |9
+US19     | Nível 2                      | Nível 3                             | Nível 3       |10
 RQNF01   | Nível 1                      | Nível 3                             | Nível 2       |9
 RQNF02   | Nível 1                      | Nível 3                             | Nível 3       |11
 RQNF03   | Nível 1                      | Nível 3                             | Nível 1       |7
@@ -129,8 +128,8 @@ Com esta técnica, foi possível elencar as funcionalidades de maior valor agreg
 - **US14:** Agendar visita técnica;
 - **US15:** Realizar SAC;
 - **US16:** Localizar Produtos;
-- **US19:** Fazer login na Central Administrativa;
-- **US20:** Gerenciar acessos à Central Administrativa.
+- **US18:** Fazer login na Central Administrativa;
+- **US19:** Gerenciar acessos à Central Administrativa.
 
 ### 9.3.2 - Requisitos não Funcionais de Usabilidade (Relacionadas à implementação de uma Interface)
 
