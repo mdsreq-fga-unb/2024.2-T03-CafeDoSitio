@@ -20,24 +20,24 @@ Os requisitos funcionais descrevem as funcionalidades específicas que o sistema
 
 Os requisitos funcionais do sistema da Família do Sítio são:
 
-**US01 -** Criar Blog
-**US02 -** Editar Blog
-**US03 -** Comentar no Blog
-**US04 -** Categorizar Blog
-**US05 -** Categorizar Blog
-**US06 -** Pesquisar Blog
-**US07 -** Baixar Blog
-**US08 -** Recomendar outros Blogs
-**US09 -** Conectar Blog com Produtos da Empresa
-**US10 -** Compartilhar Blog
-**US11 -** Configurar disponibilidade de Visita
-**US12 -** Realizar Tour Virtual
-**US13 -** Emitir certificado de Visita
-**US14 -** Agendar Visita Presencial
-**US15 -** Realizar SAC
-**US16 -** Localizar Produtos
-**US17 -** Lembrar usuários de Visita
-**US18 -** Fazer login na Central Administrativa
+**US01 -** Criar Blog <br>
+**US02 -** Editar Blog <br>
+**US03 -** Comentar no Blog <br>
+**US04 -** Categorizar Blog <br>
+**US05 -** Categorizar Blog <br>
+**US06 -** Pesquisar Blog <br>
+**US07 -** Baixar Blog <br>
+**US08 -** Recomendar outros Blogs <br>
+**US09 -** Conectar Blog com Produtos da Empresa <br>
+**US10 -** Compartilhar Blog <br>
+**US11 -** Configurar disponibilidade de Visita <br>
+**US12 -** Realizar Tour Virtual <br>
+**US13 -** Emitir certificado de Visita <br>
+**US14 -** Agendar Visita Presencial <br>
+**US15 -** Realizar SAC <br>
+**US16 -** Localizar Produtos <br>
+**US17 -** Lembrar usuários de Visita <br>
+**US18 -** Fazer login na Central Administrativa <br>
 **US19 -** Gerenciar acesso à Central de Administração
 
 ## Requisitos Não Funcionais
@@ -47,33 +47,33 @@ Os requisitos não funcionais foram organizados com base no modelo URPS+, que cl
 ### Usabilidade
 
 #### Necessários de estar no backlog:
-**RNF01 -** O sistema deve permitir que os usuários localizem facilmente a seção que apresenta a história da empresa, com navegação intuitiva e conteúdo disposto de forma clara e acessível.
-**RNF02 -** A interface deve exibir os produtos da empresa de forma visualmente organizada e categorizada, facilitando a identificação e compreensão de cada item pelo usuário.
-**RNF03 -** As informações sobre ações sociais da empresa devem estar disponíveis de maneira acessível e atrativa, garantindo clareza na comunicação e fácil navegação para o usuário.
-**RNF04 -** Os contatos da empresa devem ser apresentados em um formato padronizado e de fácil compreensão, com suporte a links clicáveis para e-mail, telefone e redes sociais.
-**RNF05 -** As vagas de emprego da empresa devem ser exibidas de forma clara, com uma organização que facilitem a busca por oportunidades compatíveis com o interesse do usuário, instruindo o usuário como prosseguir com o processo no site terceiro empregare.
-**RNF06 -** As instruções do E-commerce devem ser descritas de maneira clara, com linguagem simples e objetiva, utilizando elementos visuais, como ícones e guias passo a passo, para melhorar a compreensão.
+**RNF01 -** O sistema deve permitir que os usuários localizem facilmente a seção que apresenta a história da empresa, com navegação intuitiva e conteúdo disposto de forma clara e acessível. <br>
+**RNF02 -** A interface deve exibir os produtos da empresa de forma visualmente organizada e categorizada, facilitando a identificação e compreensão de cada item pelo usuário. <br>
+**RNF03 -** As informações sobre ações sociais da empresa devem estar disponíveis de maneira acessível e atrativa, garantindo clareza na comunicação e fácil navegação para o usuário. <br>
+**RNF04 -** Os contatos da empresa devem ser apresentados em um formato padronizado e de fácil compreensão, com suporte a links clicáveis para e-mail, telefone e redes sociais. <br>
+**RNF05 -** As vagas de emprego da empresa devem ser exibidas de forma clara, com uma organização que facilitem a busca por oportunidades compatíveis com o interesse do usuário, instruindo o usuário como prosseguir com o processo no site terceiro empregare. <br>
+**RNF06 -** As instruções do E-commerce devem ser descritas de maneira clara, com linguagem simples e objetiva, utilizando elementos visuais, como ícones e guias passo a passo, para melhorar a compreensão. <br>
 
 #### Apenas referências para a produção:
-**RNF07 -** A interface do usuário deve ser intuitiva e acessível para pessoas com diferentes níveis de habilidade técnica.
-**RNF08 -** O tempo de aprendizado para novos administradores não deve exceder 2 horas com um tutorial básico.
-**RNF09 -** As cores utilizadas no software não podem estar fora da paleta de cores da Família do Sítio, com exceção da cor Preta e Branca.
-**RNF10 -** A tipografia utilizada no software deverá estar dentro das estabelecidas no manual de marca da Família do Sítio: Myriad Pro ou Impact.
+**RNF07 -** A interface do usuário deve ser intuitiva e acessível para pessoas com diferentes níveis de habilidade técnica. <br>
+**RNF08 -** O tempo de aprendizado para novos administradores não deve exceder 2 horas com um tutorial básico. <br>
+**RNF09 -** As cores utilizadas no software não podem estar fora da paleta de cores da Família do Sítio, com exceção da cor Preta e Branca. <br>
+**RNF10 -** A tipografia utilizada no software deverá estar dentro das estabelecidas no manual de marca da Família do Sítio: Myriad Pro ou Impact. 
 
 ### Confiabilidade
 
 
-**RNF11 -** O sistema deve estar disponível pelo menos 99,5% do tempo por mês (uptime). 
+**RNF11 -** O sistema deve estar disponível pelo menos 99,5% do tempo por mês (uptime). <br>
 **RNF12 -** Em caso de falhas no servidor, o sistema deve se recuperar dentro de 10 minutos.
 
 ### Desempenho
 
-**RNF13 -** O sistema deve suportar pelo menos 1000 acessos simultâneos sem degradação perceptível de desempenho.
+**RNF13 -** O sistema deve suportar pelo menos 1000 acessos simultâneos sem degradação perceptível de desempenho. <br>
 **RNF14 -** Consultas no feed de blogs devem ser respondidas em até 1 segundo.
 
 ### Suportabilidade
 
-**RNF15 -** O sistema deve ser compatível com as últimas duas versões dos navegadores Chrome, Firefox, Edge e Safari.
+**RNF15 -** O sistema deve ser compatível com as últimas duas versões dos navegadores Chrome, Firefox, Edge e Safari. <br>
 
 # Bibliografia:
 
