@@ -21,22 +21,21 @@
 | Código | Título da Funcionalidade                            |
 |--------|----------------------------------------------------|
 | RF07   | Configurar disponibilidade de Visita               |
-| RF08   | Emitir certificado de visita                      |
-| RF09   | Agendar visita Presencial                         |
+| RF08   | Agendar visita Presencial                         |
 
 #### [EP03] Administração
 
 | Código | Título da Funcionalidade                            |
 |--------|----------------------------------------------------|
-| RF10   | Gerenciar acessos à Central de Administração                    |
-| RF11   | Fazer login na Central Administrativa                    |
+| RF09   | Gerenciar acessos à Central de Administração                    |
+| RF10   | Fazer login na Central Administrativa                    |
 
 
 #### [EP04] Atendimento
 | Código | Título da Funcionalidade                            |
 |--------|----------------------------------------------------|
-| RF12   | Localizar Produtos|
-| RF13   | Realizar SAC |
+| RF11   | Localizar Produtos|
+| RF12   | Realizar SAC |
 
 ## Requisitos Não Funcionais
 
