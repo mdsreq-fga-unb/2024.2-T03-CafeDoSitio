@@ -45,7 +45,14 @@ const sendMailSac = async (formData) => {
     }
 };
 
+const getAllSacs = async () => {
+    
+    const response = await axios.get(`${baseURL}`);
+    return response;             
+}
+
 export default {
     postSac,
-    sendMailSac
+    sendMailSac,
+    getAllSacs
 };

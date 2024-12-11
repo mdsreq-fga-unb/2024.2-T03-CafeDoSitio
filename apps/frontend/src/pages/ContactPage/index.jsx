@@ -18,6 +18,12 @@ import {
 } from './styled';
 import { FaEnvelope, FaPhoneAlt, FaInstagram, FaFacebook, FaYoutube, FaLinkedin, FaComments } from "react-icons/fa"; // Ícones do Font Awesome
 import { FaXTwitter } from "react-icons/fa6";
+// esses importes aqui embaixo são só um teste pra
+// mostrar na tela os sacs que foram feitos
+// vou alterar depois pra página isso ser feito na página de adm
+import { Card } from '../../components/Card';
+import sacService from '../../services/sac.service.js';
+import { useState, useEffect } from 'react';
 
 const ContactPage = () => {
   const contacts = [
@@ -41,14 +47,29 @@ const ContactPage = () => {
     },
   ];
 
+  //Mostrando Sacs na tela
+  const [sacs, setSacs] = useState([]);
+
+  async function findAllSacs() {
+    const response = await sacService.getAllSacs();
+    setSacs(response.data);
+  }
+
+  //Aqui que ativa a função de mostrar os sacs
+  // useEffect(() => {
+  //   findAllSacs();
+  // }, []);
+
+
+
   return (
     <>
-      <Header pagina={"CONTATOS"}/>
-      <Paginacao text={"FAMÍLIA DO SÍTIO > CONTATOS"}/>
+      <Header pagina={"CONTATOS"} />
+      <Paginacao text={"FAMÍLIA DO SÍTIO > CONTATOS"} />
 
       <InfoSection className='container'>
         <h1>FALE CONOSCO</h1>
-        <p>Precisa de ajuda com alguma dúvida, sugestão ou reclamação?<br/>Utilize nossos canais de atendimento:</p>
+        <p>Precisa de ajuda com alguma dúvida, sugestão ou reclamação?<br />Utilize nossos canais de atendimento:</p>
       </InfoSection>
 
       <ContactSection>
@@ -58,7 +79,7 @@ const ContactPage = () => {
               <h1>{contact.title}</h1>
               <p>{contact.description}</p>
               <EmailZone>
-              <FaEnvelope size={20} color="#006343"/>
+                <FaEnvelope size={20} color="#006343" />
                 <EmailLink href={`mailto:${contact.email}`}>
                   {contact.email}
                 </EmailLink>
@@ -71,15 +92,15 @@ const ContactPage = () => {
       <FaleCom>
         <div className='marcador'>
           <FaComments size={60} color="white" />
-          <h2>FALE COM < br/> A FAMÍLIA</h2>
+          <h2>FALE COM < br /> A FAMÍLIA</h2>
         </div>
         <ContactInfo>
           <div className="phone">
-            <FaPhoneAlt size={28} color="#006343"/>
+            <FaPhoneAlt size={28} color="#006343" />
             <label> (61) 2108-0101</label>
           </div>
           <div className='email_zone'>
-            <FaEnvelope size={28} color="#006343"/>
+            <FaEnvelope size={28} color="#006343" />
             <a href="mailto:atendimento@familiadositio.com.br" class="email">atendimento@familiadositio.com.br</a>
           </div>
         </ContactInfo>
@@ -115,6 +136,19 @@ const ContactPage = () => {
         </Links>
       </FaleCom>
       <Sac />
+      {/*mapeando o vetor de sacs*/}
+      <div style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+      }}>
+        {sacs.map((item, index) => {
+          console.log(sacs);
+          return <Card key={index} sacs={item} />;
+        })}
+      </div>
+
       <Footer />
     </>
   );
