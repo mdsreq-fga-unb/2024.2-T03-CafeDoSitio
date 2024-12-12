@@ -5,7 +5,7 @@ import {
     CardMessage
 } from './styled.js'
 
-export function Card({ sacs }) {
+export function SacCard({ sacs }) {
     return (        
         <CardContainer>
             <CardHeader>{sacs.assunto}</CardHeader>

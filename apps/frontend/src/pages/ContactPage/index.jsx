@@ -18,12 +18,6 @@ import {
 } from './styled';
 import { FaEnvelope, FaPhoneAlt, FaInstagram, FaFacebook, FaYoutube, FaLinkedin, FaComments } from "react-icons/fa"; // Ícones do Font Awesome
 import { FaXTwitter } from "react-icons/fa6";
-// esses importes aqui embaixo são só um teste pra
-// mostrar na tela os sacs que foram feitos
-// vou alterar depois pra página isso ser feito na página de adm
-import { Card } from '../../components/Card';
-import sacService from '../../services/sac.service.js';
-import { useState, useEffect } from 'react';
 
 const ContactPage = () => {
   const contacts = [
@@ -46,22 +40,6 @@ const ContactPage = () => {
       icon: <FaEnvelope />
     },
   ];
-
-  //Mostrando Sacs na tela
-  const [sacs, setSacs] = useState([]);
-  const [assuntoSac, setAssuntoSac] = useState("")
-
-  async function findAllSacs() {
-    const response = await sacService.getAllSacs(`${assuntoSac}`);
-    setSacs(response.data);
-  }
-
-  //Aqui que ativa a função de mostrar os sacs
-  useEffect(() => {
-    findAllSacs();
-  }, [assuntoSac]);
-
-
 
   return (
     <>
@@ -137,32 +115,6 @@ const ContactPage = () => {
         </Links>
       </FaleCom>
       <Sac />
-
-
-      <select name="select" id="subject" value={assuntoSac} onChange={(e) => {setAssuntoSac(e.target.value);}}>
-        <option value="">Todos</option>
-        <option value="Sugestao">Sugestão</option>
-        <option value="Elogio">Elogio</option>
-        <option value="Duvida">Dúvida</option>
-        <option value="Reclamacao">Reclamação</option>
-        <option value="Parceria/Patrocinio">Parceria/Patrocínio</option>
-      </select>
-
-      <div style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-      }}>
-        {/*mapeando o vetor de sacs*/}
-        {sacs.length > 0 ? (
-                    sacs.map((item, index) => (
-                        <Card key={index} sacs={item} />
-                    ))
-                ) : (
-                    <p>Nenhum sac encontrado.</p>
-                )}
-      </div>
 
       <Footer />
     </>

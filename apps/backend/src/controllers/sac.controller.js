@@ -32,16 +32,16 @@ const sendMail = async (req, res) => {
 
     switch (assunto) {
       case 'Sugestao':
-        emailSetor = 'Sugestao@gmail.com';
+        emailSetor = 'Sugestao@email.com';
         break;
       case 'Elogio':
-        emailSetor = 'Elogio@gmail.com';
+        emailSetor = 'Elogio@email.com';
         break;
       case 'Duvida':
         emailSetor = 'duvida@email.com';
         break;
       case 'Reclamacao':
-        emailSetor = 'reclamacao@example.com';
+        emailSetor = 'reclamacao@email.com';
         break;
       case 'Parceria/Patrocinio':
         emailSetor = 'parceria@email.com';
