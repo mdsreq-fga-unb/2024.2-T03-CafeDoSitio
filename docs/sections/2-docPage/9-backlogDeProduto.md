@@ -41,7 +41,7 @@ RQNF06 | As instruções do E-commerce devem ser descritas de maneira clara, com
 
 ## 9.2 - Priorização do Backlog Geral
 
-Para a construção da priorização, a equipe utilizou uma das fases do workshop Lean Inception para auxiliar na atividade: **Revisão Técnica, de UX e de Negócio**. Nessa fase, todas as funcinalidades são classificadas em níveis de 1 à 3, onde:
+Para a construção da priorização, a equipe utilizou uma das fases do workshop Lean Inception para auxiliar na atividade: **Revisão Técnica e de Negócio**. Nessa fase, todas as funcinalidades são classificadas em níveis de 1 à 3, onde:
 
 - **1:** Classifica a funcinalidade como _Baixo_ no tópico de revisão de referência;
 - **2:** Classifica a funcinalidade como _Médio_ no tópico de revisão de referência;
@@ -61,43 +61,43 @@ Em outras palavras, caso o nível de esforço seja nível 1, por exemplo, isto s
     - **2:** Agrega valor médio ao produto, contribuindo moderadamente para a satisfação dos usuários ou objetivos do negócio.
     - **3:** Agrega alto valor, sendo essencial para o sucesso do produto e trazendo impacto significativo para os usuários ou para o negócio.
 
-<br>
-
-- **Nível de User Experience:** Indica o impacto da funcionalidade na experiência do usuário, considerando aspectos como facilidade de uso, acessibilidade, design intuitivo e satisfação ao interagir com o sistema. Cada nível indica:
-    - **1:** Oferece uma experiência básica ou pouco impactante, com uma interface funcional, mas sem refinamento ou diferenciação significativa para o usuário.
-    - **2:** Oferece uma experiência moderadamente impactante, com boa usabilidade e design que atende às expectativas gerais do usuário.
-    - **3:** Oferece uma experiência altamente impactante, proporcionando uma interação satisfatória, agregando grande valor ao produto.
-
 Para calcular a **prioridade** das funcionalidades com base nos três níveis de avaliação (Esforço, Valor Agregado e UX), iremos utilizar uma fórmula que combine os pesos de cada critério. O objetivo é priorizar funcionalidades que agreguem mais valor e ofereçam uma boa experiência ao usuário, mas com menor esforço.
 
-**Prioridade = (2 * Valor_Agregado) + (2 * UX) - Esforço**
+**Prioridade = (2 * Valor_Agregado) - Esforço**
 
-- **Valor Agregado e UX** têm peso **2**, pois são mais importantes para o impacto do produto.
+- **Valor Agregado** têm peso **2**, pois são mais importantes para o impacto do produto.
 - **Esforço** é subtraído, pois funcionalidades com menor esforço são mais prioritárias.
 
 Os requisitos em sua devida priorização é:
 
 
-Código   | Nível de Esforço             | Nível de Valor Agregado             | Nível de UX   | Prioridade
-:------: | :-------------------------:  | :---------------------------------: | :-----------: | :----------:
-US01     | Nível 1                      | Nível 3                             | Nível 3       |11
-US02     | Nível 1                      | Nível 2                             | Nível 1       |5
-US04     | Nível 2                      | Nível 3                             | Nível 3       |10
-US05     | Nível 1                      | Nível 1                             | Nível 2       |4
-US06     | Nível 2                      | Nível 2                             | Nível 3       |8
-US08     | Nível 1                      | Nível 3                             | Nível 2       |9
-US11     | Nível 2                      | Nível 2                             | Nível 3       |8
-US14     | Nível 2                      | Nível 3                             | Nível 3       |10
-US15     | Nível 2                      | Nível 3                             | Nível 3       |10
-US16     | Nível 3                      | Nível 3                             | Nível 3       |9  
-US18     | Nível 3                      | Nível 3                             | Nível 3       |9
-US19     | Nível 2                      | Nível 3                             | Nível 3       |10
-RQNF01   | Nível 1                      | Nível 3                             | Nível 2       |9
-RQNF02   | Nível 1                      | Nível 3                             | Nível 3       |11
-RQNF03   | Nível 1                      | Nível 3                             | Nível 1       |7
-RQNF04   | Nível 1                      | Nível 3                             | Nível 3       |11
-RQNF05   | Nível 1                      | Nível 3                             | Nível 2       |9
-RQNF06   | Nível 1                      | Nível 3                             | Nível 3       |11
+Código   | Nível de Esforço       | Nível de Valor Agregado             | Prioridade
+:------: | :--------------------: | :---------------------------------: | :----------:
+US01     | 1                      | 3                             | 5
+US08     | 1                      | 3                             | 5
+US04     | 2                      | 3                             | 4
+US14     | 2                      | 3                             | 4
+US15     | 2                      | 3                             | 4
+US19     | 2                      | 3                             | 4
+US02     | 1                      | 2                             | 3
+US12     | 3                      | 3                             | 3
+US16     | 3                      | 3                             | 3  
+US05     | 1                      | 1                             | 2
+US06     | 2                      | 2                             | 2
+US11     | 2                      | 2                             | 2
+US13     | 2                      | 2                             | 2
+US18     | 2                      | 2                             | 2
+US03     | 1                      | 1                             | 1
+US10     | 3                      | 2                             | 1
+US07     | 2                      | 1                             | 0
+US09     | 2                      | 1                             | 0
+US17     | 2                      | 1                             | 0
+RQNF01   | 1                      | 3                             | 5
+RQNF02   | 1                      | 3                             | 5
+RQNF03   | 1                      | 3                             | 5
+RQNF04   | 1                      | 3                             | 5
+RQNF05   | 1                      | 3                             | 5
+RQNF06   | 1                      | 3                             | 5
 
 <!-- US03   | Nível 2                    | Nível 1                           | Nível 2     |3 -->
 <!-- US12   | Nível 3                    | Nível 2                           | Nível 3     |7 -->
