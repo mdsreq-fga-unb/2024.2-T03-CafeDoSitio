@@ -118,16 +118,16 @@ Com esta técnica, foi possível elencar as funcionalidades de maior valor agreg
 
 ### 9.3.1 - Requisitos Funcionais
 
-- **US01:** Criar Blog;
-- **US02:** Editar Blog;
-- **US04:** Categorizar Blog;
-- **US05:** Fitrar Blog;
-- **US06:** Pesquisar Blog;
-- **US08:** Recomendar outros Blogs;
-- **US11:** Configurar disponibilidade de Visita;
-- **US14:** Agendar visita técnica;
-- **US15:** Realizar SAC;
-- **US16:** Localizar Produtos;
+- **US01:** Criar Post no Blog;
+- **US02:** Editar Post no Blog;
+- **US04:** Categorizar Post no Blog;
+- **US05:** Fitrar Posts no Blog;
+- **US06:** Pesquisar Posts no Blog;
+- **US08:** Recomendar outros Posts no Blog;
+- **US11:** Configurar disponibilidade de Visita Técnica à Fábrica;
+- **US14:** Agendar visita técnica à Fábrica;
+- **US15:** Enviar mensagem à empresa pela Central de Atendimento ao Cliente;
+- **US16:** Localizar por Produtos da Família do Sítio;
 - **US18:** Fazer login na Central Administrativa;
 - **US19:** Gerenciar acessos à Central Administrativa.
 
@@ -150,7 +150,8 @@ Com esta técnica, foi possível elencar as funcionalidades de maior valor agreg
 ## Histórico de Versão:
 | Data | Versão | Descrição | Autor | Revisores |
 |---- | ------ | --------- | ----- | --------- |
-| 03/12/24 | 1.0 | Criação do documento | Daniel Rodrigues | DEFINIR AQUI
-| 06/12/24 | 1.1 | Desenvolvimento de novos tópicos | Daniel Rodrigues | DEFINIR AQUI
-| 09/12/24 | 1.2 | Corrigindo tópicos e adicinando novos itens do backlog | Daniel Rodrigues | DEFINIR AQUI
+| 03/12/24 | 1.0 | Criação do documento | Daniel Rodrigues | Arthur Sousa
+| 06/12/24 | 1.1 | Desenvolvimento de novos tópicos | Daniel Rodrigues | Arthur Sousa
+| 09/12/24 | 1.2 | Corrigindo tópicos e adicinando novos itens do backlog | Daniel Rodrigues | Arthur Sousa
 | 09/12/24 | 1.3 | Incluindo o calculo de priorização | Manuella, Arthur, João | Daniel
+| 12/12/24 | 2.0 | Novos requisitos e reestruturação do backlog | Daniel Rodrigues | Arthur Sousa
