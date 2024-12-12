@@ -1,12 +1,17 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import LoginPage from './pages/LoginPage';
+import { HashRouter as Router, Route, Routes} from 'react-router-dom';
+import PublicRoutes from './routes/PublicRoutes';
+import PrivateRoutes from './routes/PrivateRoutes';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<LoginPage />} />
+        {/* ROTAS PÚBLICAS: */}
+        <Route path='/*' element={<PublicRoutes />} />
+
+        {/* ROTAS PRIVADAS: */}
+        <Route path='/admin/*' element={<PrivateRoutes />} />
       </Routes>
     </Router>
   );

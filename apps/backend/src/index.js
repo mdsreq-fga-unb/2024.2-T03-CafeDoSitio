@@ -2,7 +2,7 @@ import express from 'express';
 import connectDatabase from './database/db.js';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import connectionDatabase from './database/db.js';
+import { UserSeed } from './scripts/seeds.js'
 dotenv.config();
 
 import router from './routes/index.js';
@@ -28,7 +28,8 @@ const corsOptionsDelegate = function(req, callback) {
 app.use(cors(corsOptionsDelegate));
 app.use(express.json());
 app.use(router);
-connectionDatabase();
 
 connectDatabase();
+UserSeed();
+
 app.listen(port, () => console.log(`Servidor rodando na porta ${port}`));

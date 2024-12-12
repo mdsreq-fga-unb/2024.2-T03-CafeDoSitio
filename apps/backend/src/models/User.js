@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const UserSchema = new mongoose.Schema({
-  nameSobrenome: {
+  name: {
     type: String,
     require: true,
   },
@@ -12,13 +12,13 @@ const UserSchema = new mongoose.Schema({
   },
   password: {
     type: String,
-    require: true,
+    require: false,
   },
-  role: {
+  sector: {
     type: String,
     require: true,
   }
-});
+}, {timestamps: true});
 
 const User = mongoose.model('User', UserSchema);
 export default User;
