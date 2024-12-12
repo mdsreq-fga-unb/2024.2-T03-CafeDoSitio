@@ -45,11 +45,25 @@ const sendMailSac = async (formData) => {
     }
 };
 
-const getAllSacs = async () => {
-    
-    const response = await axios.get(`${baseURL}`);
-    return response;             
-}
+const getAllSacs = async (tag) => {
+    try {
+        const response = await axios.get(`${baseURL}/${tag}`);
+        if (response.data.message === "Não há nenhum sac deste tipo no momento") {
+            toast.error("Não há sacs desse tipo ainda");
+            return { data: [] }; // Retorna um array vazio para limpar a tela
+        }
+        return response;
+    } catch (error) {
+        if (error.response) {
+            console.error("Erro na resposta do servidor:", error.response.data);
+        } else if (error.request) {
+            console.error("Erro na requisição:", error.request);
+        } else {
+            console.error("Erro ao configurar a requisição:", error.message);
+        }
+        return { data: [] }; // Em caso de erro, também retorna um array vazio
+    }
+};
 
 export default {
     postSac,

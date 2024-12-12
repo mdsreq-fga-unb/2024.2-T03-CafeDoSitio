@@ -49,16 +49,17 @@ const ContactPage = () => {
 
   //Mostrando Sacs na tela
   const [sacs, setSacs] = useState([]);
+  const [assuntoSac, setAssuntoSac] = useState("")
 
   async function findAllSacs() {
-    const response = await sacService.getAllSacs();
+    const response = await sacService.getAllSacs(`${assuntoSac}`);
     setSacs(response.data);
   }
 
   //Aqui que ativa a função de mostrar os sacs
-  // useEffect(() => {
-  //   findAllSacs();
-  // }, []);
+  useEffect(() => {
+    findAllSacs();
+  }, [assuntoSac]);
 
 
 
@@ -136,17 +137,31 @@ const ContactPage = () => {
         </Links>
       </FaleCom>
       <Sac />
-      {/*mapeando o vetor de sacs*/}
+
+
+      <select name="select" id="subject" value={assuntoSac} onChange={(e) => {setAssuntoSac(e.target.value);}}>
+        <option value="">Todos</option>
+        <option value="Sugestao">Sugestão</option>
+        <option value="Elogio">Elogio</option>
+        <option value="Duvida">Dúvida</option>
+        <option value="Reclamacao">Reclamação</option>
+        <option value="Parceria/Patrocinio">Parceria/Patrocínio</option>
+      </select>
+
       <div style={{
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
       }}>
-        {sacs.map((item, index) => {
-          console.log(sacs);
-          return <Card key={index} sacs={item} />;
-        })}
+        {/*mapeando o vetor de sacs*/}
+        {sacs.length > 0 ? (
+                    sacs.map((item, index) => (
+                        <Card key={index} sacs={item} />
+                    ))
+                ) : (
+                    <p>Nenhum sac encontrado.</p>
+                )}
       </div>
 
       <Footer />
