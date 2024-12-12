@@ -13,8 +13,11 @@ import {
     Input,
     TextArea,
     Button,
-    Select, // Adicionando um Select para o campo de Assunto
-    FileInput // Novo componente para o campo de anexar arquivo
+    Select, 
+    FileName,
+    FileInput,
+    FileEscondido,
+    FileInputLabel
 } from "./styled";
 
 function Sac() {
@@ -125,12 +128,15 @@ function Sac() {
                 >
                 </TextArea>
 
-                <Label htmlFor="file" style={{color: "#006343"}}>Anexar Arquivo:</Label>
-                <FileInput 
-                    type="file" 
-                    id="file" 
-                    onChange={handleArquivo}
-                />
+                <FileInput>
+                    <FileEscondido
+                        type="file"
+                        id="file"
+                        onChange={handleArquivo}
+                    />
+                    <FileInputLabel htmlFor="file">Inserir arquivo</FileInputLabel>
+                    {arquivo && <FileName>{arquivo.name} selecionado!</FileName>}
+                </FileInput>
 
                 <Button type="submit" onClick={handleSubmit}>Enviar</Button>
             </Form>

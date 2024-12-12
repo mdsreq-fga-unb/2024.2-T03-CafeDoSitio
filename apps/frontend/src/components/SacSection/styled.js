@@ -9,7 +9,7 @@ export const SacSection = styled.section`
   background-color: #F39729;
   border: 2px solid #ddd;
   border-radius: 30px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.3);
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -74,9 +74,14 @@ export const Form = styled.form`
 
 
   h5 {
-  font-weight: 300;
-  font-size: 1rem;
+    font-weight: 300;
+    font-size: 1rem;
   }
+
+  @media(max-width: 768px){
+    border-radius: 28px;
+  }
+
 `;
 
 
@@ -146,7 +151,38 @@ export const Select = styled.select`
   border-radius: 4px;
 `;
 
-export const FileInput = styled(Input)`
-  padding: 0.5rem;
-  margin-bottom: 1rem;
+
+export const FileInput = styled.div`
+  position: relative;
+  width: fit-content;
+`;
+
+export const FileEscondido = styled.input`
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+`;
+
+export const FileInputLabel = styled.label`
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  color: white;
+  background-color: #006343;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+
+  &:hover {
+    background-color: #004c2e;
+  }
+`;
+
+export const FileName = styled.span`
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
 `;
