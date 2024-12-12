@@ -70,35 +70,6 @@ Para calcular a **prioridade** das funcionalidades com base nos três níveis de
 
 Os requisitos em sua devida priorização é:
 
-
-Código   | Nível de Esforço       | Nível de Valor Agregado             | Prioridade
-:------: | :--------------------: | :---------------------------------: | :----------:
-US01     | 1                      | 3                                   | 5
-US08     | 1                      | 3                             | 5
-US04     | 2                      | 3                             | 4
-US14     | 2                      | 3                             | 4
-US15     | 2                      | 3                             | 4
-US19     | 2                      | 3                             | 4
-US02     | 1                      | 2                             | 3
-US12     | 3                      | 3                             | 3
-US16     | 3                      | 3                             | 3  
-US05     | 1                      | 1                             | 2
-US06     | 2                      | 2                             | 2
-US11     | 2                      | 2                             | 2
-US13     | 2                      | 2                             | 2
-US18     | 2                      | 2                             | 2
-US03     | 1                      | 1                             | 1
-US10     | 3                      | 2                             | 1
-US07     | 2                      | 1                             | 0
-US09     | 2                      | 1                             | 0
-US17     | 2                      | 1                             | 0
-RQNF01   | 1                      | 3                             | 5
-RQNF02   | 1                      | 3                             | 5
-RQNF03   | 1                      | 3                             | 5
-RQNF04   | 1                      | 3                             | 5
-RQNF05   | 1                      | 3                             | 5
-RQNF06   | 1                      | 3                             | 5
-
 Código | Nível de Valor Agregado | Nível de Esforço | Prioridade
 ------ | ----------------------- | ---------------- | ----------
 US01   | 3                       | 1                | 11
