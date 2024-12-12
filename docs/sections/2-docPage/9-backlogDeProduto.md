@@ -63,7 +63,7 @@ Em outras palavras, caso o nível de esforço seja nível 1, por exemplo, isto s
 
 Para calcular a **prioridade** das funcionalidades com base nos três níveis de avaliação (Esforço, Valor Agregado e UX), iremos utilizar uma fórmula que combine os pesos de cada critério. O objetivo é priorizar funcionalidades que agreguem mais valor e ofereçam uma boa experiência ao usuário, mas com menor esforço.
 
-**Prioridade = (2 * Valor_Agregado) - Esforço**
+**Prioridade = (4 * Valor_Agregado) - Esforço**
 
 - **Valor Agregado** têm peso **2**, pois são mais importantes para o impacto do produto.
 - **Esforço** é subtraído, pois funcionalidades com menor esforço são mais prioritárias.
@@ -73,7 +73,7 @@ Os requisitos em sua devida priorização é:
 
 Código   | Nível de Esforço       | Nível de Valor Agregado             | Prioridade
 :------: | :--------------------: | :---------------------------------: | :----------:
-US01     | 1                      | 3                             | 5
+US01     | 1                      | 3                                   | 5
 US08     | 1                      | 3                             | 5
 US04     | 2                      | 3                             | 4
 US14     | 2                      | 3                             | 4
@@ -98,6 +98,34 @@ RQNF03   | 1                      | 3                             | 5
 RQNF04   | 1                      | 3                             | 5
 RQNF05   | 1                      | 3                             | 5
 RQNF06   | 1                      | 3                             | 5
+
+Código | Nível de Valor Agregado | Nível de Esforço | Prioridade
+------ | ----------------------- | ---------------- | ----------
+US01   | 3                       | 1                | 11
+US08   | 3                       | 1                | 11
+US04   | 3                       | 2                | 10
+US14   | 3                       | 2                | 10
+US15   | 3                       | 2                | 10
+US19   | 3                       | 2                | 10
+US12   | 3                       | 3                | 9
+US16   | 3                       | 3                | 9
+US02   | 2                       | 1                | 7
+US06   | 2                       | 2                | 6
+US11   | 2                       | 2                | 6
+US13   | 2                       | 2                | 6
+US18   | 2                       | 2                | 6
+US10   | 2                       | 3                | 5
+US03   | 1                       | 1                | 3
+US05   | 1                       | 1                | 3
+US07   | 1                       | 2                | 2
+US09   | 1                       | 2                | 2
+US17   | 1                       | 2                | 2
+RQNF01 | 3                       | 1                | 11
+RQNF02 | 3                       | 1                | 11
+RQNF03 | 3                       | 1                | 11
+RQNF04 | 3                       | 1                | 11
+RQNF05 | 3                       | 1                | 11
+RQNF06 | 3                       | 1                | 11
 
 <!-- US03   | Nível 2                    | Nível 1                           | Nível 2     |3 -->
 <!-- US12   | Nível 3                    | Nível 2                           | Nível 3     |7 -->
