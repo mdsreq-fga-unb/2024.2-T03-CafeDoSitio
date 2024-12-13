@@ -182,3 +182,4 @@ Com esta técnica, foi possível elencar as funcionalidades de maior valor agreg
 | 09/12/24 | 1.2 | Corrigindo tópicos e adicinando novos itens do backlog | Daniel Rodrigues | Arthur Sousa
 | 09/12/24 | 1.3 | Incluindo o calculo de priorização | Manuella, Arthur, João | Daniel
 | 12/12/24 | 2.0 | Novos requisitos e reestruturação do backlog | Daniel Rodrigues | Arthur Sousa
+| 12/12/24 | 2.1 | Adição dos Temas e Épicos | Daniel Rodrigues | João Pedro
