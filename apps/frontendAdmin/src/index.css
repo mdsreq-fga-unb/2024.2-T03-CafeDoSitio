@@ -43,9 +43,7 @@ body, html {
 
   @media (max-width: 1640px) {
     margin: 2vh 8vh;
-  }
+  };
 
-  @media (max-width: 850px) {
-    margin: 2vh 2vh;
-  }
+ 
 }
