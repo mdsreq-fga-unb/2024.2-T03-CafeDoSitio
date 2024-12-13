@@ -39,16 +39,3 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
-
-.container {
-  margin: 2vh 20vh;
-
-  @media (max-width: 1640px) {
-    margin: 2vh 8vh;
-  }
-
-  @media (max-width: 850px) {
-    margin: 2vh 2vh;
-  }
-
-}

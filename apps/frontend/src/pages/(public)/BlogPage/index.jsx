@@ -1,14 +1,16 @@
 import React from "react";
 import Paginacao from '../../../components/Paginacao';
-import Header from '../../../components/Header';
-import Footer from '../../../components/Footer';
 import BigPost from "../../../components/BigPost";
-
+import {
+  Space
+} from "./styled";
 
 const BlogPage = () => {
   return (
     <>
     <Paginacao text={"Família do sítio > Blog"}/>
+    <Space />
+    
     <BigPost title={"Teste"}/>
     </>
   );

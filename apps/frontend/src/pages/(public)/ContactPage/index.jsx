@@ -12,7 +12,8 @@ import {
   SocialIcons,
   Links,
   ContactInfo,
-  Horario_redes
+  Horario_redes,
+  Space
 } from './styled';
 import { FaEnvelope, FaPhoneAlt, FaInstagram, FaFacebook, FaYoutube, FaLinkedin, FaComments } from "react-icons/fa"; // Ícones do Font Awesome
 import { FaXTwitter } from "react-icons/fa6";
@@ -42,8 +43,9 @@ const ContactPage = () => {
   return (
     <>
       <Paginacao text={"FAMÍLIA DO SÍTIO > CONTATOS"} />
+      <Space />
 
-      <InfoSection className='container'>
+      <InfoSection>
         <h1>FALE CONOSCO</h1>
         <p>Precisa de ajuda com alguma dúvida, sugestão ou reclamação?<br />Utilize nossos canais de atendimento:</p>
       </InfoSection>
