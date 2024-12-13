@@ -6,7 +6,29 @@ O backlog de produto é uma lista dinâmica e priorizada que contém todos os re
 
 Essa configuração da logística de escrita das histórias de usuários se justifica pelo fato do processo de engenharia selecionada pela equipe: ScrumXP, conforme descrito na seção de [Estratégias de Engenharia de Software](./3-estrategiasEngSoftware.md). Em resumo, os Requisitos Funcionais são detalhados com mais profundidade durante a fase de Sprint Planning, momento em que as histórias de usuário são escritas no formato _"Eu como (agente), gostaria de (ação), para que (agregação de valor)"_.
 
-### 9.1.1 - Relacionado aos Requisitos Funcionais:
+Dentro do backlog, um dos principais elementos são as User Stories (US), ou histórias de usuário. As histórias de usuário descrevem, em uma linguagem simples e direta, as necessidades do usuário final de forma que todos da equipe possam compreender o valor de cada funcionalidade. Elas são compostas por três elementos principais: quem é o usuário, o que ele deseja fazer e qual o benefício dessa ação. Esse formato ajuda a manter o foco nas necessidades dos usuários, incentivando a equipe a desenvolver soluções que realmente agreguem valor ao produto.
+
+As User Stories mais complexas ou que englobam várias funcionalidades estão agrupadas em Épicos. Um épico é uma descrição ampla de uma necessidade maior, que será posteriormente dividida em histórias menores e mais detalhadas. Esse processo de desmembramento ajuda a equipe a compreender o escopo do projeto e a definir prioridades para desenvolver partes do produto em blocos mais manejáveis. Épicos podem ser definidos com base nas principais funcionalidades ou objetivos do produto, e cada um pode se desdobrar em várias histórias de usuário que detalham as tarefas específicas.
+
+Por sua vez, os Temas funcionam como agrupamentos de histórias e épicos que compartilham um propósito ou um objetivo comum dentro do produto. Eles são úteis para organizar o backlog em seções que representem áreas ou funcionalidades do sistema, facilitando a priorização de desenvolvimento de acordo com as metas do projeto. Diferente dos épicos, que normalmente possuem um escopo mais restrito, os temas são mais amplos e podem abranger múltiplos épicos e histórias de usuário, fornecendo uma visão geral das grandes áreas do produto.
+
+### 9.1.1 - Temas:
+
+Código | Título                                     | Descrição
+------ | ------------------------------------------ | ----------
+TM01   | Experiência do Usuário com a Empresa       | Funcionalidades que permitem ao usuário interagir com a empresa. 
+TM02   | Gestão do Software                         | Funcionalidades voltadas para a administração do site institucional.
+
+### 9.1.2 - Épicos:
+
+Código | Tema Associado | Título                             | User Story
+------ | -------------- | ---------------------------------- | ---------------------------
+EP01   | T01            | Consultar Posts de Blog            | Eu como usuário, devo ser capaz de visualizar os blogs da Família do Sítio para me informar acerca de seus conteúdos.
+EP02   | T01            | Marcar Visitas Técnicas            | Eu como usuário, devo ser capaz de agendar uma visita técnica presencial para conhecer seus processos.
+EP03   | T02            | Administrar informações da Empresa | Eu como funcionário da Família do Sítio, devo ser capaz de gerenciar as informações do site institucional para que sempre se mantenha atualizado.
+EP04   | T02            | Atendimento | Eu como usuário, devo ser capaz de receber atendimento da Família do Sítio para stender à minha necessidade.
+
+### 9.1.3 - Relacionado aos Requisitos Funcionais:
 Código | User Story
 ------ | ----------------------------------------------------
 US01   | Eu como usuário devo ser capaz desenvolver um conteúdo, com permissão à formatação de texto avançados e inserição imagens para que seja publicado como blog no site da Família do Sítio.
@@ -29,7 +51,7 @@ US17   | **INCREMENTO (User Story não será escrito)**
 US18   | Eu como Funcionário da Família do Sítio, devo ser capaz de fazer login com meu email empresarial e senha, para que eu possa acessar as funções da Central de Administração.
 US19   | Eu como Funcionário da Família do Sítio, devo ser capaz de criar ou apagar o acesso de novas contas no sistema, para que eu possa controlar o acesso à central administrativa.
 
-### 9.1.1 - Relacionado aos Requisitos Não Funcionais (Somente de Usabibilidade):
+### 9.1.4 - Relacionado aos Requisitos Não Funcionais (Somente de Usabibilidade):
 Código | Título do Requisito de Usabilidade (Relacionada à implementação de uma interface)
 ------ | ----------------------------------------------------
 RQNF01 | O sistema deve permitir que os usuários localizem facilmente a seção que apresenta a história da empresa, com navegação intuitiva e conteúdo disposto de forma clara e acessível.
@@ -145,6 +167,12 @@ Com esta técnica, foi possível elencar as funcionalidades de maior valor agreg
 > PRESSMAN, Roger S. Engenharia de Software: Uma Abordagem Profissional. 7ª ed. São Paulo: McGraw Hill, 2011.
 
 > RUBIN, Kenneth S. Scrum Essencial: Um Guia Prático para o Processo Ágil Mais Popular. São Paulo: Alta Books, 2014.
+
+> SCHWABER, Ken; SUTHERLAND, Jeff. Guia do Scrum: O Guia Definitivo para o Scrum, as Regras do Jogo. Scrum.org, 2020.
+
+> CAROLI, Paulo. Lean Inception: Como Alinhar Pessoas e Construir o Produto Certo. São Paulo: Caroli.org, 2018.
+
+> RIES, Eric. A Startup Enxuta: Como os Empreendedores Atuais Utilizam a Inovação Contínua para Criar Empresas Extremamente Bem-Sucedidas. Rio de Janeiro: Alta Books, 2012.
 
 ## Histórico de Versão:
 | Data | Versão | Descrição | Autor | Revisores |

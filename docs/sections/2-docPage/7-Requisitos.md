@@ -62,7 +62,6 @@ Os requisitos não funcionais foram organizados com base no modelo URPS+, que cl
 
 ### Confiabilidade
 
-
 **RNF11 -** O sistema deve estar disponível pelo menos 99,5% do tempo por mês (uptime). <br>
 **RNF12 -** Em caso de falhas no servidor, o sistema deve se recuperar dentro de 10 minutos.
 
