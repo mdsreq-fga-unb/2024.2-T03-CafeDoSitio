@@ -42,7 +42,7 @@ Dessa maneira, as funcionalidades foram categorizadas em:
 - **Amarelo:** Requisitos em que o time de desenvolvimento possui pleno entendimento do que foi pedido, mas conhecem de forma média a forma de executá-la;
 - **Verde:** Requisitos em que o time de desenvolvimento possui pleno entendimento do que foi pedido e conhecem bem como executá-las.
 
-Por fim, na próxima atividade, foi estabelecido o escopo do produto de software em MVP e Incremento. O detalhe dos requisitos elicitados podem ser visualizadas na seção [Visão Geral Backlog](../../VisaoGeralBacklog.md).
+Por fim, na próxima atividade, foi estabelecido o escopo do produto de software em MVP e Incremento. O detalhe dos requisitos elicitados podem ser visualizadas na seção [Backlog de Produto](../../../2-docPage/9-backlogDeProduto.md).
 
 Os detalhes de cada fase pode ser visto no board abaixo:
 
