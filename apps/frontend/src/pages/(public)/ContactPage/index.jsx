@@ -1,8 +1,6 @@
 import React from 'react';
-import Paginacao from '../../components/Paginacao';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import Sac from '../../components/SacSection'
+import Paginacao from '../../../components/Paginacao';
+import Sac from '../../../components/SacSection'
 import {
   ContactSection,
   ContactCards,
@@ -43,7 +41,6 @@ const ContactPage = () => {
 
   return (
     <>
-      <Header pagina={"CONTATOS"} />
       <Paginacao text={"FAMÍLIA DO SÍTIO > CONTATOS"} />
 
       <InfoSection className='container'>
@@ -115,8 +112,6 @@ const ContactPage = () => {
         </Links>
       </FaleCom>
       <Sac />
-
-      <Footer />
     </>
   );
 };

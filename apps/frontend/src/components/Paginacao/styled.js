@@ -13,4 +13,5 @@ export const Letreiro = styled.h1`
   font-size: 12px;
   width: 100%;
   color: white;
+  text-transform: uppercase;
 `;

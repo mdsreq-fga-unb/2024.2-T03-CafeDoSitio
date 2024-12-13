@@ -25,6 +25,10 @@
   font-display: swap;
 }
 
+*{
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Myriad Pro', sans-serif;
   margin: 0;
