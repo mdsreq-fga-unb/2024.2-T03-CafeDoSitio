@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
     CardContainer,
     CardHeader,
@@ -6,13 +7,20 @@ import {
 } from './styled.js'
 
 export function SacCard({ sacs }) {
+    let statusMsg;
+    sacs.status !== false ? statusMsg = "Concluído" : statusMsg = "Em Aberto";
+    
+    const [status, setStatus] = useState();
+    
+
     return (        
         <CardContainer>
             <CardHeader>{sacs.assunto}</CardHeader>
             <CardInfo>
-                <p>{sacs.nomeSobrenome}</p>
-                <p>{sacs.email}</p>
-                <p>{sacs.telefone}</p>
+                <p>Nome: {sacs.nomeSobrenome}</p>
+                <p>Email: {sacs.email}</p>
+                <p>Telefone: {sacs.telefone}</p>
+                <p>Status: {statusMsg}</p>
             </CardInfo>
             <CardMessage>{sacs.mensagem}</CardMessage>
         </CardContainer>

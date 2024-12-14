@@ -5,6 +5,11 @@ const sacRouter = express.Router();
 import sacController from '../controllers/sac.controller.js';
 
 sacRouter.post('/createSac', sacController.createSac);
+sacRouter.get('/', sacController.findAllSac);
+sacRouter.get('/:assunto', sacController.findAssuntoSac);
+sacRouter.delete('/:id', sacController.deleteSacById);
+sacRouter.patch('/:id', sacController.updateSacStatus)
+
 sacRouter.post(
   '/sendMail',
   upload.single("arquivo"), 
@@ -23,10 +28,4 @@ sacRouter.post(
   }, 
   sacController.sendMail
 );
-
-  
-sacRouter.get('/', sacController.findAllSac);
-sacRouter.get('/:assunto', sacController.findAssuntoSac);
-sacRouter.delete('/:id', sacController.deleteSacById);
-
 export default sacRouter;

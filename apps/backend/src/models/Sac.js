@@ -3,23 +3,28 @@ import mongoose from "mongoose";
 const SacSchema = new mongoose.Schema({
   nomeSobrenome: {
     type: String,
-    require: true,
+    required: true,
   },
   email: {
     type: String,
-    require: true,
+    required: true,
   },
   telefone: {
     type: String,
-    require: true,
+    required: true,
   },
   assunto: {
     type: String,
-    require: true,
+    required: true,
   },
   mensagem: {
     type: String,
-    require: true,
+    required: true,
+  },
+  status: {
+    type: Boolean,
+    required: true,
+    default: false,
   }
 });
 

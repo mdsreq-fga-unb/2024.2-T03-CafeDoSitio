@@ -5,7 +5,7 @@ import mongoose from "mongoose";
 
 const createSac = async (req, res) => {
   try {
-    const { nomeSobrenome, email, telefone, assunto, mensagem } = req.body;
+    const { nomeSobrenome, email, telefone, assunto, mensagem} = req.body;
     if (!nomeSobrenome || !email || !telefone || !assunto || !mensagem) {
       return res.status(400).send({ message: "Preencha todos os campos!" });
     }
@@ -26,13 +26,13 @@ const createSac = async (req, res) => {
 const sendMail = async (req, res) => {
   try {
     const data = JSON.parse(req.body.data);
-    const { nomeSobrenome, email, telefone, assunto, mensagem } = data;
+    const { nomeSobrenome, email, telefone, assunto, mensagem} = data;
 
     let emailSetor;
 
     switch (assunto) {
       case 'Sugestao':
-        emailSetor = 'Sugestao@email.com';
+        emailSetor = 'arthur.lantr@gmail.com';
         break;
       case 'Elogio':
         emailSetor = 'Elogio@email.com';
@@ -57,6 +57,7 @@ const sendMail = async (req, res) => {
       Telefone: ${telefone}
       Assunto: ${assunto}
       Mensagem: ${mensagem}
+      Status: Em aberto
     `;
 
     // Configura os anexos se houver
@@ -83,7 +84,7 @@ const findAllSac = async (req, res) => {
   }
 
   res.send(sacs);
-}
+};
 
 const findAssuntoSac = async (req, res) => {
   const assunto = req.params.assunto;
@@ -95,7 +96,7 @@ const findAssuntoSac = async (req, res) => {
   }
 
   res.send(sacs);
-}
+};
 
 
 const deleteSacById = async (req, res) => {
@@ -118,6 +119,53 @@ const deleteSacById = async (req, res) => {
     console.error('Erro ao deletar SAC:', error);
     return res.status(500).send({ message: "Erro interno ao tentar deletar o SAC." });
   }
+};
+
+const findSacById = async (req,res) => {
+
+  const id = req.params.id; 
+
+  //Conferir antes de tudo se o id é válido
+  if(!mongoose.Types.ObjectId.isValid(id)){
+    return res.status(400).send({message: "Id invalido!"});
+  }
+
+  const sac = await sacService.findById(id);
+
+  if(!sac){
+    return res.status(400).send({message: "Usuario nao encontrado"});
+  }
+
+  res.send(sac);
+};
+
+const updateSacStatus = async (req, res) => {
+  
+  const {nomeSobrenome, email, telefone, assunto, mensagem, status} = req.body;
+
+  if(!nomeSobrenome && !email && !telefone && !assunto && !mensagem && !status){
+    res.status(400).send({message: "Coloque pelo menos um campo para fazer update"});
+  }
+  
+  const id = req.params.id; 
+
+  //Conferir antes de tudo se o id é válido
+  if(!mongoose.Types.ObjectId.isValid(id)){
+    return res.status(400).send({message: "Id invalido!"});
+  }
+
+  const sac = await sacService.findById(id);
+
+  if(!sac){
+    return res.status(400).send({message: "Sac nao encontrado"});
+  }
+
+  await sacService.updateSacStatus(
+    id,
+    status
+  );
+
+  res.send({message: "Sac foi atualizado com sucesso"})
 }
 
 export default {
@@ -125,5 +173,6 @@ export default {
   findAllSac,
   findAssuntoSac,
   deleteSacById,
-  sendMail
+  sendMail,
+  updateSacStatus
 };
