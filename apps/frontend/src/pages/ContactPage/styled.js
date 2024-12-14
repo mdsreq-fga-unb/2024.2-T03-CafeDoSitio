@@ -195,3 +195,4 @@ export const Horario_redes = styled.div`
     margin:0;
   }
 `;
+
