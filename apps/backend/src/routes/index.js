@@ -7,7 +7,7 @@ import { authMiddleware } from "../middlewares/auth.middleware.js";
 
 const router = Router();
 
-router.use('/visita', cors(), visitaRouter);
+router.use('/visita', cors(), authMiddleware, visitaRouter);
 router.use('/user', cors(), userRouter);
 router.use('/sac', cors(), sacRouter);
 

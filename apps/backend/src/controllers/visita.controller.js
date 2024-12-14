@@ -7,7 +7,7 @@ const createVisita = async (req, res) => {
         console.log(req.body);
 
         if(!startDateTime || !endDateTime || !status)
-            return res.status(400).json({ message: "Preencha todos os campos para criar a disponibilidade!"});
+            return res.status(400).send({ message: "Preencha todos os campos para criar a disponibilidade!"});
 
         const visita = await VisitaService.createService(req.body);
 
@@ -29,11 +29,25 @@ const findAllVisita = async (req, res) => {
     } catch (err) {
         return res.send(500).send({ message: err.message });
     }
-}
+};
+
+const deleteVisita = async (req, res) => {
+    try {
+        if(!req._id)
+            return res.status(400).send({ message: "ID não identificado!"});
+
+        const visita = await VisitaService.deleteService(_id);
+
+        return res.status(200).send({ message: "Visita deletada!", visita });
+    } catch (err) {
+        return res.send(500).send({ message: err.message });
+    }
+}; 
 
 export default { 
     createVisita,
     findAllVisita,
+    deleteVisita,
 };
 
 

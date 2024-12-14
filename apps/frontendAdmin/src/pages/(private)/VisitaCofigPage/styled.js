@@ -27,6 +27,12 @@ export const InfoZone = styled.div`
     font-size: 16px;
   }
 
+  .visitas-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
   @media (max-width: 450px) {
     h2{
       font-size: 15px;
@@ -57,5 +63,21 @@ export const InputsArea = styled.div`
     display: flex;
     flex-direction: column;
     gap: 12px;
+  }
+`;
+
+export const Vazio = styled.div`
+  display: flex;
+  height: 178px;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  gap: 2rem;
+
+  .icon{
+    color: #DA731F;
+    font-size: 40px;
   }
 `;
