@@ -1,10 +1,12 @@
 import React from "react";
-import { DivPagincacao, Letreiro } from "./styled";
+import { DivLetreiro, DivPagincacao, Letreiro } from "./styled";
 
 function Paginacao({text}) {
   return (
     <DivPagincacao>
-      <Letreiro className="container">{text}</Letreiro>
+      <DivLetreiro>
+        <Letreiro className="container">{text}</Letreiro>
+      </DivLetreiro>
     </DivPagincacao>
   )
 }

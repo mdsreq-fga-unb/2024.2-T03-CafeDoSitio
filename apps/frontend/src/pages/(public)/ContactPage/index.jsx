@@ -53,7 +53,7 @@ const ContactPage = () => {
       <ContactSection>
         <ContactCards>
           {contacts.map((contact) => (
-            <ContactCard>
+            <ContactCard className='card'>
               <h1>{contact.title}</h1>
               <p>{contact.description}</p>
               <EmailZone>

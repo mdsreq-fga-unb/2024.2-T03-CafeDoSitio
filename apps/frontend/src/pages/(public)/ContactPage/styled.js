@@ -17,6 +17,12 @@ export const InfoSection = styled.section`
 export const ContactSection = styled.section`
   text-align: center;
   padding-block: 2rem;
+
+  @media (max-width: 1280px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const ContactCards = styled.div`
@@ -26,29 +32,37 @@ export const ContactCards = styled.div`
   row-gap: 2.8rem;
   margin-inline: 0;
   flex-wrap: wrap;
+
+  @media (max-width: 1273px) {
+    .card:nth-of-type(3) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  };
   
-  @media (max-width: 1024px) {
-    flex-direction:column;
+  @media (max-width: 900px) {
+    flex-direction: column;
     align-items: center;
+
   }
 `;
 
 export const ContactCard =styled.div`
-  max-width: 350px;
+  max-width: 450px;
   // border: 1px solid #ddd;
   // border-radius: 5px;
   text-align: left;
   // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
   h1 {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     margin-bottom: 1rem;
     max-width: 50vh;
     color: #006343;
   }
 
   p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 1rem;
     color: #333;
   }
@@ -56,6 +70,19 @@ export const ContactCard =styled.div`
   @media (max-width: 1024px) {
     width: auto;
     padding: 0;
+  }
+
+  @media (max-width: 1720px) {
+    max-width: 350px;
+
+    h1 {
+      font-size: 1.2rem;
+      max-width: 50vh;
+    }
+
+    p {
+      font-size: 1rem;
+    }
   }
 `;
 
