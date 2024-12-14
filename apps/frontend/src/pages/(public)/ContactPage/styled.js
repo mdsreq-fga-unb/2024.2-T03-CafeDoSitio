@@ -4,58 +4,85 @@ export const InfoSection = styled.section`
   h1 {
     font-size: 2.5rem;
     margin-bottom: 0;
-    color: #555;
+    color: #333;
   }
 
   p {
     font-weight: 300;
     font-size: 1rem;
-    color: #555;
+    color: #333;
   }
 `;
 
 export const ContactSection = styled.section`
   text-align: center;
   padding-block: 2rem;
+
+  @media (max-width: 1280px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const ContactCards = styled.div`
   display: flex;
-  justify-content: center;
-  padding-inline: 4%;
+  justify-content: space-between;
   column-gap: 3rem;
   row-gap: 2.8rem;
+  margin-inline: 0;
   flex-wrap: wrap;
-  @media (max-width: 1024px) {
-    flex-direction:column;
-    align-items: center;
+
+  @media (max-width: 1273px) {
+    .card:nth-of-type(3) {
+      margin-left: auto;
+      margin-right: auto;
     }
+  };
+  
+  @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: center;
+
+  }
 `;
 
 export const ContactCard =styled.div`
-  max-width: 350px;
+  max-width: 450px;
   // border: 1px solid #ddd;
   // border-radius: 5px;
-  padding: 1rem;
   text-align: left;
   // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
   h1 {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     margin-bottom: 1rem;
     max-width: 50vh;
     color: #006343;
   }
 
   p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 1rem;
-    color: #555;
+    color: #333;
   }
 
   @media (max-width: 1024px) {
     width: auto;
     padding: 0;
+  }
+
+  @media (max-width: 1720px) {
+    max-width: 350px;
+
+    h1 {
+      font-size: 1.2rem;
+      max-width: 50vh;
+    }
+
+    p {
+      font-size: 1rem;
+    }
   }
 `;
 
@@ -89,7 +116,7 @@ export const FaleCom = styled.section`
   flex-direction: row; 
   align-items: center; 
   justify-content: space-between;
-  margin: 2vh 20vh;
+  margin: 10px;
 
   h2 {
     margin: 0.5rem 2rem;
@@ -106,10 +133,6 @@ export const FaleCom = styled.section`
     align-items: center;
     justify-content: space-evenly;
     width: 15%;
-  }
-
-  @media (max-width: 1640px) {
-    margin: 2vh 8vh;
   }
 
   @media (max-width: 1250px) {
@@ -196,3 +219,6 @@ export const Horario_redes = styled.div`
   }
 `;
 
+export const Space = styled.div`
+  height: 68px;
+`;

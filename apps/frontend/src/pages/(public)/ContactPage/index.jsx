@@ -1,8 +1,6 @@
 import React from 'react';
-import Paginacao from '../../components/Paginacao';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import Sac from '../../components/SacSection'
+import Paginacao from '../../../components/Paginacao';
+import Sac from '../../../components/SacSection'
 import {
   ContactSection,
   ContactCards,
@@ -14,7 +12,8 @@ import {
   SocialIcons,
   Links,
   ContactInfo,
-  Horario_redes
+  Horario_redes,
+  Space
 } from './styled';
 import { FaEnvelope, FaPhoneAlt, FaInstagram, FaFacebook, FaYoutube, FaLinkedin, FaComments } from "react-icons/fa"; // Ícones do Font Awesome
 import { FaXTwitter } from "react-icons/fa6";
@@ -43,10 +42,10 @@ const ContactPage = () => {
 
   return (
     <>
-      <Header pagina={"CONTATOS"} />
       <Paginacao text={"FAMÍLIA DO SÍTIO > CONTATOS"} />
+      <Space />
 
-      <InfoSection className='container'>
+      <InfoSection>
         <h1>FALE CONOSCO</h1>
         <p>Precisa de ajuda com alguma dúvida, sugestão ou reclamação?<br />Utilize nossos canais de atendimento:</p>
       </InfoSection>
@@ -54,7 +53,7 @@ const ContactPage = () => {
       <ContactSection>
         <ContactCards>
           {contacts.map((contact) => (
-            <ContactCard>
+            <ContactCard className='card'>
               <h1>{contact.title}</h1>
               <p>{contact.description}</p>
               <EmailZone>
@@ -115,8 +114,6 @@ const ContactPage = () => {
         </Links>
       </FaleCom>
       <Sac />
-
-      <Footer />
     </>
   );
 };

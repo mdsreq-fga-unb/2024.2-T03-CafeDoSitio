@@ -1,8 +1,6 @@
-import { TimelineCard } from "../../components/TimelineCard";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
-import Paginacao from "../../components/Paginacao";
-import imagem from "../../assets/colagem_de_fotos.png"
+import { TimelineCard } from "../../../components/TimelineCard";
+import Paginacao from "../../../components/Paginacao";
+import imagem from "../../../assets/colagem_de_fotos.png"
 import {
     Title,
     Text,
@@ -41,7 +39,6 @@ export default function NossaHistoria() {
 
     return (
         <>
-            <Header pagina={NossaHistoria} />
             <Paginacao text={"FAMÍLIA DO SÍTIO > NOSSA HISTÓRIA"} />
 
            
@@ -151,9 +148,6 @@ export default function NossaHistoria() {
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                 </Text>
             </DivContainer>
-
-
-            <Footer />
         </>
     );
 }
