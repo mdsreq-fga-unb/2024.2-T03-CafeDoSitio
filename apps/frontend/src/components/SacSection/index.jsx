@@ -65,8 +65,8 @@ function Sac() {
             <Location>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15350.606789028072!2d-48.0269256!3d-15.8748932!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a2d87432ac44d%3A0xff6ae8c97e66c8b8!2zQ2Fmw6kgZG8gU8OtdGlv!5e0!3m2!1spt-BR!2sbr!4v1733509279879!5m2!1spt-BR!2sbr"
-                    width="400"
-                    height="450"
+                    width="300"
+                    height="300"
                     style={{ border: 0 }} 
                     allowFullScreen 
                     loading="lazy"

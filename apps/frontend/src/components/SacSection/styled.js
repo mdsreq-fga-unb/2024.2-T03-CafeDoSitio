@@ -6,7 +6,7 @@ export const SacSection = styled.section`
   margin: 10vh 8vh;
   width: auto;
   gap: 3rem;
-  background-color: #F39729;
+  background-color: #DA731F;
   border: 2px solid #ddd;
   border-radius: 30px;
   box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.3);
@@ -35,7 +35,6 @@ export const Location = styled.section`
     width: 100%;
     height: 300px;
     border: none;
-    border-radius: 30px;
     margin: 1.5rem;
   }
   
@@ -47,11 +46,10 @@ export const Location = styled.section`
   
   .infos{
     margin: 0;
-    
   }
   
   p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #fff;
     line-height: 1.5;
   }
