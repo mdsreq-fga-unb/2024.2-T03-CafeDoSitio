@@ -41,7 +41,7 @@ RQNF06 | As instruções do E-commerce devem ser descritas de maneira clara, com
 
 ## 9.2 - Priorização do Backlog Geral
 
-Para a construção da priorização, a equipe utilizou uma das fases do workshop Lean Inception para auxiliar na atividade: **Revisão Técnica, de UX e de Negócio**. Nessa fase, todas as funcinalidades são classificadas em níveis de 1 à 3, onde:
+Para a construção da priorização, a equipe utilizou uma das fases do workshop Lean Inception para auxiliar na atividade: **Revisão Técnica e de Negócio**. Nessa fase, todas as funcinalidades são classificadas em níveis de 1 à 3, onde:
 
 - **1:** Classifica a funcinalidade como _Baixo_ no tópico de revisão de referência;
 - **2:** Classifica a funcinalidade como _Médio_ no tópico de revisão de referência;
@@ -61,43 +61,42 @@ Em outras palavras, caso o nível de esforço seja nível 1, por exemplo, isto s
     - **2:** Agrega valor médio ao produto, contribuindo moderadamente para a satisfação dos usuários ou objetivos do negócio.
     - **3:** Agrega alto valor, sendo essencial para o sucesso do produto e trazendo impacto significativo para os usuários ou para o negócio.
 
-<br>
-
-- **Nível de User Experience:** Indica o impacto da funcionalidade na experiência do usuário, considerando aspectos como facilidade de uso, acessibilidade, design intuitivo e satisfação ao interagir com o sistema. Cada nível indica:
-    - **1:** Oferece uma experiência básica ou pouco impactante, com uma interface funcional, mas sem refinamento ou diferenciação significativa para o usuário.
-    - **2:** Oferece uma experiência moderadamente impactante, com boa usabilidade e design que atende às expectativas gerais do usuário.
-    - **3:** Oferece uma experiência altamente impactante, proporcionando uma interação satisfatória, agregando grande valor ao produto.
-
 Para calcular a **prioridade** das funcionalidades com base nos três níveis de avaliação (Esforço, Valor Agregado e UX), iremos utilizar uma fórmula que combine os pesos de cada critério. O objetivo é priorizar funcionalidades que agreguem mais valor e ofereçam uma boa experiência ao usuário, mas com menor esforço.
 
-**Prioridade = (2 * Valor_Agregado) + (2 * UX) - Esforço**
+**Prioridade = (4 * Valor_Agregado) - Esforço**
 
-- **Valor Agregado e UX** têm peso **2**, pois são mais importantes para o impacto do produto.
+- **Valor Agregado** têm peso **2**, pois são mais importantes para o impacto do produto.
 - **Esforço** é subtraído, pois funcionalidades com menor esforço são mais prioritárias.
 
 Os requisitos em sua devida priorização é:
 
-
-Código   | Nível de Esforço             | Nível de Valor Agregado             | Nível de UX   | Prioridade
-:------: | :-------------------------:  | :---------------------------------: | :-----------: | :----------:
-US01     | Nível 1                      | Nível 3                             | Nível 3       |11
-US02     | Nível 1                      | Nível 2                             | Nível 1       |5
-US04     | Nível 2                      | Nível 3                             | Nível 3       |10
-US05     | Nível 1                      | Nível 1                             | Nível 2       |4
-US06     | Nível 2                      | Nível 2                             | Nível 3       |8
-US08     | Nível 1                      | Nível 3                             | Nível 2       |9
-US11     | Nível 2                      | Nível 2                             | Nível 3       |8
-US14     | Nível 2                      | Nível 3                             | Nível 3       |10
-US15     | Nível 2                      | Nível 3                             | Nível 3       |10
-US16     | Nível 3                      | Nível 3                             | Nível 3       |9  
-US18     | Nível 3                      | Nível 3                             | Nível 3       |9
-US19     | Nível 2                      | Nível 3                             | Nível 3       |10
-RQNF01   | Nível 1                      | Nível 3                             | Nível 2       |9
-RQNF02   | Nível 1                      | Nível 3                             | Nível 3       |11
-RQNF03   | Nível 1                      | Nível 3                             | Nível 1       |7
-RQNF04   | Nível 1                      | Nível 3                             | Nível 3       |11
-RQNF05   | Nível 1                      | Nível 3                             | Nível 2       |9
-RQNF06   | Nível 1                      | Nível 3                             | Nível 3       |11
+Código | Nível de Valor Agregado | Nível de Esforço | Prioridade
+------ | ----------------------- | ---------------- | ----------
+US01   | 3                       | 1                | 11
+US08   | 3                       | 1                | 11
+US04   | 3                       | 2                | 10
+US14   | 3                       | 2                | 10
+US15   | 3                       | 2                | 10
+US19   | 3                       | 2                | 10
+US12   | 3                       | 3                | 9
+US16   | 3                       | 3                | 9
+US02   | 2                       | 1                | 7
+US06   | 2                       | 2                | 6
+US11   | 2                       | 2                | 6
+US13   | 2                       | 2                | 6
+US18   | 2                       | 2                | 6
+US10   | 2                       | 3                | 5
+US03   | 1                       | 1                | 3
+US05   | 1                       | 1                | 3
+US07   | 1                       | 2                | 2
+US09   | 1                       | 2                | 2
+US17   | 1                       | 2                | 2
+RQNF01 | 3                       | 1                | 11
+RQNF02 | 3                       | 1                | 11
+RQNF03 | 3                       | 1                | 11
+RQNF04 | 3                       | 1                | 11
+RQNF05 | 3                       | 1                | 11
+RQNF06 | 3                       | 1                | 11
 
 <!-- US03   | Nível 2                    | Nível 1                           | Nível 2     |3 -->
 <!-- US12   | Nível 3                    | Nível 2                           | Nível 3     |7 -->
@@ -118,18 +117,18 @@ Com esta técnica, foi possível elencar as funcionalidades de maior valor agreg
 
 ### 9.3.1 - Requisitos Funcionais
 
-- **US01:** Criar Blog;
-- **US02:** Editar Blog;
-- **US04:** Categorizar Blog;
-- **US05:** Fitrar Blog;
-- **US06:** Pesquisar Blog;
-- **US08:** Recomendar outros Blogs;
-- **US11:** Configurar disponibilidade de Visita;
-- **US14:** Agendar visita técnica;
-- **US15:** Realizar SAC;
-- **US16:** Localizar Produtos;
+- **US01:** Criar Post no Blog;
+- **US02:** Editar Post no Blog;
+- **US04:** Categorizar Post no Blog;
+- **US05:** Fitrar Posts no Blog;
+- **US06:** Pesquisar Posts no Blog;
+- **US08:** Recomendar outros Posts no Blog;
+- **US11:** Configurar disponibilidade de Visita Técnica à Fábrica;
+- **US14:** Agendar visita técnica à Fábrica;
+- **US15:** Enviar mensagem à empresa pela Central de Atendimento ao Cliente;
+- **US16:** Localizar por Produtos da Família do Sítio;
 - **US18:** Fazer login na Central Administrativa;
-- **US19:** Gerenciar acessos à Central Administrativa.
+- **US19:** Gerenciar contas com acesso à Central de Administração.
 
 ### 9.3.2 - Requisitos não Funcionais de Usabilidade (Relacionadas à implementação de uma Interface)
 
@@ -150,7 +149,8 @@ Com esta técnica, foi possível elencar as funcionalidades de maior valor agreg
 ## Histórico de Versão:
 | Data | Versão | Descrição | Autor | Revisores |
 |---- | ------ | --------- | ----- | --------- |
-| 03/12/24 | 1.0 | Criação do documento | Daniel Rodrigues | DEFINIR AQUI
-| 06/12/24 | 1.1 | Desenvolvimento de novos tópicos | Daniel Rodrigues | DEFINIR AQUI
-| 09/12/24 | 1.2 | Corrigindo tópicos e adicinando novos itens do backlog | Daniel Rodrigues | DEFINIR AQUI
-| 09/12/24 | 1.3 | Incluindo o calculo de priorização | Manuella, Arthur, João | Daniel
+| 03/12/24 | 1.0 | Criação do documento | Daniel Rodrigues | Arthur Suares
+| 06/12/24 | 1.1 | Desenvolvimento de novos tópicos | Daniel Rodrigues | Arthur Suares
+| 09/12/24 | 1.2 | Corrigindo tópicos e adicinando novos itens do backlog | Daniel Rodrigues | Arthur Suares
+| 09/12/24 | 1.3 | Incluindo o calculo de priorização | Manuella, Arthur, João | Daniel Rodrigues
+| 12/12/24 | 2.0 | Novos requisitos e reestruturação do backlog | Daniel Rodrigues | Arthur Suares

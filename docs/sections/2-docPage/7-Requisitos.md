@@ -20,25 +20,25 @@ Os requisitos funcionais descrevem as funcionalidades específicas que o sistema
 
 Os requisitos funcionais do sistema da Família do Sítio são:
 
-**US01 -** Criar Blog <br>
-**US02 -** Editar Blog <br>
-**US03 -** Comentar no Blog <br>
-**US04 -** Categorizar Blog <br>
-**US05 -** Categorizar Blog <br>
-**US06 -** Pesquisar Blog <br>
-**US07 -** Baixar Blog <br>
-**US08 -** Recomendar outros Blogs <br>
-**US09 -** Conectar Blog com Produtos da Empresa <br>
-**US10 -** Compartilhar Blog <br>
-**US11 -** Configurar disponibilidade de Visita <br>
-**US12 -** Realizar Tour Virtual <br>
-**US13 -** Emitir certificado de Visita <br>
-**US14 -** Agendar Visita Presencial <br>
-**US15 -** Realizar SAC <br>
-**US16 -** Localizar Produtos <br>
-**US17 -** Lembrar usuários de Visita <br>
+**US01 -** Criar Post no blog <br>
+**US02 -** Editar Post no blog <br>
+**US03 -** Comentar no Post do Blog <br>
+**US04 -** Categorizar Post no Blog <br>
+**US05 -** Filtrar por Posts no Blog <br>
+**US06 -** Pesquisar por Posts no blog <br>
+**US07 -** Baixar Post do blog <br>
+**US08 -** Recomendar outros Posts do Blog <br>
+**US09 -** Conectar Posts do blog com os Produtos da Empresa <br>
+**US10 -** Compartilhar Post do blog <br>
+**US11 -** Configurar disponibilidade de Visita Técnica à Fábrica<br>
+**US12 -** Realizar Visita Técnica Virtual à Fábrica<br>
+**US13 -** Emitir certificado de presença da Visita Técnica <br>
+**US14 -** Agendar Visita Técnica à Fábrica <br>
+**US15 -** Enviar mensagem à empresa pela Central de Atendimento ao Cliente <br>
+**US16 -** Localizar por Produtos da Família do Sítio <br>
+**US17 -** Notificar usuários de Visita Técnica marcada<br>
 **US18 -** Fazer login na Central Administrativa <br>
-**US19 -** Gerenciar acesso à Central de Administração
+**US19 -** Gerenciar contas com acesso à Central de Administração
 
 ## Requisitos Não Funcionais
 
@@ -89,6 +89,7 @@ Data     | Versão | Descrição           | Autor    | Revisores
 -------- | ------ | ------------------- | -------- | ---------
 09/12/24 | 1.0 | Adição das tabelas de requisitos | Manuella Valadares | Ana Carolina
 10/12/24 | 1.1 | Redesign da página dos requisitos | Daniel Rodrigues | Manuella Valadares
+12/12/24 | 2.0 | Novos requisitos e reestruturação do backlog | Daniel Rodrigues | Arthur Suares
 
 
 
