@@ -128,7 +128,7 @@ Com esta técnica, foi possível elencar as funcionalidades de maior valor agreg
 - **US15:** Enviar mensagem à empresa pela Central de Atendimento ao Cliente;
 - **US16:** Localizar por Produtos da Família do Sítio;
 - **US18:** Fazer login na Central Administrativa;
-- **US19:** Gerenciar acessos à Central Administrativa.
+- **US19:** Gerenciar contas com acesso à Central de Administração.
 
 ### 9.3.2 - Requisitos não Funcionais de Usabilidade (Relacionadas à implementação de uma Interface)
 
@@ -149,8 +149,8 @@ Com esta técnica, foi possível elencar as funcionalidades de maior valor agreg
 ## Histórico de Versão:
 | Data | Versão | Descrição | Autor | Revisores |
 |---- | ------ | --------- | ----- | --------- |
-| 03/12/24 | 1.0 | Criação do documento | Daniel Rodrigues | Arthur Sousa
-| 06/12/24 | 1.1 | Desenvolvimento de novos tópicos | Daniel Rodrigues | Arthur Sousa
-| 09/12/24 | 1.2 | Corrigindo tópicos e adicinando novos itens do backlog | Daniel Rodrigues | Arthur Sousa
-| 09/12/24 | 1.3 | Incluindo o calculo de priorização | Manuella, Arthur, João | Daniel
-| 12/12/24 | 2.0 | Novos requisitos e reestruturação do backlog | Daniel Rodrigues | Arthur Sousa
+| 03/12/24 | 1.0 | Criação do documento | Daniel Rodrigues | Arthur Suares
+| 06/12/24 | 1.1 | Desenvolvimento de novos tópicos | Daniel Rodrigues | Arthur Suares
+| 09/12/24 | 1.2 | Corrigindo tópicos e adicinando novos itens do backlog | Daniel Rodrigues | Arthur Suares
+| 09/12/24 | 1.3 | Incluindo o calculo de priorização | Manuella, Arthur, João | Daniel Rodrigues
+| 12/12/24 | 2.0 | Novos requisitos e reestruturação do backlog | Daniel Rodrigues | Arthur Suares
