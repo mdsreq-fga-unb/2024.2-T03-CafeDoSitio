@@ -5,7 +5,7 @@ import mongoose from "mongoose";
 
 const createSac = async (req, res) => {
   try {
-    const { nomeSobrenome, email, telefone, assunto, mensagem} = req.body;
+    const { nomeSobrenome, email, telefone, assunto, mensagem } = req.body;
     if (!nomeSobrenome || !email || !telefone || !assunto || !mensagem) {
       return res.status(400).send({ message: "Preencha todos os campos!" });
     }
@@ -26,7 +26,7 @@ const createSac = async (req, res) => {
 const sendMail = async (req, res) => {
   try {
     const data = JSON.parse(req.body.data);
-    const { nomeSobrenome, email, telefone, assunto, mensagem} = data;
+    const { nomeSobrenome, email, telefone, assunto, mensagem } = data;
 
     let emailSetor;
 
@@ -62,7 +62,10 @@ const sendMail = async (req, res) => {
 
     // Configura os anexos se houver
     const attachments = req.file
-      ? [{ path: req.file.path }]
+      ? [{
+        filename: req.file.originalname, // Nome original do arquivo
+        path: req.file.path // Caminho onde o arquivo foi salvo
+      }]
       : [];
 
     // Envia o e-mail
@@ -110,9 +113,9 @@ const deleteSacById = async (req, res) => {
     const result = await sacService.deleteById(id);
 
     if (result.deletedCount > 0) {
-      return res.send({message: 'SAC deletado com sucesso.'});
+      return res.send({ message: 'SAC deletado com sucesso.' });
     } else {
-      return res.send({message: 'Nenhum SAC encontrado para o id fornecido.'});
+      return res.send({ message: 'Nenhum SAC encontrado para o id fornecido.' });
     }
 
   } catch (error) {
@@ -121,43 +124,43 @@ const deleteSacById = async (req, res) => {
   }
 };
 
-const findSacById = async (req,res) => {
+const findSacById = async (req, res) => {
 
-  const id = req.params.id; 
+  const id = req.params.id;
 
   //Conferir antes de tudo se o id é válido
-  if(!mongoose.Types.ObjectId.isValid(id)){
-    return res.status(400).send({message: "Id invalido!"});
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res.status(400).send({ message: "Id invalido!" });
   }
 
   const sac = await sacService.findById(id);
 
-  if(!sac){
-    return res.status(400).send({message: "Usuario nao encontrado"});
+  if (!sac) {
+    return res.status(400).send({ message: "Usuario nao encontrado" });
   }
 
   res.send(sac);
 };
 
 const updateSacStatus = async (req, res) => {
-  
-  const {nomeSobrenome, email, telefone, assunto, mensagem, status} = req.body;
 
-  if(!nomeSobrenome && !email && !telefone && !assunto && !mensagem && !status){
-    res.status(400).send({message: "Coloque pelo menos um campo para fazer update"});
+  const { status } = req.body;
+
+  if (status === undefined) {
+    return res.status(400).send({ message: "Preencha o campo de status!" });
   }
-  
-  const id = req.params.id; 
+
+  const id = req.params.id;
 
   //Conferir antes de tudo se o id é válido
-  if(!mongoose.Types.ObjectId.isValid(id)){
-    return res.status(400).send({message: "Id invalido!"});
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res.status(400).send({ message: "Id invalido!" });
   }
 
   const sac = await sacService.findById(id);
 
-  if(!sac){
-    return res.status(400).send({message: "Sac nao encontrado"});
+  if (!sac) {
+    return res.status(400).send({ message: "Sac nao encontrado" });
   }
 
   await sacService.updateSacStatus(
@@ -165,7 +168,7 @@ const updateSacStatus = async (req, res) => {
     status
   );
 
-  res.send({message: "Sac foi atualizado com sucesso"})
+  res.send({ message: "Sac foi atualizado com sucesso" });
 }
 
 export default {

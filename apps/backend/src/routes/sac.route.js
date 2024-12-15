@@ -10,6 +10,7 @@ sacRouter.get('/:assunto', sacController.findAssuntoSac);
 sacRouter.delete('/:id', sacController.deleteSacById);
 sacRouter.patch('/:id', sacController.updateSacStatus)
 
+//essa rota que é responsável pelo email
 sacRouter.post(
   '/sendMail',
   upload.single("arquivo"), 
@@ -28,4 +29,5 @@ sacRouter.post(
   }, 
   sacController.sendMail
 );
+
 export default sacRouter;
