@@ -6,8 +6,9 @@ Símbolo | Descrição
 ------- | ---------
 🟢      | Funcionalidade Incrementada para o Backlog
 ✅      | Funcionalidade Desenvolvida e Finalizada
+🟣      | Funcionalidade que está sendo Homologado
 🟡      | Funcionalidade que entrou em Débito para a Próxima Sprint
-🔴      | Funcinalidade que foi Descontinuada
+🔴      | FunciOnalidade que foi Descontinuada
 ⚪      | Funcionalidade em Espera
 
 ## Funcionalidades/User Stories (MVP):

@@ -45,6 +45,17 @@ nav:
         - Sprint Review: sections/4-sprints/sprint4/reuniões/[Equipe]25Nov2024Pt1.md
         - Sprint Planning: sections/4-sprints/sprint4/reuniões/[Equipe]25Nov2024Pt2.md
         - Reunião de Alinhamento: sections/4-sprints/sprint4/reuniões/[Stakeholders]29Nov2024.md
+    - Sprint 5:
+      - Histórico do Backlog: sections/4-sprints/sprint5/HistoricoBacklog.md
+      - Reuniões:
+        - Sprint Planning: sections/4-sprints/sprint5/reuniões/[Equipe]09Dez2024Pt1.md
+        - Sprint Review: sections/4-sprints/sprint5/reuniões/[Equipe]09Dez2024Pt2.md
+        - Reunião de Alinhamento: sections/4-sprints/sprint5/reuniões/[Stakeholders]06Dez2024.md
+    - Sprint 6:
+      - Histórico do Backlog: sections/4-sprints/sprint6/HistoricoBacklog.md
+      - Reuniões:
+        - Reunião de Alinhamento: sections/4-sprints/sprint6/reuniões/[Stakeholders]13Dez2024.md
+        - Sprint Review: sections/4-sprints/sprint6/reuniões/[Equipe]16Dez2024.md
   - Políticas:
     - GCS: sections/3-politicas/gcs.md
 
