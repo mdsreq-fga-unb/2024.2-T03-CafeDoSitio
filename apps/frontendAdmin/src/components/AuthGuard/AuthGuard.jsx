@@ -4,7 +4,6 @@ import { ROUTES } from "../../routes/RoutesConstants";
 
 const AuthGuard = ({ children }) => {
   const isAuthenticated = Boolean(sessionStorage.getItem("authToken"));
-
   if (!isAuthenticated) {
     alert("Usuário não atenticado! Faça login.");
     localStorage.clear();

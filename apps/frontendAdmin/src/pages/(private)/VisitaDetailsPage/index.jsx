@@ -221,7 +221,7 @@ const VisitaDetailsPage = () => {
         <Cards>
           <Button text={"EDITAR Disponibilidade"} onClick={openPopup1}></Button>
           <Button text={"REMOVER Solicitante da Visita Técnica"} onClick={openPopup3}></Button>
-          <Button text={"REMOVER Disponibilidade"} onClick={openPopup2}></Button>
+          <RedButton text={"REMOVER Disponibilidade"} onClick={openPopup2}></RedButton>
         </Cards>
 
         <br />
