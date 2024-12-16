@@ -4,16 +4,7 @@ const sacRouter = express.Router();
 
 import sacController from '../controllers/sac.controller.js';
 
-sacRouter.post('/createSac', sacController.createSac);
-sacRouter.get('/', sacController.findAllSac);
-sacRouter.get('/:assunto', sacController.findAssuntoSac);
-sacRouter.delete('/:id', sacController.deleteSacById);
-sacRouter.patch('/:id', sacController.updateSacStatus)
-
-//essa rota que é responsável pelo email
-sacRouter.post(
-  '/sendMail',
-  upload.single("arquivo"), 
+sacRouter.post('/createSac', upload.single("arquivo"),
   (req, res, next) => {
     try {
       if (req.file && req.file.size > 15 * 1024 * 1024) {
@@ -26,8 +17,11 @@ sacRouter.post(
       }
       next(err);
     }
-  }, 
-  sacController.sendMail
-);
+  }, sacController.createSac);
+
+sacRouter.get('/', sacController.findAllSac);
+sacRouter.get('/:assunto', sacController.findAssuntoSac);
+sacRouter.delete('/:id', sacController.deleteSacById);
+sacRouter.patch('/:id', sacController.updateSacStatus)
 
 export default sacRouter;

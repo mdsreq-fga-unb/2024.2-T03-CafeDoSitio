@@ -3,6 +3,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'; // CSS do <ToastContainer />
 import sacService from "../../services/sac.service";
 import { IoIosPin } from "react-icons/io";
+import { PuffLoader } from "react-spinners";
 
 import { 
     SacSection,
@@ -28,6 +29,9 @@ function Sac() {
     const [mensagem, setMensagem] = useState("");
     const [arquivo, setArquivo] = useState(null);
 
+    const [isLoading, setIsLoading] = useState(false);
+
+    
     const Formulario_JSON = {
         nomeSobrenome,
         email,
@@ -54,11 +58,19 @@ function Sac() {
 
     formData.append("data", JSON.stringify(Formulario_JSON));
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        sacService.postSac(Formulario_JSON);
-        sacService.sendMailSac(formData);
+        setIsLoading(true); // Ativa o carregamento
+    
+        try {
+            await sacService.postSac(formData); // Chama o serviço que consome a API
+        } catch (error) {
+            console.error("Erro ao enviar o formulário:", error);
+        } finally {
+            setIsLoading(false); // Desativa o carregamento
+        }
     };
+    
 
     return (
         <SacSection> 
@@ -138,7 +150,15 @@ function Sac() {
                     {arquivo && <FileName>{arquivo.name} selecionado!</FileName>}
                 </FileInput>
 
-                <Button type="submit" onClick={handleSubmit}>Enviar</Button>
+                <Button type="submit" onClick={handleSubmit} disabled={isLoading}>
+                    {isLoading ? "Enviando..." : "Enviar"}
+                </Button>
+
+                {isLoading && (
+                    <div style={{ textAlign: "center", marginTop: "1rem" }}>
+                        <PuffLoader color="#006343" />
+                    </div>
+                )}
             </Form>
         </SacSection>
     );

@@ -1,6 +1,16 @@
 import mongoose from "mongoose";
+import crypto from "crypto";
+
+const generateUniqueIdentifier = () => {
+  return crypto.randomBytes(8).toString("hex"); 
+};
 
 const SacSchema = new mongoose.Schema({
+  identificador: {
+    type: String,
+    required: true,
+    default: generateUniqueIdentifier,
+  },
   nomeSobrenome: {
     type: String,
     required: true,
@@ -25,7 +35,7 @@ const SacSchema = new mongoose.Schema({
     type: Boolean,
     required: true,
     default: false,
-  }
+  },
 });
 
 const Sac = mongoose.model('Sac', SacSchema);

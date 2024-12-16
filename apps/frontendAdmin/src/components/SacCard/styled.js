@@ -75,3 +75,16 @@ export const StatusDropdown = styled.ul`
     }
   }
 `;
+
+export const Id = styled.div`
+  display: flex;
+  font-size: 0.9rem;
+  color: green;
+  line-height: 1.5;
+  margin-top: 1px;
+  padding-top: 10px;
+
+  strong {
+    margin-right: 4px; /* Espaço adicional */
+  }
+`;

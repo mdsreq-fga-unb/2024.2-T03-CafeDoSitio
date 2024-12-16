@@ -5,7 +5,8 @@ import {
     CardInfo,
     CardMessage,
     CardStatus,
-    StatusDropdown
+    StatusDropdown,
+    Id
 } from './styled.js';
 import sacService from '../../services/sac.service.js';
 
@@ -38,11 +39,12 @@ export function SacCard({ sacs }) {
             )}
             <CardHeader>{sacs.assunto}</CardHeader>
             <CardInfo>
-                <p>Nome: {sacs.nomeSobrenome}</p>
-                <p>Email: {sacs.email}</p>
-                <p>Telefone: {sacs.telefone}</p>
+                <p><strong>Nome:</strong> {sacs.nomeSobrenome}</p>
+                <p><strong>Email:</strong> {sacs.email}</p>
+                <p><strong>Telefone:</strong> {sacs.telefone}</p>
             </CardInfo>
             <CardMessage>{sacs.mensagem}</CardMessage>
+            <Id><strong>Identificador: </strong>{sacs.identificador}</Id>
         </CardContainer>
     );
 }
