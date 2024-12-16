@@ -65,7 +65,7 @@ Para calcular a **prioridade** das funcionalidades com base nos três níveis de
 
 **Prioridade = (4 * Valor_Agregado) - Esforço**
 
-- **Valor Agregado** têm peso **2**, pois são mais importantes para o impacto do produto.
+- **Valor Agregado** têm peso **4**, pois são mais importantes para o impacto do produto.
 - **Esforço** é subtraído, pois funcionalidades com menor esforço são mais prioritárias.
 
 Os requisitos em sua devida priorização é:
