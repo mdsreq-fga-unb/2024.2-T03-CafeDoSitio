@@ -1,6 +1,8 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Paginacao from "../../../components/Paginacao";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; // CSS do <ToastContainer />
 import { Link } from "react-router-dom";
 import { ROUTES } from "../../../routes/RoutesConstants";
 import { InfoZone, Space, ContentZone, ManupulationDiv, InputsArea, Vazio } from "./styled";
@@ -13,7 +15,6 @@ import DisponibilityCard from "../../../components/DisponibilityCard"
 import { createVisita } from "@familiadositio/core";
 import { findAllVisita } from "../../../../../../packages/core/src/services/visitaService";
 import { FaExclamationCircle } from "react-icons/fa";
-import { Context } from "../../../context/Provider"; 
 
 const VisitaConfigPage = () => {
 
@@ -25,17 +26,6 @@ const VisitaConfigPage = () => {
   const [startTime, setStartTime] = useState('');
   const [endTime, setEndTime] = useState('');
   const [visitas, setVisitas] = useState([])
-
-  const {setIdVisita} = useContext(Context);
-  const {setDateVisita} = useContext(Context);
-  const {setStartTimeVisita} = useContext(Context);
-  const {setEndTimeVisita} = useContext(Context);
-  const {setStatus} = useContext(Context);
-  const {setNameVisitor} = useContext(Context);
-  const {setEmailVisitor} = useContext(Context);
-  const {setPhoneVisitor} = useContext(Context);
-  const {setTimeRequested} = useContext(Context);
-  const {setInstitution} = useContext(Context);
 
   const openPopup = () => setIsPopupOpen(true);
   const closePopup = () => setIsPopupOpen(false);
@@ -69,8 +59,30 @@ const VisitaConfigPage = () => {
 
   async function saveDisponibility(){
     try {
+      const now = new Date();
       const formattedStart = new Date(`${date}T${startTime}:00`);
       const formattedEnd = new Date(`${date}T${endTime}:00`);
+
+      if(date === '' || startTime === '' || endTime === '' || !date || !startTime || !endTime) {
+        toast.error("Preencha todos os campos!");
+        return
+      }
+
+      if (formattedStart < now) {
+        toast.error("A data da Disponibilidade não pode ser menor que o atual!");
+        return;
+      }
+
+      if (formattedEnd <= formattedStart) {
+        toast.error("O horário de término não pode ser menor ou igual ao horário de início!");
+        return;
+      }
+
+      const diffInMinutes = (formattedEnd - formattedStart) / (1000 * 60); // Diferença em minutos
+      if (diffInMinutes < 60) {
+        toast.error("A disponibilidade deve possuir ao menos 1 hora de duração!");
+        return;
+      }
 
       const payload = {
         startDateTime: formattedStart, 
@@ -79,25 +91,32 @@ const VisitaConfigPage = () => {
       };
 
       await createVisita(payload);
+      toast.success("Disponibilidade Criada!");
+
+      setDate('');
+      setStartTime('');
+      setEndTime('');
       setIsPopupOpen(false);
       fetchDisponibility();
     } catch (err) {
       console.log(err);
+      toast.error("Houve algum erro nosso! Tente novamente mais tarde.");
     }
   };
 
   function navToVisitaDetail(item) {
     const initDate = new Date(item.startDateTime);
-    setIdVisita(item._id);
-    setDateVisita(initDate.toLocaleDateString('pt-br'));
-    setStartTimeVisita(item.startDateTime);
-    setEndTimeVisita(item.endDateTime);
-    setStatus(item.status);
-    setNameVisitor(item.setNameVisitor);
-    setEmailVisitor(item.emailVisitor);
-    setPhoneVisitor(item.phoneVisitor);
-    setTimeRequested(item.timeRequested);
-    setInstitution(item.intitution);
+    sessionStorage.setItem("VisitaSelected", JSON.stringify({
+      _id: item._id,
+      date: initDate.toLocaleDateString('pt-br'),
+      startDateTime: item.startDateTime,
+      endDateTime: item.endDateTime,
+      status: item.status,
+      nameVisitor: item.nameVisitor,
+      emailVisitor: item.emailVisitor,
+      phoneVisitor: item.phoneVisitor,
+      institution: item.institution
+    }));
     navigate(`${ROUTES.VISITA_DETALHADA}/${item._id}`);
   }
 
@@ -105,6 +124,8 @@ const VisitaConfigPage = () => {
     <>
       <Paginacao><Link to={ROUTES.HOME} className="page">Central de Administração</Link> {" > VISITAS TÉCNICAS"}</Paginacao>
       <Space />
+
+      <ToastContainer />
 
       <InfoZone>
         <h1>Visitas Técnicas</h1>

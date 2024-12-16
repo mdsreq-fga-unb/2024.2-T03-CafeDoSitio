@@ -9,7 +9,7 @@ export function createVisita(body) {
     body,
     {
       headers: {
-        Authorization: `Bearer ${localStorage.getItem("authToken")}`,
+        Authorization: `Bearer ${sessionStorage.getItem("authToken")}`,
       }
     }
   );
@@ -19,14 +19,43 @@ export function createVisita(body) {
 
 export function findAllVisita()
 {
-  const visitas = axios.get(
+  const response = axios.get(
     `${baseURL}/visita/findAllVisita`,
     {
       headers: {
-        Authorization: `Bearer ${localStorage.getItem("authToken")}`,
+        Authorization: `Bearer ${sessionStorage.getItem("authToken")}`,
       }
     }
-  )
+  );
   
-  return visitas; 
+  return response; 
 };//
+
+export function deleteVisita(id) {
+
+  const response = axios.delete(
+    `${baseURL}/visita/deleteVisita/${id}`,
+    {
+      headers: {
+        Authorization: `Bearer ${sessionStorage.getItem("authToken")}`,
+      },
+    }
+  );
+
+  return response;
+}
+
+export function patchVisita(id, body) {
+
+  const response = axios.patch(
+    `${baseURL}/visita/patchVisita/${id}`,
+    body,
+    {
+      headers: {
+        Authorization: `Bearer ${sessionStorage.getItem("authToken")}`,
+      },
+    }
+  );
+
+  return response;
+}

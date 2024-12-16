@@ -14,7 +14,7 @@ export function createUser(name, email, password){
     body,
     {
       headers: {
-        Authorization: `Bearer ${localStorage.get("authToken")}`,
+        Authorization: `Bearer ${sessionStorage.get("authToken")}`,
       }
     }
   );

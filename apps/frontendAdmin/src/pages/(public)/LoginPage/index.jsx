@@ -23,7 +23,7 @@ const LoginPage = () => {
   async function login(){
     try {
       const response = await loginUser(email, password);
-      localStorage.setItem("authToken", response.data.token);
+      sessionStorage.setItem("authToken", response.data.token);
       if(response.data.case === 1) {
         setEmail('');
         setPassord('');

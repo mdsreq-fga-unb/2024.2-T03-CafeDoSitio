@@ -25,10 +25,6 @@ const VisitaSchema = new mongoose.Schema({
         type: String,
         require: false,
     },
-    timeRequested: {
-        type: Date,
-        require: false,
-    },
     institution: {
         type: String,
         require: false,

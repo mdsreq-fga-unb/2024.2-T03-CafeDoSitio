@@ -6,7 +6,8 @@ dotenv.config();
 export const authMiddleware = (req, res, next) => {
   try {
     const { authorization } = req.headers;
-    if (!authorization)
+    
+    if (!authorization) 
       return res.status(401).send({message: 'User Unauthorized'});
   
     const parts = authorization.split(" ");
