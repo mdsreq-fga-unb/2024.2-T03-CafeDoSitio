@@ -23,7 +23,7 @@ const createSac = async (req, res) => {
 
     switch (assunto) {
       case 'Sugestao':
-        emailSetor = 'arthur.lantr@gmail.com';
+        emailSetor = 'Sugestao@email.com';
         break;
       case 'Elogio':
         emailSetor = 'Elogio@email.com';
@@ -72,7 +72,7 @@ const createSac = async (req, res) => {
         console.error(`Erro ao deletar o arquivo ${req.file.path}:`, deleteError.message);
       }
     }
-    
+
     res.status(200).send({ message: 'Dados salvos com sucesso!', sac: sac });
 
   } catch (err) {
