@@ -2,10 +2,10 @@ import VisitaService from"../services/visita.service.js";
 
 const createVisita = async (req, res) => {
     try {
-        const { startDateTime, endDateTime } = req.body;
+        const { startDateTime, endDateTime, status } = req.body;
 
-        if(!startDateTime || !endDateTime)
-            return res.status(400).json({ message: "Preencha todos os campos para criar a disponibilidade!"});
+        if(!startDateTime || !endDateTime || !status)
+            return res.status(400).send({ message: "Preencha todos os campos para criar a disponibilidade!"});
 
         const visita = await VisitaService.createService(req.body);
 
@@ -21,16 +21,59 @@ const createVisita = async (req, res) => {
 const findAllVisita = async (req, res) => {
     try {
         const visita = await VisitaService.findAllService();
-
-        return res.send(200).send({ message: "Visitas encontradas!", visita });
+        
+        return res.status(200).send({ message: "Visitas encontradas!", visita });
+        
     } catch (err) {
         return res.send(500).send({ message: err.message });
+    }
+};
+
+const deleteVisita = async (req, res) => {
+    try {
+        const { id } = req.params;
+
+        if(!id)
+            return res.status(400).send({ message: "ID não identificado!"});
+
+        const visita = await VisitaService.deleteService({_id: id});
+
+        if (!visita)
+            return res.status(404).send({ message: "Visita não encontrada!" });
+
+        return res.status(200).send({ message: "Visita deletada!", visita });
+    } catch (err) {
+        return res.status(500).send({ message: err.message });
+    }
+};
+
+const patchVisita = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const updateData = req.body;
+
+        if (!id)
+            return res.status(400).send({ message: "ID não informado!" });
+
+        if (!Object.keys(updateData).length)
+            return res.status(400).send({ message: "Nenhuma informação para atualizar!" });
+
+        const updatedVisita = await VisitaService.patchService({ _id: id }, updateData);
+
+        if (!updatedVisita)
+            return res.status(404).send({ message: "Visita não encontrada!" });
+
+        return res.status(200).send({ message: "Visita atualizada com sucesso!", updatedVisita });
+    } catch (err) {
+        return res.status(500).send({ message: err.message });
     }
 }
 
 export default { 
     createVisita,
     findAllVisita,
+    deleteVisita,
+    patchVisita,
 };
 
 

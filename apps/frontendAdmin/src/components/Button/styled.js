@@ -9,29 +9,29 @@ export const ButtonDiv = styled.div`
   font-family: 'Myriad Pro', sans-serif;
   padding-inline: 16px;
   padding-block: 8px;
-  border: 2px solid #006343;
-  border-radius: 10px;
+  border-radius: 4px;
   transition: 200ms;
+  background-color: #006343;
   cursor: pointer;
 
   input{
     background: transparent;
     border: none;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bold;
-    color: #006343;
+    color: white;
     transition: 200ms;
     cursor: pointer;
   }
 
   .icon{
     font-size: 15px;
-    color: #006343;
+    color: white;
     transition: 200ms;
   }
 
   &:hover{
-    background-color: #006343;
+    background-color: #004c2e;
 
     input, .icon{
       color: white;

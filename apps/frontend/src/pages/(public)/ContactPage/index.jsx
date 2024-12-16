@@ -1,7 +1,6 @@
 import React from 'react';
-import Paginacao from '../../components/Paginacao';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import Paginacao from '../../../components/Paginacao';
+import Sac from '../../../components/SacSection'
 import {
   ContactSection,
   ContactCards,
@@ -14,6 +13,7 @@ import {
   Links,
   ContactInfo,
   Horario_redes,
+  Space
 } from './styled';
 import { FaEnvelope, FaPhoneAlt, FaInstagram, FaFacebook, FaYoutube, FaLinkedin, FaComments } from "react-icons/fa"; // Ícones do Font Awesome
 import { FaXTwitter } from "react-icons/fa6";
@@ -42,22 +42,22 @@ const ContactPage = () => {
 
   return (
     <>
-      <Header pagina={"CONTATOS"}/>
-      <Paginacao text={"FAMÍLIA DO SÍTIO > CONTATOS"}/>
+      <Paginacao text={"FAMÍLIA DO SÍTIO > CONTATOS"} />
+      <Space />
 
-      <InfoSection className='container'>
+      <InfoSection>
         <h1>FALE CONOSCO</h1>
-        <p>Precisa de ajuda com alguma dúvida, sugestão ou reclamação?<br/>Utilize nossos canais de atendimento:</p>
+        <p>Precisa de ajuda com alguma dúvida, sugestão ou reclamação?<br />Utilize nossos canais de atendimento:</p>
       </InfoSection>
 
       <ContactSection>
         <ContactCards>
           {contacts.map((contact) => (
-            <ContactCard>
+            <ContactCard className='card'>
               <h1>{contact.title}</h1>
               <p>{contact.description}</p>
               <EmailZone>
-              <FaEnvelope size={20} color="#006343"/>
+                <FaEnvelope size={20} color="#006343" />
                 <EmailLink href={`mailto:${contact.email}`}>
                   {contact.email}
                 </EmailLink>
@@ -70,15 +70,15 @@ const ContactPage = () => {
       <FaleCom>
         <div className='marcador'>
           <FaComments size={60} color="white" />
-          <h2>FALE COM < br/> A FAMÍLIA</h2>
+          <h2>FALE COM < br /> A FAMÍLIA</h2>
         </div>
         <ContactInfo>
           <div className="phone">
-            <FaPhoneAlt size={28} color="#006343"/>
+            <FaPhoneAlt size={28} color="#006343" />
             <label> (61) 2108-0101</label>
           </div>
           <div className='email_zone'>
-            <FaEnvelope size={28} color="#006343"/>
+            <FaEnvelope size={28} color="#006343" />
             <a href="mailto:atendimento@familiadositio.com.br" class="email">atendimento@familiadositio.com.br</a>
           </div>
         </ContactInfo>
@@ -113,7 +113,7 @@ const ContactPage = () => {
           <a href="#privacy">Política de Privacidade</a>
         </Links>
       </FaleCom>
-      <Footer />
+      <Sac />
     </>
   );
 };

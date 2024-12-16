@@ -9,6 +9,10 @@ const VisitaSchema = new mongoose.Schema({
         type: Date,
         require: true,
     },
+    status: {
+        type: String,
+        require: true,
+    },
     nameVisitor: {
         type: String,
         require: false,
@@ -21,7 +25,7 @@ const VisitaSchema = new mongoose.Schema({
         type: String,
         require: false,
     },
-    Institution: {
+    institution: {
         type: String,
         require: false,
     }

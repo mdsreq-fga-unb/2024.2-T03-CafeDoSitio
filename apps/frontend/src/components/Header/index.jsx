@@ -42,11 +42,11 @@ function Header({pagina}) {
           <ul className="nav-list">
             <li><a href="#">INICIO</a></li>
             <li><a href="#">NOSSOS PRODUTOS</a></li>
-            <li><Link to="/nossaHistoria" style={{ color: isActive("/nossaHistoria") ? "#006343" : "black"}}>NOSSA HISTÓRIA</Link></li>
-            <li><a href="#">BLOG</a></li>
+            <li><Link to="/historia" style={{ color: isActive("/historia") ? "#006343" : "black"}}>NOSSA HISTÓRIA</Link></li>
+            <li><a href="/" style={{ color: isActive("/") ? "#006343" : "black"}}>BLOG</a></li>
             <li><a href="#">SÍTIO VERDE</a></li>
             <li><a href="#">VISITE A FÁBRICA</a></li>
-            <li><Link to="/" style={{ color: isActive("/") ? "#006343" : "black"}}>CONTATO</Link></li>
+            <li><Link to="/contatos" style={{ color: isActive("/contatos") ? "#006343" : "black"}}>CONTATO</Link></li>
           </ul>
         </InfoAreaDesktop>
 
