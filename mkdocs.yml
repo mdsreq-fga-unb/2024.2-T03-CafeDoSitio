@@ -13,6 +13,7 @@ nav:
     - Cronograma e Entregas: sections/2-docPage/5-cronogramaEntregas.md
     - Interação entre Equipe e Cliente: sections/2-docPage/6-interacaoEquipeCliente.md
     - Requisitos de Software: sections/2-docPage/7-Requisitos.md
+    - DoR e DoD: sections/2-docPage/8-DoR&DoD.md
     - Backlog do Produto: sections/2-docPage/9-backlogDeProduto.md
     - Lições Aprendidas: sections/2-docPage/10-LicoesAprendidas.md
   - Entregas:
