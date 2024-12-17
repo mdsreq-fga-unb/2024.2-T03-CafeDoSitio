@@ -39,7 +39,7 @@ Fonte: Elaborado pelos autores (2024)
 
 Conforme explicitado na figura 1, o processo de desenvolvimento de software mais indicado para o projeto é o Scrum/XP, uma combinação do Extreme Programming (XP) com o framework de gestão de projetos Scrum. Tanto Scrum, quanto XP foram desenvolvidos no contexto de abordagem ágil de desenvolvimento de software e ciclo de vida do produto iterativo e incremental.
 
-O diferencial do Scrum/XP para o Unified Process na escolha através do framework já mencionado, foi a não existência de requisitos de alta confiabilidade. Por outro lado, a escolha do Scrum/XP já era desejada pelo time de desenvolvimento devido a experiências anteriores bem sucedidas com o processo.
+O diferencial do Scrum/XP para o FDD na escolha através do framework, foi a flexibilidade de requisitos. Por outro lado, a escolha do Scrum/XP já era desejada pelo time de desenvolvimento devido a experiências anteriores bem sucedidas com o processo.
 
 ---
 ####Referências:
