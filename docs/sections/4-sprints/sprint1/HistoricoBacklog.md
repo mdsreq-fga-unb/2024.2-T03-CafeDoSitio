@@ -8,7 +8,7 @@ Símbolo | Descrição
 ✅      | Funcionalidade Desenvolvida e Finalizada
 🟣      | Funcionalidade que está sendo Homologado
 🟡      | Funcionalidade que entrou em Débito para a Próxima Sprint
-🔴      | FunciOnalidade que foi Descontinuada
+🔴      | Funcionalidade que foi Descontinuada
 ⚪      | Funcionalidade em Espera
 
 ## Funcionalidades/User Stories (MVP):
