@@ -59,11 +59,7 @@ Antes da validação com o cliente, a equipe realiza reuniões internas para rev
 
 ### 4.1.6 Organização e Atualização de Requisitos
 
-**Product Backlog Building (PBB):** Essa técnica organiza os requisitos em um formato hierárquico, desde os objetivos de negócio até as histórias de usuário, ajudando a manter o backlog atualizado, alinhado às necessidades dos stakeholders e adaptável ao longo do desenvolvimento.  As etapas incluem:  
-1. **Definir os objetivos de negócio**: Identificar as metas que o produto deve alcançar.  
-2. **Identificar funcionalidades**: Mapear as principais funcionalidades para atender aos objetivos.  
-3. **Criar histórias de usuário**: Detalhar as funcionalidades em partes menores, descritivas e acionáveis.  
-4. **Priorizar o backlog**: Organizar os itens para maximizar valor e minimizar riscos.  
+A organização foi feita com base no Lean Inception. Utilizando a fórmula **Prioridade = (4 * Valor_Agregado) - Esforço**
 
 ## 4.2 Engenharia de Requisitos e o Scrum/XP
 
