@@ -8,3 +8,13 @@ Nesta Unidade, também aprendemos sobre a importância de pensar em uma metodolo
 Aprendemos como a comunicação e a colaboração com os stakeholders ao longo da elicitação dos requisitos é de suma importância, pois o sucesso do desenvolvimento depende de como os problemas são expostos ao time e quais são as expectativas de intervenções a este problema o software buscará atender.
 
 Por último, aprendemos que qualquer software produzido para uma empresa ou pessoas, promove uma intervenção social, e é por isso que sua produção precisa ser colaborativa entre o time e stakeholders para ser entregue de forma mais alinhada ao contexto do cliente.
+
+## Unidade 2:
+
+A nossa equipe aprendeu a aperfeiçoar as técnicas de elicitação de requisitos, principalmente na definição de prioridades considerando o tempo disponível e o quanto as funcionalidades agregam para o negócio dos stakeholders.
+
+Aprendemos também a identificar funcionalidades que possuem características de granularidade alta e reduzí-los em escopo menores, classificando-os pelo modelo User Story: Temas, Épicos e User Story's.
+
+Estabelecer os parâmetros para inicialização das atividades e de sua finalização também foi aprendida pela equipe e, de fato, vimos o quão importante é ter tais fases definidas de forma padronizada e clara para toda a equipe.
+
+Por fim, conseguimos enxegar os processos de nossa metodologia dentro da Engenharia de Requisitos, identificando em quais fases são realizadas a elicitação e descoberta, análise e consenso, declaração, representação, verificação e validação e atualização e organização.
