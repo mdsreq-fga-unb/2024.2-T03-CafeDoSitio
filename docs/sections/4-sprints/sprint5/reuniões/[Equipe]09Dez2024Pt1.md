@@ -27,7 +27,6 @@ A reunião de Review tinha como objetivo monitorar o andamento das atividades de
 
 Código  | Titulo                                                 | Link da Issue | Responsável(is)
 ------- | ------------------------------------------------------ | ------------- | --------------- 
-AT01S03 | [US11]: Configurar disponibilidade de Visita | [Issue #63](https://github.com/mdsreq-fga-unb/2024.2-T03-CafeDoSitio/issues/63) | Marcella e João Pedro
 AT02S03 | [US15]: Conhecer história da Empresa         | [Issue #66](https://github.com/mdsreq-fga-unb/2024.2-T03-CafeDoSitio/issues/66) | Arthur Miranda e Ana Carolina
 AT03S03 | [US18]: Consultar contatos da Empresa        | [Issue #69](https://github.com/mdsreq-fga-unb/2024.2-T03-CafeDoSitio/issues/69) | Manuella Magalhães e Daniel Rodrigues
 AT01S04 | [DOC]: Realizar tópico 4.1 da Documentação no GitPages | [Issue #77](https://github.com/mdsreq-fga-unb/2024.2-T03-CafeDoSitio/issues/77) | Manuella, Arthur e Ana Carolina
