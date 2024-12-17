@@ -83,7 +83,7 @@ Em outras palavras, caso o nível de esforço seja nível 1, por exemplo, isto s
     - **2:** Agrega valor médio ao produto, contribuindo moderadamente para a satisfação dos usuários ou objetivos do negócio.
     - **3:** Agrega alto valor, sendo essencial para o sucesso do produto e trazendo impacto significativo para os usuários ou para o negócio.
 
-Para calcular a **prioridade** das funcionalidades com base nos três níveis de avaliação (Esforço, Valor Agregado e UX), iremos utilizar uma fórmula que combine os pesos de cada critério. O objetivo é priorizar funcionalidades que agreguem mais valor e ofereçam uma boa experiência ao usuário, mas com menor esforço.
+Para calcular a **prioridade** das funcionalidades com base nos três níveis de avaliação (Esforço, Valor Agregado), iremos utilizar uma fórmula que combine os pesos de cada critério. O objetivo é priorizar funcionalidades que agreguem mais valor e ofereçam uma boa experiência ao usuário, mas com menor esforço.
 
 **Prioridade = (4 * Valor_Agregado) - Esforço**
 
@@ -129,13 +129,12 @@ RQNF06 | 3                       | 1                | 11
 
 ## 9.3 - MVP
 
-Decidido durante a produção do Workshop Lean Inception, foi estabelecido o MVP do produto de software da Família do Sítio e a sua versão de incremento baseando-se na definição de 3 categorias, como dito na seção anterior:
+Decidido durante a produção do Workshop Lean Inception, foi estabelecido o MVP do produto de software da Família do Sítio e a sua versão de incremento baseando-se na definição de 2 categorias, como dito na seção anterior:
 
 - Esforço de Execução;
 - Valor Agregado;
-- Impacto na experiência do Usuário:
 
-Com esta técnica, foi possível elencar as funcionalidades de maior valor agregado e impacto na experiência do usuário para as primeiras produções feita pelo time. Dessa forma, as funcionalidades **que estão em MVP**, são:
+Com esta técnica, foi possível elencar as funcionalidades de maior valor agregado para as primeiras produções feita pelo time. Dessa forma, as funcionalidades **que estão em MVP**, são:
 
 ### 9.3.1 - Requisitos Funcionais
 
