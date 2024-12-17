@@ -1,26 +1,41 @@
 import mongoose from "mongoose";
+import crypto from "crypto";
+
+const generateUniqueIdentifier = () => {
+  return crypto.randomBytes(8).toString("hex"); 
+};
 
 const SacSchema = new mongoose.Schema({
+  identificador: {
+    type: String,
+    required: true,
+    default: generateUniqueIdentifier,
+  },
   nomeSobrenome: {
     type: String,
-    require: true,
+    required: true,
   },
   email: {
     type: String,
-    require: true,
+    required: true,
   },
   telefone: {
     type: String,
-    require: true,
+    required: true,
   },
   assunto: {
     type: String,
-    require: true,
+    required: true,
   },
   mensagem: {
     type: String,
-    require: true,
-  }
+    required: true,
+  },
+  status: {
+    type: Boolean,
+    required: true,
+    default: false,
+  },
 });
 
 const Sac = mongoose.model('Sac', SacSchema);

@@ -23,6 +23,24 @@ const getAllSacs = async (tag) => {
     }
 };
 
+const updateSacStatus = async (Json, id) => {
+    try{
+        const response = await axios.patch(`${baseURL}/${id}`, Json);
+
+    }
+    catch (error) {
+        if (error.response) {
+            console.error("Erro na resposta do servidor:", error.response.data);
+        } else if (error.request) {
+            console.error("Erro na requisição:", error.request);
+        } else {
+            console.error("Erro ao configurar a requisição:", error.message);
+        }
+        toast.error("Ocorreu um erro. Tente novamente!");
+    }
+}
+
 export default {
-    getAllSacs
+    getAllSacs,
+    updateSacStatus
 }

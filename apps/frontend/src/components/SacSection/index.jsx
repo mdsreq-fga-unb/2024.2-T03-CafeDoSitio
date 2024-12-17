@@ -3,6 +3,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'; // CSS do <ToastContainer />
 import sacService from "../../services/sac.service";
 import { IoIosPin } from "react-icons/io";
+import { PuffLoader } from "react-spinners";
 
 import { 
     SacSection,
@@ -28,6 +29,9 @@ function Sac() {
     const [mensagem, setMensagem] = useState("");
     const [arquivo, setArquivo] = useState(null);
 
+    const [isLoading, setIsLoading] = useState(false);
+
+    
     const Formulario_JSON = {
         nomeSobrenome,
         email,
@@ -54,19 +58,27 @@ function Sac() {
 
     formData.append("data", JSON.stringify(Formulario_JSON));
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        sacService.postSac(Formulario_JSON);
-        sacService.sendMailSac(formData);
+        setIsLoading(true); // Ativa o carregamento
+    
+        try {
+            await sacService.postSac(formData); // Chama o serviço que consome a API
+        } catch (error) {
+            console.error("Erro ao enviar o formulário:", error);
+        } finally {
+            setIsLoading(false); // Desativa o carregamento
+        }
     };
+    
 
     return (
         <SacSection> 
             <Location>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15350.606789028072!2d-48.0269256!3d-15.8748932!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a2d87432ac44d%3A0xff6ae8c97e66c8b8!2zQ2Fmw6kgZG8gU8OtdGlv!5e0!3m2!1spt-BR!2sbr!4v1733509279879!5m2!1spt-BR!2sbr"
-                    width="400"
-                    height="450"
+                    width="300"
+                    height="300"
                     style={{ border: 0 }} 
                     allowFullScreen 
                     loading="lazy"
@@ -138,7 +150,15 @@ function Sac() {
                     {arquivo && <FileName>{arquivo.name} selecionado!</FileName>}
                 </FileInput>
 
-                <Button type="submit" onClick={handleSubmit}>Enviar</Button>
+                <Button type="submit" onClick={handleSubmit} disabled={isLoading}>
+                    {isLoading ? "Enviando..." : "Enviar"}
+                </Button>
+
+                {isLoading && (
+                    <div style={{ textAlign: "center", marginTop: "1rem" }}>
+                        <PuffLoader color="#006343" />
+                    </div>
+                )}
             </Form>
         </SacSection>
     );
