@@ -14,16 +14,16 @@ Símbolo | Descrição
 ## Funcionalidades/User Stories (MVP):
 Código | Título                                       | AÇÃO        
 ------ | -------------------------------------------- | ------
-US01   | Criar Blog                                   | 🟡
-US02   | Editar Blog                                  | ⚪
-US04   | Categorizar Blog                             | ⚪
-US05   | Filtrar Blogs                                | ⚪
-US06   | Pesquisar Blog                               | ⚪
-US08   | Recomendar outros Blogs                      | ⚪
-US11   | Configurar disponibilidade de Visita         | 🟣
-US14   | Agendar Visita Presencial                    | ⚪
-US15   | Realizar SAC                                 | 🟣     
-US16   | Localizar Produtos                           | ⚪
+US01   | Criar Post do Blog                                   | 🟡
+US02   | Editar Post do Blog                                  | ⚪
+US04   | Categorizar Post do Blog                             | ⚪
+US05   | Filtrar Post do Blog                                 | ⚪
+US06   | Pesquisar Post no Blog                                | ⚪
+US08   | Recomendar outros Post no Blog                       | ⚪
+US11   | Configurar disponibilidade de Visita Técnica à Fábrica | 🟣
+US14   | Agendar Visita Técnica à Fábrica             | ⚪
+US15   | Enviar mensagem à empresa pela Central de Atendimento ao Cliente  | 🟣        
+US16   | Localizar por Produtos da Família do Sítio   | ⚪
 US18   | Fazer login na Central Administrativa        | 🟣
 US19   | Gerenciar acessos à Central de Administraçãp | ⚪
 
