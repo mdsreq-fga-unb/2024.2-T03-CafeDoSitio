@@ -74,7 +74,7 @@ Antes da validação com o cliente, a equipe realiza reuniões internas para rev
 
 ## 4.2 Engenharia de Requisitos e o Scrum/XP
 
-Baseando-se na estratégia de desenvolvimento de software selecionado, mencionado no tópico 3 e consultando os códigos das User Stories da seção [Visão do Backlog](../4-sprints/VisaoGeralBacklog.md), o cronograma preliminar do projeto pode ser visualizada logo abaixo:
+Baseando-se na estratégia de desenvolvimento de software selecionado, mencionado no tópico 3 e consultando os códigos das User Stories da seção [Backlog do Produto](./9-backlogDeProduto.md), o cronograma preliminar do projeto pode ser visualizada logo abaixo:
 
 Fases do Processo           | Atividades ER             | Prática                    | Técnica                                                        | Resultado Esperado
 --------------------------- | ------------------------- | -------------------------- | -------------------------------------------------------------- | ----------------------------
