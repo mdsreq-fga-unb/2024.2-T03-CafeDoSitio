@@ -33,7 +33,7 @@ US19   | Gerenciar acessos à Central de Administraçãp | ⚪
 Código   | Título                                | AÇÃO        
 -------- | ------------------------------------- | ------
 RQNF01   | Conhecer história da Empresa          | 🟣
-RQNF02   | Conhecer produtos da Empresa          | ⚪
+RQNF02   | Conhecer produtos da Empresa          | 🟡
 RQNF03   | Conhecer Ações Sociais da Empresa     | ⚪
 RQNF04   | Consultar contatos da Empresa         | 🟣
 RQNF05   | Consultar vagas de empresa da Empresa | ⚪
