@@ -1,0 +1,2216 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../1-cenarioAtual/">
+      
+      
+        <link rel="next" href="../3-estrategiasEngSoftware/">
+      
+      
+      <link rel="icon" href="../../../assets/CafeSitioLogo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Solução Proposta - Família do Sítio</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/styles.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="lime">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#2-solucao-proposta" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Família do Sítio" class="md-header__button md-logo" aria-label="Família do Sítio" data-md-component="logo">
+      
+  <img src="../../../assets/CafeSitioLogo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Família do Sítio
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Solução Proposta
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="lime"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mdsreq-fga-unb/2024.2-T03-CafeDoSitio" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    2024.2-T03-CafeDoSitio
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Família do Sítio" class="md-nav__button md-logo" aria-label="Família do Sítio" data-md-component="logo">
+      
+  <img src="../../../assets/CafeSitioLogo.png" alt="logo">
+
+    </a>
+    Família do Sítio
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mdsreq-fga-unb/2024.2-T03-CafeDoSitio" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    2024.2-T03-CafeDoSitio
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Início
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Visão do Produto e Projeto
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Visão do Produto e Projeto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1-cenarioAtual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cenário Atual do Cliente e Negócio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Solução Proposta
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Solução Proposta
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21-objetivos-do-produto" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. Objetivos do Produto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-caracteristicas-da-solucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2. Características da Solução
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-tecnologias-a-serem-utilizadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3. Tecnologias a Serem Utilizadas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3. Tecnologias a Serem Utilizadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-front-end" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Front-end
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-back-end" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Back-end
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-banco-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Banco de Dados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-configuracao-e-terceiros" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Configuração e Terceiros
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-ferramentas-de-teste" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Ferramentas de Teste
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Design
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-pesquisa-de-mercado-e-analise-competitiva" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4. Pesquisa de Mercado e Análise Competitiva
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-analise-de-viabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5. Análise de Viabilidade:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-impacto-da-solucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6. Impacto da Solução:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.6. Impacto da Solução:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-melhoria-na-eficiencia-operacional" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Melhoria na Eficiência Operacional:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-aumento-da-satisfacao-dos-clientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Aumento da Satisfação dos Clientes:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-maior-controle-e-transparencia-nos-processos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Maior Controle e Transparência nos Processos:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-maior-acesso-ao-dados-da-empresa" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Maior acesso ao dados da Empresa:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-fortalecimento-da-imagem-da-marca" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Fortalecimento da Imagem da Marca:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Versão
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-estrategiasEngSoftware/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estratégias de Engenharia de Software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4-engenhariaRequisitos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Engenharia de Requisitos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5-cronogramaEntregas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cronograma e Entregas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6-interacaoEquipeCliente/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interação entre Equipe e Cliente
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7-Requisitos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requisitos de Software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8-DoR%26DoD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DoR e DoD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../9-backlogDeProduto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Backlog do Produto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-LicoesAprendidas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lições Aprendidas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Entregas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Entregas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5-entregas/Unidade1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unidade 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5-entregas/Unidade2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unidade 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ciclos e Backlog
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Ciclos e Backlog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../9-backlogDeProduto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Backlog do Produto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sprint 1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Sprint 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4-sprints/sprint1/HistoricoBacklog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Historico do Backlog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_2" id="__nav_4_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Reuniões
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Reuniões
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4-sprints/sprint1/reuni%C3%B5es/%5BStakeholders%5D04Nov2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kick Off com Stakeholders
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4-sprints/sprint1/reuni%C3%B5es/%5BEquipe%5D04Nov2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sprint Planning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4-sprints/sprint1/reuni%C3%B5es/%5BStakeholders%5D06Nov2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lean Inception pt.1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4-sprints/sprint1/reuni%C3%B5es/%5BStakeholders%5D07Nov2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lean Inception pt.2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4-sprints/sprint1/reuni%C3%B5es/%5BEquipe%5D07Nov2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lean Inception pt.3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4-sprints/sprint1/reuni%C3%B5es/%5BEquipe%5D08Nov2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lean Inception pt.4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sprint 2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Sprint 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4-sprints/sprint2/HistoricoBacklog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Histórico do Backlog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3_2" id="__nav_4_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Reuniões
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Reuniões
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4-sprints/sprint2/reuni%C3%B5es/%5BEquipe%5D11Nov2024pt1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sprint Review
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4-sprints/sprint2/reuni%C3%B5es/%5BEquipe%5D11Nov2024pt2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sprint Planning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sprint 3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Sprint 3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4-sprints/sprint3/HistoricoBacklog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Histórico do Backlog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4_2" id="__nav_4_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Reuniões
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Reuniões
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4-sprints/sprint3/reuni%C3%B5es/%5BEquipe%5D18Nov2024pt1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sprint Review
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4-sprints/sprint3/reuni%C3%B5es/%5BEquipe%5D18Nov2024pt2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sprint Planning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sprint 4
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Sprint 4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4-sprints/sprint4/HistoricoBacklog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Histórico do Backlog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5_2" id="__nav_4_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Reuniões
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Reuniões
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4-sprints/sprint4/reuni%C3%B5es/%5BStakeholders%5D25Nov2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reunião de Validação
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4-sprints/sprint4/reuni%C3%B5es/%5BEquipe%5D25Nov2024Pt1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sprint Review
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4-sprints/sprint4/reuni%C3%B5es/%5BEquipe%5D25Nov2024Pt2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sprint Planning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4-sprints/sprint4/reuni%C3%B5es/%5BStakeholders%5D29Nov2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reunião de Alinhamento
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sprint 5
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Sprint 5
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4-sprints/sprint5/HistoricoBacklog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Histórico do Backlog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6_2" id="__nav_4_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Reuniões
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Reuniões
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4-sprints/sprint5/reuni%C3%B5es/%5BEquipe%5D09Dez2024Pt1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sprint Planning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4-sprints/sprint5/reuni%C3%B5es/%5BEquipe%5D09Dez2024Pt2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sprint Review
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4-sprints/sprint5/reuni%C3%B5es/%5BStakeholders%5D06Dez2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reunião de Alinhamento
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sprint 6
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            Sprint 6
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4-sprints/sprint6/HistoricoBacklog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Histórico do Backlog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_2" id="__nav_4_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Reuniões
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Reuniões
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4-sprints/sprint6/reuni%C3%B5es/%5BStakeholders%5D13Dez2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reunião de Alinhamento
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4-sprints/sprint6/reuni%C3%B5es/%5BEquipe%5D16Dez2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sprint Review
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Políticas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Políticas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3-politicas/gcs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GCS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="2-solucao-proposta">2. Solução Proposta</h1>
+<h2 id="21-objetivos-do-produto">2.1. Objetivos do Produto</h2>
+<p>Primordialmente, o principal objetivo deste software é facilitar o acesso às informações institucionais e de Atendimento da Família do Sítio para os Usuários. Este objetivo será alcançado com a resolução das 5 Causas indicadas no Diagrama espinha de peixe, presente na Figura 1 da seção <a href="../1-cenarioAtual/">Cenário Atual do Cliente e Negócio</a>:</p>
+<ol>
+<li>Blogs;</li>
+<li>Visitas Técnicas;</li>
+<li>Recrutamento;</li>
+<li>Institucional;</li>
+<li>Ouvidoria.</li>
+</ol>
+<p>As causas acima foram identificadas como solucionáveis dentro de um produto de software. Com uma unificação dos serviços requeridos e do direcionamento dos feedbacks, é esperado que haja um fluxo melhor de informações, certificando-se de que elas cheguem onde devem chegar.</p>
+<p>O resultado esperado é que com essa aplicação e as mudanças solicitadas, os clientes e visitantes do site tenham maiores opções de interação com os serviços ofertados pelo Café do Sítio, e que funcionários da empresa possam ter uma ferramenta de trabalho que os ajude a receber feedbacks direcionados para as áreas corretas, diminuindo a sobrecarga em apenas um dos setores. Tais resultados otimizam o tempo de resposta ao feedback, tarefa essencial para uma empresa interessada em manter uma boa reputação entre seus clientes e possíveis clientes.</p>
+<h2 id="22-caracteristicas-da-solucao">2.2. Características da Solução</h2>
+<p>As características do aplicativo, preliminarmente, incluem:</p>
+<ul>
+<li>
+<p>O software irá ajudar o processo de aquisição de colaboradores qualificados para os diversos cargos na empresa através de uma interface que guiará o usuário, através dos procedimentos adequados e necessários para participar dos processos seletivos da empresa por meio da plataforma empregare.</p>
+</li>
+<li>
+<p>O software deverá ter rotas diferentes para cada serviço com sua respectiva solução, incluindo os serviços de atendimento ao cliente, onde cada requisição do cliente à empresa deve ser enviada para o setor adequado a demanda desse cliente. </p>
+</li>
+<li>
+<p>O software deverá ser adequado ao uso para um público não acostumado com tecnologia;</p>
+</li>
+<li>
+<p>O software deverá permitir o rastreamento dos produtos do Café do Sítio, informando os comércios onde clientes da empresa poderão encontrar seus produtos;</p>
+</li>
+<li>
+<p>O software deverá possibilitar a organização e agendamento de visitas técnicas, informando os funcionários sempre que houver novas solicitações e fornecer o melhor momento para a visita.</p>
+</li>
+</ul>
+<h2 id="23-tecnologias-a-serem-utilizadas">2.3. Tecnologias a Serem Utilizadas</h2>
+<p>As tecnologias preliminares para o desenvolvimento do software serão:</p>
+<h3 id="1-front-end">1. Front-end</h3>
+<p>1.1. <strong>HTML, CSS e JavaScript</strong>: essenciais para a construção da interface da nova página principal. Todos os membros da equipe possuem familiaridade com essas tecnologias.</p>
+<p>1.2. <strong>React.js</strong>: Será usado para a criação de componentes dinâmicos e responsivos. Com um bom domínio de React Native na equipe, o framework React.js será uma escolha natural para o frontend.</p>
+<h3 id="2-back-end">2. Back-end</h3>
+<p>2.1. <strong>Node.js</strong>: Com um nível razoável de conhecimento entre os desenvolvedores, o Node.js será o framework central para o desenvolvimento da API do sistema.</p>
+<p>2.2. <strong>Express.js</strong>: Será considerado para suporte em rotas mais simples e leves, dada a familiaridade da equipe com o framework.</p>
+<h3 id="3-banco-de-dados">3. Banco de Dados</h3>
+<p>3.1. <strong>MongoDB</strong>: Considerado uma ferramenta fácil de aprender a curto prazo, o MongoDB será utilizado neste projeto, pois atende às necessidades do cliente.</p>
+<h3 id="4-configuracao-e-terceiros">4. Configuração e Terceiros</h3>
+<p>4.1. <strong>Git</strong>: Para controle de versão e colaboração eficiente no código, aproveitando o bom nível de conhecimento da equipe em Git.</p>
+<p>4.2. <strong>GitHub Pages</strong>: Será utilizado para a documentação do software, facilitando o processo de deploy.</p>
+<h3 id="5-ferramentas-de-teste">5. Ferramentas de Teste</h3>
+<p>5.1. <strong>Jest</strong>: Será usado para garantir a qualidade e a confiabilidade do código através de testes unitários. A equipe possui competência moderada em frameworks de teste, o que torna o Jest uma boa opção para iniciar os testes automatizados.</p>
+<h3 id="6-design">6. Design</h3>
+<p>6.1. <strong>Figma</strong>: Para a prototipação e criação de interfaces amigáveis e interativas, facilitando a comunicação com o cliente sobre o design da nova página principal.</p>
+<h2 id="24-pesquisa-de-mercado-e-analise-competitiva">2.4. Pesquisa de Mercado e Análise Competitiva</h2>
+<p>No mercado atual, existem diversas soluções que atendem à necessidade de gestão de atendimento ao cliente, como plataformas de CRM e ferramentas de agendamento e reclamações. Entre os principais concorrentes estão grandes players como o Zendesk (amplamente utilizado para centralização de atendimento ao cliente), além de soluções mais acessíveis para empresas menores, como Trello para gerenciamento de solicitações e Google Forms para captação de feedbacks e reclamações. Contudo, essas plataformas não se integram perfeitamente com as operações específicas do Café do Sítio e podem apresentar limitações no controle de dados e personalização, além de exigir a adaptação a diversos sistemas desconectados, Devido à terceirização de softwares em diversos contextos mencionados, os funcionários frequentemente precisam aprender a utilizar diferentes plataformas, com constantes atualizações e, muitas vezes, sem um padrão visual ou alinhamento com a identidade da marca. Dessa forma, uma plataforma que integre essas funcionalidades se torna essencial para fortalecer a cultura organizacional e promover uma identidade visual consistente em todas as ferramentas utilizadas. </p>
+<p>A nossa solução proposta para a Família do Sítio se diferencia por oferecer uma plataforma única e personalizada, porque plataforma proporcionará um sistema completo de cadastro de visitas, um espaço aberto para ouvidoria voltado aos clientes e uma interface própria para recrutamentos, afim de guiar como a aplicação deverá acontecer dentro do software Empregare. Além disso, incluirá uma aplicação que encaminhará as requisições dos clientes diretamente para o setor correspondente, completamente integrada ao site da empresa. Ao contrário de soluções genéricas, o sistema desenvolvido será moldado para as necessidades específicas da empresa, centralizando o atendimento em uma única interface e automatizando processos internos de forma a reduzir falhas humanas e aumentar a eficiência operacional. Além disso, a personalização do design e funcionalidades permitirá uma experiência de usuário mais fluida, isto é, os menus dos produtos e caminhos de navegação organizados de modo hierárquico, para que o usuário encontre rapidamente as informações e ações desejadas, utilizar carregamento assíncrono de dados para evitar recargas de página completas ao buscar informações em tempo real, fazer uso de transições visuais (como animações sutis ao trocar de tela) para indicar mudanças de estado e orientar o usuário sobre o que está acontecendo e implementar preenchimento automático de campos e sugestões com base em entradas anteriores para otimizar o tempo do usuário. Dessa maneira, a nossa solução irá refletir os valores e a identidade visual da Família do Sítio, algo que as soluções concorrentes padronizadas não conseguem oferecer. A combinação de automação, centralização e integração diretamente com o site coloca a solução em vantagem competitiva ao oferecer um atendimento mais ágil e eficaz para os diferentes públicos da empresa.</p>
+<h2 id="25-analise-de-viabilidade">2.5. Análise de Viabilidade:</h2>
+<p>A viabilidade do projeto é alta, considerando as tecnologias e o nível de complexidade. Baseando-se em uma planilha de conhecimento levantada, a tecnologia adotada neste projeto: <strong>ReactJs</strong>, que usa <strong>Javascript</strong> como linguagem base estão entre os maiores conhecimentos dentro da equipe de desenvolvimento, tal como é ilustrado na Figura 1.1, na parte de frameworks Front-End.</p>
+<p>Já para a parte do Back-end, será utilizado as ferramentas consideradas fáceis para a curva de aprendizagem, visto que grande parte da equipe não possui experiências com essa área, como visto na Figura 1.2. Adotando <strong>ExpressJs</strong> com <strong>NodeJs</strong>, e <strong>MongoDB</strong>, a aplicação em paralelo à fase de aprendizagem será melhor para a equipe de desenvolvimento e mais rápida.</p>
+<p>O prazo estimado é de três meses, dividido a produção das features em ciclos quinzenais, cujo estará reservado para as entregas na produção ao cliente. A cada quinze dias, as entregas serão validadas pelo cliente e haverá ajustes rápidos em caso de correções. O cronograma é viável, visto que o time já possui um conhecimento consolidado nas ferramentas de criação da interface e, o escopo compartilha de uma complexidade que permite o treinamento em tecnologias necessárias ao longo de seu desenvolvimento.</p>
+<p><br></p>
+<div align="center">
+Figura 1.1 - Conhecimentos quantificados da equipe em linguagens e front-end
+</div>
+<p><img alt="Tabela de Conhecimento Pt1" src="../../../assets/TabelaConhecimentoPt1.png" /></p>
+<div align="center">
+Fonte: elaborado pelos autores (2024)
+</div>
+
+<p><br></p>
+<div align="center">
+Figura 1.2 - Conhecimentos quantificados da equipe em back-end e outros
+</div>
+<p><img alt="Tabela de Conhecimento Pt1" src="../../../assets/TabelaConhecimentoPt2.png" /></p>
+<div align="center">
+Fonte: elaborado pelos autores (2024)
+</div>
+
+<h2 id="26-impacto-da-solucao">2.6. Impacto da Solução:</h2>
+<p>A implementação da nova plataforma de atendimento ao cliente da Família do Sítio possibilitará que os setores de trabalho não ajam como intermediadores de reclamações que foram mal direcionadas, onde no caso essas reclamações vindas do cliente final iriam direto ao setor envolvido. Facilitará o agendamento de visitas físicas à fábrica ao proporcionar um sistema de agendamento que mostre aos clientes interessados os prazos e períodos disponíveis. Assim, essa solução impactará diretamente o funcionamento do negócio. O acesso fácil e a visualização rápida aos processos da Família do Sítio, além da a automação de tarefas que antes eram manuais vão proporcionar maior valocidade de atendimento e controle, melhorar a experiência dos clientes em seu processo de atendimento e otimizar a operação interna, descrita na seção 1.2. Os benefícios esperados são:</p>
+<h3 id="1-melhoria-na-eficiencia-operacional">1. Melhoria na Eficiência Operacional:</h3>
+<p>A automação dos processos de recrutamento, agendamento de visitas técnicas e gestão de reclamações reduzirá a carga de trabalho manual dos funcionários, minimizando erros e otimizando o tempo da equipe. Isso permitirá que o setor de atendimento se concentre em tarefas de maior valor estratégico.</p>
+<h3 id="2-aumento-da-satisfacao-dos-clientes">2. Aumento da Satisfação dos Clientes:</h3>
+<p>Com uma interface integrada, ou seja, um site principal que permita o registro de reclamações, agendamento de visitas técnicas e rastreamento de produtos da Família do Sítio, e construídos na página de modo à atender ao público mais leigo (Não utilizam frequentemente aparelhos tecnológicos), garantindo que independentemente da demanda, tenham tempos de atendimento semelhantes, e transparência, já que o próprio software poderá responder as requisições do público externo à Família do Sítio, resultará em uma experiência mais positiva e de maior fidelização.</p>
+<h3 id="3-maior-controle-e-transparencia-nos-processos">3. Maior Controle e Transparência nos Processos:</h3>
+<p>O sistema permitirá um acompanhamento mais preciso através dos serviços solicitados pelo cliente que permitirão às equipes envolvidas no ambiente de trabalho uma plataforma que já possua a identidade visual da marca e já tenha em sua estrutura de cadastro de agendamento de visitas técnicas, ouvidoria e a devida visibilidade da área de recrutamento, isto é, informando os processos de revisão dos currículos e trazendo mais destaque à área na página, seguindo as regras de negócio pré-estabelecidas. Além de possibilitar documentação a respeito de qual serviço foi feito e identificando em que fase está, o que diminuirá a incidência de falhas de comunicação, descritas no tópico 1.2, e dará maior acessibilidade aos serviços de atendimento para grande parte do seu público e gestão dos processos para a Família do Sítio.</p>
+<h3 id="4-maior-acesso-ao-dados-da-empresa">4. Maior acesso ao dados da Empresa:</h3>
+<p>O sistema oferecerá aos clientes da Família do Sítio uma experiência facilitada para acessar dados importantes diretamente na plataforma. Os clientes poderão verificar informações a empresa, realizar agendamentos de visitas técnicas de forma muito mais rápido, ou seja, sem ter que ligar para o setor adequado e buscar pelo melhor dia para a visita, andamento de reclamações e outras interações com a empresa de maneira intuitiva, pensada pelo design à partir de técnicas de Interação Humano-Coomputador, citado no Tópico 2.5. Esse acesso direto proporcionará maior transparência e autonomia para o cliente, permitindo que ele acompanhe suas solicitações e interaja com a empresa de forma mais prática e rápida, promovendo uma experiência de atendimento mais confiável, isto é, sem que esteja desamparado pela ausência de informações sobre os serviços da empresa.</p>
+<h3 id="5-fortalecimento-da-imagem-da-marca">5. Fortalecimento da Imagem da Marca:</h3>
+<p>Ao adotar uma solução tecnológica que atenda as demandas do cliente com transformações tecnológicas que aumentam a eficiência do atendimento, como por exemplo, um chatbot integrado aos canais de atendimento ao cliente com um direcionamento mais assertivo ao setor responsável pela demanda, a Família do Sítio irá reforçar sua imagem como uma empresa comprometida com a excelência no relacionamento com seus clientes e parceiros.</p>
+<hr />
+<h2 id="historico-de-versao">Histórico de Versão</h2>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Versão</th>
+<th>Descrição</th>
+<th>Autor</th>
+<th>Revisores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>05/11/24</td>
+<td>1.0</td>
+<td>Criação do Documento e Adição do tópico 2.3</td>
+<td>Marcella Sousa Anderle</td>
+<td>João</td>
+</tr>
+<tr>
+<td>05/11/24</td>
+<td>1.1</td>
+<td>Adição dos tópicos 2.1 e 2.2</td>
+<td>João Pedro</td>
+<td>Arthur</td>
+</tr>
+<tr>
+<td>05/11/24</td>
+<td>1.2</td>
+<td>Adição dos tópicos 2.5 e 2.6</td>
+<td>Daniel Rodrigues</td>
+<td>Ana Carolina</td>
+</tr>
+<tr>
+<td>07/11/24</td>
+<td>1.3</td>
+<td>Adição do tópico 2.4</td>
+<td>Manuella Magalhães</td>
+<td>Daniel</td>
+</tr>
+<tr>
+<td>11/11/24</td>
+<td>2.0</td>
+<td>Correção e remoção de trechos desconectados com os Resultados do Lean Inception</td>
+<td>Daniel Rodrigues</td>
+<td>Manuella Magalhães</td>
+</tr>
+<tr>
+<td>15/11/24</td>
+<td>2.1</td>
+<td>Melhoria na legibilidade da tabela de competências da equipe</td>
+<td>João Pedro</td>
+<td>Daniel Rodrigues</td>
+</tr>
+<tr>
+<td>18/11/24</td>
+<td>2.2</td>
+<td>Correção do tópico 2.1 para melhor entendimento do objetivo</td>
+<td>Marcella Sousa Anderle</td>
+<td>Manuella Magalhães</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.instant", "navigation.top", "navigation.tracking", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>
