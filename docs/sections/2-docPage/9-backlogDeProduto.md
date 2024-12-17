@@ -87,7 +87,7 @@ Para calcular a **prioridade** das funcionalidades com base nos três níveis de
 
 **Prioridade = (4 * Valor_Agregado) - Esforço**
 
-- **Valor Agregado** têm peso **2**, pois são mais importantes para o impacto do produto.
+- **Valor Agregado** têm peso **4**, pois são mais importantes para o impacto do produto.
 - **Esforço** é subtraído, pois funcionalidades com menor esforço são mais prioritárias.
 
 Os requisitos em sua devida priorização é:
@@ -150,7 +150,7 @@ Com esta técnica, foi possível elencar as funcionalidades de maior valor agreg
 - **US15:** Enviar mensagem à empresa pela Central de Atendimento ao Cliente;
 - **US16:** Localizar por Produtos da Família do Sítio;
 - **US18:** Fazer login na Central Administrativa;
-- **US19:** Gerenciar acessos à Central Administrativa.
+- **US19:** Gerenciar contas com acesso à Central de Administração.
 
 ### 9.3.2 - Requisitos não Funcionais de Usabilidade (Relacionadas à implementação de uma Interface)
 
@@ -181,5 +181,5 @@ Com esta técnica, foi possível elencar as funcionalidades de maior valor agreg
 | 06/12/24 | 1.1 | Desenvolvimento de novos tópicos | Daniel Rodrigues | Arthur Sousa
 | 09/12/24 | 1.2 | Corrigindo tópicos e adicinando novos itens do backlog | Daniel Rodrigues | Arthur Sousa
 | 09/12/24 | 1.3 | Incluindo o calculo de priorização | Manuella, Arthur, João | Daniel
-| 12/12/24 | 2.0 | Novos requisitos e reestruturação do backlog | Daniel Rodrigues | Arthur Sousa
+| 12/12/24 | 2.0 | Novos requisitos e reestruturação do backlog | Daniel Rodrigues | Arthur Suares
 | 12/12/24 | 2.1 | Adição dos Temas e Épicos | Daniel Rodrigues | João Pedro

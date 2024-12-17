@@ -88,7 +88,7 @@ Data     | Versão | Descrição           | Autor    | Revisores
 -------- | ------ | ------------------- | -------- | ---------
 09/12/24 | 1.0 | Adição das tabelas de requisitos | Manuella Valadares | Ana Carolina
 10/12/24 | 1.1 | Redesign da página dos requisitos | Daniel Rodrigues | Manuella Valadares
-12/12/24 | 2.0 | Novos requisitos e reestruturação do backlog | Daniel Rodrigues | Arthur Sousa
+12/12/24 | 2.0 | Novos requisitos e reestruturação do backlog | Daniel Rodrigues | Arthur Suares
 
 
 
