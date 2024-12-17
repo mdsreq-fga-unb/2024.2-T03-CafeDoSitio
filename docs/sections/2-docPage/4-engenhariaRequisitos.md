@@ -30,13 +30,6 @@
 
 **Critérios de aceitação:** São definidos critérios de aceitação, ou seja, é acordado junto com os stakeholders do projeto e o Project Owner o que uma User Story precisa ter para ser aceita. Sendo isso feito para que ambas as partes, equipe de desenvolvimento e stakeholders, tenham compreensão do que determinada funcionalidade ou item precisa ter para ser considerada concluída.
 
-
-**Definition of Ready (D.O.R.):** É usado um conjunto de critérios que visam qualificar quando uma User Story está pronta para ser trabalhada. Garantindo que a equipe de desenvolvimento tenha informações claras necessárias para começar a implementar a funcionalidade.
-
-
-**Definition of Done (D.O.D.):** É também utilizado um conjunto de critérios que visam descrever o que determinada funcionalidade precisa ter para ser considerada concluída e finalizada, testada e poder ser entregue para o cliente.
-
-
 **Debates e incorporação de Feedback:** A equipe de desenvolvimento apresenta o que foi desenvolvido. Ao receber o feedback do cliente acerca da funcionalidade desenvolvida a equipe faz a incorporação desse feedback à funcionalidade.
 
 
