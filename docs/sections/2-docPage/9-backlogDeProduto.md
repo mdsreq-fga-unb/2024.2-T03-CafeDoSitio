@@ -183,3 +183,4 @@ Com esta técnica, foi possível elencar as funcionalidades de maior valor agreg
 | 09/12/24 | 1.3 | Incluindo o calculo de priorização | Manuella, Arthur, João | Daniel
 | 12/12/24 | 2.0 | Novos requisitos e reestruturação do backlog | Daniel Rodrigues | Arthur Suares
 | 12/12/24 | 2.1 | Adição dos Temas e Épicos | Daniel Rodrigues | João Pedro
+| 14/01/25 | 2.2 | Modificação das referências aos RQNF | João Pedro | Marcella Anderle
