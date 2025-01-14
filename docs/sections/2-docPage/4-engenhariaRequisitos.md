@@ -78,7 +78,7 @@ Fases do Processo           | Atividades ER             | Prática              
                             | Verificação e Validação    | Verificação dos requisitos da sprint | DoR | Equipe segura para iniciar o desenvolvimento
                             | Organização e Descoberta  | Organização das funcionalidades em andamento ou acrescentadas para a sprint e backlog | Backlog de Requisitos | Sprint organizada com as funcionalidades a serem desenvolvidas e backlog atualizado em casos de incrementos
 **Execução da Sprint**      | Representação             | Desenvolvimento de Protótipos | Prototipagem em Alta Fidelidade | Os protótipos validados auxiliam a equipe a desenvolver a funcionalidade corretamente e evitar o retrabalho 
-                            | Verificação e Validação    | Validação dos protótipos | Critérios de aceitação, feedback do cliente, DoD, DoR | Confirmação de que os requisitos atendem aos critérios definidos, DoR, DoD
+                            | Verificação e Validação    | Validação dos protótipos | Critérios de aceitação, feedback do cliente, DoD | Confirmação de que os requisitos atendem aos critérios definidos, DoD
                             | Organização e Atualização | Revisão do Backlog | Fazer uma revisão de como está o Backlog da Sprint | Backlog em dia com o andamento da Sprint
 **Sprint Review**           | Declaração                | Atualização das Histórias de usuário | Debates ao receber feedback do cliente e incorporação desse feedback | Alinhamento do que está sendo desenvolvido com o feedback dos clientes
                             | Verificação e Validação   | Demonstração ao Cliente do que foi realizado durante a Sprint | Reuniões, Feedbacks | Funcionalidades verificadas pelo feedback dos clientes
@@ -93,4 +93,5 @@ Data     | Versão | Descrição | Autor | Revisores
 03/12/24 | 1.2 | Finalização do Documento | João Pedro | Manuella Magalhães
 03/12/24 | 1.3 | Adição de Representação e Declaração  | Arthur Miranda | Manuella Valadares
 04/12/24 | 1.4 | Adição de Veriificação e Validação e Organização         | Manuella Valadares | Ana Carolina
+14/01/25 | 1.5 | Removendo DoR da Execução da Sprint por feedback do professor | Manuella Valadares | Arthur Miranda
 
