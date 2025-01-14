@@ -13,15 +13,16 @@ A Definition of Ready (DoR) é um conjunto de critérios que um item ou uma User
 Se a DoR é um conjunto de critérios para que um item seja considerado adequado para começar a se trabalhar nele, então a Definition of Done (DoD) é o conjunto de critérios que um item precisa ter para ser considerado como terminado. Sendo esse conjunto de critérios descritos abaixo:
 
 - **A interface está de acordo com o protótipo passado pelas stakeholders?** A interface deve estar de acordo com o que foi passado pela designer stakeholder
-- **Os critérios de aceitação com os stakeholders foram supridos?** O requisito deve conter todas as ações e comportamentos esperados pelas stakeholders, assim como foi definido anteriormente.
+- **Os critérios de aceitação definidos com os stakeholders foram atendidos?** O requisito deve conter todas as ações e comportamentos esperados pelas stakeholders, assim como foi definido anteriormente.
 - **O backend foi integrado ao frontend (Caso necessário)?** Backend e frontend devem ser integrados corretamete.
 - **Todo o código passou por revisão de pares para garantir qualidade e aderência aos padrões do projeto, isto é, 2 revisores aprovaram o código?** Pelo processo de desenvolvimento de software aderido, ScrumXP, a revisão é feita também em pares.
 - **O backend foi validado pelo coordenador Daniel Rodrigues e, portanto, segue níveis seguros na manipulação dos dados (Caso esta US exija backend)?**
 - **O código foi validado pelo Analista de Quality Assurance Joao Pedro e, portanto, possui cobertura de testes de no mínimo 80%?**
 - **A funcionalidade foi integrada ao branch principal sem conflitos?** A funcionalidade não pode conter conflitos ou interferir de alguma forma no funcionamento de outra funcionalidade ou do projeto como um todo.
-- **Está disponível em um ambiente de homologação ou produção, pronta para uso?** A cada entrega, o ambiente que contém as funcionalidades desenvolvidas deve estar disponível para que as stakeholdes possam ter acesso.
+- **A funcionalidade está disponível em um ambiente de homologação ou produção, pronta para validação?** A cada entrega, o ambiente que contém as funcionalidades desenvolvidas deve estar disponível para que as stakeholdes possam ter acesso.
 
 ## Histórico de Versão:
 | Data | Versão | Descrição | Autor | Revisores |
 |---- | ------ | --------- | ----- | --------- |
 | 12/12/24 | 1.0 | Criação do Documento | Arthur Suares | Daniel Rodrigues
+| 14/01/25 | 1.1 | Correção dos termos usados no DoD | Manuella Valadares | Arthur Miranda
