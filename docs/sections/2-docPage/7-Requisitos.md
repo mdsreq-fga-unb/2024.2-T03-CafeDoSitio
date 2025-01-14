@@ -47,12 +47,12 @@ Os requisitos não funcionais foram organizados com base no modelo URPS+, que cl
 ### Usabilidade
 
 #### Necessários de estar no backlog:
-**RNF01 -** O sistema deve permitir que os usuários localizem facilmente a seção que apresenta a história da empresa, com navegação intuitiva e conteúdo disposto de forma clara e acessível. <br>
-**RNF02 -** A interface deve exibir os produtos da empresa de forma visualmente organizada e categorizada, facilitando a identificação e compreensão de cada item pelo usuário. <br>
-**RNF03 -** As informações sobre ações sociais da empresa devem estar disponíveis de maneira acessível e atrativa, garantindo clareza na comunicação e fácil navegação para o usuário. <br>
-**RNF04 -** Os contatos da empresa devem ser apresentados em um formato padronizado e de fácil compreensão, com suporte a links clicáveis para e-mail, telefone e redes sociais. <br>
-**RNF05 -** As vagas de emprego da empresa devem ser exibidas de forma clara, com uma organização que facilitem a busca por oportunidades compatíveis com o interesse do usuário, instruindo o usuário como prosseguir com o processo no site terceiro empregare. <br>
-**RNF06 -** As instruções do E-commerce devem ser descritas de maneira clara, com linguagem simples e objetiva, utilizando elementos visuais, como ícones e guias passo a passo, para melhorar a compreensão. <br>
+**RNF01 -** O sistema deve permitir que os usuários localizem facilmente a seção que apresenta a história da empresa, com navegação intuitiva, tendo o conteúdo disposto de forma que o usuário não precise decorar um caminho de navegação para achar aquilo que procura. <br>
+**RNF02 -** A interface deve exibir os produtos da empresa em categorias organizadas e definidas pelas stakeholders, como produtos premium, cappuccino, etc. Permitindo que o usuário identifique cada item.<br>
+**RNF03 -** As informações sobre ações sociais da empresa devem destacar as iniciativas realizadas, utilizando uma estrutura que disponha o texto sem muita complexidade, como muitos ícones ou componentes. <br>
+**RNF04 -** Os contatos da empresa devem ser apresentados em um formato padronizado, com suporte a links clicáveis para e-mail, telefone e redes sociais. <br>
+**RNF05 -**As vagas de emprego da empresa devem ser exibidas de maneira organizada, com filtros ou categorias que permitam ao usuário encontrar oportunidades compatíveis com seus interesses e com instruções para acessar o processo no site de terceiros, Empregare. <br>
+**RNF06 -** As instruções do e-commerce devem ser apresentadas com linguagem direta e suporte de elementos visuais, como ícones e guias passo a passo, para facilitar a compreensão dos usuários. <br>
 
 #### Apenas referências para a produção:
 **RNF07 -** A interface do usuário deve ser intuitiva e acessível para pessoas com diferentes níveis de habilidade técnica. <br>
