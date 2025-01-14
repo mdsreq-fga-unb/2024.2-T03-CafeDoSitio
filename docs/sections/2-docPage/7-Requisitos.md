@@ -72,7 +72,7 @@ Os requisitos não funcionais foram organizados com base no modelo URPS+, que cl
 
 ### Suportabilidade
 
-**RNF15 -** O sistema deve ser compatível com as últimas duas versões dos navegadores Chrome, Firefox, Edge e Safari disponíveis dia 01/01/2025. <br>
+**RNF15 -** O sistema deve ser compatível com as últimas duas versões dos navegadores Chrome, Firefox, Edge e Safari disponíveis no dia 01/01/2025. <br>
 
 # Bibliografia:
 
