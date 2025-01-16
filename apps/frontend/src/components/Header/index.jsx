@@ -47,6 +47,7 @@ function Header({pagina}) {
             <li><a href="#">SÍTIO VERDE</a></li>
             <li><a href="#">VISITE A FÁBRICA</a></li>
             <li><Link to="/contatos" style={{ color: isActive("/contatos") ? "#006343" : "black"}}>CONTATO</Link></li>
+            <li><Link to="/pertodevoce" style={{ color: isActive("/pertocdevoce") ? "#006343" : "black"}}>PERTO DE VOCÊ</Link></li>
           </ul>
         </InfoAreaDesktop>
 
