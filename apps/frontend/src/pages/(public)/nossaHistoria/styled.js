@@ -67,7 +67,7 @@ export const ThirdTextSection = styled.div`
 export const DiferencialSection = styled.div`
     display: flex;
     flex-direction: row;
-    background-color: #red;
+    background-color: red;
     border-radius: 20px;
     //box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
