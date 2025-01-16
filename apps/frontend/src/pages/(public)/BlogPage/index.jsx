@@ -1,8 +1,11 @@
 import React from "react";
 import Paginacao from '../../../components/Paginacao';
 import BigPost from "../../../components/BigPost";
+import SmallPost from "../../../components/SmallPost";
 import {
-  Space
+  Space,
+  Space2,
+  BlogsDiv,
 } from "./styled";
 
 const BlogPage = () => {
@@ -12,6 +15,13 @@ const BlogPage = () => {
     <Space />
     
     <BigPost title={"Teste"}/>
+    <Space2 />
+
+    <BlogsDiv>
+      <SmallPost />
+      <SmallPost />
+      <SmallPost />
+    </BlogsDiv>
     </>
   );
 
