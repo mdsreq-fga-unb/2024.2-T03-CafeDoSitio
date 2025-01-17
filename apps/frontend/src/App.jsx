@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { HashRouter as Router, Route, Routes} from 'react-router-dom';
-import ContactPage from './pages/ContactPage'; 
+import PublicRoutes from './routes/PublicRoutes';
 
 const App = () => {
   useEffect(() => {
@@ -9,7 +9,7 @@ const App = () => {
   return (
     <Router>
       <Routes>
-          <Route path='/' element={<ContactPage />} />
+          <Route path='/*' element={<PublicRoutes />} />
       </Routes>
     </Router>
   );

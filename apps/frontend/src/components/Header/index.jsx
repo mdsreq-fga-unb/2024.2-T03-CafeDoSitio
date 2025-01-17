@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, useLocation } from "react-router-dom";
 import { NavArea, NavBar, LogoImg, InfoAreaDesktop, BarraPesquisa, InfoAreaMobile } from "./styled";
 import { FaInstagram, FaFacebook, FaYoutube, FaLinkedin, FaSearch, FaWhatsapp } from "react-icons/fa"; // Ícones do Font Awesome
 import { FaCartShopping, FaXTwitter } from "react-icons/fa6";
@@ -6,6 +7,9 @@ import { MdOutlineMenu } from "react-icons/md";
 import RedButton from "../RedButton";
 
 function Header({pagina}) {
+  const location = useLocation();
+  const isActive = (path) => location.pathname === path;
+
   return(
     <NavBar>
       <NavArea>
@@ -38,11 +42,11 @@ function Header({pagina}) {
           <ul className="nav-list">
             <li><a href="#">INICIO</a></li>
             <li><a href="#">NOSSOS PRODUTOS</a></li>
-            <li><a href="#">NOSSA HISTÓRIA</a></li>
-            <li><a href="#">BLOG</a></li>
+            <li><Link to="/historia" style={{ color: isActive("/historia") ? "#006343" : "black"}}>NOSSA HISTÓRIA</Link></li>
+            <li><a href="/" style={{ color: isActive("/") ? "#006343" : "black"}}>BLOG</a></li>
             <li><a href="#">SÍTIO VERDE</a></li>
             <li><a href="#">VISITE A FÁBRICA</a></li>
-            <li><a href="#">CONTATO</a></li>
+            <li><Link to="/contatos" style={{ color: isActive("/contatos") ? "#006343" : "black"}}>CONTATO</Link></li>
           </ul>
         </InfoAreaDesktop>
 
