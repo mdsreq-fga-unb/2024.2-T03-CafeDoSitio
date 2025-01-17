@@ -17,6 +17,7 @@ import {
 } from './styled';
 import { FaEnvelope, FaPhoneAlt, FaInstagram, FaFacebook, FaYoutube, FaLinkedin, FaComments } from "react-icons/fa"; // Ícones do Font Awesome
 import { FaXTwitter } from "react-icons/fa6";
+import PertodeVoce from '../../../components/PertodeVoce';
 
 const ContactPage = () => {
   const contacts = [
@@ -114,6 +115,7 @@ const ContactPage = () => {
         </Links>
       </FaleCom>
       <Sac />
+      <PertodeVoce />
     </>
   );
 };
