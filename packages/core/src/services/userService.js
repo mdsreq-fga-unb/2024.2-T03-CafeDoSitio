@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = 'http://localhost:3002';
+const baseURL = 'https://two024-2-t03-cafedositio.onrender.com';
 
 export function createUser(name, email, password){
   const body = {
