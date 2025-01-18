@@ -23,10 +23,10 @@ TM02   | Gestão do Software                         | Funcionalidades voltadas 
 
 Código | Tema Associado | Título                             | User Story
 ------ | -------------- | ---------------------------------- | ---------------------------
-EP01   | T01            | Consultar Posts de Blog            | Eu como usuário, devo ser capaz de visualizar os blogs da Família do Sítio para me informar acerca de seus conteúdos.
-EP02   | T01            | Marcar Visitas Técnicas            | Eu como usuário, devo ser capaz de agendar uma visita técnica presencial para conhecer seus processos.
-EP03   | T02            | Administrar informações da Empresa | Eu como funcionário da Família do Sítio, devo ser capaz de gerenciar as informações do site institucional para que sempre se mantenha atualizado.
-EP04   | T02            | Atendimento | Eu como usuário, devo ser capaz de receber atendimento da Família do Sítio para stender à minha necessidade.
+EP01   | TM01            | Consultar Posts de Blog            | Eu como usuário, devo ser capaz de interagir com o conteúdo disponível na central do Blog da Família do Sítio para me informar.
+EP02   | TM01            | Marcar Visitas Técnicas            | Eu como usuário, devo ser capaz de explorar opções de visitas para conhecer a fábrica presencialmente.
+EP03   | TM02            | Administração de Acesso | Eu como funcionário da Família do Sítio, devo ser capaz de gerenciar os acessos de usuários funcionários para que o sistema de administração possa ser acessado somente por pessoas autorizadas.
+EP04   | TM02            | Controle de Atendimento | Eu como funcionário da Família do Sítio, devo ser capaz de visualizar e responder as solicitações dos usuário clientes para que eu possa realizar o atendimento de forma ordenada e com o devido controle.
 
 ### 9.1.3 - Relacionado aos Requisitos Funcionais:
 Código | User Story
@@ -94,25 +94,25 @@ Os requisitos em sua devida priorização é:
 
 Código | Nível de Valor Agregado | Nível de Esforço | Prioridade
 ------ | ----------------------- | ---------------- | ----------
-US01   | 3                       | 1                | 11
-US08   | 3                       | 1                | 11
-US04   | 3                       | 2                | 10
-US14   | 3                       | 2                | 10
-US15   | 3                       | 2                | 10
-US19   | 3                       | 2                | 10
-US12   | 3                       | 3                | 9
-US16   | 3                       | 3                | 9
-US02   | 2                       | 1                | 7
-US06   | 2                       | 2                | 6
-US11   | 2                       | 2                | 6
-US13   | 2                       | 2                | 6
-US18   | 2                       | 2                | 6
-US10   | 2                       | 3                | 5
-US03   | 1                       | 1                | 3
-US05   | 1                       | 1                | 3
-US07   | 1                       | 2                | 2
-US09   | 1                       | 2                | 2
-US17   | 1                       | 2                | 2
+RQF01   | 3                       | 1                | 11
+RQF08   | 3                       | 1                | 11
+RQF04   | 3                       | 2                | 10
+RQF14   | 3                       | 2                | 10
+RQF15   | 3                       | 2                | 10
+RQF19   | 3                       | 2                | 10
+RQF12   | 3                       | 3                | 9
+RQF16   | 3                       | 3                | 9
+RQF02   | 2                       | 1                | 7
+RQF06   | 2                       | 2                | 6
+RQF11   | 2                       | 2                | 6
+RQF13   | 2                       | 2                | 6
+RQF18   | 2                       | 2                | 6
+RQF10   | 2                       | 3                | 5
+RQF03   | 1                       | 1                | 3
+RQF05   | 1                       | 1                | 3
+RQF07   | 1                       | 2                | 2
+RQF09   | 1                       | 2                | 2
+RQF17   | 1                       | 2                | 2
 RQNF01 | 3                       | 1                | 11
 RQNF02 | 3                       | 1                | 11
 RQNF03 | 3                       | 1                | 11
@@ -138,18 +138,18 @@ Com esta técnica, foi possível elencar as funcionalidades de maior valor agreg
 
 ### 9.3.1 - Requisitos Funcionais
 
-- **US01:** Criar Post no Blog;
-- **US02:** Editar Post no Blog;
-- **US04:** Categorizar Post no Blog;
-- **US05:** Fitrar Posts no Blog;
-- **US06:** Pesquisar Posts no Blog;
-- **US08:** Recomendar outros Posts no Blog;
-- **US11:** Configurar disponibilidade de Visita Técnica à Fábrica;
-- **US14:** Agendar visita técnica à Fábrica;
-- **US15:** Enviar mensagem à empresa pela Central de Atendimento ao Cliente;
-- **US16:** Localizar por Produtos da Família do Sítio;
-- **US18:** Fazer login na Central Administrativa;
-- **US19:** Gerenciar contas com acesso à Central de Administração.
+- **RQF01:** Criar Post no Blog;
+- **RQF02:** Editar Post no Blog;
+- **RQF04:** Categorizar Post no Blog;
+- **RQF05:** Fitrar Posts no Blog;
+- **RQF06:** Pesquisar Posts no Blog;
+- **RQF08:** Recomendar outros Posts no Blog;
+- **RQF11:** Configurar disponibilidade de Visita Técnica à Fábrica;
+- **RQF14:** Agendar visita técnica à Fábrica;
+- **RQF15:** Enviar mensagem à empresa pela Central de Atendimento ao Cliente;
+- **RQF16:** Localizar por Produtos da Família do Sítio;
+- **RQF18:** Fazer login na Central Administrativa;
+- **RQF19:** Gerenciar contas com acesso à Central de Administração.
 
 ### 9.3.2 - Requisitos não Funcionais de Usabilidade (Relacionadas à implementação de uma Interface)
 
@@ -160,6 +160,8 @@ Com esta técnica, foi possível elencar as funcionalidades de maior valor agreg
 - **RQNF05:** Visualizar vagas de emprego da Empresa;
 - **RQNF06:** Visualizar detalhes do E-Commerce.
 
+### OBS: 
+Os requisitos funcionais RF03, RF09, RF10, RF12 e RF13 foram descontinuados por decisão dos stakeholders durante reuniões de alinhamento. Seja por entenderem que não são mais necessários, por perceber que outra funcionalidade já cumpriria tal função, etc. E por isso não entraram no Backlog
 
 # Referências Bibliográficas:
 
