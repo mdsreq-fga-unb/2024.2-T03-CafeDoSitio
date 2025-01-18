@@ -23,10 +23,10 @@ TM02   | Gestão do Software                         | Funcionalidades voltadas 
 
 Código | Tema Associado | Título                             | User Story
 ------ | -------------- | ---------------------------------- | ---------------------------
-EP01   | T01            | Consultar Posts de Blog            | Eu como usuário, devo ser capaz de interagir com o conteúdo disponível no Blog da Família do Sítio para me informar.
-EP02   | T01            | Marcar Visitas Técnicas            | Eu como usuário, devo ser capaz de explorar opções de visitas para conhecer seus processos.
-EP03   | T02            | Administrar informações da Empresa | Eu como funcionário da Família do Sítio, devo ser capaz de gerenciar as informações do site institucional para que sempre se mantenha atualizado.
-EP04   | T02            | Atendimento | Eu como usuário, devo ser capaz de ser atendido pela Família do Sítio para stender à minha necessidade.
+EP01   | TM01            | Consultar Posts de Blog            | Eu como usuário, devo ser capaz de interagir com o conteúdo disponível na central do Blog da Família do Sítio para me informar.
+EP02   | TM01            | Marcar Visitas Técnicas            | Eu como usuário, devo ser capaz de explorar opções de visitas para conhecer a fábrica presencialmente.
+EP03   | TM02            | Administração de Acesso | Eu como funcionário da Família do Sítio, devo ser capaz de gerenciar os acessos de usuários funcionários para que o sistema de administração possa ser acessado somente por pessoas autorizadas.
+EP04   | TM02            | Controle de Atendimento | Eu como funcionário da Família do Sítio, devo ser capaz de visualizar e responder as solicitações dos usuário clientes para que eu possa realizar o atendimento de forma ordenada e com o devido controle.
 
 ### 9.1.3 - Relacionado aos Requisitos Funcionais:
 Código | User Story
