@@ -59,7 +59,14 @@ Antes da validação com o cliente, a equipe realiza reuniões internas para rev
 
 ### 4.1.6 Organização e Atualização de Requisitos
 
-A organização foi feita com base no Lean Inception. Utilizando a fórmula **Prioridade = (4 * Valor_Agregado) - Esforço**
+**Backlog de Requisitos:**
+Os requisitos são organizados e atualizados por meio de uma lista detalhada com informações como: User Stories, Critérios de Aceitação e Prazos de execução.
+
+**Feedbacks Acerca do Backlog:**
+As opiniões dos stakeholders sobre a utilidade das funcionalidades e a visão de sua aplicação dentro do Produto Mínimo Viável pode gerar atualizações no backlog da construção da solução de software.
+
+**User Stories:**
+Todos os requisitos funcionais passam pelo método de organização de User Stories para melhor entendimento das expectativas com a funcionalidade, assim como seu comportamento dentro do software. Entendimento este claro para o lado dos stakeholders e para o lado dos desenvolvedores.
 
 ## 4.2 Engenharia de Requisitos e o Scrum/XP
 
@@ -76,13 +83,13 @@ Fases do Processo           | Atividades ER             | Prática              
                             | Análise e Consenso        | Mensurar a viabilidade da implementação  | Análise de Risco/Viabilidade | Alinhamento de expectativas para a entrega e alocação adequada de membros para o desenvolvimento do requisito
                             | Declaração                | "Definição de Critérios de Aceitação" | Definição dos critérios de aceitação, Definition of Ready (DoR) e Definition of Done (DoD) | Funcionalidades com critérios de conclusão bem estabelecidas e com os critérios de inicialização esclarecidas
                             | Verificação e Validação    | Verificação dos requisitos da sprint | DoR | Equipe segura para iniciar o desenvolvimento
-                            | Organização e Descoberta  | Organização das funcionalidades em andamento ou acrescentadas para a sprint e backlog | Backlog de Requisitos | Sprint organizada com as funcionalidades a serem desenvolvidas e backlog atualizado em casos de incrementos
+                            | Organização e Atualização  | Organização das funcionalidades em andamento ou acrescentadas para a sprint e backlog | Backlog de Requisitos, User Stories | Sprint organizada com as funcionalidades a serem desenvolvidas e backlog atualizado em casos de incrementos
 **Execução da Sprint**      | Representação             | Desenvolvimento de Protótipos | Prototipagem em Alta Fidelidade | Os protótipos validados auxiliam a equipe a desenvolver a funcionalidade corretamente e evitar o retrabalho 
                             | Verificação e Validação    | Validação dos protótipos | Critérios de aceitação, feedback do cliente, DoD | Confirmação de que os requisitos atendem aos critérios definidos, DoD
                             | Organização e Atualização | Revisão do Backlog | Fazer uma revisão de como está o Backlog da Sprint | Backlog em dia com o andamento da Sprint
 **Sprint Review**           | Declaração                | Atualização das Histórias de usuário | Debates ao receber feedback do cliente e incorporação desse feedback | Alinhamento do que está sendo desenvolvido com o feedback dos clientes
                             | Verificação e Validação   | Demonstração ao Cliente do que foi realizado durante a Sprint | Reuniões, Feedbacks | Funcionalidades verificadas pelo feedback dos clientes
-                            | Organização e Atualização | Organização das funcionalidades finalizadas ou debitadas da sprint | Backlog de Requisitos | Backlog atualizado com as funcionalidades atrasadas e implementadas 
+                            | Organização e Atualização | Organização das funcionalidades finalizadas ou debitadas da sprint | Backlog de Requisitos, Feedback | Backlog atualizado com as funcionalidades atrasadas e implementadas 
 
 ---
 ## Historico de Versão
@@ -94,4 +101,4 @@ Data     | Versão | Descrição | Autor | Revisores
 03/12/24 | 1.3 | Adição de Representação e Declaração  | Arthur Miranda | Manuella Valadares
 04/12/24 | 1.4 | Adição de Veriificação e Validação e Organização         | Manuella Valadares | Ana Carolina
 14/01/25 | 1.5 | Removendo DoR da Execução da Sprint por feedback do professor | Manuella Valadares | Arthur Miranda
-
+18/01/25 | 1.6 | Ajustando processo de Organização e Atualização da ER | Daniel Rodrigues | Arthur Miranda
