@@ -28,13 +28,6 @@
 
 **Critérios de aceitação:** São definidos critérios de aceitação, ou seja, é acordado junto com os stakeholders do projeto e o Project Owner o que uma User Story precisa ter para ser aceita. Sendo isso feito para que ambas as partes, equipe de desenvolvimento e stakeholders, tenham compreensão do que determinada funcionalidade ou item precisa ter para ser considerada concluída.
 
-
-**Definition of Ready (D.O.R.):** É usado um conjunto de critérios que visam qualificar quando uma User Story está pronta para ser trabalhada. Garantindo que a equipe de desenvolvimento tenha informações claras necessárias para começar a implementar a funcionalidade.
-
-
-**Definition of Done (D.O.D.):** É também utilizado um conjunto de critérios que visam descrever o que determinada funcionalidade precisa ter para ser considerada concluída e finalizada, testada e poder ser entregue para o cliente.
-
-
 **Debates e incorporação de Feedback:** A equipe de desenvolvimento apresenta o que foi desenvolvido. Ao receber o feedback do cliente acerca da funcionalidade desenvolvida a equipe faz a incorporação desse feedback à funcionalidade.
 
 
@@ -64,15 +57,18 @@ Antes da validação com o cliente, a equipe realiza reuniões internas para rev
 
 ### 4.1.6 Organização e Atualização de Requisitos
 
-**Product Backlog Building (PBB):** Essa técnica organiza os requisitos em um formato hierárquico, desde os objetivos de negócio até as histórias de usuário, ajudando a manter o backlog atualizado, alinhado às necessidades dos stakeholders e adaptável ao longo do desenvolvimento.  As etapas incluem:  
-1. **Definir os objetivos de negócio**: Identificar as metas que o produto deve alcançar.  
-2. **Identificar funcionalidades**: Mapear as principais funcionalidades para atender aos objetivos.  
-3. **Criar histórias de usuário**: Detalhar as funcionalidades em partes menores, descritivas e acionáveis.  
-4. **Priorizar o backlog**: Organizar os itens para maximizar valor e minimizar riscos.  
+**Backlog de Requisitos:**
+Os requisitos são organizados e atualizados por meio de uma lista detalhada com informações como: User Stories, Critérios de Aceitação e Prazos de execução.
+
+**Feedbacks Acerca do Backlog:**
+As opiniões dos stakeholders sobre a utilidade das funcionalidades e a visão de sua aplicação dentro do Produto Mínimo Viável pode gerar atualizações no backlog da construção da solução de software.
+
+**User Stories:**
+Todos os requisitos funcionais passam pelo método de organização de User Stories para melhor entendimento das expectativas com a funcionalidade, assim como seu comportamento dentro do software. Entendimento este claro para o lado dos stakeholders e para o lado dos desenvolvedores.
 
 ## 4.2 Engenharia de Requisitos e o Scrum/XP
 
-Baseando-se na estratégia de desenvolvimento de software selecionado, mencionado no tópico 3 e consultando os códigos das User Stories da seção [Visão do Backlog](../4-sprints/VisaoGeralBacklog.md), o cronograma preliminar do projeto pode ser visualizada logo abaixo:
+Baseando-se na estratégia de desenvolvimento de software selecionado, mencionado no tópico 3 e consultando os códigos das User Stories da seção [Backlog do Produto](./9-backlogDeProduto.md), o cronograma preliminar do projeto pode ser visualizada logo abaixo:
 
 Fases do Processo           | Atividades ER             | Prática                    | Técnica                                                        | Resultado Esperado
 --------------------------- | ------------------------- | -------------------------- | -------------------------------------------------------------- | ----------------------------
@@ -85,13 +81,13 @@ Fases do Processo           | Atividades ER             | Prática              
                             | Análise e Consenso        | Mensurar a viabilidade da implementação  | Análise de Risco/Viabilidade | Alinhamento de expectativas para a entrega e alocação adequada de membros para o desenvolvimento do requisito
                             | Declaração                | "Definição de Critérios de Aceitação" | Definição dos critérios de aceitação, Definition of Ready (DoR) e Definition of Done (DoD) | Funcionalidades com critérios de conclusão bem estabelecidas e com os critérios de inicialização esclarecidas
                             | Verificação e Validação    | Verificação dos requisitos da sprint | DoR | Equipe segura para iniciar o desenvolvimento
-                            | Organização e Descoberta  | Organização das funcionalidades em andamento ou acrescentadas para a sprint e backlog | Backlog de Requisitos | Sprint organizada com as funcionalidades a serem desenvolvidas e backlog atualizado em casos de incrementos
+                            | Organização e Atualização  | Organização das funcionalidades em andamento ou acrescentadas para a sprint e backlog | Backlog de Requisitos, User Stories | Sprint organizada com as funcionalidades a serem desenvolvidas e backlog atualizado em casos de incrementos
 **Execução da Sprint**      | Representação             | Desenvolvimento de Protótipos | Prototipagem em Alta Fidelidade | Os protótipos validados auxiliam a equipe a desenvolver a funcionalidade corretamente e evitar o retrabalho 
-                            | Verificação e Validação    | Validação dos protótipos | Critérios de aceitação, feedback do cliente, DoD, DoR | Confirmação de que os requisitos atendem aos critérios definidos, DoR, DoD
+                            | Verificação e Validação    | Validação dos protótipos | Critérios de aceitação, feedback do cliente, DoD | Confirmação de que os requisitos atendem aos critérios definidos, DoD
                             | Organização e Atualização | Revisão do Backlog | Fazer uma revisão de como está o Backlog da Sprint | Backlog em dia com o andamento da Sprint
 **Sprint Review**           | Declaração                | Atualização das Histórias de usuário | Debates ao receber feedback do cliente e incorporação desse feedback | Alinhamento do que está sendo desenvolvido com o feedback dos clientes
                             | Verificação e Validação   | Demonstração ao Cliente do que foi realizado durante a Sprint | Reuniões, Feedbacks | Funcionalidades verificadas pelo feedback dos clientes
-                            | Organização e Atualização | Organização das funcionalidades finalizadas ou debitadas da sprint | Backlog de Requisitos | Backlog atualizado com as funcionalidades atrasadas e implementadas 
+                            | Organização e Atualização | Organização das funcionalidades finalizadas ou debitadas da sprint | Backlog de Requisitos, Feedback | Backlog atualizado com as funcionalidades atrasadas e implementadas 
 
 ---
 ## Historico de Versão
@@ -102,4 +98,5 @@ Data     | Versão | Descrição | Autor | Revisores
 03/12/24 | 1.2 | Finalização do Documento | João Pedro | Manuella Magalhães
 03/12/24 | 1.3 | Adição de Representação e Declaração  | Arthur Miranda | Manuella Valadares
 04/12/24 | 1.4 | Adição de Veriificação e Validação e Organização         | Manuella Valadares | Ana Carolina
-
+14/01/25 | 1.5 | Removendo DoR da Execução da Sprint por feedback do professor | Manuella Valadares | Arthur Miranda
+18/01/25 | 1.6 | Ajustando processo de Organização e Atualização da ER | Daniel Rodrigues | Arthur Miranda

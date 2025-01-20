@@ -40,7 +40,7 @@ Já na fase de brainstorming de funcionalidades, foram elicitados 30 Requisitos 
 | EP03 | Automações |
 | EP04 | Visitas Técnicas |
 
-Os detalhes adicinais acerca de cada épico e as funcionalidades que pertencem à cada épico podem ser consultados na seção de [Visão Geral do Backlog](../../VisaoGeralBacklog.md). Adicionalmente, os detalhes de cada fase pode ser visto no board abaixo:
+Os detalhes adicinais acerca de cada épico e as funcionalidades que pertencem à cada épico podem ser consultados na seção de [Backlog de Produto](../../../2-docPage/9-backlogDeProduto.md) Adicionalmente, os detalhes de cada fase pode ser visto no board abaixo:
 
 <iframe width="768" height="432" src="https://miro.com/app/live-embed/uXjVLJUh_Eo=/?moveToViewport=-4070,-1433,6705,2946&embedId=913005605696" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
 
