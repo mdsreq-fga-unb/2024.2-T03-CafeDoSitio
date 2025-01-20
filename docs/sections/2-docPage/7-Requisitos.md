@@ -53,8 +53,6 @@ Os requisitos não funcionais foram organizados com base no modelo URPS+, que cl
 **RNF04 -** Os contatos da empresa devem ser apresentados em um formato padronizado e de fácil compreensão, com suporte a links clicáveis para e-mail, telefone e redes sociais. <br>
 **RNF05 -** As vagas de emprego da empresa devem ser exibidas de forma clara, com uma organização que facilitem a busca por oportunidades compatíveis com o interesse do usuário, instruindo o usuário como prosseguir com o processo no site terceiro empregare. <br>
 **RNF06 -** As instruções do E-commerce devem ser descritas de maneira clara, com linguagem simples e objetiva, utilizando elementos visuais, como ícones e guias passo a passo, para melhorar a compreensão. <br>
-
-#### Apenas referências para a produção, ou seja são somente orientações que devem ser seguidas durante o processo de desenvolvimento do software:
 **RNF07 -** A interface do usuário deve permitir o uso pessoas com diferentes níveis de habilidade técnica. <br>
 **RNF08 -** O tempo de aprendizado para novos administradores não deve exceder 2 horas com um tutorial básico. <br>
 **RNF09 -** As cores utilizadas no software devem seguir a paleta de cores da Família do Sítio, com exceção das cores preta e branca. <br>
