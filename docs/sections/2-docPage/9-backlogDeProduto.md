@@ -25,31 +25,24 @@ Código | Tema Associado | Título                             | User Story
 ------ | -------------- | ---------------------------------- | ---------------------------
 EP01   | TM01            | Consultar Posts de Blog            | Eu como usuário, devo ser capaz de interagir com o conteúdo disponível na central do Blog da Família do Sítio para me informar.
 EP02   | TM01            | Marcar Visitas Técnicas            | Eu como usuário, devo ser capaz de explorar opções de visitas para conhecer a fábrica presencialmente.
-EP03   | TM02            | Administração de Acesso | Eu como funcionário da Família do Sítio, devo ser capaz de gerenciar os acessos de usuários funcionários para que o sistema de administração possa ser acessado somente por pessoas autorizadas.
-EP04   | TM02            | Controle de Atendimento | Eu como funcionário da Família do Sítio, devo ser capaz de visualizar e responder as solicitações dos usuário clientes para que eu possa realizar o atendimento de forma ordenada e com o devido controle.
+EP03   | TM02            | Controle de Atendimento | Eu como funcionário da Família do Sítio, devo ser capaz de visualizar e responder as solicitações dos usuário clientes para que eu possa realizar o atendimento de forma ordenada e com o devido controle.
+EP04   | TM02            | Administração de Acesso | Eu como funcionário da Família do Sítio, devo ser capaz de gerenciar os acessos de usuários funcionários para que o sistema de administração possa ser acessado somente por pessoas autorizadas.
 
-### 9.1.3 - Relacionado aos Requisitos Funcionais:
-Código | User Story
------- | ----------------------------------------------------
-US01   | Eu como usuário devo ser capaz desenvolver um conteúdo, com permissão à formatação de texto avançados e inserição imagens para que seja publicado como blog no site da Família do Sítio.
-US02   | _À DESENVOLVER_
-US03   | **INCREMENTO (User Story não será escrito)**
-US04   | _À DESENVOLVER_
-US05   | _À DESENVOLVER_
-US06   | _À DESENVOLVER_
-US07   | **INCREMENTO (User Story não será escrito)**
-US08   | _À DESENVOLVER_
-US09   | **INCREMENTO (User Story não será escrito)**
-US10   | **INCREMENTO (User Story não será escrito)**
-US11   | Eu como usuário gostaria de criar uma disponilibidade de visita técnica em um calendário no sistema, para que o público externo, como consumidores, possam selecionar este dia para agendar sua visita à empresa.
-US12   | **INCREMENTO (User Story não será escrito)**
-US13   | **INCREMENTO (User Story não será escrito)**
-US14   | Eu como usuário gostaria de cadastrar meu agendamento em um dos dias disponíveis de visitação, para realizar a visita técnica de forma presencial.
-US15   | Eu como usuário, devo ser capaz de fazer uma reclamação, um elogio, uma dúvida, sugestão ou parcerias para que os colaboradores da Família do Sítio esteja ciente e eu receba um retorno sobre minha solicitação.
-US16   | _À DESENVOLVER_
-US17   | **INCREMENTO (User Story não será escrito)**
-US18   | Eu como Funcionário da Família do Sítio, devo ser capaz de fazer login com meu email empresarial e senha, para que eu possa acessar as funções da Central de Administração.
-US19   | Eu como Funcionário da Família do Sítio, devo ser capaz de criar ou apagar o acesso de novas contas no sistema, para que eu possa controlar o acesso à central administrativa.
+### 9.1.3 - User Storys dos Requisitos Funcionais:
+Código | Requisito Funcional Associado | Épico Associado | User Story
+------ | ----------------------------- | --------------- | ----------------------------------
+US01   | RQF01 | EP01 | Eu como usuário devo ser capaz desenvolver um conteúdo, com permissão à formatação de texto avançados e inserição imagens para que seja publicado como blog no site da Família do Sítio.
+US02   | RQF02 | EP01 | **_À DESENVOLVER_ (Será construída na Sprint correspondente)**
+US04   | RQF04 | EP01 | **_À DESENVOLVER_ (Será construída na Sprint correspondente)**
+US05   | RQF05 | EP01 | **_À DESENVOLVER_ (Será construída na Sprint correspondente)**
+US06   | RQF06 | EP01 | **_À DESENVOLVER_ (Será construída na Sprint correspondente)**
+US08   | RQF08 | EP01 | **_À DESENVOLVER_ (Será construída na Sprint correspondente)**
+US11   | RQF11 | EP02 | Eu como usuário gostaria de criar uma disponilibidade de visita técnica em um calendário no sistema, para que o público externo, como consumidores, possam selecionar este dia para agendar sua visita à empresa.
+US14   | RQF14 | EP02 | Eu como usuário gostaria de cadastrar meu agendamento em um dos dias disponíveis de visitação, para realizar a visita técnica de forma presencial.
+US15   | RQF15 | EP03 | Eu como usuário, devo ser capaz de fazer uma reclamação, um elogio, uma dúvida, sugestão ou parcerias para que os colaboradores da Família do Sítio esteja ciente e eu receba um retorno sobre minha solicitação.
+US16   | RQF16 | EP03 | Eu como usuário, devo ser capaz de localizar produtos de meu interesse, em estabelecimentos dentro de um sistema de GPS, para que eu saiba onde achar os produtos da Família do Sítio.
+US18   | RQF18 | EP04 | Eu como Funcionário da Família do Sítio, devo ser capaz de fazer login com meu email empresarial e senha, para que eu possa acessar as funções da Central de Administração.
+US19   | RQF19 | EP04 | Eu como Funcionário da Família do Sítio, devo ser capaz de criar ou apagar o acesso de novas contas no sistema, para que eu possa controlar o acesso à central administrativa.
 
 ### 9.1.4 - Relacionado aos Requisitos Não Funcionais (Somente de Usabibilidade):
 Código | Título do Requisito de Usabilidade (Relacionada à implementação de uma interface)
@@ -60,6 +53,7 @@ RQNF03 | As informações sobre ações sociais da empresa devem estar disponív
 RQNF04 | Os contatos da empresa devem ser apresentados em um formato padronizado e de fácil compreensão, com suporte a links clicáveis para e-mail, telefone e redes sociais.
 RQNF05 | As vagas de emprego da empresa devem ser exibidas de forma clara, com uma organização que facilitem a busca por oportunidades compatíveis com o interesse do usuário, instruindo o usuário como prosseguir com o processo no site terceiro empregare.
 RQNF06 | As instruções do E-commerce devem ser descritas de maneira clara, com linguagem simples e objetiva, utilizando elementos visuais, como ícones e guias passo a passo, para melhorar a compreensão.
+RQNF07 | A interface da página principal deverá introduzir os usuários às principais informações para as demais navegações: História da Família do Sítio e Ações Sociais, além do rodapé e cabeçalho com as demais navegações.
 
 ## 9.2 - Priorização do Backlog Geral
 
@@ -100,32 +94,25 @@ RQF04   | 3                       | 2                | 10
 RQF14   | 3                       | 2                | 10
 RQF15   | 3                       | 2                | 10
 RQF19   | 3                       | 2                | 10
-RQF12   | 3                       | 3                | 9
 RQF16   | 3                       | 3                | 9
 RQF02   | 2                       | 1                | 7
 RQF06   | 2                       | 2                | 6
 RQF11   | 2                       | 2                | 6
-RQF13   | 2                       | 2                | 6
 RQF18   | 2                       | 2                | 6
-RQF10   | 2                       | 3                | 5
-RQF03   | 1                       | 1                | 3
 RQF05   | 1                       | 1                | 3
-RQF07   | 1                       | 2                | 2
-RQF09   | 1                       | 2                | 2
-RQF17   | 1                       | 2                | 2
 RQNF01 | 3                       | 1                | 11
 RQNF02 | 3                       | 1                | 11
 RQNF03 | 3                       | 1                | 11
 RQNF04 | 3                       | 1                | 11
 RQNF05 | 3                       | 1                | 11
 RQNF06 | 3                       | 1                | 11
+RQNF07 | 3                       | 1                | 11
 
 <!-- US03   | Nível 2                    | Nível 1                           | Nível 2     |3 -->
 <!-- US12   | Nível 3                    | Nível 2                           | Nível 3     |7 -->
 <!-- US13   | Nível 1                    | Nível 2                           | Nível 3     |9 -->
 <!-- US09   | Nível 1                    | Nível 2                           | Nível 2     |7 -->
 <!-- US10   | Nível 1                    | Nível 2                           | Nível 2     |7 -->
-
 
 ## 9.3 - MVP
 
@@ -159,10 +146,13 @@ Com esta técnica, foi possível elencar as funcionalidades de maior valor agreg
 - **RQNF04:** Os contatos da empresa devem ser apresentados em um formato padronizado e de fácil compreensão, com suporte a links clicáveis para e-mail, telefone e redes sociais;
 - **RQNF05:** As vagas de emprego da empresa devem ser exibidas de forma clara, com uma organização que facilitem a busca por oportunidades compatíveis com o interesse do usuário, instruindo o usuário como prosseguir com o processo no site terceiro empregare;
 - **RQNF06:** As instruções do E-commerce devem ser descritas de maneira clara, com linguagem simples e objetiva, utilizando elementos visuais, como ícones e guias passo a passo, para melhorar a compreensão.
+- **RQNF07 -** A interface da página principal deverá introduzir os usuários às principais informações para as demais navegações: História da Família do Sítio e Ações Sociais, além do rodapé e cabeçalho com as demais navegações.
 
 
 ### OBS: 
-Os requisitos funcionais RF03, RF09, RF10, RF12 e RF13 foram descontinuados por decisão dos stakeholders durante reuniões de alinhamento. Seja por entenderem que não são mais necessários, por perceber que outra funcionalidade já cumpriria tal função, etc. E por isso não entraram no Backlog
+Os requisitos funcionais RQF03, RQF07, RQF09, RQF10, RQF12 e RQF13 e RQF17 não entraram no backlog por decisão dos stakeholders durante reuniões de alinhamento e criação do Lean Inception por motivos como não serem tão necessários, por perceber que outra funcionalidade já cumpriria tal função, etc.
+
+<br><br>
 
 # Referências Bibliográficas:
 
@@ -176,6 +166,7 @@ Os requisitos funcionais RF03, RF09, RF10, RF12 e RF13 foram descontinuados por 
 
 > RIES, Eric. A Startup Enxuta: Como os Empreendedores Atuais Utilizam a Inovação Contínua para Criar Empresas Extremamente Bem-Sucedidas. Rio de Janeiro: Alta Books, 2012.
 
+---
 ## Histórico de Versão:
 | Data | Versão | Descrição | Autor | Revisores |
 |---- | ------ | --------- | ----- | --------- |
@@ -186,3 +177,4 @@ Os requisitos funcionais RF03, RF09, RF10, RF12 e RF13 foram descontinuados por 
 | 12/12/24 | 2.0 | Novos requisitos e reestruturação do backlog | Daniel Rodrigues | Arthur Suares
 | 12/12/24 | 2.1 | Adição dos Temas e Épicos | Daniel Rodrigues | João Pedro
 | 14/01/25 | 2.2 | Modificação das referências aos RQNF | João Pedro | Marcella Anderle
+| 18/01/25 | 3.0 | Reformulação do backlog | Daniel Rodrigues da Rocha | Arthur Suares
