@@ -10,8 +10,6 @@
 
 **Entrevistas com stakeholders:** Técnica essencial para obter um entendimento claro e direto sobre o problema, as necessidades, as possíveis soluções e as expectativas em relação ao produto de software. No projeto, serão realizadas entrevistas quinzenais com o cliente, visando a elicitação eficaz de requisitos e garantindo a definição precisa e assertiva das funcionalidades do produto. Além disso, são realizadas entrevistas fechadas, isto é, antes de ocorrer, o product owner da equipe pré-define as perguntas e assuntos a serem abordados.
 
-**Protótipos:** Por meio dela, a elicitação e descoberta de requisitos são facilitadas, visto que os protótipos de interface ajudam o cliente a iniciar uma visualização do produto final. No projeto, antes da elaboração de cada etapa do produto, é realizada uma fase de prototipação pela equipe, na qual o protótipo passa por validação e identificação de novos requisitos, para, assim, seguir para a etapa de desenvolvimento.
-
 **Lean Inception:** Esse método permite alinhar a equipe na definição do MVP (Produto Mínimo Viável). Durante a sprint 1, a equipe e os stakeholders colaboraram para definir e priorizar os recursos e funcionalidades do produto. Além disso, o MVP definido é flexível, podendo ser ajustado e atualizado ao longo do desenvolvimento.
 
 ### 4.1.2 Análise e Consenso 
@@ -36,7 +34,7 @@
 ### 4.1.4 Representação de Requisitos
 
 
-**Prototipagem de Alta Fidelidade:** Os protótipos das telas que o projeto irá ter serão feitos na plataforma do Figma. Esses protótipos serão então validados com os stakeholders para que a funcionalidade possa ser desenvolvida corretamente e assim evitar retrabalho.
+**Prototipagem de Alta Fidelidade:** A prototipação é de Alta Fidelidade. Os protótipos das telas que o projeto irá ter serão feitos na plataforma do Figma. Esses protótipos serão então validados com os stakeholders para que a funcionalidade possa ser desenvolvida corretamente e assim evitar retrabalho.
 
 
 ### 4.1.5 Verificação e Validação de Requisitos
