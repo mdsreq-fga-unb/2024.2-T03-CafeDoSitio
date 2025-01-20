@@ -153,12 +153,13 @@ Com esta técnica, foi possível elencar as funcionalidades de maior valor agreg
 
 ### 9.3.2 - Requisitos não Funcionais de Usabilidade (Relacionadas à implementação de uma Interface)
 
-- **RQNF01:** Visualizar história da Empresa;
-- **RQNF02:** Visualizar produtos da Empresa;
-- **RQNF03:** Visualizar ações sociais da Empresa;
-- **RQNF04:** Visualizar contatos da empresa;
-- **RQNF05:** Visualizar vagas de emprego da Empresa;
-- **RQNF06:** Visualizar detalhes do E-Commerce.
+- **RQNF01:** O sistema deve permitir que os usuários localizem facilmente a seção que apresenta a história da empresa, com navegação intuitiva e conteúdo disposto de forma clara e acessível;
+- **RQNF02:** A interface deve exibir os produtos da empresa de forma visualmente organizada e categorizada, facilitando a identificação e compreensão de cada item pelo usuário;
+- **RQNF03:** As informações sobre ações sociais da empresa devem estar disponíveis de maneira acessível e atrativa, garantindo clareza na comunicação e fácil navegação para o usuário;
+- **RQNF04:** Os contatos da empresa devem ser apresentados em um formato padronizado e de fácil compreensão, com suporte a links clicáveis para e-mail, telefone e redes sociais;
+- **RQNF05:** As vagas de emprego da empresa devem ser exibidas de forma clara, com uma organização que facilitem a busca por oportunidades compatíveis com o interesse do usuário, instruindo o usuário como prosseguir com o processo no site terceiro empregare;
+- **RQNF06:** As instruções do E-commerce devem ser descritas de maneira clara, com linguagem simples e objetiva, utilizando elementos visuais, como ícones e guias passo a passo, para melhorar a compreensão.
+
 
 ### OBS: 
 Os requisitos funcionais RF03, RF09, RF10, RF12 e RF13 foram descontinuados por decisão dos stakeholders durante reuniões de alinhamento. Seja por entenderem que não são mais necessários, por perceber que outra funcionalidade já cumpriria tal função, etc. E por isso não entraram no Backlog
@@ -184,3 +185,4 @@ Os requisitos funcionais RF03, RF09, RF10, RF12 e RF13 foram descontinuados por 
 | 09/12/24 | 1.3 | Incluindo o calculo de priorização | Manuella, Arthur, João | Daniel
 | 12/12/24 | 2.0 | Novos requisitos e reestruturação do backlog | Daniel Rodrigues | Arthur Suares
 | 12/12/24 | 2.1 | Adição dos Temas e Épicos | Daniel Rodrigues | João Pedro
+| 14/01/25 | 2.2 | Modificação das referências aos RQNF | João Pedro | Marcella Anderle
