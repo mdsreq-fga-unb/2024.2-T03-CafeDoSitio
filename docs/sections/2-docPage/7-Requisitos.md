@@ -52,8 +52,8 @@ Os requisitos não funcionais foram organizados com base no modelo URPS+, que cl
 **RNF03 -** As informações sobre ações sociais da empresa devem destacar as iniciativas realizadas, utilizando uma estrutura que disponha o texto sem muita complexidade, como muitos ícones ou componentes. <br>
 **RNF04 -** Os contatos da empresa devem ser apresentados em um formato padronizado, com suporte a links clicáveis para e-mail, telefone e redes sociais. <br>
 **RNF05 -** As vagas de emprego da empresa devem ser exibidas de maneira organizada, com filtros ou categorias que permitam ao usuário encontrar oportunidades compatíveis com seus interesses e com instruções para acessar o processo no site de terceiros, Empregare. <br>
-**RNF06 -** As instruções do E-commerce devem ser descritas de maneira clara, com linguagem simples e objetiva, utilizando elementos visuais, como ícones e guias passo a passo, para melhorar a compreensão.
-**RNF07 -** A interface da página principal deverá introduzir os usuários às principais informações para as demais navegações: História da Família do Sítio e Ações Sociais, além do rodapé e cabeçalho com as demais navegações.
+**RNF06 -** As instruções do E-commerce devem ser descritas de maneira clara, com linguagem simples e objetiva, utilizando elementos visuais, como ícones e guias passo a passo, para melhorar a compreensão.<br>
+**RNF07 -** A interface da página principal deverá introduzir os usuários às principais informações para as demais navegações: História da Família do Sítio e Ações Sociais, além do rodapé e cabeçalho com as demais navegações.<br>
 **RNF08 -** A interface do usuário deve permitir o uso pessoas com diferentes níveis de habilidade técnica. <br>
 **RNF09 -** O tempo de aprendizado para novos administradores não deve exceder 2 horas com um tutorial básico. <br>
 **RNF10 -** As cores utilizadas no software devem seguir a paleta de cores da Família do Sítio, com exceção das cores preta e branca. <br>
