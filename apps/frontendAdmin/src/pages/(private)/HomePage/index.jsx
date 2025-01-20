@@ -19,6 +19,11 @@ const HomePage = () => {
     navigate(ROUTES.SAC);
   };
 
+  const navigateToAdminAccounts = () => {
+    navigate(ROUTES.ADMIN_ACCOUNTS);
+  };
+
+
   return(
     <>
 
@@ -37,6 +42,9 @@ const HomePage = () => {
           
           <h2 style={{marginTop: 50}}>Visualização de Sacs</h2>
           <Card onClick={navigateToSac} title={"Visualizar Sacs"} description={"Veja os Sacs que já foram feitos. Seja todos ao mesmo tempo ou filtrados por assunto."}><BiSolidMegaphone className="icon"/></Card>
+
+          <h2 style={{marginTop: 50}}>Gerenciar Contas</h2>
+          <Card onClick={navigateToAdminAccounts} title={"Gerenciar Contas"} description={"Adicione ou exclua contas que terão acesso à Central de Administração do Site Institucional da Família do Sítio."}><BiSolidMegaphone className="icon"/></Card>
         </OptionGroup>
       </ConfigsZone>
   

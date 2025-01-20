@@ -3,5 +3,6 @@ export const ROUTES = {
   HOME: "/admin/home",
   VISITA: "/admin/visitaConfig",
   SAC: "/admin/sac",
-  VISITA_DETALHADA: "/admin/visitaConfig"
+  VISITA_DETALHADA: "/admin/visitaConfig",
+  ADMIN_ACCOUNTS: "/admin/accounts",
 };
