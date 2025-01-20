@@ -43,7 +43,7 @@
 ### 4.1.4 Representação de Requisitos
 
 
-**Prototipagem de Alta Fidelidade:** Os protótipos das telas que o projeto irá ter serão feitos na plataforma do Figma. Esses protótipos serão então validados com os stakeholders para que a funcionalidade possa ser desenvolvida corretamente e assim evitar retrabalho.
+**Prototipagem de Alta Fidelidade:** A prototipação é de Alta Fidelidade. Os protótipos das telas que o projeto irá ter serão feitos na plataforma do Figma. Esses protótipos serão então validados com os stakeholders para que a funcionalidade possa ser desenvolvida corretamente e assim evitar retrabalho.
 
 
 ### 4.1.5 Verificação e Validação de Requisitos
