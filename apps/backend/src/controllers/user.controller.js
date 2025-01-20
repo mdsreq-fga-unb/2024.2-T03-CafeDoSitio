@@ -10,9 +10,9 @@ var salt = process.env.SALT_BCRYPT;
 
 const createUser = async (req, res) => {
   try {
-    const{name, email} = req.body;
+    const{name, email, sector} = req.body;
   
-    if(!name || !email)
+    if(!email || !sector)
       res.status(400).send({ message: 'Preencha todos os campos para registro!', case: 1 });
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -20,8 +20,8 @@ const createUser = async (req, res) => {
       return res.status(400).send({ message: 'Formato de email incorreto!', case: 2 });
   
     const user = await userService.createService({
-      name,
       email,
+      sector
     });
   
     if (!user)

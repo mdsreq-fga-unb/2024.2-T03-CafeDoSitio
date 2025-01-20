@@ -2,11 +2,10 @@ import axios from 'axios';
 
 const baseURL = 'http://localhost:3002';
 
-export function createUser(name, email, password){
+export function createUser(email, sector){
   const body = {
-    name: name,
     email: email,
-    password: password,
+    sector: sector,
   }
 
   const response = axios.post(
@@ -14,7 +13,7 @@ export function createUser(name, email, password){
     body,
     {
       headers: {
-        Authorization: `Bearer ${sessionStorage.get("authToken")}`,
+        Authorization: `Bearer ${sessionStorage.getItem("authToken")}`,
       }
     }
   );

@@ -31,6 +31,7 @@ export const ConfigsZone = styled.div`
 export const OptionGroup = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 40px;
 
   h2{
     color: #555;
