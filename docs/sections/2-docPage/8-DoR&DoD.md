@@ -7,7 +7,7 @@ A Definition of Ready (DoR) é um conjunto de critérios que um item ou uma User
 - **O requisito não possui ambiguidade?** Ou seja, se a história de usuário e o seu título não possui outras interpretações para o lado dos desenvolvedores e stakeholders.
 - **As stakeholders passaram os Critérios de Aceitação?** Ou seja, as ações e comportamentos que eles testarão e esperam que deverá ocorrer no software.
 - **As stakeholders passaram o protótipo esperado de como deve ser a interface?** As stakeholders, dentro da empresa, já possuem uma acessoria de imagem e uma designer que já fizeram reuniões e projetaram como deveriam ser as páginas. Além de que novas páginas precisam passar pela aprovação dessa mesma acessoria
-- **A Issue foi validada pela Coordenadora Ana Carol e, portanto, segue padrões de qualidade plausíveis e claros na documentação completa do requisito?**
+- **O requisito foi validado pelo Coordenador de requisitos?** Ou seja, se o requisito foi revisado e aprovado, garantindo que ele esteja em conformidade com os padrões de qualidade estabelecidos, incluindo clareza, viabilidade técnica, e documentação completa e sem ambiguidades.
 
 ## 8.2 Definition of Done (DoD)
 Se a DoR é um conjunto de critérios para que um item seja considerado adequado para começar a se trabalhar nele, então a Definition of Done (DoD) é o conjunto de critérios que um item precisa ter para ser considerado como terminado. Sendo esse conjunto de critérios descritos abaixo:
@@ -26,3 +26,4 @@ Se a DoR é um conjunto de critérios para que um item seja considerado adequado
 |---- | ------ | --------- | ----- | --------- |
 | 12/12/24 | 1.0 | Criação do Documento | Arthur Suares | Daniel Rodrigues
 | 14/01/25 | 1.1 | Correção dos termos usados no DoD | Manuella Valadares | Arthur Miranda
+| 20/01/25 | 1.2 | Correção dos critérios de aceitação usados no DoD | Ana Carolina | Daniel Rodrigues
