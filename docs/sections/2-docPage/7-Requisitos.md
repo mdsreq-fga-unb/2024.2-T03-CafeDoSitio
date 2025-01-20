@@ -48,9 +48,9 @@ Os requisitos não funcionais foram organizados com base no modelo URPS+, que cl
 
 #### Necessários de estar no backlog:
 **RQNF01 -** O sistema deve permitir que os usuários localizem facilmente a seção que apresenta a história da empresa, com navegação intuitiva, tendo o conteúdo disposto de forma que o usuário não precise decorar um caminho de navegação para achar aquilo que procura. <br>
-**RQNF02 -** A interface deve exibir os produtos da empresa em categorias organizadas e definidas pelas stakeholders de acordo com a classe dos produtos: Linha Assum Preto, Linha da Família do Sítio e Linha Speciale Espresso. Permitindo que o usuário identifique cada item.<br>
+**RNF02 -** A interface deve exibir os produtos da empresa em categorias organizadas e definidas pelas stakeholders de acordo com a classe dos produtos: Linha Assum Preto, Linha da Família do Sítio e Linha Speciale Espresso. Permitindo que o usuário identifique cada item.<br>
 **RQNF03 -** As informações sobre ações sociais da empresa devem destacar as iniciativas realizadas, utilizando uma estrutura que disponha o texto sem muita complexidade, como muitos ícones ou componentes. <br>
-**RQNF04 -** Os contatos da empresa devem ser apresentados em um formato padronizado, com suporte a links clicáveis para e-mail, telefone e redes sociais. <br>
+**RNF04 -** Os contatos da empresa devem ser apresentados em um formato padronizado, com suporte a links clicáveis para e-mail, telefone e redes sociais. <br>
 **RQNF05 -** As vagas de emprego da empresa devem ser exibidas de maneira organizada, com filtros ou categorias que permitam ao usuário encontrar oportunidades compatíveis com seus interesses e com instruções para acessar o processo no site de terceiros, Empregare. <br>
 **RQNF06 -** A interface da página principal deverá introduzir os usuários às principais informações para as demais navegações: História da Família do Sítio e Ações Sociais, além do rodapé e cabeçalho com as demais navegações.
 
@@ -90,6 +90,7 @@ Data     | Versão | Descrição           | Autor    | Revisores
 10/12/24 | 1.1 | Redesign da página dos requisitos | Daniel Rodrigues | Manuella Valadares
 12/12/24 | 2.0 | Novos requisitos e reestruturação do backlog | Daniel Rodrigues | Arthur Suares
 14/01/25 | 2.1 | Adição da data de referência no RNF 15 | João Pedro | Arthur Suares
+20/01/25 | 2.2 | Troca do tipo de requisito de RQNF por RNF | Ana Carolina | Daniel Rodrigues
 
 
 
