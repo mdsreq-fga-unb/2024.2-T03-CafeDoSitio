@@ -181,6 +181,8 @@ US27       | Realizar a edição de um feedback                                 
 **E** há mensagem de erro com telefone inválido <br>
 **E** há mensagem de erro de email com terminação inexistente
 
+<br>
+
 #### CENÁRIO 2: Sucesso ao preencher todas as informações corretamente
 **DADO QUE** o técnico preencheu todas as informações obrigatórias corretamente, incluindo:
 
@@ -200,6 +202,8 @@ US27       | Realizar a edição de um feedback                                 
 **E** o download deve ser iniciado automaticamente <br>
 **E** deve ser exibida a mensagem “Relatório gerado com sucesso.”
 
+<br>
+
 #### CENÁRIO 2: Erro ao gerar relatório por falta de dados
 **DADO QUE** não há dados operacionais disponíveis no sistema <br>
 **QUANDO** eu tentar gerar o relatório PDF <br>
@@ -218,11 +222,15 @@ US27       | Realizar a edição de um feedback                                 
 **ENTÃO** o agendamento com id "123" deve ser atualizado com os novos detalhes <br>
 **E** eu devo ver uma mensagem de sucesso "Detalhes do agendamento atualizados com sucesso"
 
+<br>
+
 #### CENÁRIO 2: Erro ao alterar data do agendamento para o passado
 **DADO QUE** sou um Atendente autenticado no sistema <br>
 **E** existe um agendamento previamente cadastrado com id "124" <br>
 **QUANDO** eu tento alterar a data do agendamento para um dia anterior à data atual <br>
 **ENTÃO** o sistema deve exibir a mensagem de erro “A data do agendamento não pode ser anterior ao dia atual.”
+
+<br>
 
 #### CENÁRIO 3: Notificações enviadas após alterações
 **DADO QUE** sou um Atendente autenticado no sistema
@@ -238,6 +246,8 @@ US27       | Realizar a edição de um feedback                                 
 **E** o cliente selecionado não possui histórico de serviços registrados <br>
 **QUANDO** eu clicar no botão “Ver histórico de serviços” <br>
 **ENTÃO** o sistema deve exibir a mensagem “Nenhum serviço registrado.”
+
+<br>
 
 #### CENÁRIO 2: Pesquisa retorna histórico completo
 **DADO QUE** estou na página de perfil do cliente <br>
@@ -259,10 +269,14 @@ US27       | Realizar a edição de um feedback                                 
 **QUANDO** o cliente clicar no botão “Enviar solicitação de serviço” <br>
 **ENTÃO** o sistema deve mostrar uma mensagem no centro da tela escrito: “Solicitação de serviço realizada com sucesso.”
 
+<br>
+
 #### CENÁRIO 2: Erro ao enviar solicitação sem preencher campos obrigatórios
 **DADO QUE** o cliente deixou campos obrigatórios do formulário em branco <br>
 **QUANDO** ele clicar no botão “Enviar solicitação de serviço” <br>
 **ENTÃO** o sistema deve exibir a mensagem “Preencha todos os campos obrigatórios para enviar a solicitação.”
+
+<br>
 
 #### CENÁRIO 3: Sucesso ao criar solicitação com endereço aplicável
 **DADO QUE** o cliente preencheu todos os campos do formulário, incluindo endereço, com os seguintes dados:

@@ -21,6 +21,7 @@ nav:
     - Unidade 2: sections/5-entregas/Unidade2.md
     - Unidade 3:
       - PBB: sections/5-entregas/Unidade3/PBB.md
+      - USM: sections/5-entregas/Unidade3/USM.md
   - Ciclos e Backlog:
     - Visão do Backlog: sections/2-docPage/9-backlogDeProduto.md
     - Sprint 1:
@@ -74,7 +75,6 @@ theme:
     - navigation.instant
     - navigation.top
     - navigation.tracking
-    - toc.integrate
 
   palette:
     - scheme: default
