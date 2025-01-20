@@ -54,12 +54,12 @@ US19   | Eu como Funcionário da Família do Sítio, devo ser capaz de criar ou 
 ### 9.1.4 - Relacionado aos Requisitos Não Funcionais (Somente de Usabibilidade):
 Código | Título do Requisito de Usabilidade (Relacionada à implementação de uma interface)
 ------ | ----------------------------------------------------
-RQNF01 | O sistema deve permitir que os usuários localizem facilmente a seção que apresenta a história da empresa, com navegação intuitiva e conteúdo disposto de forma clara e acessível.
+RNF01 | O sistema deve permitir que os usuários localizem facilmente a seção que apresenta a história da empresa, com navegação intuitiva e conteúdo disposto de forma clara e acessível.
 RNF02 | A interface deve exibir os produtos da empresa de forma visualmente organizada e categorizada, facilitando a identificação e compreensão de cada item pelo usuário.
-RQNF03 | As informações sobre ações sociais da empresa devem estar disponíveis de maneira acessível e atrativa, garantindo clareza na comunicação e fácil navegação para o usuário.
+RNF03 | As informações sobre ações sociais da empresa devem estar disponíveis de maneira acessível e atrativa, garantindo clareza na comunicação e fácil navegação para o usuário.
 RNF04 | Os contatos da empresa devem ser apresentados em um formato padronizado e de fácil compreensão, com suporte a links clicáveis para e-mail, telefone e redes sociais.
-RQNF05 | As vagas de emprego da empresa devem ser exibidas de forma clara, com uma organização que facilitem a busca por oportunidades compatíveis com o interesse do usuário, instruindo o usuário como prosseguir com o processo no site terceiro empregare.
-RQNF06 | As instruções do E-commerce devem ser descritas de maneira clara, com linguagem simples e objetiva, utilizando elementos visuais, como ícones e guias passo a passo, para melhorar a compreensão.
+RNF05 | As vagas de emprego da empresa devem ser exibidas de forma clara, com uma organização que facilitem a busca por oportunidades compatíveis com o interesse do usuário, instruindo o usuário como prosseguir com o processo no site terceiro empregare.
+RNF06 | As instruções do E-commerce devem ser descritas de maneira clara, com linguagem simples e objetiva, utilizando elementos visuais, como ícones e guias passo a passo, para melhorar a compreensão.
 
 ## 9.2 - Priorização do Backlog Geral
 
@@ -113,12 +113,12 @@ RQF05   | 1                       | 1                | 3
 RQF07   | 1                       | 2                | 2
 RQF09   | 1                       | 2                | 2
 RQF17   | 1                       | 2                | 2
-RQNF01 | 3                       | 1                | 11
+RNF01 | 3                       | 1                | 11
 RNF02 | 3                       | 1                | 11
-RQNF03 | 3                       | 1                | 11
+RNF03 | 3                       | 1                | 11
 RNF04 | 3                       | 1                | 11
-RQNF05 | 3                       | 1                | 11
-RQNF06 | 3                       | 1                | 11
+RNF05 | 3                       | 1                | 11
+RNF06 | 3                       | 1                | 11
 
 <!-- US03   | Nível 2                    | Nível 1                           | Nível 2     |3 -->
 <!-- US12   | Nível 3                    | Nível 2                           | Nível 3     |7 -->
@@ -153,12 +153,12 @@ Com esta técnica, foi possível elencar as funcionalidades de maior valor agreg
 
 ### 9.3.2 - Requisitos não Funcionais de Usabilidade (Relacionadas à implementação de uma Interface)
 
-- **RQNF01:** O sistema deve permitir que os usuários localizem facilmente a seção que apresenta a história da empresa, com navegação intuitiva e conteúdo disposto de forma clara e acessível;
+- **RNF01:** O sistema deve permitir que os usuários localizem facilmente a seção que apresenta a história da empresa, com navegação intuitiva e conteúdo disposto de forma clara e acessível;
 - **RNF02:** A interface deve exibir os produtos da empresa de forma visualmente organizada e categorizada, facilitando a identificação e compreensão de cada item pelo usuário;
-- **RQNF03:** As informações sobre ações sociais da empresa devem estar disponíveis de maneira acessível e atrativa, garantindo clareza na comunicação e fácil navegação para o usuário;
+- **RNF03:** As informações sobre ações sociais da empresa devem estar disponíveis de maneira acessível e atrativa, garantindo clareza na comunicação e fácil navegação para o usuário;
 - **RNF04:** Os contatos da empresa devem ser apresentados em um formato padronizado e de fácil compreensão, com suporte a links clicáveis para e-mail, telefone e redes sociais;
-- **RQNF05:** As vagas de emprego da empresa devem ser exibidas de forma clara, com uma organização que facilitem a busca por oportunidades compatíveis com o interesse do usuário, instruindo o usuário como prosseguir com o processo no site terceiro empregare;
-- **RQNF06:** As instruções do E-commerce devem ser descritas de maneira clara, com linguagem simples e objetiva, utilizando elementos visuais, como ícones e guias passo a passo, para melhorar a compreensão.
+- **RNF05:** As vagas de emprego da empresa devem ser exibidas de forma clara, com uma organização que facilitem a busca por oportunidades compatíveis com o interesse do usuário, instruindo o usuário como prosseguir com o processo no site terceiro empregare;
+- **RNF06:** As instruções do E-commerce devem ser descritas de maneira clara, com linguagem simples e objetiva, utilizando elementos visuais, como ícones e guias passo a passo, para melhorar a compreensão.
 
 
 ### OBS: 

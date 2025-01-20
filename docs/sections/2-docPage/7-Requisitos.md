@@ -47,12 +47,12 @@ Os requisitos não funcionais foram organizados com base no modelo URPS+, que cl
 ### Usabilidade
 
 #### Necessários de estar no backlog:
-**RQNF01 -** O sistema deve permitir que os usuários localizem facilmente a seção que apresenta a história da empresa, com navegação intuitiva, tendo o conteúdo disposto de forma que o usuário não precise decorar um caminho de navegação para achar aquilo que procura. <br>
+**RNF01 -** O sistema deve permitir que os usuários localizem facilmente a seção que apresenta a história da empresa, com navegação intuitiva, tendo o conteúdo disposto de forma que o usuário não precise decorar um caminho de navegação para achar aquilo que procura. <br>
 **RNF02 -** A interface deve exibir os produtos da empresa em categorias organizadas e definidas pelas stakeholders de acordo com a classe dos produtos: Linha Assum Preto, Linha da Família do Sítio e Linha Speciale Espresso. Permitindo que o usuário identifique cada item.<br>
-**RQNF03 -** As informações sobre ações sociais da empresa devem destacar as iniciativas realizadas, utilizando uma estrutura que disponha o texto sem muita complexidade, como muitos ícones ou componentes. <br>
+**RNF03 -** As informações sobre ações sociais da empresa devem destacar as iniciativas realizadas, utilizando uma estrutura que disponha o texto sem muita complexidade, como muitos ícones ou componentes. <br>
 **RNF04 -** Os contatos da empresa devem ser apresentados em um formato padronizado, com suporte a links clicáveis para e-mail, telefone e redes sociais. <br>
-**RQNF05 -** As vagas de emprego da empresa devem ser exibidas de maneira organizada, com filtros ou categorias que permitam ao usuário encontrar oportunidades compatíveis com seus interesses e com instruções para acessar o processo no site de terceiros, Empregare. <br>
-**RQNF06 -** A interface da página principal deverá introduzir os usuários às principais informações para as demais navegações: História da Família do Sítio e Ações Sociais, além do rodapé e cabeçalho com as demais navegações.
+**RNF05 -** As vagas de emprego da empresa devem ser exibidas de maneira organizada, com filtros ou categorias que permitam ao usuário encontrar oportunidades compatíveis com seus interesses e com instruções para acessar o processo no site de terceiros, Empregare. <br>
+**RNF06 -** A interface da página principal deverá introduzir os usuários às principais informações para as demais navegações: História da Família do Sítio e Ações Sociais, além do rodapé e cabeçalho com as demais navegações.
 
 #### Apenas referências para a produção:
 **RNF07 -** A interface do usuário deve ser intuitiva e acessível para pessoas com diferentes níveis de habilidade técnica. <br>
