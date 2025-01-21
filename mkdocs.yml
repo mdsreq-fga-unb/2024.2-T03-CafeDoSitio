@@ -20,6 +20,7 @@ nav:
     - Unidade 1: sections/5-entregas/Unidade1.md
     - Unidade 2: sections/5-entregas/Unidade2.md
     - Unidade 3:
+      - Video: sections/5-entregas/Unidade3/Video.md
       - PBB: sections/5-entregas/Unidade3/PBB.md
       - USM: sections/5-entregas/Unidade3/USM.md
   - Ciclos e Backlog:
