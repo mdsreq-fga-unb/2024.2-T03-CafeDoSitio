@@ -104,7 +104,7 @@ export const BackgroundLine = styled.div`
     //padding: 20px;
     width: 100%;
 
-    @media(max-width: 900px){
+    @media(max-width: 970px){
       display: none;
     }
 `;

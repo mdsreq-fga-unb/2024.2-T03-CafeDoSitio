@@ -96,7 +96,7 @@ export const TextWrapper = styled.div`
 export const TextBox = styled.div`
   flex: 1;
   font-size: 1.2rem;
-  width: 96%;
+  width: 100%;
   text-align: justify;
   background-color: #fff;
   border: none;
