@@ -146,11 +146,10 @@ export const Navigation = styled.div`
   align-items: center;
   
   .timeline {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr); 
-    margin-left: 33px;
-    gap: 54px;
-    justify-content: space-around;
+    display: flex;
+    margin-left: 30px;
+    gap: 40px;
+    
     width: 100%;
 
     .timeline-item {

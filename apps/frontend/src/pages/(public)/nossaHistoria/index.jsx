@@ -1,4 +1,4 @@
-import { TimelineCard } from "../../../components/TimelineCard";
+    import { TimelineCard } from "../../../components/TimelineCard";
 import Paginacao from "../../../components/Paginacao";
 import imagem from "../../../assets/colagem_de_fotos.png"
 import {
