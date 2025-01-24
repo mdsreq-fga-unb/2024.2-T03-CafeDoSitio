@@ -41,7 +41,7 @@ function Header({pagina}) {
 
           <ul className="nav-list">
             <li><a href="#">INICIO</a></li>
-            <li><a href="#">NOSSOS PRODUTOS</a></li>
+            <li><Link to="/produtos" style={{ color: isActive("/produtos") ? "#006343" : "black"}}>NOSSOS PRODUTOS</Link></li>
             <li><Link to="/historia" style={{ color: isActive("/historia") ? "#006343" : "black"}}>NOSSA HISTÓRIA</Link></li>
             <li><a href="/" style={{ color: isActive("/") ? "#006343" : "black"}}>BLOG</a></li>
             <li><a href="#">SÍTIO VERDE</a></li>
