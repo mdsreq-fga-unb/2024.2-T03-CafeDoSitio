@@ -17,7 +17,7 @@ import {
 import celeirinho from "../../assets/celeirinho.png"
 
 export function TimelineCard() {
-  const years = [1967, 1972, 1974, 1986, 1989, 2000, 2005, 209, 2015, 2017, 2018, 2025];
+  const years = [1967, 1972, 1974, 1986, 1989, 2000, 2005, 2009, 2015, 2017, 2018, 2025];
   const texts = [
     "Vindos do Pernambuco, os recém-casados Antônia e Teones Barbosa de Souza chegam em Brasília. Se estabelecem no Núcleo Bandeirante, onde abrem um armazém de secos e molhados.",
     "O casal compra o Café do Sítio — a marca, o maquinário de torrefação e três veículos de distribuição. A fábrica funciona no Núcleo Bandeirante, e Teones mantém os negócios no armazém.",
