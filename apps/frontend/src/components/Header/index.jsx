@@ -17,6 +17,7 @@ function Header({pagina}) {
           <a href="/"><LogoImg src="./favicon.png"/></a>
           <label className="page-name">{pagina}</label>
         </div>
+        
         <InfoAreaDesktop>
           <div className="area1">
           <ul className="social-medias">
