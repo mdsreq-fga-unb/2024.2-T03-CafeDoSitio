@@ -4,6 +4,7 @@ const baseURL = 'http://localhost:3002';
 
 export function createUser(email, sector){
   const body = {
+    name: "Esperando Login do Usuário...",
     email: email,
     sector: sector,
   }
@@ -42,4 +43,17 @@ export function findAllUser(){
   );
   
   return response; 
+}
+
+export function deleteUser(id){
+  const response = axios.delete(
+    `${baseURL}/user/${id}`,
+    {
+      headers: {
+        Authorization: `Bearer ${sessionStorage.getItem("authToken")}`,
+      }
+    }
+  );
+
+  return response;
 }

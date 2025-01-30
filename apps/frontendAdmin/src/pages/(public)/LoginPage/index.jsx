@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { ConteudoGeral, LoginCard, Input, Button, ParteSuperior } from "./styled";
+import { ConteudoGeral, LoginCard, Input, Button, ParteSuperior, Formulario } from "./styled";
 import { loginUser } from "@familiadositio/core";
 import { ROUTES } from "../../../routes/RoutesConstants";
 import { toast, ToastContainer } from 'react-toastify';
@@ -21,7 +21,8 @@ const LoginPage = () => {
   const handleChangePassword = (e) => {
     setPassord(e.target.value);
   }
-  async function login(){
+  const handleLogin = async (e) => {
+    e.preventDefault(); // Previne o comportamento padrão do formulário (recarregar a página)
     try {
       const response = await loginUser(email, password);
       sessionStorage.setItem("authToken", response.data.token);
@@ -47,6 +48,22 @@ const LoginPage = () => {
     }
   }
 
+  useEffect(() => {
+    const handleKeyPress = (e) => {
+      if (e.key === "Enter") {
+        handleLogin(e);
+      }
+    };
+
+    // Adiciona o listener de teclado
+    document.addEventListener("keydown", handleKeyPress);
+
+    // Remove o listener ao desmontar o componente
+    return () => {
+      document.removeEventListener("keydown", handleKeyPress);
+    };
+  }, [email, password]);// Dependências para garantir que o listener tenha os valores atualizados
+
   return(
     <ConteudoGeral>
       <ToastContainer />
@@ -57,10 +74,13 @@ const LoginPage = () => {
           <h1>Central de Controle</h1>
           <span>Faça Login para acessar</span>
         </ParteSuperior>
+        
+      <Formulario onSubmit={handleLogin} >
         <Input type="email" placeholder="Email" onChange={handleChangeEmail}/>
         <Input type="password" placeholder="Senha" onChange={handleChangePassword}/>
 
-        <Button onClick={login}>Entrar</Button>
+        <Button type="submit">Entrar</Button>
+      </Formulario>
       </LoginCard>
     </ConteudoGeral>
   );

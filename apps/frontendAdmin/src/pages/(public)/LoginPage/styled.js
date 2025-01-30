@@ -49,7 +49,7 @@ export const ParteSuperior = styled.div`
 `;
 
 export const Input = styled.input`
-  width: 93%;
+  width: 100%;
   padding: 0.8rem;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -78,6 +78,13 @@ export const Button = styled.button`
   &:hover {
     background-color: darkgreen;
   }
+`;
+
+export const Formulario = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
 `;
 
 // export const Warning = styled.div`

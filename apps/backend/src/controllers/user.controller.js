@@ -10,7 +10,7 @@ var salt = process.env.SALT_BCRYPT;
 
 const createUser = async (req, res) => {
   try {
-    const{email, sector} = req.body;
+    const{name, email, sector} = req.body;
   
     if(!email || !sector)
       return res.status(400).send({ message: 'Preencha todos os campos para registro!', case: 1 });
@@ -20,6 +20,7 @@ const createUser = async (req, res) => {
       return res.status(400).send({ message: 'Formato de email incorreto!', case: 2 });
   
     const user = await userService.createService({
+      name,
       email,
       sector
     });
@@ -149,7 +150,7 @@ const deleteUser = async (req, res) => {
 
     return res.status(200).send({ message: 'Usuário deletado com sucesso!' });
   } catch (err) {
-    return res.status(500).send({ message: `Erro ao deletar o usuário: ${err.message}` });
+    return res.status(500).send({ message: err.message });
   }
 };
  

@@ -189,3 +189,16 @@ export const Vazio = styled.div`
     font-size: 40px;
   }
 `;
+
+export const TextArea = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+`;
+
+export const ButtonArea = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+`;
