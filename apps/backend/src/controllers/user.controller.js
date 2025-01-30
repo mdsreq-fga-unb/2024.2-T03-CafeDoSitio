@@ -10,10 +10,10 @@ var salt = process.env.SALT_BCRYPT;
 
 const createUser = async (req, res) => {
   try {
-    const{name, email, sector} = req.body;
+    const{email, sector} = req.body;
   
     if(!email || !sector)
-      res.status(400).send({ message: 'Preencha todos os campos para registro!', case: 1 });
+      return res.status(400).send({ message: 'Preencha todos os campos para registro!', case: 1 });
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email))
@@ -78,7 +78,17 @@ const findUsers = async (req, res) => {
   } catch (err) {
     return res.status(500).send({ message: err.message });
   }
-}
+};
+
+const findAllUser = async (req, res) => {
+  try {
+    const user = await userService.findAllService();
+
+    return res.status(200).send({ message: "Usuários encontrados com sucesso!", user });
+  } catch (err) {
+    return res.status(500).send({ message: err.message });
+  }
+};
 
 const findByIdUser = async (req, res) => {
   try {
@@ -97,7 +107,7 @@ const findByIdUser = async (req, res) => {
   } catch (err) {
     return res.status(500).send({ message: err.message });
   }
-}
+};
 
 const findByIdAndUpdate = async (req, res) => {
   try {
@@ -148,6 +158,7 @@ export default {
   createUser,
   loginUser,
   findUsers,
+  findAllUser,
   findByIdUser,
   findByIdAndUpdate,
   deleteUser,

@@ -80,19 +80,19 @@ export const Button = styled.button`
   }
 `;
 
-export const Warning = styled.div`
-    height: 20px;
-    width: auto;
-    font-size: 12px;
-    text-align: center;
-    color: red;
-    font-family: 'Myriad Pro', sans-serif;
+// export const Warning = styled.div`
+//     height: 20px;
+//     width: auto;
+//     font-size: 12px;
+//     text-align: center;
+//     color: red;
+//     font-family: 'Myriad Pro', sans-serif;
 
-    span{
-      margin: 0px;
-    }
-`;
+//     span{
+//       margin: 0px;
+//     }
+// `;
 
-export const Espaco = styled.div`
-    height: 20px;
-`;
+// export const Espaco = styled.div`
+//     height: 20px;
+// `;

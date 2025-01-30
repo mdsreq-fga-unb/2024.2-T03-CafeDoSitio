@@ -30,3 +30,16 @@ export function loginUser(email, password){
   const response = axios.post(`${baseURL}/user/loginUser`, body);
   return response;
 }
+
+export function findAllUser(){
+  const response = axios.get(
+    `${baseURL}/user/findAllUsers`,
+    {
+      headers: {
+        Authorization: `Bearer ${sessionStorage.getItem("authToken")}`,
+      }
+    }
+  );
+  
+  return response; 
+}

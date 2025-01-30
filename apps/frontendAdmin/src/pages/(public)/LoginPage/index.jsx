@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ConteudoGeral, LoginCard, Input, Button, ParteSuperior, Warning, Espaco } from "./styled";
+import { ConteudoGeral, LoginCard, Input, Button, ParteSuperior } from "./styled";
 import { loginUser } from "@familiadositio/core";
 import { ROUTES } from "../../../routes/RoutesConstants";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; // CSS do <ToastContainer />
 
 const LoginPage = () => {
 
@@ -11,7 +13,6 @@ const LoginPage = () => {
 
   const [email, setEmail] = useState('');
   const [password, setPassord] = useState('');
-  const [warning, setWarning] = useState(0);
 
   // FUNÇÕES PARA FAZER REQUISIÇÃO À API DE LOGIN:
   const handleChangeEmail = (e) => {
@@ -34,29 +35,22 @@ const LoginPage = () => {
     } catch (err) {
       if(err.response){
         if(err.response.status === 404){
-          setWarning(1);
-          setTimeout(() => {
-            setWarning(0);
-          }, 2000);
+          toast.error("Usuário não encontrado!");
         }
         else if(err.response.status === 403){
-          setWarning(2);
-          setTimeout(() => {
-            setWarning(0);
-          }, 2000);
+          toast.error("Email ou senha incorreto!");
         }
       }
       else {
-        setWarning(3);
-        setTimeout(() => {
-          setWarning(0);
-        }, 2000);
+        toast.error("Erro inesperado!");
       }
     }
   }
 
   return(
     <ConteudoGeral>
+      <ToastContainer />
+
       <LoginCard>
         <ParteSuperior>
           <img src="./favicon.png" alt="logoFamília do Sítio" />
@@ -65,15 +59,7 @@ const LoginPage = () => {
         </ParteSuperior>
         <Input type="email" placeholder="Email" onChange={handleChangeEmail}/>
         <Input type="password" placeholder="Senha" onChange={handleChangePassword}/>
-        {warning === 1? (
-          <Warning><span>Usuário não encontrado!</span></Warning>
-        ) : warning === 2? (
-          <Warning><span>Email ou senha incorreto!</span></Warning>
-        ) : warning === 3? (
-          <Warning><span>Erro inesperado!</span></Warning>
-        ) : (
-          <Espaco />
-        )}
+
         <Button onClick={login}>Entrar</Button>
       </LoginCard>
     </ConteudoGeral>

@@ -3,6 +3,7 @@ import jwt from "jsonwebtoken"
 
 const createService = (body) => User.create(body);
 const loginService = (body) => User.findOne(body);
+const findAllService = () => User.find();
 const findService = (filter) => User.find(filter);
 const findByIdService = (_id) => User.findById(_id);
 const findByIdAndUpdate = (id, updateBody) => User.findByIdAndUpdate(id, updateBody, { new: true }); 
@@ -20,6 +21,7 @@ export default {
   createService,
   loginService,
   findService,
+  findAllService,
   findByIdService,
   findByIdAndUpdate,
   deleteService,
