@@ -1,5 +1,4 @@
 import Paginacao from "../../../components/Paginacao";
-import ImgContent from "./ImgContent";
 import { Title, Text, DivContainer, NossosProdutosdiv, ImagemContainer, BotaoSobreposto, Container, TextoDescricao } from "./styled";
 
 import imagemCafeAssumPretoConteiner from "../../../assets/DetalhesNossosProdutos/NossosProdutos_assumpreto_1.png";
@@ -12,7 +11,7 @@ import imagemCafeSpecialeConteiner from "../../../assets/DetalhesNossosProdutos/
 import imagemCafeSpecialeIcone from "../../../assets/DetalhesNossosProdutos/NossosProdutos_speciale_5.png";
 
 
-export default function NossosProdutos() {
+export default function NossosProdutosInfo() {
     return (
         <>
             <Paginacao text={"FAMÍLIA DO SÍTIO > NOSSOS PRODUTOS"} />
@@ -26,33 +25,7 @@ export default function NossosProdutos() {
                 </Text>
             </DivContainer>
 
-            <ImgContent
-                id="1"
-                text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod  tincidunt ut laoreet dolore magna"
-                buttonText="Conheça a linha Assum Preto"
-                backgroundImage={imagemCafeAssumPretoConteiner}
-                iconImage={imagemCafeAssumPretoIcone}
-            >
-            </ImgContent>
-
-            <ImgContent
-                id="2"
-                text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod  tincidunt ut laoreet dolore magna"
-                buttonText="Conheça a linha Família do Sítio"
-                backgroundImage={imagemCafeFamiliaSitioConteiner}
-                iconImage={imagemCafeFamiliaSitioIcone}
-            >
-            </ImgContent>
-
             
-            <ImgContent
-                id="3"
-                text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod  tincidunt ut laoreet dolore magna"
-                buttonText="Conheça a linha Speciale Espresso"
-                backgroundImage={imagemCafeSpecialeConteiner}
-                iconImage={imagemCafeSpecialeIcone}
-            >
-            </ImgContent>
             
         </>
     );
