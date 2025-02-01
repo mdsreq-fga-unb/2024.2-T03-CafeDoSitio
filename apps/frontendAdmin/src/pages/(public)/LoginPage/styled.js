@@ -83,6 +83,25 @@ export const Input = styled.input`
   }
 `;
 
+export const InputContainer = styled.div`
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+`;
+
+export const EyeIcon = styled.span`
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+
+  &:hover {
+    color: #000;
+  }
+`;
+
 export const Button = styled.button`
   width: 100%;
   padding: 0.8rem;
@@ -107,20 +126,3 @@ export const Formulario = styled.form`
   gap: 10px;
   width: 100%;
 `;
-
-// export const Warning = styled.div`
-//     height: 20px;
-//     width: auto;
-//     font-size: 12px;
-//     text-align: center;
-//     color: red;
-//     font-family: 'Myriad Pro', sans-serif;
-
-//     span{
-//       margin: 0px;
-//     }
-// `;
-
-// export const Espaco = styled.div`
-//     height: 20px;
-// `;

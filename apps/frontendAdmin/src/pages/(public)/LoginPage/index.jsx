@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { ConteudoGeral, LoginCard, Input, Button, ParteSuperior, Formulario } from "./styled";
+import { ConteudoGeral, LoginCard, Input, Button, ParteSuperior, Formulario, InputContainer, EyeIcon } from "./styled";
 import { loginUser } from "@familiadositio/core";
 import { ROUTES } from "../../../routes/RoutesConstants";
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'; // CSS do <ToastContainer />
+import { FaEye, FaEyeSlash } from "react-icons/fa"; // Ícones de olho
 
 const LoginPage = () => {
 
@@ -13,14 +14,19 @@ const LoginPage = () => {
 
   const [email, setEmail] = useState('');
   const [password, setPassord] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
 
-  // FUNÇÕES PARA FAZER REQUISIÇÃO À API DE LOGIN:
   const handleChangeEmail = (e) => {
     setEmail(e.target.value);
   }
   const handleChangePassword = (e) => {
     setPassord(e.target.value);
   }
+  const toggleShowPassword = () => {
+    setShowPassword(!showPassword); 
+  };
+
+  // FUNÇÕES PARA FAZER REQUISIÇÃO À API DE LOGIN:
   const handleLogin = async (e) => {
     e.preventDefault(); // Previne o comportamento padrão do formulário (recarregar a página)
     try {
@@ -73,7 +79,17 @@ const LoginPage = () => {
         
       <Formulario onSubmit={handleLogin} >
         <Input type="email" placeholder="Email" onChange={handleChangeEmail}/>
-        <Input type="password" placeholder="Senha" onChange={handleChangePassword}/>
+        <InputContainer>
+                <Input
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Senha"
+                  value={password}
+                  onChange={handleChangePassword}
+                />
+                <EyeIcon onClick={toggleShowPassword}>
+                  {showPassword ? <FaEyeSlash /> : <FaEye />}
+                </EyeIcon>
+        </InputContainer>
 
         <Button type="submit">Entrar</Button>
       </Formulario>

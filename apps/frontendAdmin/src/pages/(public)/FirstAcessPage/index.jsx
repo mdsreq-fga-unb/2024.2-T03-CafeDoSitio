@@ -10,7 +10,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa"; // Ícones de olho
 const FirstAcessPage = () => {
 
   const navigate = useNavigate();
-  
+
   const [email, setEmail] = useState('');
   const [emailValido, setEmailValido] = useState(false);
   const [novaSenha, setNovaSenha] = useState('');
@@ -50,6 +50,10 @@ const FirstAcessPage = () => {
     try {
       const response = await findByEmailUser(email);
       if (response.status === 200 && response.data.user.length > 0) {
+        if(response.data.user[0].password){
+          toast.success("Sua conta já foi devidamente configurada! Faça login com sua senha para acessar o sistema.");
+          return;
+        }
         toast.success("Email encontrado com sucesso!");
         setEmailValido(true);
         setId(response.data.user[0]._id);
