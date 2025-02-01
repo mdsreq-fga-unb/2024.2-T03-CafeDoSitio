@@ -1,5 +1,6 @@
 import React from "react";
 import { ConfigsZone, InfoZone, OptionGroup, Space } from "./styled";
+import { jwtDecode } from "jwt-decode";
 import { useNavigate } from "react-router-dom";
 import { FaCalendar, FaUserCog } from "react-icons/fa";
 import { BiSolidMegaphone } from "react-icons/bi";
@@ -23,6 +24,18 @@ const HomePage = () => {
     navigate(ROUTES.ADMIN_ACCOUNTS);
   };
 
+  const token = sessionStorage.getItem("authToken");
+    let sector;
+    if (token) {
+      try {
+        const decodedToken = jwtDecode(token);
+        sector = decodedToken.sector;
+        console.log(username);
+      } catch (err) {
+        console.error("Erro ao decodificar o token:", err);
+      }
+    }
+
 
   return(
     <>
@@ -41,7 +54,9 @@ const HomePage = () => {
           
           <Card onClick={navigateToSac} title={"Visualizar Sacs"} description={"Veja os Sacs que já foram feitos. Seja todos ao mesmo tempo ou filtrados por assunto."}><BiSolidMegaphone className="icon"/></Card>
 
-          <Card onClick={navigateToAdminAccounts} title={"Gerenciar Contas"} description={"Adicione ou exclua contas que terão acesso à Central de Administração do Site Institucional da Família do Sítio."}><FaUserCog className="icon"/></Card>
+          { sector === "Administrator" || sector === "System-Administrator" ? (
+            <Card onClick={navigateToAdminAccounts} title={"Gerenciar Contas"} description={"Adicione ou exclua contas que terão acesso à Central de Administração do Site Institucional da Família do Sítio."}><FaUserCog className="icon"/></Card>
+          ) : null }
         </OptionGroup>
       </ConfigsZone>
   

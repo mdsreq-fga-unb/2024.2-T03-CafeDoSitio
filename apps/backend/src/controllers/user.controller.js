@@ -63,6 +63,7 @@ const loginUser = async (req, res) => {
 };
 
 const findUsers = async (req, res) => {
+
   try {
     const { name, email } = req.query;
 
@@ -124,7 +125,7 @@ const findByIdAndUpdate = async (req, res) => {
       updateBody.password = hashedPassword;
     }
 
-    const updatedUser = await userService.updateService(id, updateBody);
+    const updatedUser = await userService.findByIdAndUpdate(id, updateBody);
 
     if (!updatedUser) {
       return res.status(404).send({ message: 'Usuário não encontrado ou não foi possível atualizar.' });

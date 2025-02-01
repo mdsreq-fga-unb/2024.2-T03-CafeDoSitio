@@ -30,7 +30,7 @@ export function loginUser(email, password){
 
   const response = axios.post(`${baseURL}/user/loginUser`, body);
   return response;
-}
+};
 
 export function findAllUser(){
   const response = axios.get(
@@ -43,11 +43,44 @@ export function findAllUser(){
   );
   
   return response; 
-}
+};
 
 export function deleteUser(id){
   const response = axios.delete(
     `${baseURL}/user/${id}`,
+    {
+      headers: {
+        Authorization: `Bearer ${sessionStorage.getItem("authToken")}`,
+      }
+    }
+  );
+
+  return response;
+};
+
+export function findByEmailUser(email){
+  const params = {
+    email: email,
+  }
+
+  const response = axios.get(
+    `${baseURL}/user/findUsers`,
+    {
+      params: params,
+      headers: {
+        Authorization: `Bearer ${sessionStorage.getItem("authToken")}`,
+      }
+    }
+  );
+
+  return response;
+};
+
+export function findByIdUserAndUpdate(id, updateBody){
+
+  const response = axios.put(
+    `${baseURL}/user/${id}`,
+    updateBody,
     {
       headers: {
         Authorization: `Bearer ${sessionStorage.getItem("authToken")}`,

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const ConteudoGeral = styled.div`
   height: 100vh; 
@@ -10,7 +10,7 @@ export const ConteudoGeral = styled.div`
   background-color: #006343;
 `;
 
-export const LoginCard = styled.div`
+export const Card = styled.div`
   background-color: white;
   padding: 2rem;
   border-radius: 10px;
@@ -20,44 +20,15 @@ export const LoginCard = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  align-items: center;
-
-  .links{
-    margin-top: 10px;
-    width: 90%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    label{
-      font-family: 'Myriad Pro', sans-serif;
-      font-size: 0.8rem;
-      color: #333;
-      cursor: pointer;
-      text-decoration: underline;
-      transition: 200ms;
-
-      &:hover{
-        color: #006343;
-      }
-    }
-  }
 `;
 
 export const ParteSuperior = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
-
-  img{
-    width: 150px;
-    height: auto;
-  }
+  gap: 5px;
 
   h1 {
-    margin: -30px 0 0 0;
     font-family: 'Myriad Pro', sans-serif;
     font-size: 1.5rem;
     color: #333;
@@ -67,6 +38,13 @@ export const ParteSuperior = styled.div`
   span {
     font-family: 'Myriad Pro', sans-serif;
   }
+`;
+
+export const Formulario = styled.form`
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 `;
 
 export const Input = styled.input`
@@ -80,6 +58,25 @@ export const Input = styled.input`
   &:focus {
     border-color: green;
     box-shadow: 0 0 5px green;
+  }
+`;
+
+export const InputContainer = styled.div`
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+`;
+
+export const EyeIcon = styled.span`
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+
+  &:hover {
+    color: #000;
   }
 `;
 
@@ -100,27 +97,3 @@ export const Button = styled.button`
     background-color: darkgreen;
   }
 `;
-
-export const Formulario = styled.form`
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 100%;
-`;
-
-// export const Warning = styled.div`
-//     height: 20px;
-//     width: auto;
-//     font-size: 12px;
-//     text-align: center;
-//     color: red;
-//     font-family: 'Myriad Pro', sans-serif;
-
-//     span{
-//       margin: 0px;
-//     }
-// `;
-
-// export const Espaco = styled.div`
-//     height: 20px;
-// `;

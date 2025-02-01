@@ -26,13 +26,9 @@ const LoginPage = () => {
     try {
       const response = await loginUser(email, password);
       sessionStorage.setItem("authToken", response.data.token);
-      if(response.data.case === 1) {
-        setEmail('');
-        setPassord('');
-        navigate(ROUTES.HOME);
-      }
-      else
-        console.log("EM PRODUÇÃO!");
+      setEmail('');
+      setPassord('');
+      navigate(ROUTES.HOME);
     } catch (err) {
       if(err.response){
         if(err.response.status === 404){
@@ -81,6 +77,12 @@ const LoginPage = () => {
 
         <Button type="submit">Entrar</Button>
       </Formulario>
+
+      <div className="links">
+        <label>Esqueceu a senha?</label>
+        <label onClick={() => navigate(ROUTES.FIRST_ACESS)}>Primeiro Acesso?</label>
+      </div>
+
       </LoginCard>
     </ConteudoGeral>
   );
