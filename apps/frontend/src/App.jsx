@@ -10,6 +10,7 @@ const App = () => {
     <Router>
       <Routes>
           <Route path='/*' element={<PublicRoutes />} />
+          
       </Routes>
     </Router>
   );
