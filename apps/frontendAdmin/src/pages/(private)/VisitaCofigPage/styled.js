@@ -81,3 +81,81 @@ export const Vazio = styled.div`
     font-size: 40px;
   }
 `;
+
+export const FilterZone = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 30px;
+
+  .ButtonsZone{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  @media (max-width: 630px) {
+    flex-direction: column;
+  }
+`;
+
+export const BarraPesquisa = styled.div`
+  width: 100%;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 2px solid #006343;
+  border-radius: 4px;
+  transition: 200ms;
+  
+  input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    font-family: 'Myriad Pro', sans-serif;
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
+  .search-icon {
+    cursor: pointer;
+  }
+`;
+
+export const Dropdown = styled.select`
+  width: 100%;
+  min-width: 180px;
+  padding: 8px 12px;
+  border: 2px solid #006343;
+  border-radius: 4px;
+  background-color: transparent;
+  font-family: 'Myriad Pro', sans-serif;
+`;
+
+export const DateFilterContainer = styled.div`
+  display: flex;
+  gap: 10px;
+  width: 100%;
+
+  input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 2px solid #006343;
+    border-radius: 4px;
+    font-family: 'Myriad Pro', sans-serif;
+    background-color: transparent;
+
+    &:focus {
+      outline: none;
+      border-color: green;
+      box-shadow: 0 0 5px green;
+    }
+  }
+
+  @media (max-width: 630px) {
+    flex-direction: column;
+  }
+`;

@@ -1,6 +1,7 @@
 import axios from 'axios';
+import { ROUTE } from './RouteConstant';
 
-const baseURL = 'https://two024-2-t03-cafedositio.onrender.com';
+const baseURL = ROUTE.DEV;
 
 export function createUser(name, email, password){
   const body = {

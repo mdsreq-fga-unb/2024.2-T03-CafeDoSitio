@@ -1,7 +1,8 @@
 import axios from "axios";
 import { toast } from 'react-toastify';
+import { ROUTE } from './RouteConstant';
 
-const baseURL = "https://two024-2-t03-cafedositio.onrender.com/sac";
+const baseURL = ROUTE.DEV + "/sac";
 
 const getAllSacs = async (tag) => {
     try {
