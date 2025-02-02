@@ -27,6 +27,7 @@
     "packages/*"
   ],
   "dependencies": {
+    "antd": "^5.23.3",
     "axios": "^1.7.9",
     "multer": "^1.4.5-lts.1",
     "nodemailer": "^6.9.16",
