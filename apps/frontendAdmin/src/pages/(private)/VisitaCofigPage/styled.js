@@ -99,32 +99,6 @@ export const FilterZone = styled.div`
   }
 `;
 
-export const BarraPesquisa = styled.div`
-  width: 100%;
-  padding: 8px 12px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  border: 2px solid #006343;
-  border-radius: 4px;
-  transition: 200ms;
-  
-  input {
-    width: 100%;
-    background-color: transparent;
-    border: none;
-    font-family: 'Myriad Pro', sans-serif;
-
-    &:focus-visible {
-      outline: none;
-    }
-  }
-
-  .search-icon {
-    cursor: pointer;
-  }
-`;
-
 export const Dropdown = styled.select`
   width: 100%;
   min-width: 180px;
