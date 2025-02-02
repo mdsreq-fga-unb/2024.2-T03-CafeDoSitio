@@ -114,6 +114,125 @@ export const DivContainer = styled.div`
   margin: 4rem;
 `;
 
+export const DivContainerSelosABIC = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 80%;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-top: 0.5rem;
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
+`;
+
+
+export const ImagemSelosABIC = styled.img`
+  width: 40%; 
+  max-width: 400px; 
+  height: auto;
+  margin-right: -6rem;
+  margin-left: -5rem;
+  margin-top: -2rem;
+`;
+
+
+export const ImagemSelosABICteste = styled.img`
+  width: 40%; 
+  max-width: 400px; 
+  height: auto;
+  margin-right: -6rem;
+  margin-left: -5rem;
+  margin-top: -2rem;
+`;
+
+export const TextSelosABIC = styled.p`
+  width: 70%; 
+  align-items: left;
+  text-align: left;
+  font-size: 2rem;
+`;
+
+export const DivContainerTitleSelosABIC = styled.div`
+  //padding: 20px;
+  max-width: 80%;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-top: 10rem;
+  margin-bottom: -3rem
+`;
+
+export const TitleSelosABIC = styled.h1`
+  text-align: left;
+  font-size: 3rem;
+  justify-content: space-between;
+  color: #2B674B;
+  margin: 2;
+`;
+
+export const SubtitleSelosABIC = styled.h1`
+  text-align: left;
+  font-size: 1.7rem;
+  color: #2B674B;
+  margin: 2;
+`;
+
+export const DivContainerSeloPurezaABIC = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 80%;
+  margin-left: 4rem;
+  margin-right: -3rem;
+  margin-top: 0rem;
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
+`;
+
+export const ImagemSeloPureza = styled.img`
+  width: 50%; 
+  max-width: 200px; 
+  height: auto;
+  margin-right: 5rem;
+  margin-left: -0.5rem;  /* Ajuste de vírgula para ponto */
+  margin-top: -2rem;
+`;
+
+export const DivContainerTitleSeloPurezaABIC = styled.div`
+  //padding: 20px;
+  width: 90%;
+  margin-left: -5rem;
+  margin-right: -5rem;
+  margin-top: 0rem;
+  margin-bottom: 2rem
+`;
+
+export const TitleSeloPurezaABIC = styled.h1`
+  text-align: right;
+  font-size: 1.7rem;
+  color: #2B674B;
+  margin-bottom: 3rem
+`;
+
+export const TextSeloPurezaABIC = styled.p`
+  flex-grow: 1;  /* Faz o texto ocupar todo o espaço disponível */
+  text-align: right; /* Alinhamento à esquerda */
+  font-size: 2rem;
+  margin-right: 0; /* Remove a margem direita */
+  margin-left: -0.5rem; /* Ajuste de vírgula para ponto */
+  margin-top: -2rem;
+`;
+
+
+
 /*
 export const Container = styled.div`
   //padding: 20px;
