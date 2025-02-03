@@ -1,6 +1,6 @@
 import Paginacao from "../../../components/Paginacao";
 import ImgContent from "./ImgContent";
-import { Title, Text, DivContainer, DivContainerEncontreNossosProdutos, DivContainerSelosABIC, ImagemSelosABIC, DivContainerTitleSelosABIC, SubtitleSelosABIC, TextSelosABIC, NossosProdutosdiv, ImagemContainer, BotaoSobreposto, Container, TextoDescricao } from "./styled";
+import { Title, Text, DivContainer, DivContainerEncontreNossosProdutos, DivContainerSelosABIC, ImagemSelosABIC, DivContainerTitleSelosABIC, TextSelosABIC } from "./styled";
 
 import imagemCafeAssumPretoConteiner from "../../../assets/DetalhesNossosProdutos/NossosProdutos_assumpreto_1.png";
 import imagemCafeAssumPretoIcone from "../../../assets/DetalhesNossosProdutos/NossosProdutos_assumpreto_2.png";
@@ -12,7 +12,7 @@ import imagemCafeSpecialeConteiner from "../../../assets/DetalhesNossosProdutos/
 import imagemCafeSpecialeIcone from "../../../assets/DetalhesNossosProdutos/NossosProdutos_speciale_5.png";
 
 import imagemSelosDaABIC from "../../../assets/DetalhesNossosProdutos/NossosProdutosSelosABIC_4.png";
-import imagemSelosPurezaDaABIC from "../../../assets/DetalhesNossosProdutos/selopureza.png";
+
 
 
 
@@ -65,7 +65,7 @@ export default function NossosProdutos() {
 
             <DivContainerSelosABIC>
             <DivContainerTitleSelosABIC>
-                <SubtitleSelosABIC>Qualidade</SubtitleSelosABIC>
+                <Title>Qualidade</Title>
                 <TextSelosABIC>
                     Lorem ipsum dolor sit amet, consectetuer
                     adipiscing elit, sed diam nonummy nibh
@@ -80,7 +80,7 @@ export default function NossosProdutos() {
             </DivContainerSelosABIC>
 
             <DivContainerEncontreNossosProdutos>
-                <SubtitleSelosABIC>Encontre nossos produtos</SubtitleSelosABIC>
+                <Title>Encontre nossos produtos</Title>
                 <TextSelosABIC>
                     Lorem ipsum dolor sit amet, consectetuer
                     adipiscing elit, sed diam nonummy nibh
