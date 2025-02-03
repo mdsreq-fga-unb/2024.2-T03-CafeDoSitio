@@ -144,7 +144,7 @@ const VisitaConfigPage = () => {
       const startDate = new Date(item.startDateTime);
       const endDate = new Date(item.endDateTime);
 
-      const matchesStatus = filtroStatus === 'disponivel' || item.status === filtroStatus;
+      const matchesStatus = item.status === filtroStatus;
       const matchesStartDate = !filtroStartDate || new Date(filtroStartDate) <= startDate;
       const matchesEndDate = !filtroEndDate || new Date(filtroEndDate) >= endDate;
 

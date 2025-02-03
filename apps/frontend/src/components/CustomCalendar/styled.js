@@ -65,4 +65,12 @@ export const CalendarContainer = styled.div`
     padding-block: 45px;
     font-size: 1rem;
   }
+
+  @media (min-width: 768px) {
+    .react-calendar__tile {
+      padding-inline: 10px;
+      padding-block: 30px;
+      font-size: 0.8rem;
+    }
+  }
 `;

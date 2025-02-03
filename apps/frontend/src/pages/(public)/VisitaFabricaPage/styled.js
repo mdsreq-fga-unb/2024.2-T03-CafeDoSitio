@@ -136,16 +136,37 @@ export const FlexImagesContainer = styled.div`
   padding-block: 30px;
   gap: 10vw;
 
-  @media (max-width: 800px){
-    justify-content: left;
-    padding-inline: 20px;
+  div {
+    display: flex;
+    justify-content: space-between;
+    width: 1900px;
+    margin-inline: 8px;
+
+    @media (max-width: 2000px){
+      width: 90%;
+    }
+
+    @media (max-width: 800px){
+      margin-inline: 30px;
+      width: 100%;
+    }
   }
   
   img {
     height: 200px;
-    width: 300px;
+    width: 500px;
     border-radius: 10px;
     object-fit: cover;
+
+    @media (max-width: 2000px){
+      width: 28vw;
+    }
+  }
+
+  .image2 {
+    @media (max-width: 550px){
+      display: none;
+    }
   }
 `;
 export const Agendamento = styled.div`
@@ -238,7 +259,7 @@ export const Agendamento = styled.div`
 `;
 
 export const Legenda = styled.div`
-  margin-bottom: 50px;
+  margin-top: 50px;
   display: flex;
   flex-direction: row;
   font-family: 'Myriad Pro', sans-serif;

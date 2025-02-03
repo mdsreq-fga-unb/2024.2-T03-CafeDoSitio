@@ -21,8 +21,8 @@ const CustomCalendar = ({ onDateSelect, disponibilidades, agendamentos }) => {
   // Função para definir a classe do dia
   const tileClassName = ({ date, view }) => {
     if (view === "month") {
-      if (isDayBooked(date)) return "booked";
       if (isDayAvailable(date)) return "available";
+      if (isDayBooked(date)) return "booked";
     }
     return null;
   };
