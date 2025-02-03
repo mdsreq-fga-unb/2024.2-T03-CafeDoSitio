@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = 'https://two024-2-t03-cafedositio.onrender.com';
+const baseURL = 'http://localhost:3002';
 
 export function createVisita(body) {
 
