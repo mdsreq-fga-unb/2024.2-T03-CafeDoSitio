@@ -73,7 +73,7 @@ export const Title = styled.h1`
 
 export const IconWrapper = styled.div`
   margin-left: 1.4vw;
-  max-width: 70px;
+  max-width: 12vw;
   align-items: center;
   justify-content: center;
 
@@ -122,10 +122,14 @@ export const DivTexto = styled.div`
   width: 100%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 3rem;
+  font-size: 3vw;
   font-weight: bold;
   justify-content: center; /* Centraliza horizontalmente */
   align-items: center; /* Centraliza verticalmente */
+
+  @media(max-width: 1135px){
+    font-size: 1.vw;
+  }
 `;
 
 export const DivOverlay = styled.div`
@@ -137,4 +141,11 @@ export const DivOverlay = styled.div`
   background-color: #006343;
   mix-blend-mode: multiply;
   opacity: 1;
+`;
+
+export const SitioVerdeTitle = styled.div`
+  font-family: Impact;
+  font-size: 1.vw;
+  margin-left: 13vw;
+
 `;

@@ -26,7 +26,8 @@ import {
     SitioSemLixoTitle,
     Container,
     MiniSpace,
-    IconWrapper
+    IconWrapper,
+    SitioVerdeTitle
 } from "./styeld"
 
 
@@ -49,7 +50,7 @@ export default function SocialActionsPage() {
                 <img src={imagemArvores} alt="video falso" style={{ width: "100%", height: "auto", objectFit: "contain",  display: "block", filter: "brightness(20%) "}} />
 
                 <DivTexto>            
-                    <div style={{ fontFamily: 'Impact', fontSize: "2rem", marginLeft: "13vw"}}>
+                    <SitioVerdeTitle>
                         <IconWrapper>
                             <svg width="800px" height="800px" viewBox="0 -22.24 248.376 248.376" xmlns="http://www.w3.org/2000/svg" fill="#000000">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0" />
@@ -70,7 +71,7 @@ export default function SocialActionsPage() {
                             </svg>                        
                         </IconWrapper>
                         SÍTIO VERDE
-                    </div>
+                    </SitioVerdeTitle>
 
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit volutpat.
                 </DivTexto>
