@@ -28,7 +28,6 @@ const VisitaConfigPage = () => {
   const [visitas, setVisitas] = useState([]);
   const [filtroStartDate, setFiltroStartDate] = useState('');
   const [filtroEndDate, setFiltroEndDate] = useState(''); 
-  const [filtroTexto, setFiltroTexto] = useState('');
   const [filtroStatus, setFiltroStatus] = useState('disponivel');
   const [visitasFiltradas, setVisitasFiltradas] = useState([]);
   const [visitasSolicitadas, setVisitasSolicitadas] = useState([]);
@@ -132,7 +131,9 @@ const VisitaConfigPage = () => {
       nameVisitor: item.nameVisitor,
       emailVisitor: item.emailVisitor,
       phoneVisitor: item.phoneVisitor,
-      institution: item.institution
+      numberVisitors: item.numberVisitors,
+      institution: item.institution,
+      message: item.message,
     }));
     navigate(`${ROUTES.VISITA_DETALHADA}/${item._id}`);
   }

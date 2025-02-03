@@ -187,6 +187,18 @@ export const Agendamento = styled.div`
       color: white;
       border: none;
       background-color: #DA731F;
+      transition: 100ms;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #A93439;
+      }
+    }
+
+    .visitas-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
   }
 
@@ -207,6 +219,14 @@ export const Agendamento = styled.div`
       font-family: 'Myriad Pro', sans-serif;
       height: 100px;
       resize: none;
+    }
+
+    select {
+      padding: 10px;
+      border: none;
+      outline: none;
+      background-color: white;
+      font-family: 'Myriad Pro', sans-serif;
     }
 
     textarea, input {
@@ -245,4 +265,27 @@ export const Legenda = styled.div`
     background: #A93439;
   }
 
+`;
+
+export const Vazio = styled.div`
+  display: flex;
+  height: 80px;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  gap: 2rem;
+  font-family: 'Myriad Pro', sans-serif;
+  margin-block: 20px;
+
+  span {
+    color: white;
+    font-weight: bold;
+  }
+
+  .icon{
+    color: white;
+    font-size: 40px;
+  }
 `;

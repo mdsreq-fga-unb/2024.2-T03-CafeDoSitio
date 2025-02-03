@@ -208,8 +208,18 @@ const VisitaDetailsPage = () => {
               </Card>
 
               <Card>
+                <span className="title">Número de Pessoas:</span>
+                <span className="description status">{JSON.parse(visitaSelected).numberVisitors}</span>
+              </Card>
+
+              <Card>
                 <span className="title">Instituição:</span>
                 <span className="description status">{JSON.parse(visitaSelected).institution}</span>
+              </Card>
+
+              <Card>
+                <span className="title">Mensagem:</span>
+                <span className="description status">{JSON.parse(visitaSelected).message}</span>
               </Card>
             </>
           )}

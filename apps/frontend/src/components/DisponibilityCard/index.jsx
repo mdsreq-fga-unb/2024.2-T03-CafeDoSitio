@@ -1,18 +1,16 @@
 import React from "react";
-import { CardDiv, TextArea, ImageContainer } from "./styled";
+import { CardDiv, TextArea } from "./styled";
 import Tag from "../Tag";
-import FabricaImage from "../../assets/Fabrica.jpg";
 
-const DisponibilityCard = ({initTime, endTime, status, onClick}) => {
+const DisponibilityCard = ({initTime, endTime, status, isSelected, onClick}) => {
 
   const initDate = new Date(initTime);
   const endDate = new Date(endTime);
   const brLocale = 'pt-br';
 
   return(
-    <CardDiv onClick={onClick}>
+    <CardDiv onClick={onClick} isSelected={isSelected}>
       <TextArea>
-        <h3>{initDate.toLocaleDateString(brLocale)}</h3>
         <span>{"Horário: " + initDate.toLocaleTimeString(brLocale).slice(0,5) + " - " 
           + endDate.toLocaleTimeString(brLocale).slice(0,5) }</span>
         { status === 'disponivel' ? (
@@ -23,10 +21,6 @@ const DisponibilityCard = ({initTime, endTime, status, onClick}) => {
             <Tag bgcolor={"#A93439"} ftcolor={"white"}>{status}</Tag>
           ) : (<></>)}
       </TextArea>
-      
-        <ImageContainer>
-          <img src={FabricaImage} alt="Foto da Fábrica da Família do Sítio" />
-        </ImageContainer>
     </CardDiv>
   );
 };
