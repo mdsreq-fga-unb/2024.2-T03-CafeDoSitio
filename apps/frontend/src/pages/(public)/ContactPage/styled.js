@@ -28,7 +28,7 @@ export const ContactSection = styled.section`
 export const ContactCards = styled.div`
   display: flex;
   justify-content: space-between;
-  column-gap: 3rem;
+  column-gap: 1.5rem;
   row-gap: 2.8rem;
   margin-inline: 0;
   flex-wrap: wrap;
@@ -230,4 +230,20 @@ export const ImageWrapper = styled.div`
   max-width: 10%;
   border-radius:  0 15px 15px 0 ;
   overflow: hidden; 
+`;
+
+export const Button = styled.button`
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #006343;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #004c2e;
+  }
 `;
