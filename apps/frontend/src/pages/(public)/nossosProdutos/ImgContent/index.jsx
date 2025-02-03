@@ -9,11 +9,11 @@ export default function ImgContent(props) {
         <>
             <ImagemContainer id="imagem-1">
                 <Container>
-                    <TextoDescricao>
-                        {props.text}
-                    </TextoDescricao>
+                <TextoDescricao style={{ color: props.textColor || "white" }}>
+                    {props.text}
+                </TextoDescricao>
                     <BotaoSobreposto>
-                        <Link to={urlDetalhes}>
+                        <Link to={urlDetalhes} style={{ textDecoration: "none", color: "inherit"}}>
                         {props.buttonText}
                         <FaArrowRight style={{transform: "rotate(-45deg)", marginLeft: "10px"}} />
                         </Link>               

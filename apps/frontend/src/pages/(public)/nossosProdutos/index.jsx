@@ -1,6 +1,6 @@
 import Paginacao from "../../../components/Paginacao";
 import ImgContent from "./ImgContent";
-import { Title, Text, DivContainer, TitleSeloPurezaABIC, DivContainerTitleSeloPurezaABIC, DivContainerSeloPurezaABIC, DivContainerSelosABIC, TextSeloPurezaABIC, ImagemSelosABIC, ImagemSeloPureza, DivContainerTitleSelosABIC, TitleSelosABIC, SubtitleSelosABIC, TextSelosABIC, NossosProdutosdiv, ImagemContainer, BotaoSobreposto, Container, TextoDescricao } from "./styled";
+import { Title, Text, DivContainer, DivContainerEncontreNossosProdutos, DivContainerSelosABIC, ImagemSelosABIC, DivContainerTitleSelosABIC, SubtitleSelosABIC, TextSelosABIC, NossosProdutosdiv, ImagemContainer, BotaoSobreposto, Container, TextoDescricao } from "./styled";
 
 import imagemCafeAssumPretoConteiner from "../../../assets/DetalhesNossosProdutos/NossosProdutos_assumpreto_1.png";
 import imagemCafeAssumPretoIcone from "../../../assets/DetalhesNossosProdutos/NossosProdutos_assumpreto_2.png";
@@ -29,18 +29,9 @@ export default function NossosProdutos() {
                     quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
                 </Text>
             </DivContainer>
-
+        
             <ImgContent
                 id="1"
-                text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod  tincidunt ut laoreet dolore magna"
-                buttonText="Conheça a linha Assum Preto"
-                backgroundImage={imagemCafeAssumPretoConteiner}
-                iconImage={imagemCafeAssumPretoIcone}
-            >
-            </ImgContent>
-
-            <ImgContent
-                id="2"
                 text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod  tincidunt ut laoreet dolore magna"
                 buttonText="Conheça a linha Família do Sítio"
                 backgroundImage={imagemCafeFamiliaSitioConteiner}
@@ -50,7 +41,7 @@ export default function NossosProdutos() {
 
             
             <ImgContent
-                id=""
+                id="2"
                 text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod  tincidunt ut laoreet dolore magna"
                 buttonText="Conheça a linha Speciale Espresso"
                 backgroundImage={imagemCafeSpecialeConteiner}
@@ -58,14 +49,23 @@ export default function NossosProdutos() {
             >
             </ImgContent>
 
-            <DivContainerTitleSelosABIC>
-            <TitleSelosABIC>Selos da ABIC
-                <SubtitleSelosABIC>Qualidade</SubtitleSelosABIC>
-            </TitleSelosABIC>
-            </DivContainerTitleSelosABIC>
+            <ImgContent
+                id="3"
+                text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod  tincidunt ut laoreet dolore magna"
+                buttonText="Conheça a linha Assum Preto"
+                backgroundImage={imagemCafeAssumPretoConteiner}
+                iconImage={imagemCafeAssumPretoIcone}
+                textColor="black"
+            >
+            </ImgContent>
+
+            
         
+            
 
             <DivContainerSelosABIC>
+            <DivContainerTitleSelosABIC>
+                <SubtitleSelosABIC>Qualidade</SubtitleSelosABIC>
                 <TextSelosABIC>
                     Lorem ipsum dolor sit amet, consectetuer
                     adipiscing elit, sed diam nonummy nibh
@@ -75,22 +75,22 @@ export default function NossosProdutos() {
                     ullamcorper suscipit lobortis nisl ut aliquip ex
                     ea commodo consequat.
                 </TextSelosABIC>
+                </DivContainerTitleSelosABIC>
                     <ImagemSelosABIC src={imagemSelosDaABIC} alt="Selos ABIC" />
             </DivContainerSelosABIC>
 
-            <DivContainerSeloPurezaABIC>
-                <ImagemSeloPureza src={imagemSelosPurezaDaABIC} alt="Selo ABIC" />
-                <DivContainerTitleSeloPurezaABIC>
-                    <TitleSeloPurezaABIC>Pureza</TitleSeloPurezaABIC>
-                    <TextSeloPurezaABIC>
-                        Lorem ipsum dolor sit amet, consectetuer
-                        adipiscing elit, sed diam nonummy nibh
-                        euismod tincidunt ut laoreet dolore magna
-                        aliquam erat volutpat. Ut wisi enim ad minim.
-                    </TextSeloPurezaABIC>
-                </DivContainerTitleSeloPurezaABIC>
-            </DivContainerSeloPurezaABIC>
-
+            <DivContainerEncontreNossosProdutos>
+                <SubtitleSelosABIC>Encontre nossos produtos</SubtitleSelosABIC>
+                <TextSelosABIC>
+                    Lorem ipsum dolor sit amet, consectetuer
+                    adipiscing elit, sed diam nonummy nibh
+                    euismod tincidunt ut laoreet dolore magna
+                    aliquam erat volutpat. Ut wisi enim ad minim
+                    veniam, quis nostrud exerci tation
+                    ullamcorper suscipit lobortis nisl ut aliquip ex
+                    ea commodo consequat.
+                </TextSelosABIC>
+            </DivContainerEncontreNossosProdutos>
             
         </>
     );
