@@ -189,3 +189,68 @@ export const BarraPesquisa = styled.div`
     display: none;
   }
 `;
+
+export const MobileMenu = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F29947;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  .close-icon {
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+
+  .Buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .mobile-nav-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    
+    li {
+      margin: 20px 0;
+      
+      a {
+        font-size: 24px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 100ms;
+        
+        &:hover {
+          color: #006343;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .social-medias {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+
+    .icon{
+      color: #006343;
+      font-size: 25px;
+    }
+  }
+`;
