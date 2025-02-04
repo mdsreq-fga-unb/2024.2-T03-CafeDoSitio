@@ -4,12 +4,12 @@ import Paginacao from "../../../components/Paginacao";
 import Sticker from "../../../components/Sticker";
 import MiniSticker from "../../../components/MiniSticker";
 import { TimelineCard } from "../../../components/TimelineCard";
-import imagemArvores from "../../../assets/arvores.jpg"
+import imagemArvores from "../../../assets/SítioVerde_1.jpg"
 import imagemVideo from "../../../assets/video.jpg"
 import imagemBazar from "../../../assets/bazar.jpg"
 import imagemHorta from "../../../assets/horta.jpg"
 import imagemGrafico from "../../../assets/grafico.png"
-import imagemCampo from "../../../assets/campo.jpg"
+import imagemCampo from "../../../assets/SítioVerde_6.jpg"
 
 import {
     Text,
@@ -47,10 +47,10 @@ export default function SocialActionsPage() {
             <Space/>
 
             <DivImagem>
-                <img src={imagemArvores} alt="video falso" style={{ width: "100%", height: "auto", objectFit: "contain",  display: "block", filter: "brightness(20%) "}} />
+                <img src={imagemArvores} alt="video falso" style={{ width: "100%", height: "auto", objectFit: "contain",  display: "block"}} />
 
                 <DivTexto>            
-                    <SitioVerdeTitle>
+                    {/* <SitioVerdeTitle>
                         <IconWrapper>
                             <svg width="800px" height="800px" viewBox="0 -22.24 248.376 248.376" xmlns="http://www.w3.org/2000/svg" fill="#000000">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0" />
@@ -71,9 +71,10 @@ export default function SocialActionsPage() {
                             </svg>                        
                         </IconWrapper>
                         SÍTIO VERDE
-                    </SitioVerdeTitle>
-
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit volutpat.
+                    </SitioVerdeTitle> */}
+                    <div style={{marginLeft: "30vw"}}>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit volutpat.
+                    </div>
                 </DivTexto>
             </DivImagem>
             <DivStyled>
@@ -112,7 +113,7 @@ export default function SocialActionsPage() {
             
 
             <DivImagem>                     
-                <img src={imagemCampo} alt="video falso" style={{ width: "100%", height: "auto", objectFit: "contain",  display: "block", filter: "brightness(20%) sepia(1) saturate(3) hue-rotate(70deg)"}} />                       
+                <img src={imagemCampo} alt="Campo verde" style={{ width: "100%", height: "auto", objectFit: "contain",  display: "block"}} />                       
             </DivImagem>
         </>
     );
