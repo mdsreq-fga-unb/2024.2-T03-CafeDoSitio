@@ -1,6 +1,7 @@
 import React from "react";
 import { CardDiv, TextArea, ImageContainer } from "./styled";
 import Tag from "../Tag";
+import FabricaImage from "../../assets/Fabrica.jpg";
 
 const DisponibilityCard = ({initTime, endTime, status, onClick}) => {
 
@@ -24,7 +25,7 @@ const DisponibilityCard = ({initTime, endTime, status, onClick}) => {
       </TextArea>
       
         <ImageContainer>
-          <img src="../src/assets/Fabrica.jpg" alt="Foto da Fábrica da Família do Sítio" />
+          <img src={FabricaImage} alt="Foto da Fábrica da Família do Sítio" />
         </ImageContainer>
     </CardDiv>
   );

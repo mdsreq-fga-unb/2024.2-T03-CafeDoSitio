@@ -97,7 +97,8 @@ export const EmailZone = styled.div`
 
 export const EmailLink = styled.a`
   font-size: 1rem;
-  color: #006343;
+  font-weight: bold;
+  color:rgb(41, 41, 41);
   text-decoration: none;
   align-self: center;
 
@@ -221,4 +222,12 @@ export const Horario_redes = styled.div`
 
 export const Space = styled.div`
   height: 68px;
+`;
+
+export const ImageWrapper = styled.div`
+  flex: 1;
+  background-color: #fff;
+  max-width: 10%;
+  border-radius:  0 15px 15px 0 ;
+  overflow: hidden; 
 `;

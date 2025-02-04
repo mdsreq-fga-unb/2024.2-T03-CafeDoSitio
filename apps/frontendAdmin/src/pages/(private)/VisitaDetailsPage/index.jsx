@@ -13,6 +13,7 @@ import RedButton from "../../../components/RedButton";
 import DateInput from "../../../components/DateInput";
 import TimeInput from "../../../components/TimeInput";
 import { deleteVisita, patchVisita } from "@familiadositio/core";
+import FabricaImage from "../../../assets/Fabrica.jpg";
 
 const VisitaDetailsPage = () => {
 
@@ -142,7 +143,7 @@ const VisitaDetailsPage = () => {
       <Paginacao><Link to={ROUTES.HOME} className="page">Central de Administração</Link> {" > "} <Link to={ROUTES.VISITA} className="page">Visitas Técnicas</Link> {` > visita - ${JSON.parse(visitaSelected).date}`} </Paginacao>
 
       <ImageContainer>
-          <img src="../src/assets/Fabrica.jpg" alt="Foto da Fábrica da Família do Sítio" />
+          <img src={FabricaImage} alt="Foto da Fábrica da Família do Sítio" />
       </ImageContainer>
 
       <Space />
