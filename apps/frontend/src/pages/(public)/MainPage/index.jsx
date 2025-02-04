@@ -1,23 +1,28 @@
 import React from "react";
-import { Container, Section1 } from "./styled";
-import CapaCafe from "../../../assets/CapaCafé.jpg";
-import Content1MainPage from "../../../assets/Content1MainPage.jpg";
+import { Container, Section1, Space } from "./styled";
+import CapaPagina from "../../../assets/Capa.jpg";
+
+import inicial2 from "../../../assets/inicial2.jpg"
 
 const MainPage = () => {
   return (
-    <Container>
-      <img src={CapaCafe} alt="CapaCafé" className="img"/>
+    <div className="app">
+      <Container>
+        <img src={CapaPagina} alt="CapaCafé" className="img"/>
 
-      <Section1>
-        <div className="section1-left section1Part">
-          <h1>Conheça a nossa família, do Sítio para a sua casa</h1>
-        </div>
-        <div className="section1-right section1Part">
-          Olá
-        </div>
-      </Section1>
+        <Section1>
+          
+            <h1>Conheça a nossa família, do Sítio para a sua casa</h1>
+          
+          
+        </Section1>
 
-    </Container>
+        
+      </Container>
+
+
+
+    </div>
   );
 };
 

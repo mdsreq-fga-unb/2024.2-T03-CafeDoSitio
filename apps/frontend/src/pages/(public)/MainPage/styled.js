@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Content1MainPage from "../../../assets/Content1MainPage.jpg";
+import inicial1 from "../../../assets/inicial1.jpg"
 
 export const Container = styled.div`
   z-index: -1;
@@ -16,19 +16,18 @@ export const Container = styled.div`
   }
 `;
 
+export const Space = styled.div`
+height: 1000px;
+`;
+
 export const Section1 = styled.section`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-
-  div{
-    width: 50%;
-  }
-
-  .section1-right{
-    height: 400px;
-    background-image: url(${Content1MainPage});
-  }
+  width: 100%;
+  height: 100%;
+  background-image: url(${inicial1});
+  object-fit: cover;
 
 `;
