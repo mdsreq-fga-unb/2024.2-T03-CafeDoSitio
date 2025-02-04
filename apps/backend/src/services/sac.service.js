@@ -2,7 +2,7 @@ import Sac from '../models/Sac.js';
 import mongoose from 'mongoose';
 
 const createService = (body) => Sac.create(body);
-const findAllService = () => Sac.find();
+const findAllService = () => Sac.find();  
 const findByAssunto = (assunto) => Sac.find({assunto});
 const findById = (id) => Sac.findById(id);
 

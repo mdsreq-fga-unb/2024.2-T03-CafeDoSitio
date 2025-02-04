@@ -5,6 +5,7 @@ import { FaHome, FaPlus } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 import { ROUTES } from "../../routes/RoutesConstants";
 import { jwtDecode } from "jwt-decode";
+import SitioLogo from "../../assets/FamiliaDoSitioBorda.png";
 
 const Header = () => {
 
@@ -14,12 +15,13 @@ const Header = () => {
     navigate(ROUTES.HOME);
   }
 
-  const token = localStorage.getItem("authToken");
-  let username = "Usuário";
+  const token = sessionStorage.getItem("authToken");
+  let username;
   if (token) {
     try {
       const decodedToken = jwtDecode(token);
       username = decodedToken.name || "Usuário";
+      console.log(username);
     } catch (err) {
       console.error("Erro ao decodificar o token:", err);
     }
@@ -30,7 +32,7 @@ const Header = () => {
       <NavArea>
         <EsqNav>
           <NavButton onClick={navigateToHome}>
-            <img src="../src/assets/FamiliaDoSitioBorda.png" alt="Família do Sítio" />
+            <img src={SitioLogo} alt="Família do Sítio" />
           </NavButton>
           <NavButton className="site-button">
             <FaHome className="icon"/>

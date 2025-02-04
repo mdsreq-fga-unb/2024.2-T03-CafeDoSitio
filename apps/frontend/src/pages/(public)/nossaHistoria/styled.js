@@ -89,6 +89,12 @@ export const DiferencialCard = styled.div`
   max-width: 400px;
 `;
 
+export const DiferencialText = styled.div`
+  align-items: left;
+  text-align: left;
+  font-size: 1.1rem;
+`;
+
 export const BackgroundLine = styled.div`
     z-index: 1;    
     display: flex;
@@ -98,7 +104,7 @@ export const BackgroundLine = styled.div`
     //padding: 20px;
     width: 100%;
 
-    @media(max-width: 900px){
+    @media(max-width: 970px){
       display: none;
     }
 `;
@@ -106,8 +112,7 @@ export const BackgroundLine = styled.div`
 export const RedLine = styled.div`
   display : flex;
   width: 5px;
-  border-radius: 3px;
-  height: 100%;
+  border-radius: 1px;
   background-color: #A53A44;  
 
 `;

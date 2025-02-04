@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ButtonDiv = styled.div`
+  flex-grow: 1;
   display: flex;
   flex-direction: row;
   align-items: center;
