@@ -25,10 +25,18 @@ const VisitaSchema = new mongoose.Schema({
         type: String,
         require: false,
     },
+    numberVisitors: {
+        type: String,
+        require: false,
+    },
     institution: {
         type: String,
         require: false,
-    }
+    },
+    message: {
+        type: String,
+        require: false,
+    },
 }, {timestamps: true});
 
 const Visita = mongoose.model("Visita", VisitaSchema);

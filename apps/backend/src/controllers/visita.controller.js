@@ -48,6 +48,7 @@ const deleteVisita = async (req, res) => {
 };
 
 const patchVisita = async (req, res) => {
+    console.log(req.body);
     try {
         const { id } = req.params;
         const updateData = req.body;
