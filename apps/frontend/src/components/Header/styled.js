@@ -230,7 +230,7 @@ export const MobileMenu = styled.div`
         color: white;
         text-decoration: none;
         font-weight: bold;
-        transition: 100ms;
+        transition: 200ms;
         
         &:hover {
           color: #006343;

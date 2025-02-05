@@ -72,7 +72,7 @@ export const SitioSemLixoTitle = styled.h1`
     /* Para centralizar usando grid */
     margin-left: 0;
     margin-right: 0;
-    font-size: 2rem; /* Ajuste o tamanho da fonte */
+    font-size: 2.5rem; /* Ajuste o tamanho da fonte */
     display: grid;
     place-items: center; /* Centraliza tanto horizontal quanto vertical */    
   }
@@ -95,7 +95,7 @@ export const ImgStyled = styled.img`
 
 export const Title = styled.h1`
   text-align: justify;
-  font-size: 1.7rem;
+  font-size: 2.5rem;
   justify-content: space-between;
   color: #2B674B;
   margin: 2;
@@ -116,7 +116,8 @@ export const IconWrapper = styled.div`
 export const Text = styled.div`
   align-items: left;
   text-align: justify;
-  font-size: 1.3rem;
+  font-size: 1rem;
+  color: #333;
 `;
 
 export const MiniSpace = styled.div`
