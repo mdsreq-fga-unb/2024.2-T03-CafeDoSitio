@@ -96,7 +96,7 @@ export const TextWrapper = styled.div`
 export const TextBox = styled.div`
   flex: 1;
   font-size: 1.2rem;
-  width: 96%;
+  width: 100%;
   text-align: justify;
   background-color: #fff;
   border: none;
@@ -146,11 +146,10 @@ export const Navigation = styled.div`
   align-items: center;
   
   .timeline {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr); 
-    margin-left: 33px;
-    gap: 54px;
-    justify-content: space-around;
+    display: flex;
+    margin-left: 30px;
+    gap: 40px;
+    
     width: 100%;
 
     .timeline-item {

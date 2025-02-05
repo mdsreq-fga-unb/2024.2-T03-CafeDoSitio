@@ -5,7 +5,7 @@ export const BotaoCSimbolo = styled.div`
   flex-direction: row;
   gap: 5px;
   align-items: center;
-  padding: 8px 12px;
+  padding: 15px 15px ;
   background-color: #A93439;
   border-radius: 10px;
   cursor: pointer;
@@ -19,7 +19,7 @@ export const BotaoCSimbolo = styled.div`
 
   &:hover {
     box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2);
-    background-color: #006343;
+    background-color: #DA731F;
   }
 `;
 
