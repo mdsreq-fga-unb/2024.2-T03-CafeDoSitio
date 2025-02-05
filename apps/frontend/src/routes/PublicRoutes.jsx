@@ -11,6 +11,7 @@ import PublicLayout from "../components/PublicLayout";
 const PublicRoutes = () => {
   return (
     <Routes>
+      <Route path='/' element={<PublicLayout><BlogPage /></PublicLayout>} />
       <Route path={ROUTES.BLOG} element={<PublicLayout><BlogPage /></PublicLayout>} />
       <Route path={ROUTES.CONTATOS} element={<PublicLayout><ContactPage /></PublicLayout>} />
       <Route path={ROUTES.HISTORIA} element={<PublicLayout><NossaHistoria /></PublicLayout>} />
