@@ -6,4 +6,6 @@ export const ROUTES = {
   VISITA_DETALHADA: "/admin/visitaConfig",
   ADMIN_ACCOUNTS: "/admin/accounts",
   FIRST_ACESS: "/firstAcess",
+  BLOG: "/admin/blog",
+  BLOG_EDIT: "/admin/blog/edit",
 };

@@ -13,11 +13,15 @@ const BlogSchema = new mongoose.Schema({
         type: Date,
         required: true,
     },
-    imagem: {
+    banner: {
         type: String,
         required: true,
     },
     conteudo: {
+        type: String,
+        required: true,
+    },
+    status: {
         type: String,
         required: true,
     },
