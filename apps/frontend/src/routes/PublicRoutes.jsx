@@ -7,16 +7,14 @@ import SocialActionsPage from "../pages/(public)/SocialActionsPage";
 import PublicLayout from "../components/PublicLayout";
 
 const PublicRoutes = () => {
-  return(
-    <PublicLayout>
-      <Routes>
-          <Route path="/" element={<BlogPage />} />
-          <Route path="/contatos" element={<ContactPage />} />
-          <Route path="/historia" element={<NossaHistoria />} />
-          <Route path="/acoes-sociais" element={<SocialActionsPage />} />
-      </Routes>
-    </PublicLayout>
+  return (
+    <Routes>
+      <Route path="/" element={<PublicLayout><BlogPage /></PublicLayout>} />
+      <Route path="/contatos" element={<PublicLayout><ContactPage /></PublicLayout>} />
+      <Route path="/historia" element={<PublicLayout><NossaHistoria /></PublicLayout>} />
+      <Route path="/acoes-sociais" element={<PublicLayout fullWidth><SocialActionsPage /></PublicLayout>} />
+    </Routes>
   );
-}
+};
 
 export default PublicRoutes;

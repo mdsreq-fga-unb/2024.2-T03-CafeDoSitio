@@ -1,6 +1,36 @@
 import styled from "styled-components";
 
-//@media 1125px width
+export const FullWidthContainer = styled.div`
+  width: 100% !important;
+  max-width: 100% !important;
+  flex-grow: 1;
+`;
+
+export const Centralização = styled.div`
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 800px){
+    justify-content: left;
+    padding-inline: 20px;
+  }
+`;
+
+export const Layout = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 1900px;
+
+  @media (max-width: 2000px){
+    width: 90%;
+  }
+
+  @media (max-width: 800px){
+    width: 100%;
+  }
+`;
+
 export const DivStyled = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr; //O "grid-template-columns: 1fr 1fr;" define duas colunas para telas maiores.
