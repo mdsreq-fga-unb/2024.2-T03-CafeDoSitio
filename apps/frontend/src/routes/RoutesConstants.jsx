@@ -3,5 +3,6 @@ export const ROUTES = {
   HISTORIA: "/historia",
   SAC: "/sac",
   BLOG: "/blog",
-  VISITA: "/visita"
+  VISITA: "/visita",
+  SITIO_VERDE: "/sitio-verde"
 };
