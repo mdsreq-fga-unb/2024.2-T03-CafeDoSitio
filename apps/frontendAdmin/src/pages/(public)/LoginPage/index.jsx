@@ -32,6 +32,10 @@ const LoginPage = () => {
     try {
       const response = await loginUser(email, password);
       sessionStorage.setItem("authToken", response.data.token);
+      if (response.data.case === 2) {
+        toast.info("Usuário encontrado, porém sem senha! Acesse o primeiro Acesso.");
+        return;
+      }
       setEmail('');
       setPassord('');
       navigate(ROUTES.HOME);

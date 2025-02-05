@@ -30,7 +30,7 @@ const HomePage = () => {
       try {
         const decodedToken = jwtDecode(token);
         sector = decodedToken.sector;
-        console.log(username);
+        console.log(jwtDecode(token));
       } catch (err) {
         console.error("Erro ao decodificar o token:", err);
       }

@@ -21,7 +21,6 @@ const Header = () => {
     try {
       const decodedToken = jwtDecode(token);
       username = decodedToken.name || "Usuário";
-      console.log(username);
     } catch (err) {
       console.error("Erro ao decodificar o token:", err);
     }
