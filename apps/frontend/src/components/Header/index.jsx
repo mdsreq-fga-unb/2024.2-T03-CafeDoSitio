@@ -5,6 +5,7 @@ import { FaInstagram, FaFacebook, FaYoutube, FaLinkedin, FaSearch, FaWhatsapp } 
 import { FaCartShopping, FaXTwitter } from "react-icons/fa6";
 import { MdOutlineMenu, MdClose } from "react-icons/md";
 import RedButton from "../RedButton";
+import { ROUTES } from "../../routes/RoutesConstants";
 
 function Header({pagina}) {
   const location = useLocation();
@@ -45,11 +46,11 @@ function Header({pagina}) {
           <ul className="nav-list">
             <li><a href="#">INICIO</a></li>
             <li><a href="#">NOSSOS PRODUTOS</a></li>
-            <li><Link to="/historia" style={{ color: isActive("/historia") ? "#006343" : "black"}}>NOSSA HISTÓRIA</Link></li>
-            <li><a href="/" style={{ color: isActive("/") ? "#006343" : "black"}}>BLOG</a></li>
+            <li><Link to={ROUTES.HISTORIA} style={{ color: isActive(ROUTES.HISTORIA) ? "#006343" : "black"}}>NOSSA HISTÓRIA</Link></li>
+            <li><Link to={ROUTES.BLOG} style={{ color: isActive(ROUTES.BLOG) ? "#006343" : "black"}}>BLOG</Link></li>
             <li><a href="#">SÍTIO VERDE</a></li>
-            <li><a href="#">VISITE A FÁBRICA</a></li>
-            <li><Link to="/contatos" style={{ color: isActive("/contatos") ? "#006343" : "black"}}>CONTATO</Link></li>
+            <li><Link to={ROUTES.VISITA} style={{ color: isActive(ROUTES.VISITA) ? "#006343" : "black"}}>VISITE A FÁBRICA</Link></li>
+            <li><Link to={ROUTES.CONTATOS} style={{ color: isActive(ROUTES.CONTATOS) ? "#006343" : "black"}}>CONTATO</Link></li>
           </ul>
         </InfoAreaDesktop>
 
