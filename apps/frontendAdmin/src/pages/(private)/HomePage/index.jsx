@@ -24,13 +24,16 @@ const HomePage = () => {
     navigate(ROUTES.ADMIN_ACCOUNTS);
   };
 
+  const navigateToBlog = () => {
+    navigate(ROUTES.BLOG);
+  };
+
   const token = sessionStorage.getItem("authToken");
     let sector;
     if (token) {
       try {
         const decodedToken = jwtDecode(token);
         sector = decodedToken.sector;
-        console.log(username);
       } catch (err) {
         console.error("Erro ao decodificar o token:", err);
       }
@@ -50,7 +53,7 @@ const HomePage = () => {
 
       <ConfigsZone>
         <OptionGroup>
-          <Card title={"Gerenciar Blogs"} description={"Visualize, crie e edite blogs para o publicá-los no site institucional."}><FaBookOpen className="icon"/></Card>
+          <Card onClick={navigateToBlog} title={"Gerenciar Blogs"} description={"Visualize, crie e edite blogs para o publicá-los no site institucional."}><FaBookOpen className="icon"/></Card>
 
           <Card onClick={navigateToVisita} title={"Visualizar Disponibilidades"} description={"Acesse o calendário e verifique as suas disponibilidades, status e informações de suas visitas técnicas."}><FaCalendar className="icon"/></Card>
           

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SacSection = styled.section`
   display: flex;
   flex-direction: column;
-  margin: 10vh 8vh;
+  margin-top: 20px;
   width: auto;
   gap: 3rem;
   background-color: #DA731F;
@@ -52,6 +52,7 @@ export const Location = styled.section`
     font-size: 1.2rem;
     color: #fff;
     line-height: 1.5;
+    font-family: 'Myriad Pro', sans-serif;
   }
 
   @media(max-width: 768px){
@@ -74,6 +75,7 @@ export const Form = styled.form`
   h5 {
     font-weight: 300;
     font-size: 1rem;
+    font-family: 'Myriad Pro', sans-serif;
   }
 
   @media(max-width: 768px){
@@ -96,6 +98,7 @@ export const Label = styled.label`
   font-size: 1rem;
   font-weight: bold;
   color: #333;
+  font-family: 'Myriad Pro', sans-serif;
 `;
 
 
@@ -105,6 +108,7 @@ export const Input = styled.input`
   border: 1px solid #ccc;
   border-radius: 4px;
   outline: none;
+  font-family: 'Myriad Pro', sans-serif;
 
   &:focus {
     border-color: #006343;
@@ -119,6 +123,7 @@ export const TextArea = styled.textarea`
   border-radius: 4px;
   resize: vertical;
   outline: none;
+  font-family: 'Myriad Pro', sans-serif;
 
   &:focus {
     border-color: #006343;
@@ -135,6 +140,8 @@ export const Button = styled.button`
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-family: 'Myriad Pro', sans-serif;
+  font-weight: bold;
 
   &:hover {
     background-color: #004c2e;
@@ -147,6 +154,7 @@ export const Select = styled.select`
   margin-bottom: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
+  font-family: 'Myriad Pro', sans-serif;
 `;
 
 
@@ -183,4 +191,5 @@ export const FileName = styled.span`
   margin-top: 0.5rem;
   font-size: 0.9rem;
   color: #555;
+  font-family: 'Myriad Pro', sans-serif;
 `;
