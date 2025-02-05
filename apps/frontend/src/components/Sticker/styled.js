@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Title = styled.h1`
   text-align: left;
-  font-size: 1.7rem;
+  font-size: 2.5rem;
   justify-content: center;
   color: #FFF;
   margin: 2;
@@ -11,7 +11,7 @@ export const Title = styled.h1`
 export const Text = styled.div`
   align-items: left;
   text-align: justify;
-  font-size: 1.3rem;
+  font-size: 1rem;
   margin-bottom: 2.3vh;
   color: #FFF;
 

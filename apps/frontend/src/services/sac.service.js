@@ -1,7 +1,8 @@
 import axios from "axios";
 import { toast } from 'react-toastify';
+import { ROUTE } from './RouteConstant';
 
-const baseURL = "http://localhost:3002/sac";
+const baseURL = ROUTE.PROD + "/sac";
 
 const postSac = async (formData) => {
     try {

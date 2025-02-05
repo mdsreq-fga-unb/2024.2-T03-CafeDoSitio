@@ -4,6 +4,7 @@ import imagem from "../../../assets/colagem_de_fotos.png"
 import {
     Title,
     Text,
+    Space,
     TimelineSection,
     BackgroundLine,
     FirstTextSection,
@@ -54,6 +55,7 @@ export default function NossaHistoria() {
     return (
         <>
             <Paginacao text={"FAMÍLIA DO SÍTIO > NOSSA HISTÓRIA"} />
+            <Space />
 
            
             <DivContainer>
@@ -101,7 +103,7 @@ export default function NossaHistoria() {
             
 
 
-            <div style={{ margin: "3rem 6rem", textAlign: "center" }}>
+            <div style={{ marginTop: "50px", textAlign: "center" }}>
                 <Title>Nosso Propósito</Title>
             </div>
 

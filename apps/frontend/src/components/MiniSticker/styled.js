@@ -28,7 +28,7 @@ export const CardSection = styled.div`
 `;
 export const Background = styled.div`
   background-color:  #458260;
-  max-height: 20vh
+  max-height: 20vh;
   margin-left: 3vh;
   margin-right: 3vh;
   

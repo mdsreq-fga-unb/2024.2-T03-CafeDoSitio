@@ -2,7 +2,7 @@ import axios from "axios";
 import { toast } from 'react-toastify';
 import { ROUTE } from './RouteConstant';
 
-const baseURL = ROUTE.DEV + "/sac";
+const baseURL = ROUTE.PROD + "/sac";
 
 const getAllSacs = async (tag) => {
     try {
