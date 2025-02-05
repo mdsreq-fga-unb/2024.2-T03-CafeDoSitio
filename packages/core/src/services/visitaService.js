@@ -1,7 +1,7 @@
 import axios from "axios";
 import { ROUTE } from "./RouteConstant";
 
-const baseURL = ROUTE.PROD;
+const baseURL = ROUTE.DEV;
 
 export function createVisita(body) {
 

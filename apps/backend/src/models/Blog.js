@@ -21,6 +21,10 @@ const BlogSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    urlBody: {
+        type: String,
+        required: false,
+    },
 }, {timestamps: true});
 
 const Blog = mongoose.model('Blog', BlogSchema);
