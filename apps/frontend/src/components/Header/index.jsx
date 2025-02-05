@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { NavArea, NavBar, LogoImg, InfoAreaDesktop, BarraPesquisa, InfoAreaMobile } from "./styled";
+import { NavArea, NavBar, LogoImg, InfoAreaDesktop, BarraPesquisa, InfoAreaMobile, MobileMenu } from "./styled";
 import { FaInstagram, FaFacebook, FaYoutube, FaLinkedin, FaSearch, FaWhatsapp } from "react-icons/fa"; // Ícones do Font Awesome
 import { FaCartShopping, FaXTwitter } from "react-icons/fa6";
-import { MdOutlineMenu } from "react-icons/md";
+import { MdOutlineMenu, MdClose } from "react-icons/md";
 import RedButton from "../RedButton";
+import { ROUTES } from "../../routes/RoutesConstants";
 
 function Header({pagina}) {
   const location = useLocation();
   const isActive = (path) => location.pathname === path;
+
+  const [menuMobile, setMenuMobile] = useState(false);
 
   return(
     <NavBar>
@@ -43,11 +46,11 @@ function Header({pagina}) {
           <ul className="nav-list">
             <li><a href="#">INICIO</a></li>
             <li><a href="#">NOSSOS PRODUTOS</a></li>
-            <li><Link to="/historia" style={{ color: isActive("/historia") ? "#006343" : "black"}}>NOSSA HISTÓRIA</Link></li>
-            <li><a href="/" style={{ color: isActive("/") ? "#006343" : "black"}}>BLOG</a></li>
+            <li><Link to={ROUTES.HISTORIA} style={{ color: isActive(ROUTES.HISTORIA) ? "#006343" : "black"}}>NOSSA HISTÓRIA</Link></li>
+            <li><Link to={ROUTES.BLOG} style={{ color: isActive(ROUTES.BLOG) ? "#006343" : "black"}}>BLOG</Link></li>
             <li><Link to="/acoes-sociais" style={{ color: isActive("/acoes-sociais") ? "#006343" : "black"}}>SÍTIO VERDE</Link></li>
-            <li><a href="#">VISITE A FÁBRICA</a></li>
-            <li><Link to="/contatos" style={{ color: isActive("/contatos") ? "#006343" : "black"}}>CONTATO</Link></li>
+            <li><Link to={ROUTES.VISITA} style={{ color: isActive(ROUTES.VISITA) ? "#006343" : "black"}}>VISITE A FÁBRICA</Link></li>
+            <li><Link to={ROUTES.CONTATOS} style={{ color: isActive(ROUTES.CONTATOS) ? "#006343" : "black"}}>CONTATO</Link></li>
           </ul>
         </InfoAreaDesktop>
 
@@ -58,9 +61,34 @@ function Header({pagina}) {
               <FaSearch className="search-icon" color="grey"/>
             </BarraPesquisa>
           </div>
-          <MdOutlineMenu size={40} className="menu-icon"/>
+          <MdOutlineMenu size={40} className="menu-icon" onClick={() => setMenuMobile(true)}/>
         </InfoAreaMobile>
       </NavArea>
+
+      {menuMobile && (
+        <MobileMenu>
+          <MdClose size={40} className="close-icon" onClick={() => setMenuMobile(false)} />
+          <ul className="mobile-nav-list">
+            <li><Link to="/" onClick={() => setMenuMobile(false)}>INICIO</Link></li>
+            <li><a href="#">NOSSOS PRODUTOS</a></li>
+            <li><Link to="/historia" onClick={() => setMenuMobile(false)}>NOSSA HISTÓRIA</Link></li>
+            <li><a href="#">SÍTIO VERDE</a></li>
+            <li><a href="#">VISITE A FÁBRICA</a></li>
+            <li><Link to="/contatos" onClick={() => setMenuMobile(false)}>CONTATO</Link></li>
+          </ul>
+          <ul className="social-medias">
+            <li><a href="https://www.instagram.com/cafedositio/" target="_blank"><FaInstagram className="icon"/></a></li>
+            <li><a href="https://www.facebook.com/cafedositio" target="_blank"><FaFacebook className="icon"/></a></li>
+            <li><a href="https://www.youtube.com/@cafedositio7991" target="_blank"><FaYoutube className="icon"/></a></li>
+            <li><a href="https://x.com/cafe_do_sitio" target="_blank"><FaXTwitter className="icon"/></a></li>
+            <li><a href="https://www.linkedin.com/company/cafedositio/" target="_blank"><FaLinkedin className="icon"/></a></li>
+          </ul>
+          <div className="Buttons">
+            <RedButton simbolo={<FaCartShopping />} text={"Nossa Loja"}/>
+            <RedButton simbolo={<FaWhatsapp />} text={"(61) 2108-0108"}/>
+          </div>
+        </MobileMenu>
+      )}
     </NavBar>
   )
 }

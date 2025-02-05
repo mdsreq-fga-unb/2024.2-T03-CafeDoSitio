@@ -15,12 +15,13 @@ const Header = () => {
     navigate(ROUTES.HOME);
   }
 
-  const token = localStorage.getItem("authToken");
-  let username = "Usuário";
+  const token = sessionStorage.getItem("authToken");
+  let username;
   if (token) {
     try {
       const decodedToken = jwtDecode(token);
       username = decodedToken.name || "Usuário";
+      console.log(username);
     } catch (err) {
       console.error("Erro ao decodificar o token:", err);
     }
