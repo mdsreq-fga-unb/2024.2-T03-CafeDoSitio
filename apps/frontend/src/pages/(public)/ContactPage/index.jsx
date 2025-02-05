@@ -14,7 +14,8 @@ import {
   ContactInfo,
   Horario_redes,
   Space,
-  ImageWrapper
+  ImageWrapper,
+  Button
 } from './styled';
 import { FaEnvelope, FaPhoneAlt, FaInstagram, FaFacebook, FaYoutube, FaLinkedin, FaComments } from "react-icons/fa"; // Ícones do Font Awesome
 import { FaXTwitter } from "react-icons/fa6";
@@ -69,6 +70,21 @@ const ContactPage = () => {
           ))}
         </ContactCards>
       </ContactSection>
+
+      <InfoSection>
+        <h1>TRABALHE CONOSCO</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+          dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam. Ut wisi enim ad minim veniam. Ut wisi enim
+          ad minim veniam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+          tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam. Ut wisi enim ad minim
+          veniam. Ut wisi enim ad minim veniam. Ut wisi enim ad minim veniam. Ut wisi enim ad minim veniam. Ut wisi enim
+          ad minim veniam.</p>
+          <Button onClick={() => window.open("https://www.empregare.com/pt-br/trabalhe-na-cafe-do-sitio", "_blank")}>
+            Veja as vagas disponíveis
+          </Button>
+      </InfoSection>
+
+      <Space/>
 
       <FaleCom>
         <div className='marcador'>
