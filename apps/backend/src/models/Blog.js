@@ -5,13 +5,9 @@ const BlogSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    descricao: {
-        type: String,
-        required: true,
-    },
     dataHoraPublicacao: {
         type: Date,
-        required: true,
+        required: false,
     },
     banner: {
         type: String,
@@ -25,7 +21,7 @@ const BlogSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-});
+}, {timestamps: true});
 
 const Blog = mongoose.model('Blog', BlogSchema);
 export default Blog;

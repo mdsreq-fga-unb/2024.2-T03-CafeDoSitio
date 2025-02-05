@@ -36,7 +36,7 @@ const SacSchema = new mongoose.Schema({
     required: true,
     default: false,
   },
-});
+}, {timestamps: true});
 
 const Sac = mongoose.model('Sac', SacSchema);
 export default Sac;

@@ -20,17 +20,10 @@ export function createVisita(body) {
 
 export function findAllVisita()
 {
-  const response = axios.get(
-    `${baseURL}/visita/findAllVisita`,
-    {
-      headers: {
-        Authorization: `Bearer ${sessionStorage.getItem("authToken")}`,
-      }
-    }
-  );
+  const response = axios.get(`${baseURL}/visita/findAllVisita`);
   
   return response; 
-};//
+};
 
 export function deleteVisita(id) {
 
@@ -50,13 +43,8 @@ export function patchVisita(id, body) {
 
   const response = axios.patch(
     `${baseURL}/visita/patchVisita/${id}`,
-    body,
-    {
-      headers: {
-        Authorization: `Bearer ${sessionStorage.getItem("authToken")}`,
-      },
-    }
-  );
+    body,{
+  });
 
   return response;
 }

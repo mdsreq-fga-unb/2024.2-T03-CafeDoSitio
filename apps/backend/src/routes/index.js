@@ -4,7 +4,6 @@ import visitaRouter from "./visita.route.js";
 import userRouter from "./user.route.js";
 import sacRouter from "./sac.route.js";
 import blogRouter from "./blog.route.js";
-import { authMiddleware } from "../middlewares/auth.middleware.js";
 
 const router = Router();
 
