@@ -48,7 +48,7 @@ function Header({pagina}) {
             <li><a href="#">NOSSOS PRODUTOS</a></li>
             <li><Link to={ROUTES.HISTORIA} style={{ color: isActive(ROUTES.HISTORIA) ? "#006343" : "black"}}>NOSSA HISTÓRIA</Link></li>
             <li><Link to={ROUTES.BLOG} style={{ color: isActive(ROUTES.BLOG) ? "#006343" : "black"}}>BLOG</Link></li>
-            <li><Link to="/acoes-sociais" style={{ color: isActive("/acoes-sociais") ? "#006343" : "black"}}>SÍTIO VERDE</Link></li>
+            <li><Link to={ROUTES.SITIO_VERDE} style={{ color: isActive(ROUTES.SITIO_VERDE) ? "#006343" : "black"}}>SÍTIO VERDE</Link></li>
             <li><Link to={ROUTES.VISITA} style={{ color: isActive(ROUTES.VISITA) ? "#006343" : "black"}}>VISITE A FÁBRICA</Link></li>
             <li><Link to={ROUTES.CONTATOS} style={{ color: isActive(ROUTES.CONTATOS) ? "#006343" : "black"}}>CONTATO</Link></li>
           </ul>
