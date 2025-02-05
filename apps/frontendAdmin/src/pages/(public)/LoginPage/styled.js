@@ -21,6 +21,27 @@ export const LoginCard = styled.div`
   flex-direction: column;
   gap: 1rem;
   align-items: center;
+
+  .links{
+    margin-top: 10px;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    label{
+      font-family: 'Myriad Pro', sans-serif;
+      font-size: 0.8rem;
+      color: #333;
+      cursor: pointer;
+      text-decoration: underline;
+      transition: 200ms;
+
+      &:hover{
+        color: #006343;
+      }
+    }
+  }
 `;
 
 export const ParteSuperior = styled.div`
@@ -49,7 +70,7 @@ export const ParteSuperior = styled.div`
 `;
 
 export const Input = styled.input`
-  width: 93%;
+  width: 100%;
   padding: 0.8rem;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -59,6 +80,25 @@ export const Input = styled.input`
   &:focus {
     border-color: green;
     box-shadow: 0 0 5px green;
+  }
+`;
+
+export const InputContainer = styled.div`
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+`;
+
+export const EyeIcon = styled.span`
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+
+  &:hover {
+    color: #000;
   }
 `;
 
@@ -80,19 +120,9 @@ export const Button = styled.button`
   }
 `;
 
-export const Warning = styled.div`
-    height: 20px;
-    width: auto;
-    font-size: 12px;
-    text-align: center;
-    color: red;
-    font-family: 'Myriad Pro', sans-serif;
-
-    span{
-      margin: 0px;
-    }
-`;
-
-export const Espaco = styled.div`
-    height: 20px;
+export const Formulario = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
 `;

@@ -25,6 +25,15 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Impact';
+  src: url('./assets/fonts/ImpactLTStd.woff2') format('woff2'),
+      url('./assets/fonts/ImpactLTStd.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 *{
   box-sizing: border-box;
 }

@@ -10,10 +10,10 @@ var salt = process.env.SALT_BCRYPT;
 
 const createUser = async (req, res) => {
   try {
-    const{name, email} = req.body;
+    const{name, email, sector} = req.body;
   
-    if(!name || !email)
-      res.status(400).send({ message: 'Preencha todos os campos para registro!', case: 1 });
+    if(!email || !sector)
+      return res.status(400).send({ message: 'Preencha todos os campos para registro!', case: 1 });
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email))
@@ -22,6 +22,7 @@ const createUser = async (req, res) => {
     const user = await userService.createService({
       name,
       email,
+      sector
     });
   
     if (!user)
@@ -62,6 +63,7 @@ const loginUser = async (req, res) => {
 };
 
 const findUsers = async (req, res) => {
+
   try {
     const { name, email } = req.query;
 
@@ -78,7 +80,17 @@ const findUsers = async (req, res) => {
   } catch (err) {
     return res.status(500).send({ message: err.message });
   }
-}
+};
+
+const findAllUser = async (req, res) => {
+  try {
+    const user = await userService.findAllService();
+
+    return res.status(200).send({ message: "Usuários encontrados com sucesso!", user });
+  } catch (err) {
+    return res.status(500).send({ message: err.message });
+  }
+};
 
 const findByIdUser = async (req, res) => {
   try {
@@ -97,7 +109,7 @@ const findByIdUser = async (req, res) => {
   } catch (err) {
     return res.status(500).send({ message: err.message });
   }
-}
+};
 
 const findByIdAndUpdate = async (req, res) => {
   try {
@@ -113,7 +125,7 @@ const findByIdAndUpdate = async (req, res) => {
       updateBody.password = hashedPassword;
     }
 
-    const updatedUser = await userService.updateService(id, updateBody);
+    const updatedUser = await userService.findByIdAndUpdate(id, updateBody);
 
     if (!updatedUser) {
       return res.status(404).send({ message: 'Usuário não encontrado ou não foi possível atualizar.' });
@@ -139,7 +151,7 @@ const deleteUser = async (req, res) => {
 
     return res.status(200).send({ message: 'Usuário deletado com sucesso!' });
   } catch (err) {
-    return res.status(500).send({ message: `Erro ao deletar o usuário: ${err.message}` });
+    return res.status(500).send({ message: err.message });
   }
 };
  
@@ -148,6 +160,7 @@ export default {
   createUser,
   loginUser,
   findUsers,
+  findAllUser,
   findByIdUser,
   findByIdAndUpdate,
   deleteUser,

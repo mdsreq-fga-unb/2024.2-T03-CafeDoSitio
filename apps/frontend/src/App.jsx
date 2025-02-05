@@ -9,7 +9,7 @@ const App = () => {
   return (
     <Router>
       <Routes>
-          <Route path='/*' element={<PublicRoutes />} />
+          <Route path='/*' element={<PublicRoutes />} />          
       </Routes>
     </Router>
   );

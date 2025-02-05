@@ -28,7 +28,7 @@ export const ContactSection = styled.section`
 export const ContactCards = styled.div`
   display: flex;
   justify-content: space-between;
-  column-gap: 3rem;
+  column-gap: 1.5rem;
   row-gap: 2.8rem;
   margin-inline: 0;
   flex-wrap: wrap;
@@ -97,7 +97,8 @@ export const EmailZone = styled.div`
 
 export const EmailLink = styled.a`
   font-size: 1rem;
-  color: #006343;
+  font-weight: bold;
+  color:rgb(41, 41, 41);
   text-decoration: none;
   align-self: center;
 
@@ -221,4 +222,28 @@ export const Horario_redes = styled.div`
 
 export const Space = styled.div`
   height: 68px;
+`;
+
+export const ImageWrapper = styled.div`
+  flex: 1;
+  background-color: #fff;
+  max-width: 10%;
+  border-radius:  0 15px 15px 0 ;
+  overflow: hidden; 
+`;
+
+export const Button = styled.button`
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #006343;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #004c2e;
+  }
 `;
