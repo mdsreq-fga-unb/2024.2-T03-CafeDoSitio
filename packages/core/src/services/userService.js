@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { ROUTE } from './RouteConstant';
 
-const baseURL = ROUTE.DEV;
+const baseURL = ROUTE.PROD;
 
 export function createUser(email, sector){
   const body = {
