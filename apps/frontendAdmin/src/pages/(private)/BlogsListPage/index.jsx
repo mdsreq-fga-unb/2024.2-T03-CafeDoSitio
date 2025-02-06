@@ -236,8 +236,8 @@ const BlogsListPage = () => {
         </label>
 
         <ButtonSection>
-          <RedButton text={"Não"} onClick={closePopup} />
           <Button text={"Sim"} onClick={handleCreateBlog} />
+          <RedButton text={"Não"} onClick={closePopup} />
         </ButtonSection>
       </Popup>
     </div>

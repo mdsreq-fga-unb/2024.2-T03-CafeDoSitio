@@ -79,7 +79,7 @@ const patchBlog = async (req, res) => {
         const updateData = req.body;
 
         if (!id)
-            return res.status(400).send({ message: "ID não informado!" });
+            return res.status(400).send({ message: "ID não informado!", case: 1 });
 
         if (!Object.keys(updateData).length)
             return res.status(200).send({ message: "Nenhuma informação para atualizar" });
@@ -91,6 +91,12 @@ const patchBlog = async (req, res) => {
 
         return res.status(200).send({ message: "Post editado com sucesso", blog });
     } catch (err) {
+        if (err.code === 11000 && err.keyPattern && err.keyPattern.slug) {
+            return res.status(400).send({ 
+                message: "Já existe um blog com esse slug! Escolha outro.",
+                case: 2
+            });
+        }
         return res.status(500).send({ message: "Blog não encontrado!", error: err.message });
     }
 }

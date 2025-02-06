@@ -13,6 +13,10 @@ const BlogSchema = new mongoose.Schema({
         type: String,
         required: false,
     },
+    tag: {
+        type: String,
+        required: false,
+    },
     conteudo: {
         type: String,
         required: false,
@@ -21,9 +25,10 @@ const BlogSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    urlBody: {
+    slug: {
         type: String,
         required: false,
+        unique: true,
     },
 }, {timestamps: true});
 
