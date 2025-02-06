@@ -10,7 +10,7 @@ import {
   ControlePaginacao,
 } from "./styled";
 import Paginacao from "../../../components/Paginacao";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ROUTES } from "../../../routes/RoutesConstants";
 import { FaSearch, FaPlus } from "react-icons/fa";
 import Button from "../../../components/Button";
@@ -19,7 +19,12 @@ import Popup from "../../../components/PopUp";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"; // CSS do <ToastContainer />
 
+import noImage from "../../../assets/noImage.jpg";
+
 const BlogsListPage = () => {
+
+  const navigate = useNavigate();
+
   const [blogs, setBlogs] = useState([]);
   const [filtroTexto, setFiltroTexto] = useState("");
   const [totalBlogs, setTotalBlogs] = useState(0);
@@ -71,6 +76,11 @@ const BlogsListPage = () => {
     }
     fetchBlogs();
   };
+
+  const changePageToEdit = (item) => {
+    sessionStorage.setItem("blogId", item._id);
+    navigate(`${ROUTES.BLOG}/${item._id}`);
+  }
 
   // Filtragem dos blogs por status e pesquisa
   // const blogsFiltrados = blogs.filter((blog) => {
@@ -160,21 +170,26 @@ const BlogsListPage = () => {
               <th>Título</th>
               {/* <th>Autor</th> */}
               <th>Status</th>
-              <th>Data</th>
+              <th>Data de Publicação</th>
             </tr>
           </thead>
           <tbody>
             {blogs.length > 0 ? (
               blogs.map((blog) => (
                 <tr key={blog._id}>
-                  <td>
-                    <Link to={`${ROUTES.BLOG}/${blog._id}`}>
+                  <td style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+                      {!blog.banner ? (
+                        <img src={noImage} alt="No Image" style={{ width: "100px", height: "80px", objectFit: "cover" }} />
+                      ) : (
+                        <img src={blog.banner} alt="Banner" style={{ width: "100px", height: "80px", objectFit: "cover" }} />
+                      )}
+                    <div className="title" onClick={() => changePageToEdit(blog)} style={{ color: "#006343" }}>
                       {blog.titulo}
-                    </Link>
+                    </div>
                   </td>
                   {/* <td>{blog.author}</td> */}
-                  <td>{blog.status}</td>
-                  <td>{new Date(blog.dataHoraPublicacao).toLocaleString()}</td>
+                  <td style={{ textTransform: "capitalize"}}>{blog.status}</td>
+                  <td>{blog.dataHoraPublicacao ? (new Date(blog.dataHoraPublicacao).toLocaleString()) : ("Não Publicado")}</td>
                 </tr>
               ))
             ) : (

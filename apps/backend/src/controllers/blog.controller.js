@@ -37,6 +37,23 @@ const findAllBlog = async (req, res) => {
     }
 };
 
+const findBlogById = async (req, res) => {
+    try {
+        const { id } = req.params;
+
+        if (!id)
+            return res.status(400).send({ message: "ID não informado!" });
+
+        const blog = await BlogService.findByIdService({ _id: id });
+
+        if (!blog)
+            return res.status(404).send({ message: "Blog não encontrado!" });
+
+        return res.status(200).send({ message: "Blog encontrado", blog });
+    } catch (err) {
+        return res.status(500).send({ message: "Erro ao buscar Blog!", error: err.message });
+    }
+};
 
 const deleteBlog = async (req, res) => {
     try {
@@ -65,7 +82,7 @@ const patchBlog = async (req, res) => {
             return res.status(400).send({ message: "ID não informado!" });
 
         if (!Object.keys(updateData).length)
-            return res.status(400).send({ message: "Nenhuma informação para atualizar" });
+            return res.status(200).send({ message: "Nenhuma informação para atualizar" });
 
         const blog = await BlogService.patchService({ _id: id }, updateData);
 
@@ -85,4 +102,5 @@ export default {
     findAllBlog,
     deleteBlog,
     patchBlog,
+    findBlogById,
 }

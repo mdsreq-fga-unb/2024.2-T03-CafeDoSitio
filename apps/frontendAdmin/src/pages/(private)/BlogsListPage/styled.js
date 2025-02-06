@@ -98,6 +98,37 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th {
+      background-color: #006343;
+      color: white;
+      font-family: 'Myriad Pro', sans-serif;
+      font-size: 16px;
+      padding: 10px;
+      text-align: left;
+    }
+
+    td {
+      background-color: #f9f9f9;
+      font-family: 'Myriad Pro', sans-serif;
+      font-size: 16px;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    .title{
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
 `;
 
 export const ButtonSection = styled.div`
@@ -112,4 +143,62 @@ export const ControlePaginacao = styled.div`
   justify-content: end;
   width: 100%;
   margin-top: 20px;
+  align-items: center;
+  font-family: 'Myriad Pro', sans-serif;
+  color: #333;
+
+  button {
+    padding: 8px 12px;
+    font-size: 16px;
+    color: white;
+    background-color: #006343;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Myriad Pro', sans-serif;
+    font-weight: bold;
+
+    &:hover {
+      background-color: #004c2e;
+    }
+  }
+
+  button + button {
+    margin-left: 10px;
+  }
+
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+
+  button:disabled:hover {
+    background-color: #ccc;
+  }
+
+  @media (max-width: 450px) {
+    justify-content: center;
+  }
+
+  @media (max-width: 350px) {
+    button {
+      padding: 6px 10px;
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 300px) {
+    button {
+      padding: 4px 8px;
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 250px) {
+    button {
+      padding: 2px 6px;
+      font-size: 10px;
+    }
+  }
 `;

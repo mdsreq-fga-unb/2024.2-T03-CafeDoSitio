@@ -24,4 +24,33 @@ export function createBlog(titulo) {
 export async function findAllBlog(page = 1, limit = 10) {
   const response = await axios.get(`${baseURL}/blog?page=${page}&limit=${limit}`);
   return response.data;
+};
+
+export function findBlogById(_id) {
+  const response = axios.get(`${baseURL}/blog/${_id}`);
+  return response;
+};
+
+export function patchBlog(_id, body) {
+  console.log(body);
+  const response = axios.patch(`${baseURL}/blog/${_id}`,
+    body,
+    {
+    headers: {
+      Authorization: `Bearer ${sessionStorage.getItem("authToken")}`,
+    },
+  });
+
+  return response;
+};
+
+
+export function deleteBlog(_id) {
+  const response = axios.delete(`${baseURL}/blog/${_id}`, {
+    headers: {
+      Authorization: `Bearer ${sessionStorage.getItem("authToken")}`,
+    },
+  });
+
+  return response;
 }
