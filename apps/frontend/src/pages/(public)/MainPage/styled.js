@@ -24,29 +24,32 @@ height: 1000px;
 
 export const Section1 = styled.section`
   background-image: url(${inicial1});
+  background-size: cover; /* Faz a imagem cobrir toda a área da seção */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita que a imagem se repita */
   display: flex;
+  align-items: center;
   justify-content: flex-start;
-  padding: 40px;
   padding-left: 0;
+  height: 100vh;
 `;
 
 export const Card = styled.div`
-  
-  color: #333;
   display: flex;
   flex-direction: column;
-  align-items: left;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: space-around;
   width: 40vw;
-  height: 100%;
   background-color: white;
   object-fit: cover;
   border-radius: 0 20px 20px 0;
+  padding: 20px;
+  height: 60vh;
 
   h1 {
     font-size: 4rem;
     font-family: impact;
-    margin-bottom: 20px;
+    margin: 1.5rem 2rem;
     color: #2B674B ;
   }
 
@@ -54,6 +57,6 @@ export const Card = styled.div`
     font-size: 1.2rem;
     color: #000;
     font-weight: 600;
-
+    margin:0 2.5rem 1rem 2.5rem;
   }
 `;
