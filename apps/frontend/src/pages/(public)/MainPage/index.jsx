@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Section1, Space, Card } from "./styled";
+import { Container, Section1, Card, Section2, Acoes } from "./styled";
 import CapaPagina from "../../../assets/Capa.jpg";
 
 const MainPage = () => {
@@ -16,12 +16,14 @@ const MainPage = () => {
             </p>
           </Card>
         </Section1>
-
-        
+        <Section2>
+          <Acoes>
+            <h1>Açoes Sociais e Sustentabilidade</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero consequuntur natus molestiae, excepturi vitae, iure laboriosam sint, neque blanditiis optio doloremque. Voluptatum, aliquam. Quas perspiciatis facilis ratione ipsam officiis veniam!</p>
+            <button>Saiba mais</button>
+          </Acoes>
+        </Section2>
       </Container>
-
-
-
     </div>
   );
 };
