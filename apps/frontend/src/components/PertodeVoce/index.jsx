@@ -90,6 +90,7 @@ function PertodeVoce() {
         <Label htmlFor="name" style={{color: "#006343"}}>Onde você quer encontrar a Família do Sítio?</Label>
         <Input type="text" id="name" placeholder="Digitar CEP ou cidade"/>
         <Button type="button" onClick={handleGetLocation}>ou clique aqui para usar a localização atual</Button>
+        <Input type="text" id="produto" placeholder="Digitar procuto que deseja encontrar"/>
       </Form>
       {error && <p>{error}</p>}      
     </>

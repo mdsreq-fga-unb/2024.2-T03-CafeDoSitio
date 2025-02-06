@@ -10,17 +10,21 @@ export const Form = styled.form`
   border-top-right-radius: 28px;
   border-bottom-right-radius: 28px;
 
-
-  h5 {
-    font-weight: 300;
+  button {
+    margin: 0rem;
+    padding: 0;
+    text-align: left;
     font-size: 1rem;
   }
+
 
   @media(max-width: 768px){
     border-radius: 28px;
   }
 
+
 `;
+
 
 export const Title = styled.h1`
   font-size: 2.5rem;
@@ -32,7 +36,7 @@ export const Title = styled.h1`
 
 
 export const Label = styled.label`
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: #333;
 `;
