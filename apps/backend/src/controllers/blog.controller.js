@@ -2,9 +2,9 @@ import BlogService from "../services/blog.service.js";
 
 const createBlog = async (req, res) => {
     try {
-        const { titulo, descricao, dataHoraPublicacao, imagem, conteudo } = req.body
+        const { titulo, status } = req.body
 
-        if (!titulo || !descricao || !dataHoraPublicacao || !imagem || !conteudo)
+        if (!titulo || !status)
             return res.status(400).send({ message: "Preencha todos os campos para criar o blog" })
 
         const blog = await BlogService.createService(req.body);
@@ -20,14 +20,23 @@ const createBlog = async (req, res) => {
 
 const findAllBlog = async (req, res) => {
     try {
+        const page = parseInt(req.query.page) || 1; // Página padrão 1
+        const limit = parseInt(req.query.limit) || 10; // 10 blogs por página
 
-        const blog = await BlogService.findAllService(req.body);
+        const { blogs, total } = await BlogService.findAllService(page, limit);
 
-        return res.status(201).send({ message: "Blogs encontrados", blog })
+        return res.status(200).json({
+            message: "Blogs encontrados",
+            blogs,
+            total,
+            totalPages: Math.ceil(total / limit),
+            currentPage: page
+        });
     } catch (err) {
-        return res.status(500).send({ message: "Blog não encontrado!", error: err.message })
+        return res.status(500).json({ message: "Erro ao buscar blogs!", error: err.message });
     }
-}
+};
+
 
 const deleteBlog = async (req, res) => {
     try {

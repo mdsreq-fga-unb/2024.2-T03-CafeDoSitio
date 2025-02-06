@@ -3,12 +3,10 @@ import { ROUTE } from "./RouteConstant";
 
 const baseURL = ROUTE.DEV;
 
-export function createBlog(titulo, banner, conteudo) {
+export function createBlog(titulo) {
   
   const body = {
     titulo: titulo,
-    banner: banner,
-    conteudo: conteudo,
     status: "rascunho",
   };
 
@@ -23,8 +21,7 @@ export function createBlog(titulo, banner, conteudo) {
     return response;
 };
 
-export function findAllBlog() {
-  const response = axios.get(`${baseURL}/blog`);
-
-  return response;
+export async function findAllBlog(page = 1, limit = 10) {
+  const response = await axios.get(`${baseURL}/blog?page=${page}&limit=${limit}`);
+  return response.data;
 }

@@ -38,6 +38,32 @@ export const FilterZone1 = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
+    width: 100%;
+    align-items: center;
+
+    label{
+      font-family: 'Myriad Pro', sans-serif;
+      font-size: 16px;
+    }
+
+    .clickFilter{
+      cursor: pointer;
+    }
+  }
+
+  .search-filter{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+  }
+
+  @media (max-width: 630px) {
+    flex-direction: column;
+    gap: 20px;
+    .status-filter{
+      justify-content: center;
+    }
   }
 `;
 
@@ -65,4 +91,25 @@ export const BarraPesquisa = styled.div`
   .search-icon {
     cursor: pointer;
   }
+`;
+
+export const Content = styled.div`
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+`;
+
+export const ButtonSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+`;
+
+export const ControlePaginacao = styled.div`
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  margin-top: 20px;
 `;

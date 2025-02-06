@@ -8,6 +8,7 @@ import SacPage from "../pages/(private)/SacPage";
 import VisitaDetailsPage from "../pages/(private)/VisitaDetailsPage";
 import AdminAccountsPage from "../pages/(private)/AdminAccountsPage";
 import BlogsListPage from "../pages/(private)/BlogsListPage";
+import EditBlogsPage from "../pages/(private)/EditBlogsPage";
 
 const PrivateRoutes = () => {
   return(
@@ -20,6 +21,7 @@ const PrivateRoutes = () => {
             <Route path="/visitaConfig/:id" element={<VisitaDetailsPage />} />  
             <Route path="/accounts" element={<AdminAccountsPage />} />   
             <Route path="/blog" element={<BlogsListPage />} />
+            <Route path="/blog/:id" element={<EditBlogsPage />} />
           </Routes>
         </PrivateLayout>
     </AuthGuard>
