@@ -5,8 +5,8 @@ export const Section1 = styled.section`
     display: flex;
     flex-direction: row; 
     align-items: center;
-    gap: 10px;
-    max-width: 70%;
+    gap: 5px;
+    max-width: 100%;
 
     img {
       width: 100%;
@@ -51,9 +51,11 @@ export const Section1 = styled.section`
 
   .linha-botao {
     height: 2px;
-    width: 70%; 
+    width: 100%; 
+    max-width: 70%; 
     background-color: #2b674b;
     margin-block: 20px;
+    box-sizing: border-box;
   }
 `;
 
@@ -63,7 +65,7 @@ export const StyledButton = styled.button`
   color: white;
   background-color: #006343;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   width: 170px;

@@ -7,8 +7,8 @@ import CardPost from '../../../components/CardPost';
 import {
   Space,
   Section1,
-  Section2,
-  
+  Section2
+
 } from "./styled";
 
 const BlogPage = () => {
@@ -35,16 +35,33 @@ const BlogPage = () => {
           </div>
         </div>
         <div className="linha" />
-      </Section1>
 
-      <Section2>
         <div className="container">
           <h1>Últimas publicações</h1>
         </div>
+      </Section1>
 
-        <CardPost/>
+      <Section2>
+        <div className="posts">
+          <CardPost />
+          <CardPost />
+        </div>
 
+        <div className="categorias">
+          <h2>Categorias</h2>
+          <ul>
+            <li>Curiosidades</li>
+            <li>Dicas</li>
+            <li>Notícias</li>
+            <li>Novidades</li>
+            <li>Receitas</li>
+          </ul>
+        </div>
       </Section2>
+
+
+
+
     </>
   );
 };
