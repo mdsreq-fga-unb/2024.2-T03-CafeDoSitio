@@ -8,6 +8,7 @@ export function createBlog(titulo) {
   const body = {
     titulo: titulo,
     status: "rascunho",
+    slug: titulo.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, ""),
   };
 
   const response = axios.post(`${baseURL}/blog`, 

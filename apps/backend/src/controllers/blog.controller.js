@@ -24,9 +24,11 @@ const findAllBlog = async (req, res) => {
         const limit = parseInt(req.query.limit) || 10; // 10 blogs por página
 
         const { blogs, total } = await BlogService.findAllService(page, limit);
+        const totalBlogs = await BlogService.findAllServiceWithoutPagination();
 
         return res.status(200).json({
             message: "Blogs encontrados",
+            totalBlogs,
             blogs,
             total,
             totalPages: Math.ceil(total / limit),
@@ -79,7 +81,7 @@ const patchBlog = async (req, res) => {
         const updateData = req.body;
 
         if (!id)
-            return res.status(400).send({ message: "ID não informado!", case: 1 });
+            return res.status(400).send({ message: "ID não informado!" });
 
         if (!Object.keys(updateData).length)
             return res.status(200).send({ message: "Nenhuma informação para atualizar" });
@@ -91,12 +93,6 @@ const patchBlog = async (req, res) => {
 
         return res.status(200).send({ message: "Post editado com sucesso", blog });
     } catch (err) {
-        if (err.code === 11000 && err.keyPattern && err.keyPattern.slug) {
-            return res.status(400).send({ 
-                message: "Já existe um blog com esse slug! Escolha outro.",
-                case: 2
-            });
-        }
         return res.status(500).send({ message: "Blog não encontrado!", error: err.message });
     }
 }

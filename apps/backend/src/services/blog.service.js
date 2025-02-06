@@ -8,6 +8,7 @@ const findAllService = async (page, limit) => {
 
     return { blogs, total };
 };
+const findAllServiceWithoutPagination = () => Blog.find();
 const findByIdService = (_id) => Blog.findById(_id);
 const patchService = (_id, body) => Blog.findByIdAndUpdate(_id, body, {new: true});
 const deleteService = (body) => Blog.findByIdAndDelete(body);
@@ -18,4 +19,5 @@ export default {
     patchService,
     deleteService,
     findByIdService,
+    findAllServiceWithoutPagination,
 }

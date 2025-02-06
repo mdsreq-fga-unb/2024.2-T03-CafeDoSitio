@@ -26,6 +26,7 @@ const BlogsListPage = () => {
   const navigate = useNavigate();
 
   const [blogs, setBlogs] = useState([]);
+  const [allBlogs, setAllBlogs] = useState([]);
   const [filtroTexto, setFiltroTexto] = useState("");
   const [totalBlogs, setTotalBlogs] = useState(0);
   const [StatusFilter, setStatusFilter] = useState("all");
@@ -41,7 +42,7 @@ const BlogsListPage = () => {
 
   const countStatus = (reference) => {
     let count = 0;
-    blogs.forEach((blog) => {
+    allBlogs.forEach((blog) => {
       if (blog.status === reference) {
         count++;
       }
@@ -54,6 +55,7 @@ const BlogsListPage = () => {
 
   const fetchBlogs = async () => {
     const data = await findAllBlog(currentPage, limit);
+    setAllBlogs(data.totalBlogs);
     setBlogs(data.blogs);
     setTotalPages(data.totalPages);
     setTotalBlogs(data.total);
@@ -102,9 +104,9 @@ const BlogsListPage = () => {
       <ToastContainer />
 
       <InfoZone>
-        <h1>Gerenciamento de Blogs</h1>
+        <h1>Gerenciamento do Blog</h1>
         <span>
-          Aqui você poderá criar, publicar e editar novos blogs para gerar
+          Aqui você poderá criar, publicar e editar novas postagens para gerar
           conteúdo informativo ao Site Institucional da Família do Sítio.
         </span>
       </InfoZone>
