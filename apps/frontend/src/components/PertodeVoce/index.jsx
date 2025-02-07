@@ -7,6 +7,7 @@ import {
   Label,
   Form,
   Button,
+  LocAtual,
   Input
 } from "./styled"
 
@@ -82,20 +83,28 @@ function PertodeVoce() {
   //     ) : null}
   //   </>
   // );
-  return (
-    <>
-      <div id="map" ref={mapContainerRef} style={{ height: "500px", width: "100%" }} />
-      <Form>
-        <Title>Perto de Você</Title>
-        <Label htmlFor="name" style={{color: "#006343"}}>Onde você quer encontrar a Família do Sítio?</Label>
-        <Input type="text" id="name" placeholder="Digitar CEP ou cidade"/>
-        <Button type="button" onClick={handleGetLocation}>ou clique aqui para usar a localização atual</Button>
-        <Input type="text" id="produto" placeholder="Digitar procuto que deseja encontrar"/>
-      </Form>
-      {error && <p>{error}</p>}      
-    </>
-  );
+return (
+  <>
+    <Form>
+      <Title>Perto de Você</Title>
+      <Label htmlFor="name" style={{ color: "#006343" }}>
+        Onde você quer encontrar a Família do Sítio?
+      </Label>
+      <Input type="text" id="name" placeholder="Digitar CEP ou cidade" />
+      <LocAtual type="button" onClick={handleGetLocation}>
+        ou clique aqui para usar a localização atual
+      </LocAtual>
+      <Input type="text" id="produto" placeholder="Digitar produto que deseja encontrar" />
+      <Button type="submit">
+        Buscar
+      </Button>
+    </Form>
+
+    {error && <p>{error}</p>}  
+    <div id="map" ref={mapContainerRef} style={{ height: "500px", width: "100%", marginTop: "20px" }} />
+  </>
+);
+
 }
-//teste
 
 export default PertodeVoce;

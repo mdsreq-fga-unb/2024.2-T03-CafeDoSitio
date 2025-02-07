@@ -25,6 +25,21 @@ export const Form = styled.form`
 
 `;
 
+export const Button = styled.button`
+  font-size: 0.5rem;
+  color: white;
+  background-color: #006343;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 2rem 1.5rem;
+
+  &:hover {
+    background-color: #004c2e;
+  }
+`;
+
 
 export const Title = styled.h1`
   font-size: 2.5rem;
@@ -55,7 +70,7 @@ export const Input = styled.input`
   }
 `;
 
-export const Button = styled.button`
+export const LocAtual = styled.button`
   padding: 0.8rem 1.5rem;
   font-size: 1rem;
   color: #006343; /* Cor do texto verde */
