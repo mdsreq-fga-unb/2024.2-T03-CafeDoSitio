@@ -154,6 +154,30 @@ export const Section2 = styled.section`
     background-color: #e97a1c; 
   }
 
+  .infoSize {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-block: 10px;
+    padding-inline: 10px;
+    background-color:#e97a1c;
+    gap: 20px;
+
+    .icon{
+      font-size: 20px;
+      color: white;
+    }
+
+    span{
+      font-family: 'Myriad Pro', sans-serif;
+      font-size: 1rem;
+      color: white;
+      font-weight: bold;
+    }
+  }
+
   @media (max-width: 900px) {
     .categorias {
       display: none;
@@ -234,7 +258,7 @@ export const ControlePaginacao = styled.div`
 export const Divisor = styled.div`
 width: 100%;
     background-color: #2b674b;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     padding-inline: 20px;
     padding-top: 10px;
     padding-bottom: 4px;
@@ -250,4 +274,22 @@ width: 100%;
       margin: 0;
       padding: 0;
     }
+`;
+
+export const Select = styled.select`
+  padding: 8px 12px;
+  width: 100%;
+  font-size: 16px;
+  color: white;
+  background-color: #F39729;
+  font-family: 'Myriad Pro', sans-serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: 900px) {
+    display: none;
+  }
+
 `;

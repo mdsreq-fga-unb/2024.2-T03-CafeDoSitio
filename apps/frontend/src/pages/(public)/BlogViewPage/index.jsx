@@ -3,12 +3,13 @@ import axios from "axios";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Paginacao from "../../../components/Paginacao";
-import { Space, Conteudo, Categoria, Linha, Section2, ControlePaginacao, Divisor } from "./styled";
+import { Space, Conteudo, Categoria, Linha, Section2, ControlePaginacao, Divisor, Select } from "./styled";
 import { ROUTES } from "../../../routes/RoutesConstants";
 import { filterBlogsBasicUser } from "@familiadositio/core";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"; // CSS do <ToastContainer />
 import CardPost from "../../../components/CardPost";
+import { FaInfoCircle } from "react-icons/fa";
 
 const baseURL = "http://localhost:3002";
 
@@ -94,8 +95,16 @@ const BlogViewPage = () => {
       </Conteudo>
       <Linha />
       <Divisor>
-          <h1>Outros Blogs</h1>
+          <h1>Outras Publicações</h1>
       </Divisor>
+      <Select onChange={(e) => {setTagFilter(e.target.value); setCurrentPage(1)}}>
+        <option value="">Todos</option>
+        <option value="curiosidades">Curiosidades</option>
+        <option value="dicas">Dicas</option>
+        <option value="noticias">Notícias</option>
+        <option value="novidades">Novidades</option>
+        <option value="receitas">Receitas</option>
+      </Select>
       <Section2>
         <div className="posts">
           {blogs.length > 0 ? (
@@ -110,7 +119,10 @@ const BlogViewPage = () => {
               />
             ))
           ) : (
-            <h2>Nenhum post encontrado</h2>
+            <div className="infoSize">
+              <FaInfoCircle className="icon"/>
+              <span>Nenhuma publicação encontrada.</span>
+            </div>
           )}
         
           {/* Controles de Paginação */}

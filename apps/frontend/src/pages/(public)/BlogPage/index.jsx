@@ -7,12 +7,14 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"; // CSS do <ToastContainer />
 import { useNavigate, Link } from "react-router-dom";
 import { ROUTES } from "../../../routes/RoutesConstants";
+import { FaInfoCircle } from "react-icons/fa";
 
 import {
   Space,
   Section1,
   Section2,
-  ControlePaginacao
+  ControlePaginacao,
+  Select
 } from "./styled";
 
 const BlogPage = () => {
@@ -41,6 +43,7 @@ const BlogPage = () => {
   }, [currentPage, tagFilter]);
 
   const changePageToBlogView = (item) => {
+    window.scrollTo(0, 0);
     navigate(`${ROUTES.BLOG}/${item.slug}`);
   }
 
@@ -78,7 +81,14 @@ const BlogPage = () => {
           <h1>Últimas publicações</h1>
         </div>
       </Section1>
-
+      <Select onChange={(e) => {setTagFilter(e.target.value); setCurrentPage(1)}}>
+              <option value="">Todos</option>
+              <option value="curiosidades">Curiosidades</option>
+              <option value="dicas">Dicas</option>
+              <option value="noticias">Notícias</option>
+              <option value="novidades">Novidades</option>
+              <option value="receitas">Receitas</option>
+            </Select>
       <Section2>
         <div className="posts">
           {blogs.length > 0 ? (
@@ -93,7 +103,10 @@ const BlogPage = () => {
               />
             ))
           ) : (
-            <h2>Nenhum post encontrado</h2>
+            <div className="infoSize">
+              <FaInfoCircle className="icon"/>
+              <span>Nenhuma publicação encontrada.</span>
+            </div>
           )}
         
           {/* Controles de Paginação */}
