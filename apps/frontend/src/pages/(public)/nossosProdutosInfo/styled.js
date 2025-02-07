@@ -23,7 +23,7 @@ export const ProdutoSection = styled.div`
     width: 100%;
     max-width: 100%;
     align-items: center;
-    justify-content: cente;
+    justify-content: center;
     gap: 2rem;
 
     @media (max-width: 625px) {
@@ -86,7 +86,20 @@ export const DetalhesProduto = styled.div`
     }
 `;
 
+export const NossosProdutosdiv = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
 
+    img {
+        width: 95%;
+        height: auto;
+        max-width: 100%;
+        object-fit: contain;
+    }
+`;
 
 export const Container = styled.div`
   display: flex;
