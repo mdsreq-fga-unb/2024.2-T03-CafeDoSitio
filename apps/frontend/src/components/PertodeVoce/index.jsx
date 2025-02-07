@@ -91,7 +91,7 @@ return (
         Onde você quer encontrar a Família do Sítio?
       </Label>
       <Input type="text" id="name" placeholder="Digitar CEP ou cidade" />
-      <LocAtual type="button" onClick={handleGetLocation}>
+      <LocAtual as="p" onClick={handleGetLocation}>
         ou clique aqui para usar a localização atual
       </LocAtual>
       <Input type="text" id="produto" placeholder="Digitar produto que deseja encontrar" />
