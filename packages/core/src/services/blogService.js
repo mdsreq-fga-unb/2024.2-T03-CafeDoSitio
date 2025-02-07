@@ -22,11 +22,6 @@ export function createBlog(titulo) {
     return response;
 };
 
-export async function findAllBlog(page = 1, limit = 10) {
-  const response = await axios.get(`${baseURL}/blog?page=${page}&limit=${limit}`);
-  return response.data;
-};
-
 export function findBlogById(_id) {
   const response = axios.get(`${baseURL}/blog/${_id}`);
   return response;
@@ -54,4 +49,22 @@ export function deleteBlog(_id) {
   });
 
   return response;
+}
+
+export async function filterBlogs(page = 1, limit = 5, status = "all", title = "") {
+  const queryParams = new URLSearchParams();
+
+  queryParams.append("page", page);
+  queryParams.append("limit", limit);
+
+  if (status !== "all") {
+    queryParams.append("status", status);
+  }
+
+  if (title.trim() !== "") {
+    queryParams.append("title", title);
+  }
+
+  const response = await axios.get(`${baseURL}/blogFilter?${queryParams.toString()}`);
+  return response.data;
 }

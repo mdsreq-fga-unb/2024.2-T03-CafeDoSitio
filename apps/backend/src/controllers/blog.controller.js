@@ -18,24 +18,29 @@ const createBlog = async (req, res) => {
     }
 }
 
-const findAllBlog = async (req, res) => {
+const filterBlogsController = async (req, res) => {
     try {
-        const page = parseInt(req.query.page) || 1; // Página padrão 1
-        const limit = parseInt(req.query.limit) || 10; // 10 blogs por página
+        const { page = 1, limit = 5, status, title } = req.query;
 
-        const { blogs, total } = await BlogService.findAllService(page, limit);
-        const totalBlogs = await BlogService.findAllServiceWithoutPagination();
+        const result = await BlogService.filterBlogsService(
+            parseInt(page),
+            parseInt(limit),
+            status,
+            title
+        );
 
-        return res.status(200).json({
-            message: "Blogs encontrados",
-            totalBlogs,
-            blogs,
-            total,
-            totalPages: Math.ceil(total / limit),
-            currentPage: page
+        const totalPosts = await BlogService.findAllServiceWithoutPagination();
+
+        res.status(200).json({
+            totalPosts: totalPosts,
+            NumberOfPosts: totalPosts.length,
+            blogs: result.blogs,
+            totalBlogs: result.total,
+            totalPages: Math.ceil(result.total / limit),
         });
-    } catch (err) {
-        return res.status(500).json({ message: "Erro ao buscar blogs!", error: err.message });
+    } catch (error) {
+        console.error("Erro ao filtrar blogs:", error);
+        res.status(500).json({ message: "Erro interno do servidor" });
     }
 };
 
@@ -101,8 +106,8 @@ const patchBlog = async (req, res) => {
 
 export default {
     createBlog,
-    findAllBlog,
     deleteBlog,
     patchBlog,
     findBlogById,
+    filterBlogsController,
 }

@@ -143,6 +143,7 @@ export const ControlePaginacao = styled.div`
   justify-content: end;
   width: 100%;
   margin-top: 20px;
+  margin-bottom: 20px;
   align-items: center;
   font-family: 'Myriad Pro', sans-serif;
   color: #333;

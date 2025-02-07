@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { createBlog, findAllBlog } from "@familiadositio/core";
+import { createBlog, filterBlogs } from "@familiadositio/core";
 import {
   Space,
   InfoZone,
@@ -34,7 +34,7 @@ const BlogsListPage = () => {
   const [totalPages, setTotalPages] = useState(1);
   const [currentPage, setCurrentPage] = useState(1);
 
-  const limit = 5;
+  const limit = 10;
 
   const handleChangeTexto = (e) => {
     setFiltroTexto(e.target.value);
@@ -54,16 +54,37 @@ const BlogsListPage = () => {
   const closePopup = () => setIsPopupOpen(false);
 
   const fetchBlogs = async () => {
-    const data = await findAllBlog(currentPage, limit);
-    setAllBlogs(data.totalBlogs);
-    setBlogs(data.blogs);
-    setTotalPages(data.totalPages);
-    setTotalBlogs(data.total);
+    try {
+      const data = await filterBlogs(currentPage, limit, StatusFilter, filtroTexto);
+      setAllBlogs(data.totalPosts);
+      setBlogs(data.blogs);
+      setTotalPages(data.totalPages);
+      setTotalBlogs(data.NumberOfPosts);
+    } catch (error) {
+      console.error("Erro ao buscar blogs:", error);
+      toast.error("Erro ao buscar blogs.");
+    }
   };
 
   useEffect(() => {
     fetchBlogs();
-  }, [currentPage]);
+  }, [currentPage, StatusFilter]); 
+
+  useEffect(() => {
+      const handleKeyPress = (e) => {
+        if (e.key === "Enter") {
+          fetchBlogs();
+        }
+      };
+  
+      // Adiciona o listener de teclado
+      document.addEventListener("keydown", handleKeyPress);
+  
+      // Remove o listener ao desmontar o componente
+      return () => {
+        document.removeEventListener("keydown", handleKeyPress);
+      };
+    }, [filtroTexto]);
 
   const handleCreateBlog = async () => {
     try {
@@ -83,13 +104,6 @@ const BlogsListPage = () => {
     sessionStorage.setItem("blogId", item._id);
     navigate(`${ROUTES.BLOG}/${item._id}`);
   }
-
-  // Filtragem dos blogs por status e pesquisa
-  // const blogsFiltrados = blogs.filter((blog) => {
-  //   const matchTexto = blog.title.toLowerCase().includes(filtroTexto.toLowerCase());
-  //   const matchStatus = StatusFilter === "all" || blog.status === StatusFilter;
-  //   return matchTexto && matchStatus;
-  // });
 
   return (
     <div>
@@ -156,7 +170,7 @@ const BlogsListPage = () => {
               value={filtroTexto}
               onChange={handleChangeTexto}
             />
-            <FaSearch className="search-icon" color="grey" />
+            <FaSearch className="search-icon" color="grey" onClick={fetchBlogs}/>
           </BarraPesquisa>
           <Button onClick={openPopup} text={"Criar"}>
             <FaPlus className="icon" />
