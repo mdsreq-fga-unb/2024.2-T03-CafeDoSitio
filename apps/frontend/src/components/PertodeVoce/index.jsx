@@ -8,9 +8,9 @@ import {
   Label,
   Form,
   Button,
-  Input,
-  TesteButton
-} from "./styled"
+  LocAtual,
+  Input
+} from "./styled";
 
 function PertodeVoce() {
   const [location, setLocation] = useState({ lat: null, lng: null });
@@ -40,7 +40,8 @@ function PertodeVoce() {
     }
   };
 
-  const handleBuscarProduto = () => {
+  const handleBuscarProduto = (e) => {
+    e.preventDefault(); // Evita o comportamento padrão de submit
     setNomeProdutoBusca(produto); // Define o nome do produto a ser buscado
   };
 
@@ -71,28 +72,36 @@ function PertodeVoce() {
 
   return (
     <>
-      <div id="map" ref={mapContainerRef} style={{ height: "500px", width: "100%" }} />
       <Form>
         <Title>Perto de Você</Title>
-        <Label htmlFor="name" style={{color: "#006343"}}>Onde você quer encontrar a Família do Sítio?</Label>
-        <Input type="text" id="name" placeholder="Digitar CEP ou cidade"/>
-        <Button type="button" onClick={handleGetLocation}>ou clique aqui para usar a localização atual</Button>
-
-        {/* Input de busca por produto */}
-        <Input 
-          type="text" 
-          id="produto" 
-          placeholder="Digitar produto que deseja encontrar" 
-          value={produto} 
-          onChange={(e) => setProduto(e.target.value)} 
+        <Label htmlFor="name" style={{ color: "#006343" }}>
+          Onde você quer encontrar a Família do Sítio?
+        </Label>
+        <Input type="text" id="name" placeholder="Digitar CEP ou cidade" />
+        <LocAtual as="p" onClick={handleGetLocation}>
+          ou clique aqui para usar a localização atual
+        </LocAtual>
+        <Input
+          type="text"
+          id="produto"
+          placeholder="Digitar produto que deseja encontrar"
+          value={produto}
+          onChange={(e) => setProduto(e.target.value)}
         />
-        <TesteButton onClick={handleBuscarProduto}>Buscar produto</TesteButton>
+        <Button type="button" onClick={handleBuscarProduto}>
+          Buscar
+        </Button>
       </Form>
 
-      {/* Passa o nomeProdutoBusca para o componente Resultados */}
       <Resultados nomeProduto={nomeProdutoBusca} />
 
       {error && <p>{error}</p>}
+
+      <div
+        id="map"
+        ref={mapContainerRef}
+        style={{ height: "500px", width: "100%", marginTop: "20px" }}
+      />
     </>
   );
 }

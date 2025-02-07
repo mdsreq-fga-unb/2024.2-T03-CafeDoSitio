@@ -5,24 +5,38 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  background-color: white;
   padding: 2rem;
-  border-top-right-radius: 28px;
-  border-bottom-right-radius: 28px;
 
-  button {
+  p {
     margin: 0rem;
-    padding: 0;
+    padding: 0rem;
     text-align: left;
     font-size: 1rem;
+    font-size: 1rem;
+    color: #006343; /* Cor do texto verde */
+    cursor: pointer;
+    text-decoration: underline; /* Texto sublinhado */
+  &:hover {
+    color: #004c2e; /* Cor do texto verde escuro ao passar o mouse */
+  }
   }
 
+`;
 
-  @media(max-width: 768px){
-    border-radius: 28px;
+export const Button = styled.button`
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  color: white;
+  background-color: #006343;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-color: black;
+
+  &:hover {
+    background-color: #004c2e;
   }
-
-
 `;
 export const TesteButton = styled.button`
   padding: 0.8rem 1.5rem;
@@ -69,18 +83,6 @@ export const Input = styled.input`
   }
 `;
 
-export const Button = styled.button`
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
-  color: #006343; /* Cor do texto verde */
-  background-color: transparent; /* Fundo transparente */
-  border: none; /* Sem borda */
-  border-radius: 0; /* Sem borda arredondada */
-  cursor: pointer;
-  text-decoration: underline; /* Texto sublinhado */
-  transition: color 0.3s ease;
+export const LocAtual = styled.button`
 
-  &:hover {
-    color: #004c2e; /* Cor do texto verde escuro ao passar o mouse */
-  }
 `;
