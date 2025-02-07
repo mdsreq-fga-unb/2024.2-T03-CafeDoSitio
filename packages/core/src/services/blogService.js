@@ -89,4 +89,4 @@ export async function filterBlogsBasicUser(page = 1, limit = 5, title = "", tag 
 
   const response = await axios.get(`${baseURL}/blogFilter/basic?${queryParams.toString()}`);
   return response.data;
-}
+};

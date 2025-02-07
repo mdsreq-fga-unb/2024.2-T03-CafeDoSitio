@@ -124,6 +124,24 @@ const patchBlog = async (req, res) => {
     }
 }
 
+const findOneBySlug = async (req, res) => {
+    try {
+        const { slug } = req.params;
+
+        if (!slug)
+            return res.status(400).send({ message: "Slug não informado!" });
+
+        const blog = await BlogService.findBySlugService(slug);
+
+        if (!blog)
+            return res.status(404).send({ message: "Blog não encontrado!" });
+
+        return res.status(200).send({ message: "Blog encontrado", blog });
+    } catch (err) {
+        return res.status(500).send({ message: "Erro ao buscar Blog!", error: err.message });
+    }
+}
+
 
 
 export default {
@@ -133,4 +151,5 @@ export default {
     findBlogById,
     filterBlogsController,
     filterBlogsBasicUserController,
+    findOneBySlug,
 }

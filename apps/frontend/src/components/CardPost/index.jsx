@@ -5,7 +5,7 @@ import {
     StyledButton as Button
   } from "./styled";
 
-const CardPost = ({titulo, banner, tag, descricao}) => {
+const CardPost = ({titulo, banner, tag, descricao, onClick}) => {
     return (
         <Section1>
 
@@ -20,7 +20,7 @@ const CardPost = ({titulo, banner, tag, descricao}) => {
           </div>
         </div>
 
-        <Button>Ler Mais...</Button>
+        <Button onClick={onClick}>Ler Mais...</Button>
         <div className="linha-botao" /> 
 
         </Section1>

@@ -43,6 +43,7 @@ const filterBlogsBasicUserService = async (page, limit, title, tag) => {
 const findByIdService = (_id) => Blog.findById(_id);
 const patchService = (_id, body) => Blog.findByIdAndUpdate(_id, body, {new: true});
 const deleteService = (body) => Blog.findByIdAndDelete(body);
+const findBySlugService = (slug) => Blog.findOne({ slug });
 
 export default {
     createService,
@@ -52,4 +53,5 @@ export default {
     findAllServiceWithoutPagination,
     filterBlogsService,
     filterBlogsBasicUserService,
+    findBySlugService,
 }

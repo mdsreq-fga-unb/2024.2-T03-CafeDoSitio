@@ -96,7 +96,7 @@ export const Section1 = styled.section`
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #DA731F;
+        background-color: #F39729;
         border-radius: 8px;
         padding-block: 6px;
         padding-inline: 10px;

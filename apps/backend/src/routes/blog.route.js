@@ -8,5 +8,6 @@ blogRouter.post('/', authMiddleware, blogController.createBlog);
 blogRouter.get('/:id', blogController.findBlogById);
 blogRouter.delete('/:id', authMiddleware, blogController.deleteBlog);
 blogRouter.patch('/:id', authMiddleware, blogController.patchBlog);
+blogRouter.get('/slug/:slug', blogController.findOneBySlug);
 
 export default blogRouter;
