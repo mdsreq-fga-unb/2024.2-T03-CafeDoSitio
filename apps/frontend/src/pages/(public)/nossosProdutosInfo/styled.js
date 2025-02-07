@@ -16,6 +16,75 @@ export const Text = styled.div`
 
 `;
 
+export const ProdutoSection = styled.div`
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    gap: 2rem;
+
+    @media (max-width: 625px) {
+        flex-direction: column;
+        gap: 1rem;
+    }
+`;
+
+export const ImageContainer = styled.div`
+    padding: 20px;
+    max-width: 600px;
+
+    img {
+        width: 30vw;
+        height: auto;
+        display: block;
+    }
+`;
+
+export const ProdutoInfo = styled.div`
+    flex: 1;
+    max-width: 600px;
+`;
+
+export const ProdutoTitle = styled.h1`
+    text-align: left;
+    font-size: 1.7rem;
+    color: #000;
+    margin-bottom: 1rem;
+`;
+
+export const ProdutoDescricao = styled.p`
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+`;
+
+export const Disponibilidade = styled.p`
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+`;
+
+export const DetalhesProduto = styled.div`
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    color: #333;
+
+    div {
+        flex: 1;
+    }
+
+    p {
+        margin: 0.3rem 0;
+    }
+
+    @media (max-width: 625px) {
+        flex-direction: column;
+    }
+`;
+
+
+
 export const Container = styled.div`
     display: flex;
     justify-content: center;
