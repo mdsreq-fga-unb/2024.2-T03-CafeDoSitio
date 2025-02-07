@@ -44,8 +44,7 @@ export const DivContainer = styled.div`
   margin: 4rem;
 
   @media (max-width: 768px) {
-    max-width: 90%;
-    margin: 2rem;
+    margin-top: 4rem;
   }
 `;
 export const DivContainerSelosABIC = styled.div`

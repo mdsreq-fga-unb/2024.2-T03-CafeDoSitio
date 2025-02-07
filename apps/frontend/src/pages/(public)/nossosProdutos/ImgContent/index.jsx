@@ -12,12 +12,12 @@ export default function ImgContent(props) {
                 <TextoDescricao style={{ color: props.textColor || "white" }}>
                     {props.text}
                 </TextoDescricao>
-                    <BotaoSobreposto>
-                        <Link to={urlDetalhes} style={{ textDecoration: "none", color: "inherit"}}>
-                        {props.buttonText}
-                        <FaArrowRight style={{transform: "rotate(-45deg)", marginLeft: "10px"}} />
-                        </Link>               
-                    </BotaoSobreposto>
+                    <Link to={urlDetalhes} style={{ textDecoration: "none", color: "inherit"}}>
+                        <BotaoSobreposto>
+                            {props.buttonText}
+                            <FaArrowRight style={{transform: "rotate(-45deg)", marginLeft: "10px"}} />           
+                        </BotaoSobreposto>
+                    </Link> 
                     <img className="img-background" src={props.backgroundImage} alt="Background image" />
                     <img className="img-icon" src={props.iconImage} alt="Icone saco cafe" />
                 </Container>
