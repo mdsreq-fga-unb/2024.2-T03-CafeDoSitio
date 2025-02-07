@@ -21,6 +21,7 @@ export const ProdutoSection = styled.div`
     width: 100%;
     max-width: 100%;
     align-items: center;
+    justify-content: cente;
     gap: 2rem;
 
     @media (max-width: 625px) {
@@ -178,7 +179,6 @@ export const FirstTextSection = styled.div`
 `;
 
 export const DivContainer = styled.div`
-  //padding: 20px;
   max-width: 80%;
   margin: 4rem;
 `;

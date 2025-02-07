@@ -26,8 +26,11 @@ import imagemCafeFamiliaSitioIcone from "../../../assets/DetalhesNossosProdutos/
 import imagemCafeSpecialeConteiner from "../../../assets/DetalhesNossosProdutos/NossosProdutos_speciale_1.png";
 import imagemCafeSpecialeIcone from "../../../assets/DetalhesNossosProdutos/NossosProdutos_speciale_5.png";
 
-import imagemAssumPretoVacuo from "../../../assets/DetalhesNossosProdutos/NossosProdutos_assumpreto_3.png"
-import imagemCappucino from "../../../assets/DetalhesNossosProdutos/NossosProdutos_assumpreto_4.png"
+import imagemAssumPretoVacuo from "../../../assets/DetalhesNossosProdutos/NossosProdutos_assumpreto_3_copia.png"
+import imagemCappucino from "../../../assets/DetalhesNossosProdutos/NossosProdutos_assumpreto_4_copia.png"
+
+//import imagemTexturaDeFundo from "../../../assets/DetalhesNossosProdutos/3.png"
+import logoAssumPreto from "../../../assets/DetalhesNossosProdutos/4.png"
 
 export default function NossosProdutosInfo() {
     return (
@@ -43,7 +46,7 @@ export default function NossosProdutosInfo() {
                 </Text>
             </DivContainer>
 
-            <ProdutoSection>
+            <ProdutoSection >
                 <ImageContainer>
                     <img className="img" src={imagemCafeAssumPretoIcone} alt="Cafe Assum Preto" />
                 </ImageContainer>
@@ -119,7 +122,7 @@ export default function NossosProdutosInfo() {
                         <div>
                             <p><strong>Peso Líquido:</strong> 200g</p>
                             <p><strong>Apresentação:</strong> Mistura para preparo de cappuccino sabor Tradicional.</p>
-                            <p><strong>Corpo:</strong> Encorpad o</p>
+                            <p><strong>Corpo:</strong> Encorpado</p>
                             <p><strong>Moagem:</strong> Fina</p>                            
                         </div>
                         <div>
@@ -130,9 +133,7 @@ export default function NossosProdutosInfo() {
                         </div>
                     </DetalhesProduto>
                 </ProdutoInfo>
-            </ProdutoSection>
-
-            
+            </ProdutoSection> 
         </>
     );
 }
