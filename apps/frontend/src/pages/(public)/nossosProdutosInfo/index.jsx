@@ -1,6 +1,26 @@
 import Paginacao from "../../../components/Paginacao";
-import { Title, Text, DivContainer, ImagemContainer, Container, TextoDescricao } from "./styled";
+import {
+    Title,
+    Text,
+    DivContainer,
+    NossosProdutosdiv,
+    ImagemContainer,
+    BotaoSobreposto,
+    Container,
+    TextoDescricao,
+    ImageContainer,
+    ProdutoTitle,
+    ProdutoSection,
+    ProdutoDescricao,
+    ProdutoInfo,
+    Disponibilidade,
+    DetalhesProduto
+} from "./styled";
+
 import { useParams } from "react-router-dom";
+
+import imagemCafeAssumPretoConteiner from "../../../assets/DetalhesNossosProdutos/NossosProdutos_assumpreto_1.png";
+import imagemCafeAssumPretoIcone from "../../../assets/DetalhesNossosProdutos/NossosProdutos_assumpreto_2.png";
 
 import imagemCafeFamiliaSitioConteiner from "../../../assets/DetalhesNossosProdutos/NossosProdutos_familiadositio_1.png";
 
@@ -9,11 +29,19 @@ import imagemCafeFamiliaSitioCafeAVacuo from "../../../assets/DetalhesNossosProd
 import imagemCafeFamiliaSitioCapuccino from "../../../assets/DetalhesNossosProdutos/NossosProdutos_familiadositio_capuccino.png";
 import imagemCafeFamiliaSitioGourmet from "../../../assets/DetalhesNossosProdutos/NossosProdutos_familiadositio_gourmet.png";
 
-export default function NossosProdutosInfo(props) {
+import imagemCafeSpecialeConteiner from "../../../assets/DetalhesNossosProdutos/NossosProdutos_speciale_1.png";
+import imagemCafeSpecialeIcone from "../../../assets/DetalhesNossosProdutos/NossosProdutos_speciale_5.png";
+
+import imagemAssumPretoVacuo from "../../../assets/DetalhesNossosProdutos/NossosProdutos_assumpreto_3_copia.png"
+import imagemCappucino from "../../../assets/DetalhesNossosProdutos/NossosProdutos_assumpreto_4_copia.png"
+
+//import imagemTexturaDeFundo from "../../../assets/DetalhesNossosProdutos/3.png"
+import logoAssumPreto from "../../../assets/DetalhesNossosProdutos/4.png"
+
+export default function NossosProdutosInfo() {
     const {id}  = useParams();
 
     let conteudoPagina = undefined;
-
     if(id == '1') {
         conteudoPagina = {
             nome:'FAMÍLIA DO SÍTIO',
@@ -82,7 +110,6 @@ export default function NossosProdutosInfo(props) {
         }
     } else {
         conteudoPagina = {
-
         }
     }
 
@@ -98,29 +125,36 @@ export default function NossosProdutosInfo(props) {
                 </Text>
             </DivContainer>
 
-            <ImagemContainer id="imagem-1">
-                <Container>
-                    <TextoDescricao style={{ color: props?.textColor || "white" }}>
-                        {conteudoPagina.textoImgCabecalho}
-                    </TextoDescricao>
-                    <img 
-                        className="img-background" 
-                        src={props?.backgroundImage || conteudoPagina.imgCabecalho}
-                        alt="Background image" 
-                    />
-                </Container>
-            </ImagemContainer>
-            {conteudoPagina.produtos.map((produto, index)=>{
-                return <Container>
-                    <div className={`produto-container ${index % 2 === 0 ? "img-esquerda" : "img-direita"}  `}>
-                    <img src={produto.img} className="img-produto"  alt="imagem do produto"  />
-                    <Container>
-                        <Text>{produto.titulo}</Text>
-                        <Text>{produto.descricao}</Text>
-                        <Text>{produto.disponibilidade}</Text>
-                    </Container>
-                    </div>
-                </Container>
+            {conteudoPagina.produtos.map((produto, index) => {
+                <ProdutoSection >
+                    <ImageContainer>
+                        <img className="img" src={conteudoPagina.imgCabecalho} alt="Cafe Assum Preto" />
+                    </ImageContainer>
+
+                    <ProdutoInfo>
+                        <ProdutoTitle>{produto.titulo}</ProdutoTitle>
+                        <ProdutoDescricao>
+                            {produto.descricao}
+                        </ProdutoDescricao>
+                        <Disponibilidade>• <strong>{produto.disponibilidade}</strong></Disponibilidade>
+
+                        <DetalhesProduto>
+                            <div>
+                                <p><strong>Apresentação:</strong> Café torrado e moído.</p>
+                                <p><strong>Método indicado:</strong> Ideal para filtros de papel ou polipropileno e coador de pano.</p>
+                                <p><strong>Tipo de café:</strong> 100% Arábica</p>
+                                <p><strong>Aroma:</strong> Intenso</p>
+                                <p><strong>Sabor:</strong> Intenso</p>
+                            </div>
+                            <div>
+                                <p><strong>Bebida:</strong> Dura</p>
+                                <p><strong>Corpo:</strong> Encorpado</p>
+                                <p><strong>Moagem:</strong> Média</p>
+                                <p><strong>Torração:</strong> Média</p>
+                            </div>
+                        </DetalhesProduto>
+                    </ProdutoInfo>
+                </ProdutoSection>
             })}
         </>
     );
