@@ -31,7 +31,30 @@ const criarProduto = async (req, res) => {
     }
 };
 
+const buscarProdutoPorNome = async (req, res) => {
+    try {
+        const nome = req.params.nome;
+
+        if (!nome) {
+            return res.status(400).send({ message: "O nome do produto é obrigatório!" });
+        }
+
+        const produtos = await produtoService.buscarPorNome(nome);
+
+        if (!produtos || produtos.length === 0) {
+            return res.status(404).send({ message: "Nenhum produto encontrado com esse nome." });
+        }
+
+        return res.status(200).send(produtos);
+    } catch (err) {
+        console.error("Erro ao buscar produto:", err);
+        return res.status(500).send({ message: "Erro interno no servidor" });
+    }
+};
+
+
 
 export default {
     criarProduto,
+    buscarProdutoPorNome
 }

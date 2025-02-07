@@ -1,16 +1,23 @@
 import Produto from "../models/Produto.js";
 import Estabelecimento from "../models/Estabelecimento.js";
 
+const normalizeString = (str) => {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // Remove os acentos
+};
+
 const buscarPorNome = async (nome) => {
     try {
+        const nomeNormalizado = normalizeString(nome); // Normaliza a string de busca para encontrar com ou sem acentos
         return await Produto.find({
-            nome: { $regex: new RegExp(nome, "i") } //colocar o nome com essa expressao permite busca sem case-sensitive
+            nome: { $regex: new RegExp(nomeNormalizado, "i") } // Permite busca sem case-sensitive e sem considerar acentos
         }).populate("estabelecimentos");
     } catch (error) {
         console.error("Erro ao buscar produto:", error);
         throw new Error("Erro ao buscar produto");
     }
 };
+
+
 
 // ✅ Criar Produto
 const criarProduto = async (dados) => {
