@@ -51,7 +51,7 @@ export function deleteBlog(_id) {
   return response;
 }
 
-export async function filterBlogs(page = 1, limit = 5, status = "all", title = "") {
+export async function filterBlogs(page = 1, limit = 5, status = "all", title = "", tag = "") {
   const queryParams = new URLSearchParams();
 
   queryParams.append("page", page);
@@ -63,6 +63,10 @@ export async function filterBlogs(page = 1, limit = 5, status = "all", title = "
 
   if (title.trim() !== "") {
     queryParams.append("title", title);
+  }
+
+  if (tag.trim() !== "") {
+    queryParams.append("tag", tag);
   }
 
   const response = await axios.get(`${baseURL}/blogFilter?${queryParams.toString()}`);

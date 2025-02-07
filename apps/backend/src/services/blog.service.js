@@ -2,7 +2,7 @@ import Blog from "../models/Blog.js";
 
 const createService = (body) => Blog.create(body);
 const findAllServiceWithoutPagination = () => Blog.find();
-const filterBlogsService = async (page, limit, status, title) => {
+const filterBlogsService = async (page, limit, status, title, tag) => {
     const skip = (Number(page) - 1) * Number(limit);
     const filter = {};
 
@@ -12,6 +12,10 @@ const filterBlogsService = async (page, limit, status, title) => {
 
     if (title) {
         filter.titulo = { $regex: title, $options: "i" }; // Busca case insensitive
+    }
+
+    if (tag) {
+        filter.tag = tag;
     }
 
     const blogs = await Blog.find(filter).skip(skip).limit(limit);

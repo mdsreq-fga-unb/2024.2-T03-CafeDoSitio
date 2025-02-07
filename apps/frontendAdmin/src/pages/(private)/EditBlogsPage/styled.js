@@ -44,7 +44,6 @@ export const EdicaoBlog = styled.div`
     height: auto; /* Mantém a proporção */
     aspect-ratio: 3 / 1; /* Define a proporção 3:1 */
     object-fit: cover; /* Evita distorções */
-    border-radius: 8px; /* Opcional: bordas arredondadas */
   }
 
   .EditorText .ql-editor {

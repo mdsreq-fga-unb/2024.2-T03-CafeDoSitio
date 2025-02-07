@@ -13,6 +13,7 @@ import Button from "../../../components/Button";
 import RedButton from "../../../components/RedButton";
 import Popup from "../../../components/PopUp";
 import { useNavigate } from "react-router-dom";
+import DOMPurify from "dompurify";
 
 const EditBlogsPage = () => {
 
@@ -101,7 +102,8 @@ const EditBlogsPage = () => {
 
   const handleBlurConteudo = (e) => {
     if (conteudo !== blog.conteudo) {
-      updateBlog({ conteudo: conteudo });
+      const clean = DOMPurify.sanitize(conteudo);
+      updateBlog({ conteudo: clean });
     }
   };
 

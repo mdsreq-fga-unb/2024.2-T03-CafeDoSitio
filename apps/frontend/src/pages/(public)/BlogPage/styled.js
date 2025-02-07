@@ -60,12 +60,13 @@ export const Section1 = styled.section`
   .container {
     width: 100%;
     background-color: #2b674b;
-    margin-block: 40px;
-    padding: 9px;
+    margin-bottom: 40px;
+    padding-inline: 20px;
+    padding-top: 10px;
+    padding-bottom: 4px;
     display: flex;
     justify-content: left;
     align-items: center;
-    height: 50px;
     border-radius: 10px;
 
     h1 {
@@ -103,20 +104,17 @@ export const Section2 = styled.section`
     width: 70%; 
   }
 
-  .categorias {
-    width: 20%; 
+  .categorias { 
     display: flex;
     flex-direction: column; 
-    align-items: flex-start; 
-    padding: 15px;
+    align-items: start;
     border: 2px solid #2b674b; 
-    border-radius: 8px; 
+    border-radius: 8px;
     background-color: #fff; 
     font-family: "Arial", sans-serif;
-    gap: 10px; 
-    height: auto; 
-    max-height: 500px; 
-    overflow-y: auto; 
+    gap: 10px;
+    width: 20%;
+    height: 100%;
   }
 
   h2 {
@@ -127,22 +125,23 @@ export const Section2 = styled.section`
     padding: 10px; 
     margin: 0; 
     text-align: center;
-    border-radius: 5px; 
-    width: 100%; 
+    width: 100%;
+    font-family: 'impact', sans-serif;
+    font-size: 1.5rem;
   }
 
   ul {
     list-style: none; 
-    padding: 0; 
-    margin: 0; 
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: start;
+    padding-block: 0;
+    padding-inline: 20px;
     gap: 10px; 
   }
 
   li {
-    background-color: #fb8b22; 
+    background-color: #DA731F; 
     color: white; 
     padding: 8px 10px; 
     border-radius: 5px; 
@@ -151,18 +150,87 @@ export const Section2 = styled.section`
     cursor: pointer;
     display: inline-block;
     white-space: nowrap; 
-    margin-left: 0; 
+    font-family: 'Myriad Pro', sans-serif;
+    font-weight: bold;
   }
 
   li:hover {
     background-color: #e97a1c; 
   }
+
+  @media (max-width: 900px) {
+    .categorias {
+      display: none;
+    }
+
+    .posts {
+      width: 100%;
+    }
+  }
 `;
 
+export const ControlePaginacao = styled.div`
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  align-items: center;
+  font-family: 'Myriad Pro', sans-serif;
+  color: #333;
 
+  button {
+    padding: 8px 12px;
+    font-size: 16px;
+    color: white;
+    background-color: #006343;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Myriad Pro', sans-serif;
+    font-weight: bold;
 
+    &:hover {
+      background-color: #004c2e;
+    }
+  }
 
+  button + button {
+    margin-left: 10px;
+  }
 
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
 
+  button:disabled:hover {
+    background-color: #ccc;
+  }
 
+  @media (max-width: 450px) {
+    justify-content: center;
+  }
 
+  @media (max-width: 350px) {
+    button {
+      padding: 6px 10px;
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 300px) {
+    button {
+      padding: 4px 8px;
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 250px) {
+    button {
+      padding: 2px 6px;
+      font-size: 10px;
+    }
+  }
+`;
