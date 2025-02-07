@@ -20,13 +20,14 @@ const createBlog = async (req, res) => {
 
 const filterBlogsController = async (req, res) => {
     try {
-        const { page = 1, limit = 5, status, title } = req.query;
+        const { page = 1, limit = 5, status, title, tag } = req.query;
 
         const result = await BlogService.filterBlogsService(
             parseInt(page),
             parseInt(limit),
             status,
-            title
+            title,
+            tag
         );
 
         const totalPosts = await BlogService.findAllServiceWithoutPagination();
@@ -34,6 +35,27 @@ const filterBlogsController = async (req, res) => {
         res.status(200).json({
             totalPosts: totalPosts,
             NumberOfPosts: totalPosts.length,
+            blogs: result.blogs,
+            totalBlogs: result.total,
+            totalPages: Math.ceil(result.total / limit),
+        });
+    } catch (error) {
+        console.error("Erro ao filtrar blogs:", error);
+        res.status(500).json({ message: "Erro interno do servidor" });
+    }
+};
+
+const filterBlogsBasicUserController = async (req, res) => {
+    try {
+        const { page = 1, limit = 5, title, tag } = req.query;
+
+        const result = await BlogService.filterBlogsBasicUserService(
+            parseInt(page),
+            parseInt(limit),
+            title,
+            tag
+        );
+        res.status(200).json({
             blogs: result.blogs,
             totalBlogs: result.total,
             totalPages: Math.ceil(result.total / limit),
@@ -110,4 +132,5 @@ export default {
     patchBlog,
     findBlogById,
     filterBlogsController,
+    filterBlogsBasicUserController,
 }

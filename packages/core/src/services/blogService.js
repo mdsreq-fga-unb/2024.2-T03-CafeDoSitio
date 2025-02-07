@@ -72,3 +72,21 @@ export async function filterBlogs(page = 1, limit = 5, status = "all", title = "
   const response = await axios.get(`${baseURL}/blogFilter?${queryParams.toString()}`);
   return response.data;
 }
+
+export async function filterBlogsBasicUser(page = 1, limit = 5, title = "", tag = "") {
+  const queryParams = new URLSearchParams();
+
+  queryParams.append("page", page);
+  queryParams.append("limit", limit);
+
+  if (title.trim() !== "") {
+    queryParams.append("title", title);
+  }
+
+  if (tag.trim() !== "") {
+    queryParams.append("tag", tag);
+  }
+
+  const response = await axios.get(`${baseURL}/blogFilter/basic?${queryParams.toString()}`);
+  return response.data;
+}

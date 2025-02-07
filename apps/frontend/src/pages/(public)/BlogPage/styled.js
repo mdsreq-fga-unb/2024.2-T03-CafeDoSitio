@@ -141,7 +141,6 @@ export const Section2 = styled.section`
   }
 
   li {
-    background-color: #DA731F; 
     color: white; 
     padding: 8px 10px; 
     border-radius: 5px; 

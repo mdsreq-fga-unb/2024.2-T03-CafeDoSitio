@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Paginacao from '../../../components/Paginacao';
 import BlogInfo from '../../../assets/blog_info.png';
 import CardPost from '../../../components/CardPost';
-import { filterBlogs } from "@familiadositio/core";
+import { filterBlogsBasicUser } from "@familiadositio/core";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"; // CSS do <ToastContainer />
 
@@ -21,12 +21,11 @@ const BlogPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const limit = 2;
-
+  
   useEffect(() => {
-    const fetchBlogs = async () => {
+    const fetchBlogs = async (tag = "") => {
       try {
-        const data = await filterBlogs(currentPage, limit, "publicado", undefined, tagFilter);
-        console.log(data);
+        const data = await filterBlogsBasicUser(currentPage, limit, undefined, tagFilter);
         setBlogs(data.blogs);
         setTotalPages(data.totalPages);
       } catch (err) {
@@ -70,15 +69,19 @@ const BlogPage = () => {
 
       <Section2>
         <div className="posts">
-          {blogs.map((blog) => (
-            <CardPost
-              key={blog._id}
-              titulo={blog.titulo}
-              banner={blog.banner}
-              tag={blog.tag}
-              descricao={blog.conteudo}
-            />
-          ))}
+          {blogs.length > 0 ? (
+            blogs.map((blog) => (
+              <CardPost
+                key={blog._id}
+                titulo={blog.titulo}
+                banner={blog.banner}
+                tag={blog.tag}
+                descricao={blog.conteudo}
+              />
+            ))
+          ) : (
+            <h2>Nenhum post encontrado</h2>
+          )}
         
           {/* Controles de Paginação */}
           <ControlePaginacao>
@@ -105,11 +108,12 @@ const BlogPage = () => {
         <div className="categorias">
           <h2>Categorias</h2>
           <ul>
-            <li>Curiosidades</li>
-            <li>Dicas</li>
-            <li>Notícias</li>
-            <li>Novidades</li>
-            <li>Receitas</li>
+            <li onClick={() => {setTagFilter(""); setCurrentPage(1)}} style={{backgroundColor: tagFilter === "" ? "#2b674b" : "#e97a1c"}}>Todos</li>
+            <li onClick={() => {setTagFilter("curiosidades"); setCurrentPage(1)}} style={{backgroundColor: tagFilter === "curiosidades" ? "#2b674b" : "#e97a1c"}}>Curiosidades</li>
+            <li onClick={() => {setTagFilter("dicas"); setCurrentPage(1)}} style={{backgroundColor: tagFilter === "dicas" ? "#2b674b" : "#e97a1c"}}>Dicas</li>
+            <li onClick={() => {setTagFilter("noticias"); setCurrentPage(1)}} style={{backgroundColor: tagFilter === "noticias" ? "#2b674b" : "#e97a1c"}}>Notícias</li>
+            <li onClick={() => {setTagFilter("novidades"); setCurrentPage(1)}} style={{backgroundColor: tagFilter === "novidades" ? "#2b674b" : "#e97a1c"}}>Novidades</li>
+            <li onClick={() => {setTagFilter("receitas"); setCurrentPage(1)}} style={{backgroundColor: tagFilter === "receitas" ? "#2b674b" : "#e97a1c"}}>Receitas</li>
           </ul>
         </div>
       </Section2>
