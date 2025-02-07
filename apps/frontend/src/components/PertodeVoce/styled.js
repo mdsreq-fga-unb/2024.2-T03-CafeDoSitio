@@ -24,6 +24,20 @@ export const Form = styled.form`
 
 
 `;
+export const TesteButton = styled.button`
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  color: white;
+  background-color: #006343;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #004c2e;
+  }
+`;
 
 
 export const Title = styled.h1`

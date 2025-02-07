@@ -5,17 +5,23 @@ const normalizeString = (str) => {
     return str.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // Remove os acentos
 };
 
+const escapeRegExp = (str) => {
+    return str.replace(/[.*+?^=!:${}()|\[\]\/\\]/g, '\\$&'); // Escapa caracteres especiais
+};
+
 const buscarPorNome = async (nome) => {
     try {
         const nomeNormalizado = normalizeString(nome); // Normaliza a string de busca para encontrar com ou sem acentos
+        const nomeEscapado = escapeRegExp(nomeNormalizado); // Escapa caracteres especiais
         return await Produto.find({
-            nome: { $regex: new RegExp(nomeNormalizado, "i") } // Permite busca sem case-sensitive e sem considerar acentos
+            nome: { $regex: new RegExp(nomeEscapado, "i") } // Permite busca sem case-sensitive e sem considerar acentos
         }).populate("estabelecimentos");
     } catch (error) {
         console.error("Erro ao buscar produto:", error);
         throw new Error("Erro ao buscar produto");
     }
 };
+
 
 
 

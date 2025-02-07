@@ -1,22 +1,26 @@
 import React, { useState, useEffect, useRef } from "react";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
+import Resultados from "../Resultados";
 
 import {
   Title,
   Label,
   Form,
   Button,
-  Input
+  Input,
+  TesteButton
 } from "./styled"
 
 function PertodeVoce() {
   const [location, setLocation] = useState({ lat: null, lng: null });
   const [error, setError] = useState(null);
+  const [produto, setProduto] = useState(""); // Estado para armazenar o nome do produto digitado
+  const [nomeProdutoBusca, setNomeProdutoBusca] = useState(""); // Estado que será passado para Resultados
 
   const mapRef = useRef(null);
   const mapContainerRef = useRef(null);
-  const markerRef = useRef(null); // Referência para o marcador
+  const markerRef = useRef(null);
 
   const handleGetLocation = () => {
     if ("geolocation" in navigator) {
@@ -36,7 +40,10 @@ function PertodeVoce() {
     }
   };
 
-  // Inicializa o mapa apenas uma vez
+  const handleBuscarProduto = () => {
+    setNomeProdutoBusca(produto); // Define o nome do produto a ser buscado
+  };
+
   useEffect(() => {
     if (mapRef.current) return;
 
@@ -48,40 +55,20 @@ function PertodeVoce() {
     }).addTo(mapRef.current);
   }, []);
 
-  // Adiciona um marcador quando a localização estiver disponível
   useEffect(() => {
     if (!mapRef.current || location.lat === null || location.lng === null) return;
 
-    // Remove marcador anterior, se existir
     if (markerRef.current) {
       mapRef.current.removeLayer(markerRef.current);
     }
 
-    // Adiciona novo marcador
     markerRef.current = L.marker([location.lat, location.lng])
       .addTo(mapRef.current)
       .bindTooltip("Você está aqui!", { permanent: false, direction: "top" });
 
-    // Move o mapa para a nova localização
     mapRef.current.setView([location.lat, location.lng], 13);
-  }, [location]); // Roda apenas quando `location` muda
+  }, [location]);
 
-  // return (
-  //   <>
-  //     <div id="map" ref={mapContainerRef} style={{ height: "500px", width: "100%" }} />
-  //     <Form>
-  //     <Title>Perto de Você</Title>
-  //       <Label htmlFor="name" style={{color: "#006343"}}>Onde você quer encontrar a Família do Sítio?</Label>
-  //       <Input type="text" id="name" placeholder="Digitar CEP ou cidade"/>
-  //       <Button type="button" onClick={handleGetLocation}>ou clique aqui para usar a localização atual</Button>
-  //     </Form>
-  //     {error ? (
-  //       <p>{error}</p>
-  //     ) : location.lat && location.lng ? (
-  //       <h2>Latitude {location.lat}, Longitude {location.lng} </h2>
-  //     ) : null}
-  //   </>
-  // );
   return (
     <>
       <div id="map" ref={mapContainerRef} style={{ height: "500px", width: "100%" }} />
@@ -90,12 +77,24 @@ function PertodeVoce() {
         <Label htmlFor="name" style={{color: "#006343"}}>Onde você quer encontrar a Família do Sítio?</Label>
         <Input type="text" id="name" placeholder="Digitar CEP ou cidade"/>
         <Button type="button" onClick={handleGetLocation}>ou clique aqui para usar a localização atual</Button>
-        <Input type="text" id="produto" placeholder="Digitar procuto que deseja encontrar"/>
+
+        {/* Input de busca por produto */}
+        <Input 
+          type="text" 
+          id="produto" 
+          placeholder="Digitar produto que deseja encontrar" 
+          value={produto} 
+          onChange={(e) => setProduto(e.target.value)} 
+        />
+        <TesteButton onClick={handleBuscarProduto}>Buscar produto</TesteButton>
       </Form>
-      {error && <p>{error}</p>}      
+
+      {/* Passa o nomeProdutoBusca para o componente Resultados */}
+      <Resultados nomeProduto={nomeProdutoBusca} />
+
+      {error && <p>{error}</p>}
     </>
   );
 }
-//teste
 
 export default PertodeVoce;
