@@ -23,8 +23,8 @@ function PertodeVoce() {
   const [produto, setProduto] = useState("");
   const [nomeProdutoBusca, setNomeProdutoBusca] = useState("");
   const [cep, setCep] = useState(""); //Guarda o cep que o usuário digitar no campo
-  const [lat, setLat] = useState(0);
-  const [lon, setLon] = useState(0);
+  const [lat, setLat] = useState(null);
+  const [lon, setLon] = useState(null);
 
   // Estado para armazenar os estabelecimentos encontrados
   const [estabelecimentos, setEstabelecimentos] = useState([]);
@@ -124,20 +124,24 @@ function PertodeVoce() {
 
 
   useEffect(() => {
-    if (!mapRef.current) return;
-
+    if (!mapRef.current || lat === null || lon === null) return;
+  
+    // Remover marcador antigo
     if (markerRef.current) {
       mapRef.current.removeLayer(markerRef.current);
     }
-
+  
+    // Adicionar novo marcador
     markerRef.current = L.marker([lat, lon])
       .addTo(mapRef.current)
       .bindTooltip("Você está aqui!", { permanent: false, direction: "top" });
-
+  
+    // Atualizar o centro do mapa para as novas coordenadas
     mapRef.current.setView([lat, lon], 13);
     console.log("Latitude atualizada:", lat);
     console.log("Longitude atualizada:", lon);
-  }, [lat, lon]);
+  }, [lat, lon]); // Executa quando `lat` ou `lon` mudarem
+  
   
 
   // Busca os produtos quando nomeProdutoBusca mudar

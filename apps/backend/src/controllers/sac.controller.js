@@ -62,7 +62,7 @@ const createSac = async (req, res) => {
       : [];
 
     // Envia o e-mail
-    await nodemailerService.send('josuares23@gmail.com', assuntoEmail, emailBody, attachments);
+    await nodemailerService.send(emailSetor, assuntoEmail, emailBody, attachments);
 
     if (req.file) {
       try {
@@ -76,7 +76,7 @@ const createSac = async (req, res) => {
     res.status(200).send({ message: 'Dados salvos com sucesso!', sac: sac });
 
   } catch (err) {
-    res.status(500).send({ message: err.message })
+    res.status(500).send({ message: 'Ocorreu um erro ao enviar o email =>', err: err.message })
   }
 }
 
