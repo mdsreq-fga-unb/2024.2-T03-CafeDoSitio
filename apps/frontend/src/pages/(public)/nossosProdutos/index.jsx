@@ -2,14 +2,11 @@ import Paginacao from "../../../components/Paginacao";
 import ImgContent from "./ImgContent";
 import { Title, Text, DivContainer, DivContainerEncontreNossosProdutos, DivContainerSelosABIC, ImagemSelosABIC, DivContainerTitleSelosABIC, TextSelosABIC } from "./styled";
 
-import imagemCafeAssumPretoConteiner from "../../../assets/DetalhesNossosProdutos/NossosProdutos_assumpreto_1.png";
-import imagemCafeAssumPretoIcone from "../../../assets/DetalhesNossosProdutos/NossosProdutos_assumpreto_2.png";
+import imagemCafeAssumPretoConteiner from "../../../assets/DetalhesNossosProdutos/Nossos-Produtos_assumnovo.png";
 
-import imagemCafeFamiliaSitioConteiner from "../../../assets/DetalhesNossosProdutos/NossosProdutos_familiadositio_1.png";
-import imagemCafeFamiliaSitioIcone from "../../../assets/DetalhesNossosProdutos/NossosProdutos_familiadositio_2.png";
+import imagemCafeFamiliaSitioConteiner from "../../../assets/DetalhesNossosProdutos/NossosProdutos_familiadositio_1novo.png";
 
-import imagemCafeSpecialeConteiner from "../../../assets/DetalhesNossosProdutos/NossosProdutos_speciale_1.png";
-import imagemCafeSpecialeIcone from "../../../assets/DetalhesNossosProdutos/NossosProdutos_speciale_5.png";
+import imagemCafeSpecialeConteiner from "../../../assets/DetalhesNossosProdutos/Nossos-Produtos_specialenovo.png";
 
 import imagemSelosDaABIC from "../../../assets/DetalhesNossosProdutos/NossosProdutosSelosABIC_4.png";
 
@@ -35,7 +32,6 @@ export default function NossosProdutos() {
                 text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod  tincidunt ut laoreet dolore magna"
                 buttonText="Conheça a linha Família do Sítio"
                 backgroundImage={imagemCafeFamiliaSitioConteiner}
-                iconImage={imagemCafeFamiliaSitioIcone}
             >
             </ImgContent>
 
@@ -45,7 +41,6 @@ export default function NossosProdutos() {
                 text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod  tincidunt ut laoreet dolore magna"
                 buttonText="Conheça a linha Speciale Espresso"
                 backgroundImage={imagemCafeSpecialeConteiner}
-                iconImage={imagemCafeSpecialeIcone}
             >
             </ImgContent>
 
@@ -54,7 +49,6 @@ export default function NossosProdutos() {
                 text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod  tincidunt ut laoreet dolore magna"
                 buttonText="Conheça a linha Assum Preto"
                 backgroundImage={imagemCafeAssumPretoConteiner}
-                iconImage={imagemCafeAssumPretoIcone}
                 textColor="black"
             >
             </ImgContent>

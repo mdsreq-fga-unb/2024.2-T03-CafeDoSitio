@@ -45,7 +45,7 @@ export default function NossosProdutosInfo() {
             nome:'FAMÍLIA DO SÍTIO',
             textoCabecalho: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.',
             imgCabecalho: imagemCafeFamiliaSitioConteiner,
-            textoImgCabecalho: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.',
+            textoImgCabecalho: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna',
             produtos: [
                 {
                     img: imagemCafeFamiliaSitioIcone,
@@ -111,7 +111,7 @@ export default function NossosProdutosInfo() {
             nome:' SPECIALE ESPRESSO',
             textoCabecalho: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.',
             imgCabecalho: imagemCafeSpecialeConteiner,
-            textoImgCabecalho: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.',
+            textoImgCabecalho: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna',
             produtos: [
                 {
                     img: imagemCafeSpecialeRegulare,
@@ -162,7 +162,8 @@ export default function NossosProdutosInfo() {
             nome:'ASSUM PRETO',
             textoCabecalho: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.',
             imgCabecalho: imagemCafeAssumPretoConteiner,
-            textoImgCabecalho: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.',
+            istextoImgCabecalhoBlack: true,
+            textoImgCabecalho: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna',
             produtos: [
                 {
                     img: imagemCafeAssumPretoIcone,
@@ -226,7 +227,7 @@ export default function NossosProdutosInfo() {
 
             <ImagemContainer id="imagem-1">
                 <Container>
-                    <TextoDescricao style={{ color: "white" }}>
+                    <TextoDescricao style={{color: conteudoPagina.istextoImgCabecalhoBlack ? 'black': 'white'}}>
                         {conteudoPagina.textoImgCabecalho}
                     </TextoDescricao>
                     <img

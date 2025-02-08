@@ -19,7 +19,6 @@ export default function ImgContent(props) {
                         </BotaoSobreposto>
                     </Link> 
                     <img className="img-background" src={props.backgroundImage} alt="Background image" />
-                    <img className="img-icon" src={props.iconImage} alt="Icone saco cafe" />
                 </Container>
             </ImagemContainer>
         </>

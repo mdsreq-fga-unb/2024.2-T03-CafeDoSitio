@@ -6,6 +6,12 @@ export const Title = styled.h1`
   justify-content: space-between;
   color: #2B674B;
   margin: 2;
+  font-family: "Impact";
+  font-weight: normal;
+
+  @media (max-width: 768px) {
+    font-size: 1.4rem;
+  }
 `;
 
 export const Text = styled.div`
@@ -246,11 +252,11 @@ export const BotaoSobreposto = styled.button`
 export const TextoDescricao = styled.button`
   position: absolute;
   color: white;
-  top: 25px;
-  left: 27%;
+  top: 40px;
+  left: 35%;
   width: 45%;
-  font-size: 1.2vw;
-  font-weight: normal;
+  font-size: 1.9vw;
+  font-weight: 500;
   border: none;
   text-align: left;
   background-color: initial;
