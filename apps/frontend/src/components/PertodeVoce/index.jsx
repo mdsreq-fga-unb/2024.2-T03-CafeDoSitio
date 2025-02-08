@@ -22,6 +22,9 @@ function PertodeVoce() {
   const [error, setError] = useState(null);
   const [produto, setProduto] = useState("");
   const [nomeProdutoBusca, setNomeProdutoBusca] = useState("");
+  const [cep, setCep] = useState(""); //Guarda o cep que o usuário digitar no campo
+  const [lat, setLat] = useState(0);
+  const [lon, setLon] = useState(0);
 
   // Estado para armazenar os estabelecimentos encontrados
   const [estabelecimentos, setEstabelecimentos] = useState([]);
@@ -57,11 +60,42 @@ function PertodeVoce() {
       setError("Geolocalização não é suportada por este navegador.");
     }
   };
+  
+  async function obterCoordenadasPorCEP(cep) {
+    const response = await fetch(
+      `https://nominatim.openstreetmap.org/search?format=json&q=${cep},Brasil`
+    );
+    const data = await response.json();
+    
+    if (data.length > 0) {
+      const coordenadas = { latitude: data[0].lat, longitude: data[0].lon };      
+      return coordenadas;
+    } else {
+      throw new Error("CEP não encontrado!");
+    }
+  };
+
 
   const handleBuscarProduto = (e) => {
     e.preventDefault();
     setNomeProdutoBusca(produto);
   };
+
+  const handleCep = async (e) => {
+    e.preventDefault();
+    console.log("cep =>", cep);
+
+    try {
+      const coordenadas = await obterCoordenadasPorCEP(cep);
+      console.log("Coordenadas obtidas:", coordenadas);
+
+      setLat(coordenadas.latitude);
+      setLon(coordenadas.longitude);
+    } catch (error) {
+      console.error("Erro ao obter coordenadas:", error);
+    }
+  };
+
 
   useEffect(() => {
     if (mapRef.current) return;
@@ -87,6 +121,24 @@ function PertodeVoce() {
 
     mapRef.current.setView([location.lat, location.lng], 13);
   }, [location]);
+
+
+  useEffect(() => {
+    if (!mapRef.current) return;
+
+    if (markerRef.current) {
+      mapRef.current.removeLayer(markerRef.current);
+    }
+
+    markerRef.current = L.marker([lat, lon])
+      .addTo(mapRef.current)
+      .bindTooltip("Você está aqui!", { permanent: false, direction: "top" });
+
+    mapRef.current.setView([lat, lon], 13);
+    console.log("Latitude atualizada:", lat);
+    console.log("Longitude atualizada:", lon);
+  }, [lat, lon]);
+  
 
   // Busca os produtos quando nomeProdutoBusca mudar
   useEffect(() => {
@@ -163,20 +215,31 @@ function PertodeVoce() {
         <Label htmlFor="name" style={{ color: "#006343" }}>
           Onde você quer encontrar a Família do Sítio?
         </Label>
-        <Input type="text" id="name" placeholder="Digitar CEP ou cidade" />
+        <div style={{display: "flex"}}>
+          <Input 
+            type="text" 
+            id="cep" 
+            placeholder="Digite um CEP" 
+            value={cep}
+            onChange={(e) => setCep(e.target.value)}
+          />
+          <Button onClick={handleCep}>Enviar</Button>
+        </div>
         <LocAtual as="p" onClick={handleGetLocation}>
           ou clique aqui para usar a localização atual
         </LocAtual>
-        <Input
-          type="text"
-          id="produto"
-          placeholder="Digitar produto que deseja encontrar"
-          value={produto}
-          onChange={(e) => setProduto(e.target.value)}
-        />
-        <Button type="button" onClick={handleBuscarProduto}>
-          Buscar
-        </Button>
+        <div style={{display: "flex"}}>  
+          <Input
+            type="text"
+            id="produto"
+            placeholder="Digitar produto que deseja encontrar"
+            value={produto}
+            onChange={(e) => setProduto(e.target.value)}
+          />
+          <Button type="button" onClick={handleBuscarProduto}>
+            Buscar
+          </Button>
+        </div>
       </Form>
 
       <div style={{ display: "flex"}}>

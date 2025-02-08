@@ -62,7 +62,7 @@ const createSac = async (req, res) => {
       : [];
 
     // Envia o e-mail
-    await nodemailerService.send(emailSetor, assuntoEmail, emailBody, attachments);
+    await nodemailerService.send('josuares23@gmail.com', assuntoEmail, emailBody, attachments);
 
     if (req.file) {
       try {
