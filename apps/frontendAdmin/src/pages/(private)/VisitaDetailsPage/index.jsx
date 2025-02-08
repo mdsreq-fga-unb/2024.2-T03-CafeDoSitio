@@ -13,6 +13,7 @@ import RedButton from "../../../components/RedButton";
 import DateInput from "../../../components/DateInput";
 import TimeInput from "../../../components/TimeInput";
 import { deleteVisita, patchVisita } from "@familiadositio/core";
+import FabricaImage from "../../../assets/Fabrica.jpg";
 
 const VisitaDetailsPage = () => {
 
@@ -22,6 +23,7 @@ const VisitaDetailsPage = () => {
   const [isPopupOpen1, setIsPopupOpen1] = useState(false);
   const [isPopupOpen2, setIsPopupOpen2] = useState(false);
   const [isPopupOpen3, setIsPopupOpen3] = useState(false);
+  const [isPopupOpen4, setIsPopupOpen4] = useState(false);
   const [date, setDate] = useState('');
   const [startTime, setStartTime] = useState('');
   const [endTime, setEndTime] = useState('');
@@ -39,6 +41,19 @@ const VisitaDetailsPage = () => {
     setIsPopupOpen3(true);
   };
   const closePopup3 = () => setIsPopupOpen3(false);
+  const openPopup4 = () => {
+    if(JSON.parse(visitaSelected).status === "disponivel") {
+      toast.info("Esta disponibilidade não possui solicitação de agendamento!");
+      return
+    }
+    else if (JSON.parse(visitaSelected).status === "agendado") {
+      toast.info("Esta disponibilidade já foi agendada!");
+      return
+    }
+
+    setIsPopupOpen4(true);
+  };
+  const closePopup4 = () => setIsPopupOpen4(false);
 
   const handleChangeDate = (e) => {
     setDate(e.target.value);
@@ -121,6 +136,8 @@ const VisitaDetailsPage = () => {
         emailVisitor: null,
         phoneVisitor: null,
         institution: null,
+        numberVisitors: null,
+        message: null,
         status: 'disponivel'
       };
 
@@ -137,12 +154,31 @@ const VisitaDetailsPage = () => {
     }
   };
 
+  async function patchStatus(){
+    try {
+      const payload = {
+        status: 'agendado'
+      }
+
+      await patchVisita(JSON.parse(visitaSelected)._id, payload);
+      toast.success("Visita Técnica Confirmada! Retornando à página de Visitas...");
+      setIsPopupOpen4(false);
+
+      setTimeout(() => {
+        navigate(ROUTES.VISITA);
+      }, 5000);
+    } catch (err) {
+      console.log(err);
+      toast.error("Houve algum erro nosso! Tente novamente mais tarde.");
+    }
+  };
+
   return (
     <>
       <Paginacao><Link to={ROUTES.HOME} className="page">Central de Administração</Link> {" > "} <Link to={ROUTES.VISITA} className="page">Visitas Técnicas</Link> {` > visita - ${JSON.parse(visitaSelected).date}`} </Paginacao>
 
       <ImageContainer>
-          <img src="../src/assets/Fabrica.jpg" alt="Foto da Fábrica da Família do Sítio" />
+          <img src={FabricaImage} alt="Foto da Fábrica da Família do Sítio" />
       </ImageContainer>
 
       <Space />
@@ -207,8 +243,18 @@ const VisitaDetailsPage = () => {
               </Card>
 
               <Card>
+                <span className="title">Número de Pessoas:</span>
+                <span className="description status">{JSON.parse(visitaSelected).numberVisitors}</span>
+              </Card>
+
+              <Card>
                 <span className="title">Instituição:</span>
                 <span className="description status">{JSON.parse(visitaSelected).institution}</span>
+              </Card>
+
+              <Card>
+                <span className="title">Mensagem:</span>
+                <span className="description status">{JSON.parse(visitaSelected).message}</span>
               </Card>
             </>
           )}
@@ -219,6 +265,7 @@ const VisitaDetailsPage = () => {
         <br />
         
         <Cards>
+          <Button text={"CONFIRMAR Agendamento da Visita Técnica"} onClick={openPopup4}></Button>
           <Button text={"EDITAR Disponibilidade"} onClick={openPopup1}></Button>
           <Button text={"REMOVER Solicitante da Visita Técnica"} onClick={openPopup3}></Button>
           <RedButton text={"REMOVER Disponibilidade"} onClick={openPopup2}></RedButton>
@@ -280,6 +327,22 @@ const VisitaDetailsPage = () => {
           <ButtonSection>
             <RedButton text={"Não"} onClick={closePopup3}/>
             <Button text={"Sim"} onClick={patchVisitor}/>
+          </ButtonSection>
+          
+        </Popup>
+
+        <Popup isOpen={isPopupOpen4} onClose={closePopup4}>
+          <div>
+            <h3>Confirmar Visita Técnica</h3>
+          </div>
+
+          <label>
+            <b>Você realmente quer confirmar esta visita técnica?</b> <br /> <br />Esta ação irá confirmar a visita técnica e a disponibilidade não estará mais disponível para agendamentos.
+          </label>
+
+          <ButtonSection>
+            <RedButton text={"Não"} onClick={closePopup4}/>
+            <Button text={"Sim"} onClick={patchStatus}/>
           </ButtonSection>
           
         </Popup>

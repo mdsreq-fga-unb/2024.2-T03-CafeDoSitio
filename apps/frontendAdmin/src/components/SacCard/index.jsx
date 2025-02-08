@@ -44,7 +44,7 @@ export function SacCard({ sacs }) {
                 <p><strong>Telefone:</strong> {sacs.telefone}</p>
             </CardInfo>
             <CardMessage>{sacs.mensagem}</CardMessage>
-            <Id><strong>Identificador: </strong>{sacs.identificador}</Id>
+            <Id><strong>Identificador: </strong>{sacs.incrementalId}</Id>
         </CardContainer>
     );
 }

@@ -1,6 +1,12 @@
 import axios from "axios";
+<<<<<<< HEAD
 
 const baseURL = 'http://localhost:3002';
+=======
+import { ROUTE } from "./RouteConstant";
+
+const baseURL = ROUTE.PROD;
+>>>>>>> 83f13502811799857d938cd2a7694af4c6aded76
 
 export function createVisita(body) {
 

@@ -4,33 +4,22 @@ import {
   Title,
   Description,
   Button,
-  Image,
-  Data,
+  Image
 } from "./styled"
 import { DivContainer } from "../../pages/(public)/nossaHistoria/styled";
-import cafe from "../../assets/cafe.png"
 
-
-const BigPost = ({title, description, imagelink, date}) => {
+const BigPost = ({title, description, imagelink}) => {
   return (
-    <Content >
-      <div className="section1">
+    <Content>
+      <div>
         <Title>{title}</Title>
-        <Description>
-          Lorem ipsum dolondus sint rerum ex maiores placeat, corporis odit cumque voluptate cum harum totam quibusdam!
-        </Description>
-        <div className="info-section1">
-          <Button>Ler Mais</Button>
-          <Data>
-            Janeiro 12 de 2025
-          </Data>
-        </div>
+        <Description>{description}</Description>
+        <Button>Ler Mais</Button>
       </div>
 
-      <div className="section2">
-        <Image src = {cafe}/>
+      <div>
+        <Image src = {imagelink}/>
       </div>
-
     </Content>
   );
 };

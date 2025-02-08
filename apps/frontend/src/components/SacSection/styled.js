@@ -3,7 +3,11 @@ import styled from "styled-components";
 export const SacSection = styled.section`
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
   margin: 10vh 8vh;
+=======
+  margin-top: 20px;
+>>>>>>> 83f13502811799857d938cd2a7694af4c6aded76
   width: auto;
   gap: 3rem;
   background-color: #DA731F;
@@ -52,6 +56,10 @@ export const Location = styled.section`
     font-size: 1.2rem;
     color: #fff;
     line-height: 1.5;
+<<<<<<< HEAD
+=======
+    font-family: 'Myriad Pro', sans-serif;
+>>>>>>> 83f13502811799857d938cd2a7694af4c6aded76
   }
 
   @media(max-width: 768px){
@@ -74,6 +82,10 @@ export const Form = styled.form`
   h5 {
     font-weight: 300;
     font-size: 1rem;
+<<<<<<< HEAD
+=======
+    font-family: 'Myriad Pro', sans-serif;
+>>>>>>> 83f13502811799857d938cd2a7694af4c6aded76
   }
 
   @media(max-width: 768px){
@@ -96,6 +108,10 @@ export const Label = styled.label`
   font-size: 1rem;
   font-weight: bold;
   color: #333;
+<<<<<<< HEAD
+=======
+  font-family: 'Myriad Pro', sans-serif;
+>>>>>>> 83f13502811799857d938cd2a7694af4c6aded76
 `;
 
 
@@ -105,6 +121,10 @@ export const Input = styled.input`
   border: 1px solid #ccc;
   border-radius: 4px;
   outline: none;
+<<<<<<< HEAD
+=======
+  font-family: 'Myriad Pro', sans-serif;
+>>>>>>> 83f13502811799857d938cd2a7694af4c6aded76
 
   &:focus {
     border-color: #006343;
@@ -119,6 +139,10 @@ export const TextArea = styled.textarea`
   border-radius: 4px;
   resize: vertical;
   outline: none;
+<<<<<<< HEAD
+=======
+  font-family: 'Myriad Pro', sans-serif;
+>>>>>>> 83f13502811799857d938cd2a7694af4c6aded76
 
   &:focus {
     border-color: #006343;
@@ -135,6 +159,11 @@ export const Button = styled.button`
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+<<<<<<< HEAD
+=======
+  font-family: 'Myriad Pro', sans-serif;
+  font-weight: bold;
+>>>>>>> 83f13502811799857d938cd2a7694af4c6aded76
 
   &:hover {
     background-color: #004c2e;
@@ -147,6 +176,10 @@ export const Select = styled.select`
   margin-bottom: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
+<<<<<<< HEAD
+=======
+  font-family: 'Myriad Pro', sans-serif;
+>>>>>>> 83f13502811799857d938cd2a7694af4c6aded76
 `;
 
 
@@ -183,4 +216,8 @@ export const FileName = styled.span`
   margin-top: 0.5rem;
   font-size: 0.9rem;
   color: #555;
+<<<<<<< HEAD
+=======
+  font-family: 'Myriad Pro', sans-serif;
+>>>>>>> 83f13502811799857d938cd2a7694af4c6aded76
 `;

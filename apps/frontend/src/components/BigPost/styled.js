@@ -5,30 +5,10 @@ export const Content = styled.div`
   width: 100%;
   height: 350px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  position: absolute;
-  left: 0;
-  top: 242px;
-  padding-inline: 65px;
-  padding-block: 30px;
-
-  .section1 {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    width: 60%;
-  }
-  
-  .info-section1 {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
+  flex-direction: column;
 `;
 
 export const Title = styled.h1`
-  margin: 0;
   color: #111;
   font-family: 'Myriad Pro', sans-serif;
   font-size: 2rem;
@@ -38,7 +18,7 @@ export const Title = styled.h1`
 export const Description = styled.span`
   color: #555;
   font-family: 'Myriad Pro', sans-serif;
-  font-size: 1rem;
+  font-size: 15rem;
 `
 
 export const Button = styled.button`
@@ -50,7 +30,6 @@ export const Button = styled.button`
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  width: 170px;
 
   &:hover {
     background-color: #004c2e;
@@ -58,15 +37,6 @@ export const Button = styled.button`
 `;
 
 export const Image = styled.img`
-  width: 350px; 
-  height: 230px; 
-  object-fit: cover;
+  width: 40vw;
   margin-block: 3px;
-  border-radius: 3px;
 `
-
-export const Data = styled.span`
-  color: #555;
-  font-family: 'Myriad Pro', sans-serif;
-  font-size: 0.8rem;
-`;
