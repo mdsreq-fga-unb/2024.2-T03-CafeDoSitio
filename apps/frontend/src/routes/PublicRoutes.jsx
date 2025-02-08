@@ -13,21 +13,24 @@ import PublicLayout from "../components/PublicLayout";
 const PublicRoutes = () => {
   const location = useLocation();
 
-  // Verifica se a rota atual 'sítio_verde' está ativa
-  // se sim, elimina as bordas laterais da página
+  // Remove bordas laterais na página do Sítio Verde
   const isSitioVerdeActive = location.pathname === ROUTES.SITIO_VERDE;
 
+  // Esconde o footer na página MainPage
+  const isMainPageActive = location.pathname === ROUTES.MAIN;
+
   return (
-    <PublicLayout fullWidth={isSitioVerdeActive}>
+    <PublicLayout 
+      fullWidth={isSitioVerdeActive}  // Sem bordas no Sítio Verde
+      hideFooter={isMainPageActive}   // Sem footer na MainPage
+    >
       <Routes>
-
-        <Route path={ROUTES.BLOG} element={<><BlogPage /></>} />
-        <Route path={ROUTES.CONTATOS} element={<><ContactPage /></>} />
-        <Route path={ROUTES.HISTORIA} element={<><NossaHistoria /></>} />
+        <Route path={ROUTES.BLOG} element={<BlogPage />} />
+        <Route path={ROUTES.CONTATOS} element={<ContactPage />} />
+        <Route path={ROUTES.HISTORIA} element={<NossaHistoria />} />
         <Route path={ROUTES.SITIO_VERDE} element={<SocialActionsPage />} />
-        <Route path={ROUTES.VISITA} element={<><VisitaFabricaPage /></>} />
-        <Route path={ROUTES.MAIN} element={<><MainPage /></>} />
-
+        <Route path={ROUTES.VISITA} element={<VisitaFabricaPage />} />
+        <Route path={ROUTES.MAIN} element={<MainPage />} />
       </Routes>
     </PublicLayout>
   );
