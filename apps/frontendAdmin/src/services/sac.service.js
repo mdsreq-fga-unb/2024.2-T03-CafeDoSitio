@@ -1,13 +1,8 @@
 import axios from "axios";
 import { toast } from 'react-toastify';
-<<<<<<< HEAD
-
-const baseURL = "http://localhost:3002/sac";
-=======
 import { ROUTE } from './RouteConstant';
 
 const baseURL = ROUTE.PROD + "/sac";
->>>>>>> 83f13502811799857d938cd2a7694af4c6aded76
 
 const getAllSacs = async (tag) => {
     try {
