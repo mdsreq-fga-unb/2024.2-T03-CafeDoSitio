@@ -1,14 +1,4 @@
 import axios from 'axios';
-<<<<<<< HEAD
-
-const baseURL = 'http://localhost:3002';
-
-export function createUser(name, email, password){
-  const body = {
-    name: name,
-    email: email,
-    password: password,
-=======
 import { ROUTE } from './RouteConstant';
 
 const baseURL = ROUTE.PROD;
@@ -18,7 +8,6 @@ export function createUser(email, sector){
     name: "Esperando Login do Usuário...",
     email: email,
     sector: sector,
->>>>>>> 83f13502811799857d938cd2a7694af4c6aded76
   }
 
   const response = axios.post(
@@ -26,11 +15,7 @@ export function createUser(email, sector){
     body,
     {
       headers: {
-<<<<<<< HEAD
-        Authorization: `Bearer ${sessionStorage.get("authToken")}`,
-=======
         Authorization: `Bearer ${sessionStorage.getItem("authToken")}`,
->>>>>>> 83f13502811799857d938cd2a7694af4c6aded76
       }
     }
   );
@@ -46,8 +31,6 @@ export function loginUser(email, password){
 
   const response = axios.post(`${baseURL}/user/loginUser`, body);
   return response;
-<<<<<<< HEAD
-=======
 };
 
 export function findAllUser(){
@@ -107,5 +90,4 @@ export function findByIdUserAndUpdate(id, updateBody){
   );
 
   return response;
->>>>>>> 83f13502811799857d938cd2a7694af4c6aded76
 }
