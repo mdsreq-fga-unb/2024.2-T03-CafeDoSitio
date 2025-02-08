@@ -22,7 +22,7 @@ function PertodeVoce() {
   const [error, setError] = useState(null);
   const [produto, setProduto] = useState("");
   const [nomeProdutoBusca, setNomeProdutoBusca] = useState("");
-  const [cep, setCep] = useState(""); //Guarda o cep que o usuário digitar no campo
+  const [cep, setCep] = useState(""); // Guarda o cep que o usuário digitar no campo
   const [lat, setLat] = useState(null);
   const [lon, setLon] = useState(null);
 
@@ -60,7 +60,7 @@ function PertodeVoce() {
       setError("Geolocalização não é suportada por este navegador.");
     }
   };
-  
+
   async function obterCoordenadasPorCEP(cep) {
     const response = await fetch(
       `https://nominatim.openstreetmap.org/search?format=json&q=${cep},Brasil`
@@ -74,7 +74,6 @@ function PertodeVoce() {
       throw new Error("CEP não encontrado!");
     }
   };
-
 
   const handleBuscarProduto = (e) => {
     e.preventDefault();
@@ -96,7 +95,7 @@ function PertodeVoce() {
     }
   };
 
-
+  //Quando a pagina é carregada, esse useEffect centraliza o mapa em Brasília
   useEffect(() => {
     if (mapRef.current) return;
 
@@ -107,42 +106,6 @@ function PertodeVoce() {
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
     }).addTo(mapRef.current);
   }, []);
-
-  useEffect(() => {
-    if (!mapRef.current || location.lat === null || location.lng === null) return;
-
-    if (markerRef.current) {
-      mapRef.current.removeLayer(markerRef.current);
-    }
-
-    markerRef.current = L.marker([location.lat, location.lng])
-      .addTo(mapRef.current)
-      .bindTooltip("Você está aqui!", { permanent: false, direction: "top" });
-
-    mapRef.current.setView([location.lat, location.lng], 13);
-  }, [location]);
-
-
-  useEffect(() => {
-    if (!mapRef.current || lat === null || lon === null) return;
-  
-    // Remover marcador antigo
-    if (markerRef.current) {
-      mapRef.current.removeLayer(markerRef.current);
-    }
-  
-    // Adicionar novo marcador
-    markerRef.current = L.marker([lat, lon])
-      .addTo(mapRef.current)
-      .bindTooltip("Você está aqui!", { permanent: false, direction: "top" });
-  
-    // Atualizar o centro do mapa para as novas coordenadas
-    mapRef.current.setView([lat, lon], 13);
-    console.log("Latitude atualizada:", lat);
-    console.log("Longitude atualizada:", lon);
-  }, [lat, lon]); // Executa quando `lat` ou `lon` mudarem
-  
-  
 
   // Busca os produtos quando nomeProdutoBusca mudar
   useEffect(() => {
@@ -172,32 +135,9 @@ function PertodeVoce() {
     fetchData();
   }, [nomeProdutoBusca]);
 
+  // Quando o usuario permite a localização, 'location' fica verdadeiro e muda de estado
+  // Isso aciona esse useEffect, que coloca um marcador na localização do usuario
   useEffect(() => {
-    if (!mapRef.current) return;
-  
-    // Remover marcadores antigos antes de adicionar novos
-    mapRef.current.eachLayer((layer) => {
-      if (layer instanceof L.Marker) {
-        mapRef.current.removeLayer(layer);
-      }
-    });
-  
-    // Adicionar novos marcadores dos estabelecimentos
-    estabelecimentos.forEach((estab) => {
-      if (estab.latitude && estab.longitude) {
-        L.marker([estab.latitude, estab.longitude],{ icon: customIcon })
-          .addTo(mapRef.current)
-          .bindPopup(`<b>${estab.nomeEstabelecimento}</b><br>${estab.rua}, ${estab.bairro} - ${estab.estado}`);
-      }
-    });
-  
-    // Ajustar a visualização do mapa para incluir os novos marcadores
-    if (estabelecimentos.length > 0) {
-      const bounds = L.latLngBounds(
-        estabelecimentos.map((estab) => [estab.latitude, estab.longitude])
-      );
-      mapRef.current.fitBounds(bounds);
-    }
     if (!mapRef.current || location.lat === null || location.lng === null) return;
 
     if (markerRef.current) {
@@ -209,9 +149,68 @@ function PertodeVoce() {
       .bindTooltip("Você está aqui!", { permanent: false, direction: "top" });
 
     mapRef.current.setView([location.lat, location.lng], 13);
-  }, [estabelecimentos, location]); // Executa quando `estabelecimentos` mudar
+  }, [location]);
 
+  useEffect(() => {
+    if (!mapRef.current) return;
   
+    // Remover marcadores antigos antes de adicionar novos
+    mapRef.current.eachLayer((layer) => {
+      if (layer instanceof L.Marker) {
+        mapRef.current.removeLayer(layer);
+      }
+    });
+  
+    const locations = [];
+  
+    // Adicionar novos marcadores dos estabelecimentos
+    estabelecimentos.forEach((estab) => {
+      if (estab.latitude && estab.longitude) {
+        L.marker([estab.latitude, estab.longitude], { icon: customIcon })
+          .addTo(mapRef.current)
+          .bindPopup(`<b>${estab.nomeEstabelecimento}</b><br>${estab.rua}, ${estab.bairro} - ${estab.estado}`);
+        locations.push([estab.latitude, estab.longitude]); // Adicionar coordenadas dos estabelecimentos
+      }
+    });
+  
+    // Adicionar o marcador da localização do usuário
+    if (location.lat !== null && location.lng !== null) {
+      if (markerRef.current) {
+        mapRef.current.removeLayer(markerRef.current);
+      }
+  
+      markerRef.current = L.marker([location.lat, location.lng])
+        .addTo(mapRef.current)
+        .bindTooltip("Você está aqui!", { permanent: false, direction: "top" });
+      locations.push([location.lat, location.lng]); // Adicionar coordenadas do usuário
+    }
+  
+    // Adicionar o marcador do CEP, se existir
+    if (lat !== null && lon !== null) {
+      if (markerRef.current) {
+        mapRef.current.removeLayer(markerRef.current); // Remover o marcador anterior
+      }
+  
+      markerRef.current = L.marker([lat, lon])
+        .addTo(mapRef.current)
+        .bindTooltip("Localização do CEP", { permanent: false, direction: "top" });
+      locations.push([lat, lon]); // Adicionar coordenadas do CEP
+    }
+  
+    // Ajustar a visualização do mapa para incluir tanto os estabelecimentos quanto a localização do usuário ou o CEP
+    if (locations.length > 0) {
+      const bounds = L.latLngBounds(locations);
+      mapRef.current.fitBounds(bounds); // Ajusta a visualização para incluir todos os pontos
+    }
+  
+  }, [estabelecimentos, location, lat, lon]); // Executa quando `estabelecimentos`, `location`, `lat` ou `lon` mudarem
+
+  // Função para alternar para a localização atual
+  const handleLocationAtual = () => {
+    setLat(null); // Limpa a localização do CEP
+    handleGetLocation(); // Atualiza a localização do usuário
+  };
+
   return (
     <>
       <Form>
@@ -219,7 +218,7 @@ function PertodeVoce() {
         <Label htmlFor="name" style={{ color: "#006343" }}>
           Onde você quer encontrar a Família do Sítio?
         </Label>
-        <div style={{display: "flex"}}>
+        <div style={{ display: "flex" }}>
           <Input 
             type="text" 
             id="cep" 
@@ -229,10 +228,10 @@ function PertodeVoce() {
           />
           <Button onClick={handleCep}>Enviar</Button>
         </div>
-        <LocAtual as="p" onClick={handleGetLocation}>
+        <LocAtual as="p" onClick={handleLocationAtual}>
           ou clique aqui para usar a localização atual
         </LocAtual>
-        <div style={{display: "flex"}}>  
+        <div style={{ display: "flex" }}>
           <Input
             type="text"
             id="produto"
@@ -246,7 +245,7 @@ function PertodeVoce() {
         </div>
       </Form>
 
-      <div style={{ display: "flex"}}>
+      <div style={{ display: "flex" }}>
         <div
           id="map"
           ref={mapContainerRef}
