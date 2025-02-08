@@ -73,9 +73,11 @@ const BlogViewPage = () => {
 
       <Helmet>
         <title>{blog.titulo} - Família do Sítio</title>
-        <meta name="description" content={blog.conteudo.substring(0, 150)} />
+        <meta name="description" content={blog.metaDescription.substring(0, 150)} />
+        <meta name="keywords" content={blog.keywords} />
         <meta property="og:title" content={blog.titulo} />
-        <meta property="og:description" content={blog.conteudo.substring(0, 150)} />
+        <meta property="og:description" content={blog.metaDescription.substring(0, 150)} />
+        <meta property="og:url" content={`https://familiadositio.com.br/blog/${blog.slug}`} />
         <meta property="og:image" content={blog.banner} />
         <meta property="og:type" content="article" />
         <meta property="og:date" content={blog.dataHoraPublicacao} />

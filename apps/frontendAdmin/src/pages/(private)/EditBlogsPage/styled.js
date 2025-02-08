@@ -120,6 +120,27 @@ export const EdicaoBlog = styled.div`
     background-color: #f5f5f5;
     border: 1px solid #006343;
   }
+
+  .metaDescription {
+    width: 100%;
+    min-height: 200px; /* Altura inicial */
+    max-height: 400px; /* Opcional: definir um limite */
+    overflow-y: hidden; /* Evita scroll interno */
+    font-size: 1rem;
+    color: #333;
+    background-color: #f5f5f5;
+    font-family: 'Myriad Pro', sans-serif;
+    border: 1px solid #006343;
+    padding-inline: 20px;
+    outline: none;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow-wrap: break-word;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    resize: none;
+  }
   
   .urlInput {
     width: 100%;
@@ -140,6 +161,27 @@ export const EdicaoBlog = styled.div`
     resize: none;
     background-color: #f5f5f5;
     border: 1px solid #006343;
+  }
+
+  .tagsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
+  .tag {
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .removeIcon {
+    cursor: pointer;
+    color: red;
   }
 
   .urlResult {

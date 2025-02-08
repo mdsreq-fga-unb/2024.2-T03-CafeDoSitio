@@ -30,6 +30,15 @@ const BlogSchema = new mongoose.Schema({
         required: false,
         unique: true,
     },
+    metaDescription: {
+        type: String,
+        required: false,
+    },
+    keywords: {
+        type: [String],
+        required: false,
+        default: [],
+    },
 }, {timestamps: true});
 
 const Blog = mongoose.model('Blog', BlogSchema);

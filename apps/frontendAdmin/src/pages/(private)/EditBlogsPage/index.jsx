@@ -5,7 +5,7 @@ import { data, Link } from "react-router-dom";
 import { ROUTES } from "../../../routes/RoutesConstants";
 import { findBlogById, patchBlog, base64Encode, deleteBlog } from "@familiadositio/core";
 import { toast, ToastContainer } from "react-toastify";
-import { FaInfoCircle } from "react-icons/fa";
+import { FaInfoCircle, FaTimes } from "react-icons/fa";
 import "react-toastify/dist/ReactToastify.css"; // CSS do <ToastContainer />
 import ReactQuill from "react-quill";
 import 'quill/dist/quill.snow.css';
@@ -14,6 +14,7 @@ import RedButton from "../../../components/RedButton";
 import Popup from "../../../components/PopUp";
 import { useNavigate } from "react-router-dom";
 import DOMPurify from "dompurify";
+import SEOPreview from "../../../components/SEOPreview";
 
 const EditBlogsPage = () => {
 
@@ -29,6 +30,9 @@ const EditBlogsPage = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [showPopupDelete, setShowPopupDelete] = useState(false);
   const [slug, setSlug] = useState("");
+  const [metaDescription, setMetaDescription] = useState("");
+  const [keywords, setKeywords] = useState([]);
+  const [inputKeywordValue, setInputKeywordValue] = useState("");
 
   const closePopup = () => {
     setShowPopup(false);
@@ -48,11 +52,48 @@ const EditBlogsPage = () => {
     setTitulo(e.target.value);
   };
 
+  const handleMetaDescription = (e) => {
+    const value = e.target.value.slice(0, 160);
+    setMetaDescription(value);
+  };
+
+  const handleBlurMetaDescription = () => {
+    if (metaDescription !== blog.metaDescription) {
+      updateBlog({ metaDescription: metaDescription });
+    }
+  };
+
+  const handleKeywords = (e) => {
+    setInputKeywordValue(e.target.value);
+  };
+
   const handleCategoria = (e) => {
     setCategoria(e.target.value);
     if (e.target.value !== blog.categoria) {
       updateBlog({ tag: e.target.value });
     }
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter" || e.key === ",") {
+      e.preventDefault();
+      const trimmedValue = inputKeywordValue.trim();
+
+      if (trimmedValue && !keywords.includes(trimmedValue)) {
+        setKeywords([...keywords, trimmedValue]);
+      }
+      setInputKeywordValue("");
+    }
+  };
+
+  const onBlurKeywords = () => {
+    if (keywords !== blog.keywords) {
+      updateBlog({ keywords: keywords });
+    }
+  };
+
+  const removeKeyword = (index) => {
+    setKeywords(keywords.filter((_, i) => i !== index));
   };
 
   const handleConteudo = (e) => {
@@ -82,7 +123,7 @@ const EditBlogsPage = () => {
 
   const handlePublish = () => {
     if (blog.status === "rascunho") {
-      if (conteudo === "" || titulo === "" || categoria === "0" || conteudo === "<p><br></p>" || conteudo === undefined || categoria === undefined || titulo === undefined || slug === "" || slug === undefined) {
+      if (conteudo === "" || titulo === "" || categoria === "0" || conteudo === "<p><br></p>" || conteudo === undefined || categoria === undefined || titulo === undefined || slug === "" || slug === undefined || metaDescription === "" || metaDescription === undefined || keywords.length === 0) {
         toast.error("Preencha todas as informações do post antes de publicar!");
         setShowPopup(false);
       } else {
@@ -162,6 +203,8 @@ const EditBlogsPage = () => {
       setConteudo(data.data.blog.conteudo);
       setCategoria(data.data.blog.tag);
       setSlug(data.data.blog.slug);
+      setMetaDescription(data.data.blog.metaDescription);
+      setKeywords(data.data.blog.keywords);
     } catch (err) {
       toast.error(
         "Erro ao buscar o blog selecionado. Tente novamente mais tarde!"
@@ -256,6 +299,48 @@ const EditBlogsPage = () => {
           value={`https://familiadositio.com.br/blog/${!slug ? ("{SLUG}") : (slug)}.com.br`}
           disabled
         />
+
+        <div className="infoUrl">
+          <FaInfoCircle className="icon"/>
+          <span>Insira palavras chaves para a sua publicação (Pressione Enter ou , para adicionar)</span>
+        </div>
+        <input
+          type="text"
+          className="urlInput"
+          value={inputKeywordValue}
+          onChange={handleKeywords}
+          onKeyDown={handleKeyDown}
+          onBlur={onBlurKeywords}
+          placeholder="Digite e pressione Enter..."
+        />
+        <div className="tagsContainer">
+          {keywords.map((keyword, index) => (
+            <span key={index} className="tag">
+              {keyword}
+              <FaTimes className="removeIcon" onClick={() => removeKeyword(index)} />
+            </span>
+          ))}
+        </div>
+        
+
+        <div className="infoUrl">
+          <FaInfoCircle className="icon"/>
+          <span>Personalize a meta-descrição para sua publicação (Máximo de 160 caracteres)</span>
+        </div>
+        <textarea
+          type="text"
+          className="metaDescription"
+          value={metaDescription}
+          onChange={handleMetaDescription}
+          onBlur={handleBlurMetaDescription}
+          placeholder="Personalize sua meta descrição"
+        />
+
+        <div className="infoUrl">
+          <FaInfoCircle className="icon"/>
+          <span>Preview de sua publicação nos buscadores</span>
+        </div>
+        <SEOPreview title={titulo} slug={slug} description={metaDescription || "Aqui vai sua meta descrição"} />
           
       </EdicaoBlog>
 

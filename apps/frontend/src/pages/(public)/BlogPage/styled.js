@@ -80,13 +80,12 @@ export const Section1 = styled.section`
 
   @media (max-width: 900px) {
     .text-container {
-      max-width: 80%;
-      right: 10px;
+      width: 70%;
+      justify-content: end;
       bottom: 10px;
 
       h2 {
-        font-size: 1.5rem;
-        text-align: center;
+        font-size: 4vw !important;
       }
     }
   }
