@@ -1,257 +1,864 @@
-\[Nota: O gabarito a seguir é fornecido para utilização com o Rational
-Unified Process. O texto em azul exibido entre colchetes e em itálico
-(style=InfoBlue) foi incluído para orientar o autor e deve ser excluído
-antes da publicação do documento. Um parágrafo digitado após esse estilo
-será automaticamente definido como normal (style=Body Text).\]
+# Casos de Uso - Connect Care
+
+> 📝 Um Caso de Uso representa uma interação entre um ator (usuário ou outro sistema) e o sistema, com o objetivo de alcançar um resultado específico. Ele descreve como o sistema deve se comportar em resposta a ações do usuário.
+
+No contexto do aplicativo Connect Care, a técnica foi utilizada como um facilitador no desenvolvimento do software. Nesse sentido, seguimos os passos:
+
+**1. Identificação dos atores**, tais como: Paciente, Agente comunitário, Administrador do sistema, Organizações parceiras, Sistema de geolocalização e Profissional de saúde;
+
+**2. Mapeamento dos Casos de Uso**: A partir de Verificação com a equipe de desenvolvimento;
+
+**3. Desenvolvimento do diagrama**: feito no padrão UML;
+
+**4. Inclusão das relações de Inclusão e Extensão;**
+
+**5. Revisão e análise.**
+
+
+## Diagrama de Casos de Uso realizado para a Connect Care:
+
+
+![Diagrama de Casos de Uso](../../../assets/CasosDeUso.png)
+
+_Fonte: Elaboração própria_
+
+## Especificação de Casos de Uso
+
+
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'Agendar')">Agendar serviço de saúde</button>
+  <button class="tablinks" onclick="openTab(event, 'X')">Caso 2</button>
+  <button class="tablinks" onclick="openTab(event, 'Y')">Caso 3</button>
+  <button class="tablinks" onclick="openTab(event, 'Z')">Caso 4</button>
+  <button class="tablinks" onclick="openTab(event, 'A')">Caso 5</button>
+  <button class="tablinks" onclick="openTab(event, 'B')">Caso 6</button>
+</div>
+
+<div id="Agendar" class="tabcontent">
+
+  <h2>UC - Realizar Pré-Agendamento</h2>
+
+  <h3>Especificação de Caso de Uso</h3>
+  <h3>Histórico de Revisão</h3>
+  <table>
+      <tr>
+          <th>Data</th>
+          <th>Autor</th>
+          <th>Modificações</th>
+          <th>Versão</th>
+      </tr>
+      <tr>
+          <td>24/04/2022</td>
+          <td>Laís Portela</td>
+          <td>Adicionando caso de uso no documento</td>
+          <td>1.0</td>
+      </tr>
+      <tr>
+          <td>26/04/2022</td>
+          <td>Laís Portela</td>
+          <td>Revisão do documento</td>
+          <td>1.1</td>
+      </tr>
+      <tr>
+          <td>26/04/2022</td>
+          <td>Laís Portela</td>
+          <td>Alterações no fluxo básico e outros</td>
+          <td>1.2</td>
+      </tr>
+      <tr>
+          <td>26/04/2022</td>
+          <td>Laís Portela</td>
+          <td>Adição de regra de negócio</td>
+          <td>1.3</td>
+      </tr>
+  </table>
 
-\[Para personalizar campos automáticos no Microsoft Word (que exibem um
-segundo plano cinza quando selecionados), selecione File\>Properties e
-substitua os campos Title, Subject e Company pelas informações
-apropriadas para este documento. Depois de fechar o diálogo, os campos
-automáticos podem ser atualizados no documento inteiro, selecionando
-Edit\>Select All (ou Ctrl-A) e pressionando F9 ou simplesmente clique no
-campo e pressione F9. Esse procedimento deverá ser executado
-separadamente para os Cabeçalhos e Rodapés. Alt-F9 alterna entre a
-exibição de nomes de campos e do conteúdo dos campos. Consulte a Ajuda
-do Word para obter informações adicionais sobre como trabalhar com
-campos.\]
-
-Histórico da Revisão
-
-  ----------------- ------------ --------------------------- -----------------
-      **Data**       **Versão**         **Descrição**            **Autor**
-
-    \<dd/mmm/aa\>     \<x.x\>           \<detalhes\>             \<nome\>
-
-                                                             
-
-                                                             
-
-                                                             
-  ----------------- ------------ --------------------------- -----------------
-
-Índice
-
-1\. Breve Descrição [4](#breve-descrição)
-
-2\. Fluxo Básico de Eventos [4](#fluxo-básico-de-eventos)
-
-3\. Fluxos Alternativos [4](#fluxos-alternativos)
-
-3.1 \<Área de Funcionalidade\> [5](#área-de-funcionalidade)
-
-3.1.1 \< A1 Primeiro Fluxo Alternativo \>
-[5](#a1-primeiro-fluxo-alternativo)
-
-3.1.2 \< A2 Segundo Fluxo Alternativo \>
-[5](#a2-segundo-fluxo-alternativo)
-
-3.2 \<Outra Área de Funcionalidade\> [5](#outra-área-de-funcionalidade)
-
-3.2.1 \< AN Outro Fluxo Alternativo \> [5](#an-outro-fluxo-alternativo)
-
-4\. Fluxos de Exceção [5](#fluxos-de-exceção)
-
-4.1 \<FE1 -- Fluxo de Exceção\> [5](#fe1-fluxo-de-exceção)
-
-4.2 \< FE2 -- Fluxo de Exceção \> [5](#fe2-fluxo-de-exceção)
-
-5\. Pré-Condições [6](#pré-condições)
-
-5.1 \< Condição Prévia Um \> [6](#condição-prévia-um)
-
-6\. Pós-Condições [6](#pós-condições)
-
-6.1 \< Pós-condição Um \> [6](#pós-condição-um)
-
-7\. Pontos de Extensão [6](#pontos-de-extensão)
-
-7.1 \<Nome do Ponto de Extensão\> [6](#nome-do-ponto-de-extensão)
-
-8\. Requisitos Especiais [6](#requisitos-especiais)
-
-8.1 \< Primeiro Requisito Especial \> [6](#primeiro-requisito-especial)
-
-9\. Informações Adicionais [6](#informações-adicionais)
-
-Especificação de Caso de Uso: \<Nome do Caso de Uso\>
-
-\[O gabarito a seguir é fornecido para uma Especificação de Caso de Uso,
-que contém as propriedades textuais do caso de uso. Este documento é
-utilizado com uma ferramenta de gerenciamento de requisitos, como o
-Rational RequisitePro, para especificar e marcar os requisitos nas
-propriedades de caso de uso.
-
-Os diagramas de caso de uso podem ser desenvolvidos em uma ferramenta de
-modelagem visual, como o Rational Rose. Um relatório de caso de uso, com
-todas as propriedades, pode ser gerado com o Rational SoDA. Para obter
-informações adicionais, consulte os mentores de ferramenta no Rational
-Unified Process.\]
-
-# Breve Descrição
-
-\[A descrição apresenta resumidamente a função e o objetivo do caso de
-uso. Um único parágrafo será suficiente para esta descrição.\]
-
-# Fluxo Básico de Eventos
-
-\[Este caso de uso é iniciado quando o agente faz alguma coisa. Um
-agente sempre inicia casos de uso. O caso de uso descreve o que o agente
-faz e o que o sistema faz em resposta. Ele é expresso na forma de um
-diálogo entre o agente e o sistema.
-
-O caso de uso descreve o que acontece dentro do sistema, mas não como ou
-por que. Se forem trocadas informações, seja específico sobre o que é
-transmitido de um lado para outro. Por exemplo, não é muito esclarecedor
-dizer que o agente digita informações do cliente se elas não forem
-definidas. É melhor dizer que o agente digita o nome e o endereço do
-cliente. Um Glossário de Termos (ou um Modelo de Domínio mais formal) é
-essencial para fazer com que a complexidade do caso de uso permaneça
-gerenciáveltalvez seja necessário definir coisas como informações do
-cliente lá para evitar que o caso de uso seja suprimido nos detalhes.
-
-Alternativas simples podem ser apresentadas no texto do fluxo de
-eventos. Se forem usadas apenas algumas sentenças para descrever o que
-acontece quando há uma alternativa, faça isso diretamente dentro do
-fluxo. Se o fluxo alternativo for mais complexo, utilize uma seção
-separada para descrevê-lo. Por exemplo, uma subseção **Fluxo
-Alternativo** explica como descrever alternativas mais complexas.
-
-O fluxo complexo de eventos deve ser melhor estruturado em sub-fluxos.
-Ao fazer isso, a meta principal deve ser aprimorar a clareza do texto.
-Os subfluxos podem ser chamados muitas vezes de muitos lugares.
-Lembre-se de que o caso de uso pode executar subfluxos em seqüências
-opcionais, em loops ou mesmo vários ao mesmo tempo.
-
-Uma imagem, às vezes, vale mais que mil palavras, entretanto, não há
-substituto para a prosa limpa e clara. Se aprimorar a clareza, sinta-se
-à vontade para colar fluxogramas, diagramas de atividades ou outras
-figuras no caso de uso. Se um fluxograma for útil para apresentar um
-processo de decisão complexo, use-o sem dúvida! O mesmo acontece para o
-comportamento dependente de estado, um diagrama de transição de estado
-freqüentemente explica o comportamento de um sistema melhor que página e
-mais páginas de texto. Utilize o meio de apresentação certo para o
-problema, mas tenha cuidado ao utilizar terminologia, notações ou
-figuras que o público-alvo pode não entender. Lembre-se de que seu
-objetivo é explicar, não confundir.\]
-
-# Fluxos Alternativos
-
-\[Alternativas mais complexas são descritas em uma seção separada,
-mencionada na subseção **Fluxo Básico** da seção **Fluxo de Eventos**.
-Pense nas subseções **Fluxo Alternativo** como um comportamento
-alternativo cada fluxo alternativo representa um comportamento
-alternativo geralmente devido às exceções que ocorrem no fluxo
-principal. Elas podem ter a extensão necessária para descrever os
-eventos associados ao comportamento alternativo.
-
-Inicie cada fluxo alternativo com uma linha inicial determinando
-claramente onde o fluxo alternativo pode ocorrer e as condições em que
-ele é executado.
-
-Encerre cada fluxo alternativo com uma linha que determina claramente
-onde os eventos do fluxo de eventos principal estão resumidos. Isso deve
-ser explicitamente determinado.
-
-Utilizar fluxos alternativos aprimora a clareza do caso de uso. Tenha em
-mente que casos de uso são apenas descrições textuais e seu objetivo
-principal é documentar o comportamento de um sistema de uma maneira
-clara, concisa e compreensível.\]
-
-## \<Área de Funcionalidade\>
-
-\[Freqüentemente, há vários fluxos alternativos relacionados a uma única
-área de funcionalidade (por exemplo, recursos de retirada de
-especialista, manipulação de cartões ou de recebimentos para o caso de
-uso Caixa de Retirada de uma Máquina de Caixa Automático). Ela
-aprimorará a clareza se esses conjuntos de fluxos relacionados de forma
-conceptual forem agrupados em sua própria subseção nomeada claramente.
-\]
-
-### \< A1 Primeiro Fluxo Alternativo \>
-
-\[Descreva o fluxo alternativo, exatamente como qualquer outro fluxo de
-eventos.\]
-
-#### \< Um Subfluxo Alternativo \>
-
-\[Os fluxos alternativos podem, por sua vez, ser divididos em subseções
-se isso aprimorar a clareza. Coloque subfluxos aqui apenas se eles forem
-aplicáveis somente a um único fluxo alternativo.\]
-
-### \< A2 Segundo Fluxo Alternativo \>
-
-\[Pode haver, e muito provavelmente haverá, vários fluxos alternativos
-em cada área de funcionalidade. Mantenha cada fluxo alternativo separado
-para aprimorar a clareza.\]
-
-## \<Outra Área de Funcionalidade\>
-
-\[Pode haver, e muito provavelmente haverá, várias áreas de
-funcionalidade dando origem a conjuntos de fluxos alternativos. Mantenha
-cada conjunto de fluxo alternativo separado para aprimorar a clareza.\]
-
-### \< AN Outro Fluxo Alternativo \>
-
-# Fluxos de Exceção
-
-## \<FE1 -- Fluxo de Exceção\>
-
-Um subfluxo deve ser um segmento de comportamento dentro do caso de uso
-que tenha um objetivo claro e seja \"atômico\" no sentido de que você
-execute todas ou nenhuma das ações descritas. Você pode precisar ter
-vários níveis de sub-fluxos, mas, se puder, evite, pois isso torna o
-texto mais complexo e difícil de entender.
-
-## \< FE2 -- Fluxo de Exceção \>
-
-\[Pode haver, e muito provavelmente haverá, vários subfluxos em um caso
-de uso. Mantenha cada subfluxo separado para aprimorar a clareza.
-Utilizar subfluxos aprimora a clareza do caso de uso e também evita que
-os casos de uso sejam decompostos em hierarquias de casos de uso. Tenha
-em mente que casos de uso são apenas descrições textuais e seu objetivo
-principal é documentar o comportamento de um sistema de uma maneira
-clara, concisa e compreensível.\]
-
-# Pré-Condições 
-
-\[Uma condição prévia de um caso de uso é o estado do sistema que deve
-estar presente antes de um caso de uso ser executado.\]
-
-## \< Condição Prévia Um \>
-
-# Pós-Condições
-
-\[Uma pós-condição de um caso de uso é uma lista de estados possíveis
-que o sistema pode estar imediatamente após um caso de uso ter sido
-concluído.\]
-
-## \< Pós-condição Um \>
-
-# Pontos de Extensão
-
-\[Pontos de extensão do caso de uso.\]
-
-## \<Nome do Ponto de Extensão\>
-
-\[Definição do local do ponto de extensão no fluxo de eventos.\]
-
-# Requisitos Especiais
-
-\[Um requisito especial é, geralmente, um requisito não funcional que é
-específico de um caso de uso, mas não é fácil ou naturalmente
-especificado no texto do fluxo de eventos do caso de uso. Exemplos de
-requisitos especiais incluem requisitos legais e reguladores, padrões de
-aplicativos e atributos de qualidade do sistema a ser construído
-incluindo requisitos de utilidade, confiabilidade, desempenho ou
-suportabilidade. Adicionalmente, outros requisitoscomo sistemas e
-ambientes operacionais, requisitos de compatibilidade e restrições de
-designdevem ser capturados nesta seção.\]
-
-## \< Primeiro Requisito Especial \>
-
-# Informações Adicionais
-
-\[Inclua, ou forneça referências a, informações adicionais requeridas
-para explicar o caso de uso. Isso pode incluir diagramas de visão geral,
-exemplos ou qualquer outra coisa que você imagine.\]
+  <h3>1. Breve Descrição</h3>
+  <p>Este caso de uso é utilizado pelos clientes para fazer o pré-agendamento do animal, bem como escolher os serviços prestados e meios de pagamento.</p>
+
+  <h3>2. Atores</h3>
+  <ul>
+      <li>2.1 Cliente que deseja hospedar o seu animal em um hotel para pets.</li>
+      <li>2.2 Funcionário que trabalha no hotel para animais e deseja aprovar agendamentos e definir serviços de forma virtual.</li>
+  </ul>
+
+  <h3>3. Condições Prévias</h3>
+  <ul>
+      <li>3.1 Cliente fez login.</li>
+      <li>3.2 Cliente cadastrou pelo menos um animal.</li>
+  </ul>
+
+  <h3>4. Fluxo Básico (FB)</h3>
+  <ol>
+      <li>O cliente seleciona a opção "hospedar pet".</li>
+      <li>O cliente seleciona o animal desejado.</li>
+      <li>O cliente digita as datas desejadas (RN04).</li>
+      <li>O sistema faz a validação da data (FE01, FE02, FE03, RN01).</li>
+      <li>O sistema mostra o valor da hospedagem (RN01).</li>
+      <li>O sistema solicita informações complementares do animal.</li>
+      <li>O cliente confirma o pré-agendamento (RN02).</li>
+      <li>O sistema verifica se o cliente deseja escolher algum serviço ou definir a forma de pagamento (FA01, FA02, FA03).</li>
+  </ol>
+
+  <h3>5. Fluxo Alternativo (FA)</h3>
+  <h4>FA01 - Selecionar Serviços</h4>
+  <ol>
+      <li>O cliente seleciona "Serviços".</li>
+      <li>O cliente escolhe quais serviços deseja.</li>
+      <li>O cliente salva as informações (RN03).</li>
+      <li>O sistema emite uma mensagem de sucesso.</li>
+  </ol>
+
+  <h4>FA02 - Selecionar Pagamento</h4>
+  <ol>
+      <li>O cliente seleciona "Pagamento".</li>
+      <li>O cliente escolhe qual será o seu meio de pagamento.</li>
+      <li>O sistema mostra o valor total.</li>
+      <li>O cliente salva sua opção (RN03).</li>
+      <li>O sistema emite uma mensagem de sucesso.</li>
+  </ol>
+
+  <h4>FA03 - Sair do Pré-Agendamento</h4>
+  <p>O cliente decide finalizar o pré-agendamento, após a conclusão do fluxo básico.</p>
+
+  <h3>6. Fluxo de Exceção (FE)</h3>
+  <h4>FE01 - Data de entrada maior que a de saída</h4>
+  <p>"A data de entrada deve ser maior que a de saída". O caso de uso retorna ao passo 4.3 do FB.</p>
+
+  <h4>FE02 - Data anterior à atual</h4>
+  <p>"As datas devem ser maiores que a de hoje". O caso de uso retorna ao passo 4.3 do FB.</p>
+
+  <h4>FE03 - Data com mais de um ano à frente</h4>
+  <p>"As datas não devem ser de mais de um ano". O caso de uso retorna ao passo 4.3 do FB.</p>
+
+  <h4>FE04 - Cliente não digitou as informações necessárias</h4>
+  <p>O sistema impedirá que o cliente avance para o próximo passo caso as informações estejam incompletas.</p>
+
+  <h3>7. Regras de Negócio (RN)</h3>
+  <h4>RN01 - Valor do Pré-Agendamento</h4>
+  <p>O valor da hospedagem depende do peso do animal e dos dias agendados. Para que o valor seja mostrado, os campos "Pet", "Entrada" e "Saída" devem estar preenchidos.</p>
+
+  <h4>RN02 - Validação dos Dados</h4>
+  <p>Para que o sistema realize o pré-agendamento, é necessário que os passos 4.2 e 4.3 estejam preenchidos corretamente, e que o sistema valide o passo 4.4.</p>
+
+  <h4>RN03 - Campo Preenchido</h4>
+  <p>Para que o sistema confirme as informações, elas não devem ser nulas.</p>
+
+  <h4>RN04 - Validação das Datas</h4>
+  <p>As datas preenchidas devem seguir os seguintes critérios:</p>
+  <ul>
+      <li>Ser posteriores ou iguais ao dia atual.</li>
+      <li>Ser de até um ano após o dia atual.</li>
+      <li>A data de entrada não pode ser posterior à data de saída.</li>
+  </ul>
+
+  <h3>8. Pós-Condições</h3>
+  <p>Pós-Condições</p>
+
+  <h3>9. Ponto de Extensão</h3>
+  <p>Ponto de Extensão</p>
+
+
+</div>
+
+
+
+
+
+
+<div id="X" class="tabcontent">
+<h2>UC - Realizar Pré-Agendamento</h2>
+
+  <h3>Especificação de Caso de Uso</h3>
+  <h3>Histórico de Revisão</h3>
+  <table>
+      <tr>
+          <th>Data</th>
+          <th>Autor</th>
+          <th>Modificações</th>
+          <th>Versão</th>
+      </tr>
+      <tr>
+          <td>24/04/2022</td>
+          <td>Laís Portela</td>
+          <td>Adicionando caso de uso no documento</td>
+          <td>1.0</td>
+      </tr>
+      <tr>
+          <td>26/04/2022</td>
+          <td>Laís Portela</td>
+          <td>Revisão do documento</td>
+          <td>1.1</td>
+      </tr>
+      <tr>
+          <td>26/04/2022</td>
+          <td>Laís Portela</td>
+          <td>Alterações no fluxo básico e outros</td>
+          <td>1.2</td>
+      </tr>
+      <tr>
+          <td>26/04/2022</td>
+          <td>Laís Portela</td>
+          <td>Adição de regra de negócio</td>
+          <td>1.3</td>
+      </tr>
+  </table>
+
+  <h3>1. Breve Descrição</h3>
+  <p>Este caso de uso é utilizado pelos clientes para fazer o pré-agendamento do animal, bem como escolher os serviços prestados e meios de pagamento.</p>
+
+  <h3>2. Atores</h3>
+  <ul>
+      <li>2.1 Cliente que deseja hospedar o seu animal em um hotel para pets.</li>
+      <li>2.2 Funcionário que trabalha no hotel para animais e deseja aprovar agendamentos e definir serviços de forma virtual.</li>
+  </ul>
+
+  <h3>3. Condições Prévias</h3>
+  <ul>
+      <li>3.1 Cliente fez login.</li>
+      <li>3.2 Cliente cadastrou pelo menos um animal.</li>
+  </ul>
+
+  <h3>4. Fluxo Básico (FB)</h3>
+  <ol>
+      <li>O cliente seleciona a opção "hospedar pet".</li>
+      <li>O cliente seleciona o animal desejado.</li>
+      <li>O cliente digita as datas desejadas (RN04).</li>
+      <li>O sistema faz a validação da data (FE01, FE02, FE03, RN01).</li>
+      <li>O sistema mostra o valor da hospedagem (RN01).</li>
+      <li>O sistema solicita informações complementares do animal.</li>
+      <li>O cliente confirma o pré-agendamento (RN02).</li>
+      <li>O sistema verifica se o cliente deseja escolher algum serviço ou definir a forma de pagamento (FA01, FA02, FA03).</li>
+  </ol>
+
+  <h3>5. Fluxo Alternativo (FA)</h3>
+  <h4>FA01 - Selecionar Serviços</h4>
+  <ol>
+      <li>O cliente seleciona "Serviços".</li>
+      <li>O cliente escolhe quais serviços deseja.</li>
+      <li>O cliente salva as informações (RN03).</li>
+      <li>O sistema emite uma mensagem de sucesso.</li>
+  </ol>
+
+  <h4>FA02 - Selecionar Pagamento</h4>
+  <ol>
+      <li>O cliente seleciona "Pagamento".</li>
+      <li>O cliente escolhe qual será o seu meio de pagamento.</li>
+      <li>O sistema mostra o valor total.</li>
+      <li>O cliente salva sua opção (RN03).</li>
+      <li>O sistema emite uma mensagem de sucesso.</li>
+  </ol>
+
+  <h4>FA03 - Sair do Pré-Agendamento</h4>
+  <p>O cliente decide finalizar o pré-agendamento, após a conclusão do fluxo básico.</p>
+
+  <h3>6. Fluxo de Exceção (FE)</h3>
+  <h4>FE01 - Data de entrada maior que a de saída</h4>
+  <p>"A data de entrada deve ser maior que a de saída". O caso de uso retorna ao passo 4.3 do FB.</p>
+
+  <h4>FE02 - Data anterior à atual</h4>
+  <p>"As datas devem ser maiores que a de hoje". O caso de uso retorna ao passo 4.3 do FB.</p>
+
+  <h4>FE03 - Data com mais de um ano à frente</h4>
+  <p>"As datas não devem ser de mais de um ano". O caso de uso retorna ao passo 4.3 do FB.</p>
+
+  <h4>FE04 - Cliente não digitou as informações necessárias</h4>
+  <p>O sistema impedirá que o cliente avance para o próximo passo caso as informações estejam incompletas.</p>
+
+  <h3>7. Regras de Negócio (RN)</h3>
+  <h4>RN01 - Valor do Pré-Agendamento</h4>
+  <p>O valor da hospedagem depende do peso do animal e dos dias agendados. Para que o valor seja mostrado, os campos "Pet", "Entrada" e "Saída" devem estar preenchidos.</p>
+
+  <h4>RN02 - Validação dos Dados</h4>
+  <p>Para que o sistema realize o pré-agendamento, é necessário que os passos 4.2 e 4.3 estejam preenchidos corretamente, e que o sistema valide o passo 4.4.</p>
+
+  <h4>RN03 - Campo Preenchido</h4>
+  <p>Para que o sistema confirme as informações, elas não devem ser nulas.</p>
+
+  <h4>RN04 - Validação das Datas</h4>
+  <p>As datas preenchidas devem seguir os seguintes critérios:</p>
+  <ul>
+      <li>Ser posteriores ou iguais ao dia atual.</li>
+      <li>Ser de até um ano após o dia atual.</li>
+      <li>A data de entrada não pode ser posterior à data de saída.</li>
+  </ul>
+
+  <h3>8. Pós-Condições</h3>
+  <p>Pós-Condições</p>
+
+  <h3>9. Ponto de Extensão</h3>
+  <p>Ponto de Extensão</p>
+</div>
+
+
+
+
+
+
+<div id="Y" class="tabcontent">
+<h2>UC - Realizar Pré-Agendamento</h2>
+
+  <h3>Especificação de Caso de Uso</h3>
+  <h3>Histórico de Revisão</h3>
+  <table>
+      <tr>
+          <th>Data</th>
+          <th>Autor</th>
+          <th>Modificações</th>
+          <th>Versão</th>
+      </tr>
+      <tr>
+          <td>24/04/2022</td>
+          <td>Laís Portela</td>
+          <td>Adicionando caso de uso no documento</td>
+          <td>1.0</td>
+      </tr>
+      <tr>
+          <td>26/04/2022</td>
+          <td>Laís Portela</td>
+          <td>Revisão do documento</td>
+          <td>1.1</td>
+      </tr>
+      <tr>
+          <td>26/04/2022</td>
+          <td>Laís Portela</td>
+          <td>Alterações no fluxo básico e outros</td>
+          <td>1.2</td>
+      </tr>
+      <tr>
+          <td>26/04/2022</td>
+          <td>Laís Portela</td>
+          <td>Adição de regra de negócio</td>
+          <td>1.3</td>
+      </tr>
+  </table>
+
+  <h3>1. Breve Descrição</h3>
+  <p>Este caso de uso é utilizado pelos clientes para fazer o pré-agendamento do animal, bem como escolher os serviços prestados e meios de pagamento.</p>
+
+  <h3>2. Atores</h3>
+  <ul>
+      <li>2.1 Cliente que deseja hospedar o seu animal em um hotel para pets.</li>
+      <li>2.2 Funcionário que trabalha no hotel para animais e deseja aprovar agendamentos e definir serviços de forma virtual.</li>
+  </ul>
+
+  <h3>3. Condições Prévias</h3>
+  <ul>
+      <li>3.1 Cliente fez login.</li>
+      <li>3.2 Cliente cadastrou pelo menos um animal.</li>
+  </ul>
+
+  <h3>4. Fluxo Básico (FB)</h3>
+  <ol>
+      <li>O cliente seleciona a opção "hospedar pet".</li>
+      <li>O cliente seleciona o animal desejado.</li>
+      <li>O cliente digita as datas desejadas (RN04).</li>
+      <li>O sistema faz a validação da data (FE01, FE02, FE03, RN01).</li>
+      <li>O sistema mostra o valor da hospedagem (RN01).</li>
+      <li>O sistema solicita informações complementares do animal.</li>
+      <li>O cliente confirma o pré-agendamento (RN02).</li>
+      <li>O sistema verifica se o cliente deseja escolher algum serviço ou definir a forma de pagamento (FA01, FA02, FA03).</li>
+  </ol>
+
+  <h3>5. Fluxo Alternativo (FA)</h3>
+  <h4>FA01 - Selecionar Serviços</h4>
+  <ol>
+      <li>O cliente seleciona "Serviços".</li>
+      <li>O cliente escolhe quais serviços deseja.</li>
+      <li>O cliente salva as informações (RN03).</li>
+      <li>O sistema emite uma mensagem de sucesso.</li>
+  </ol>
+
+  <h4>FA02 - Selecionar Pagamento</h4>
+  <ol>
+      <li>O cliente seleciona "Pagamento".</li>
+      <li>O cliente escolhe qual será o seu meio de pagamento.</li>
+      <li>O sistema mostra o valor total.</li>
+      <li>O cliente salva sua opção (RN03).</li>
+      <li>O sistema emite uma mensagem de sucesso.</li>
+  </ol>
+
+  <h4>FA03 - Sair do Pré-Agendamento</h4>
+  <p>O cliente decide finalizar o pré-agendamento, após a conclusão do fluxo básico.</p>
+
+  <h3>6. Fluxo de Exceção (FE)</h3>
+  <h4>FE01 - Data de entrada maior que a de saída</h4>
+  <p>"A data de entrada deve ser maior que a de saída". O caso de uso retorna ao passo 4.3 do FB.</p>
+
+  <h4>FE02 - Data anterior à atual</h4>
+  <p>"As datas devem ser maiores que a de hoje". O caso de uso retorna ao passo 4.3 do FB.</p>
+
+  <h4>FE03 - Data com mais de um ano à frente</h4>
+  <p>"As datas não devem ser de mais de um ano". O caso de uso retorna ao passo 4.3 do FB.</p>
+
+  <h4>FE04 - Cliente não digitou as informações necessárias</h4>
+  <p>O sistema impedirá que o cliente avance para o próximo passo caso as informações estejam incompletas.</p>
+
+  <h3>7. Regras de Negócio (RN)</h3>
+  <h4>RN01 - Valor do Pré-Agendamento</h4>
+  <p>O valor da hospedagem depende do peso do animal e dos dias agendados. Para que o valor seja mostrado, os campos "Pet", "Entrada" e "Saída" devem estar preenchidos.</p>
+
+  <h4>RN02 - Validação dos Dados</h4>
+  <p>Para que o sistema realize o pré-agendamento, é necessário que os passos 4.2 e 4.3 estejam preenchidos corretamente, e que o sistema valide o passo 4.4.</p>
+
+  <h4>RN03 - Campo Preenchido</h4>
+  <p>Para que o sistema confirme as informações, elas não devem ser nulas.</p>
+
+  <h4>RN04 - Validação das Datas</h4>
+  <p>As datas preenchidas devem seguir os seguintes critérios:</p>
+  <ul>
+      <li>Ser posteriores ou iguais ao dia atual.</li>
+      <li>Ser de até um ano após o dia atual.</li>
+      <li>A data de entrada não pode ser posterior à data de saída.</li>
+  </ul>
+
+  <h3>8. Pós-Condições</h3>
+  <p>Pós-Condições</p>
+
+  <h3>9. Ponto de Extensão</h3>
+  <p>Ponto de Extensão</p>
+</div>
+
+
+
+
+
+
+<div id="Z" class="tabcontent">
+<h2>UC - Realizar Pré-Agendamento</h2>
+
+  <h3>Especificação de Caso de Uso</h3>
+  <h3>Histórico de Revisão</h3>
+  <table>
+      <tr>
+          <th>Data</th>
+          <th>Autor</th>
+          <th>Modificações</th>
+          <th>Versão</th>
+      </tr>
+      <tr>
+          <td>24/04/2022</td>
+          <td>Laís Portela</td>
+          <td>Adicionando caso de uso no documento</td>
+          <td>1.0</td>
+      </tr>
+      <tr>
+          <td>26/04/2022</td>
+          <td>Laís Portela</td>
+          <td>Revisão do documento</td>
+          <td>1.1</td>
+      </tr>
+      <tr>
+          <td>26/04/2022</td>
+          <td>Laís Portela</td>
+          <td>Alterações no fluxo básico e outros</td>
+          <td>1.2</td>
+      </tr>
+      <tr>
+          <td>26/04/2022</td>
+          <td>Laís Portela</td>
+          <td>Adição de regra de negócio</td>
+          <td>1.3</td>
+      </tr>
+  </table>
+
+  <h3>1. Breve Descrição</h3>
+  <p>Este caso de uso é utilizado pelos clientes para fazer o pré-agendamento do animal, bem como escolher os serviços prestados e meios de pagamento.</p>
+
+  <h3>2. Atores</h3>
+  <ul>
+      <li>2.1 Cliente que deseja hospedar o seu animal em um hotel para pets.</li>
+      <li>2.2 Funcionário que trabalha no hotel para animais e deseja aprovar agendamentos e definir serviços de forma virtual.</li>
+  </ul>
+
+  <h3>3. Condições Prévias</h3>
+  <ul>
+      <li>3.1 Cliente fez login.</li>
+      <li>3.2 Cliente cadastrou pelo menos um animal.</li>
+  </ul>
+
+  <h3>4. Fluxo Básico (FB)</h3>
+  <ol>
+      <li>O cliente seleciona a opção "hospedar pet".</li>
+      <li>O cliente seleciona o animal desejado.</li>
+      <li>O cliente digita as datas desejadas (RN04).</li>
+      <li>O sistema faz a validação da data (FE01, FE02, FE03, RN01).</li>
+      <li>O sistema mostra o valor da hospedagem (RN01).</li>
+      <li>O sistema solicita informações complementares do animal.</li>
+      <li>O cliente confirma o pré-agendamento (RN02).</li>
+      <li>O sistema verifica se o cliente deseja escolher algum serviço ou definir a forma de pagamento (FA01, FA02, FA03).</li>
+  </ol>
+
+  <h3>5. Fluxo Alternativo (FA)</h3>
+  <h4>FA01 - Selecionar Serviços</h4>
+  <ol>
+      <li>O cliente seleciona "Serviços".</li>
+      <li>O cliente escolhe quais serviços deseja.</li>
+      <li>O cliente salva as informações (RN03).</li>
+      <li>O sistema emite uma mensagem de sucesso.</li>
+  </ol>
+
+  <h4>FA02 - Selecionar Pagamento</h4>
+  <ol>
+      <li>O cliente seleciona "Pagamento".</li>
+      <li>O cliente escolhe qual será o seu meio de pagamento.</li>
+      <li>O sistema mostra o valor total.</li>
+      <li>O cliente salva sua opção (RN03).</li>
+      <li>O sistema emite uma mensagem de sucesso.</li>
+  </ol>
+
+  <h4>FA03 - Sair do Pré-Agendamento</h4>
+  <p>O cliente decide finalizar o pré-agendamento, após a conclusão do fluxo básico.</p>
+
+  <h3>6. Fluxo de Exceção (FE)</h3>
+  <h4>FE01 - Data de entrada maior que a de saída</h4>
+  <p>"A data de entrada deve ser maior que a de saída". O caso de uso retorna ao passo 4.3 do FB.</p>
+
+  <h4>FE02 - Data anterior à atual</h4>
+  <p>"As datas devem ser maiores que a de hoje". O caso de uso retorna ao passo 4.3 do FB.</p>
+
+  <h4>FE03 - Data com mais de um ano à frente</h4>
+  <p>"As datas não devem ser de mais de um ano". O caso de uso retorna ao passo 4.3 do FB.</p>
+
+  <h4>FE04 - Cliente não digitou as informações necessárias</h4>
+  <p>O sistema impedirá que o cliente avance para o próximo passo caso as informações estejam incompletas.</p>
+
+  <h3>7. Regras de Negócio (RN)</h3>
+  <h4>RN01 - Valor do Pré-Agendamento</h4>
+  <p>O valor da hospedagem depende do peso do animal e dos dias agendados. Para que o valor seja mostrado, os campos "Pet", "Entrada" e "Saída" devem estar preenchidos.</p>
+
+  <h4>RN02 - Validação dos Dados</h4>
+  <p>Para que o sistema realize o pré-agendamento, é necessário que os passos 4.2 e 4.3 estejam preenchidos corretamente, e que o sistema valide o passo 4.4.</p>
+
+  <h4>RN03 - Campo Preenchido</h4>
+  <p>Para que o sistema confirme as informações, elas não devem ser nulas.</p>
+
+  <h4>RN04 - Validação das Datas</h4>
+  <p>As datas preenchidas devem seguir os seguintes critérios:</p>
+  <ul>
+      <li>Ser posteriores ou iguais ao dia atual.</li>
+      <li>Ser de até um ano após o dia atual.</li>
+      <li>A data de entrada não pode ser posterior à data de saída.</li>
+  </ul>
+
+  <h3>8. Pós-Condições</h3>
+  <p>Pós-Condições</p>
+
+  <h3>9. Ponto de Extensão</h3>
+  <p>Ponto de Extensão</p>
+</div>
+
+
+
+
+
+<div id="A" class="tabcontent">
+<h2>UC - Realizar Pré-Agendamento</h2>
+
+  <h3>Especificação de Caso de Uso</h3>
+  <h3>Histórico de Revisão</h3>
+  <table>
+      <tr>
+          <th>Data</th>
+          <th>Autor</th>
+          <th>Modificações</th>
+          <th>Versão</th>
+      </tr>
+      <tr>
+          <td>24/04/2022</td>
+          <td>Laís Portela</td>
+          <td>Adicionando caso de uso no documento</td>
+          <td>1.0</td>
+      </tr>
+      <tr>
+          <td>26/04/2022</td>
+          <td>Laís Portela</td>
+          <td>Revisão do documento</td>
+          <td>1.1</td>
+      </tr>
+      <tr>
+          <td>26/04/2022</td>
+          <td>Laís Portela</td>
+          <td>Alterações no fluxo básico e outros</td>
+          <td>1.2</td>
+      </tr>
+      <tr>
+          <td>26/04/2022</td>
+          <td>Laís Portela</td>
+          <td>Adição de regra de negócio</td>
+          <td>1.3</td>
+      </tr>
+  </table>
+
+  <h3>1. Breve Descrição</h3>
+  <p>Este caso de uso é utilizado pelos clientes para fazer o pré-agendamento do animal, bem como escolher os serviços prestados e meios de pagamento.</p>
+
+  <h3>2. Atores</h3>
+  <ul>
+      <li>2.1 Cliente que deseja hospedar o seu animal em um hotel para pets.</li>
+      <li>2.2 Funcionário que trabalha no hotel para animais e deseja aprovar agendamentos e definir serviços de forma virtual.</li>
+  </ul>
+
+  <h3>3. Condições Prévias</h3>
+  <ul>
+      <li>3.1 Cliente fez login.</li>
+      <li>3.2 Cliente cadastrou pelo menos um animal.</li>
+  </ul>
+
+  <h3>4. Fluxo Básico (FB)</h3>
+  <ol>
+      <li>O cliente seleciona a opção "hospedar pet".</li>
+      <li>O cliente seleciona o animal desejado.</li>
+      <li>O cliente digita as datas desejadas (RN04).</li>
+      <li>O sistema faz a validação da data (FE01, FE02, FE03, RN01).</li>
+      <li>O sistema mostra o valor da hospedagem (RN01).</li>
+      <li>O sistema solicita informações complementares do animal.</li>
+      <li>O cliente confirma o pré-agendamento (RN02).</li>
+      <li>O sistema verifica se o cliente deseja escolher algum serviço ou definir a forma de pagamento (FA01, FA02, FA03).</li>
+  </ol>
+
+  <h3>5. Fluxo Alternativo (FA)</h3>
+  <h4>FA01 - Selecionar Serviços</h4>
+  <ol>
+      <li>O cliente seleciona "Serviços".</li>
+      <li>O cliente escolhe quais serviços deseja.</li>
+      <li>O cliente salva as informações (RN03).</li>
+      <li>O sistema emite uma mensagem de sucesso.</li>
+  </ol>
+
+  <h4>FA02 - Selecionar Pagamento</h4>
+  <ol>
+      <li>O cliente seleciona "Pagamento".</li>
+      <li>O cliente escolhe qual será o seu meio de pagamento.</li>
+      <li>O sistema mostra o valor total.</li>
+      <li>O cliente salva sua opção (RN03).</li>
+      <li>O sistema emite uma mensagem de sucesso.</li>
+  </ol>
+
+  <h4>FA03 - Sair do Pré-Agendamento</h4>
+  <p>O cliente decide finalizar o pré-agendamento, após a conclusão do fluxo básico.</p>
+
+  <h3>6. Fluxo de Exceção (FE)</h3>
+  <h4>FE01 - Data de entrada maior que a de saída</h4>
+  <p>"A data de entrada deve ser maior que a de saída". O caso de uso retorna ao passo 4.3 do FB.</p>
+
+  <h4>FE02 - Data anterior à atual</h4>
+  <p>"As datas devem ser maiores que a de hoje". O caso de uso retorna ao passo 4.3 do FB.</p>
+
+  <h4>FE03 - Data com mais de um ano à frente</h4>
+  <p>"As datas não devem ser de mais de um ano". O caso de uso retorna ao passo 4.3 do FB.</p>
+
+  <h4>FE04 - Cliente não digitou as informações necessárias</h4>
+  <p>O sistema impedirá que o cliente avance para o próximo passo caso as informações estejam incompletas.</p>
+
+  <h3>7. Regras de Negócio (RN)</h3>
+  <h4>RN01 - Valor do Pré-Agendamento</h4>
+  <p>O valor da hospedagem depende do peso do animal e dos dias agendados. Para que o valor seja mostrado, os campos "Pet", "Entrada" e "Saída" devem estar preenchidos.</p>
+
+  <h4>RN02 - Validação dos Dados</h4>
+  <p>Para que o sistema realize o pré-agendamento, é necessário que os passos 4.2 e 4.3 estejam preenchidos corretamente, e que o sistema valide o passo 4.4.</p>
+
+  <h4>RN03 - Campo Preenchido</h4>
+  <p>Para que o sistema confirme as informações, elas não devem ser nulas.</p>
+
+  <h4>RN04 - Validação das Datas</h4>
+  <p>As datas preenchidas devem seguir os seguintes critérios:</p>
+  <ul>
+      <li>Ser posteriores ou iguais ao dia atual.</li>
+      <li>Ser de até um ano após o dia atual.</li>
+      <li>A data de entrada não pode ser posterior à data de saída.</li>
+  </ul>
+
+  <h3>8. Pós-Condições</h3>
+  <p>Pós-Condições</p>
+
+  <h3>9. Ponto de Extensão</h3>
+  <p>Ponto de Extensão</p>
+</div>
+
+
+
+
+
+
+<div id="B" class="tabcontent">
+<h2>UC - Realizar Pré-Agendamento</h2>
+
+  <h3>Especificação de Caso de Uso</h3>
+  <h3>Histórico de Revisão</h3>
+  <table>
+      <tr>
+          <th>Data</th>
+          <th>Autor</th>
+          <th>Modificações</th>
+          <th>Versão</th>
+      </tr>
+      <tr>
+          <td>24/04/2022</td>
+          <td>Laís Portela</td>
+          <td>Adicionando caso de uso no documento</td>
+          <td>1.0</td>
+      </tr>
+      <tr>
+          <td>26/04/2022</td>
+          <td>Laís Portela</td>
+          <td>Revisão do documento</td>
+          <td>1.1</td>
+      </tr>
+      <tr>
+          <td>26/04/2022</td>
+          <td>Laís Portela</td>
+          <td>Alterações no fluxo básico e outros</td>
+          <td>1.2</td>
+      </tr>
+      <tr>
+          <td>26/04/2022</td>
+          <td>Laís Portela</td>
+          <td>Adição de regra de negócio</td>
+          <td>1.3</td>
+      </tr>
+  </table>
+
+  <h3>1. Breve Descrição</h3>
+  <p>Este caso de uso é utilizado pelos clientes para fazer o pré-agendamento do animal, bem como escolher os serviços prestados e meios de pagamento.</p>
+
+  <h3>2. Atores</h3>
+  <ul>
+      <li>2.1 Cliente que deseja hospedar o seu animal em um hotel para pets.</li>
+      <li>2.2 Funcionário que trabalha no hotel para animais e deseja aprovar agendamentos e definir serviços de forma virtual.</li>
+  </ul>
+
+  <h3>3. Condições Prévias</h3>
+  <ul>
+      <li>3.1 Cliente fez login.</li>
+      <li>3.2 Cliente cadastrou pelo menos um animal.</li>
+  </ul>
+
+  <h3>4. Fluxo Básico (FB)</h3>
+  <ol>
+      <li>O cliente seleciona a opção "hospedar pet".</li>
+      <li>O cliente seleciona o animal desejado.</li>
+      <li>O cliente digita as datas desejadas (RN04).</li>
+      <li>O sistema faz a validação da data (FE01, FE02, FE03, RN01).</li>
+      <li>O sistema mostra o valor da hospedagem (RN01).</li>
+      <li>O sistema solicita informações complementares do animal.</li>
+      <li>O cliente confirma o pré-agendamento (RN02).</li>
+      <li>O sistema verifica se o cliente deseja escolher algum serviço ou definir a forma de pagamento (FA01, FA02, FA03).</li>
+  </ol>
+
+  <h3>5. Fluxo Alternativo (FA)</h3>
+  <h4>FA01 - Selecionar Serviços</h4>
+  <ol>
+      <li>O cliente seleciona "Serviços".</li>
+      <li>O cliente escolhe quais serviços deseja.</li>
+      <li>O cliente salva as informações (RN03).</li>
+      <li>O sistema emite uma mensagem de sucesso.</li>
+  </ol>
+
+  <h4>FA02 - Selecionar Pagamento</h4>
+  <ol>
+      <li>O cliente seleciona "Pagamento".</li>
+      <li>O cliente escolhe qual será o seu meio de pagamento.</li>
+      <li>O sistema mostra o valor total.</li>
+      <li>O cliente salva sua opção (RN03).</li>
+      <li>O sistema emite uma mensagem de sucesso.</li>
+  </ol>
+
+  <h4>FA03 - Sair do Pré-Agendamento</h4>
+  <p>O cliente decide finalizar o pré-agendamento, após a conclusão do fluxo básico.</p>
+
+  <h3>6. Fluxo de Exceção (FE)</h3>
+  <h4>FE01 - Data de entrada maior que a de saída</h4>
+  <p>"A data de entrada deve ser maior que a de saída". O caso de uso retorna ao passo 4.3 do FB.</p>
+
+  <h4>FE02 - Data anterior à atual</h4>
+  <p>"As datas devem ser maiores que a de hoje". O caso de uso retorna ao passo 4.3 do FB.</p>
+
+  <h4>FE03 - Data com mais de um ano à frente</h4>
+  <p>"As datas não devem ser de mais de um ano". O caso de uso retorna ao passo 4.3 do FB.</p>
+
+  <h4>FE04 - Cliente não digitou as informações necessárias</h4>
+  <p>O sistema impedirá que o cliente avance para o próximo passo caso as informações estejam incompletas.</p>
+
+  <h3>7. Regras de Negócio (RN)</h3>
+  <h4>RN01 - Valor do Pré-Agendamento</h4>
+  <p>O valor da hospedagem depende do peso do animal e dos dias agendados. Para que o valor seja mostrado, os campos "Pet", "Entrada" e "Saída" devem estar preenchidos.</p>
+
+  <h4>RN02 - Validação dos Dados</h4>
+  <p>Para que o sistema realize o pré-agendamento, é necessário que os passos 4.2 e 4.3 estejam preenchidos corretamente, e que o sistema valide o passo 4.4.</p>
+
+  <h4>RN03 - Campo Preenchido</h4>
+  <p>Para que o sistema confirme as informações, elas não devem ser nulas.</p>
+
+  <h4>RN04 - Validação das Datas</h4>
+  <p>As datas preenchidas devem seguir os seguintes critérios:</p>
+  <ul>
+      <li>Ser posteriores ou iguais ao dia atual.</li>
+      <li>Ser de até um ano após o dia atual.</li>
+      <li>A data de entrada não pode ser posterior à data de saída.</li>
+  </ul>
+
+  <h3>8. Pós-Condições</h3>
+  <p>Pós-Condições</p>
+
+  <h3>9. Ponto de Extensão</h3>
+  <p>Ponto de Extensão</p>
+</div>
+
+
+<script>
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+<style>
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
