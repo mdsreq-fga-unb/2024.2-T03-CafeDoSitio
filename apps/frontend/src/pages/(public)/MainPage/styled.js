@@ -26,6 +26,7 @@ export const Container = styled.div`
     background-image: url(${topo});
     background-size: contain; 
     background-position: top; 
+
   }
     
 `;
@@ -33,32 +34,34 @@ export const Container = styled.div`
 
 export const Section1 = styled.section`
   background-image: url(${inicial1});
-  background-size: cover; /* Faz a imagem de fundo cobrir toda a área */
-  background-position: center;
-  background-repeat: no-repeat;
+  background-size: cover; /* Faz a imagem cobrir toda a área da seção */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita que a imagem se repita */
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-left: 0;
   height: 100vh;
-  position: relative; /* Necessário para o posicionamento da imagem sobreposta */
 
-  @media (max-width: 1280px) {
-    /* Mesma imagem de fundo para telas menores */
+  @media (max-width: 768px) {
     background-image: url(${Fundocappuccino}); 
-    height: 80vh;
-  }
-
-  /* Imagem sobreposta */
-  &::after {
-    content: '';
-    background-image: url(${cappuccino}); /* Imagem sobreposta */
-    background-size: contain; /* Ajusta a imagem para caber sem cortar */
-    background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
-    position: absolute;
-    width: 100%; /* Ajusta o tamanho da imagem sobreposta */
-    height: 100%; /* Ajusta a altura da imagem sobreposta */
-    bottom: 20%; /* Posiciona a imagem sobreposta */
+    height: 80vh;
+    position: relative; /* Necessário para o posicionamento da imagem sobreposta */
+
+    /* Imagem sobreposta */
+    &::after {
+      content: '';
+      background-image: url(${cappuccino}); /* Imagem sobreposta */
+      background-size: contain; /* Ajusta a imagem para caber sem cortar */
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      width: 100%; /* Ajusta o tamanho da imagem sobreposta */
+      height: 100%; /* Ajusta a altura da imagem sobreposta */
+      bottom: 20%; /* Posiciona a imagem sobreposta */
+    }
   }
 `;
 
@@ -88,13 +91,13 @@ export const Card = styled.div`
     margin:0 2.5rem 1rem 2.5rem;
   }
 
-  @media (max-width: 1280px) {
+  @media (max-width: 768px) {
     width: 100%; /* Ajusta a largura do card */
     margin-top: 60vh; /* Dá um espaço entre a imagem e o card */
     height: auto; /* Ajusta a altura do card */
     border-radius: 0;
 
-      h1 {
+    h1 {
       font-size: 1.5rem;
       font-family: impact;
       margin: 1rem 1rem;
@@ -108,7 +111,6 @@ export const Card = styled.div`
       margin:0 1rem 1rem 1rem;
     }
   }
-
 `;
 
 export const Section2 = styled.section`
