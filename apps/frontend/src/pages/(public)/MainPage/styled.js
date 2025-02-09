@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 import inicial1 from "../../../assets/inicial1.jpg"
 import inicial2 from "../../../assets/inicial2.jpg"
+import Fundocappuccino from "../../../assets/Fundocappuccino.jpg"
+import cappuccino from "../../../assets/cappuccino.png"
+import topo from "../../../assets/topo.jpeg"
 
 export const Container = styled.div`
   z-index: -1;
@@ -13,23 +16,50 @@ export const Container = styled.div`
   max-width: 100% !important;
   flex-grow: 1;
 
+
   img{
     width: 100%;
     object-fit: cover;
   }
+
+  @media (max-width: 768px) {
+    background-image: url(${topo});
+    background-size: contain; 
+    background-position: top; 
+  }
+    
 `;
 
 
 export const Section1 = styled.section`
   background-image: url(${inicial1});
-  background-size: cover; /* Faz a imagem cobrir toda a área da seção */
-  background-position: center; /* Centraliza a imagem */
-  background-repeat: no-repeat; /* Evita que a imagem se repita */
+  background-size: cover; /* Faz a imagem de fundo cobrir toda a área */
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  padding-left: 0;
+  justify-content: center;
   height: 100vh;
+  position: relative; /* Necessário para o posicionamento da imagem sobreposta */
+
+  @media (max-width: 1280px) {
+    /* Mesma imagem de fundo para telas menores */
+    background-image: url(${Fundocappuccino}); 
+    height: 80vh;
+  }
+
+  /* Imagem sobreposta */
+  &::after {
+    content: '';
+    background-image: url(${cappuccino}); /* Imagem sobreposta */
+    background-size: contain; /* Ajusta a imagem para caber sem cortar */
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    width: 100%; /* Ajusta o tamanho da imagem sobreposta */
+    height: 100%; /* Ajusta a altura da imagem sobreposta */
+    bottom: 20%; /* Posiciona a imagem sobreposta */
+  }
 `;
 
 export const Card = styled.div`
@@ -57,6 +87,28 @@ export const Card = styled.div`
     font-weight: 600;
     margin:0 2.5rem 1rem 2.5rem;
   }
+
+  @media (max-width: 1280px) {
+    width: 100%; /* Ajusta a largura do card */
+    margin-top: 60vh; /* Dá um espaço entre a imagem e o card */
+    height: auto; /* Ajusta a altura do card */
+    border-radius: 0;
+
+      h1 {
+      font-size: 1.5rem;
+      font-family: impact;
+      margin: 1rem 1rem;
+      color: #2B674B ;
+    }
+
+    p {
+      font-size: 0.8rem;
+      color: #000;
+      font-weight: 600;
+      margin:0 1rem 1rem 1rem;
+    }
+  }
+
 `;
 
 export const Section2 = styled.section`
@@ -69,36 +121,56 @@ export const Section2 = styled.section`
   padding: 20px;
   background-size: cover;
 
+  @media (max-width: 768px) {
+    justify-content: center; /* Centraliza o conteúdo em telas menores */
+    padding: 30px; /* Reduz o padding */
+  }
 `;
 
 export const Acoes = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: right;
+  align-items: flex-end; /* Alinha os itens à direita */
   justify-content: space-around;
   width: 50vw;
   text-align: right;
   border-radius: 0 20px 20px 0;
   padding: 20px;
 
-   h1 {
-  font-size: 3rem;
-  font-family: Impact, sans-serif;
-  margin: 1.5rem 2rem;
-  color: #2B674B;
-  box-shadow: 8px 0 0 0 white, -3px 0 0 0 white; /* Valores reduzidos */
-  background: white;
-  display: inline;
-  padding: 3px 0 !important;
-  position: relative;
+  @media (max-width: 768px) {
+    width: 80vw; /* Aumenta a largura para telas menores */
+    align-items: center; /* Centraliza os itens em telas menores */
+    text-align: center; /* Centraliza o texto */
+    padding: 10px; /* Reduz o padding */
   }
 
+  h1 {
+    font-size: 3rem;
+    font-family: Impact, sans-serif;
+    margin: 1.5rem 2rem;
+    color: #2B674B;
+    box-shadow: 8px 0 0 0 white, -3px 0 0 0 white; /* Valores reduzidos */
+    background: white;
+    display: inline;
+    padding: 3px 0 !important;
+    position: relative;
+
+    @media (max-width: 768px) {
+      font-size: 2rem; /* Reduz o tamanho da fonte */
+      margin: 1rem; /* Ajusta a margem */
+    }
+  }
 
   p {
     font-size: 1.2rem;
     color: white;
     font-weight: 600;
-    margin:0 2.5rem 1rem 2.5rem;
+    margin: 0 2.5rem 1rem 2.5rem;
+
+    @media (max-width: 768px) {
+      font-size: 1rem; /* Reduz o tamanho da fonte */
+      margin: 0 1rem 1rem 1rem; /* Ajusta a margem */
+    }
   }
 
   button {
@@ -117,8 +189,12 @@ export const Acoes = styled.div`
       background-color: #2B674B;
       color: white;
     }
-  }
 
+    @media (max-width: 768px) {
+      font-size: 1rem; /* Reduz o tamanho da fonte */
+      width: 8rem; /* Reduz a largura do botão */
+    }
+  }
 `;
 
 export const DivFooter = styled.section`
