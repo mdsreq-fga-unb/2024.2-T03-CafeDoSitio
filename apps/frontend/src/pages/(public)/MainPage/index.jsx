@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Container, Section1, Card, Section2, Acoes, DivFooter, Conteudo, ParteSuperior, Divisao1, Divisao2, DivisaoTelefone, CopyRigthSection } from "./styled";
 import CapaPagina from "../../../assets/Capa.jpg";
 
@@ -20,7 +21,9 @@ const MainPage = () => {
           <Acoes>
             <h1>Açoes Sociais e Sustentabilidade</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero consequuntur natus molestiae, excepturi vitae, iure laboriosam sint, neque blanditiis optio doloremque. Voluptatum, aliquam. Quas perspiciatis facilis ratione ipsam officiis veniam!</p>
-            <button>Saiba mais</button>
+            <Link to="../sitio-verde">
+              <button>Saiba mais</button>
+            </Link>
           </Acoes>
         </Section2>
         <DivFooter>

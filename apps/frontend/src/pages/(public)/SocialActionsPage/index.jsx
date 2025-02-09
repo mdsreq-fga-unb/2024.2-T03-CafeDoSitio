@@ -10,6 +10,7 @@ import imagemBazar from "../../../assets/bazar.jpg"
 import imagemHorta from "../../../assets/horta.jpg"
 import imagemGrafico from "../../../assets/grafico.png"
 import imagemCampo from "../../../assets/SítioVerde_6.jpg"
+import React, { useEffect } from "react";
 
 import {
     Text,
@@ -35,6 +36,11 @@ import {
 
 
 export default function SocialActionsPage() {
+
+    useEffect(() => {
+        // Rola para o topo da página quando o componente é montado
+        window.scrollTo(0, 0);
+    }, []);
 
     return(
         <>

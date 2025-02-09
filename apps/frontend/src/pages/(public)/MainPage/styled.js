@@ -123,6 +123,10 @@ export const Section2 = styled.section`
   padding: 20px;
   background-size: cover;
 
+  button {
+    margin: 2rem;
+  }
+
   @media (max-width: 768px) {
     justify-content: center; /* Centraliza o conteúdo em telas menores */
     padding: 30px; /* Reduz o padding */
