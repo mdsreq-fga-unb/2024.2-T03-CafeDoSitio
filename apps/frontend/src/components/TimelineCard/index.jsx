@@ -122,12 +122,11 @@ export function TimelineCard() {
 
       <GrayBar>
         <Navigation>
-          <TimelineLine />
           <div className="timeline">
             {years.map((year, index) => (
               <div
-                className={`timeline-item ${index === currentYearIndex ? "active" : ""}`}
-                onClick={() => setCurrentYearIndex(index)}
+              className={`timeline-item ${index === currentYearIndex ? "active" : ""}`}
+              onClick={() => setCurrentYearIndex(index)}
               >
                 <div className="timeline-item-year">{year}</div>
               </div>
@@ -135,6 +134,7 @@ export function TimelineCard() {
             ))}
           
           </div>
+          <TimelineLine />
         </Navigation>
       </GrayBar>
 

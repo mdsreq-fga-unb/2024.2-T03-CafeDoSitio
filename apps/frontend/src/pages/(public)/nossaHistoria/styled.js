@@ -80,18 +80,14 @@ export const ThirdTextSection = styled.div`
 `;
 
 export const DiferencialSection = styled.div`
-    display: flex;
-    flex-direction: row;
-    border-radius: 20px;
-    //box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    justify-content: center;
-
-    @media(max-width: 1320px){
-      flex-direction: column;
-      width: 100%;
-      align-items: center;
-    }
+  display: flex;
+  flex-direction: row;
+  border-radius: 20px;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  row-gap: 2.8rem;
 `;
 
 

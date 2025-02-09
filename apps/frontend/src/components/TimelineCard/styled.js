@@ -4,7 +4,7 @@ export const TimelineCardContainer = styled.div`
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Ajuste aqui */
-  width: 1900px;
+  max-width: 1000px;
   margin: 1vw;
   margin-inline: 8px;
 
@@ -56,11 +56,12 @@ export const Content = styled.div`
 export const TimelineLine = styled.hr`
   position: absolute;
   margin-top: -30px;
-  width: 100%;
+  width: calc(100% - 62px); /* Reduzindo a largura para compensar as margens */
   height: 3px;
   background-color: #333333;
   border: none;
   z-index: 0;
+  left: 30px; /* Movendo para a direita para alinhar com a timeline */
 `;
 
 export const YearDisplay = styled.div`
