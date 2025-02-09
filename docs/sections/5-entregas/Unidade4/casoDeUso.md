@@ -28,7 +28,7 @@ _Fonte: Elaboração própria_
 <div class="tab">
   <button class="tablinks" onclick="openTab(event, 'Agendar')">Agendar serviço de saúde</button>
   <button class="tablinks" onclick="openTab(event, 'X')">Caso 2</button>
-  <button class="tablinks" onclick="openTab(event, 'Y')">Caso 3</button>
+  <button class="tablinks" onclick="openTab(event, 'Y')">Gerenciar Iniciativas de Saúde</button>
   <button class="tablinks" onclick="openTab(event, 'Z')">Caso 4</button>
   <button class="tablinks" onclick="openTab(event, 'A')">Caso 5</button>
   <button class="tablinks" onclick="openTab(event, 'B')">Caso 6</button>
@@ -296,7 +296,7 @@ _Fonte: Elaboração própria_
 
 
 <div id="Y" class="tabcontent">
-<h2>UC - Realizar Pré-Agendamento</h2>
+<h2>UC - Gerenciar Iniciativas de Saúde</h2>
 
   <h3>Especificação de Caso de Uso</h3>
   <h3>Histórico de Revisão</h3>
@@ -308,56 +308,41 @@ _Fonte: Elaboração própria_
           <th>Versão</th>
       </tr>
       <tr>
-          <td>24/04/2022</td>
-          <td>Laís Portela</td>
-          <td>Adicionando caso de uso no documento</td>
+          <td>09/02/2025</td>
+          <td>Daniel Rodrigues da Rocha</td>
+          <td>Criação do Caso de Uso Gerenciar Iniciativas de Saúde</td>
           <td>1.0</td>
-      </tr>
-      <tr>
-          <td>26/04/2022</td>
-          <td>Laís Portela</td>
-          <td>Revisão do documento</td>
-          <td>1.1</td>
-      </tr>
-      <tr>
-          <td>26/04/2022</td>
-          <td>Laís Portela</td>
-          <td>Alterações no fluxo básico e outros</td>
-          <td>1.2</td>
-      </tr>
-      <tr>
-          <td>26/04/2022</td>
-          <td>Laís Portela</td>
-          <td>Adição de regra de negócio</td>
-          <td>1.3</td>
       </tr>
   </table>
 
   <h3>1. Breve Descrição</h3>
-  <p>Este caso de uso é utilizado pelos clientes para fazer o pré-agendamento do animal, bem como escolher os serviços prestados e meios de pagamento.</p>
+  <p>Este caso de uso permite que organizações parceiras gerenciem iniciativas de saúde, incluindo a divulgação de campanhas, monitoramento do impacto das ações e gestão de relatórios de atividades relacionadas à saúde da comunidade.</p>
 
   <h3>2. Atores</h3>
   <ul>
-      <li>2.1 Cliente que deseja hospedar o seu animal em um hotel para pets.</li>
-      <li>2.2 Funcionário que trabalha no hotel para animais e deseja aprovar agendamentos e definir serviços de forma virtual.</li>
+      <li>2.1 Organizações parceiras: responsáveis por criar e gerenciar iniciativas de saúde.</li>
   </ul>
 
   <h3>3. Condições Prévias</h3>
   <ul>
-      <li>3.1 Cliente fez login.</li>
-      <li>3.2 Cliente cadastrou pelo menos um animal.</li>
+        <li>O usuário deve estar autenticado no sistema.</li>
+        <li>O usuário deve ter permissão para gerenciar iniciativas de saúde.</li>
   </ul>
 
   <h3>4. Fluxo Básico (FB)</h3>
+
+    <p>Este fluxo básico se inicia quando o usuário selecoina a opção "Gerenciar Iniciativas de Saúde.</p>
+
   <ol>
-      <li>O cliente seleciona a opção "hospedar pet".</li>
-      <li>O cliente seleciona o animal desejado.</li>
-      <li>O cliente digita as datas desejadas (RN04).</li>
-      <li>O sistema faz a validação da data (FE01, FE02, FE03, RN01).</li>
-      <li>O sistema mostra o valor da hospedagem (RN01).</li>
-      <li>O sistema solicita informações complementares do animal.</li>
-      <li>O cliente confirma o pré-agendamento (RN02).</li>
-      <li>O sistema verifica se o cliente deseja escolher algum serviço ou definir a forma de pagamento (FA01, FA02, FA03).</li>
+      <li>O sistema exibe uma lista de opção:</li>
+      <ul>
+        <li>Criar uma nova iniciativa de Saúde;</li>
+        <li>Editar iniciativas de saúde ativos; [FA01]</li>
+        <li>Consultar iniciativas de saúde ativos. [FA02]</li>
+      <ul>
+      <li>O usuário seleciona a opção de criar uma nova iniciativa.</li>
+      <li>O usuário insere os detalhes da iniciativa, incluindo nome, descrição, período e público-alvo.</li>
+      <li>O sistema valida as informações e salva a iniciativa.</li>
   </ol>
 
   <h3>5. Fluxo Alternativo (FA)</h3>
