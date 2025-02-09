@@ -5,7 +5,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'; // CSS do <ToastContainer />
 import { Link } from "react-router-dom";
 import { ROUTES } from "../../../routes/RoutesConstants";
-import { InfoZone, Space, ContentZone, ManupulationDiv, InputsArea, Vazio } from "./styled";
+import { InfoZone, Space, ContentZone, InputsArea, Vazio, FilterZone, Dropdown, DateFilterContainer} from "./styled";
 import { FaPlus } from "react-icons/fa";
 import Button from "../../../components/Button";
 import Popup from "../../../components/PopUp";
@@ -25,7 +25,12 @@ const VisitaConfigPage = () => {
   const [date, setDate] = useState('');
   const [startTime, setStartTime] = useState('');
   const [endTime, setEndTime] = useState('');
-  const [visitas, setVisitas] = useState([])
+  const [visitas, setVisitas] = useState([]);
+  const [filtroStartDate, setFiltroStartDate] = useState('');
+  const [filtroEndDate, setFiltroEndDate] = useState(''); 
+  const [filtroStatus, setFiltroStatus] = useState('disponivel');
+  const [visitasFiltradas, setVisitasFiltradas] = useState([]);
+  const [visitasSolicitadas, setVisitasSolicitadas] = useState([]);
 
   const openPopup = () => setIsPopupOpen(true);
   const closePopup = () => setIsPopupOpen(false);
@@ -40,8 +45,19 @@ const VisitaConfigPage = () => {
     setEndTime(e.target.value);
   };
 
-  useEffect(() => { fetchDisponibility() }, [])
+  const handleChangeFiltroStartDate = (e) => {
+    setFiltroStartDate(e.target.value); 
+  };
 
+  const handleChangeFiltroEndDate = (e) => {
+    setFiltroEndDate(e.target.value);
+  };
+
+  const handleChangeFiltroStatus = (e) => {
+    setFiltroStatus(e.target.value);
+  };
+
+  
   async function fetchDisponibility(){
     try{
       const response = await findAllVisita();
@@ -62,17 +78,17 @@ const VisitaConfigPage = () => {
       const now = new Date();
       const formattedStart = new Date(`${date}T${startTime}:00`);
       const formattedEnd = new Date(`${date}T${endTime}:00`);
-
+      
       if(date === '' || startTime === '' || endTime === '' || !date || !startTime || !endTime) {
         toast.error("Preencha todos os campos!");
         return
       }
-
+      
       if (formattedStart < now) {
         toast.error("A data da Disponibilidade não pode ser menor que o atual!");
         return;
       }
-
+      
       if (formattedEnd <= formattedStart) {
         toast.error("O horário de término não pode ser menor ou igual ao horário de início!");
         return;
@@ -103,7 +119,7 @@ const VisitaConfigPage = () => {
       toast.error("Houve algum erro nosso! Tente novamente mais tarde.");
     }
   };
-
+  
   function navToVisitaDetail(item) {
     const initDate = new Date(item.startDateTime);
     sessionStorage.setItem("VisitaSelected", JSON.stringify({
@@ -115,10 +131,33 @@ const VisitaConfigPage = () => {
       nameVisitor: item.nameVisitor,
       emailVisitor: item.emailVisitor,
       phoneVisitor: item.phoneVisitor,
-      institution: item.institution
+      numberVisitors: item.numberVisitors,
+      institution: item.institution,
+      message: item.message,
     }));
     navigate(`${ROUTES.VISITA_DETALHADA}/${item._id}`);
   }
+
+  useEffect(() => { fetchDisponibility() }, []);
+  useEffect(() => {
+    const filtered = visitas.filter((item) => {
+      const startDate = new Date(item.startDateTime);
+      const endDate = new Date(item.endDateTime);
+
+      const matchesStatus = item.status === filtroStatus;
+      const matchesStartDate = !filtroStartDate || new Date(filtroStartDate) <= startDate;
+      const matchesEndDate = !filtroEndDate || new Date(filtroEndDate) >= endDate;
+
+      return matchesStatus && matchesStartDate && matchesEndDate;
+    });
+    const filtered2 = visitas.filter((item) => {
+      const matchesStatus = item.status === "solicitado";
+      return matchesStatus;
+    });
+    setVisitasFiltradas(filtered);
+    setVisitasSolicitadas(filtered2);
+  }, [visitas, filtroStartDate, filtroEndDate, filtroStatus]);
+
 
   return(
     <>
@@ -133,10 +172,6 @@ const VisitaConfigPage = () => {
       </InfoZone>
 
       <ContentZone>
-
-      <ManupulationDiv>
-        <Button text={"Criar"} onClick={openPopup}><FaPlus className="icon"/></Button>
-      </ManupulationDiv>
 
       <Popup isOpen={isPopupOpen} onClose={closePopup}>
         <div>
@@ -164,10 +199,57 @@ const VisitaConfigPage = () => {
       </Popup>
 
       <InfoZone>
-        <h2>1. Suas disponibilidades:</h2>
+        <h2>1. Visitas em Solicitação:</h2>
+
         <div className="visitas-list">
-        { visitas.length > 0 ? (
-            visitas.map((item, index) => {
+        { visitasSolicitadas.length > 0 ? (
+            visitasSolicitadas.map((item, index) => {
+              return ( <DisponibilityCard 
+                          key={index}
+                          initTime={item.startDateTime}
+                          endTime={item.endDateTime}
+                          status={item.status}
+                          onClick={() => navToVisitaDetail(item)}/>
+                      )
+            })
+        ) : (
+          <Vazio>
+            <FaExclamationCircle className="icon"/>
+            <span>Nenhuma visita solicitada!</span>
+          </Vazio>
+        )}
+        </div>
+        
+        <br />
+        <br />
+        <h2>2. Suas Disponibilidades:</h2>
+        <FilterZone>
+          <DateFilterContainer>
+                <DateInput
+                  placeholder="Data de Início"
+                  value={filtroStartDate}
+                  onChange={handleChangeFiltroStartDate}
+                />
+                <DateInput
+                  placeholder="Data de Fim"
+                  value={filtroEndDate}
+                  onChange={handleChangeFiltroEndDate}
+                />
+          </DateFilterContainer>
+
+          <div className='ButtonsZone'>
+
+            <Dropdown name="filter" id="filter" onChange={handleChangeFiltroStatus}>
+              <option value="disponivel">Disponíveis</option>
+              <option value="agendado">Agendados</option>
+            </Dropdown>
+
+            <Button text={"Criar"} onClick={openPopup}><FaPlus className="icon"/></Button>
+          </div>
+        </FilterZone>
+        <div className="visitas-list">
+        { visitasFiltradas.length > 0 ? (
+            visitasFiltradas.map((item, index) => {
               return ( <DisponibilityCard 
                           key={index}
                           initTime={item.startDateTime}

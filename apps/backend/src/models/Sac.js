@@ -1,15 +1,11 @@
 import mongoose from "mongoose";
 import crypto from "crypto";
-
-const generateUniqueIdentifier = () => {
-  return crypto.randomBytes(8).toString("hex"); 
-};
+import Counter from "./Counter.js";
 
 const SacSchema = new mongoose.Schema({
-  identificador: {
-    type: String,
-    required: true,
-    default: generateUniqueIdentifier,
+  incrementalId: {
+    type: Number,
+    unique: true,
   },
   nomeSobrenome: {
     type: String,
@@ -36,6 +32,23 @@ const SacSchema = new mongoose.Schema({
     required: true,
     default: false,
   },
+}, {timestamps: true});
+
+// Middleware para gerar o incrementalId antes de salvar
+SacSchema.pre("save", async function (next) {
+  if (!this.incrementalId) {
+    try {
+      const counter = await Counter.findOneAndUpdate(
+        { model: "Sac" }, // Modelo do qual queremos incrementar o ID
+        { $inc: { seq: 1 } }, // Incrementa o campo `seq` em 1
+        { new: true, upsert: true } // Cria o documento se não existir
+      );
+      this.incrementalId = counter.seq;
+    } catch (error) {
+      return next(error);
+    }
+  }
+  next();
 });
 
 const Sac = mongoose.model('Sac', SacSchema);

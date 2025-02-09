@@ -14,10 +14,23 @@ import {
   ImageWrapper,
   TextWrapper
 } from "./styled";
-import celeirinho from "../../assets/celeirinho.png"
+
+// IMPORTAÇÃO DE IMAGENS:
+import svg1 from "../../assets/1967.svg";
+import svg2 from "../../assets/1972.svg";
+import svg3 from "../../assets/1974.svg";
+import svg4 from "../../assets/1986.svg";
+import svg5 from "../../assets/1989.svg";
+import svg6 from "../../assets/2000.svg";
+import svg7 from "../../assets/2005.svg";
+import svg8 from "../../assets/2009.svg";
+import svg9 from "../../assets/2015.svg";
+import svg10 from "../../assets/2017.svg";
+import svg11 from "../../assets/2018.svg";
+import svg12 from "../../assets/2025.svg";
 
 export function TimelineCard() {
-  const years = [1958, 1967, 1972, 1974, 1979, 1986, 2000, 2005, 2010, 2014];
+  const years = [1967, 1972, 1974, 1986, 1989, 2000, 2005, 2009, 2015, 2017, 2018, 2025];
   const texts = [
     "Vindos do Pernambuco, os recém-casados Antônia e Teones Barbosa de Souza chegam em Brasília. Se estabelecem no Núcleo Bandeirante, onde abrem um armazém de secos e molhados.",
     "O casal compra o Café do Sítio — a marca, o maquinário de torrefação e três veículos de distribuição. A fábrica funciona no Núcleo Bandeirante, e Teones mantém os negócios no armazém.",
@@ -28,8 +41,26 @@ export function TimelineCard() {
     "Começa a produção do café a vácuo, em embalagens de 250g e 500g. Também tem início a venda do cappuccino, terceirizado para outra empresa, e distribuído com a marca Café do Sítio.",
     "Mudança para atual sede, no final do Pistão Sul. O Café também renova o seu maquinário, substituindo os torradores semi-automáticos por novos, que permitem o controle das curvas de temperatura e pressão.",
     "Em 10 de outubro, morre Teones Barbosa de Souza, em decorrência das complicações de uma cirurgia após um acidente de trânsito. A presidência do Café é assumida por sua mulher.",
-    "O Café do Sítio se consolida como líder de mercado. No Distrito Federal, tem 60% da preferência dos consumidores, segundo pesquisa da Associação Brasileira de Supermercados (Abras)."
+    "O Café do Sítio se consolida como líder de mercado. No Distrito Federal, tem 60% da preferência dos consumidores, segundo pesquisa da Associação Brasileira de Supermercados (Abras).",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
   ];
+
+  const icones = [
+    <img src={svg1} alt="celeiro" />,
+    <img src={svg2} alt="casas" />,
+    <img src={svg3} alt="cafe" />,
+    <img src={svg4} alt="cafe" />,
+    <img src={svg5} alt="cafe" />,
+    <img src={svg6} alt="cafe" />,
+    <img src={svg7} alt="cafe" />,
+    <img src={svg8} alt="cafe" />,
+    <img src={svg9} alt="cafe" />,
+    <img src={svg10} alt="cafe" />,
+    <img src={svg11} alt="cafe" />,
+    <img src={svg12} alt="cafe" />,
+  ]
+
   const [currentYearIndex, setCurrentYearIndex] = useState(0);
 
   const handleNext = () => {
@@ -47,9 +78,9 @@ export function TimelineCard() {
   return (
     <TimelineCardContainer>
      
-      <StyledDiv>
+      <StyledDiv className="title">
         <Title>Linha do Tempo</Title>
-        <Text>Lorem Ipsum is simply dummy text of the printing and typesetting industry</Text>
+        <Text>Depois de 6 décadas, podemos afirmar que nossa história se confunde com a criação de Brasília, tornando nossa trajetória ainda mais especial</Text>
       </StyledDiv>
      
       <Content>
@@ -67,11 +98,17 @@ export function TimelineCard() {
             <TextBox><p>{texts[currentYearIndex]}</p></TextBox>
                         
             <ImageWrapper >
-              <img
-                src={celeirinho}
-                alt="testizinho"
-                style={{ marginTop: "1vw", width: "80%", height: "80%", objectFit: "cover" }}
-              />
+              <div
+                style={{
+                  width: "150px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+              }}
+
+              >
+                {icones[currentYearIndex]}            
+              </div>
             </ImageWrapper>
           </TextWrapper>
 
@@ -86,19 +123,18 @@ export function TimelineCard() {
       <GrayBar>
         <Navigation>
           <div className="timeline">
-            <TimelineLine />
             {years.map((year, index) => (
               <div
-                className={`timeline-item ${index === currentYearIndex ? "active" : ""}`}
-                onClick={() => setCurrentYearIndex(index)}
+              className={`timeline-item ${index === currentYearIndex ? "active" : ""}`}
+              onClick={() => setCurrentYearIndex(index)}
               >
-
                 <div className="timeline-item-year">{year}</div>
               </div>
 
             ))}
           
           </div>
+          <TimelineLine />
         </Navigation>
       </GrayBar>
 

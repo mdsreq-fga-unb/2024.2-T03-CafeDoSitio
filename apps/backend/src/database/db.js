@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const connectDatabase = async () => {
     const mongoURI =
-    process.env.NODE_ENV === 'production'
+    process.env.VITE_MODE === 'production'
       ? process.env.MONGODB_URI_PROD // Banco de produção
       : process.env.MONGODB_URI_DEV; // Banco de desenvolvimento
 
