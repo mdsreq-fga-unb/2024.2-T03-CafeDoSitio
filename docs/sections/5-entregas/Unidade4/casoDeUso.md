@@ -31,7 +31,7 @@ _Fonte: Elaboração própria_
   <button class="tablinks" onclick="openTab(event, 'Y')">Caso 3</button>
   <button class="tablinks" onclick="openTab(event, 'Z')">Caso 4</button>
   <button class="tablinks" onclick="openTab(event, 'A')">Caso 5</button>
-  <button class="tablinks" onclick="openTab(event, 'B')">Caso 6</button>
+  <button class="tablinks" onclick="openTab(event, 'ResponderDuvidas')">Responder a dúvidas e reclamações dos usuários</button>
 </div>
 
 <div id="Agendar" class="tabcontent">
@@ -704,12 +704,9 @@ _Fonte: Elaboração própria_
 </div>
 
 
+<div id="ResponderDuvidas" class="tabcontent">
 
-
-
-
-<div id="B" class="tabcontent">
-<h2>UC - Realizar Pré-Agendamento</h2>
+  <h2>UC - Responder a Dúvidas e Reclamações dos Usuários</h2>
 
   <h3>Especificação de Caso de Uso</h3>
   <h3>Histórico de Revisão</h3>
@@ -721,116 +718,103 @@ _Fonte: Elaboração própria_
           <th>Versão</th>
       </tr>
       <tr>
-          <td>24/04/2022</td>
-          <td>Laís Portela</td>
+          <td>09/02/2025</td>
+          <td>Marcella Sousa Anderle</td>
           <td>Adicionando caso de uso no documento</td>
           <td>1.0</td>
-      </tr>
-      <tr>
-          <td>26/04/2022</td>
-          <td>Laís Portela</td>
-          <td>Revisão do documento</td>
-          <td>1.1</td>
-      </tr>
-      <tr>
-          <td>26/04/2022</td>
-          <td>Laís Portela</td>
-          <td>Alterações no fluxo básico e outros</td>
-          <td>1.2</td>
-      </tr>
-      <tr>
-          <td>26/04/2022</td>
-          <td>Laís Portela</td>
-          <td>Adição de regra de negócio</td>
-          <td>1.3</td>
       </tr>
   </table>
 
   <h3>1. Breve Descrição</h3>
-  <p>Este caso de uso é utilizado pelos clientes para fazer o pré-agendamento do animal, bem como escolher os serviços prestados e meios de pagamento.</p>
+  <p>Este caso de uso permite ao Administrador do Sistema responder às dúvidas e reclamações enviadas pelos usuários externos (Pacientes, Profissionais de Saúde e Agentes Comunitários) no Connect Care. O administrador pode visualizar as solicitações, responder, encaminhar para outro setor ou marcar como resolvida.</p>
 
   <h3>2. Atores</h3>
   <ul>
-      <li>2.1 Cliente que deseja hospedar o seu animal em um hotel para pets.</li>
-      <li>2.2 Funcionário que trabalha no hotel para animais e deseja aprovar agendamentos e definir serviços de forma virtual.</li>
+      <li>Usuário Externo (Paciente, Profissional de Saúde ou Agente Comunitário)</li>
+      <li>Administrador do Sistema</li>
   </ul>
 
   <h3>3. Condições Prévias</h3>
   <ul>
-      <li>3.1 Cliente fez login.</li>
-      <li>3.2 Cliente cadastrou pelo menos um animal.</li>
+      <li>3.1 O usuário externo deve estar autenticado no sistema.</li>
+      <li>3.2 O sistema deve estar operacional e apto a receber solicitações.</li>
   </ul>
 
   <h3>4. Fluxo Básico (FB)</h3>
+  Esse caso de uso é iniciado quando um usuário externo registra uma dúvida ou reclamação.
   <ol>
-      <li>O cliente seleciona a opção "hospedar pet".</li>
-      <li>O cliente seleciona o animal desejado.</li>
-      <li>O cliente digita as datas desejadas (RN04).</li>
-      <li>O sistema faz a validação da data (FE01, FE02, FE03, RN01).</li>
-      <li>O sistema mostra o valor da hospedagem (RN01).</li>
-      <li>O sistema solicita informações complementares do animal.</li>
-      <li>O cliente confirma o pré-agendamento (RN02).</li>
-      <li>O sistema verifica se o cliente deseja escolher algum serviço ou definir a forma de pagamento (FA01, FA02, FA03).</li>
+      <li>O usuário externo acessa a plataforma e registra uma dúvida ou reclamação.</li>
+      <li>O sistema armazena a solicitação e a disponibiliza para o Administrador do Sistema.</li>
+      <li>O Administrador acessa a interface de administração e visualiza as dúvidas e reclamações pendentes.</li>
+      <li>O Administrador escolhe uma das seguintes ações:
+        <br> - Responder a solicitação [FA01];
+        <br> - Encaminhar para outro setor [FA02];
+        <br> - Marcar como resolvida [FA03].
+      </li>
+      <li>O sistema registra a ação tomada e notifica o usuário externo.</li>
+      <li>O caso de uso é encerrado.</li>
   </ol>
 
   <h3>5. Fluxo Alternativo (FA)</h3>
-  <h4>FA01 - Selecionar Serviços</h4>
+
+  <h4>FA01 - Responder a uma Solicitação</h4>
   <ol>
-      <li>O cliente seleciona "Serviços".</li>
-      <li>O cliente escolhe quais serviços deseja.</li>
-      <li>O cliente salva as informações (RN03).</li>
-      <li>O sistema emite uma mensagem de sucesso.</li>
+      <li>O Administrador seleciona uma solicitação.</li>
+      <li>O sistema exibe os detalhes da solicitação (tipo, data, usuário e descrição).</li>
+      <li>O Administrador insere e confirma a resposta. [FE01][FE02]</li>
+      <li>O sistema registra a resposta e notifica o usuário externo.</li>
   </ol>
 
-  <h4>FA02 - Selecionar Pagamento</h4>
+  <h4>FA02 - Encaminhar para Outro Setor</h4>
   <ol>
-      <li>O cliente seleciona "Pagamento".</li>
-      <li>O cliente escolhe qual será o seu meio de pagamento.</li>
-      <li>O sistema mostra o valor total.</li>
-      <li>O cliente salva sua opção (RN03).</li>
-      <li>O sistema emite uma mensagem de sucesso.</li>
+      <li>O Administrador escolhe encaminhar a solicitação.</li>
+      <li>O sistema exibe a lista de setores disponíveis.</li>
+      <li>O Administrador seleciona um setor e adiciona um comentário opcional.</li>
+      <li>O Administrador confirma o encaminhamento. [FE03]</li>
+      <li>O sistema transfere a solicitação e notifica o setor responsável.</li>
   </ol>
 
-  <h4>FA03 - Sair do Pré-Agendamento</h4>
-  <p>O cliente decide finalizar o pré-agendamento, após a conclusão do fluxo básico.</p>
+  <h4>FA03 - Marcar como Resolvida</h4>
+  <ol>
+      <li>O Administrador opta por marcar a solicitação como resolvida.</li>
+      <li>O sistema exibe a lista de solicitações pendentes.</li>
+      <li>O Administrador revisa o histórico e insere uma justificativa opcional.</li>
+      <li>O sistema registra a ação e notifica o usuário externo.</li>
+  </ol>
 
   <h3>6. Fluxo de Exceção (FE)</h3>
-  <h4>FE01 - Data de entrada maior que a de saída</h4>
-  <p>"A data de entrada deve ser maior que a de saída". O caso de uso retorna ao passo 4.3 do FB.</p>
 
-  <h4>FE02 - Data anterior à atual</h4>
-  <p>"As datas devem ser maiores que a de hoje". O caso de uso retorna ao passo 4.3 do FB.</p>
+  <h4>FE01 - Resposta Inválida</h4>
+  <p>Se a resposta estiver vazia ou contiver caracteres inválidos, o sistema impede o envio e exibe uma mensagem de erro.</p>
 
-  <h4>FE03 - Data com mais de um ano à frente</h4>
-  <p>"As datas não devem ser de mais de um ano". O caso de uso retorna ao passo 4.3 do FB.</p>
+  <h4>FE02 - Falha no Envio da Resposta</h4>
+  <p>Se houver erro no banco de dados ou na conexão, o sistema exibe uma mensagem informando a falha.</p>
 
-  <h4>FE04 - Cliente não digitou as informações necessárias</h4>
-  <p>O sistema impedirá que o cliente avance para o próximo passo caso as informações estejam incompletas.</p>
+  <h4>FE03 - Falha no Encaminhamento</h4>
+  <p>Se o setor selecionado estiver indisponível, o sistema exibe uma mensagem de erro e retorna ao passo anterior.</p>
 
   <h3>7. Regras de Negócio (RN)</h3>
-  <h4>RN01 - Valor do Pré-Agendamento</h4>
-  <p>O valor da hospedagem depende do peso do animal e dos dias agendados. Para que o valor seja mostrado, os campos "Pet", "Entrada" e "Saída" devem estar preenchidos.</p>
 
-  <h4>RN02 - Validação dos Dados</h4>
-  <p>Para que o sistema realize o pré-agendamento, é necessário que os passos 4.2 e 4.3 estejam preenchidos corretamente, e que o sistema valide o passo 4.4.</p>
+  <h4>RN01 - Tempo Máximo de Resposta</h4>
+  <p>Dúvidas devem ser respondidas em até 48 horas. Reclamações críticas devem ser respondidas em até 24 horas.</p>
 
-  <h4>RN03 - Campo Preenchido</h4>
-  <p>Para que o sistema confirme as informações, elas não devem ser nulas.</p>
+  <h4>RN02 - Validação da Resposta</h4>
+  <p>A resposta não pode ser nula ou conter caracteres inválidos. [FE01]</p>
 
-  <h4>RN04 - Validação das Datas</h4>
-  <p>As datas preenchidas devem seguir os seguintes critérios:</p>
-  <ul>
-      <li>Ser posteriores ou iguais ao dia atual.</li>
-      <li>Ser de até um ano após o dia atual.</li>
-      <li>A data de entrada não pode ser posterior à data de saída.</li>
-  </ul>
+  <h4>RN03 - Registro de Histórico</h4>
+  <p>O sistema deve armazenar todas as interações para auditoria e consultas futuras.</p>
+
+  <h4>RN04 - Acessibilidade</h4>
+  <p>O sistema deve oferecer suporte a VLibras e leitores de tela.</p>
 
   <h3>8. Pós-Condições</h3>
-  <p>Pós-Condições</p>
+  <p>O usuário externo recebe uma resposta, tem sua solicitação encaminhada ou marcada como resolvida.</p>
 
   <h3>9. Ponto de Extensão</h3>
-  <p>Ponto de Extensão</p>
+  <p><strong>Relatórios Gerenciais:</strong> O Administrador pode visualizar estatísticas de dúvidas e reclamações para análise de tendências e melhoria do suporte.</p>
+
 </div>
+
 
 
 <script>
