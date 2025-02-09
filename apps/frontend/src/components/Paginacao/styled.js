@@ -1,15 +1,17 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const DivPagincacao = styled.div`
+export const DivPaginacao = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
   left: 0;
-  position: absolute;
-  height: 40px;
   width: 100%;
-  background: #006343;
-  /* margin-bottom: 50px; */
+  background: #2b674b;
+  position: absolute;
+  z-index: 9;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
 
   @media (max-width: 800px){
     justify-content: left;
@@ -17,22 +19,24 @@ export const DivPagincacao = styled.div`
   }
 `;
 
-export const DivLetreiro = styled.div`
+export const Letreiro = styled.h1`
+  text-transform: uppercase;
+  font-size: 12px;
+  width: 100%;
+  color: white;
+
+  .page{
+    color: white;
+  }
+`;
+
+export const Layout = styled.div`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   width: 1900px;
 
   @media (max-width: 2000px){
     width: 90%;
   }
-
-  @media (max-width: 800px){
-    width: 100%;
-  }
-`;
-
-export const Letreiro = styled.h1`
-  font-size: 12px;
-  color: white;
-  text-transform: uppercase;
 `;
