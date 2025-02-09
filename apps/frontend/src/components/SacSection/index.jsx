@@ -50,6 +50,31 @@ function Sac() {
         }
     };
 
+    const validarTelefone = (telefone) => {
+        const regex = /^\(\d{2}\) \d{5}-\d{4}$/; // Formato (DDD) 00000-0000
+        return regex.test(telefone);
+    };
+    
+    const formatarTelefone = (valor) => {
+        // Remove tudo que não é dígito
+        const apenasDigitos = valor.replace(/\D/g, "");
+
+        // Aplica a máscara (DDD) 00000-0000
+        if (apenasDigitos.length <= 2) {
+            return `(${apenasDigitos}`;
+        } else if (apenasDigitos.length <= 11) {
+            return `(${apenasDigitos.slice(0, 2)}) ${apenasDigitos.slice(2, 7)}-${apenasDigitos.slice(7, 11)}`;
+        } else {
+            return `(${apenasDigitos.slice(0, 2)}) ${apenasDigitos.slice(2, 7)}-${apenasDigitos.slice(7, 11)}`;
+        }
+    };
+    
+    // Função chamada ao mudar o valor do input
+    const handleTelefone = (e) => {
+        const valorFormatado = formatarTelefone(e.target.value);
+        setTelefone(valorFormatado);
+    };
+
     const formData = new FormData();
 
     if (arquivo) {
@@ -61,6 +86,15 @@ function Sac() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsLoading(true); // Ativa o carregamento
+
+        if(!nomeSobrenome || !email || !telefone || !mensagem) {
+            setIsLoading(false); // Desativa o carregamento
+            return toast.error("Preencha todos os campos!");
+        }
+        if(!validarTelefone(telefone)) {
+            setIsLoading(false); // Desativa o carregamento
+            return toast.error("Telefone inválido! Use o formato (DDD) 00000-0000.");
+        }
     
         try {
             await sacService.postSac(formData); // Chama o serviço que consome a API
@@ -113,7 +147,7 @@ function Sac() {
 
                 <Label htmlFor="phone" style={{color: "#006343"}}>Telefone:</Label>
                 <Input type="tel" id="phone" placeholder="Telefone" value={telefone} 
-                    onChange={(e) => {setTelefone(e.target.value);}}
+                    onChange={handleTelefone}
                 />
 
                 <Label htmlFor="subject" style={{color: "#006343"}}>Assunto:</Label>                

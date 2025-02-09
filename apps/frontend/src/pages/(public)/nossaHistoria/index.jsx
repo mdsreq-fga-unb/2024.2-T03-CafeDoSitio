@@ -17,6 +17,8 @@ import {
     RedLine,
     DiferencialText
 } from "./styled";
+import { Link } from "react-router-dom";
+import { ROUTES } from "../../../routes/RoutesConstants";
 
 //Icones
 import Missao from '../../../assets/Missão.svg'
@@ -54,7 +56,11 @@ export default function NossaHistoria() {
 
     return (
         <>
-            <Paginacao text={"FAMÍLIA DO SÍTIO > NOSSA HISTÓRIA"} />
+            <Paginacao>
+                <Link className="page" to={ROUTES.HOME}>Família do Sítio</Link>
+                {" > "}
+                <span>Nossa História</span>
+            </Paginacao>
             <Space />
 
            

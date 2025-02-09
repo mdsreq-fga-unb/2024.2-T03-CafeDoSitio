@@ -5,6 +5,7 @@ import NossaHistoria from "../pages/(public)/nossaHistoria";
 import BlogPage from "../pages/(public)/BlogPage";
 import SocialActionsPage from "../pages/(public)/SocialActionsPage";
 import VisitaFabricaPage from "../pages/(public)/VisitaFabricaPage";
+import BlogViewPage from "../pages/(public)/BlogViewPage";
 import { ROUTES } from "./RoutesConstants";
 
 import PublicLayout from "../components/PublicLayout";
@@ -24,6 +25,7 @@ const PublicRoutes = () => {
         <Route path={ROUTES.HISTORIA} element={<><NossaHistoria /></>} />
         <Route path={ROUTES.SITIO_VERDE} element={<SocialActionsPage />} />
         <Route path={ROUTES.VISITA} element={<><VisitaFabricaPage /></>} />
+        <Route path={ROUTES.BLOG_VIEW} element={<><BlogViewPage /></>} />
       </Routes>
     </PublicLayout>
   );

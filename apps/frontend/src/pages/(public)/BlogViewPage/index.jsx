@@ -1,94 +1,112 @@
 import React, { useEffect, useState } from "react";
-import Paginacao from '../../../components/Paginacao';
-import BlogInfo from '../../../assets/blog_info.png';
-import CardPost from '../../../components/CardPost';
+import axios from "axios";
+import { useParams, useNavigate, Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import Paginacao from "../../../components/Paginacao";
+import { Space, Conteudo, Categoria, Linha, Section2, ControlePaginacao, Divisor, Select } from "./styled";
+import { ROUTES } from "../../../routes/RoutesConstants";
 import { filterBlogsBasicUser } from "@familiadositio/core";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"; // CSS do <ToastContainer />
-import { useNavigate, Link } from "react-router-dom";
-import { ROUTES } from "../../../routes/RoutesConstants";
+import CardPost from "../../../components/CardPost";
 import { FaInfoCircle } from "react-icons/fa";
 
-import {
-  Space,
-  Section1,
-  Section2,
-  ControlePaginacao,
-  Select
-} from "./styled";
+const baseURL = "http://localhost:3002";
 
-const BlogPage = () => {
+const BlogViewPage = () => {
 
   const navigate = useNavigate();
 
+  const { slug } = useParams();
+  const [blog, setBlog] = useState(null);
   const [blogs, setBlogs] = useState([]);
   const [tagFilter, setTagFilter] = useState("");
   const [totalPages, setTotalPages] = useState(1);
   const [currentPage, setCurrentPage] = useState(1);
 
   const limit = 2;
-  
-  useEffect(() => {
-    const fetchBlogs = async (tag = "") => {
-      try {
-        const data = await filterBlogsBasicUser(currentPage, limit, undefined, tagFilter);
-        setBlogs(data.blogs);
-        setTotalPages(data.totalPages);
-      } catch (err) {
-        console.error("Erro ao buscar os blogs:", err);
-        toast.error("Erro ao buscar os blogs, tente novamente mais tarde!");
-      }
-    };
-    fetchBlogs();
-  }, [currentPage, tagFilter]);
 
   const changePageToBlogView = (item) => {
-    window.scrollTo(0, 0);
-    navigate(`${ROUTES.BLOG}/${item.slug}`);
+      window.scrollTo(0, 0);
+      navigate(`${ROUTES.BLOG}/${item.slug}`);
   }
+
+  useEffect(() => {
+    const fetchBlog = async () => {
+      try {
+        const response = await axios.get(`${baseURL}/blog/slug/${slug}`);
+        setBlog(response.data.blog);
+      } catch (error) {
+        console.error("Erro ao buscar blog:", error);
+      }
+    };
+
+    fetchBlog();
+  }, [slug]);
+
+  useEffect(() => {
+      const fetchBlogs = async (tag = "") => {
+        try {
+          const data = await filterBlogsBasicUser(currentPage, limit, undefined, tagFilter);
+          setBlogs(data.blogs);
+          setTotalPages(data.totalPages);
+        } catch (err) {
+          console.error("Erro ao buscar os blogs:", err);
+          toast.error("Erro ao buscar os blogs, tente novamente mais tarde!");
+        }
+      };
+      fetchBlogs();
+  }, [currentPage, tagFilter]);
+
+  if (!blog) return <p>Carregando...</p>;
 
   return (
     <>
       <Paginacao>
         <Link className="page" to={ROUTES.HOME}>Família do Sítio</Link>
         {" > "}
-        <span>Blog</span>
+        <Link className="page" to={ROUTES.BLOG}>Blog</Link>
+        {" > "}
+        <span>{blog.titulo}</span>
       </Paginacao>
       <Space />
 
+      <Helmet>
+        <title>{blog.titulo} - Família do Sítio</title>
+        <meta name="description" content={blog.metaDescription.substring(0, 150)} />
+        <meta name="keywords" content={blog.keywords} />
+        <meta property="og:title" content={blog.titulo} />
+        <meta property="og:description" content={blog.metaDescription.substring(0, 150)} />
+        <meta property="og:url" content={`https://familiadositio.com.br/blog/${blog.slug}`} />
+        <meta property="og:image" content={blog.banner} />
+        <meta property="og:type" content="article" />
+        <meta property="og:date" content={blog.dataHoraPublicacao} />
+      </Helmet>
+
       <ToastContainer />
 
-      <Section1>
-        <h1>Nosso Blog</h1>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Perspiciatis ab magni amet exercitationem neque, error quos expedita
-          nemo explicabo laborum architecto odit eum ipsa quod libero minus
-          magnam ut nulla.
-        </p>
-        <div className="image-container">
-          <img src={BlogInfo} alt="Blog Info" />
-          <div className="text-container">
-            <h2>
-              Aqui você encontra curiosidades, informações e receitas para os
-              amantes de café!
-            </h2>
-          </div>
-        </div>
-        <div className="linha" />
-
-        <div className="container">
-          <h1>Últimas publicações</h1>
-        </div>
-      </Section1>
+      <Conteudo>
+        <h1 className="titulo-blog">{blog.titulo}</h1>
+        <Categoria>
+          <p className="tag">
+            {blog.tag}
+          </p>
+        </Categoria>
+        <img src={blog.banner} alt={blog.titulo} className="banner-blog"/>
+        <div className="conteudo-blog" dangerouslySetInnerHTML={{ __html: blog.conteudo }} />
+      </Conteudo>
+      <Linha />
+      <Divisor>
+          <h1>Outras Publicações</h1>
+      </Divisor>
       <Select onChange={(e) => {setTagFilter(e.target.value); setCurrentPage(1)}}>
-              <option value="">Todos</option>
-              <option value="curiosidades">Curiosidades</option>
-              <option value="dicas">Dicas</option>
-              <option value="noticias">Notícias</option>
-              <option value="novidades">Novidades</option>
-              <option value="receitas">Receitas</option>
-            </Select>
+        <option value="">Todos</option>
+        <option value="curiosidades">Curiosidades</option>
+        <option value="dicas">Dicas</option>
+        <option value="noticias">Notícias</option>
+        <option value="novidades">Novidades</option>
+        <option value="receitas">Receitas</option>
+      </Select>
       <Section2>
         <div className="posts">
           {blogs.length > 0 ? (
@@ -147,4 +165,4 @@ const BlogPage = () => {
   );
 };
 
-export default BlogPage;
+export default BlogViewPage;

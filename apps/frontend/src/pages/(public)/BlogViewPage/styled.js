@@ -1,94 +1,92 @@
 import styled from "styled-components";
 
-// Espaçamento genérico
 export const Space = styled.div`
   height: 68px;
 `;
 
-export const Section1 = styled.section`
+export const Conteudo = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
+  margin-block: 30px;
 
-  h1 {
+  .titulo-blog {
     font-size: 2.5rem;
-    font-family: "Impact", sans-serif;
+    font-family: "Myriad pro", sans-serif;
     color: #2b674b;
     margin-block: 0px;
   }
 
-  p {
-    font-size: 1.1rem;
-    font-family: "Myriad Pro", sans-serif;
+  .banner-blog {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .conteudo-blog {
+    font-family: "Myriad pro", sans-serif;
     color: #333;
-  }
 
-  .image-container {
-    position: relative;
-    height: 100%;
-    width: 100%;
-
-    img {
-      max-width: 100%;
-      height: auto;
-      object-fit: cover;
+    p {
+      font-size: 1.3rem;
+      margin-block: 0px;
     }
-
-    .text-container {
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-      max-width: 560px;
-      text-align: right;
-
-      h2 {
-        font-size: 2.4rem;
-        font-family: "Myriad Pro", sans-serif;
-        color: #fff;
-        margin: 0;
-      }
-    }
-  }
-
-  .linha {
-    height: 2px;
-    width: 100%;
-    background-color: #2b674b;
-    margin-block: 40px;
-  }
-
-  .container {
-    width: 100%;
-    background-color: #2b674b;
-    margin-bottom: 40px;
-    padding-inline: 20px;
-    padding-top: 10px;
-    padding-bottom: 4px;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    border-radius: 10px;
 
     h1 {
+      font-size: 2.5rem;
+      margin-block: 0px;
+    }
+
+    h2 {
       font-size: 2rem;
-      font-family: "Impact", sans-serif;
-      color: #fff;
-      margin: 0;
-      padding: 0;
+      margin-block: 0px;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-block: 0px;
+    }
+
+    h4 {
+      font-size: 1.3rem;
+      margin-block: 0px;
+    }
+
+    @media (max-width: 768px) {
+      p {
+       font-size: 1rem;
+     } 
     }
   }
+`;
 
-  @media (max-width: 900px) {
-    .text-container {
-      width: 70%;
-      justify-content: end;
-      bottom: 10px;
+export const Categoria = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F39729;
+  border-radius: 8px;
+  padding-block: 6px;
+  padding-inline: 15px;
+  width: fit-content;
+  margin-top: -10px;
 
-      h2 {
-        font-size: 4vw !important;
-      }
-    }
+  .tag {
+    font-size: 0.8rem;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Myriad Pro', sans-serif;
+    font-weight: bold;
+    text-transform: capitalize;
   }
+`;
+
+export const Linha = styled.div`
+  height: 2px;
+  width: 100%;
+  margin-bottom: 30px;
+  background-color: #2b674b;
 `;
 
 export const Section2 = styled.section`
@@ -255,6 +253,27 @@ export const ControlePaginacao = styled.div`
       font-size: 10px;
     }
   }
+`;
+
+export const Divisor = styled.div`
+width: 100%;
+    background-color: #2b674b;
+    margin-bottom: 20px;
+    padding-inline: 20px;
+    padding-top: 10px;
+    padding-bottom: 4px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-radius: 10px;
+
+    h1 {
+      font-size: 2rem;
+      font-family: "Impact", sans-serif;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
 `;
 
 export const Select = styled.select`
