@@ -17,38 +17,56 @@ export const Container = styled.div`
   flex-grow: 1;
 
 
-  img{
+  .img{
     width: 100%;
     object-fit: cover;
   }
 
-  @media (max-width: 768px) {
-    background-image: url(${topo});
-    background-size: contain; 
-    background-position: top; 
+  .img-mobile{
+    display: none;
+  }
 
+  @media (max-width: 768px) {
+    .img {
+      display: none;
+    }
+
+    .img-mobile {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
   }
     
 `;
 
 
 export const Section1 = styled.section`
-  background-image: url(${inicial1});
+  background-image: url(${Fundocappuccino});
   background-size: cover; /* Faz a imagem cobrir toda a área da seção */
   background-position: center; /* Centraliza a imagem */
   background-repeat: no-repeat; /* Evita que a imagem se repita */
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: flex-start;
   padding-left: 0;
   height: 100vh;
+  cursor: pointer;
 
-  @media (max-width: 768px) {
-    background-image: url(${Fundocappuccino}); 
+  img {
+    width: 60vw;
+  }
+
+  @media (max-width: 900px) {
     background-size: cover;
     background-position: center;
     height: 80vh;
     position: relative; /* Necessário para o posicionamento da imagem sobreposta */
+
+    img {
+      display: none;
+    }
 
     /* Imagem sobreposta */
     &::after {
@@ -75,7 +93,7 @@ export const Card = styled.div`
   object-fit: cover;
   border-radius: 0 40px 40px 0;
   padding: 20px;
-  height: 60vh;
+  height: fit-content;
 
   h1 {
     font-size: 3rem;
@@ -91,7 +109,7 @@ export const Card = styled.div`
     margin:0 2.5rem 1rem 2.5rem;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     width: 100%; /* Ajusta a largura do card */
     margin-top: 60vh; /* Dá um espaço entre a imagem e o card */
     height: auto; /* Ajusta a altura do card */

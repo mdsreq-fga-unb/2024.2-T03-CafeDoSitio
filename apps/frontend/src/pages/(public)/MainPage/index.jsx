@@ -2,20 +2,31 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Container, Section1, Card, Section2, Acoes, DivFooter, Conteudo, ParteSuperior, Divisao1, Divisao2, DivisaoTelefone, CopyRigthSection } from "./styled";
 import CapaPagina from "../../../assets/Capa.jpg";
+import topo from "../../../assets/topo.jpeg";
+import cappuchino from "../../../assets/cappuccino.png";
+import { useNavigate } from "react-router-dom";
+import { ROUTES } from "../../../routes/RoutesConstants";
 
 const MainPage = () => {
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+    navigate(ROUTES.HISTORIA);
+  };
+
   return (
     <div className="app">
       <Container>
         <img src={CapaPagina} alt="CapaCafé" className="img"/>
-        <Section1>
+        <img src={topo} alt="CapaCafé" className="img-mobile"/>
+        <Section1 onClick={handleClick}>
           <Card>
-            <h1>Conheça a nossa família, do Sítio para a sua casa</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-              tincidunt ut laoreet dolore magna aliquam erat.
-            </p>
+            <h1>Conheça a nossa família do Sítio para a sua casa</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero consequuntur natus molestiae, excepturi vitae, iure laboriosam sint, neque blanditiis optio doloremque. Voluptatum, aliquam. Quas perspiciatis facilis ratione ipsam officiis veniam!</p>
           </Card>
+          <img src={cappuchino} className="logo-img"/>
         </Section1>
         <Section2>
           <Acoes>
