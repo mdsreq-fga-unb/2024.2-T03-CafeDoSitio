@@ -78,7 +78,7 @@ export const Card = styled.div`
   height: 60vh;
 
   h1 {
-    font-size: 4.5rem;
+    font-size: 3rem;
     font-family: impact;
     margin: 1.5rem 2rem;
     color: #2B674B ;
