@@ -3,11 +3,11 @@ import Paginacao from "../../../components/Paginacao";
 import imagem from "../../../assets/colagem_de_fotos.png"
 import {
     Title,
+    Title2,
     Text,
     Space,
-    TimelineSection,
+    Space2,
     BackgroundLine,
-    FirstTextSection,
     SecondTextSection,
     ThirdTextSection,
     DiferencialSection,
@@ -17,9 +17,6 @@ import {
     RedLine,
     DiferencialText
 } from "./styled";
-
-//Icones
-import Missao from '../../../assets/Missão.svg'
 
 export default function NossaHistoria() {
     const diferenciais = [
@@ -75,7 +72,7 @@ export default function NossaHistoria() {
 
 
                 <div style={{ margin: "0", maxWidth: "700px" }}>
-                    <Title>Brasília e Café do Sítio, essa história tem sabor</Title>
+                    <Title2>Brasília e Café do Sítio, essa história tem sabor</Title2>
                     <Text>
                         Lorem ipsum dolor sit amet, consectetuer
                         adipiscing elit, sed diam nonummy nibh
@@ -96,12 +93,13 @@ export default function NossaHistoria() {
                 </div>
             </SecondTextSection>
 
+            <Space />
             
             <BackgroundLine>
                 <TimelineCard></TimelineCard>
             </BackgroundLine>
             
-
+            <Space2 />
 
             <div style={{ marginTop: "50px", textAlign: "center" }}>
                 <Title>Nosso Propósito</Title>
