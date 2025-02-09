@@ -705,6 +705,12 @@ _Fonte: Elaboração própria_
           <td>Adicionando caso de uso no documento</td>
           <td>1.0</td>
       </tr>
+      <tr>
+          <td>09/02/2025</td>
+          <td>Marcella Sousa Anderle</td>
+          <td>Revisando documento</td>
+          <td>1.1</td>
+      </tr>
   </table>
 
   <h3>1. Breve Descrição</h3>
@@ -793,7 +799,7 @@ _Fonte: Elaboração própria_
   <p>O usuário externo recebe uma resposta, tem sua solicitação encaminhada ou marcada como resolvida.</p>
 
   <h3>9. Ponto de Extensão</h3>
-  <p><strong>Relatórios Gerenciais:</strong> O Administrador pode visualizar estatísticas de dúvidas e reclamações para análise de tendências e melhoria do suporte.</p>
+  <p>Não se aplica.</p>
 
 </div>
 
