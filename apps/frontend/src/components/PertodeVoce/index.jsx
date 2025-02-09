@@ -14,7 +14,8 @@ import {
   Container,
   ScrollArea,
   Card,
-  ResultadosTitle
+  ResultadosTitle,
+  MapSection
 } from "./styled";
 
 function PertodeVoce() {
@@ -54,27 +55,42 @@ function PertodeVoce() {
         },
         (err) => {
           setError("Erro ao obter localização: " + err.message);
+          toast.error(error)
         }
       );
     } else {
       setError("Geolocalização não é suportada por este navegador.");
+      toast.error(error)
     }
   };
 
   async function obterCoordenadasPorCEP(cep) {
-    const response = await fetch(
-      `https://nominatim.openstreetmap.org/search?format=json&q=${cep},Brasil`
-    );
-    const data = await response.json();
-    
-    if (data.length > 0) {
-      const coordenadas = { latitude: data[0].lat, longitude: data[0].lon };      
-      return coordenadas;
-    } else {
+  
+    // 1️⃣ Primeiro, obtemos o endereço pelo ViaCEP
+    const viaCepResponse = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+    const viaCepData = await viaCepResponse.json();
+  
+    if (viaCepData.erro) {
       throw new Error("CEP não encontrado!");
+    } 
+  
+    // Monta o endereço para o OpenStreetMap
+    const endereco = `${viaCepData.logradouro}, ${viaCepData.localidade}, ${viaCepData.uf}, Brasil`;
+  
+    // 2️⃣ Busca a coordenada no OpenStreetMap
+    const osmResponse = await fetch(
+      `https://nominatim.openstreetmap.org/search?format=json&q=${endereco}`
+    );
+    const osmData = await osmResponse.json();
+  
+    if (osmData.length > 0) {
+      return { latitude: parseFloat(osmData[0].lat), longitude: parseFloat(osmData[0].lon) };
+    } else {
+      throw new Error("Endereço não encontrado no mapa!");
     }
-  };
-
+  }
+  
+  
   const handleBuscarProduto = (e) => {
     e.preventDefault();
     setNomeProdutoBusca(produto);
@@ -92,6 +108,8 @@ function PertodeVoce() {
       setLon(coordenadas.longitude);
     } catch (error) {
       console.error("Erro ao obter coordenadas:", error);
+      toast.error("Erro ao procurar pelo cep", error);
+      
     }
   };
 
@@ -148,7 +166,7 @@ function PertodeVoce() {
       .addTo(mapRef.current)
       .bindTooltip("Você está aqui!", { permanent: false, direction: "top" });
 
-    mapRef.current.setView([location.lat, location.lng], 13);
+    mapRef.current.setView([location.lat, location.lng], 12);
   }, [location]);
 
   useEffect(() => {
@@ -169,7 +187,7 @@ function PertodeVoce() {
         L.marker([estab.latitude, estab.longitude], { icon: customIcon })
           .addTo(mapRef.current)
           .bindPopup(`<b>${estab.nomeEstabelecimento}</b><br>${estab.rua}, ${estab.bairro} - ${estab.estado}`);
-        locations.push([estab.latitude, estab.longitude]); // Adicionar coordenadas dos estabelecimentos
+        locations.push([estab.latitude, estab.longitude]);
       }
     });
   
@@ -182,28 +200,31 @@ function PertodeVoce() {
       markerRef.current = L.marker([location.lat, location.lng])
         .addTo(mapRef.current)
         .bindTooltip("Você está aqui!", { permanent: false, direction: "top" });
-      locations.push([location.lat, location.lng]); // Adicionar coordenadas do usuário
+      locations.push([location.lat, location.lng]);
     }
   
     // Adicionar o marcador do CEP, se existir
     if (lat !== null && lon !== null) {
       if (markerRef.current) {
-        mapRef.current.removeLayer(markerRef.current); // Remover o marcador anterior
+        mapRef.current.removeLayer(markerRef.current);
       }
   
       markerRef.current = L.marker([lat, lon])
         .addTo(mapRef.current)
         .bindTooltip("Localização do CEP", { permanent: false, direction: "top" });
-      locations.push([lat, lon]); // Adicionar coordenadas do CEP
+      locations.push([lat, lon]);
     }
   
-    // Ajustar a visualização do mapa para incluir tanto os estabelecimentos quanto a localização do usuário ou o CEP
+    // Ajustar a visualização do mapa para incluir todos os pontos com um pequeno atraso
     if (locations.length > 0) {
-      const bounds = L.latLngBounds(locations);
-      mapRef.current.fitBounds(bounds); // Ajusta a visualização para incluir todos os pontos
+      setTimeout(() => {
+        const bounds = L.latLngBounds(locations);
+        mapRef.current.fitBounds(bounds, { padding: [50, 50] }); // Adiciona um padding para melhor visualização
+      }, 300); // Pequeno delay para garantir que os elementos foram renderizados
     }
   
-  }, [estabelecimentos, location, lat, lon]); // Executa quando `estabelecimentos`, `location`, `lat` ou `lon` mudarem
+  }, [estabelecimentos, location, lat, lon]);
+  
 
   // Função para alternar para a localização atual
   const handleLocationAtual = () => {
@@ -218,7 +239,7 @@ function PertodeVoce() {
         <Label htmlFor="name" style={{ color: "#006343" }}>
           Onde você quer encontrar a Família do Sítio?
         </Label>
-        <div style={{ display: "flex" }}>
+
           <Input 
             type="text" 
             id="cep" 
@@ -227,11 +248,11 @@ function PertodeVoce() {
             onChange={(e) => setCep(e.target.value)}
           />
           <Button onClick={handleCep}>Enviar</Button>
-        </div>
+       
         <LocAtual as="p" onClick={handleLocationAtual}>
           ou clique aqui para usar a localização atual
         </LocAtual>
-        <div style={{ display: "flex" }}>
+       
           <Input
             type="text"
             id="produto"
@@ -242,10 +263,11 @@ function PertodeVoce() {
           <Button type="button" onClick={handleBuscarProduto}>
             Buscar
           </Button>
-        </div>
+       
       </Form>
 
-      <div style={{ display: "flex" }}>
+      <MapSection>
+        {/* Essa div aqui é o mapa */}
         <div
           id="map"
           ref={mapContainerRef}
@@ -253,7 +275,7 @@ function PertodeVoce() {
         />
 
         {/* Resultados incorporados aqui */}
-        <Container style={{ width: "40%" }}>
+        <Container>
           <ResultadosTitle>Resultados</ResultadosTitle>
           <ScrollArea>
             {estabelecimentos.length > 0 ? (
@@ -270,9 +292,7 @@ function PertodeVoce() {
             )}
           </ScrollArea>
         </Container>
-      </div>
-
-      {error && <p>{error}</p>}
+      </MapSection>
     </>
   );
 }

@@ -95,6 +95,11 @@ export const Container = styled.div`
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   padding: 16px;
+
+  @media(max-width: 851px){
+    align-self:center;
+    max-width: 100%;
+  }
 `;
 
 // Estilização do título
@@ -134,4 +139,16 @@ export const Card = styled.div`
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 8px;
   border: 1px solid #ddd;
+`;
+
+export const MapSection = styled.div`
+  display: flex;
+
+  @media(max-width: 851px){
+    flex-direction: column;
+
+    &::
+  }
+
+  
 `;
