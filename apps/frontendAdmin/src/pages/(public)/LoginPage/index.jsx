@@ -41,7 +41,10 @@ const LoginPage = () => {
       navigate(ROUTES.HOME);
     } catch (err) {
       if(err.response){
-        if(err.response.status === 404){
+        if(err.response.status === 400){
+          toast.error("Preencha todos os campos para logar!");
+        }
+        else if(err.response.status === 404){
           toast.error("Usuário não encontrado!");
         }
         else if(err.response.status === 403){
