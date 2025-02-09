@@ -29,7 +29,7 @@ _Fonte: Elaboração própria_
   <button class="tablinks" onclick="openTab(event, 'Agendar')">Agendar serviço de saúde</button>
   <button class="tablinks" onclick="openTab(event, 'X')">Caso 2</button>
   <button class="tablinks" onclick="openTab(event, 'Y')">Caso 3</button>
-  <button class="tablinks" onclick="openTab(event, 'Registrar_visita_domiciliar')">Caso 4</button>
+  <button class="tablinks" onclick="openTab(event, 'Registrar_visita_domiciliar')">Registrar visita domiciliar</button>
   <button class="tablinks" onclick="openTab(event, 'A')">Caso 5</button>
   <button class="tablinks" onclick="openTab(event, 'ResponderDuvidas')">Responder a dúvidas e reclamações dos usuários</button>
 </div>
