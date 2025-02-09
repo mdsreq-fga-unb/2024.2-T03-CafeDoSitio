@@ -54,7 +54,7 @@ export default function NossaHistoria() {
     return (
         <>
             <Paginacao>
-                <Link className="page" to={ROUTES.HOME}>Família do Sítio</Link>
+                <Link className="page" to={ROUTES.MAIN}>Família do Sítio</Link>
                 {" > "}
                 <span>Nossa História</span>
             </Paginacao>

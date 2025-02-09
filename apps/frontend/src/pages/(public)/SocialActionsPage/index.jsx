@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
 import Paginacao from "../../../components/Paginacao";
@@ -38,12 +39,17 @@ import {
 
 export default function SocialActionsPage() {
 
+    useEffect(() => {
+        // Rola para o topo da página quando o componente é montado
+        window.scrollTo(0, 0);
+    }, []);
+
     return(
         <>
             <FullWidthContainer>
 
                 <Paginacao>
-                    <Link className="page" to={ROUTES.HOME}>Família do Sítio</Link>
+                    <Link className="page" to={ROUTES.MAIN}>Família do Sítio</Link>
                     {" > "}
                     <span>Sítio verde</span>
                 </Paginacao>
