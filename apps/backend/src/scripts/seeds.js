@@ -18,8 +18,8 @@ export const UserSeed = async() => {
   
     const newUser = new User({
       name: 'Sitio Admin',
-      email: 'sitioAdmin@familiadositio.com.br',
-      password: bcrypt.hashSync('@admin&Sitio+UnB', salt),
+      email: process.env.MAIL_FIRST_ADMIN,
+      password: bcrypt.hashSync(process.env.PASSWORD_FIRST_ADMIN, salt),
       sector: 'System-Administrator',
     });
   
