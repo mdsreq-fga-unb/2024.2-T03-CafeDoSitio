@@ -323,7 +323,7 @@ _Fonte: Elaboração própria_
 
 
 <div id="Y" class="tabcontent">
-<h2>UC - Gerenciar Iniciativas de Saúde</h2>
+<h2>UC - Criar relatório da comunidade</h2>
 
   <h3>Especificação de Caso de Uso</h3>
   <h3>Histórico de Revisão</h3>
@@ -337,98 +337,90 @@ _Fonte: Elaboração própria_
       <tr>
           <td>09/02/2025</td>
           <td>Daniel Rodrigues da Rocha</td>
-          <td>Criação do Caso de Uso Gerenciar Iniciativas de Saúde</td>
+          <td>Criação do Caso de Criar relatório da comunidade</td>
           <td>1.0</td>
       </tr>
   </table>
 
   <h3>1. Breve Descrição</h3>
-  <p>Este caso de uso permite que organizações parceiras gerenciem iniciativas de saúde, incluindo a divulgação de campanhas, monitoramento do impacto das ações e gestão de relatórios de atividades relacionadas à saúde da comunidade.</p>
+  <p>Este caso de uso permite que um agente comunitátio crie um relatório sintetizado com as informações de saúde de sua comunidade de atendimento através do Connect Care. Para tanto é possível delimitar a área da comunidade atendida e quantificar disgnósticos usuais dentro daquela comunidade através dos atendimentos realizados para receber um relatório disponível no sistema e, por fim, permitindo sua instalação em formato PDF ou Excel. Os relatórios não poderão ser excluídos, mas sofrerão atualizações à medida que novos atendimentos por parte dos agentes comunitário irem sendo realizadas.</p>
 
   <h3>2. Atores</h3>
   <ul>
-      <li>2.1 Organizações parceiras: responsáveis por criar e gerenciar iniciativas de saúde.</li>
+      <li>2.1 Agentes Comunitários</li>
   </ul>
 
   <h3>3. Condições Prévias</h3>
   <ul>
         <li>O usuário deve estar autenticado no sistema.</li>
-        <li>O usuário deve ter permissão para gerenciar iniciativas de saúde.</li>
+        <li>O usuário deve ter permissão para criar relatório da comunidade</li>
   </ul>
 
   <h3>4. Fluxo Básico (FB)</h3>
 
-    <p>Este fluxo básico se inicia quando o usuário selecoina a opção "Gerenciar Iniciativas de Saúde.</p>
+    <p>Este fluxo básico se inicia quando o usuário seleciona a opção "Criar relatólrio da Comunidade"</p>
 
   <ol>
       <li>O sistema exibe uma lista de opção:</li>
+      
       <ul>
-        <li>Criar uma nova iniciativa de Saúde;</li>
-        <li>Editar iniciativas de saúde ativos; [FA01]</li>
-        <li>Consultar iniciativas de saúde ativos. [FA02]</li>
-      <ul>
-      <li>O usuário seleciona a opção de criar uma nova iniciativa.</li>
-      <li>O usuário insere os detalhes da iniciativa, incluindo nome, descrição, período e público-alvo.</li>
-      <li>O sistema valida as informações e salva a iniciativa.</li>
+        <li>Criar um novo relatório de uma comunidade;</li>
+        <li>Editar relatório existente; [FA01]</li>
+      </ul>
+
+      <li>O usuário seleciona a opção de criar um novo relatório de uma comunidade.</li>
+      <li>O usuário seleciona a região da comunidade que atendede.[FE01][RN01]</li>
+      <li>O usuário seleciona quais atendimentos domiciliares deverão ser incluídos no relatório.[FE01][RN01]</li>
+      <li>O sistema valida os atendimentos domiciliares selecionados.[FE02][RN02]</li>
+      <li>O sistema apresenta todos os dados de saúde da comunidade através de seus atendimentos através do relatório.</li>
+      <li>O sistema apresenta uma mensagem de relatório gerado com sucesso.</li>
+      <li>O caso de uso é encerrado.</li>
   </ol>
 
   <h3>5. Fluxo Alternativo (FA)</h3>
-  <h4>FA01 - Selecionar Serviços</h4>
+  <h4>FA01 - Editar relatório existente</h4>
+  No passo 1, o usuário seleciona "Editar relatório existente".
   <ol>
-      <li>O cliente seleciona "Serviços".</li>
-      <li>O cliente escolhe quais serviços deseja.</li>
-      <li>O cliente salva as informações (RN03).</li>
+      <li>O sistema exibe uma lista de relatórios ativos do agente comunitário.[FE03][RN03]</li>
+      <li>O agente comunitário seleciona um relatório ativo para editar.</li>
+      <li>O agente comunitário seleciona os novos atendimentos domiciliares que deverão ser considerados no relatório.[FE01][RN01]</li>
+      <li>O sistema valida os atendimentos domiciliares selecionados.[FE04][RN02]</li>
+      <li>O sistema atualiza os dados do relatório.</li>
       <li>O sistema emite uma mensagem de sucesso.</li>
   </ol>
-
-  <h4>FA02 - Selecionar Pagamento</h4>
-  <ol>
-      <li>O cliente seleciona "Pagamento".</li>
-      <li>O cliente escolhe qual será o seu meio de pagamento.</li>
-      <li>O sistema mostra o valor total.</li>
-      <li>O cliente salva sua opção (RN03).</li>
-      <li>O sistema emite uma mensagem de sucesso.</li>
-  </ol>
-
-  <h4>FA03 - Sair do Pré-Agendamento</h4>
-  <p>O cliente decide finalizar o pré-agendamento, após a conclusão do fluxo básico.</p>
 
   <h3>6. Fluxo de Exceção (FE)</h3>
-  <h4>FE01 - Data de entrada maior que a de saída</h4>
-  <p>"A data de entrada deve ser maior que a de saída". O caso de uso retorna ao passo 4.3 do FB.</p>
-
-  <h4>FE02 - Data anterior à atual</h4>
-  <p>"As datas devem ser maiores que a de hoje". O caso de uso retorna ao passo 4.3 do FB.</p>
-
-  <h4>FE03 - Data com mais de um ano à frente</h4>
-  <p>"As datas não devem ser de mais de um ano". O caso de uso retorna ao passo 4.3 do FB.</p>
-
-  <h4>FE04 - Cliente não digitou as informações necessárias</h4>
+  <h4>FE01 - Cliente não digitou as informações necessárias</h4>
   <p>O sistema impedirá que o cliente avance para o próximo passo caso as informações estejam incompletas.</p>
 
+  <h4>FE02 - Atendimentos domiciliares não fazem parte da região selecionada</h4>
+  <p>"Os atendimentos domiciliares selecionados não fazem parte da região de sua comunidade". O caso de uso retorna 3 do FB.</p>
+
+  <h4>FE03 - Nenhum relatório registrado no sistema</h4>
+  <p>O usuário não possui nenhum relatório registrado no sistema. O caso de uso retorna para o passo anterior.</p>
+
+  <h4>FE04 - Edição dos atendimentos domiciliares não fazem parte da região previamente selecionada</h4>
+  <p>"Os atendimentos domiciliares selecionados não fazem parte da região de sua comunidade". O caso de uso retorna ao passo 3 do FA01.</p>
+
   <h3>7. Regras de Negócio (RN)</h3>
-  <h4>RN01 - Valor do Pré-Agendamento</h4>
-  <p>O valor da hospedagem depende do peso do animal e dos dias agendados. Para que o valor seja mostrado, os campos "Pet", "Entrada" e "Saída" devem estar preenchidos.</p>
+  <h4>RN01 - Validação de dados</h4>
+  <p>Para que o sistema prepare a geração do relatório, é necessário que os passos 3 e 4 estejam preenchidos corretamente</p>
 
-  <h4>RN02 - Validação dos Dados</h4>
-  <p>Para que o sistema realize o pré-agendamento, é necessário que os passos 4.2 e 4.3 estejam preenchidos corretamente, e que o sistema valide o passo 4.4.</p>
+  <h4>RN02 - Validação dos atendimentos domiciliares selecionados:</h4>
+  <p>Os atendimentos domiciliares selecionados devem seguir os seguinte critério:</p>
 
-  <h4>RN03 - Campo Preenchido</h4>
-  <p>Para que o sistema confirme as informações, elas não devem ser nulas.</p>
+    <ul>
+        <li>O local de atendimento domiciliar selecionado não pode estar fora de uma distância de 5 quilômetros da região selecionada para a comunidade.</li>
+    </ul>
 
-  <h4>RN04 - Validação das Datas</h4>
-  <p>As datas preenchidas devem seguir os seguintes critérios:</p>
-  <ul>
-      <li>Ser posteriores ou iguais ao dia atual.</li>
-      <li>Ser de até um ano após o dia atual.</li>
-      <li>A data de entrada não pode ser posterior à data de saída.</li>
-  </ul>
+  <h4>RN03 - Agrupamento de Dados</h4>
+  <p>O sistema os relatórios agrupamos por região da comunidade.</p>
 
   <h3>8. Pós-Condições</h3>
-  <p>Pós-Condições</p>
+  <p>Não se aplica.</p>
 
   <h3>9. Ponto de Extensão</h3>
-  <p>Ponto de Extensão</p>
+  <p>Não se aplica.</p>
 </div>
 
 
