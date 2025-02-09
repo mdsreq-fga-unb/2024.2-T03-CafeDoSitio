@@ -1,7 +1,7 @@
 import axios from "axios";
 import { ROUTE } from "./RouteConstant";
 
-const baseURL = ROUTE.PROD;
+const baseURL = import.meta.env.VITE_MODE === 'production' ? (import.meta.env.VITE_NODE_APP_API_URL) : (ROUTE.DEV);
 
 export function createVisita(body) {
 
@@ -20,17 +20,10 @@ export function createVisita(body) {
 
 export function findAllVisita()
 {
-  const response = axios.get(
-    `${baseURL}/visita/findAllVisita`,
-    {
-      headers: {
-        Authorization: `Bearer ${sessionStorage.getItem("authToken")}`,
-      }
-    }
-  );
+  const response = axios.get(`${baseURL}/visita/findAllVisita`);
   
   return response; 
-};//
+};
 
 export function deleteVisita(id) {
 
@@ -50,13 +43,8 @@ export function patchVisita(id, body) {
 
   const response = axios.patch(
     `${baseURL}/visita/patchVisita/${id}`,
-    body,
-    {
-      headers: {
-        Authorization: `Bearer ${sessionStorage.getItem("authToken")}`,
-      },
-    }
-  );
+    body,{
+  });
 
   return response;
 }

@@ -32,7 +32,7 @@ const SacSchema = new mongoose.Schema({
     required: true,
     default: false,
   },
-});
+}, {timestamps: true});
 
 // Middleware para gerar o incrementalId antes de salvar
 SacSchema.pre("save", async function (next) {

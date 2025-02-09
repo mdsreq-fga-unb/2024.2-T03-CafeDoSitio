@@ -29,8 +29,11 @@
   "dependencies": {
     "antd": "^5.23.3",
     "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
+    "dompurify": "^3.2.4",
     "multer": "^1.4.5-lts.1",
     "nodemailer": "^6.9.16",
+    "react-calendar": "^5.1.0",
     "react-icons": "^5.3.0",
     "react-router-dom": "^7.0.2",
     "react-spinners": "^0.15.0",

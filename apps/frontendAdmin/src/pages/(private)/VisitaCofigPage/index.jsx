@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css'; // CSS do <ToastContainer />
 import { Link } from "react-router-dom";
 import { ROUTES } from "../../../routes/RoutesConstants";
 import { InfoZone, Space, ContentZone, InputsArea, Vazio, FilterZone, Dropdown, DateFilterContainer} from "./styled";
-import { FaPlus, FaSearch } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa";
 import Button from "../../../components/Button";
 import Popup from "../../../components/PopUp";
 import DateInput from "../../../components/DateInput";

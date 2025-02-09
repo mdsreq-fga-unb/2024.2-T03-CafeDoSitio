@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { ROUTE } from './RouteConstant';
 
-const baseURL = ROUTE.PROD;
+const baseURL = import.meta.env.VITE_MODE === 'production' ? (import.meta.env.VITE_NODE_APP_API_URL) : (ROUTE.DEV);
 
 export function createUser(email, sector){
   const body = {

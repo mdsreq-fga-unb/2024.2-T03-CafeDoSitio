@@ -1,13 +1,13 @@
 import React from "react";
-import { DivLetreiro, DivPagincacao, Letreiro } from "./styled";
+import { DivPaginacao, Layout, Letreiro } from "./styled";
 
-function Paginacao({text}) {
+function Paginacao({children}) {
   return (
-    <DivPagincacao>
-      <DivLetreiro>
-        <Letreiro className="container">{text}</Letreiro>
-      </DivLetreiro>
-    </DivPagincacao>
+    <DivPaginacao>
+      <Layout>
+        <Letreiro>{children}</Letreiro>
+      </Layout>  
+    </DivPaginacao>
   )
 }
 
