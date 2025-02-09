@@ -1,7 +1,7 @@
 import userService from "../services/user.service.js";
 import bcrypt from 'bcrypt';
 import dotenv from 'dotenv';
-dotenv.config();
+dotenv.config({ path: '../../.env' });
 
 // =====================================================
 // DEFINIÇÃO DE CRIPTOGRAFIA:
@@ -48,8 +48,7 @@ const loginUser = async (req, res) => {
       return res.status(404).send({ message: 'Usuário não encontrado!'});
 
     if (!user[0].password) {
-      const token = userService.generateToken(user);
-      return res.status(200).send({ message: 'Usuário encontrado, mas sem senha!', case: 2, token });
+      return res.status(200).send({ message: 'Usuário encontrado, mas sem senha!', case: 2 });
     }
 
     if (user[0].password != bcrypt.hashSync(password, salt))

@@ -1,6 +1,7 @@
 import React from 'react';
 import Paginacao from '../../../components/Paginacao';
 import Sac from '../../../components/SacSection'
+import { IoIosPin } from "react-icons/io";
 import {
   ContactSection,
   ContactCards,
@@ -15,10 +16,13 @@ import {
   Horario_redes,
   Space,
   ImageWrapper,
-  Button
+  Button,
+  Location,
 } from './styled';
 import { FaEnvelope, FaPhoneAlt, FaInstagram, FaFacebook, FaYoutube, FaLinkedin, FaComments } from "react-icons/fa"; // Ícones do Font Awesome
 import { FaXTwitter } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
+import { ROUTES } from '../../../routes/RoutesConstants';
 
 const ContactPage = () => {
   const contacts = [
@@ -41,7 +45,11 @@ const ContactPage = () => {
   
   return (
     <>
-      <Paginacao text={"FAMÍLIA DO SÍTIO > CONTATOS"} />
+     <Paginacao>
+       <Link className="page" to={ROUTES.MAIN}>Família do Sítio</Link>
+        {" > "}
+        <span>CONTATO</span>
+     </Paginacao>
       <Space />
 
       <InfoSection>
@@ -145,6 +153,27 @@ const ContactPage = () => {
         </Links>
       </FaleCom>
       <Sac />
+
+      <Location>
+        <h2>Localização</h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15350.606789028072!2d-48.0269256!3d-15.8748932!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a2d87432ac44d%3A0xff6ae8c97e66c8b8!2zQ2Fmw6kgZG8gU8OtdGlv!5e0!3m2!1spt-BR!2sbr!4v1733509279879!5m2!1spt-BR!2sbr"
+            width="300"
+            height="300"
+            style={{ border: 0 }} 
+            allowFullScreen 
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade" 
+        ></iframe>
+        <div className="caixinha">
+            <IoIosPin size={30} className='icon'/>
+            <div className="infos">
+                <p style={{marginTop: 0, marginBottom: 3}}>QS 09 RUA 101 LOTE 04 - Taguatinga</p>
+                <p style={{marginTop: 0, marginBottom: 3}}>Distrito Federal - CNPJ: 00.452.002/0001-48</p>
+                <p style={{marginTop: 0, marginBottom: 0}}>Café do Sítio Indústria e Comércio Ltda</p>
+            </div>
+        </div>
+      </Location>
     </>
   );
 };

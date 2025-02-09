@@ -10,7 +10,8 @@ import imagemBazar from "../../../assets/bazar.jpg"
 import imagemHorta from "../../../assets/horta.jpg"
 import imagemGrafico from "../../../assets/grafico.png"
 import imagemCampo from "../../../assets/SítioVerde_6.jpg"
-import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { ROUTES } from "../../../routes/RoutesConstants";
 
 import {
     Text,
@@ -46,7 +47,11 @@ export default function SocialActionsPage() {
         <>
             <FullWidthContainer>
 
-                <Paginacao text={"FAMÍLIA DO SÍTIO > SITIO VERDE"} />
+                <Paginacao>
+                    <Link className="page" to={ROUTES.MAIN}>Família do Sítio</Link>
+                    {" > "}
+                    <span>Sítio verde</span>
+                </Paginacao>
                 <Space />
                 <Centralização>
                     <Layout>    

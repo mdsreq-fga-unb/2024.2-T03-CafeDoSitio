@@ -247,3 +247,48 @@ export const Button = styled.button`
     background-color: #004c2e;
   }
 `;
+
+export const Location = styled.section`
+  flex: 1;
+  margin-top: 5rem;
+  
+  h2 {
+    font-size: 2.5rem;
+    color: #004c2e;
+    margin-bottom: 1rem;
+    font-weight: lighter;
+    font-family: 'Impact', sans-serif;
+    margin-left: 1.5vw;
+  }
+
+  iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    margin-bottom: 30px;
+  }
+  
+  .caixinha{
+    display: flex;
+    gap: 0.5vw;
+  }
+  
+  .infos{
+    margin: 0;
+  }
+
+  .icon {
+    color: #004c2e;
+  }
+  
+  p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+    font-family: 'Myriad Pro', sans-serif;
+  }
+
+  @media(min-width: 768px){
+    display: none;
+  }
+`;

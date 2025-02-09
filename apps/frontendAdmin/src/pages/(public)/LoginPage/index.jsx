@@ -32,12 +32,19 @@ const LoginPage = () => {
     try {
       const response = await loginUser(email, password);
       sessionStorage.setItem("authToken", response.data.token);
+      if (response.data.case === 2) {
+        toast.info("Usuário encontrado, porém sem senha! Acesse o primeiro Acesso.");
+        return;
+      }
       setEmail('');
       setPassord('');
       navigate(ROUTES.HOME);
     } catch (err) {
       if(err.response){
-        if(err.response.status === 404){
+        if(err.response.status === 400){
+          toast.error("Preencha todos os campos para logar!");
+        }
+        else if(err.response.status === 404){
           toast.error("Usuário não encontrado!");
         }
         else if(err.response.status === 403){

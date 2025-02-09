@@ -3,10 +3,11 @@ import Paginacao from "../../../components/Paginacao";
 import imagem from "../../../assets/colagem_de_fotos.png"
 import {
     Title,
+    Title2,
     Text,
-    TimelineSection,
+    Space,
+    Space2,
     BackgroundLine,
-    FirstTextSection,
     SecondTextSection,
     ThirdTextSection,
     DiferencialSection,
@@ -16,9 +17,8 @@ import {
     RedLine,
     DiferencialText
 } from "./styled";
-
-//Icones
-import Missao from '../../../assets/Missão.svg'
+import { Link } from "react-router-dom";
+import { ROUTES } from "../../../routes/RoutesConstants";
 
 export default function NossaHistoria() {
     const diferenciais = [
@@ -53,7 +53,12 @@ export default function NossaHistoria() {
 
     return (
         <>
-            <Paginacao text={"FAMÍLIA DO SÍTIO > NOSSA HISTÓRIA"} />
+            <Paginacao>
+                <Link className="page" to={ROUTES.MAIN}>Família do Sítio</Link>
+                {" > "}
+                <span>Nossa História</span>
+            </Paginacao>
+            <Space />
 
            
             <DivContainer>
@@ -73,7 +78,7 @@ export default function NossaHistoria() {
 
 
                 <div style={{ margin: "0", maxWidth: "700px" }}>
-                    <Title>Brasília e Café do Sítio, essa história tem sabor</Title>
+                    <Title2>Brasília e Café do Sítio, essa história tem sabor</Title2>
                     <Text>
                         Lorem ipsum dolor sit amet, consectetuer
                         adipiscing elit, sed diam nonummy nibh
@@ -94,14 +99,15 @@ export default function NossaHistoria() {
                 </div>
             </SecondTextSection>
 
+            <Space />
             
             <BackgroundLine>
                 <TimelineCard></TimelineCard>
             </BackgroundLine>
             
+            <Space2 />
 
-
-            <div style={{ margin: "3rem 6rem", textAlign: "center" }}>
+            <div style={{ marginTop: "50px", textAlign: "center" }}>
                 <Title>Nosso Propósito</Title>
             </div>
 
