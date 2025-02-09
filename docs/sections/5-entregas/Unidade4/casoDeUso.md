@@ -74,7 +74,6 @@ _Fonte: Elaboração própria_
   <h3>2. Atores</h3>
   <ul>
       <li>Paciente</li>
-      <li>Sitema de Geolocalização</li>
   </ul>
 
   <h3>3. Condições Prévias</h3>
@@ -98,7 +97,7 @@ _Fonte: Elaboração própria_
       <li>O sistema faz a validação da data; [FE01][FE02][RN03]</li>
       <li>O sistema mostra os horários e locais disponíveis; [FE04][RN02]</li>
       <li>O usuário seleciona um agendamento único; [FA04] </li>
-      <li>O sistema apresenta a opção "ver no mapa"; [FA05]</li>
+      <li>O sistema apresenta a opção "ver no mapa";</li>
       <li>O usuário confirma o agendamento;</li>
       <li>O sistema apresenta uma mensagem de agendamento realizado com sucesso;</li>
       <li>O caso de uso é encerrado.</li>
@@ -139,13 +138,6 @@ _Fonte: Elaboração própria_
   <h4>FA04 - Sair do Agendamento</h4>
   <p>No passo 7 do fluxo básico, se o sistema não apresentar uma data que agrade o usuário, ele pode selecionar a opção "cancelar" e sair do agendamento.</p>
 
-  <h4>FA05 - Ver no mapa</h4>
-    <p>No passo 8 do fluxo básico, o usuário pode escolher abrir a localização no mapa para ver a distância do local do agendamento</p>
-  <ol>
-      <li>O sistema aciona o geolocalizador</li>
-      <li>O geolocalizador exibe no mapa a distância do local com o paciente.</li>
-      <li>O fluxo retorna ao passo 9 do fluxo principal.</li>
-  </ol>
 
 
   <h3>6. Fluxo de Exceção (FE)</h3>
