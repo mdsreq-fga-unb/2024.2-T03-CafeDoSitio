@@ -36,7 +36,7 @@ _Fonte: Elaboração própria_
 
 <div id="Agendar" class="tabcontent">
 
-  <h2>UC - Realizar Pré-Agendamento</h2>
+  <h2>UC - Agendar serviço de saúde</h2>
 
   <h3>Especificação de Caso de Uso</h3>
   <h3>Histórico de Revisão</h3>
@@ -48,115 +48,150 @@ _Fonte: Elaboração própria_
           <th>Versão</th>
       </tr>
       <tr>
-          <td>24/04/2022</td>
-          <td>Laís Portela</td>
+          <td>30/01/2025</td>
+          <td>Daniel Rodrigues da Rocha, Manuella Magalhães Valadares, Ana Carolina Madeira Fialho, Arthur Miranda Suares
+</td>
           <td>Adicionando caso de uso no documento</td>
           <td>1.0</td>
       </tr>
       <tr>
-          <td>26/04/2022</td>
-          <td>Laís Portela</td>
+          <td>04/02/2025</td>
+          <td>Daniel Rodrigues da Rocha, Manuella Magalhães Valadares, Ana Carolina Madeira Fialho, Arthur Miranda Suares, Marcella Sousa Anderle, João Pedro Ferreira Alves</td>
           <td>Revisão do documento</td>
           <td>1.1</td>
       </tr>
       <tr>
-          <td>26/04/2022</td>
-          <td>Laís Portela</td>
+          <td>09/02/2025</td>
+          <td>Manuella Magalhães Valadares</td>
           <td>Alterações no fluxo básico e outros</td>
           <td>1.2</td>
-      </tr>
-      <tr>
-          <td>26/04/2022</td>
-          <td>Laís Portela</td>
-          <td>Adição de regra de negócio</td>
-          <td>1.3</td>
       </tr>
   </table>
 
   <h3>1. Breve Descrição</h3>
-  <p>Este caso de uso é utilizado pelos clientes para fazer o pré-agendamento do animal, bem como escolher os serviços prestados e meios de pagamento.</p>
+  <p>Esta especificação de caso de uso permite ao paciente realizar o agendamento de um serviço de saúde através do Connect Care. Para tanto é deve-se filtrar o tipo de especialização do serviço requerido, data e horário de preferência e recebendo os devidos locais e profissionais como resultado e, ao fim, confirmando seu agendamento. O paciente ainda pode visualizar um mapa para ver a distância e as rotas para chegar até o atendimento agendado. Os agendamentos poderão ser excluídos para casos de cancelamento e também serão acompanhados pela atualização de status de seu andamento.</p>
 
   <h3>2. Atores</h3>
   <ul>
-      <li>2.1 Cliente que deseja hospedar o seu animal em um hotel para pets.</li>
-      <li>2.2 Funcionário que trabalha no hotel para animais e deseja aprovar agendamentos e definir serviços de forma virtual.</li>
+      <li>Paciente</li>
+      <li>Sitema de Geolocalização</li>
   </ul>
 
   <h3>3. Condições Prévias</h3>
   <ul>
-      <li>3.1 Cliente fez login.</li>
-      <li>3.2 Cliente cadastrou pelo menos um animal.</li>
+      <li>3.1 Paciente autenticado no sistema.</li>
+      <li>3.2 Disponibilidade de profissionais de saúde e locais.</li>
   </ul>
 
   <h3>4. Fluxo Básico (FB)</h3>
+  Esse caso de uso é iniciado quando o usuário selecionar a opção “Agendar serviço de saúde”.
   <ol>
-      <li>O cliente seleciona a opção "hospedar pet".</li>
-      <li>O cliente seleciona o animal desejado.</li>
-      <li>O cliente digita as datas desejadas (RN04).</li>
-      <li>O sistema faz a validação da data (FE01, FE02, FE03, RN01).</li>
-      <li>O sistema mostra o valor da hospedagem (RN01).</li>
-      <li>O sistema solicita informações complementares do animal.</li>
-      <li>O cliente confirma o pré-agendamento (RN02).</li>
-      <li>O sistema verifica se o cliente deseja escolher algum serviço ou definir a forma de pagamento (FA01, FA02, FA03).</li>
+      <li>O sistema apresenta as seguintes opções: </br>
+        - Realizar novo agendamento; </br>
+        - Remarcar agendamento [FA01]; </br>
+        - Cancelar agendamento [FA02]; </br>
+        - Consultar agendamentos [FA03]. </br>
+      </li>
+      <li>O usuário seleciona a opção de realizar um novo agendamento;</li>
+      <li>O usuário seleciona a especialidade desejada;[FE03][RN01]</li>
+      <li>O usuário seleciona a Data desejada; [FE03][RN01]</li>
+      <li>O sistema faz a validação da data; [FE01][FE02][RN03]</li>
+      <li>O sistema mostra os horários e locais disponíveis; [FE04][RN02]</li>
+      <li>O usuário seleciona um agendamento único; [FA04] </li>
+      <li>O sistema apresenta a opção "ver no mapa"; [FA05]</li>
+      <li>O usuário confirma o agendamento;</li>
+      <li>O sistema apresenta uma mensagem de agendamento realizado com sucesso;</li>
+      <li>O caso de uso é encerrado.</li>
   </ol>
 
   <h3>5. Fluxo Alternativo (FA)</h3>
-  <h4>FA01 - Selecionar Serviços</h4>
+
+  <h4>FA01 - Remarcar agendamento</h4>
+  No passo 1 do Fluxo Básico, o usuário seleciona a opção "Remarcar agendamento"
   <ol>
-      <li>O cliente seleciona "Serviços".</li>
-      <li>O cliente escolhe quais serviços deseja.</li>
-      <li>O cliente salva as informações (RN03).</li>
+      <li>O sistema exibe os agendamentos ativos do paciente. [FE05][RN02]</li>
+      <li>O paciente escolhe um agendamento para remarcar.[FE06][RN04]</li>
+      <li>O paciente seleciona uma nova opção e confirma a remarcação.</li>
+      <li>O sistema atualiza o status do agendamento.</li>
       <li>O sistema emite uma mensagem de sucesso.</li>
   </ol>
 
-  <h4>FA02 - Selecionar Pagamento</h4>
+  <h4>FA02 - Cancelar agendamento</h4>
+  No passo 1 do Fluxo Básico, o usuário seleciona a opção "Cancelar agendamento"
   <ol>
-      <li>O cliente seleciona "Pagamento".</li>
-      <li>O cliente escolhe qual será o seu meio de pagamento.</li>
-      <li>O sistema mostra o valor total.</li>
-      <li>O cliente salva sua opção (RN03).</li>
-      <li>O sistema emite uma mensagem de sucesso.</li>
+      <li>O sistema exibe os agendamentos ativos do paciente.[FE05][RN02]</li>
+      <li>O paciente escolhe um agendamento para cancelar. [FE06][RN04]</li>
+      <li>O sistema solicita confirmação do cancelamento.</li>
+      <li>O paciente confirma e o sistema remove o agendamento.</li>
   </ol>
 
-  <h4>FA03 - Sair do Pré-Agendamento</h4>
-  <p>O cliente decide finalizar o pré-agendamento, após a conclusão do fluxo básico.</p>
+  <h4>FA03 - Consultar agendamentos</h4>
+  No passo 1 do Fluxo Básico, o usuário seleciona a opção "Consultar agendamento"
+  <ol>
+      <li>O sistema exibe a lista de agendamentos futuros e passados.[FE05][RN02]</li>
+      <li>O usuário aciona um agendamento específico.</li>
+      <li>O Sistema exibe as informações: </br> 
+      - Data e horário</br>
+      - Especialidade
+      </li>
+  </ol>
+
+  <h4>FA04 - Sair do Agendamento</h4>
+  <p>No passo 7 do fluxo básico, se o sistema não apresentar uma data que agrade o usuário, ele pode selecionar a opção "cancelar" e sair do agendamento.</p>
+
+  <h4>FA05 - Ver no mapa</h4>
+    <p>No passo 8 do fluxo básico, o usuário pode escolher abrir a localização no mapa para ver a distância do local do agendamento</p>
+  <ol>
+      <li>O sistema aciona o geolocalizador</li>
+      <li>O geolocalizador exibe no mapa a distância do local com o paciente.</li>
+      <li>O fluxo retorna ao passo 9 do fluxo principal.</li>
+  </ol>
+
 
   <h3>6. Fluxo de Exceção (FE)</h3>
-  <h4>FE01 - Data de entrada maior que a de saída</h4>
-  <p>"A data de entrada deve ser maior que a de saída". O caso de uso retorna ao passo 4.3 do FB.</p>
 
-  <h4>FE02 - Data anterior à atual</h4>
-  <p>"As datas devem ser maiores que a de hoje". O caso de uso retorna ao passo 4.3 do FB.</p>
+  <h4>FE01 - Data anterior à atual</h4>
+  <p>"As datas devem ser maiores que a de hoje". O caso de uso retorna ao passo 3 do FB.</p>
 
-  <h4>FE03 - Data com mais de um ano à frente</h4>
-  <p>"As datas não devem ser de mais de um ano". O caso de uso retorna ao passo 4.3 do FB.</p>
+  <h4>FE02 - Data com mais de um ano à frente</h4>
+  <p>"As datas não devem ser de mais de um ano". O caso de uso retorna ao passo 3 do FB.</p>
 
-  <h4>FE04 - Cliente não digitou as informações necessárias</h4>
+  <h4>FE03 - Cliente não digitou as informações necessárias</h4>
   <p>O sistema impedirá que o cliente avance para o próximo passo caso as informações estejam incompletas.</p>
 
+  <h4>FE04 - Sem opções para a data ou especialidade selecionada</h4>
+  <p>O sistema irá emitir um aleta de falta de disponibilidade. O caso de uso retorna ao passo 3 do FB.</p>
+
+  <h4>FE05 - Nenhum agendamento no sistema</h4>
+  <p>O usuário não possui nenhum agendamento no sistema. O usuário retorna ao passo anterior.</p>
+
+  <h4>FE06 - Impossibilidade de ajuste no agendamento</h4>
+  <p>O usuário é impedido de realizar a tarefa e volta ao passo 1 do FB.</p>
+
   <h3>7. Regras de Negócio (RN)</h3>
-  <h4>RN01 - Valor do Pré-Agendamento</h4>
-  <p>O valor da hospedagem depende do peso do animal e dos dias agendados. Para que o valor seja mostrado, os campos "Pet", "Entrada" e "Saída" devem estar preenchidos.</p>
 
-  <h4>RN02 - Validação dos Dados</h4>
-  <p>Para que o sistema realize o pré-agendamento, é necessário que os passos 4.2 e 4.3 estejam preenchidos corretamente, e que o sistema valide o passo 4.4.</p>
+  <h4>RN01 - Validação dos Dados</h4>
+  <p>Para que o sistema realize o pré-agendamento, é necessário que os passos 3 e 4 estejam preenchidos corretamente, e que o sistema valide o passo 5</p>
 
-  <h4>RN03 - Campo Preenchido</h4>
-  <p>Para que o sistema confirme as informações, elas não devem ser nulas.</p>
+  <h4>RN02 - Agrupamento por agenda</h4>
+  <p>O sistema fornece agendamentos agrupados com a especialidade, data, horário e local.</p>
 
-  <h4>RN04 - Validação das Datas</h4>
+  <h4>RN03 - Validação das Datas</h4>
   <p>As datas preenchidas devem seguir os seguintes critérios:</p>
   <ul>
       <li>Ser posteriores ou iguais ao dia atual.</li>
       <li>Ser de até um ano após o dia atual.</li>
-      <li>A data de entrada não pode ser posterior à data de saída.</li>
   </ul>
 
+  <h4>RN04 - Cancelamento e Remarcação</h4>
+  <p>O paciente pode cancelar ou remarcar consultas apenas até 24 horas antes do horário marcado.</p>
+
+
   <h3>8. Pós-Condições</h3>
-  <p>Pós-Condições</p>
+  <p>Não se aplica.</p>
 
   <h3>9. Ponto de Extensão</h3>
-  <p>Ponto de Extensão</p>
+  <p><strong>Ver no mapa:</strong> O passo 8 do fluxo básico deve ser extendido para o caso de uso "Ver no mapa" com o objetivo de visualizar as rotas e distância dos agendamentos.</p>
 
 
 </div>
