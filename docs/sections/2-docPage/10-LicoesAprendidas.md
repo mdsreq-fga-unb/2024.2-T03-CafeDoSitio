@@ -26,3 +26,11 @@ Na Unidade 3, a equipe aprofundou o conhecimento em técnicas de organização e
 Aprendemos também a importância de detalhar cada item do backlog em histórias de usuário, que servem como descrições claras do valor entregue ao cliente. Esses itens foram enriquecidos com critérios de aceitação, que ajudam a definir quando um PBI pode ser considerado completo, e com a elaboração de BDD's (Behavior-Driven Development), promovendo uma visão colaborativa entre as áreas de desenvolvimento e negócios.
 
 Outro ponto marcante foi o aprendizado e a aplicação do User Story Mapping, uma técnica que permitiu visualizar o fluxo completo do produto de forma linear e coesa, facilitando a identificação das etapas mais críticas para garantir o valor entregue ao cliente final.
+
+## Unidade 4:
+
+Na prática, percebemos que os casos de uso são essenciais para entender como um sistema deve se comportar em diferentes cenários. Inicialmente, tivemos dificuldades para diferenciar atores primários e secundários, mas com os exemplos discutidos em equipe, conseguimos visualizar melhor o papel de cada um na interação com o sistema. Além disso, aprendemos a importância de identificar corretamente os fluxos principais e alternativos para garantir que o sistema atenda a todas as necessidades dos usuários.
+
+Outro aprendizado importante foi sobre a especificação dos casos de uso. No início, tentamos descrever tudo de forma muito ampla, o que tornava difícil compreender os detalhes de cada interação. Depois, percebemos que estruturar as informações de maneira padronizada, com elementos como pré-condições, pós-condições e descrições claras dos passos, facilitava tanto o entendimento do sistema quanto a comunicação com o restante da equipe. Esse processo nos ajudou a enxergar como documentar um sistema de forma mais organizada.
+
+Por fim, aprendemos que os casos de uso não são apenas uma formalidade, mas sim uma ferramenta essencial para evitar falhas no desenvolvimento. Ao revisar e refatorar nossos próprios casos, notamos que algumas interações do sistema não estavam bem definidas, o que poderia gerar problemas na implementação. Com isso, passamos a valorizar mais a validação conjunta dos casos de uso, garantindo que todos os fluxos estivessem bem cobertos antes de avançarmos para as próximas etapas do projeto.
