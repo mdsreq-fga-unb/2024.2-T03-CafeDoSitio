@@ -3,7 +3,7 @@
   import Footer from "../Footer";
   import { Centralização, Layout } from "./styled";
 
-  const PublicLayout = ({ children, fullWidth = false }) => {
+  const PublicLayout = ({ children, fullWidth = false, hideFooter = false }) => {
     return (
       <>
         <Header />
@@ -16,7 +16,7 @@
             </Layout>
           </Centralização>
         )}
-        <Footer />
+        {!hideFooter && <Footer />} {/* Condiciona a exibição do Footer */}
       </>
     );
   };

@@ -2,7 +2,7 @@ import axios from "axios";
 import { toast } from 'react-toastify';
 import { ROUTE } from './RouteConstant';
 
-const baseURL = ROUTE.DEV + "/sac";
+const baseURL = import.meta.env.VITE_MODE === 'production' ? (import.meta.env.VITE_NODE_APP_API_URL + '/sac') : (ROUTE.DEV + '/sac');
 
 const getAllSacs = async (tag) => {
     try {

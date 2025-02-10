@@ -21,6 +21,8 @@ import {
 } from './styled';
 import { FaEnvelope, FaPhoneAlt, FaInstagram, FaFacebook, FaYoutube, FaLinkedin, FaComments } from "react-icons/fa"; // Ícones do Font Awesome
 import { FaXTwitter } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
+import { ROUTES } from '../../../routes/RoutesConstants';
 
 const ContactPage = () => {
   const contacts = [
@@ -43,7 +45,11 @@ const ContactPage = () => {
   
   return (
     <>
-      <Paginacao text={"FAMÍLIA DO SÍTIO > CONTATOS"} />
+     <Paginacao>
+       <Link className="page" to={ROUTES.MAIN}>Família do Sítio</Link>
+        {" > "}
+        <span>CONTATO</span>
+     </Paginacao>
       <Space />
 
       <InfoSection>

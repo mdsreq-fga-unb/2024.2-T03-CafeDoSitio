@@ -309,8 +309,8 @@ const VisitaDetailsPage = () => {
           </label>
 
           <ButtonSection>
-            <RedButton text={"Não"} onClick={closePopup2}/>
             <Button text={"Sim"} onClick={deleteVisitaSelected}/>
+            <RedButton text={"Não"} onClick={closePopup2}/>
           </ButtonSection>
           
         </Popup>
@@ -325,8 +325,8 @@ const VisitaDetailsPage = () => {
           </label>
 
           <ButtonSection>
-            <RedButton text={"Não"} onClick={closePopup3}/>
             <Button text={"Sim"} onClick={patchVisitor}/>
+            <RedButton text={"Não"} onClick={closePopup3}/>
           </ButtonSection>
           
         </Popup>
@@ -341,8 +341,8 @@ const VisitaDetailsPage = () => {
           </label>
 
           <ButtonSection>
-            <RedButton text={"Não"} onClick={closePopup4}/>
             <Button text={"Sim"} onClick={patchStatus}/>
+            <RedButton text={"Não"} onClick={closePopup4}/>
           </ButtonSection>
           
         </Popup>

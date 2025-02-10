@@ -8,6 +8,8 @@ import DisponibilityCard from "../../../components/DisponibilityCard";
 import { FaExclamationCircle } from "react-icons/fa";
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'; // CSS do <ToastContainer />
+import { Link } from "react-router-dom";
+import { ROUTES } from "../../../routes/RoutesConstants";
 
 // IMPORTAÇÃO DE IMAGENS E SVG's:
 import VisiteaFabrica from "../../../assets/visitaFabrica.jpg";
@@ -194,7 +196,11 @@ const VisitaFabricaPage = () => {
 
   return (
     <>
-      <Paginacao text={"FAMÍLIA DO SÍTIO > VISITA TÉCNICA"} />
+      <Paginacao>
+       <Link className="page" to={ROUTES.MAIN}>Família do Sítio</Link>
+        {" > "}
+        <span>Visite a fábrica</span>
+     </Paginacao>
       <Space />
       <ToastContainer />
 

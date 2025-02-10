@@ -1,9 +1,10 @@
 import express from 'express';
 import connectDatabase from './database/db.js';
+import bodyParser from 'body-parser';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import { UserSeed } from './scripts/seeds.js'
-dotenv.config();
+dotenv.config({path: '../../.env'});
 
 import router from './routes/index.js';
 
@@ -25,6 +26,8 @@ const corsOptionsDelegate = function(req, callback) {
   callback(null, corsOptions);
 };
 
+app.use(bodyParser.json({ limit: '15mb' }));
+app.use(bodyParser.urlencoded({ limit: '15mb', extended: true }));
 app.use(cors(corsOptionsDelegate));
 app.use(express.json());
 app.use(router);

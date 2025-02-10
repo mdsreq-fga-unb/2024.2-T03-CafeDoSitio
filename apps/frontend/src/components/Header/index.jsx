@@ -69,9 +69,10 @@ function Header({pagina}) {
         <MobileMenu>
           <MdClose size={40} className="close-icon" onClick={() => setMenuMobile(false)} />
           <ul className="mobile-nav-list">
-            <li><Link to={ROUTES.HOME} onClick={() => setMenuMobile(false)}>INICIO</Link></li>
+            <li><Link to={ROUTES.MAIN} onClick={() => setMenuMobile(false)}>INICIO</Link></li>
             <li><a href="#">NOSSOS PRODUTOS</a></li>
             <li><Link to={ROUTES.HISTORIA} onClick={() => setMenuMobile(false)}>NOSSA HISTÓRIA</Link></li>
+            <li><Link to={ROUTES.BLOG} onClick={() => setMenuMobile(false)}>BLOG</Link></li>
             <li><Link to={ROUTES.SITIO_VERDE} onClick={() => setMenuMobile(false)}>SÍTIO VERDE</Link></li>
             <li><Link to={ROUTES.VISITA} onClick={() => setMenuMobile(false)}>VISITE A FÁBRICA</Link></li>
             <li><Link to={ROUTES.CONTATOS} onClick={() => setMenuMobile(false)}>CONTATO</Link></li>

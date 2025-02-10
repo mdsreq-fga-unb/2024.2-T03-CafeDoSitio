@@ -4,41 +4,50 @@ export const TimelineCardContainer = styled.div`
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Ajuste aqui */
-  width: 850px;
+  max-width: 1000px;
   margin: 1vw;
-  overflow: hidden;
+  margin-inline: 8px;
+
+  @media (max-width: 2000px) {
+    width: 90%;
+  }
+
+  @media (max-width: 800px) {
+    margin-inline: 30px;
+    width: 100%;
+  }
 `;
 
 export const Title = styled.h2`
   text-align: left;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 3rem;
+  min-width: 300px;
   justify-content: space-between;
   color: #333;
-  margin: 0.5rem;  
+  margin: 0.5rem;
+  font-family: "Impact", sans-serif;
 `;
 
 export const Text = styled.p`
-  color: #A8A8A8;
-  margin-left: 2rem;
-  margin-bottom: auto;
-  margin-top: auto;
-  margin-right: auto;
-
+  color: #333;
+  margin: 0;
+  padding: 0;
+  padding-top: 15px;
+  font-size: 1.1rem;
+  font-family: "Myriad Pro", sans-serif;
 `;
 
 export const StyledDiv = styled.div`
-  display: grid;
-  grid-template-columns: auto 1fr;
+  display: flex;
+  flex-direction: row;
   gap: 10px;
   margin-top: 1rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-
+  margin-inline: 30px;
 `;
 
 export const Content = styled.div`
-  display: flex;  
+  display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 30px;
@@ -46,26 +55,27 @@ export const Content = styled.div`
 
 export const TimelineLine = styled.hr`
   position: absolute;
-  margin-top: 14px;
-  width: 786px;
+  margin-top: -30px;
+  width: calc(100% - 62px); /* Reduzindo a largura para compensar as margens */
   height: 3px;
   background-color: #333333;
-  border: none; 
-  z-index: 1; 
+  border: none;
+  z-index: 0;
+  left: 30px; /* Movendo para a direita para alinhar com a timeline */
 `;
-
 
 export const YearDisplay = styled.div`
   display: flex;
   flex: 1;
   margin-top: 0;
-  align-items: center; 
+  align-items: center;
   justify-content: space-between;
-  background-color: #2B674B;
+  background-color: #2b674b;
   text-align: center;
   border-radius: 15px;
   padding: 5px;
-  gap: 10px; 
+  padding-left: 20px;
+  gap: 10px;
   width: 100%;
   transition: all 0.3s ease-out;
 
@@ -73,40 +83,45 @@ export const YearDisplay = styled.div`
     writing-mode: vertical-lr;
     transform: rotate(180deg);
     font-size: 3.8rem;
-    font-family: 'Impact', sans-serif;
+    font-family: "Impact", sans-serif;
     color: #fff;
   }
 `;
 
 export const ImageWrapper = styled.div`
-  flex: 1;
-  background-color: #fff;
-  max-width: 100%;
-  max-height: 100%;
-  border-radius:  0 15px 15px 0 ;
-  overflow: hidden; 
+  display: flex;
+  width: fit-content;
+  height: 200px;  
+  overflow: hidden;
+  padding-inline: 30px;
 `;
 
 export const TextWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 0.4fr; 
-
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 0 15px 15px 0;
+  align-items: center;
 `;
 
 export const TextBox = styled.div`
   flex: 1;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   width: 100%;
   text-align: justify;
-  background-color: #fff;
   border: none;
-  padding: 10px;
+  padding-inline: 50px;
   margin: 0 1px;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-family: 'Myriad Pro', sans-serif;
 `;
 
 export const Button = styled.button`
   background-color: transparent;
-  color: #CFCFCF;
+  color: #cfcfcf;
   border: none;
   border-radius: 20%;
   width: 32px;
@@ -131,24 +146,30 @@ export const Button = styled.button`
 export const GrayBar = styled.div`
   display: flex;
   width: 100%;
+  height: 80px;
   z-index: 1;
   margin-top: 20px;
   border-radius: 0 0 20px 20px;
-  background-color: #CCCCCC; 
+  background-color: #cccccc;
 `;
 
 export const Navigation = styled.div`
-  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 0;
+  padding-top: 20px;
   z-index: 4;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+
   .timeline {
     display: flex;
-    margin-left: 30px;
-    gap: 40px;
-    
+    height: 70px;
+    flex-direction: row;
+    margin-inline: 30px;
+    justify-content: space-between;
     width: 100%;
 
     .timeline-item {
@@ -157,23 +178,24 @@ export const Navigation = styled.div`
       background-color: #333333;
       border-radius: 50%;
       display: flex;
+      flex-direction: column;
+      gap: 100px;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      transition: all .3s ease-out;
+      transition: all 0.3s ease-out;
       margin-bottom: 20px;
       z-index: 2;
-  
-      .timeline-item-year{
-        margin-top: 50px;
+
+      .timeline-item-year {
+        margin-top: 60px;
       }
 
       &.active {
-        width: 30px;
-        height: 30px;
-        background-color: #A53A44;
-        color: #A53A44;
-
+        width: 35px;
+        height: 35px;
+        background-color: #a53a44;
+        color: #a53a44;
       }
     }
   }

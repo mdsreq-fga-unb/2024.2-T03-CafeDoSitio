@@ -1,11 +1,13 @@
 import express from "express";
 import blogController from "../controllers/blog.controller.js";
+import { authMiddleware } from "../middlewares/auth.middleware.js";
 
 const blogRouter = express.Router();
 
-blogRouter.post('/createBlog', blogController.createBlog);
-blogRouter.get('/findAllBlog', blogController.findAllBlog);
-blogRouter.delete('/deleteBlog/:id', blogController.deleteBlog);
-blogRouter.patch('/patchBlog/:id', blogController.patchBlog);
+blogRouter.post('/', authMiddleware, blogController.createBlog);
+blogRouter.get('/:id', blogController.findBlogById);
+blogRouter.delete('/:id', authMiddleware, blogController.deleteBlog);
+blogRouter.patch('/:id', authMiddleware, blogController.patchBlog);
+blogRouter.get('/slug/:slug', blogController.findOneBySlug);
 
 export default blogRouter;
