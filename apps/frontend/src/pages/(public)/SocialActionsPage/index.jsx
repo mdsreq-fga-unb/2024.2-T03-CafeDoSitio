@@ -56,11 +56,14 @@ export default function SocialActionsPage() {
                 <Space />
                 <Centralização>
                     <Layout>    
-                        <Title>Nossas iniciativas</Title>
+                        <Title>Sítio Verde</Title>
                         <Text>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-                            dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam. Ut wisi enim ad minim veniam. Ut wisi enim
-                            ad minim veniam.
+                            É uma iniciativa voltada para projetos sociais e sustentáveis. A Família do Sítio busca impactar
+                            positivamente o meio ambiente e a comunidade ao adotar práticas como uso de <strong>placas fotovoltaicas </strong>
+                            para gerar energia limpa, <strong>reutilização de paletes e lonas em projetos sociais</strong>,
+                            transformação de restos de alimentos e cinzas dos torradores em adubo, cultivo de horta para
+                            distribuição de alimentos frescos e saudáveis aos funcionários. Cada ação do Sítio Verde
+                            reflete nosso compromisso com um futuro mais sustentável e inclusivo. 
                         </Text>
                     </Layout>
                 </Centralização>
