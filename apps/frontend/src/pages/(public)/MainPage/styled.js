@@ -261,6 +261,7 @@ export const Divisao1 = styled.div`
   display: flex;
   flex-direction: row;
   gap: 6rem;
+  cursor: pointer;
 
   ul {
     margin: 0px;

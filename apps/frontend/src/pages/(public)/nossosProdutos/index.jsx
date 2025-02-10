@@ -1,22 +1,22 @@
 import Paginacao from "../../../components/Paginacao";
 import ImgContent from "./ImgContent";
-import { Title, Text, DivContainer, DivContainerEncontreNossosProdutos, DivContainerSelosABIC, ImagemSelosABIC, DivContainerTitleSelosABIC, TextSelosABIC } from "./styled";
-
+import { Title, Text, DivContainer, DivContainerEncontreNossosProdutos, DivContainerSelosABIC, ImagemSelosABIC, DivContainerTitleSelosABIC, TextSelosABIC, Space } from "./styled";
 import imagemCafeAssumPretoConteiner from "../../../assets/DetalhesNossosProdutos/Nossos-Produtos_assumnovo.png";
-
 import imagemCafeFamiliaSitioConteiner from "../../../assets/DetalhesNossosProdutos/NossosProdutos_familiadositio_1novo.png";
-
 import imagemCafeSpecialeConteiner from "../../../assets/DetalhesNossosProdutos/Nossos-Produtos_specialenovo.png";
-
 import imagemSelosDaABIC from "../../../assets/DetalhesNossosProdutos/NossosProdutosSelosABIC_4.png";
-
-
-
+import { Link } from "react-router-dom";
+import { ROUTES } from "../../../routes/RoutesConstants";
 
 export default function NossosProdutos() {
     return (
         <>
-            <Paginacao text={"FAMÍLIA DO SÍTIO > NOSSOS PRODUTOS"} />
+            <Paginacao>
+                <Link className="page" to={ROUTES.MAIN}>Família do Sítio</Link>
+                {" > "}
+                <span>Nossos Produtos</span>
+            </Paginacao>
+            <Space />
 
             <DivContainer>
                 <Title>Nossas marcas</Title>
