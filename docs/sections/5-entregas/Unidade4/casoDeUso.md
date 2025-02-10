@@ -244,23 +244,22 @@ _Fonte: Elaboração própria_
 
   <h3>4. Fluxo Básico (FB)</h3>
   <ol>
-      <li>1. O paciente seleciona a opção "Histórico Médico" no menu principal.</li>
-      <li>2. O sistema solicita os critérios de busca (período, tipo de registro, etc.).</li>
-      <li>Se não estiver autenticado, o sistema redireciona para a tela de login.>
-      <li>3. O sistema solicita os critérios de busca (período, tipo de registro, etc.).</li>
-      <li>4. O paciente insere os critérios desejados. [FE03 - Informações obrigatórias não preenchidas]</li>
-      <li>Se os critérios não forem preenchidos, o sistema exibe uma mensagem de erro e solicita a inserção dos dados.</li>
-      <li>5. O sistema valida os critérios de busca. [RN01 - Controle de acesso]</li>
-      <li>O sistema garante que apenas pacientes autenticados ou profissionais de saúde autorizados possam acessar os dados.</li>
-      <li>6. O sistema exibe a lista de registros correspondentes. [FA01 - Sem registros encontrados]</li>
-      <li>Se não houver registros para os critérios informados, o sistema exibe uma mensagem e permite a inserção de novos critérios.</li>
-      <li>7. O paciente seleciona um registro específico para visualizar os detalhes.</li>
-      <li>8. O sistema apresenta as informações do registro, incluindo data, diagnóstico, prescrições e anotações. [RN02 - Segurança e privacidade]</li>
-      <li>Os dados são protegidos conforme a LGPD, garantindo acesso apenas a usuários autorizados.</li>
-      <li>9. O paciente pode baixar ou imprimir o registro. [RN03 - Disponibilidade dos registros]</li>
-      <li>O sistema garante que os registros estejam acessíveis e armazenados de forma segura.</li>
-      <li>10. O caso de uso é encerrado.</li>
-  </ol>
+  <li>O paciente seleciona a opção "Histórico Médico" no menu principal.</li>
+  <li>O sistema solicita os critérios de busca (período, tipo de registro, etc.).</li>
+  <p>Se não estiver autenticado, o sistema redireciona para a tela de login. [FE01 - Falha na autenticação]<p>
+  <li>O paciente insere os critérios desejados.</li>
+  <p>Se os critérios não forem preenchidos, o sistema exibe uma mensagem de erro e solicita a inserção dos dados. [FE03 - Informações obrigatórias não preenchidas]<p>
+  <p>O sistema valida os critérios de busca. [RN01 - Controle de acesso]<p>
+  <li>O sistema garante que apenas pacientes autenticados ou profissionais de saúde autorizados possam acessar os dados.</li>
+  <p>O sistema exibe a lista de registros correspondentes. [FA01 - Sem registros encontrados]</p>
+  <li>Se não houver registros para os critérios informados, o sistema exibe uma mensagem e permite a inserção de novos critérios.</li>
+  <li>O paciente seleciona um registro específico para visualizar os detalhes.</li>
+  <p>O sistema apresenta as informações do registro, incluindo data, diagnóstico, prescrições e anotações. [RN02 - Segurança e privacidade]<p>
+  <li>Os dados são protegidos conforme a LGPD, garantindo acesso apenas a usuários autorizados.</li>
+  <p>O paciente pode baixar ou imprimir o registro. [RN03 - Disponibilidade dos registros]<p>
+  <li>O sistema garante que os registros estejam acessíveis e armazenados de forma segura.</li>
+  <li>O caso de uso é encerrado.</li>
+</ol>
 
   <h3>5. Fluxo Alternativo (FA)</h3>
   <h4>FA01 -  Sem registros encontrados</h4>
@@ -278,12 +277,19 @@ _Fonte: Elaboração própria_
   <h3>6. Fluxo de Exceção (FE)</h3>
   <h4>FE01 - Falha na autenticação</h4>
   <p>Se o paciente ou profissional não estiver autenticado, o sistema redireciona para a tela de login.</p>
+  <p>Regra de Negócio Associada: RN01 - Controle de acesso: Apenas pacientes autenticados podem acessar seu histórico médico, e profissionais de saúde precisam de permissão expressa do paciente.</p>
 
   <h4>FE02 - Erro no carregamento dos registros</h4>
   <p>Se houver falha na exibição do histórico, o sistema informa o erro e solicita uma nova tentativa.</p>
+  <p>Regra de Negócio Associada: RN03 - Disponibilidade dos registros: O sistema deve garantir que os registros estejam acessíveis e armazenados de forma segura.</p>
 
   <h4>FE03 - Informações obrigatórias não preenchidas</h4>
   <p>Se o paciente não preencher os critérios de busca, o sistema impede o avanço e solicita a inserção dos dados.</p>
+  <p>Regra de Negócio Associada: RN01 - Controle de acesso: Apenas pacientes autenticados podem acessar seu histórico médico. O sistema garante que as informações mínimas necessárias para o acesso ao histórico sejam fornecidas.</p>
+
+  <h4>FE04 - Violação de segurança ou acesso não autorizado</h4>
+  <p>Descrição: Se um usuário tentar acessar dados sem permissão ou realizar uma ação não autorizada, o sistema impede a ação e informa sobre a violação.</p>
+  <p>Regra de Negócio Associada: RN02 - Segurança e privacidade: Os dados do histórico devem ser protegidos conforme a LGPD, garantindo acesso apenas a usuários autorizados.</p>
 
   <h3>7. Regras de Negócio (RN)</h3>
 
