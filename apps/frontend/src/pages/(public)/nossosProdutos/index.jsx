@@ -5,6 +5,7 @@ import imagemCafeAssumPretoConteiner from "../../../assets/DetalhesNossosProduto
 import imagemCafeFamiliaSitioConteiner from "../../../assets/DetalhesNossosProdutos/NossosProdutos_familiadositio_1novo.png";
 import imagemCafeSpecialeConteiner from "../../../assets/DetalhesNossosProdutos/Nossos-Produtos_specialenovo.png";
 import imagemSelosDaABIC from "../../../assets/DetalhesNossosProdutos/NossosProdutosSelosABIC_4.png";
+import PertodeVoce from '../../../components/PertodeVoce';
 import { Link } from "react-router-dom";
 import { ROUTES } from "../../../routes/RoutesConstants";
 
@@ -85,7 +86,7 @@ export default function NossosProdutos() {
                     ea commodo consequat.
                 </TextSelosABIC>
             </DivContainerEncontreNossosProdutos>
-            
+            <PertodeVoce />
         </>
     );
 }
