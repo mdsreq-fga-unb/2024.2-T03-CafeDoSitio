@@ -6,3 +6,5 @@
 .turbo/
 apps/
 packages/
+
+.idea/

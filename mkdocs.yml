@@ -23,6 +23,8 @@ nav:
       - Video: sections/5-entregas/Unidade3/Video.md
       - PBB: sections/5-entregas/Unidade3/PBB.md
       - USM: sections/5-entregas/Unidade3/USM.md
+    - Unidade 4:
+      - Caso de Uso: sections/5-entregas/Unidade4/casoDeUso.md
   - Ciclos e Backlog:
     - Visão do Backlog: sections/2-docPage/9-backlogDeProduto.md
     - Sprint 1:
