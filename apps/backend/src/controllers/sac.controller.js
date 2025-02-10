@@ -21,26 +21,6 @@ const createSac = async (req, res) => {
 
     let emailSetor;
 
-    switch (assunto) {
-      case 'Sugestao':
-        emailSetor = process.env.MAIL_SUGESTAO;
-        break;
-      case 'Elogio':
-        emailSetor = process.env.MAIL_ELOGIO;
-        break;
-      case 'Duvida':
-        emailSetor = process.env.MAIL_DUVIDA;
-        break;
-      case 'Reclamacao':
-        emailSetor = process.env.MAIL_RECLAMACAO;
-        break;
-      case 'Parceria/Patrocinio':
-        emailSetor = process.env.MAIL_PARCERIA;
-        break;
-      default:
-        return res.status(400).send({ message: 'Houve algum erro no campo assunto' });
-    }
-
     // Configura o corpo do e-mail
     const emailBody = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
@@ -69,7 +49,59 @@ const createSac = async (req, res) => {
       : [];
 
     // Envia o e-mail
-    await nodemailerService.send(emailSetor, assuntoEmail, emailBody, attachments);
+    switch (assunto) {
+      case 'Sugestao':
+        const emailSugestao1 = process.env.MAIL_SUGESTAO_1;
+        const emailSugestao2 = process.env.MAIL_SUGESTAO_2;
+        const emailSugestao3 = process.env.MAIL_SUGESTAO_3;
+
+        await nodemailerService.send(emailSugestao1, assuntoEmail, emailBody, attachments);
+        await nodemailerService.send(emailSugestao2, assuntoEmail, emailBody, attachments);
+        await nodemailerService.send(emailSugestao3, assuntoEmail, emailBody, attachments);
+
+        break;
+      case 'Elogio':
+        const emailElogio1 = process.env.MAIL_ELOGIO_1;
+        const emailElogio2 = process.env.MAIL_ELOGIO_2;
+        const emailElogio3 = process.env.MAIL_ELOGIO_3;
+
+        await nodemailerService.send(emailElogio1, assuntoEmail, emailBody, attachments);
+        await nodemailerService.send(emailElogio2, assuntoEmail, emailBody, attachments);
+        await nodemailerService.send(emailElogio3, assuntoEmail, emailBody, attachments);
+        break;
+      case 'Duvida':
+        const emailDuvida1 = process.env.MAIL_DUVIDA_1;
+        const emailDuvida2 = process.env.MAIL_DUVIDA_2;
+        const emailDuvida3 = process.env.MAIL_DUVIDA_3;
+
+        await nodemailerService.send(emailDuvida1, assuntoEmail, emailBody, attachments);
+        await nodemailerService.send(emailDuvida2, assuntoEmail, emailBody, attachments);
+        await nodemailerService.send(emailDuvida3, assuntoEmail, emailBody, attachments);
+        break;
+      case 'Reclamacao':
+        const emailReclamacao1 = process.env.MAIL_RECLAMACAO_1;
+        const emailReclamacao2 = process.env.MAIL_RECLAMACAO_2;
+        const emailReclamacao3 = process.env.MAIL_RECLAMACAO_3;
+        const emailReclamacao4 = process.env.MAIL_RECLAMACAO_4;
+
+        await nodemailerService.send(emailReclamacao1, assuntoEmail, emailBody, attachments);
+        await nodemailerService.send(emailReclamacao2, assuntoEmail, emailBody, attachments);
+        await nodemailerService.send(emailReclamacao3, assuntoEmail, emailBody, attachments);
+        await nodemailerService.send(emailReclamacao4, assuntoEmail, emailBody, attachments);
+        break;
+      case 'Parceria/Patrocinio':
+        const emailParceria1 = process.env.MAIL_PARCERIA_1;
+        const emailParceria2 = process.env.MAIL_PARCERIA_2;
+        const emailParceria3 = process.env.MAIL_PARCERIA_3;
+
+        await nodemailerService.send(emailParceria1, assuntoEmail, emailBody, attachments);
+        await nodemailerService.send(emailParceria2, assuntoEmail, emailBody, attachments);
+        await nodemailerService.send(emailParceria3, assuntoEmail, emailBody, attachments);
+        break;
+      default:
+        return res.status(400).send({ message: 'Houve algum erro no campo assunto' });
+    }
+    
 
     if (req.file) {
       try {
