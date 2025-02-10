@@ -23,19 +23,19 @@ const createSac = async (req, res) => {
 
     switch (assunto) {
       case 'Sugestao':
-        emailSetor = 'Sugestao@email.com';
+        emailSetor = process.env.MAIL_SUGESTAO;
         break;
       case 'Elogio':
-        emailSetor = 'Elogio@email.com';
+        emailSetor = process.env.MAIL_ELOGIO;
         break;
       case 'Duvida':
-        emailSetor = 'duvida@email.com';
+        emailSetor = process.env.MAIL_DUVIDA;
         break;
       case 'Reclamacao':
-        emailSetor = 'reclamacao@email.com';
+        emailSetor = process.env.MAIL_RECLAMACAO;
         break;
       case 'Parceria/Patrocinio':
-        emailSetor = 'parceria@email.com';
+        emailSetor = process.env.MAIL_PARCERIA;
         break;
       default:
         return res.status(400).send({ message: 'Houve algum erro no campo assunto' });
@@ -69,7 +69,7 @@ const createSac = async (req, res) => {
       : [];
 
     // Envia o e-mail
-    await nodemailerService.send('arthur.lantr@gmail.com', assuntoEmail, emailBody, attachments);
+    await nodemailerService.send(emailSetor, assuntoEmail, emailBody, attachments);
 
     if (req.file) {
       try {
