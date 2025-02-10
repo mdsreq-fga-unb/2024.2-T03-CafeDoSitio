@@ -93,18 +93,24 @@ const findAllUser = async (req, res) => {
 
 const findByIdUser = async (req, res) => {
   try {
-    const { _id } = req.params;
+    const { id } = req.params;
 
-    if(!_id)
+    if(!id)
       return res.status(400).send({ message: 'Por favor, forneça um ID válido.' });
 
-    const user = await userService.findByIdService(_id);
+    const user = await userService.findByIdService({_id: id});
 
     if (!user) {
       return res.status(404).send({ message: 'Usuário não encontrado.' });
     }
 
-    return res.status(200).send({ message: 'Usuário encontrado com sucesso!', user });
+    const response = {
+      name: user.name,
+      email: user.email,
+      sector: user.sector,
+    }
+
+    return res.status(200).send({ message: 'Usuário encontrado com sucesso!', user: response });
   } catch (err) {
     return res.status(500).send({ message: err.message });
   }
@@ -136,6 +142,45 @@ const findByIdAndUpdate = async (req, res) => {
   }
 };
 
+const findByIdAndUpdatePassword = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { password, updateBody } = req.body;
+
+    if (!id || Object.keys(updateBody).length === 0)
+      return res.status(400).send({ message: 'Por favor, forneça um ID e os dados para atualização.' });
+
+    if (!password)
+      return res.status(400).send({ message: 'Por favor, forneça a senha para atualização.' });
+
+    const user = await userService.findByIdService(id);
+    if (!user)
+      return res.status(404).send({ message: 'Usuário não encontrado.' });
+    if(user.password != bcrypt.hashSync(password, salt))
+      return res.status(403).send({ message: 'Senha incorreta!' });
+
+    
+    if (updateBody.password) {
+      const hashedPassword = bcrypt.hashSync(updateBody.password, salt);
+      updateBody.password = hashedPassword;
+    }
+
+    console.log(id);
+
+    const updatedUser = await userService.findByIdAndUpdate(id, updateBody);
+    const token = userService.generateToken([updatedUser]);
+
+    if (!updatedUser) {
+      return res.status(404).send({ message: 'Usuário não encontrado ou não foi possível atualizar.' });
+    }
+
+
+    return res.status(200).send({ message: 'Usuário atualizado com sucesso!', user: updatedUser, token });
+  } catch (err) {
+    return res.status(500).send({ message: `Erro ao atualizar o usuário: ${err.message}` });
+  }
+};
+
 const deleteUser = async (req, res) => {
   try {
     const { id } = req.params;
@@ -162,5 +207,6 @@ export default {
   findAllUser,
   findByIdUser,
   findByIdAndUpdate,
+  findByIdAndUpdatePassword,
   deleteUser,
 };
