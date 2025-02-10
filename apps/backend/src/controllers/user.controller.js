@@ -62,7 +62,6 @@ const loginUser = async (req, res) => {
 };
 
 const findUsers = async (req, res) => {
-
   try {
     const { name, email } = req.query;
 

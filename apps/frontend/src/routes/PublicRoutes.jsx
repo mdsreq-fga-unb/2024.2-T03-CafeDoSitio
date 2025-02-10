@@ -7,6 +7,8 @@ import MainPage from "../pages/(public)/MainPage";
 import SocialActionsPage from "../pages/(public)/SocialActionsPage";
 import VisitaFabricaPage from "../pages/(public)/VisitaFabricaPage";
 import BlogViewPage from "../pages/(public)/BlogViewPage";
+import NossosProdutos from "../pages/(public)/nossosProdutos";
+import NossosProdutosInfo from "../pages/(public)/nossosProdutosInfo";
 import { ROUTES } from "./RoutesConstants";
 
 import PublicLayout from "../components/PublicLayout";
@@ -33,6 +35,8 @@ const PublicRoutes = () => {
         <Route path={ROUTES.VISITA} element={<VisitaFabricaPage />} />
         <Route path={ROUTES.MAIN} element={<MainPage />} />
         <Route path={ROUTES.BLOG_VIEW} element={<BlogViewPage />} />
+        <Route path={ROUTES.NOSSOS_PRODUTOS} element={<><NossosProdutos /></>} />
+        <Route path={ROUTES.NOSSOS_PRODUTOS_INFO} element={<><NossosProdutosInfo /></>} />
       </Routes>
     </PublicLayout>
   );
