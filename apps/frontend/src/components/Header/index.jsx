@@ -45,7 +45,7 @@ function Header({pagina}) {
 
           <ul className="nav-list">
             <li><Link to={ROUTES.HOME} style={{ color: isActive(ROUTES.HOME) ? "#006343" : "black"}}>INICIO</Link></li>
-            <li><a href="#">NOSSOS PRODUTOS</a></li>
+            <li><Link to={ROUTES.NOSSOS_PRODUTOS} style={{ color: isActive(ROUTES.NOSSOS_PRODUTOS) ? "#006343" : "black"}}>NOSSOS PRODUTOS</Link></li>
             <li><Link to={ROUTES.HISTORIA} style={{ color: isActive(ROUTES.HISTORIA) ? "#006343" : "black"}}>NOSSA HISTÓRIA</Link></li>
             <li><Link to={ROUTES.BLOG} style={{ color: isActive(ROUTES.BLOG) ? "#006343" : "black"}}>BLOG</Link></li>
             <li><Link to={ROUTES.SITIO_VERDE} style={{ color: isActive(ROUTES.SITIO_VERDE) ? "#006343" : "black"}}>SÍTIO VERDE</Link></li>
@@ -69,9 +69,10 @@ function Header({pagina}) {
         <MobileMenu>
           <MdClose size={40} className="close-icon" onClick={() => setMenuMobile(false)} />
           <ul className="mobile-nav-list">
-            <li><Link to={ROUTES.HOME} onClick={() => setMenuMobile(false)}>INICIO</Link></li>
+            <li><Link to={ROUTES.MAIN} onClick={() => setMenuMobile(false)}>INICIO</Link></li>
             <li><a href="#">NOSSOS PRODUTOS</a></li>
             <li><Link to={ROUTES.HISTORIA} onClick={() => setMenuMobile(false)}>NOSSA HISTÓRIA</Link></li>
+            <li><Link to={ROUTES.BLOG} onClick={() => setMenuMobile(false)}>BLOG</Link></li>
             <li><Link to={ROUTES.SITIO_VERDE} onClick={() => setMenuMobile(false)}>SÍTIO VERDE</Link></li>
             <li><Link to={ROUTES.VISITA} onClick={() => setMenuMobile(false)}>VISITE A FÁBRICA</Link></li>
             <li><Link to={ROUTES.CONTATOS} onClick={() => setMenuMobile(false)}>CONTATO</Link></li>
