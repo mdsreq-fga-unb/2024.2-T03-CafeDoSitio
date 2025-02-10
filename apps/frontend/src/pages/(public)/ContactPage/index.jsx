@@ -23,7 +23,6 @@ import { FaEnvelope, FaPhoneAlt, FaInstagram, FaFacebook, FaYoutube, FaLinkedin,
 import { FaXTwitter } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 import { ROUTES } from '../../../routes/RoutesConstants';
-import PertodeVoce from '../../../components/PertodeVoce';
 
 const ContactPage = () => {
   const contacts = [
@@ -175,7 +174,6 @@ const ContactPage = () => {
             </div>
         </div>
       </Location>
-      <PertodeVoce />
     </>
   );
 };

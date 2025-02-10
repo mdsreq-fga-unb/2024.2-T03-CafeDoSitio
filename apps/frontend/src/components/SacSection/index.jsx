@@ -148,6 +148,7 @@ function Sac() {
                 <Label htmlFor="phone" style={{color: "#006343"}}>Telefone:</Label>
                 <Input type="tel" id="phone" placeholder="Telefone" value={telefone} 
                     onChange={handleTelefone}
+                    
                 />
 
                 <Label htmlFor="subject" style={{color: "#006343"}}>Assunto:</Label>                

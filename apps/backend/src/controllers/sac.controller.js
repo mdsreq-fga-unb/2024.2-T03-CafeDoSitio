@@ -43,16 +43,23 @@ const createSac = async (req, res) => {
 
     // Configura o corpo do e-mail
     const emailBody = `
-      Nome: ${sac.nomeSobrenome}
-      Email: ${sac.email}
-      Telefone: ${sac.telefone}
-      Assunto: ${sac.assunto}
-      Mensagem: ${sac.mensagem}
-      Identificador: ${sac.identificador}
-      Status: Em aberto
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
+        <h2 style="color: #333;">Novo contato do SAC</h2>
+        <p><strong>Nome:</strong> ${sac.nomeSobrenome}</p>
+        <p><strong>Email:</strong> <a href="mailto:${sac.email}" style="color: #1a73e8;">${sac.email}</a></p>
+        <p><strong>Telefone:</strong> ${sac.telefone}</p>
+        <p><strong>Assunto:</strong> ${sac.assunto}</p>
+        <p><strong>Mensagem:</strong></p>
+        <blockquote style="background: #f9f9f9; padding: 10px; border-left: 5px solid #1a73e8;">${sac.mensagem}</blockquote>
+        <p><strong>Identificador:</strong> ${sac.incrementalId}</p>
+        <p><strong>Status:</strong> <span style="color: red;">Em aberto</span></p>
+        <hr>
+        <p style="font-size: 12px; color: #777;">Este é um e-mail automático. Não responda.</p>
+      </div>
     `;
 
-    const assuntoEmail = `${sac.assunto} - ${sac.identificador}`;
+
+    const assuntoEmail = `${sac.assunto} - ${sac.incrementalId}`;
     // Configura os anexos se houver
     const attachments = req.file
       ? [{
@@ -62,7 +69,7 @@ const createSac = async (req, res) => {
       : [];
 
     // Envia o e-mail
-    await nodemailerService.send(emailSetor, assuntoEmail, emailBody, attachments);
+    await nodemailerService.send('arthur.lantr@gmail.com', assuntoEmail, emailBody, attachments);
 
     if (req.file) {
       try {

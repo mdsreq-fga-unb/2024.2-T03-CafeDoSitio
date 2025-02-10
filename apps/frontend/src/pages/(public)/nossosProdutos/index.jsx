@@ -9,7 +9,7 @@ import imagemCafeFamiliaSitioConteiner from "../../../assets/DetalhesNossosProdu
 import imagemCafeSpecialeConteiner from "../../../assets/DetalhesNossosProdutos/Nossos-Produtos_specialenovo.png";
 
 import imagemSelosDaABIC from "../../../assets/DetalhesNossosProdutos/NossosProdutosSelosABIC_4.png";
-
+import PertodeVoce from '../../../components/PertodeVoce';
 
 
 
@@ -85,7 +85,7 @@ export default function NossosProdutos() {
                     ea commodo consequat.
                 </TextSelosABIC>
             </DivContainerEncontreNossosProdutos>
-            
+            <PertodeVoce />
         </>
     );
 }
