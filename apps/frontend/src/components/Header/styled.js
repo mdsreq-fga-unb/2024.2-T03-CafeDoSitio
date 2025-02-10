@@ -196,7 +196,7 @@ export const MobileMenu = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #F29947;
+  background-color: #006343;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -233,7 +233,7 @@ export const MobileMenu = styled.div`
         transition: 200ms;
         
         &:hover {
-          color: #006343;
+          color: #F29947;
           text-decoration: underline;
         }
       }
@@ -249,7 +249,7 @@ export const MobileMenu = styled.div`
     gap: 15px;
 
     .icon{
-      color: #006343;
+      color: #F29947;
       font-size: 25px;
     }
   }

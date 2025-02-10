@@ -14,7 +14,8 @@ import {
     ProdutoDescricao,
     ProdutoInfo,
     Disponibilidade,
-    DetalhesProduto
+    DetalhesProduto,
+    Space
 } from "./styled";
 
 import { useParams } from "react-router-dom";
@@ -35,14 +36,14 @@ import imagemCafeSpecialeConteiner from "../../../assets/DetalhesNossosProdutos/
 import imagemCafeSpecialeRegulare from "../../../assets/DetalhesNossosProdutos/NossosProdutos_speciale_2.png";
 import imagemCafeSpecialeFrutado from "../../../assets/DetalhesNossosProdutos/NossosProdutos_speciale_3.png";
 import imagemCafeSpecialeImperiale from "../../../assets/DetalhesNossosProdutos/NossosProdutos_speciale_4.png";
+import { Link } from "react-router-dom";
+import { ROUTES } from "../../../routes/RoutesConstants";
 
 export default function NossosProdutosInfo() {
     const {id}  = useParams();
 
-    console.log(id);
     let conteudoPagina = undefined;
     if(id === '1') {
-        console.log(id);
         conteudoPagina = {
             nome:'FAMÍLIA DO SÍTIO',
             textoCabecalho: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.',
@@ -218,7 +219,15 @@ export default function NossosProdutosInfo() {
 
     return (
         <>
-            <Paginacao text={"FAMÍLIA DO SÍTIO > NOSSOS PRODUTOS > " + conteudoPagina.nome} />
+            <Paginacao>
+                <Link to={ROUTES.MAIN} className="page">Família do Sítio</Link>
+                {" > "}
+                <Link to={ROUTES.NOSSOS_PRODUTOS} className="page">Nossos Produtos</Link>
+                {" > "}
+                <span>{conteudoPagina.nome}</span>
+            </Paginacao>
+
+            <Space />
 
             <DivContainer>
                 <Title>Nossas marcas</Title>

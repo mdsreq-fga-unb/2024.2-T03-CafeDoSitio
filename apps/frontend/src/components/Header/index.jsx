@@ -6,6 +6,7 @@ import { FaCartShopping, FaXTwitter } from "react-icons/fa6";
 import { MdOutlineMenu, MdClose } from "react-icons/md";
 import RedButton from "../RedButton";
 import { ROUTES } from "../../routes/RoutesConstants";
+import FamiliaDoSitioBorda from "../../assets/FamiliaDoSitioBorda.png";
 
 function Header({pagina}) {
   const location = useLocation();
@@ -17,7 +18,7 @@ function Header({pagina}) {
     <NavBar>
       <NavArea>
         <div className="area1">
-          <a href="/"><LogoImg src="./favicon.png"/></a>
+          <a href="/"><LogoImg src={FamiliaDoSitioBorda} /></a>
           <label className="page-name">{pagina}</label>
         </div>
         
@@ -44,7 +45,7 @@ function Header({pagina}) {
           </div>
 
           <ul className="nav-list">
-            <li><Link to={ROUTES.HOME} style={{ color: isActive(ROUTES.HOME) ? "#006343" : "black"}}>INICIO</Link></li>
+            <li><Link to={ROUTES.MAIN} style={{ color: isActive(ROUTES.MAIN) ? "#006343" : "black"}}>INICIO</Link></li>
             <li><Link to={ROUTES.NOSSOS_PRODUTOS} style={{ color: isActive(ROUTES.NOSSOS_PRODUTOS) ? "#006343" : "black"}}>NOSSOS PRODUTOS</Link></li>
             <li><Link to={ROUTES.HISTORIA} style={{ color: isActive(ROUTES.HISTORIA) ? "#006343" : "black"}}>NOSSA HISTÓRIA</Link></li>
             <li><Link to={ROUTES.BLOG} style={{ color: isActive(ROUTES.BLOG) ? "#006343" : "black"}}>BLOG</Link></li>
@@ -70,7 +71,7 @@ function Header({pagina}) {
           <MdClose size={40} className="close-icon" onClick={() => setMenuMobile(false)} />
           <ul className="mobile-nav-list">
             <li><Link to={ROUTES.MAIN} onClick={() => setMenuMobile(false)}>INICIO</Link></li>
-            <li><a href="#">NOSSOS PRODUTOS</a></li>
+            <li><Link to={ROUTES.NOSSOS_PRODUTOS} onClick={() => setMenuMobile(false)}>NOSSOS PRODUTOS</Link></li>
             <li><Link to={ROUTES.HISTORIA} onClick={() => setMenuMobile(false)}>NOSSA HISTÓRIA</Link></li>
             <li><Link to={ROUTES.BLOG} onClick={() => setMenuMobile(false)}>BLOG</Link></li>
             <li><Link to={ROUTES.SITIO_VERDE} onClick={() => setMenuMobile(false)}>SÍTIO VERDE</Link></li>

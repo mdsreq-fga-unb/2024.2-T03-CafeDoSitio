@@ -2,22 +2,20 @@ import styled from "styled-components";
 
 export const Title = styled.h1`
   text-align: left;
-  font-size: 1.7rem;
+  font-size: 2.5rem;
   justify-content: space-between;
   color: #2B674B;
   margin: 2;
-  font-family: "Impact";
-  font-weight: normal;
-
-  @media (max-width: 768px) {
-    font-size: 1.4rem;
-  }
+  font-family: "Impact", sans-serif;
+  margin-bottom: 0;
 `;
 
 export const Text = styled.div`
   align-items: left;
   text-align: left;
   font-size: 1.3rem;
+  font-family: 'Myriad Pro', sans-serif;
+  color: #333;
 
   @media (max-width: 768px) {
     font-size: 1rem;
@@ -177,12 +175,13 @@ export const Container = styled.div`
 // `;
 
 export const DivContainer = styled.div`
-  max-width: 80%;
-  margin: 4rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+`;
 
-  @media (max-width: 768px) {
-    margin-top: 4rem;
-  }
+export const Space = styled.div`
+  height: 50px;
 `;
 
 export const ImagemContainer = styled.div`
@@ -252,6 +251,8 @@ export const BotaoSobreposto = styled.button`
 export const TextoDescricao = styled.button`
   position: absolute;
   color: white;
+  font-family: 'Myriad Pro', sans-serif;
+  
   top: 40px;
   left: 35%;
   width: 45%;

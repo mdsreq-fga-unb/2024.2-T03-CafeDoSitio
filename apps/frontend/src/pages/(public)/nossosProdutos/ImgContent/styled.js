@@ -62,6 +62,8 @@ export const BotaoSobreposto = styled.button`
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
+  font-family: 'Myriad Pro', sans-serif;
+  color: #333;
 
   @media (max-width: 1045px) {
     top: 40%;
@@ -107,6 +109,9 @@ export const TextoDescricao = styled.button`
   border: none;
   text-align: left;
   background-color: initial;
+  font-family: 'Myriad Pro', sans-serif;
+  color: #333;
+  margin-top: 30px;
 
   @media (max-width: 1045px) {
     top: 20%;

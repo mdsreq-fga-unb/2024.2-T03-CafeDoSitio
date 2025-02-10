@@ -2,22 +2,26 @@ import styled from "styled-components";
 
 export const Title = styled.h1`
   text-align: left;
-  font-size: 1.7rem;
+  font-size: 2.5rem;
   justify-content: space-between;
   color: #2B674B;
   margin: 2;
   font-family: "Impact";
   font-weight: normal;
-
-  @media (max-width: 768px) {
-    font-size: 1.4rem;
-  }
+  margin-bottom: 0;
 `;
+
+export const Space = styled.div`
+  height: 40px;
+`;
+
 
 export const Text = styled.div`
   align-items: left;
   text-align: left;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
+  font-family: 'Myriad Pro', sans-serif;
+  color: #333;
 
   @media (max-width: 768px) {
     font-size: 1rem;
@@ -40,44 +44,29 @@ export const NossosProdutosdiv = styled.div`
 `;
 
 export const DivContainer = styled.div`
-  max-width: 80%;
-  margin: 4rem;
-
-  @media (max-width: 768px) {
-    margin-top: 4rem;
-  }
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
 `;
+
 export const DivContainerSelosABIC = styled.div`
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  max-width: 80%;
-  margin-left: 5rem;
-  margin-right: 0rem;
-  margin-top: -6rem;
   gap: 20px;
 
   @media (max-width: 768px) {
     flex-direction: column;
-    text-align: center;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    align-items: center;
     margin-top: 6rem; /* Ajusta a margem superior */
   }
 `;
 
 export const ImagemSelosABIC = styled.img`
-  width: 40%;
-  max-width: 300px;
+  width: 30%;
   height: auto;
-  margin-right: -8rem;
-  margin-left: -5rem;
-  margin-top: 7rem;
 
   @media (max-width: 768px) {
-    width: 60%;
-    margin-right: 0;
-    margin-left: 0;
+    width: 80%;
     margin-top: 2rem;
   }
 `;
@@ -86,37 +75,29 @@ export const TextSelosABIC = styled.p`
   width: 100%;
   align-items: left;
   text-align: left;
-  font-size: 1.5rem;
-  margin-top: -1rem;
+  font-size: 1.1rem;
+  font-family: 'Myriad Pro', sans-serif;
+  color: #333;
+  margin-top: 0;
+  font-size: 1.1rem;
 
   @media (max-width: 768px) {
-    font-size: 1.2rem;
-    margin-top: 4rem; /* Ajusta a margem superior para a descrição */
+    font-size: 1.1rem;
+    margin-top: 1rem; /* Ajusta a margem superior para a descrição */
   }
 `;
 
 export const DivContainerTitleSelosABIC = styled.div`
-  max-width: 80%;
-  margin-left: 0rem;
-  margin-right: 4rem;
-  margin-bottom: -3rem;
+  width: 60%;
+  display: visible;
 
   @media (max-width: 768px) {
-    margin-bottom: 1rem;
+    width: 100%;
   }
 `;
 
 export const DivContainerEncontreNossosProdutos = styled.div`
-  max-width: 100%;
-  margin-left: 5rem;
-  margin-right: 4rem;
   margin-top: 5rem;
-
-  @media (max-width: 768px) {
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-top: 3rem;
-  }
 `;
 
 export const SubtitleSelosABIC = styled.h1`
