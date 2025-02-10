@@ -32,11 +32,11 @@ EP04   | TM02            | Administração de Acesso | Eu como funcionário da F
 Código | Requisito Funcional Associado | Épico Associado | User Story
 ------ | ----------------------------- | --------------- | ----------------------------------
 US01   | RQF01 | EP01 | Eu como usuário devo ser capaz desenvolver um conteúdo, com permissão à formatação de texto avançados e inserição imagens para que seja publicado como blog no site da Família do Sítio.
-US02   | RQF02 | EP01 | **_À DESENVOLVER_ (Será construída na Sprint correspondente)**
-US04   | RQF04 | EP01 | **_À DESENVOLVER_ (Será construída na Sprint correspondente)**
-US05   | RQF05 | EP01 | **_À DESENVOLVER_ (Será construída na Sprint correspondente)**
-US06   | RQF06 | EP01 | **_À DESENVOLVER_ (Será construída na Sprint correspondente)**
-US08   | RQF08 | EP01 | **_À DESENVOLVER_ (Será construída na Sprint correspondente)**
+US02   | RQF02 | EP01 | Eu como usuário devo ser capaz de editar qualquer blog, antes e após a publicação, para que eu possa fazer a manutenção do seu conteúdo de forma rápida.
+US04   | RQF04 | EP01 | Eu como usuário devo ser capaz de atribuir uma categoria à um blog para que eu possa encontrá-lo com mais facilidade.
+US05   | RQF05 | EP01 | Eu como usuário devo ser capaz de filtrar os blog pela sua categoria para que eu possa visualizar apenas os conteúdos de meu interesse.
+US06   | RQF06 | EP01 | Eu como usuário devo ser capaz de pesquisar por títulos de blogs para que eu poossa encontrar os conteúdos com mais facilidade.
+US08   | RQF08 | EP01 | Eu como usuário devo ser capaz de conseguir acessar outros blogs recomendados após acessar o seu conteúdo detalhado, para que possa continuar acessando outros conteúdos da empresa.
 US11   | RQF11 | EP02 | Eu como usuário gostaria de criar uma disponilibidade de visita técnica em um calendário no sistema, para que o público externo, como consumidores, possam selecionar este dia para agendar sua visita à empresa.
 US14   | RQF14 | EP02 | Eu como usuário gostaria de cadastrar meu agendamento em um dos dias disponíveis de visitação, para realizar a visita técnica de forma presencial.
 US15   | RQF15 | EP03 | Eu como usuário, devo ser capaz de fazer uma reclamação, um elogio, uma dúvida, sugestão ou parcerias para que os colaboradores da Família do Sítio esteja ciente e eu receba um retorno sobre minha solicitação.
