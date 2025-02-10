@@ -28,9 +28,9 @@ _Fonte: Elaboração própria_
 <div class="tab">
   <button class="tablinks" onclick="openTab(event, 'Agendar')">Agendar serviço de saúde</button>
   <button class="tablinks" onclick="openTab(event, 'X')">Acessar histórico médico</button>
-  <button class="tablinks" onclick="openTab(event, 'Y')">Gerenciar Iniciativas de Saúde</button>
+  <button class="tablinks" onclick="openTab(event, 'Y')">Criar relatório da comunidade</button>
   <button class="tablinks" onclick="openTab(event, 'Registrar_visita_domiciliar')">Registrar visita domiciliar</button>
-  <button class="tablinks" onclick="openTab(event, 'A')">Caso 5</button>
+  <button class="tablinks" onclick="openTab(event, 'A')">Gerênciar iniciativas de saúde</button>
   <button class="tablinks" onclick="openTab(event, 'ResponderDuvidas')">Responder a dúvidas e reclamações dos usuários</button>
 </div>
 
@@ -244,22 +244,23 @@ _Fonte: Elaboração própria_
 
   <h3>4. Fluxo Básico (FB)</h3>
   <ol>
-  <li>O paciente seleciona a opção "Histórico Médico" no menu principal.</li>
-  <li>O sistema solicita os critérios de busca (período, tipo de registro, etc.).</li>
-  <p>Se não estiver autenticado, o sistema redireciona para a tela de login. [FE01 - Falha na autenticação]<p>
-  <li>O paciente insere os critérios desejados.</li>
-  <p>Se os critérios não forem preenchidos, o sistema exibe uma mensagem de erro e solicita a inserção dos dados. [FE03 - Informações obrigatórias não preenchidas]<p>
-  <p>O sistema valida os critérios de busca. [RN01 - Controle de acesso]<p>
-  <li>O sistema garante que apenas pacientes autenticados ou profissionais de saúde autorizados possam acessar os dados.</li>
-  <p>O sistema exibe a lista de registros correspondentes. [FA01 - Sem registros encontrados]</p>
-  <li>Se não houver registros para os critérios informados, o sistema exibe uma mensagem e permite a inserção de novos critérios.</li>
-  <li>O paciente seleciona um registro específico para visualizar os detalhes.</li>
-  <p>O sistema apresenta as informações do registro, incluindo data, diagnóstico, prescrições e anotações. [RN02 - Segurança e privacidade]<p>
-  <li>Os dados são protegidos conforme a LGPD, garantindo acesso apenas a usuários autorizados.</li>
-  <p>O paciente pode baixar ou imprimir o registro. [RN03 - Disponibilidade dos registros]<p>
-  <li>O sistema garante que os registros estejam acessíveis e armazenados de forma segura.</li>
-  <li>O caso de uso é encerrado.</li>
-</ol>
+      <li>1. O paciente seleciona a opção "Histórico Médico" no menu principal.</li>
+      <li>2. O sistema solicita os critérios de busca (período, tipo de registro, etc.).</li>
+      <li>Se não estiver autenticado, o sistema redireciona para a tela de login.>
+      <li>3. O sistema solicita os critérios de busca (período, tipo de registro, etc.).</li>
+      <li>4. O paciente insere os critérios desejados. [FE03 - Informações obrigatórias não preenchidas]</li>
+      <li>Se os critérios não forem preenchidos, o sistema exibe uma mensagem de erro e solicita a inserção dos dados.</li>
+      <li>5. O sistema valida os critérios de busca. [RN01 - Controle de acesso]</li>
+      <li>O sistema garante que apenas pacientes autenticados ou profissionais de saúde autorizados possam acessar os dados.</li>
+      <li>6. O sistema exibe a lista de registros correspondentes. [FA01 - Sem registros encontrados]</li>
+      <li>Se não houver registros para os critérios informados, o sistema exibe uma mensagem e permite a inserção de novos critérios.</li>
+      <li>7. O paciente seleciona um registro específico para visualizar os detalhes.</li>
+      <li>8. O sistema apresenta as informações do registro, incluindo data, diagnóstico, prescrições e anotações. [RN02 - Segurança e privacidade]</li>
+      <li>Os dados são protegidos conforme a LGPD, garantindo acesso apenas a usuários autorizados.</li>
+      <li>9. O paciente pode baixar ou imprimir o registro. [RN03 - Disponibilidade dos registros]</li>
+      <li>O sistema garante que os registros estejam acessíveis e armazenados de forma segura.</li>
+      <li>10. O caso de uso é encerrado.</li>
+  </ol>
 
   <h3>5. Fluxo Alternativo (FA)</h3>
   <h4>FA01 -  Sem registros encontrados</h4>
@@ -277,19 +278,12 @@ _Fonte: Elaboração própria_
   <h3>6. Fluxo de Exceção (FE)</h3>
   <h4>FE01 - Falha na autenticação</h4>
   <p>Se o paciente ou profissional não estiver autenticado, o sistema redireciona para a tela de login.</p>
-  <p>Regra de Negócio Associada: RN01 - Controle de acesso: Apenas pacientes autenticados podem acessar seu histórico médico, e profissionais de saúde precisam de permissão expressa do paciente.</p>
 
   <h4>FE02 - Erro no carregamento dos registros</h4>
   <p>Se houver falha na exibição do histórico, o sistema informa o erro e solicita uma nova tentativa.</p>
-  <p>Regra de Negócio Associada: RN03 - Disponibilidade dos registros: O sistema deve garantir que os registros estejam acessíveis e armazenados de forma segura.</p>
 
   <h4>FE03 - Informações obrigatórias não preenchidas</h4>
   <p>Se o paciente não preencher os critérios de busca, o sistema impede o avanço e solicita a inserção dos dados.</p>
-  <p>Regra de Negócio Associada: RN01 - Controle de acesso: Apenas pacientes autenticados podem acessar seu histórico médico. O sistema garante que as informações mínimas necessárias para o acesso ao histórico sejam fornecidas.</p>
-
-  <h4>FE04 - Violação de segurança ou acesso não autorizado</h4>
-  <p>Descrição: Se um usuário tentar acessar dados sem permissão ou realizar uma ação não autorizada, o sistema impede a ação e informa sobre a violação.</p>
-  <p>Regra de Negócio Associada: RN02 - Segurança e privacidade: Os dados do histórico devem ser protegidos conforme a LGPD, garantindo acesso apenas a usuários autorizados.</p>
 
   <h3>7. Regras de Negócio (RN)</h3>
 
@@ -450,10 +444,16 @@ _Fonte: Elaboração própria_
           <td>1.1</td>
       </tr>
       <tr>
+          <td>10/02/2025</td>
+          <td>Arthur Suares</td>
+          <td>Adicionando regras de negócio ao fluxo base</td>
+          <td>1.2</td>
+      </tr>
+      <tr>
           <td>09/02/2025</td>
           <td>Arthur Suares</td>
           <td>Revisão do documento</td>
-          <td>1.2</td>
+          <td>1.3</td>
       </tr>
   </table>
 
@@ -480,15 +480,14 @@ _Fonte: Elaboração própria_
       <ul>
         <li>Consultar pacientes</li>
         <li>Registrar novo paciente [FA01]</li>
-        <li>Emergência [FA02]</li>
+        <li>Emergência [FA02] [RN03]</li>
       </ul>
       <li>O sistema exibe uma lista de pacientes cadastrados ou permite a busca por nome, CPF ou endereço.</li>
       <li>O agente seleciona o paciente visitado.</li>
-      <li>O sistema exibe o prontuário digital do paciente, incluindo informações médicas anteriores.</li>
-      <li>O agente insere os dados da visita, como sintomas observados, condições do paciente e orientações fornecidas.</li>
-      <li>Se necessário, o agente pode registrar encaminhamentos para unidades de saúde ou solicitar exames complementares.</li>
+      <li>O sistema exibe o prontuário digital do paciente, incluindo informações médicas anteriores. [RN01]</li>
+      <li>O agente insere os dados da visita, como sintomas observados, condições do paciente e orientações fornecidas. [RN04]</li>
       <li>O agente confirma o registro da visita.</li>
-      <li>O sistema armazena os dados no prontuário digital do paciente e gera um relatório para acompanhamento.</li>
+      <li>O sistema armazena os dados no prontuário digital do paciente e gera um relatório para acompanhamento. [RN02]</li>
       <li>O agente recebe uma confirmação da operação bem-sucedida.</li>
       <li>O caso de uso se encerra</li>
   </ol>
@@ -528,7 +527,7 @@ _Fonte: Elaboração própria_
   <h4>RN03 - Registro de emergência</h4>
   <p>Caso uma emergência seja identificada, o agente deve registrar a ocorrência e acionar os serviços apropriados antes de concluir o registro da visita, conforme o fluxo alternativo [FA02].</p>
 
-  <h4>RN02 - O registro da visita deve conter informações obrigatórias</h4>
+  <h4>RN04 - O registro da visita deve conter informações obrigatórias</h4>
   <p>Para que o registro seja concluído, os campos obrigatórios (como sintomas observados, condições do paciente e orientações fornecidas) devem estar preenchidos.</p>
 
   <h3>8. Pós-Condições</h3>
@@ -554,134 +553,140 @@ _Fonte: Elaboração própria_
   </ol>
 </div>
 
-
-
-
-
 <div id="A" class="tabcontent">
-<h2>UC - Realizar Pré-Agendamento</h2>
+<h2>UC - Gerenciar iniciativas de saúde</h2>
 
   <h3>Especificação de Caso de Uso</h3>
   <h3>Histórico de Revisão</h3>
   <table>
-      <tr>
+    <tr>
           <th>Data</th>
           <th>Autor</th>
           <th>Modificações</th>
           <th>Versão</th>
-      </tr>
-      <tr>
-          <td>24/04/2022</td>
-          <td>Laís Portela</td>
+    </tr>
+    <tr>
+          <td>10/02/2025</td>
+          <td>João Pedro</td>
           <td>Adicionando caso de uso no documento</td>
           <td>1.0</td>
-      </tr>
-      <tr>
-          <td>26/04/2022</td>
-          <td>Laís Portela</td>
-          <td>Revisão do documento</td>
-          <td>1.1</td>
-      </tr>
-      <tr>
-          <td>26/04/2022</td>
-          <td>Laís Portela</td>
-          <td>Alterações no fluxo básico e outros</td>
-          <td>1.2</td>
-      </tr>
-      <tr>
-          <td>26/04/2022</td>
-          <td>Laís Portela</td>
-          <td>Adição de regra de negócio</td>
-          <td>1.3</td>
-      </tr>
+    </tr>
+    <tr>
+        <td>10/02/2025</td>
+        <td>João Pedro</td>
+        <td>Correções de erros gramaticais</td>
+        <td>1.1</td>
+    </tr>
+
   </table>
 
   <h3>1. Breve Descrição</h3>
-  <p>Este caso de uso é utilizado pelos clientes para fazer o pré-agendamento do animal, bem como escolher os serviços prestados e meios de pagamento.</p>
+  <p>Este caso de uso permite que as organizações parceiras registrem, divulguem e monitorem iniciativas de saúde na plataforma ConnectCare.</p>
 
   <h3>2. Atores</h3>
   <ul>
-      <li>2.1 Cliente que deseja hospedar o seu animal em um hotel para pets.</li>
-      <li>2.2 Funcionário que trabalha no hotel para animais e deseja aprovar agendamentos e definir serviços de forma virtual.</li>
+      <li>2.1 Organizações Parceiras (ONGs, hospitais e instituições governamentais)</li>
   </ul>
 
   <h3>3. Condições Prévias</h3>
   <ul>
-      <li>3.1 Cliente fez login.</li>
-      <li>3.2 Cliente cadastrou pelo menos um animal.</li>
+      <li>3.1 A organização parceira deve estar cadastrada e autenticada na plataforma.</li>
   </ul>
 
   <h3>4. Fluxo Básico (FB)</h3>
   <ol>
-      <li>O cliente seleciona a opção "hospedar pet".</li>
-      <li>O cliente seleciona o animal desejado.</li>
-      <li>O cliente digita as datas desejadas (RN04).</li>
-      <li>O sistema faz a validação da data (FE01, FE02, FE03, RN01).</li>
-      <li>O sistema mostra o valor da hospedagem (RN01).</li>
-      <li>O sistema solicita informações complementares do animal.</li>
-      <li>O cliente confirma o pré-agendamento (RN02).</li>
-      <li>O sistema verifica se o cliente deseja escolher algum serviço ou definir a forma de pagamento (FA01, FA02, FA03).</li>
+      <li>A organização parceira acessa a plataforma ConnectCare.</li>
+      <li>A organização seleciona a opção "Gerenciar Iniciativas de Saúde".</li>
+      <li>O sistema apresenta as seguintes opções:<br>
+        - Cadastrar<br>
+        - Visualizar [FA01]<br>
+        - Editar [FA02]<br>
+        - Excluir [FA03]<br>
+        - Monitorar [FA04]</li>
+      <li>A organização seleciona a opção "Cadastrar".</li>
+      <li>A organização preenche os detalhes de uma nova iniciativa, incluindo: </br>
+       - Tipo de iniciativa [RN01] [FE01];</br>
+       - Público-alvo [RN01] [FE01]; </br>
+       - Localização;</br>
+       - Data inicial e final da iniciativa. [RN02] [RN03] [RN04] [FE02]</br>
+      </li>
+      <li>O sistema valida as informações e registra a iniciativa.</li>
+      <li>O sistema redireciona a organização para a página da iniciativa.</li>
+      <li>O caso de uso é encerrado.</li>
   </ol>
-
+    
   <h3>5. Fluxo Alternativo (FA)</h3>
-  <h4>FA01 - Selecionar Serviços</h4>
+  <h4>FA01 - Editar iniciativa</h4>
+  <p>No passo 4 do fluxo básico, a organização seleciona a opção "Editar"</p>
   <ol>
-      <li>O cliente seleciona "Serviços".</li>
-      <li>O cliente escolhe quais serviços deseja.</li>
-      <li>O cliente salva as informações (RN03).</li>
-      <li>O sistema emite uma mensagem de sucesso.</li>
+      <li>A organização seleciona a iniciativa em que deseja realizar alguma alteração.</li>
+      <li>A organização edita os detalhes registrados na criação ou na última edição da iniciativa selecionada.[RN01] [RN02] [RN03] [RN04] [FE01]</li>
+      <li>O sistema valida as informações e registra a iniciativa.</li>
+      <li>O sistema redireciona a organização para a página da iniciativa.</li>
+      <li>O caso de uso é encerrado.</li>
   </ol>
 
-  <h4>FA02 - Selecionar Pagamento</h4>
+  <h4>FA02 - Excluir iniciativa </h4>
+  <p>No passo 4 do fluxo básico, a organização seleciona a opção "Excluir"</p>
   <ol>
-      <li>O cliente seleciona "Pagamento".</li>
-      <li>O cliente escolhe qual será o seu meio de pagamento.</li>
-      <li>O sistema mostra o valor total.</li>
-      <li>O cliente salva sua opção (RN03).</li>
-      <li>O sistema emite uma mensagem de sucesso.</li>
+      <li>A organização seleciona a iniciativa que deseja excluir.</li>
+      <li>A organização escreve o nome da iniciativa em um campo de texto dedicado à confirmação da exclusão da iniciativa. </li>
+      <li>A organização recebe uma confirmação visual de que a iniciativa foi excluída com sucesso</li>
+      <li>O caso de uso é encerrado</li>
   </ol>
-
-  <h4>FA03 - Sair do Pré-Agendamento</h4>
-  <p>O cliente decide finalizar o pré-agendamento, após a conclusão do fluxo básico.</p>
+  
+  <h4>FA03 - Visualizar iniciativa </h4>
+  <p>No passo 4 do fluxo básico, a organização seleciona a opção "Visualizar"</p>
+  <ol>
+      <li>A organização seleciona a iniciativa que deseja visualizar.</li>
+      <li>O sistema redireciona a organização para a página da iniciativa.</li>
+      <li>O caso de uso é encerrado.</li>
+  </ol>
+  <h4>FA04 - Monitorar iniciativa </h4>
+  <p>No passo 4 do fluxo básico, a organização seleciona a opção "Monitorar"</p>
+  <ol>
+      <li>A organização seleciona a iniciativa que deseja visualizar as estatísticas.</li>
+      <li>O sistema redireciona a organização para uma página com o relatório da iniciativa, onde é possível visualizar a quantidade de participantes e as avaliaçoes de cada participante.</li>
+      <li>O caso de uso é encerrado.</li>
+  </ol>
 
   <h3>6. Fluxo de Exceção (FE)</h3>
-  <h4>FE01 - Data de entrada maior que a de saída</h4>
-  <p>"A data de entrada deve ser maior que a de saída". O caso de uso retorna ao passo 4.3 do FB.</p>
+  <h4>FE01 - Quantidade inválida de caracteres </h4>
+  <p>Nos pontos 5 do fluxo básico e 2 do fluxo alternativo 01, se a quantidade de caracteres não respeitar a RN01, o sistema informa que a quantidade de caracteres é inválida e retorna ao ponto 4 e 1, dependendo de onde foi chamado.</p>
 
-  <h4>FE02 - Data anterior à atual</h4>
-  <p>"As datas devem ser maiores que a de hoje". O caso de uso retorna ao passo 4.3 do FB.</p>
-
-  <h4>FE03 - Data com mais de um ano à frente</h4>
-  <p>"As datas não devem ser de mais de um ano". O caso de uso retorna ao passo 4.3 do FB.</p>
-
-  <h4>FE04 - Cliente não digitou as informações necessárias</h4>
-  <p>O sistema impedirá que o cliente avance para o próximo passo caso as informações estejam incompletas.</p>
+  <h4>FE02 - Data de iniciativa inválida</h4>
+  <p>Nos pontos 5 do fluxo básico e 2 do fluxo alternativo 01, se as datas inicial e final da iniciativa não respeitarem a RN02, RN03 e RN04, o sistema informa que as datas estão inválidas e retorna ao ponto 4 e 1, dependendo de onde foi chamado.</p>
 
   <h3>7. Regras de Negócio (RN)</h3>
-  <h4>RN01 - Valor do Pré-Agendamento</h4>
-  <p>O valor da hospedagem depende do peso do animal e dos dias agendados. Para que o valor seja mostrado, os campos "Pet", "Entrada" e "Saída" devem estar preenchidos.</p>
+  <h4>RN01 - Quantidade de caracteres </h4>
+  <p>Tanto tipo de iniciativa quanto público alvo devem conter entre 5 e 100 caracteres.</p>
 
-  <h4>RN02 - Validação dos Dados</h4>
-  <p>Para que o sistema realize o pré-agendamento, é necessário que os passos 4.2 e 4.3 estejam preenchidos corretamente, e que o sistema valide o passo 4.4.</p>
+  <h4>RN02 - Data inicial no cadastro de uma iniciativa</h4>
+  <p>A data inicial da iniciativa não deve ser anterior ao dia do cadastro.</p>
 
-  <h4>RN03 - Campo Preenchido</h4>
-  <p>Para que o sistema confirme as informações, elas não devem ser nulas.</p>
+  <h4>RN03 - Data inicial na atualização de uma iniciativa</h4>
+  <p>A data inicial da iniciativa só pode ser atualizada se a data do dia atual for anterior a data de início da iniciativa.</p>
 
-  <h4>RN04 - Validação das Datas</h4>
-  <p>As datas preenchidas devem seguir os seguintes critérios:</p>
-  <ul>
-      <li>Ser posteriores ou iguais ao dia atual.</li>
-      <li>Ser de até um ano após o dia atual.</li>
-      <li>A data de entrada não pode ser posterior à data de saída.</li>
-  </ul>
+  <h4>RN04 - Data final no cadastro e atualização de uma iniciativa</h4>
+  <p>A data inicial da iniciativa deve ser anterior à data final em pelo menos uma hora.</p>
 
   <h3>8. Pós-Condições</h3>
-  <p>Pós-Condições</p>
+  <ul>
+    <li>Ao final deste caso de uso, a iniciativa cadastrada/atualizada deve ser divulgada para a comunidade.</li>
+  </ul>
 
   <h3>9. Ponto de Extensão</h3>
-  <p>Ponto de Extensão</p>
+    <ol>
+    <li>PE01 - Divulgar iniciativa de saúde 
+    <p>Local do ponto de extensão: após o cadastro da iniciativa</p> 
+    <p>Descrição: Extensão em "Gerenciar Iniciativas de Saúde" para permitir a promoção das iniciativas por meio de redes sociais e notificações personalizadas.</p> 
+    </li>
+    <li>PE02 - Melhorar impacto de ações de saúde 
+    <p>Local do ponto de extensão: após a participação dos participantes na iniciativa</p> 
+    <p>Descrição: Extensão para incluir a geração de métricas detalhadas sobre o impacto da iniciativa, como número de atendimentos realizados e feedback dos participantes.</p> 
+    </li>
+    </ol>
 </div>
-
 
 <div id="ResponderDuvidas" class="tabcontent">
 
@@ -728,9 +733,9 @@ _Fonte: Elaboração própria_
   <h3>4. Fluxo Básico (FB)</h3>
   Esse caso de uso é iniciado quando um usuário externo registra uma dúvida ou reclamação.
   <ol>
-      <li>O usuário externo acessa a plataforma e registra uma dúvida ou reclamação.</li>
+      <li>O usuário externo acessa a plataforma e registra uma dúvida ou reclamação.[FE01][RN02]</li>
       <li>O sistema armazena a solicitação e a disponibiliza para o Administrador do Sistema.</li>
-      <li>O Administrador acessa a interface de administração e visualiza as dúvidas e reclamações pendentes.</li>
+      <li>O Administrador acessa a interface de administração e visualiza as dúvidas e reclamações pendentes.[FE03][RN03]</li>
       <li>O Administrador escolhe uma das seguintes ações:
         <br> - Responder a solicitação [FA01];
         <br> - Encaminhar para outro setor [FA02];
@@ -746,7 +751,7 @@ _Fonte: Elaboração própria_
   <ol>
       <li>O Administrador seleciona uma solicitação.</li>
       <li>O sistema exibe os detalhes da solicitação (tipo, data, usuário e descrição).</li>
-      <li>O Administrador insere e confirma a resposta. [FE01][FE02]</li>
+      <li>O Administrador insere e confirma a resposta. [FE01][FE02][RN02]</li>
       <li>O sistema registra a resposta e notifica o usuário externo.</li>
   </ol>
 
@@ -755,7 +760,7 @@ _Fonte: Elaboração própria_
       <li>O Administrador escolhe encaminhar a solicitação.</li>
       <li>O sistema exibe a lista de setores disponíveis.</li>
       <li>O Administrador seleciona um setor e adiciona um comentário opcional.</li>
-      <li>O Administrador confirma o encaminhamento. [FE03]</li>
+      <li>O Administrador confirma o encaminhamento. [FE03][RN03]</li>
       <li>O sistema transfere a solicitação e notifica o setor responsável.</li>
   </ol>
 
