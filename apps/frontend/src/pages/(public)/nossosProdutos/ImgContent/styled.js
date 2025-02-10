@@ -49,7 +49,7 @@ export const ImagemContainer = styled.div`
 
 export const BotaoSobreposto = styled.button`
   position: absolute;
-  top: 47%; /* Posiciona no meio vertical */
+  top: 48%; /* Posiciona no meio vertical */
   left: 43%; /* Posiciona no meio horizontal */
   transform: translate(-50%, 110%); /* Corrige para centralizar exatamente */
   background-color: white;
@@ -64,16 +64,15 @@ export const BotaoSobreposto = styled.button`
   transition: 0.3s;
 
   @media (max-width: 1045px) {
-    top: 20%;
+    top: 40%;
   }
 
   @media (max-width: 818px) {
-    top: 10%;
+    top: 28%;
   }
 
   @media (max-width: 684px) {
     margin-top: 3.5vh;
-    top: 1.5vh;
     height: 20px;
     width: 29vw;
   }
@@ -100,7 +99,7 @@ export const BotaoSobreposto = styled.button`
 
 export const TextoDescricao = styled.button`
   position: absolute;
-  top: 50px;
+  top: 7vh;
   left: 27%;
   width: 45%;
   font-size: 1.5vw;
@@ -109,11 +108,18 @@ export const TextoDescricao = styled.button`
   text-align: left;
   background-color: initial;
 
-  @media (max-width: 768px) {
-    left: 22%;
-    top: 20px;
+  @media (max-width: 1045px) {
+    top: 20%;
   }
 
+  @media (max-width: 768px) {
+    left: 22%;
+    margin-top: 1.5vh;
+  }
+
+  @media (max-width: 508px) {    
+    margin-top: 1vh;
+  }
 `;
 
 export const Rotate = styled.svg`
