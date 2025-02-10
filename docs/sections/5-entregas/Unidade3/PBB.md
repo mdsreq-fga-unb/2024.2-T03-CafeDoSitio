@@ -198,7 +198,7 @@ US27       | Realizar a edição de um feedback                                 
 #### CENÁRIO 1: Download de relatório PDF com sucesso
 **DADO QUE** estou autenticada como Diretora de Operações no sistema <br>
 **QUANDO** eu clicar no botão “Gerar Relatório PDF” no dashboard <br>
-**ENTÃO** o sistema deve gerar o relatório PDF com os dados operacionais mais recentes <br>
+**ENTÃO** o sistema deve gerar o relatório PDF com os dados cruzado em gráficos de linhas, barras e campos textuais, mais recentes <br>
 **E** o download deve ser iniciado automaticamente <br>
 **E** deve ser exibida a mensagem “Relatório gerado com sucesso.”
 
@@ -227,17 +227,17 @@ US27       | Realizar a edição de um feedback                                 
 #### CENÁRIO 2: Erro ao alterar data do agendamento para o passado
 **DADO QUE** sou um Atendente autenticado no sistema <br>
 **E** existe um agendamento previamente cadastrado com id "124" <br>
-**QUANDO** eu tento alterar a data do agendamento para um dia anterior à data atual <br>
+**QUANDO** eu tento alterar a data do agendamento para 1 dia antes em relação à data de hoje <br>
 **ENTÃO** o sistema deve exibir a mensagem de erro “A data do agendamento não pode ser anterior ao dia atual.”
 
 <br>
 
 #### CENÁRIO 3: Notificações enviadas após alterações
 **DADO QUE** sou um Atendente autenticado no sistema
-**E** alterei a data e o técnico de um agendamento previamente cadastrado com id "125" <br>
+**E** alterei a data agendada para o atendimento e o técnico alocado para o atendimento de um agendamento previamente cadastrado com id "125" <br>
 **QUANDO** eu salvar as alterações <br>
-**ENTÃO** o sistema deve notificar o técnico alocado sobre a mudança na data <br>
-**E** deve notificar o cliente sobre a mudança na data e no técnico.
+**ENTÃO** o sistema deve notificar o novo técnico alocado e o técnico desalocado para o atendimento sobre a mudança na data agendada e técnico alocado alterado<br>
+**E** deve notificar o cliente sobre a mudança na data de atendimento e no técnico alocado para o atendimento.
 
 ### > US22: Eu, como Atendente, posso pesquisar por histórico de serviços do cliente para achar dados de clientes com mais agilidade.
 
