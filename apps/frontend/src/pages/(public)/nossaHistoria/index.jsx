@@ -149,7 +149,6 @@ export default function NossaHistoria() {
                 </DiferencialSection>
             </ThirdTextSection>
 
-
             <DivContainer style={{ margin: "4rem auto", textAlign: "justify" }}>
                 <Text>
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
