@@ -420,7 +420,7 @@ _Fonte: Elaboração própria_
 
 
 <div id="Registrar_visita_domiciliar" class="tabcontent">
-<h2>UC - Realizar Pré-Agendamento</h2>
+<h2>UC - Realizar visita domiciliar</h2>
 
   <h3>Especificação de Caso de Uso</h3>
   <h3>Histórico de Revisão</h3>
@@ -450,7 +450,7 @@ _Fonte: Elaboração própria_
           <td>1.2</td>
       </tr>
       <tr>
-          <td>09/02/2025</td>
+          <td>10/02/2025</td>
           <td>Arthur Suares</td>
           <td>Revisão do documento</td>
           <td>1.3</td>
