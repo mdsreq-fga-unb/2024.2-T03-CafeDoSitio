@@ -76,7 +76,7 @@ const createSac = async (req, res) => {
     res.status(200).send({ message: 'Dados salvos com sucesso!', sac: sac });
 
   } catch (err) {
-    res.status(500).send({ message: err.message })
+    res.status(500).send({ message: 'Ocorreu um erro ao enviar o email =>', err: err.message })
   }
 }
 
