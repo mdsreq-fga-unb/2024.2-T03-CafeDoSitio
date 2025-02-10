@@ -6,6 +6,7 @@ import { FaCartShopping, FaXTwitter } from "react-icons/fa6";
 import { MdOutlineMenu, MdClose } from "react-icons/md";
 import RedButton from "../RedButton";
 import { ROUTES } from "../../routes/RoutesConstants";
+import FamiliaDoSitioBorda from "../../assets/FamiliaDoSitioBorda.png";
 
 function Header({pagina}) {
   const location = useLocation();
@@ -17,7 +18,7 @@ function Header({pagina}) {
     <NavBar>
       <NavArea>
         <div className="area1">
-          <a href="/"><LogoImg src="./favicon.png"/></a>
+          <a href="/"><LogoImg src={FamiliaDoSitioBorda} /></a>
           <label className="page-name">{pagina}</label>
         </div>
         
