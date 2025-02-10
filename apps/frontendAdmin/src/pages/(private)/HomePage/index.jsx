@@ -2,7 +2,7 @@ import React from "react";
 import { ConfigsZone, InfoZone, OptionGroup, Space } from "./styled";
 import { jwtDecode } from "jwt-decode";
 import { useNavigate } from "react-router-dom";
-import { FaCalendar, FaUserCog, FaBookOpen } from "react-icons/fa";
+import { FaCalendar, FaUserCog, FaBookOpen, FaQuestionCircle } from "react-icons/fa";
 import { BiSolidMegaphone } from "react-icons/bi";
 import Paginacao from "../../../components/Paginacao";
 import Card from "../../../components/Card";
@@ -26,6 +26,9 @@ const HomePage = () => {
 
   const navigateToBlog = () => {
     navigate(ROUTES.BLOG);
+  };
+  const navigateToFAQ = () => {
+    navigate(ROUTES.FAQ);
   };
 
   const token = sessionStorage.getItem("authToken");
@@ -59,6 +62,8 @@ const HomePage = () => {
           
           <Card onClick={navigateToSac} title={"Visualizar Sacs"} description={"Veja os Sacs que já foram feitos. Seja todos ao mesmo tempo ou filtrados por assunto."}><BiSolidMegaphone className="icon"/></Card>
 
+          <Card onClick={navigateToFAQ} title={"Gerenciar FAQ"} description={"Gerencie as perguntas e respostas que ficarão visíveis na página de FAQ do site institucional."}><FaQuestionCircle className="icon"/></Card>
+          
           { sector === "Administrator" || sector === "System-Administrator" ? (
             <Card onClick={navigateToAdminAccounts} title={"Gerenciar Contas"} description={"Adicione ou exclua contas que terão acesso à Central de Administração do Site Institucional da Família do Sítio."}><FaUserCog className="icon"/></Card>
           ) : null }

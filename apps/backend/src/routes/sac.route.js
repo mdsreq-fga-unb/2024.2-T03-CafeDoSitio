@@ -1,6 +1,7 @@
 import express from 'express';
 import upload from "../middlewares/sac.middleware.js"
 const sacRouter = express.Router();
+import { authMiddleware } from '../middlewares/auth.middleware.js';
 
 import sacController from '../controllers/sac.controller.js';
 
@@ -19,9 +20,9 @@ sacRouter.post('/createSac', upload.single("arquivo"),
     }
   }, sacController.createSac);
 
-sacRouter.get('/', sacController.findAllSac);
-sacRouter.get('/:assunto', sacController.findAssuntoSac);
-sacRouter.delete('/:id', sacController.deleteSacById);
-sacRouter.patch('/:id', sacController.updateSacStatus)
+sacRouter.get('/', authMiddleware, sacController.findAllSac);
+sacRouter.get('/:assunto', authMiddleware, sacController.findAssuntoSac);
+sacRouter.delete('/:id', authMiddleware, sacController.deleteSacById);
+sacRouter.patch('/:id', authMiddleware, sacController.updateSacStatus)
 
 export default sacRouter;

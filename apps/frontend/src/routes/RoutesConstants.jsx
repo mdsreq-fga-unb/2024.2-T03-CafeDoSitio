@@ -6,5 +6,7 @@ export const ROUTES = {
   BLOG: "/blog",
   BLOG_VIEW: "/blog/:slug",
   VISITA: "/visita",
-  SITIO_VERDE: "/sitio-verde"
+  SITIO_VERDE: "/sitio-verde",
+  POLITICAS: "/politicas",
+  FAQ: "/faq"
 };

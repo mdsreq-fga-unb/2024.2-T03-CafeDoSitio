@@ -5,6 +5,7 @@ import userRouter from "./user.route.js";
 import sacRouter from "./sac.route.js";
 import blogRouter from "./blog.route.js";
 import blogFilterRouter from "./blogFilter.route.js";
+import faqRouter from "./faq.route.js";
 
 const router = Router();
 
@@ -13,6 +14,6 @@ router.use('/user', cors(), userRouter);
 router.use('/sac', cors(), sacRouter);
 router.use('/blog', cors(), blogRouter);
 router.use('/blogFilter', cors(), blogFilterRouter);
-
+router.use('/faq', cors(), faqRouter);
 
 export default router;

@@ -7,4 +7,5 @@ export const ROUTES = {
   ADMIN_ACCOUNTS: "/admin/accounts",
   FIRST_ACESS: "/firstAcess",
   BLOG: "/admin/blog",
+  FAQ: "/admin/faq"
 };

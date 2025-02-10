@@ -1,8 +1,21 @@
 import React from "react";
 import { DivFooter, CopyRigthSection, Conteudo, Divisao1, ParteSuperior, Divisao2, DivisaoTelefone } from "./styled";
 import { FaPhoneAlt } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import { ROUTES } from "../../routes/RoutesConstants";
 
 function Footer() {
+
+  const navigate = useNavigate();
+
+  const handleChangePageToPoliticas = () => {
+    navigate(ROUTES.POLITICAS);
+  };
+
+  const handleChangePageToFAQ = () => {
+    navigate(ROUTES.FAQ);
+  }
+
   return (
     <DivFooter>
       <Conteudo>
@@ -45,7 +58,8 @@ function Footer() {
             
             <p>atendimento@familiadositio.com.br</p>
             <p>Segunda a quinta das 08h às 18h e <br/> Sexta das 08h às 17h</p>
-            <a>Perguntas Frequentes</a>
+            <a onClick={handleChangePageToFAQ}>Perguntas Frequentes</a>
+            <a onClick={handleChangePageToPoliticas}>Políticas de Privacidade</a>
           </Divisao2>
 
         </ParteSuperior>
