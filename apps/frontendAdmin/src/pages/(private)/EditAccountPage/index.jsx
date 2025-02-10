@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Paginacao from "../../../components/Paginacao";
 import { Link } from "react-router-dom";
-import { Space, InfoZone, Conteudo, Informacao, Cards, InputZone, Input, InputContainer, EyeIcon } from "./styled";
+import { Space, InfoZone, Conteudo, Informacao, Cards, InputZone, Input, InputContainer, EyeIcon, Juncao } from "./styled";
 import { ROUTES } from "../../../routes/RoutesConstants";
 import { CgProfile } from "react-icons/cg";
 import { toast, ToastContainer } from "react-toastify";
@@ -26,6 +26,9 @@ const EditAccountPage = () => {
   const [isVisiblePopup, setIsVisiblePopup] = useState(false);
   const [isVisiblePopup1, setIsVisiblePopup1] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const [showPassword1, setShowPassword1] = useState(false);
+  const [showPassword2, setShowPassword2] = useState(false);
+  const [showPassword3, setShowPassword3] = useState(false);
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
@@ -37,6 +40,15 @@ const EditAccountPage = () => {
   const toggleShowPassword = () => {
     setShowPassword(!showPassword); 
   };
+  const toggleShowPassword1 = () => {
+    setShowPassword1(!showPassword); 
+  };
+  const toggleShowPassword2 = () => {
+    setShowPassword2(!showPassword); 
+  };
+  const toggleShowPassword3 = () => {
+    setShowPassword3(!showPassword); 
+  };
   const handleChangePassword = (e) => {
     setPassword(e.target.value);
   };
@@ -47,8 +59,11 @@ const EditAccountPage = () => {
     sessionStorage.removeItem("authToken");
     navigate(ROUTES.LOGIN);
   };
+  const handleNewPassword = (e) => {
+    setNewPassword(e.target.value);
+  };
 
-  const handleUpdateName = async () => {
+  const handleUpdate = async () => {
     if (newName === "" && isVisiblePopup) 
       return toast.error("Digite um novo nome de usuário!");
     if ((newPassword === "" && isVisiblePopup1) || (confirmPassword === "" && isVisiblePopup1))
@@ -68,7 +83,7 @@ const EditAccountPage = () => {
     try {
       const { sub } = jwtDecode(sessionStorage.getItem("authToken"));
       const response = await findByIdUserAndUpdatePassword(sub, password, updateBody);
-      toast.success("Nome de usuário alterado com sucesso!");
+      toast.success("Alteração realizada com sucesso!");
       sessionStorage.setItem("authToken", response.data.token);
       fetchUser();
       closePopup();
@@ -80,7 +95,7 @@ const EditAccountPage = () => {
       console.log(err);
       if (err.status === 403)
         return toast.error("Senha incorreta, tente novamente!");
-      toast.error("Erro ao alterar o nome de usuário, tente novamente mais tarde!");
+      toast.error("Erro ao tentar fazer alteração, tente novamente mais tarde!");
     }
   };
 
@@ -176,7 +191,62 @@ const EditAccountPage = () => {
             </InputContainer>
           </InputZone>
         
-          <Button text={"Confirmar"} onClick={handleUpdateName}/>
+          <Button text={"Confirmar"} onClick={handleUpdate}/>
+        </Popup>
+
+        <Popup isOpen={isVisiblePopup1} onClose={closePopup1}>
+          <div>
+            <h3>Alteração de Senha</h3>
+          </div>
+
+          <Juncao>
+            <InputZone>
+              <label>Digite uma nova senha para sua conta:</label>
+              <InputContainer>
+                      <Input
+                        type={showPassword1 ? "text" : "password"}
+                        placeholder="Nova Senha"
+                        value={newPassword}
+                        onChange={handleNewPassword}
+                      />
+                    <EyeIcon onClick={toggleShowPassword1}>
+                  {showPassword1 ? <FaEyeSlash /> : <FaEye />}
+                </EyeIcon>
+              </InputContainer>
+            </InputZone>
+
+            <InputZone>
+              <label>Confirme sua nova senha:</label>
+              <InputContainer>
+                      <Input
+                        type={showPassword2 ? "text" : "password"}
+                        placeholder="Confirme a nova senha"
+                        value={confirmPassword}
+                        onChange={handleChangeConfirmPassword}
+                      />
+                    <EyeIcon onClick={toggleShowPassword2}>
+                  {showPassword2 ? <FaEyeSlash /> : <FaEye />}
+                </EyeIcon>
+              </InputContainer>
+            </InputZone>
+          </Juncao>
+
+          <InputZone>
+            <label>Para confirmar sua alteração, insira sua senha antiga:</label>
+            <InputContainer>
+                    <Input
+                      type={showPassword3 ? "text" : "password"}
+                      placeholder="Senha Antiga"
+                      value={password}
+                      onChange={handleChangePassword}
+                    />
+                  <EyeIcon onClick={toggleShowPassword3}>
+                {showPassword3 ? <FaEyeSlash /> : <FaEye />}
+              </EyeIcon>
+            </InputContainer>
+          </InputZone>
+        
+          <Button text={"Confirmar"} onClick={handleUpdate}/>
         </Popup>
 
     </div>

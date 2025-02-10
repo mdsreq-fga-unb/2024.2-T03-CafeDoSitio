@@ -153,3 +153,10 @@ export const Input = styled.input`
     box-shadow: 0 0 5px green;
   }
 `;
+
+export const Juncao = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 20px;
+`;
