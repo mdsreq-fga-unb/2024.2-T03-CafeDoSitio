@@ -244,14 +244,22 @@ _Fonte: Elaboração própria_
 
   <h3>4. Fluxo Básico (FB)</h3>
   <ol>
-      <li>O paciente seleciona a opção "Histórico Médico" no menu principal.</li>
-      <li>O sistema solicita os critérios de busca (período, tipo de registro, etc.).</li>
-      <li>O paciente insere os critérios desejados.</li>
-      <li>O sistema exibe a lista de registros correspondentes.</li>
-      <li>O paciente seleciona um registro específico para visualizar os detalhes.</li>
-      <li>O sistema apresenta as informações do registro, incluindo data, diagnóstico, prescrições e anotações.</li>
-      <li>O paciente pode baixar ou imprimir o registro.</li>
-      <li>O caso de uso é encerrado.</li>
+      <li>1. O paciente seleciona a opção "Histórico Médico" no menu principal.</li>
+      <li>2. O sistema solicita os critérios de busca (período, tipo de registro, etc.).</li>
+      <li>Se não estiver autenticado, o sistema redireciona para a tela de login.>
+      <li>3. O sistema solicita os critérios de busca (período, tipo de registro, etc.).</li>
+      <li>4. O paciente insere os critérios desejados. [FE03 - Informações obrigatórias não preenchidas]</li>
+      <li>Se os critérios não forem preenchidos, o sistema exibe uma mensagem de erro e solicita a inserção dos dados.</li>
+      <li>5. O sistema valida os critérios de busca. [RN01 - Controle de acesso]</li>
+      <li>O sistema garante que apenas pacientes autenticados ou profissionais de saúde autorizados possam acessar os dados.</li>
+      <li>6. O sistema exibe a lista de registros correspondentes. [FA01 - Sem registros encontrados]</li>
+      <li>Se não houver registros para os critérios informados, o sistema exibe uma mensagem e permite a inserção de novos critérios.</li>
+      <li>7. O paciente seleciona um registro específico para visualizar os detalhes.</li>
+      <li>8. O sistema apresenta as informações do registro, incluindo data, diagnóstico, prescrições e anotações. [RN02 - Segurança e privacidade]</li>
+      <li>Os dados são protegidos conforme a LGPD, garantindo acesso apenas a usuários autorizados.</li>
+      <li>9. O paciente pode baixar ou imprimir o registro. [RN03 - Disponibilidade dos registros]</li>
+      <li>O sistema garante que os registros estejam acessíveis e armazenados de forma segura.</li>
+      <li>10. O caso de uso é encerrado.</li>
   </ol>
 
   <h3>5. Fluxo Alternativo (FA)</h3>
@@ -273,6 +281,9 @@ _Fonte: Elaboração própria_
 
   <h4>FE02 - Erro no carregamento dos registros</h4>
   <p>Se houver falha na exibição do histórico, o sistema informa o erro e solicita uma nova tentativa.</p>
+
+  <h4>FE03 - Informações obrigatórias não preenchidas</h4>
+  <p>Se o paciente não preencher os critérios de busca, o sistema impede o avanço e solicita a inserção dos dados.</p>
 
   <h3>7. Regras de Negócio (RN)</h3>
 
