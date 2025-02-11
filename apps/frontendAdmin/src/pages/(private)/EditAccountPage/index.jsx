@@ -119,7 +119,7 @@ const EditAccountPage = () => {
   return (
     <div>
       <Paginacao>
-        <Link className="page" to={ROUTES.HOME}>Família do Sítio</Link>
+        <Link className="page" to={ROUTES.HOME}>Central de Administração</Link>
         {" > "}
         <span>Edição da Conta</span>
       </Paginacao>
