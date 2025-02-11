@@ -13,7 +13,8 @@ const app = express();
 
 const allowedOrigins = [
   'http://localhost:3000',
-  'http://localhost:3001'
+  'http://localhost:3001',
+  'https://cafedositio.netlify.app'
 ];
 
 const corsOptionsDelegate = function(req, callback) {
