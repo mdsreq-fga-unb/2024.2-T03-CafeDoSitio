@@ -477,7 +477,6 @@ _Fonte: Elaboração própria_
   <h3>3. Condições Prévias</h3>
   <ul>
       <li>3.1 O agente comunitário deve estar cadastrado e autenticado na plataforma.</li>
-      <li>3.2 Cliente cadastrou pelo menos um animal.</li>
   </ul>
 
   <h3>4. Fluxo Básico (FB)</h3>
