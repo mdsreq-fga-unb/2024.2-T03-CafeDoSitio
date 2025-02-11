@@ -1,7 +1,8 @@
 import axios from "axios";
 import { toast } from 'react-toastify';
+import { ROUTE } from "./RouteConstant";
 
-const baseURL = "http://localhost:3002/produto";
+const baseURL = import.meta.env.VITE_MODE === 'production' ? (import.meta.env.VITE_NODE_APP_API_URL + '/produto') : (ROUTE.DEV + '/produto');;
 
 const buscarProduto = async (nomeProduto) => {
     try {

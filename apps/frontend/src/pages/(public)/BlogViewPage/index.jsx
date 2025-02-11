@@ -10,8 +10,9 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"; // CSS do <ToastContainer />
 import CardPost from "../../../components/CardPost";
 import { FaInfoCircle } from "react-icons/fa";
+import { ROUTE } from "../../../services/RouteConstant";
 
-const baseURL = "http://localhost:3002";
+const baseURL = import.meta.env.VITE_MODE === 'production' ? (import.meta.env.VITE_NODE_APP_API_URL) : (ROUTE.DEV);
 
 const BlogViewPage = () => {
 
