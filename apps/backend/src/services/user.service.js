@@ -15,7 +15,7 @@ const generateToken = (user) => {
     email: user[0].email,
     sector: user[0].sector,
   };
-  return jwt.sign(payload, process.env.SECRET_JWT, {expiresIn: "1h"});
+  return jwt.sign(payload, process.env.SECRET_JWT);
 }
 
 export default {

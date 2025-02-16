@@ -26,9 +26,9 @@ function Footer() {
             <div className="info1">
               <ul className="institucional list">
                 <li className="title">INSTITUCIONAL</li>
-                <li><a href="#">• NOSSA HISTÓRIA</a></li>
-                <li><a href="#">• VISITE A FÁBRICA</a></li>
-                <li><a href="#">• TRABALHE CONOSCO</a></li>
+                <li><a onClick={() => navigate(ROUTES.HISTORIA)}>• NOSSA HISTÓRIA</a></li>
+                <li><a onClick={() => navigate(ROUTES.VISITA)}>• VISITE A FÁBRICA</a></li>
+                <li><a onClick={() => window.open("https://www.empregare.com/pt-br/trabalhe-na-cafe-do-sitio", "_blank")}>• TRABALHE CONOSCO</a></li>
               </ul>
             </div>
 

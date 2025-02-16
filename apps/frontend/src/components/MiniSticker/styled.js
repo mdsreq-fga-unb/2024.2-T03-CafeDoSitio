@@ -12,7 +12,7 @@ export const Text = styled.div`
   align-items: left;
   text-align: justify;
   font-size: 1rem;
-  font-weigth: none;
+  font-weight: none;
   color: #FFF;
   margin-bottom: 1vh;
 `;

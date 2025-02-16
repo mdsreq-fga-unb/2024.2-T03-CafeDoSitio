@@ -90,4 +90,36 @@ export function findByIdUserAndUpdate(id, updateBody){
   );
 
   return response;
+};
+
+export function findByIdUserAndUpdatePassword(id, password, updateBody){
+
+  const body = {
+    password: password,
+    updateBody: updateBody,
+  }
+
+  const response = axios.put(
+    `${baseURL}/user/findByIdAndUpdatePassword/${id}`,
+    body,
+    {
+      headers: {
+        Authorization: `Bearer ${sessionStorage.getItem("authToken")}`,
+      }
+    }
+  );
+  return response;
 }
+
+export function findByIdUser(id){
+  const response = axios.get(
+    `${baseURL}/user/findByIdUser/${id}`,
+    {
+      headers: {
+        Authorization: `Bearer ${sessionStorage.getItem("authToken")}`,
+      }
+    }
+  )
+
+  return response;
+};

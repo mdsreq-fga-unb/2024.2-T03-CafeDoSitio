@@ -32,18 +32,18 @@ import svg12 from "../../assets/2025.svg";
 export function TimelineCard() {
   const years = [1967, 1972, 1974, 1986, 1989, 2000, 2005, 2009, 2015, 2017, 2018, 2025];
   const texts = [
-    "Vindos do Pernambuco, os recém-casados Antônia e Teones Barbosa de Souza chegam em Brasília. Se estabelecem no Núcleo Bandeirante, onde abrem um armazém de secos e molhados.",
-    "O casal compra o Café do Sítio — a marca, o maquinário de torrefação e três veículos de distribuição. A fábrica funciona no Núcleo Bandeirante, e Teones mantém os negócios no armazém.",
-    "O Café do Sítio muda para o Setor Industrial de Taguatinga, na QI 21. No local, a empresa cresce e amplia o número de funcionários.",
-    "O Café do Sítio patrocina a transmissão da Copa do Mundo na Alemanha pela Rádio Nacional. O 'melhor café do Brasil' começa a ganhar o consumidor do Distrito Federal. ",
-    "O Café segue conquistando os brasilienses. Em uma das ações de divulgação, promotores vão de porta em porta oferecer o produto, voltando dias depois para uma pesquisa de satisfação.",
-    "Abre a filial em Goiânia, um primeiro passo para levar o Café do Sítio a todo Centro-Oeste. Hoje, 35 funcionários trabalham no local, que funciona como um centro de distribuição.",
-    "Começa a produção do café a vácuo, em embalagens de 250g e 500g. Também tem início a venda do cappuccino, terceirizado para outra empresa, e distribuído com a marca Café do Sítio.",
+    "Antônia e Teones Barbosa de Souza, que compraram a fábrica em 1967, foram pioneiros e se instalaram no Núcleo Bandeirante nos primeiros anos da capital federal. Desde o começo, Teones fez questão de utilizar o grão de maior qualidade na fábrica. Não sucumbia aos argumentos de que outra matéria-prima poderia baratear os custos de produção. A visão e o perfil enérgico deste pernambucano levaram à consolidação e à expansão da marca. Os valores passados por ele seguem direcionando a atuação da empresa.",
+    "O Café do Sítio muda para o Setor Industrial de Taguatinga, na QI.21. No local, a empresa cresce e amplia o número de funcionários.",
+    "O Café do Sítio patrocina a transmissão da Copa do Mundo na Alemanha pela Rádio Nacional. O \"melhor café do Brasil\" começa a ganhar o consumidor do Distrito Federal.",
+    "Abre a filial em Goiânia, um primeiro passo para levar o Café do Sítio a todo Centro-Oeste.",
+    "O Café do Sítio obtém o Selo de Pureza, criado no mesmo ano. Este selo certifica que o produto é puro, sem adulteração ou misturas, oferecendo segurança alimentar, qualidade e respeito ao consumidor.",
+    "Começa a produção do café a vácuo, em embalagens de 250g e 500g. O Café do Sítio é Top of Mind desde a 1ª edição.",
     "Mudança para atual sede, no final do Pistão Sul. O Café também renova o seu maquinário, substituindo os torradores semi-automáticos por novos, que permitem o controle das curvas de temperatura e pressão.",
-    "Em 10 de outubro, morre Teones Barbosa de Souza, em decorrência das complicações de uma cirurgia após um acidente de trânsito. A presidência do Café é assumida por sua mulher.",
-    "O Café do Sítio se consolida como líder de mercado. No Distrito Federal, tem 60% da preferência dos consumidores, segundo pesquisa da Associação Brasileira de Supermercados (Abras).",
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    "O Café do Sítio obtém o Selo de Qualidade Superior, que certifica a qualidade do produto final por meio de uma metodologia de análise sensorial. Além de certificar o produto, a empresa é auditada quanto às boas práticas de fabricação de todo o processo de industrialização, para garantir consistência.",
+    "O Café do Sítio lança a sua linha de cafés especiais, nosso Speciale Espresso, com três blends: Imperiale, Regolare e Fruttato. Nesse mesmo ano, lançamos o Cappuccino do Sítio com nova fórmula, com cacau belga, em dois sabores: Tradicional e Canela.",
+    "O Café do Sítio apresenta a sua família, são vários novos produtos, incluindo farinhas, feijões, flocão, canjica, pipoca, entre outros. Ganhamos o prêmio Latin American Quality Awards (Silver Seal), que qualifica a instituição mais ampla no que se refere ao desenvolvimento de normas e padrões de qualidade na América Latina.",
+    "Abre a filia em Palmas, um novo centro de distribuição que foca na venda do nosso café a vácuo",
+    "A nossa história continua a ser escrita"
   ];
 
   const icones = [

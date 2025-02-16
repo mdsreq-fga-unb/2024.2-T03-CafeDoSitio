@@ -8,5 +8,7 @@ export const ROUTES = {
   VISITA: "/visita",
   SITIO_VERDE: "/sitio-verde",
   POLITICAS: "/politicas",
-  FAQ: "/faq"
+  FAQ: "/faq",
+  NOSSOS_PRODUTOS: "/produtos",
+  NOSSOS_PRODUTOS_INFO: "/produtos/:id"
 };

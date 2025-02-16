@@ -171,7 +171,7 @@
                     </div>
         
                     <IconsZone>
-                      <FaTrash className='icon' onClick={() => openPopup1(item._id)}/>
+                      <FaTrash className='icon' onClick={() => openPopup1(item._id)} style={{display: item.sector === 'System-Administrator' ? "none" : "visible"}}/>
                     </IconsZone>
                   </EmailCard>
                           )

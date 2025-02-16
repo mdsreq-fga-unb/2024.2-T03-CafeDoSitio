@@ -10,6 +10,7 @@ import AdminAccountsPage from "../pages/(private)/AdminAccountsPage";
 import BlogsListPage from "../pages/(private)/BlogsListPage";
 import EditBlogsPage from "../pages/(private)/EditBlogsPage";
 import FaqAdminPage from "../pages/(private)/FaqAdminPage";
+import EditAccountPage from "../pages/(private)/EditAccountPage";
 
 const PrivateRoutes = () => {
   return(
@@ -24,6 +25,7 @@ const PrivateRoutes = () => {
             <Route path="/blog" element={<BlogsListPage />} />
             <Route path="/blog/:id" element={<EditBlogsPage />} />
             <Route path="/faq" element={<FaqAdminPage />} />
+            <Route path="/editAccount" element={<EditAccountPage />} />
           </Routes>
         </PrivateLayout>
     </AuthGuard>

@@ -6,9 +6,10 @@ import { authMiddleware } from '../middlewares/auth.middleware.js';
 userRouter.post('/createUser', userController.createUser);
 userRouter.post('/loginUser', userController.loginUser);
 userRouter.get('/findUsers', userController.findUsers);
-userRouter.get('/findAllUsers', authMiddleware, userController.findAllUser);
-userRouter.get('findByIdUser', userController.findByIdUser);
-userRouter.put('/:id', authMiddleware, userController.findByIdAndUpdate);
-userRouter.delete('/:id', authMiddleware, userController.deleteUser);
+userRouter.get('/findAllUsers', userController.findAllUser);
+userRouter.get('/findByIdUser/:id', userController.findByIdUser);
+userRouter.put('/:id', userController.findByIdAndUpdate);
+userRouter.put('/findByIdAndUpdatePassword/:id', userController.findByIdAndUpdatePassword);
+userRouter.delete('/:id', userController.deleteUser);
 
 export default userRouter;

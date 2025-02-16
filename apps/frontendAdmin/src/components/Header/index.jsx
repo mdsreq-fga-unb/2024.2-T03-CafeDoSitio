@@ -39,7 +39,7 @@ const Header = () => {
           </NavButton>
         </EsqNav>
         <DirNav>
-          <NavButton>
+          <NavButton onClick={() => navigate(ROUTES.EDIT_ACCOUNT)}>
             <CgProfile className="icon"/>
             <span>Olá, {username}</span>
           </NavButton>

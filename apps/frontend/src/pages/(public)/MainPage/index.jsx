@@ -23,15 +23,15 @@ const MainPage = () => {
         <img src={topo} alt="CapaCafé" className="img-mobile"/>
         <Section1 onClick={handleClick}>
           <Card>
-            <h1>Conheça a nossa família do Sítio para a sua casa</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero consequuntur natus molestiae, excepturi vitae, iure laboriosam sint, neque blanditiis optio doloremque. Voluptatum, aliquam. Quas perspiciatis facilis ratione ipsam officiis veniam!</p>
+            <h1>Conheça a Família do Sítio!</h1>
+            <p>São 58 anos de história, tradição e qualidade oferecendo uma experiência única em cada xícara. A Família do Sitio une a paixão pela qualidade e o compromisso com a excelência em cada produto.</p>
           </Card>
           <img src={cappuchino} className="logo-img"/>
         </Section1>
         <Section2>
           <Acoes>
-            <h1>Açoes Sociais e Sustentabilidade</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero consequuntur natus molestiae, excepturi vitae, iure laboriosam sint, neque blanditiis optio doloremque. Voluptatum, aliquam. Quas perspiciatis facilis ratione ipsam officiis veniam!</p>
+            <h1>Sítio Verde</h1>
+            <p>É uma iniciativa voltada para projetos sociais e sustentáveis. A Família do Sítio busca impactar positivamente o meio ambiente e a comunidade ao adotar práticas como uso de placas fotovoltaicas para gerar energia limpa, reutilização de paletes e lonas em projetos sociais, transformação de restos de alimentos e cinzas dos torradores em adubo, cultivo de horta para distribuição de alimentos frescos e saudáveis aos funcionários. Cada ação do Sítio Verde reflete nosso compromisso com um futuro mais sustentável e inclusivo.</p>
             <Link to="../sitio-verde">
               <button>Saiba mais</button>
             </Link>
@@ -46,9 +46,9 @@ const MainPage = () => {
                 <div className="info1">
                   <ul className="institucional list">
                     <li className="title">INSTITUCIONAL</li>
-                    <li><a href="#">• NOSSA HISTÓRIA</a></li>
-                    <li><a href="#">• VISITE A FÁBRICA</a></li>
-                    <li><a href="#">• TRABALHE CONOSCO</a></li>
+                    <li><a onClick={() => navigate(ROUTES.HISTORIA)}>• NOSSA HISTÓRIA</a></li>
+                    <li><a onClick={() => navigate(ROUTES.VISITA)}>• VISITE A FÁBRICA</a></li>
+                    <li><a onClick={() => window.open("https://www.empregare.com/pt-br/trabalhe-na-cafe-do-sitio", "_blank")}>• TRABALHE CONOSCO</a></li>
                   </ul>
                 </div>
 

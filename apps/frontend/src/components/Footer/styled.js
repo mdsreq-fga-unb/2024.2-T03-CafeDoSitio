@@ -60,6 +60,7 @@ export const Divisao1 = styled.div`
       text-decoration: none;
       color: white;
       font-size: 0.8rem;
+      cursor: pointer;
 
       &:hover{
         text-decoration: underline;
