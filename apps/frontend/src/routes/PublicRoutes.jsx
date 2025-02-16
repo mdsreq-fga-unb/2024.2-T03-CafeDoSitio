@@ -7,13 +7,10 @@ import MainPage from "../pages/(public)/MainPage";
 import SocialActionsPage from "../pages/(public)/SocialActionsPage";
 import VisitaFabricaPage from "../pages/(public)/VisitaFabricaPage";
 import BlogViewPage from "../pages/(public)/BlogViewPage";
-<<<<<<< HEAD
 import PoliticasPage from "../pages/(public)/PolicitasPage";
 import FaqPage from "../pages/(public)/FaqPage";
-=======
 import NossosProdutos from "../pages/(public)/nossosProdutos";
 import NossosProdutosInfo from "../pages/(public)/nossosProdutosInfo";
->>>>>>> 571d0c09daa3313955e13bbab8febb92f79ceef6
 import { ROUTES } from "./RoutesConstants";
 
 import PublicLayout from "../components/PublicLayout";
